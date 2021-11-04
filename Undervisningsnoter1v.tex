@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\input{preamble}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Nørre Gymnasium\\
+1.v
+}
+
+
+%Husk at rette modul og dato!
+\lhead{Matematik B\\
+Modul 1
+}
+\chead{05/11/2021
+}
+
+
+\begin{document}
+
+%Udfyld afsnit herunder og lav til egen Latex-fil
+
+%Overskrift
+\begin{center}
+\Huge
+Intro til matematik i gymnasiet
+\end{center}
+\section*{Matematik som videnskab}
+\addtocounter{section}{1}
+Matematik er aksiomatisk opbygget. Det betyder, at matematikere løbende er blevet enige om et sæt grundlæggende regler, matematikken bygges op omkring. Disse kaldes aksiomer.
+Ud fra disse aksiomer dannes 
+Aksiomerne ligger i baggrunden og er ikke noget, man går og tænker på i sit daglige arbejde som matematike 
+
+I den rene matematik vil man prøve at beskrive og analysere matematiske strukturer, og deres indbyrdes sammenhæng. Vi vil typisk konstruere definitioner, og så prøve at bevise resultater om disse definitioner. Sådanne resultater kaldes tit for sætninger. Som eksempel kan vi være interesseret i heltallenes egenskaber.
+\begin{exa}
+Vi husker på, at et primtal er et heltal, der kun har sig selv og $1$ som faktor. Det er altså et tal, ingen andre tal går op i. Små eksempler på disse kunne være $2,3,5,7,11$ og $13$. Det er ikke umiddelbart klart, om der kommer et punkt, hvor tal er så store, at der ikke er flere primtal. Vi vil bevise, at dette ikke er tilfældet. Vi opstiller derfor en sætning, som vi så vil bevise:
+\begin{setn}
+Der er uendeligt mange primtal. 
+\end{setn}
+\begin{proof}
+Antag, at der er endeligt mange primtal. Dem kan vi skrive
+\begin{align*}
+p_1,p_2,\hdots,p_n.
+\end{align*}
+Men det må betyde, at ingen primtal går op i
+\begin{align*}
+p_1p_2\cdots p_n +1,
+\end{align*}
+altså er $p_1p_2\cdots p_n +1$ selv et primtal, da ingen tal går op i det. Dette er en modstrid, da vi antog, at $p_1,p_2,\hdots,p_n$ var alle primtallene. Altså må der være uendeligt mange primtal.  
+\end{proof}
+\end{exa}
+\begin{exa}
+Et meget berømt problem i talteori går ud på at beskrive for hvilke naturlige tal ($0,1,2,\hdots$) $n$ ligningen 
+\begin{align*}
+a^n+b^n=c^n
+\end{align*}
+har løsninger, når $a,b,c$ er heltal. Hvis $n=2$, så har vi uendeligt mange løsninger. Dette er blot Pythagoras' sætning. I tilfældet $n>2$, så findes der ingen løsninger, og dette kaldes Fermats sidste sætning, men han gav aldrig selv et bevis (selvom han påstod det). Vi opskriver også dette som en sætning:
+\begin{setn}
+For heltal $n>2$ har ligningen 
+\begin{align*}
+a^n+b^n = c^n 
+\end{align*}
+ingen heltalsløsninger.
+\end{setn}
+\begin{proof}
+Dette overlades til læseren
+\end{proof}
+\end{exa}
+\section*{Matematik som værktøj}
+
+I gymnasiet (og specielt på B-niveau) vil vi hovedsagligt stifte bekendtskab med matematik som værktøj til at beskrive, modellere og analysere andre videnskaber. I skulle gerne have set flere eksempler på dette i jeres grundforløb, men vi vil også se på en række eksempler her. 
+\begin{exa}
+Vi forestiller os en situation, hvor en bakteriekoloni er i et medie, hvor den har ubegrænset plads og næringsstof. Vi antager, at hverenkelt bakterie deler sig en gang per time under disse forhold. En enkelt bakterie vil altså være to efter en time, 4 efter to timer, 8 efter tre timer osv. Lad os sige, at der er $B_0$ bakterier til en referencetid $T_0=0$. I vores naive model må vi kunne beskrive antallet af bakterier $B$ som funktion af tiden $t$ (målt i timer) ved 
+\begin{align*}
+B(t) = B_0\cdot 2^t,
+\end{align*}
+da vi efter hver time multiplicerer antallet af bakterier med $2$. I en virkelig model skal der selvfølgelig tages højde for betragtninger som begrænset næringsstof, plads og affaldsstoffer fra bakterierne, der vil begrænse bakteriernes vækst.
+\end{exa}
+
+\section*{Opgaver}
+Opgaver markeret med $*$ er svære opgaver.
+
+I Opgave 1 og Opgave 2 skal I omskrive det resultat, der er givet til samme form som i Eksempel 1 og Eksempel 2. I skal altså afgøre, hvad der er sætning og hvad, der er bevis. Det er ikke essentielt at I forstår alle detaljer. I vil få brug for følgende to kendsgerninger:
+
+Ethvert lige heltal $n$ kan skrives som $2m$ for et andet heltal $m$.
+
+Etvert ulige heltal $n$ kan skrives som $2m+1$ for et andet heltal $m$.
+\subsection*{Opgave 1}
+Lad $n$ være et lige tal og lad $y$ være et ulige tal. Det betyder, at vi kan skrive $n = 2m$ og $y = 2x+1$ for andre heltal $m,x$. Hvis vi ganger $n$ og $y$ sammen, får vi
+\begin{align*}
+n\cdot y = (\underbrace{2m}_{=n})\cdot (\underbrace{2x+1}_{=y}) = 4mx+2m = 2\cdot(\underbrace{mx+m}_{\textnormal{heltal}}).
+\end{align*}
+Da $n\cdot y$ kan skrives som $2$ gange et heltal, så er $n\cdot y$ et lige tal. Vi har altså vist, at produktet mellem et lige tal og et ulige tal giver et lige tal.
+\subsection*{Opgave 2*}
+Antag, at $n$ er lige. Vi kan så skrive $n = 2m$ for et andet heltal $m$. Derfor kan vi skrive
+\begin{align*}
+n^2 = (2m)^2 = 2^2m^2 = 2\cdot(2m^2).
+\end{align*}
+Det betyder, at $n^2$ er et heltal, da det kan skrives som $2$ gange et heltal. 
+Antag, at et heltal $n^2$ er lige, og antag, at $n$ er ulige. Vi kan derfor skrive $n = 2m + 1$ for et andet heltal $m$. Dette samler vi, og får 
+\begin{align*}
+n^2 = (2m+1)^2 = 4m^2+4m+1,
+\end{align*}
+men da $4m^2$ er lige, og $4m$ er lige, så må  $n^2 = 4m^2+4m+1$ være ulige. Det er i modstrid med antagelsen om, at $n^2$ er lige, altså må $n$ også være lige. Derfor er $n^2$ lige hvis og kun hvis $n$ er lige. 
+\end{document}

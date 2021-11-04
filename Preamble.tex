@@ -1,0 +1,67 @@
+%Preamble
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{matlab-prettifier}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[margin=1.35in]{geometry}
+\usepackage{float}
+\usepackage[danish]{babel}
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usetikzlibrary{patterns}
+\usepackage{csquotes}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\makeatletter
+% \def\@seccntformat#1{%
+%   \expandafter\ifx\csname c@#1\endcsname\c@section\else
+%   \csname the#1\endcsname\quad
+%   \fi}
+ \makeatother
+\counterwithin*{equation}{section}
+\numberwithin{equation}{section}
+
+
+\newtheorem{setn}{Sætning}[section]
+\newtheorem{prop}[setn]{Proposition}
+\newtheorem{lem}[setn]{Lemma}
+\newtheorem{cor}[setn]{Korollar}
+
+\newcommand\Tr{\textnormal{Tr}}
+\newcommand\N{\textnormal{N}}
+\newcommand{\suco}[2]{\left.#1\right|_{\mathbb{F}_{#2}}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\theoremstyle{definition}
+\newtheorem{defn}[setn]{Definition}
+\newtheorem{exa}[setn]{Eksempel}
+\newcommand\Ker{\textnormal{Ker}\hspace{0.5mm}}
+\renewcommand\Im{\textnormal{Im}\hspace{0.5mm}}
+
+
+\usepackage{graphicx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{biblio.bib}
+
+\renewcommand{\mod}[1]{\ (\textnormal{mod }{#1})}
+\usepackage{hyperref, bookmark}
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage[nottoc,numbib]{tocbibind} 
+\usepackage{multirow,bigdelim}
