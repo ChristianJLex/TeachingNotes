@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  1 NOV 2021 12:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  6 NOV 2021 13:44
 entering extended mode
 **./Undervisningsnoter1v.tex
 (Undervisningsnoter1v.tex
@@ -791,6 +791,10 @@ rs
 \f@nch@O@olf=\skip71
 \f@nch@O@orf=\skip72
 )
+(C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpa
+ge.sty
+Package: lastpage 2021/09/03 v1.2n Refers to last page's name (HMM; JPG)
+)
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption
 .sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
@@ -1256,7 +1260,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'danish'.
- (Undervisningsnoter1v.aux)
+ (Undervisningsnoter1v.aux (facitliste1v/facit_modul1.aux))
 \openout1 = `Undervisningsnoter1v.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -1350,6 +1354,9 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 20.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1400,21 +1407,24 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 20.
 LaTeX Info: Redefining \pageref on input line 20.
 LaTeX Info: Redefining \nameref on input line 20.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+\openout2 = `facitliste1v/facit_modul1.aux'.
+
+ (facitliste1v/facit_modul1.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
 d
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
 d
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 37
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 14
 .
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
@@ -1431,7 +1441,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{C:/Users/NRGY-chri88mh/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
-]
+
+])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1440,28 +1451,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[3] (Undervisningsnoter1v.aux)
+[2] 
+AED: lastpage setting LastPage
+(Undervisningsnoter1v.aux (facitliste1v/facit_modul1.aux))
 Package logreq Info: Writing requests to 'Undervisningsnoter1v.run.xml'.
 \openout1 = `Undervisningsnoter1v.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35161 strings out of 478907
- 669023 string characters out of 2848099
- 1387493 words of memory out of 3000000
- 52472 multiletter control sequences out of 15000+600000
- 410733 words of font info for 55 fonts, out of 8000000 for 9000
+ 35221 strings out of 478907
+ 670592 string characters out of 2848099
+ 1391956 words of memory out of 3000000
+ 52515 multiletter control sequences out of 15000+600000
+ 410128 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,15n,111p,755b,1639s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 107i,15n,111p,755b,1647s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmex10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
@@ -1472,12 +1476,14 @@ NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
 amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
-s/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbo
-ls/msam10.pfb>
-Output written on Undervisningsnoter1v.pdf (3 pages, 126055 bytes).
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
+/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
+i12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Undervisningsnoter1v.pdf (2 pages, 134239 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
