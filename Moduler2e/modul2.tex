@@ -1,0 +1,42 @@
+
+%Overskrift
+\begin{center}
+\Huge
+Linearitet af differentiation og mere optimering
+\end{center}
+\section*{Linearitet af differentiation}
+\stepcounter{section}
+Vi skal til start se på linearitet af differentiation. Vi starter med en sætning, som vi vil bevise.
+\begin{setn}\label{setn:linearitet}
+Lad $f,g$ være to funktioner begge differentiable i $x$. Så er funktionen $f+g$ differentiabel i $x$ og dens differentialkvotient er givet
+\begin{align*}
+(f(x)+g(x))' = f'(x)+g'(x).
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi kigger på definitionen af differentialkvotienten i $x$
+\begin{align*}
+(f(x)+g(x))' &= \lim_{h\to 0}\frac{f(x+h)+g(x+h)-(f(x)+g(x))}{h}\\
+			&= \underbrace{\lim_{h\to 0}\left(\frac{f(x+h)-f(x)}{h}\right)}_{=f'(x)} + \underbrace{\lim_{h\to 0}\left(\frac{g(x+h)-g(x)}{h}\right)}_{g'(x)}\\
+			&=f'(x)+g'(x),
+\end{align*}
+siden vi har antaget, at $f$ og $g$ er differentiable i $x$.
+\end{proof}
+Vi skal løse flere optimeringsopgaver, men nu i Maple.
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at $(f(x)-g(x))' = f'(x) -g'(x)$. (Hint: Se på beviset for Sætning \ref{setn:linearitet}.)
+\item Bevis, at $(kf(x))' = kf'(x).$ (Hint: Brug som tidligere definitionen af differentialkvotienten.)
+\item Bevis, at $(2x^2)' = 4x$ ved at bruge definitionen af differentialkvotienten.
+\end{enumerate}
+
+\section*{Opgave 2}
+Løs følgende opgaver i Maple.
+\begin{enumerate}[label=\roman*)]
+\item En åben kasse skal have rektangulær bund. Bredde skal være $x$ og længden skal være $2x$. Rumfanget skal være $144000cm^3$. Bestem højde, bredde og længde, så overfladearealet er minimeret
+\item Samme opgave som i), men nu med låg.
+\item En dåse med rumfang $500cm^3$ skal laves, så overfladearealet er minimeret. Højden på dåsen må maksimalt være $5cm$. Bestem dimensionerne på denne dåse.
+\item Hvad nu hvis dåsen skal være i et skab på $10cm\cdot 10cm$? Hvordan er dimensionerne så.
+\item Spørg mig eller hold fri.
+
+\end{enumerate}

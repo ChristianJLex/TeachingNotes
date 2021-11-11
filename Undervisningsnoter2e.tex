@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Modul 1
+Modul 2
 }
-\chead{08/11/2021
+\chead{11/11/2021
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -22,43 +22,5 @@ Modul 1
 
 %Udfyld afsnit herunder og lav til egen Latex-fil
 
-%Overskrift
-\begin{center}
-\Huge
-Produktreglen og optimering
-\end{center}
-\section*{Produktreglen}
-\stepcounter{section}
-
-Vi har tidligere set produktreglen for differentiation af et produkt af funktioner. Vi vil her bevise produktreglen. Vi opskriver reglen som sætning efterfulgt af bevis:
-\begin{setn}[Produktreglen]
-Lad $f,g$ være differentiable i et punkt $x$. Så er funktionen $fg$ differentiabel i $x$ og 
-\begin{align*}
- (f(x)g(x))' = f'(x)g(x) + f(x)g'(x).
-\end{align*}
-\end{setn}
-\begin{proof}
-Vi anvender definitionen af differentialkvotienten af $(fg)'$:
-\begin{align*}
-(f(x)g(x))' &= \lim_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h}\\
-            &= \lim_{h\to 0}\frac{f(x+h)g(x+h)-f(x)g(x) + g(x+h)f(x)-g(x+h)f(x)}{h}\\
-            &= \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}g(x+h) + \frac{g(x+h)-g(x)}{h}f(x)\\
-            &= f'(x)\left(\lim_{h\to 0}g(x+h)\right) + g'(x)f(x)\\
-            &= f'(x)g(x)+g'(x)f(x).
-\end{align*}
-\end{proof}
-\section*{Optimering}
-\stepcounter{section}
-
-Vi vil introducere dette emne med en række eksempler. 
-\begin{exa}
-Vi skal maksimere rumfanget af en kasse. Dens bund er kvadratisk og
-\end{exa}
-\section*{Opgave 1}
-Bestem differentialkvotienten af følgende funktioner ($\log$ betegner den naturlige logaritme).
-\begin{align*}
-&f_1(x) =x^2\sqrt{x} &&f_2(x) = \log(x^2)3x+7\\
-&f_3(x) = \log(x)x^3+\sqrt{2x} &&f_4(x) = \frac{30x^2}{1+10\sqrt{x}}\\
-&f_5(x) = \frac{1+x^3}{e^{2x}} && f_6 = x^{10/3}
-\end{align*}
+\include{Moduler2e/modul2}
 \end{document}
