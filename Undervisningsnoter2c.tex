@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Modul 1
+Modul 28
 }
-\chead{12/11/2021
+\chead{9/3/2022
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -22,33 +22,48 @@ Modul 1
 
 %Udfyld afsnit herunder og lav til egen Latex-fil
 
+%Kopier følgende til overskrift:
 
+%\begin{center}
+%\Huge
+%Aflevering 1
+%\end{center}
+%\section*{Opgave 1 \large (med hjælpemidler)}
+%\stepcounter{section}
 %Overskrift
 \begin{center}
 \Huge
-Differentialregning
+Trigonometriske funktioner
 \end{center}
-\section*{Indledende knæbøjninger}
+
+\section*{Cos og Sin}
 \stepcounter{section}
 
-Differentialregning går lidt løst sagt ud på at se på hvordan "pæne" funktioner ændrer sig lokalt. Vi vil kun ganske uformelt diskutere, hvad der menes med pæne funktioner. Vi vil starte med at betragte et eksempel.
-\begin{exa}
-Vi forestiller os, at vi kører i en bil, og vi er interesserede i hvor stærkt, vi kører på et tidspunkt $t$. Lad os sige, at vi fra tidspunkt $t$ til tidspunkt $t+5$ måler, at vi er kørt $200m$. Så ved vi, at vi i gennemsnit har kørt med en hastighed på
+Vi har tidligere betragtet de trigonometriske funktioner $\cos(x)$ og $\sin(x)$. Vi husker på, at for et punkt $P$ på enhedscirklen med vinkel $x$ mellem førsteaksen og stedvektoren $\vv{OP}$, så er $\cos(x)$ og $\sin(x)$ defineret som henholdsvis første og andenkoordinaten til $P$. 
+
+Da omkredsen på en enhedscirkel er $2\pi$, så kan vi i stedet for at bruge vinklen ved origo bruge omkredsen på enhedscirklen. Omkredsen tilsvarer en vinkel, og denne omkreds måles i \textit{radianer}. En vinkel på $90^\circ$ tilsvarer en kvart omgang på enhedscirklen og derfor $\frac{\pi}{2}$ radianer. Vi skriver typisk ikke radianer, men blot en vinkel på $\frac{\pi}{2}$
+\section*{Opgave 1}
+Omregn følgende vinkler fra grader til radianer:
 \begin{align*}
-\frac{200m}{5s} = 40\frac{m}{s},
+&1) \  90   &&2) \  180 \\
+&3) \  130   &&4) \ 360  \\
+&5) \  270   &&6) \ 200  \\  
 \end{align*} 
-men vi ved fortsat ikke, hvor stærkt vi kørte nøjagtigt ved tid $t$. Vi måler derfor, at vi til tidspunkt $t+2$ har kørt $70m$. Vi ved derfor, at vi fra tid $t$ til tid $t+2$ har kørt med en hastighed på 
+
+\section*{Opgave 2}
+Omregn følgende vinkler fra radianer til grader:
 \begin{align*}
-\frac{70m}{2s} = 35\frac{m}{s},
+&1) \  2\pi  &&2) \  \frac{\pi}{4}    \\
+&3) \  \frac{3\pi}{2}  &&4) \  \frac{\pi}{3}    \\
+&5) \  \pi  &&6) \  3\pi   \\
 \end{align*}
-og vi kommer en smule nærmere den korrekte hastighed til tid $t$. Den korrekte hastighed må derfor blive tilnærmet mere og mere jo mindre tidsinterval, vi måler hen over bliver. 
-\end{exa}
-Inspireret af dette eksempel, vil vi definere den såkaldte differentialkvotient, der fortæller noget om den øjeblikkelige tilvækst af en funktion. 
-Betragt funktionen på Fig. \ref{fig:sek1}
-\begin{figure}[H]
-\centering
-\includegraphics[width = 12cm]{Billeder/sekant1.png}
-\caption{Funktion med sekant gennem punkterne $(x,f(x))$ og $(x+h,f(x+h))$.}
-\label{fig:sek1}
-\end{figure}
+
+\section*{Opgave 3}
+Bestem følgende 
+\begin{align*}
+&1) \ \cos(\pi)    &&2) \ \sin(\pi/2)    \\
+&3) \ \sin(45^\circ)    &&4) \ \cos(2\pi)    \\
+&5) \ \cos(120^\circ)    &&6) \  \cos(\pi/4)   \\
+\end{align*}
 \end{document}
+

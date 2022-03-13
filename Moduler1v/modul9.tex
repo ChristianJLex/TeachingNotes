@@ -1,0 +1,98 @@
+\begin{center}
+\Huge
+Den naturlige logaritme og eksponentiel vækst
+\end{center}
+\stepcounter{section}
+\begin{exa}
+pH-værdien af en opløsning er defineret som
+\begin{align*}
+pH = -\log(a_{H^+}),
+\end{align*}
+hvor $a_{H^+}$ betegner hydrogenionaktiviteten. $a_{H^{+}}$ er ca. stofmængdekoncentrationen af $H^{+}$-ioner i opløsningen. Hvis vi antager, at en opløsning har en stofmængdekoncentration på $10^{-3}mol/L$ $h^+$-ioner. Så vil 
+pH-værdien af opløsningen være (ca.) $-\log(10^{-3}) = 3$.  
+\end{exa}
+\section*{Den naturlige logaritme}
+\begin{defn}
+Den naturlige logaritme er den entydige funktion $\ln$, der opfylder, at
+\begin{align*}
+\ln(e^x) = x, 
+\end{align*}
+og
+\begin{align*}
+e^{\ln(x)} = x,
+\end{align*}
+hvor $e$ er Euler's tal. ($e \approx 2.7182$)
+\end{defn}
+Funktionen $e^x$ kaldes for den naturlige eksponentialfunktion, og vi vil senere beskrive den nærmere.
+
+\begin{setn}[Regneregler for $\ln$]
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, at
+\begin{enumerate}[label=\roman*)]
+\item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
+\item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
+\item $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+\end{setn}
+
+\section*{Eksponentiel vækst}
+Vi vil hovedsagligt bruge logaritmebegrebet i forbindelse med eksponentiel vækst. 
+\begin{defn}
+Hvis vi har en sammenhæng $y = b\cdot a^x$ for konstanter $a,b$, så siges sammenhængen mellem $x$ og $y$ at være eksponentiel. En funktion $f$ med forskriften
+\begin{align*}
+f(x) = b\cdot a^x
+\end{align*}
+siges at være en eksponentiel funktion. 
+\end{defn}
+Eksponentiel vækst vokser ved at gange med fremskrivningsfaktoren $a$ efter hver tidsenhed.
+\begin{exa}
+Lad os sige, at vi har en bakteriekoloni med ubegrænset næringsstof og plads, og lad os se på væksten af en enkelt bakterie i kolonien. Lad os sige, at den en gang per time deler sig i to. Så vil den efter 1 time være to bakterier, efter to timer være 4 bakterier, efter 3 timer være 8 bakterier osv. Efter hver time ganger vi altså bakterieantallet med 2. Antallet af bakterier $B$ må derfor kunne beskrives som 
+\begin{align*}
+B(t) = B_0\cdot 2^t,
+\end{align*}
+hvor $t$ er tiden i timer, og $B_0$ er antallet af bakterier til tid $t=0$, da $B(0) = B_02^0 = B_0.$
+Dette er eksponentiel vækst, da $a = 2$, og $b = B_0$.
+\end{exa}
+\begin{exa}
+Vi tager et lån i banken og låner 100000kr. Banken giver os en månedlig rente på $1\%$. Efter hver måned skal vi altså gange med $1,01$, og en model for mængden vi skylder, hvis vi ikke afdrager på lånet er
+\begin{align*}
+f(x) = 100.000\cdot (1,01)^t,
+\end{align*}
+hvor $t$ er tiden efter vores lån i måneder. Efter 3 år vil vi derfor skylde
+\begin{align*}
+f(36) = 100.000\cdot (1,01)^{36} \approx 143.000
+\end{align*}
+\end{exa} 
+
+
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Hvad er pH-værdien for en opløsning med en $H^+$-koncentration på $10^{-10}$?
+\item Hvad er $H^+$-koncentrationen for en opløsning med pH-værdi $7,5$?
+\item En opløsning har volumen $500L$ og indeholder $1$ mol $H^+$. Hvad er $pH$-værdien af opløsningen?
+\end{enumerate}
+\section*{Opgave 2}
+Løs følgende ligninger
+\begin{align*}
+&1) \ \ln(x)=1   &&2) \ \ln(x)=e    \\
+&3) \ \ln(3x+7) = 3   &&4) \  \ln(x^2) = e^4   \\
+\end{align*}
+\section*{Opgave 3}
+Bestem følgende:
+\begin{align*}
+&1) \  \ln(e)  &&2) \  \ln(e^3)    \\
+&3) \  \ln(\sqrt{e})  &&4) \ \ln(\sqrt[5]{e^4})      \\
+\end{align*}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+\item En person låner 40000 som forbrugslån. Han skal betale 19$\%$ i årlig rente. Opstil en model for de penge han skylder som funktion af tiden målt i år, hvis han ikke afdrager på lånet. Hvornår skylder han 100.000?
+\item En radioaktiv isotop har en halveringstid på 2 sekunder, og vi starter med et kilo af isotopen. Opstil en model for massen af isotopen som funktion af tiden målt i sekunder. Hvornår er der 10 gram tilbage? Hvornår er der 0?
+\end{enumerate}
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+

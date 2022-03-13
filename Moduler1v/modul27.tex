@@ -1,0 +1,113 @@
+\begin{center}
+\Huge
+Punkter og vektorer
+\end{center}
+
+\section*{Vektorer mellem punkter}
+\stepcounter{section}
+\begin{defn}
+Har vi to punkter $P = (p_1,p_2)$ og $Q = (q_1,q_2)$, så betegner vi vektoren mellem punkterne som
+\begin{align*}
+\vv{PQ}.
+\end{align*}
+Som et vigtigt eksempel har vi vektoren fra punktet $O = (0,0)$ til et punkt $P$, der betegnes 
+\begin{align*}
+\vv{OP},
+\end{align*}
+og kaldes for \textit{stedvektoren} for $P$. 
+Koordinaterne til vektoren $\vv{OP}$ er givet ved $\vv{OP} = \begin{pmatrix}
+p_1\\p_2
+\end{pmatrix}.$ Vi definerer derfor koordinaterne til vektoren $\vv{PQ}$ ved 
+\begin{align*}
+\vv{PQ} = \begin{pmatrix}
+q_1 - p_1\\q_2-p_2
+\end{pmatrix}.
+\end{align*}
+\end{defn}
+\begin{exa}
+Stedvektoren til punktet $P = (2,3)$ er givet ved 
+\begin{align*}
+\vv{OP} = \begin{pmatrix}
+2\\3
+\end{pmatrix}.
+\end{align*}
+Har vi også punktet $Q = (-3,5)$, så er vektoren $\vv{PQ}$ givet ved
+\begin{align*}
+\vv{PQ} = \begin{pmatrix}
+-3-2\\
+5-3
+\end{pmatrix} = \begin{pmatrix}
+-5\\2
+\end{pmatrix}.
+\end{align*}
+\end{exa}
+
+Da vi definerede vektoren mellem to vektorer benyttede vi følgende kendsgerning:
+\begin{setn}[Indskudssætningen]
+For tre punkter $A,B,C$ gælder der, at 
+\begin{align*}
+\vv{AC} = \vv{AB} + \vv{BC}.
+\end{align*}
+\end{setn}
+\begin{exa}
+Indskudssætningen medfører desuden, at vi kan indskyde et vilkårligt antal punkter. Har vi eksempelvis punkter $A,B,C,D,E$, så gælder der, at
+\begin{align*}
+\vv{AE} = \vv{AB} + \vv{BC}+ \vv{CD} + \vv{DE}. 
+\end{align*}
+\end{exa}
+
+\begin{setn}[Afstand mellem to punkter]
+Skal vi bestemme afstanden mellem et punkt $P = (p_1,p_2)$ og et punkt $Q = (q_1,q_2)$, så er det givet ved
+\begin{align*}
+\texttt{dist}(P,Q) = |\vv{PQ}| = \sqrt{(p_1-q_1)^2+(p_2-q_2)^2}
+\end{align*}
+\end{setn}
+\begin{proof}
+Vektoren $\vv{PQ}$ er givet ved
+\begin{align*}
+\vv{PQ}=\begin{pmatrix}
+q_1-p_1\\q_2-p_2
+\end{pmatrix}.
+\end{align*}
+Vi anvender nu blot formlen for længden af en vektor og får
+\begin{align*}
+|\vv{PQ}| = \sqrt{(q_1-p_1)^2+(q_2-p_2)^2}
+\end{align*}
+\end{proof}
+\begin{exa}
+Afstanden fra punktet $P = (0,1)$ og punktet $Q=(-1,2)$ er givet ved
+\begin{align*}
+\texttt{dist}(P,Q) = \sqrt{(-1-1)^2+(2-1)^2} = \sqrt{5}.
+\end{align*}
+\end{exa}
+\section{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Bestem stedvektoren til følgende punkter 
+\begin{align*}
+&1) \ (1,2)   &&2) \  (0,0)  \\
+&3) \  (\sqrt{2},\sqrt{5})  &&4) \ (-2,7)    \\
+\end{align*}
+\item Bestem vektorerne i begge retninger mellem følgende punkter
+\begin{align*}
+&1) \ (4,5) \textnormal{ og } (-5,4) &&2) \ (0,0) \textnormal{ og } (1,1)  \\
+&3) \  (1,2)\textnormal{ og }(-3,-4)   &&4) \ (9,7)\textnormal{ og }(10,-4)   \\
+\end{align*}
+\item For punkterne $A = (-2,-4)$, $B = (-8,10)$ og $C = (-2,3)$ bestem
+\begin{align*}
+&1) \ \vv{AC} + \vv{BC}  &&2) \ \vv{AB} + \vv{BC}   \\
+&3) \ \vv{CA} - \vv{BC}  &&4) \ \vv{BA} + \vv{AC} + \vv{AB}   \\
+\end{align*}
+\end{enumerate}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Lad $P = (0,3)$ og $Q = (4,0)$. En trekant har $\vv{OP}$ og $\vv{OQ}$ som to af siderne. Bestem længden af den sidste side. 
+\item For $A = (4,0)$, $B = (12,1)$ og $C = (-3,-4)$ bestem
+\begin{align*}
+&1) \ |\vv{OA}|   &&2) \ |\vv{BC}|     \\
+&3) \  |\vv{AB} + \vv{BC}|  &&4) \  \texttt{dist}(A,B)   \\
+\end{align*} 
+\end{enumerate}
+
+\section*{Opgave 3}
+
+Vis $i)$, $ii)$, $iv)$ og $v)$ i Sætning \ref{setn:regneregler} fra sidste gang.

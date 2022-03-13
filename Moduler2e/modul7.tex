@@ -1,0 +1,78 @@
+
+\begin{center}
+\Huge
+Regneregler for integration
+\end{center}
+
+\section*{Regneregler for bestemte integraler}
+\stepcounter{section}
+I Tabel \ref{tab:int} fremgår stamfunktionen af nogle udvalgte funktioner.
+\begin{table}[H]
+\center
+\begin{tabular}{c|c}
+$f(x)$ & $\int f(x)\intd x$\\
+\hline
+1 & $x+k$\\
+$c$ & $cx+k$\\
+$x$ & $\frac{1}{2}x^{2}+k$\\
+$x^2$ & $\frac{1}{3}x^3+k$\\
+$x^a$ & $\frac{1}{a+1}x^{a+1}+k$\\
+$\frac{1}{x}$ & $\ln(|x|)+k$\\
+$a^x$ & $\frac{1}{\ln(a)}a^x+k$\\
+$e^x$ & $e^x+k$\\
+$e^{cx}$ & $\frac{1}{c}e^{cx}+k$\\
+$\frac{1}{x^2}$ & $-\frac{1}{x} +k$\\
+$\sqrt{x}$ & $\frac{2}{3}x\sqrt{x}+k$\\
+$\cos(x)$ & $\sin(x)+k$\\
+$\sin(x)$ & $-\cos(x)+k$
+\end{tabular}
+\caption{Tabel med stamfunktioner $\int f(x) \intd x$ for udvalgte integrable funktioner $f(x)$.}
+\label{tab:int}
+\end{table}
+Vi har desuden følgende regneregler for ubestemte integraler.
+\begin{setn}
+For integrable funktioner $f$ og $g$, samt for en konstant $c$ har vi, at
+\begin{enumerate}[label=\roman*)]
+\item $\int f(x)+g(x) \intd x = \int f(x) \intd x + \int g(x) \intd x$,
+\item $\int f(x)-g(x) \intd x = \int f(x) \intd x - \int g(x) \intd x$,
+\item $\int cf(x) \intd x = c\int f(x) \intd x$.
+\end{enumerate}
+\end{setn}
+\begin{proof}
+Vi husker på, at symbolet $\int f(x) \intd x$ betegner en stamfunktion til funktionen $f$. Derfor er 
+\begin{align*}
+\int f(x) + g(x) \intd x
+\end{align*}
+en stamfunktion til $f(x) + g(x)$. Men vi har også, at
+\begin{align*}
+\left(\int f(x) \intd x + \int g(x) \intd x\right)' = \left(\int f(x \intd x)\right)'+\left( \int g(x) \intd x\right)' = f(x) + g(x).
+\end{align*}
+Derfor er $\int f(x) \intd x + \int g(x) \intd x$ også en stamfunktion til $f+g$, og 
+\begin{align*}
+\int f(x) \intd x + \int g(x) \intd x = \int f(x)+g(x) \intd x.
+\end{align*}
+Vi har altså vist i). ii) vises tilsvarende. For iii) har vi
+\begin{align*}
+\left(c\int f(x) \intd x\right)' = cf(x). 
+\end{align*}
+Derfor er $c\int f(x) \intd x$ stamfunktion til $cf(x)$ og 
+\begin{align*}
+\int cf(x) \intd x = c\int f(x) \intd x
+\end{align*}
+\end{proof}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item
+Bevis, at Tabel \ref{tab:int} er sand. Hint: Hvordan viser man, at en funktion er en stamfunktion?
+\item
+Bevis del ii) i Sætning 1.1.
+\end{enumerate}
+\section*{Opgave 2}
+\begin{align*}
+&1) \ \int af(x)+bg(x) \intd x   &&2) \ \int 10\sqrt{x} \intd x     \\
+&3) \ \int \frac{3}{x^2} + e^{27x} \intd x  &&4) \ \int x^{-1} + x^2+x^{-3}+x^{4} \intd x     \\
+&5) \ \int x^{\frac{1}{5}} \intd x  &&6) \ \int x^{2a} \intd x     \\
+&7) \ \int \cos(x) + \sin(x) \intd x  &&8) \ \int\int \cos(x)-\sin(x) \intd x^2   \\
+&9) \ \int \sqrt[3]{x^{7}} \intd x  &&10) \ \int \left(x^{2}\right)^{5} \intd x    \\
+\end{align*}

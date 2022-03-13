@@ -1,0 +1,57 @@
+
+
+\begin{center}
+\Huge
+Differentiation af sammensatte funktioner
+\end{center}
+\section*{Kædereglen}
+\stepcounter{section}
+
+Hvis vi skal differentiere sammensatte funktioner, skal vi bruge et værktøj, der kan fortælle os, hvordan vi gør det uden at anvende definitionen af differentialkvotienten direkte hver gang. Til det har vi kædereglen.
+\begin{setn}[Kædereglen]
+Lad $f,g$ være funktioner begge differentiable i $x$. Så er funktionen $f(g(x))$ differentiabel i $x$ og 
+differentialkvotienten af $f(g(x))$ er givet
+\begin{align*}
+\frac{d}{dx}f(g(x)) = (f(g(x)))' = f'(g(x))\cdot g'(x).
+\end{align*}
+\end{setn}
+Vi vil ikke give et bevis for denne sætning, da et korrekt bevis er for omfattende. 
+\begin{exa}
+Vi betragter funktionen $h(x) = e^{x^2}$. Denne funktion består af en indre funktion $g(x)=x^2$ og en ydre funktion $f(x)=e^x$. Vi bruger kædereglen til at differentiere $h(x)$:
+\begin{align*}
+\frac{d}{d x} h(x) = \frac{d}{dx}e^{x^2} = \underbrace{e^{x^2}}_{f'(g(x))}\cdot \underbrace{2x}_{g'(x)}
+\end{align*}
+\end{exa}
+Vi vil også give beviset for differentiation af summer af funktioner
+\begin{setn}
+For to funktioner $f,g$ begge differentiable i $x$ er funktionen $f(x)+g(x)$ differentiabel og differentialkvotienten af funktionen er givet
+\begin{align*}
+(f(x)+g(x))' = f'(x)+g'(x).
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi ser på definitionen af differentialkvotienten:
+\begin{align*}
+(f(x)+g(x))' &= \lim_{h\to 0} \frac{f(x+h)+g(x+h)-(f(x)+g(x))}{h}\\
+&= \lim_{h\to 0} \frac{f(x+h)+g(x+h)-f(x)-g(x)}{h}\\
+&=\lim_{h\to 0} \frac{f(x+h) -f(x) + g(x+h)-g(x)}{h}\\
+&= \lim_{h\to 0}\frac{f(x+h)-f(x)}{h} + \lim_{h\to 0} \frac{g(x+h)-g(x)}{h}\\
+&= f'(x)+g'(x).
+\end{align*}
+\end{proof}
+\section*{Opgave 1}
+Bestem den afledede af følgende funktioner
+\begin{align*}
+&1) \  \ln(2x^2)   &&2) \  (10e^{2x+1})   \\
+&3) \  \frac{10}{x^3+10x}   &&4) \ 2^{e^x}    \\
+&5) \  x^4+3(3x-1)^3   &&6) \  \frac{1}{\ln(x)}   \\
+&7) \   \sqrt{\ln(x)}  &&8) \ 2(x^2+10)^3\cdot\ln(\sqrt{x})    \\
+&9) \   x^4\sqrt{ln(x^4)}  &&10) \  \ln(\sqrt{2(e^{5x+3})+10})  \\
+\end{align*}
+\section*{Opgave 2}
+Brug definitionen af differentialkvotienten til at bevise, at
+\begin{enumerate}[label=\roman*)]
+\item $(f(x)-g(x))' = f'(x)-g'(x)$ for differentiable funktioner $f,g$.
+\item $(kf(x))' = kf'(x)$ for konstant $k$ og differentiabel funktion $f$.
+\item $(2x^2)' = 4x$. 
+\end{enumerate}

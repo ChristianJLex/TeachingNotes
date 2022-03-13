@@ -1,0 +1,63 @@
+\begin{center}
+\Huge
+Kombinatorik og binomialkoefficienten
+\end{center}
+
+\section*{Binomialkoefficienten}
+\stepcounter{section}
+Vi diskuterede sidste gang permutationer og antallet af permutationer af $k$ elementer blandt $n$ elementer. I den bearbejdning tog vi ikke højde for, at permutationers rækkefølge ofte er ligegyldig. Trækker vi fem kort i et kortspil, så er vi ligeglade med, om vi har trukket spar to før klør fem eller omvendt. Dette vil vi tage højde for nu. 
+
+\begin{defn}
+Vi betegner antallet af måder, vi kan udvælge $k$ elementer blandt $n$ elementer, hvor rækkefølgen ikke har betydning som
+\begin{align*}
+K(n,k) = \binom{n}{k},
+\end{align*}
+hvoraf det er den sidste skrivemåde, der er klart mest anvendt (men jeres bog bruger $K(n,k)$). Dette symbol kaldes for binomialkoefficienten.
+\end{defn}
+\begin{setn}
+Binomialkoefficienten $\binom{n}{k}$ er givet ved
+\begin{align*}
+\binom{n}{k} = \frac{n!}{k!(n-k)!}.
+\end{align*}
+\end{setn}
+\begin{proof}
+Antallet af måder, vi kan udvælge $k$ elementer blandt $n$ elementer, hvor rækkefølge har betydning så vi sidst var $P(n,k) = n!/(n-k)!$. Vi skal nu tage højde for alle de permutationer, der består af de samme elementer i forskellige rækkefølge. Men for ethvert valg af $k$ elementer, så er der jo lige præcis $k!$ måder at permutere dem. Derfor må vi have $k!$ gange for mange permutationer med. Altså er $\binom{n}{k}$ givet ved
+\begin{align*}
+ \binom{n}{k} = \frac{P(n,k)}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} = \frac{n!}{k!(n-k)!}.
+\end{align*}
+\end{proof}
+
+\begin{exa}
+Vi skal bestemme på hvor mange måder, vi kan udvælge 3 kort i et kortspil. Da rækkefølge ikke betyder noget, og da der er 52 kort i et kortspil, så er det givet som
+\begin{align*}
+\binom{52}{3} = \frac{52!}{3!(49)!} = 21000.
+\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+En mand har i sit klædeskab syv skjorter, fem par bukser og 3 jakker. Han skal have tre skjorter, to par bukser og en jakke med på ferie. På hvor mange måder kan han pakke sin kuffert?
+
+\section*{Opgave 2}
+Bestem følgende binomialkoefficienter:
+\begin{align*}
+&1) \ \binom{7}{2}  &&2) \ \binom{10}{3}  \\
+&3) \ \binom{5}{4}  &&4) \ \binom{200}{1}   \\
+\end{align*}
+
+\section*{Opgave 3}
+En pokerhånd består af fem kort fra et kortspil på 52 kort.
+\begin{enumerate}[label=\roman*)]
+\item Hvor mange hænder er der i poker?
+\item En flush består af fem kort i samme kulør. På hvor mange forskellige måder kan man få flush med hjerter? På hvor mange måder kan man få flush i alt?
+\end{enumerate}
+
+\section*{Opgave 4}
+På hvor mange måder kan man vælge en dansk nummerplade, hvis rækkefølgen af tal og bogstaver ikke betyder noget? Hvad med en svensk? Husk at en dansk nummerplade har to bogstaver og 5 cifre, og en svensk har tre tal og tre bogstaver. 
+
+\section*{Opgave 5}
+Du skal i biografen med klassen. I en biograf med 200 sæder, på hvor mange forskellige måder kan I så vælge jeres sæder?
+\section*{Opgave 6}
+Pascals trekant består af ét tal i første række, to tal i anden række, tre i tredje osv. Tallet i en indgang i trekanten består af summen af de to tal over indgangen. 
+\begin{enumerate}[label=\roman*)]
+\item Opskriv de første seks rækker i Pascals trekant. 
+\item Vi kalder den øverste række for række 0, den næste for række 1 osv. For hver indgang i Pascals trekant bestem så $\binom{n}{k}$, hvor $n$ er rækkenummer og $k$ er antallet af tal til venstre for indgangen. Indser du noget?

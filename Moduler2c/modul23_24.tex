@@ -1,0 +1,94 @@
+\begin{center}
+\Huge
+Beviser!
+\end{center}
+\section*{Bevistyper}
+\stepcounter{section}
+
+I gymnasiet arbejder vi med forskellige typer beviser. Den klart mest anvendte type bevis både i gymnasiet og i matematikken generelt er det direkte bevis. Vi tager udgangspunkt i en definition eller et resultat og går vi skridt for skridt gennem logiske slutninger indtil vi kan lave vores konklusion og fuldføre vores bevis. Der er også det indirekte bevis også kaldt bevis ved modstrid. Vi antager her det modsatte af, hvad vi vil bevise og kommer frem til at dette giver en modstrid. I kraft af dette må vores antagelse være falsk og vores bevis er dermed fuldført. Den sidste vigtige type bevis er bevis ved induktion, som vi typisk bruger til at vise resultater, der relaterer sig til de naturlige tal $\mathbb{N}$. Vi beviser først et basistilfælde eks. $n = 0$ og antager derefter, at vores resultat er sandt for ethvert tal $n$. Vi viser så til slut, at resultatet må gælde for $n+1$, og resultatet vil heraf gælde for alle naturlige tal.
+
+Vi vil se på nogle eksempler af hver bevistype, for i selv skal bevise nogle simple resultater. Vi starter med at se på et direkte bevis
+\begin{setn}
+Hvis $n$ er ulige, så er $n^2$ ulige.
+\end{setn}
+\begin{proof}
+Ethvert ulige tal $n$ kan vi skrive $n = 2k+1$ for et andet heltal $k$. Vi får derfor, at 
+\begin{align*}
+(2k+1)^2 = (2k)^2+1^2+2\cdot 2k =4k^2+4k+1= \underbrace{2(2k^2+2k)}_{=2m}+1.
+\end{align*}
+Da $n^2$ kan skrives som $2m+1$ for et heltal $m$, så er $n^2$ derfor ulige. 
+\end{proof}
+\begin{lem}\label{lem:lem1}
+Hvis $n^2$ er lige, så er $n$ lige.
+\end{lem}
+\begin{proof}
+Opgave.
+\end{proof}
+Vi vil nu give et eksempel på et bevis ved modstrid:
+\begin{setn}
+$\sqrt{2}$ er et irrationalt tal. 
+\end{setn}
+\begin{proof}
+Vi antager for modstrid at $\sqrt{2}$ er et rationalt tal. Derfor kan vi skrive
+\begin{align*}
+\sqrt{2} = \frac{a}{b},
+\end{align*}
+hvor vi antager, at $\frac{a}{b}$ er forkortet så meget som muligt. Vi får nu
+\begin{align*}
+\sqrt{2} = \frac{a}{b} \Leftrightarrow 2 = \frac{a^2}{b^2} \Leftrightarrow 2b^2 = a^2.
+\end{align*}
+Dette betyder, at $a^2$ er lige og derfor er $a$ også lige af Lemma \ref{lem:lem1}, så vi kan skrive $a = 2k$. Dette giver
+\begin{align*}
+2b^2 = a^2 \Leftrightarrow 2b^2 = (2k)^2 = 4k^2 \Leftrightarrow b^2 = 2k^2,
+\end{align*}
+men dette må betyde, at $b^2$ er lige, og derfor er $b$ lige igen af Lemma \ref{lem:lem1}. Men så er både $a$ og $b$ lige, og $\frac{a}{b}$ er ikke forkortet så meget som muligt. Derfor må antagelsen om, at $\sqrt{2}$ er et rationalt tal være forkert. 
+\end{proof}
+\begin{setn}
+Der gælder, at summen af de første $n$ naturlige tal $1+2+3+\cdots+n$ er givet ved
+\begin{align*}
+1+2+3+\cdots+n = \frac{n(n+1)}{2}.
+\end{align*}
+\end{setn}
+\begin{proof}
+Basisskridtet er $n = 1$. Da får vi $n(n+1)/2 = 1(2)/2 = 1$, hvilket stemmer overens med vores forventning, så basisskridtet er vist. 
+Vi antager nu, at 
+\begin{align*}
+1+2+3+\cdots+n-1 = \frac{(n-1)n}{2}.
+\end{align*}
+er sandt for et givet $n$. Vi lægger derfor $n$ til på begge sider af lighedstegnet og får
+\begin{align*}
+1+2+3+\cdots + n &= \frac{(n-1)n}{2} +n \\ &= \frac{(n-1)n}{2} + \frac{2n}{2} \\&= \frac{(n-1)n+2n}{2}  = \frac{n(n+1)}{2},
+\end{align*}
+og beviset er ført.
+\end{proof}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at $a$ + $b$ giver et lige tal, hvis $a$ og $b$ begge er lige.
+\item Vis, at $a$ + $b$ giver et lige tal, hvis $a$ og $b$ begge er ulige.
+\item Vis, at $a$ + $b$ givet et ulige tal, hvis $a$ er lige og $b$ er ulige.
+\item Vis, at $a\cdot b$ er ulige, hvis $a$ og $b$ er ulige.
+\item Vis, at $n$ er lige, hvis $n^2$ er lige (brug eventuelt bevis ved modstrid).
+\end{enumerate}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at summen af to rationale tal er rationalt.
+\item Giv et bevis ved modstrid for udsagnet: hvis $n$ er ulige, så er $3n+2$ ulige. 
+\item Giv et bevis ved modstrid for udsagnet: Summen af et irrationalt tal og et rationalt tal er rationalt.
+\item (Svær) Giv et bevis ved modstrid for, at der er uendeligt mange primtal. 
+\end{enumerate}
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Vis med induktion, at 
+\begin{align*}
+1+3+5+\cdots +(2k+1) = k^2.
+\end{align*}
+\item Vis med induktion, at 
+\begin{align*}
+1+2+2^2+\cdots+2^n = 2^{n+1}-1.
+\end{align*}
+\item Vis med induktion, at 
+\begin{align*}
+a+ar+ar^2+ar^3+\cdots+ar^n = \frac{ar^{n+1}-a}{r-1}.
+\end{align*}
+\end{enumerate}

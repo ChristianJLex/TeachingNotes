@@ -1,0 +1,121 @@
+
+\begin{center}
+\Huge
+Regneregler for vektorer
+\end{center}
+
+\section*{Nulvektoren}
+\stepcounter{section}
+Har vi en vektor $\vec{v}$, og den modsatrettede vektor $-\vec{v}$, så får vi, hvis vi lægger $\vec{v}$ og $-\vec{v}$ sammen
+\begin{align*}
+\vec{v}+(-\vec{v}) = \begin{pmatrix}
+v_1\\v_2
+\end{pmatrix} + \begin{pmatrix}
+-v_1 \\-v_2
+\end{pmatrix} = \begin{pmatrix}
+0\\0
+\end{pmatrix}.
+\end{align*}
+Vektoren $\begin{pmatrix}0\\0
+
+\end{pmatrix}$ kalder vi for\textit{ nulvektoren} og betegner med $\vec{0}$. Om den gælder der for alle vektorer $\vec{v}$, at $$\vec{0}+\vec{v} = \vec{v}.$$
+
+\section*{Regneregler for vektorer}
+Hvis vi vil gøre en vektor $k$ gange længere, kan vi gange vektoren med et tal $k$. 
+\begin{defn}[Vektorskalering]
+For en vektor $\vec{v} = \begin{pmatrix}
+v_1\\v_2
+\end{pmatrix}$ og et tal $k$, kan vi skalere vektoren med $k$ som
+\begin{align*}
+k\vec{v} = k\begin{pmatrix}
+v_1\\v_2 
+\end{pmatrix} =  \begin{pmatrix}
+kv_1\\kv_2
+\end{pmatrix}.
+\end{align*}
+\end{defn}
+Det gælder rent faktisk, at længden af $\vec{v}$ bliver ganget med $k$, når vi skalerer med $k$. Dette kan ses, da
+\begin{align*}
+|k\vec{v}| &= \sqrt{(kv_1)^2+(kv_2)^2}\\
+ &= \sqrt{k^2v_1^2 + k^2v_2^2}\\
+ &= \sqrt{k^2(v_1^2+v_2^2)}\\
+  &= \sqrt{k^2}\sqrt{v_1^2+v_2^2} = k|\vec{v}|.
+\end{align*}
+\begin{exa}
+Lad $\vec{v} = \begin{pmatrix}
+1\\2\end{pmatrix}$ og lad $k = 3$. Vi bestemmer så
+\begin{align*}
+|3\vec{v}| &= \left| \begin{pmatrix}
+3 \cdot 1\\ 3\cdot 2
+\end{pmatrix} \right|\\
+&= \left| \begin{pmatrix}
+3\\ 6
+\end{pmatrix}\right|\\
+ &=\sqrt{3^2+6^2} \\ &= \sqrt{45} = 3\sqrt{5}
+\end{align*}
+Men vi har lige argumenteret for at dette må være det samme som $3\cdot |\vec{v}|$. Vi verificerer:
+\begin{align*}
+3 |\vec{v}| = 3\sqrt{1^2+2^2} = 3\sqrt{5}.
+\end{align*}
+\end{exa}
+Vi har følgende regneregler for vektorer.
+\begin{setn}[Regneregler for vektorer]\label{setn:regneregler}
+For tal $a,b$ og vektorer $\vec{u},\vec{v},\vec{w}$ gælder der, at 
+\begin{enumerate}[label=\roman*)]
+\item $\vec{u} + \vec{v} = \vec{v}+\vec{u}$,
+\item $(\vec{u} + \vec{v}) +\vec{w} = \vec{u} + (\vec{v} + \vec{w})$,
+\item $a(\vec{u}+\vec{v}) = a\vec{u}+a\vec{b}$,
+\item $(a+b)\vec{u} = a\vec{u}+ v\vec{u}$,
+\item $(ab)\vec{v} = a(b\vec{v})$.
+\end{enumerate}
+\end{setn}
+\begin{proof}
+Vi viser $iii)$, og resten overlades til læseren. Betragt
+\begin{align*}
+a(\vec{u}+\vec{v}) &= a\left(\begin{pmatrix}
+u_1\\u_2
+\end{pmatrix}+ \begin{pmatrix}v_1 + v_2
+\end{pmatrix} \right) \\
+ &= a\begin{pmatrix}
+u_1+v_1\\ u_2+v_2
+\end{pmatrix}\\
+ &= \begin{pmatrix}
+au_1+av_1 \\ au_2+av_2
+\end{pmatrix}\\
+&= \begin{pmatrix}
+au_1\\ au_2
+\end{pmatrix} + \begin{pmatrix}
+av_1\\ av_2
+\end{pmatrix} = a\vec{u} + a\vec{v}
+\end{align*}
+\end{proof}
+Vi kan ikke gange vektorer sammen, og derfor kan vi heller ikke dividere to vektorer. 
+\section*{Opgave 1}
+Lad følgende vektorer være givet
+\begin{align*}
+&\vec{u} = \begin{pmatrix}
+2\\3
+\end{pmatrix}&&\vec{v} = \begin{pmatrix}
+6 \\ -2
+\end{pmatrix}\\
+&\vec{w} = \begin{pmatrix}
+-3\\-4 
+\end{pmatrix}
+&& \vec{a} = \begin{pmatrix}
+\sqrt{2} \\ \sqrt{2}
+\end{pmatrix}.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+\item Bestem 
+\begin{align*}
+&1) \ |\vec{u}|  &&2) \  2|v|   \\
+&3) \ |10\vec{w}|  &&4) \  |\vec{a}|    \\
+\end{align*}
+\item Bestem 
+\begin{align*}
+&1) \ 3\vec{u}+2\vec{v}   &&2) \ \vec{u}+ \vec{v} - \vec{w} +\sqrt{2}\vec{a}  \\
+&3) \ |3\vec{w}+\vec{a}|  &&4) \ |\vec{a}| + |\vec{u}| + |\vec{a}+\vec{u}|  \\
+\end{align*}
+\end{enumerate}
+\section*{Opgave 2}
+Vis $i)$, $ii)$, $iv)$ og $v)$ i Sætning \ref{setn:regneregler}.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.24)  4 NOV 2021 08:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  14 NOV 2021 13:45
 entering extended mode
 **./preamble.tex
 (preamble.tex
@@ -73,6 +73,18 @@ Type  H <return>  for immediate help.
                                                   
 l.8 \usepackage{
                 mathrsfs}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \usepackage{
+                esvect}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -377,7 +389,19 @@ l.28 \usepackage{
 between \documentclass and \begin{document}.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 21--29
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \usepackage{
+                 lastpage}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--30
 []
  []
 
@@ -388,7 +412,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \usepackage{
+l.31 \usepackage{
                  caption}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -400,7 +424,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 \usepackage{
+l.32 \usepackage{
                  subcaption}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -412,14 +436,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 \counterwithin*{equation}{section}
+l.39 \counterwithin*{equation}{section}
                                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.39 \numberwithin
+l.40 \numberwithin
                   {equation}{section}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -434,7 +458,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 \numberwithin{e
+l.40 \numberwithin{e
                     quation}{section}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -455,21 +479,8 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
-! LaTeX Error: No counter 'setn' defined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 \counterwithin*{setn}{section}
-                                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 39--41
-[]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 40--41
+[] 
  []
 
 \c@setn=\count182
@@ -480,7 +491,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \newtheorem{setn}{Sætning}[section]
+l.44 \newtheorem{setn}{Sætning}[section]
                                          
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -493,13 +504,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \renewcommand\qedsymbol
+l.52 \renewcommand\qedsymbol
                             {$\blacksquare$}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.52 \theoremstyle
+l.53 \theoremstyle
                   {definition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -514,7 +525,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 \theoremstyle{d
+l.53 \theoremstyle{d
                     efinition}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -530,7 +541,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 52--57
+Overfull \hbox (20.0pt too wide) in paragraph at lines 53--58
 []
  []
 
@@ -541,7 +552,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \usepackage{
+l.60 \usepackage{
                  graphicx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -553,13 +564,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 \usepackage[backend=biber]{
+l.61 \usepackage[backend=biber]{
                                 biblatex}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.61 \addbibresource
+l.62 \addbibresource
                     {biblio.bib}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -574,7 +585,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \addbibresource{b
+l.62 \addbibresource{b
                       iblio.bib}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -590,7 +601,7 @@ Missing character: There is no b in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no b in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 61--62
+Overfull \hbox (20.0pt too wide) in paragraph at lines 62--63
 [] 
  []
 
@@ -601,7 +612,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 \renewcommand{\mod}
+l.64 \renewcommand{\mod}
                         [1]{\ (\textnormal{mod }{#1})}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -613,7 +624,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \usepackage{
+l.65 \usepackage{
                  hyperref, bookmark}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -625,7 +636,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 \usepackage{
+l.66 \usepackage{
                  booktabs}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -637,7 +648,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 \usepackage{
+l.67 \usepackage{
                  calc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -649,7 +660,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 \usepackage[nottoc,numbib]{
+l.68 \usepackage[nottoc,numbib]{
                                 tocbibind}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -661,7 +672,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \usepackage{
+l.69 \usepackage{
                  multirow,bigdelim}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -675,7 +686,7 @@ between \documentclass and \begin{document}.
  
 Here is how much of TeX's memory you used:
  46 strings out of 478907
- 672 string characters out of 2851891
+ 628 string characters out of 2848099
  291417 words of memory out of 3000000
  18027 multiletter control sequences out of 15000+600000
  403430 words of font info for 27 fonts, out of 8000000 for 9000
