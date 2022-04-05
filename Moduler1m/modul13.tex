@@ -1,0 +1,177 @@
+\begin{center}
+\Huge
+Polynomier
+\end{center}
+\section*{Introduktion}
+\stepcounter{section}
+
+Vi har set på eksempler på lineære funktioner, konstante funktioner, og vi har løst andengradsligninger. Alle disse koncepter er relaterede til polynomier, som vi vil arbejde mere generelt med. Vi starter med en definition.
+\begin{defn}
+Et polynomium er en funktion $f$ på formen
+\begin{align*}
+f(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1 x + a_0,
+\end{align*}
+hvor $a_i \in \mathbb{R}, a_n \neq 0$. Vi kalder $n$ for graden af $f$. 
+\end{defn}
+Denne definition er meget generel, og skal forstås gennem eksempler. 
+\begin{exa}
+Funktionen $f(x) = 10$ er et konstant polynomium. Vi kalder dette for et nultegradspolynomium, da det eneste led det består af er $a_0=10$. 
+\end{exa}
+\begin{exa}
+Funktionen $g(x) = 3x-4$  er et lineært polynomium eller bare en lineær funktion. Det er et førstegradspolynomium, da det består af leddene $a_0 = -4$ og $a_1x = 3x$. 
+\end{exa}
+\begin{exa}
+Funktionen $h(x) = 2x^2-4x+2$ er et andengradspolynomium. Det består af leddene $a_0 = 2$, $a_1x = -4x$ og $a_2x^2 = 2x^2$.
+\end{exa}
+\begin{exa}
+Funktionen $p(x) = 5x^7$ er et 7.gradspolynomium. Det består kun af leddet $5x^7$
+\end{exa}
+Vi kalder tallene $a_0,a_1,\hdots,a_n$ for et polynomiums koefficienter. På Fig. \ref{fig:polys} kan vi se eksempler på et nulte, første, anden og tredjegradspolynomium.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 100] {3};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {2*x};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {-x^2+2*x+1};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {x^3-2*x^2+2};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{Henholdsvis nulte-, første-, anden- og tredjegradspolynomier.}
+\label{fig:polys}
+\end{figure}
+
+Vi har et særligt fokus på andengradspolynomier i dette forløb. Grafen for et andengradspolynomium kaldes for en parabel. Vi bruger grafen for et andengradspolynomium til at afgøre, hvad koefficienterne $a$, $b$ og $c$ skal være (tilnærmelsesvist).
+\begin{setn}
+For et andengradspolynomium $f$ givet ved
+\begin{align*}
+f(x) = ax^2+bx+c,
+\end{align*}
+så er der følgende sammenhæng mellem koefficienterne for $f$ og parablen for $f$:
+\begin{itemize}
+\item Hvis $a>0$, så peger parablens arme op. Hvis $a<0$, så peger parablens arme ned.
+\item Hældningen af parablen hvor den skærer $y$-aksen er givet ved $b$.
+\item Parablens skæring med $y$-aksen er givet ved $c$.
+\end{itemize}
+\end{setn}
+
+\section*{Opgave 1}
+For parablerne i Fig. \ref{fig:andenpolys}
+\begin{enumerate}[label=\roman*)]
+\item Bestem fortegnet på diskriminanten $d$.
+\item Bestem fortegnet på koefficienterne $a$ og $b$. 
+\item Bestem $c$.
+\end{enumerate}
+\begin{figure}[H]
+\centering
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {x^2-2*x+2};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {-2*x^2+4*x-2};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -3, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {x^2+2*x-1};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {-3*x^2-x+2};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{Fire parabler}
+\label{fig:andenpolys}
+\end{figure}
+
+\section*{Opgave 2}
+Skitsér graferne for følgende polynomier og brug din skitse til at afgøre antallet af rødder. 
+
+\begin{align*}
+&1) \  x^2-1   &&2) \ -10x^2    \\
+&3) \   -2x^2+2x+2  &&4) \  3x^2-x-3   \\
+&5) \ -x^2-10    &&6) \  x^2+2x+7   \\
+\end{align*}
+
+
+\section*{Opgave 3}
+Afgør graden af følgende polynomier:
+\begin{align*}
+ &1) \ x+1  &&2) \  2x^{10}-6x^5+3  \\
+  &3) \ -2x^3+1x+1  &&4) \  x^{200}  \\
+   &5) \ 3  &&6) \  67x^4-2x^3  \\
+    &7) \ 100x^2  &&8) \  \left(x^4\right)^2  \\
+\end{align*}

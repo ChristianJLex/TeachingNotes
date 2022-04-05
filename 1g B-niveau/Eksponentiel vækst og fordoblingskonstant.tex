@@ -1,0 +1,140 @@
+\begin{center}
+\Huge
+Eksponentiel vækst og fordobling/halvering
+\end{center}
+\section*{Fremskrivning og Vækstrate}
+\stepcounter{section}
+Vi har tidligere set, at for en eksponentiel funktion $f(x) = b\cdot a^x$, så gælder der, at hvis vi øger $x$ med $1$, så øger vi $f(x)$ med en faktor $a$. For at understrege denne pointe, viser vi dette igen.
+\begin{align*}
+f(x+1) = b\cdot a^{x+1} = b\cdot a^x\cdot a = f(x)\cdot a.
+\end{align*}
+Vi kalder derfor $a$ for \textit{fremskrivningsfaktoren}, da dette er hvad vi fremskriver vores vækst med, hver gang vi øger $x$ med $1$. Tilsvarende definerer vi $r = a-1$ som \textit{vækstraten}. $r\cdot 100$ er den procentvise stigning/det procentvise fald i den eksponentielle vækst, hver gang vi øger $x$ med $1$. Udviklingen af eksponentiel vækst er præsenteret i Fig. \ref{fig:sildegen}
+\begin{figure}[H]
+\center
+\begin{tikzpicture}
+\foreach \i in {0}{
+\draw (\i*0.9,0) -- (\i*0.9,1);
+}
+\draw (-0.9,0.5) -- (1.5,0.5);
+\foreach \i in {0}{
+\node at (\i*0.9+ 0.75,0.75) {$x+1$};
+\node at (\i*0.9+0.75,0.25) {$af(x)$};
+}
+\node at (-0.45,0.75) {$x$};
+\node at (-0.45,0.25) {$f(x)$};
+\foreach \i in {0}{
+\draw [->] (\i*0.9-0.3,1) to [out=30,in=150] (\i*0.9+0.3,1);
+\node at (\i*0.9,1.25) {$\scriptstyle+1$};
+\draw [->] (\i*0.9-0.3,-0) to [out=-30,in=-150] (\i*0.9+0.3,-0);
+\node at (\i*0.9,-0.25) {$\scriptstyle\cdot a$};
+}
+\end{tikzpicture}
+\caption{Udvikling af eksponentiel vækst.}
+\label{fig:sildegen}
+\end{figure}
+\begin{exa}
+Betragt eksponentialfunktionen $f$ givet ved
+\begin{align*}
+f(x) = 4\cdot(0.5)^x
+\end{align*}
+Denne har fremskrivningsfaktor på $0.5$ og vækstrate på $0.5-1 = -0.5$. Vi øger altså funktionsværdien med $-50$ procent hver gang vi øger $x$ med $1$. 
+
+Betragt nu eksponentialfunktionen $g$ med forskrift
+\begin{align*}
+g(x) = 2\cdot (1.2)^x.
+\end{align*}
+Fremskrivningsfaktoren for $g$ er $a = 1.2$ og vækstraten er $r= 0.2$. Vi øger funktionsværdien med $20$ procent hver gang vi øger $x$ med $1$ 
+\end{exa}
+\begin{exa}
+Befolkningstallet i et land stiger med 1 promille om året, og i år 2000 er er 10 mio mennesker i landet. Dette tilsvarer eksponentiel vækst med fremskrivningsfaktor $a = 1.001$ og vækstrate $0.001$. Det giver os den eksponentielle model for antallet af personer i landet efter år 2000:
+\begin{align*}
+f(x) = b\cdot a^x = 10\cdot (1.001)^x.
+\end{align*}
+\end{exa}
+\section*{Fordoblings- og halveringskonstanter}
+Perspektivet var før at overveje, hvordan funktionsværdien af eksponentiel vækst udvikler sig, når vi øger $x$ med $1$. Vi kan tilsvarende betragte problemet fra den modsatte side: hvad skal vi øge $x$ med for at fordoble/halvere funktionsværdien. Vi skal altså bestemme en størrelse $T_2$, så 
+\begin{align*}
+f(x+T_2) = 2f(x)
+\end{align*}
+for en eksponentialfunktion $f$. Denne idé er præsenteret i Fig. \ref{fig:Fordobling}. 
+\begin{figure}[H]
+\center
+\begin{tikzpicture}
+\foreach \i in {0}{
+\draw (\i*0.9,0) -- (\i*0.9,1);
+}
+\draw (-0.9,0.5) -- (1.5,0.5);
+\foreach \i in {0}{
+\node at (\i*0.9+ 0.75,0.75) {$x+T_2$};
+\node at (\i*0.9+0.75,0.25) {$2f(x)$};
+}
+\node at (-0.45,0.75) {$x$};
+\node at (-0.45,0.25) {$f(x)$};
+\foreach \i in {0}{
+\draw [->] (\i*0.9-0.3,1) to [out=30,in=150] (\i*0.9+0.3,1);
+\node at (\i*0.9,1.25) {$\scriptstyle+T_2$};
+\draw [->] (\i*0.9-0.3,-0) to [out=-30,in=-150] (\i*0.9+0.3,-0);
+\node at (\i*0.9,-0.25) {$\scriptstyle\cdot 2$};
+}
+\end{tikzpicture}
+\caption{Fordoblingskonstant}
+\label{fig:Fordobling}
+
+\end{figure}
+For eksponentialvækst, hvor fremskrivningsfaktoren $a$ er større end $1$ er det muligt at finde et sådan tal $T_2>0$. Følgende sætning fortæller, hvordan vi skal finde dette tal, og vi kalder tallet for \textit{Fordoblingskonstanten for f}.
+\begin{setn}
+For en eksponentialfunktion $f$ gælder det, at fordoblingskonstanten $T_2$, der opfylder, at
+\begin{align*}
+f(x+T_2) = 2f(x)
+\end{align*}
+er givet ved 
+\begin{align*}
+T_2 = \frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)}
+\end{align*}
+Tilsvarende er halveringskonstanten $T_{1/2}$, der opfylder, at 
+\begin{align*}
+f(x+T_{1/2}) = \frac{1}{2}f(x)
+\end{align*}
+bestemt ved
+\begin{align*}
+T_{1/2} = \frac{\ln(1/2)}{\ln(a)} = \frac{\log(1/2)}{\log(a)}.
+\end{align*}
+Desuden gælder der, at $a = \sqrt[T_2]{2}= \sqrt[T_{1/2}]{1/2}$
+\end{setn}
+\begin{proof}
+Vi beviser tilfældet for fordoblingskonstanten. Tilfældet for halveringskonstanten beviset fuldstændig analogt. Lad os derfor for en eksponentialfunktion $f$ givet ved
+\begin{align*}
+f(x) = b\cdot a^x
+\end{align*}
+antage, at tallet $T_2$ opfylder, at $f(x+T_2) = 2f(x)$ for alle $x\in \mathbb{R}$. Vi har så, at 
+\begin{align*}
+f(x+T_2) = 2f(x) \ &\Leftrightarrow \ b\cdot a^{x}a^{T_2}=2b\cdot a^x\\
+&\Leftrightarrow\ a^{T_2} = 2\\
+&\Leftrightarrow\ \ln(a^{T_2}) = \ln(2)\\
+&\Leftrightarrow\ T_2\ln(a) = \ln(2)\\
+&\Leftrightarrow\ T_2 = \frac{\ln(2)}{\ln(a)},
+\end{align*}
+og vi har givet et bevis for fordoblingskonstanten. Siden vi har, at $a^{T_2} = 2$, så må der desuden gælde, at $a=\sqrt[T_2]{2}$, da $a>0$. 
+\end{proof}
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at halveringskonstanten $T_{1/2}$ er givet ved 
+\begin{align*}
+T_{1/2} = \frac{\ln(1/2)}{\ln(a)}
+\end{align*}
+for en eksponentialfunktion $f(x) = ba^x$. (Hint: Brug beviset for fordoblingskonstanten som skabelon.)
+\end{enumerate}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Du har 50.000kr på en konto i banken og får 1 procent i årlig rente. Hvor meget står der på din konto efter 12 år?
+\item Hvis en bakteriekoloni vokser med 200 procent på et døgn, hvor mange procent vokser den så med på en time?
+\item Væksten af en bestemt infektionssygdom er på 2 procent om ugen. Hvad er den månedlige vækst?
+\end{enumerate}
+\section*{Opgave 3}
+Bestem enten fordoblings eller halveringskonstanten for følgende eksponentialfunktioner
+\begin{align*}
+&1) \ f_1(x) = 0.5\cdot 2^x   &&2) \ f_2(x)=2\cdot 0.5^x  \\
+&3) \ f_3(x) = 2000\cdot(0.003)^x  &&4) \ 4e^{27x}  \\
+\end{align*}
+\section*{Opgave 4}
+En bakteriekoloni vokser med $30$ procent i timen. Hvad der fordoblingskonstanten for den eksponentialfunktion, der beskriver antallet af bakterier? Hvad er fordoblingskonstanten, hvis vi ændrer enheden fra timer til dage? Hvad med minutter?

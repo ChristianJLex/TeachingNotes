@@ -1,0 +1,108 @@
+
+\begin{center}
+\Huge
+Punkter og vektorer samt vinkler mellem vektorer
+\end{center}
+
+\section*{Recap}
+\stepcounter{section}
+
+Vi husker på, at vektoren fra et punkt $P = (p_1,p_2)$ til et punkt $Q = (q_1,q_2)$ er givet ved
+\begin{align*} 
+\vv{PQ} = \begin{pmatrix} q_1-p_1\\ q_2-p_2.
+\end{pmatrix}
+\end{align*}
+\begin{exa}
+Lad os bestemme længden af vektoren $2 \vv{PQ} + \vv{AB}$, hvor $P = (1,-2),$ $Q = (-4,3)$, $A = (5,-2)$, $B = (-1,-1)$.
+Først bestemmer vi vektorerne $\vv{PQ}$ og $\vv{AB}$:
+\begin{align*}
+\vv{PQ} = \begin{pmatrix} -4-1\\3+2\end{pmatrix}=\begin{pmatrix} -5\\5\end{pmatrix}, \textnormal{ og }\vv{AB} = \begin{pmatrix} -1-5\\-1+2\end{pmatrix} = \begin{pmatrix} -6\\1\end{pmatrix}.
+\end{align*}
+Vi kan nu bestemme udtrykket:
+\begin{align*}
+2 \vv{PQ} + \vv{AB} = 2\begin{pmatrix}-5 \\ 5\end{pmatrix} + \begin{pmatrix}-6 \\ 1\end{pmatrix} = \begin{pmatrix}-16 \\ 6\end{pmatrix}.
+\end{align*}
+Til slut bestemmer vi så længden af vektoren
+\begin{align*}
+\left|\begin{pmatrix}-16 \\ 6\end{pmatrix} \right| = \sqrt{(-16)^2+6^2} = \sqrt{256+36} = \sqrt{292} \approx 17
+\end{align*}
+\end{exa}
+\begin{exa}
+Lad os bestemme midtpunktet mellem to punktet $P = (-2,2)$ og punktet $Q = (1,4)$. Lad os kalde det punkt $M$. Der må gælde, at $\vv{OP} + \frac{1}{2}\vv{PQ} = \vv{OM}$. Vi bestemmer derfor $\vv{PQ}$ som
+\begin{align*}
+\vv{PQ} = \begin{pmatrix} 1+3\\4-2 
+ \end{pmatrix} = \begin{pmatrix}
+ 4\\ 2
+ \end{pmatrix}.
+\end{align*}
+Vi kan nu bestemme stedvektoren til punktet $M$ som
+\begin{align*}
+\vv{OP} + \frac{1}{2} \vv{PQ} = \begin{pmatrix}
+-2 \\ 2
+\end{pmatrix} + \frac{1}{2}\begin{pmatrix}
+4 \\ 2
+\end{pmatrix}  = \begin{pmatrix}
+0 \\ 3
+\end{pmatrix} 
+\end{align*}
+
+Derfor må punktet $M$ hedde $M = (0,3)$.
+\end{exa}
+
+\section*{Vinkler mellem vektorer}
+\stepcounter{section}
+
+Vinklen mellem to vektorer betegnes med $\angle (\vv{a},\vv{b})$ for to vektorer $\vv{a}$ og $\vv{b}$. Det er typisk den spidse vinkel, der betegnes. Altså gælder der typisk, at 
+\begin{align*}
+0\leq \angle (\vv{a},\vv{b})\leq 180.
+\end{align*}
+Der er to specielle tilfælde: Når vinklen er $0^{\circ}$ eller $180^{\circ}$ og når vinklen er $90^{\circ}$. I tilfældet, at vinklen mellem to vektorer $\angle (\vv{a},\vv{b}) = 0^{\circ}$ eller $180^\circ$, så siger vi, at vektorerne $\vv{a}$ og $\vv{b}$ er parallelle. I tilfælde af, at vinklen mellem to vektorer er $90^{\circ}$, så siger vi, at vektorerne er vinkelrette eller \textit{orthogonale}
+\begin{defn}
+To vektorer $\vec{v},\vv{w} \neq \vv{0}$ siges at være orthogonale, hvis $\angle(\vv{v},\vv{w}) = 90^\circ$. I dette tilfælde skriver vi $\vv{v} \perp \vv{w}$. 
+\end{defn} 
+\begin{defn}
+To vektorer $\vv{v},\vv{w} \neq \vv{0}$ siges at være parallelle, hvis $\vv{v} = k\vv{w}$ for en konstant $k$. I så fald skriver vi $ \vv{v} \parallel \vv{w}$.
+\end{defn}
+\begin{exa}
+Vektorerne $\vv{v} = \begin{pmatrix} 1\\1\end{pmatrix}$ og $\vv{w} = \begin{pmatrix}2\\ 2 \end{pmatrix}$ er parallelle, da $\vv{v} = \frac{1}{2} \vv{w}$.
+\end{exa}
+
+
+\section{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Bestem stedvektoren til følgende punkter 
+\begin{align*}
+&1) \ (1,2)   &&2) \  (0,0)  \\
+&3) \  (\sqrt{2},\sqrt{5})  &&4) \ (-2,7)    \\
+\end{align*}
+\item Bestem vektorerne i begge retninger mellem følgende punkter
+\begin{align*}
+&1) \ (4,5) \textnormal{ og } (-5,4) &&2) \ (0,0) \textnormal{ og } (1,1)  \\
+&3) \  (1,2)\textnormal{ og }(-3,-4)   &&4) \ (9,7)\textnormal{ og }(10,-4)   \\
+\end{align*}
+\item For punkterne $A = (1,-1)$, $B = (0,5)$, $C = (-7,2)$ og $D = (-2,3)$ bestem
+\begin{align*}
+&1) \ \vv{AC} + \vv{BD}  &&2) \ \vv{BA} + \vv{DA}   \\
+&3) \ \vv{CA} - 2\vv{BC}  &&4) \ \vv{BA} + \vv{AC} + \vv{AB} + \vv{CD}   \\
+\end{align*}
+\end{enumerate}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item For punkterne $A = (10,5)$ og $B= (-2,3)$ bestem så midtpunktet $M$ mellen $A$ og $B$. Bestem derefter midtpunktet mellem $M$ og $A$.
+\item For punkterne $A = (5,0)$ og $B = (0,5)$ bestem så midtpunktet $M$ mellem $A$ og $B$. Bestem så længden af $\vv{OM}$.
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Fire punkter er givet ved $A = (2,2)$, $B = (4,5)$, $C = (-5,6)$, $D = (1,12)$. Afgør, om $\vv{AB}$ og $\vv{CD}$ er parallelle. Hvad med $\vv{AD}$ og $\vv{BC}$.
+\item Er $\begin{pmatrix}1\\0\end{pmatrix}$ og $\begin{pmatrix}
+0\\1
+\end{pmatrix}$ orthogonale? 
+\item Er $\begin{pmatrix}0\\7\end{pmatrix}$ og $\begin{pmatrix}
+1\\1
+\end{pmatrix}$ orthogonale? 
+\end{enumerate}
+
+\section*{Opgave 4}
+
+Vis $i)$, $ii)$, $iv)$ og $v)$ i Sætning 1.2 fra Modul 26.

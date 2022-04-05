@@ -1,0 +1,89 @@
+
+\begin{center}
+\Huge
+Bestemt integraler
+\end{center}
+
+\section*{Det bestemte integral}
+\stepcounter{section}
+Tidligere har vi defineret det ubestemte integral som en slags omvendt funktion til differentiation, og vi har set på forskellige egenskaber ved det ubestemte integral som linearitet. Vi skal nu betragte det bestemte integral, der er en evaluering af det ubestemte integral i intervalendepunkter. Det vil vise sig, at dette rent faktisk tilsvarer arealet mellem grafen for en funktion på det betragtede interval. Vi starter med en definition.
+\begin{defn}
+Lad $f$ være en kontinuert funktion. Så definerer vi det bestemte integral fra $a$ til $b$ for $f$ som
+\begin{align*}
+\int_a^bf(x) \intd x = [F(x)]_a^b = F(b)-F(a),
+\end{align*}
+hvor $F$ er en stamfunktion til $f$. 
+\end{defn}
+
+\begin{setn}
+For en kontinuert, ikke-negativ funktion $f$ er arealet afgrænset af $x$-aksen, to punkter $a$ og $b$ og grafen for $f$ givet ved
+\begin{align*}
+\int_a^bf(x)\intd x.
+\end{align*} 
+\end{setn}
+\begin{proof}
+Vi betegner arealet mellem $f$, på intervallet $[a,x]$ og $x$-aksen med $A_a(x)$. For et lille $h$ har vi så, at 
+\begin{align*}
+A_a(x+h)-A_a(x) = f(x)\cdot h + O(h), 
+\end{align*}
+hvor $O(h)$ er en lille fejl, der afhænger af størrelsen på $h$. Vi skal se, at denne fejl går mod $0$, når $h$ er kontinuert. Vi isolerer $f(x)$ i dette udtryk og får
+\begin{align*}
+f(x) = \frac{A_a(x+h)-A_a(x)}{h} + \frac{O(h)}{h}.
+\end{align*}
+Vi kan vurderer $O(h)$ opadtil ved $O(h) \leq h\cdot f(x+h_{\textnormal{max}})-h\cdot f(x+h_{\textnormal{min}})$, hvor $h_{\textnormal{max}}$ og $h_{\textnormal{min}}$ er de punkter på intervallet $[x,x+h]$ hvor $f$ tager sit maksimum hhv. minimum. Dette giver
+\begin{align*}
+f(x) &= \frac{A_a(x+h)-A_a(x)}{h} + \frac{O(h)}{h}\\
+&\leq \frac{A_a(x+h)-A_a(x)}{h} + \frac{ h\cdot f(x+h_{\textnormal{max}})-h\cdot f(x+h_{\textnormal{min}})}{h}\\
+&=\frac{A_a(x+h)-A_a(x)}{h} +   f(x+h_{\textnormal{max}})-f(x+h_{\textnormal{min}})
+\end{align*}
+Vi lader nu $h$ gå mod $0$. Dette giver 
+\begin{align*}
+\frac{A_a(x+h)-A_a(x)}{h} -   f(x+h_{\textnormal{max}})+f(x+h_{\textnormal{min}}) \overset{h\rightarrow 0}{\longrightarrow}A_a'(x) - f(x)+f(x) = A_a'(x)
+\end{align*}
+Vi har derfor, at arealfunktionen $A_a(x)$ er en stamfunktion til $f(x)$. Vi bruger den i definitionen af det bestemte integral.
+\begin{align*}
+\int_a^bf(x) \intd x = A_a(b)-A_a(a) = A_a(b),
+\end{align*}
+hvilket afslutter vores bevis.
+\end{proof}
+
+\begin{exa}
+Vi skal finde arealet under grafen for funktionen $f(x) = 2x$ på intervallet $[2,4]$. Vi bestemmer derfor det bestemte integral.
+\begin{align*}
+\int_2^4 2x \intd x = [x^2]_2^4 = 4^2-2^2 = 16-4 = 12. 
+\end{align*}
+Dette areal stemmer også overens med vores arealformel for en trapez, der i dette tilfælde bestemmes som $\frac{8+4}{2}\cdot 2 = 12$. 
+\end{exa}
+
+\section*{Opgave 1}
+Bestem følgende ubestemte integraler:
+\begin{align*}
+&1)   \ \int x \intd x    &&2) \ \int 3x^2 \intd x     \\
+&3)   \ \int x^3 + 4x + 1 \intd x  &&4) \ \int 3e^{6x} \intd x     \\
+\end{align*}
+\section*{Opgave 2}
+Bestem følgende bestemte integraler
+\begin{align*}
+&1) \ \int_0^2 4x \intd x   &&2) \ \int_{-3}^3 x^2\intd x    \\
+&3) \ \int_4^4 x^4 \intd x  &&4) \ \int_1^2 \frac{2}{x} \intd x    \\
+\end{align*}
+
+\section*{Opgave 3}
+	\begin{enumerate}[label=\roman*)]
+		\item Bestem arealet under grafen for
+			\begin{align*}
+				f(x) = 3
+			\end{align*}
+			på intervallet $[-1,5]$ ved brug af integralregning. Verificér dit svar geometrisk.
+		\item Bestem arealet under grafen for
+			\begin{align*}
+				f(x) = -3x + 9
+			\end{align*}
+			på intervallet $[0,9]$ ved brug af integralregning. Verificér dit svar geometrisk.
+		\item Højden af en mur kan beskrives ved funktionen
+			\begin{align*}
+				h(x) = \frac{1}{2}x^2 + 2,
+			\end{align*}
+			hvor $x$ er afstanden fra midten af muren. Muren er 4 meter bred. Hvad er arealet af muren?		
+	\end{enumerate}
+
