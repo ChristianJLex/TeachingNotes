@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Aflevering 6
+$\ln(x)$ og eksponentiel vækst
 }
-\chead{ 25/3/2022
+\chead{ %25/3/2022
 }
 
 \begin{document}
@@ -28,91 +28,118 @@ Aflevering 6
 %\end{center}
 %\section*{Opgave 1}
 %\stepcounter{section}
-
 \begin{center}
 \Huge
-Aflevering 6
+Den naturlige logaritme og eksponentiel vækst
 \end{center}
-\section*{Opgave 1}
 \stepcounter{section}
 
-I en by er luftpartikelkoncentrationen af en bestemt type udstødningspartikel målt fra år $2000$ til år $2010$. Den målte koncentration (i ppm) som funktion af tiden (i år) kan ses af følgende tabel:
-\begin{center}
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
-$t$  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9  \\
-\hline
-$C$  &11.67 & 35.15 & 42.49 & 68.97 & 55.61 & 92.73 & 103.22 & 150.53 & 185.23 & 244.42
-\end{tabular}
-\end{center}
+\section*{Den naturlige logaritme}
+\begin{defn}
+Den naturlige logaritme er den entydige funktion $\ln$, der opfylder, at
+\begin{align*}
+\ln(e^x) = x, 
+\end{align*}
+og
+\begin{align*}
+e^{\ln(x)} = x,
+\end{align*}
+hvor $e$ er Euler's tal. ($e \approx 2.7182$)
+\end{defn}
+Funktionen $e^x$ kaldes for den naturlige eksponentialfunktion, og vi vil senere beskrive den nærmere.
 
+\begin{setn}[Regneregler for $\ln$]
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, og $x\in \mathbb{R}$ at
 \begin{enumerate}[label=\roman*)]
-\item Vi antager, at sammenhængen mellem tiden $t$ og koncentrationen $C$ er på formen
-\begin{align}\label{eq:lin}
-C(t) = at+b.
-\end{align}
-Bestem $a$ og $b$, så denne sammenhæng passer bedst på punkterne. 
-\item Lav residualanalyse på denne model og vurdér, om en sammenhængen af typen \eqref{eq:lin} beskriver datasættet godt.
-\item En genovervejelse af kilden til denne forurering får os til at tro, at sammenhængen mellem luftpartikelkoncentrationen og tiden er givet ved en eksponentiel sammenhæng i stedet. Lav eksponentiel regression på datasættet og kommentér på resultatet.
-\item Lav residualanalyse på den eksponentielle model og sammenlign med den tidligere model. Hvilken model virker til at være mest valid?
-\item Bestem residualet for begge modeller i år $2005$.
-\item Brug begge modeller til at bestemme partikelkoncentrationen i år 2010.
-\item Partikelkoncentrationen var i år 2010 på $317.23$ppm. Hvilken model rammer dette bedst?
-\item Brug dine svar på i)-vi) til at vurdere, hvilken af de to modeller, der bedst beskriver partikelkoncentrationen. 
+\item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
+\item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
+\item $\ln(a^x) = x\ln(a)$.
 \end{enumerate}
+\end{setn}
+\begin{proof}
+\phantom{hej} \\
+Ad $i)$: Vi betragter
+\begin{align*}
+\ln(a\cdot b) &= \ln(e^{\ln(a)}\cdot e^{\ln(b)})\\
+&= \ln(e^{\ln(a)+\ln(b)}) \\
+&= \ln(a) + \ln(b).
+\end{align*}
+Ad $ii)$: 
+\begin{align*}
+\ln\left(\frac{a}{b}\right) &= \ln\left(\frac{e^{\ln(a)}}{e^{\ln(b)}}\right)\\
+&= \ln\left(e^{\ln(a)-\ln(b)}\right)\\
+&= \ln(a)-\ln(b).
+\end{align*}
+Ad $iii)$:
+\begin{align*}
+\ln(a^x) &= \ln\left(\left(e^{\ln(a)}\right)^x\right)\\
+&= \ln\left(e^{x\ln(a)} \right)\\
+&= x\ln(a).
+\end{align*}
+\end{proof}
+
+\section*{Eksponentiel vækst}
+Vi vil hovedsagligt bruge logaritmebegrebet i forbindelse med eksponentiel vækst. 
+\begin{defn}
+Hvis vi har en sammenhæng $y = b\cdot a^x$ for konstanter $a,b$, så siges sammenhængen mellem $x$ og $y$ at være eksponentiel. En funktion $f$ med forskriften
+\begin{align*}
+f(x) = b\cdot a^x
+\end{align*}
+siges at være en eksponentiel funktion. 
+\end{defn}
+Eksponentiel vækst vokser ved at gange med fremskrivningsfaktoren $a$ efter hver tidsenhed.
+\begin{exa}
+Lad os sige, at vi har en bakteriekoloni med ubegrænset næringsstof og plads, og lad os se på væksten af en enkelt bakterie i kolonien. Lad os sige, at den en gang per time deler sig i to. Så vil den efter 1 time være to bakterier, efter to timer være 4 bakterier, efter 3 timer være 8 bakterier osv. Efter hver time ganger vi altså bakterieantallet med 2. Antallet af bakterier $B$ må derfor kunne beskrives som 
+\begin{align*}
+B(t) = B_0\cdot 2^t,
+\end{align*}
+hvor $t$ er tiden i timer, og $B_0$ er antallet af bakterier til tid $t=0$, da $B(0) = B_02^0 = B_0.$
+Dette er eksponentiel vækst, da $a = 2$, og $b = B_0$.
+\end{exa}
+\begin{exa}
+Vi tager et lån i banken og låner 100000kr. Banken giver os en månedlig rente på $1\%$. Efter hver måned skal vi altså gange med $1,01$, og en model for mængden vi skylder, hvis vi ikke afdrager på lånet er
+\begin{align*}
+f(x) = 100.000\cdot (1,01)^t,
+\end{align*}
+hvor $t$ er tiden efter vores lån i måneder. Efter 3 år vil vi derfor skylde
+\begin{align*}
+f(36) = 100.000\cdot (1,01)^{36} \approx 143.000
+\end{align*}
+\end{exa} 
 
 
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Hvad er pH-værdien for en opløsning med en $H^+$-koncentration på $10^{-10}$?
+\item Hvad er $H^+$-koncentrationen for en opløsning med pH-værdi $7,5$?
+\item En opløsning har volumen $500L$ og indeholder $1$ mol $H^+$. Hvad er $pH$-værdien af opløsningen?
+\end{enumerate}
 \section*{Opgave 2}
-Vi har punkterne $A = (2,k)$, $B =(-4,1)$ og $C = (-1,-1)$.
-\begin{enumerate}[label=\roman*)]
-\item Bestem $k$, så $\vv{BA}$ og $\vv{BC}$ er orthogonale.
-\item Bestem $k$, så $\vv{BA}$ og $\vv{BC}$ er parallelle. 
-\item Bestem $k$, så den lille vinkel mellem $\vv{BA}$ og $\vv{BC}$ er $30^\circ$
-\end{enumerate}
-
+Løs følgende ligninger
+\begin{align*}
+&1) \ \ln(x)=1   &&2) \ \ln(x)=e    \\
+&3) \ \ln(3x+7) = 3   &&4) \  \ln(x^2) = e^4   \\
+\end{align*}
 \section*{Opgave 3}
-Betragt andengradspolynomierne $f$, $g$ og $h$ på Fig. \ref{fig:poly}
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[axis lines = middle, xmin = -2, xmax = 2, ytick = {}, xtick = {}]
-\addplot[samples = 1000, color = green] {x^2+2*x-3};
-\addplot[samples = 1000, color = blue] {-x^2+1};
-\addplot[samples = 1000, color = red] {-x^2+x-2};
-\legend{$f$, $g$, $h$}
-\end{axis}
-\end{tikzpicture}
-\caption{Polynomier}
-\label{fig:poly}
-\end{figure}
-\begin{enumerate}[label=\roman*)]
-\item Bestem fortegnene for koefficienterne $a,$ $b$ og $c$ for $f$, $g$ og $h$ ved at betragte Fig. \ref{fig:poly}. Begrund dit svar.
-\item Bestem fortegnet på diskriminanten for $f$, $g$ og $h$. Begrund dit svar. 
-\end{enumerate}
+Bestem følgende:
+\begin{align*}
+&1) \  \ln(e)  &&2) \  \ln(e^3)    \\
+&3) \  \ln(\sqrt{e})  &&4) \ \ln(\sqrt[5]{e^4})      \\
+\end{align*}
 
 \section*{Opgave 4}
-Et mål for sundhed hos både mænd og kvinder er det såkaldte BMI (Body Mass Index). BMI for en person bestemmes som
-\begin{align*}
-f(h,m) = \frac{m}{h^2},
-\end{align*}
-hvor $h$ er højde i meter og $m$ er vægt i $kg$. Man betegnes som normalvægtig, hvis man har en BMI i intervallet $[18.5,25]$. 
-\begin{enumerate}
-\item Gennemsnitshøjden for danske kvinder var i 2005 167cm og gennemsnitsvægten var 68kg. Hvad er BMI for gennemsnitskvinden?
-\item Hvis en person på 167cm skal være normalvægtig, hvad er så det højeste, hun må veje? Hvad med det laveste?
-\item Rekorden for højeste vægt har amerikaneren Jon Brower Minnoch. Han havde, da han var tungest en BMI på 343.25, og han var 185cm høj. Hvad vejede han?
-\item Hvor mange kg skulle Jon tabe for at blive normalvægtig?
+\begin{enumerate}[label=\roman*)]
+\item En person låner 40000 som forbrugslån. Han skal betale 19$\%$ i årlig rente. Opstil en model for de penge han skylder som funktion af tiden målt i år, hvis han ikke afdrager på lånet. Hvornår skylder han 100.000?
+\item En radioaktiv isotop har en halveringstid på 2 sekunder, og vi starter med et kilo af isotopen. Opstil en model for massen af isotopen som funktion af tiden målt i sekunder. Hvornår er der 10 gram tilbage? Hvornår er der 0?
+\end{enumerate}
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
 \end{enumerate}
 
-\section*{Opgave 5}
-En eksponentialfunktion
-\begin{align*}
-f(x) = 1.3\cdot (1.05)^x
-\end{align*}
-er givet. 
-\begin{enumerate}[label=\roman*)]
-\item Bestem $f(10)$.
-\item Løs ligningen $f(x) = 2$.
-\item Hvad er fordoblingskonstanten for $f$?
-\end{enumerate}
 
 \end{document}
 

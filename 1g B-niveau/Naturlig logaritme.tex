@@ -3,14 +3,7 @@
 Den naturlige logaritme og eksponentiel vækst
 \end{center}
 \stepcounter{section}
-\begin{exa}
-pH-værdien af en opløsning er defineret som
-\begin{align*}
-pH = -\log(a_{H^+}),
-\end{align*}
-hvor $a_{H^+}$ betegner hydrogenionaktiviteten. $a_{H^{+}}$ er ca. stofmængdekoncentrationen af $H^{+}$-ioner i opløsningen. Hvis vi antager, at en opløsning har en stofmængdekoncentration på $10^{-3}mol/L$ $h^+$-ioner. Så vil 
-pH-værdien af opløsningen være (ca.) $-\log(10^{-3}) = 3$.  
-\end{exa}
+
 \section*{Den naturlige logaritme}
 \begin{defn}
 Den naturlige logaritme er den entydige funktion $\ln$, der opfylder, at
@@ -26,13 +19,34 @@ hvor $e$ er Euler's tal. ($e \approx 2.7182$)
 Funktionen $e^x$ kaldes for den naturlige eksponentialfunktion, og vi vil senere beskrive den nærmere.
 
 \begin{setn}[Regneregler for $\ln$]
-For den naturlige logaritme $\ln$ gælder der for $a,b>0$, at
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, og $x\in \mathbb{R}$ at
 \begin{enumerate}[label=\roman*)]
 \item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
 \item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
 \item $\ln(a^x) = x\ln(a)$.
 \end{enumerate}
 \end{setn}
+\begin{proof}
+\phantom{hej} \\
+Ad $i)$: Vi betragter
+\begin{align*}
+\ln(a\cdot b) &= \ln(e^{\ln(a)}\cdot e^{\ln(b)})\\
+&= \ln(e^{\ln(a)+\ln(b)}) \\
+&= \ln(a) + \ln(b).
+\end{align*}
+Ad $ii)$: 
+\begin{align*}
+\ln\left(\frac{a}{b}\right) &= \ln\left(\frac{e^{\ln(a)}}{e^{\ln(b)}}\right)\\
+&= \ln\left(e^{\ln(a)-\ln(b)}\right)\\
+&= \ln(a)-\ln(b).
+\end{align*}
+Ad $iii)$:
+\begin{align*}
+\ln(a^x) &= \ln\left(\left(e^{\ln(a)}\right)^x\right)\\
+&= \ln\left(e^{x\ln(a)} \right)\\
+&= x\ln(a).
+\end{align*}
+\end{proof}
 
 \section*{Eksponentiel vækst}
 Vi vil hovedsagligt bruge logaritmebegrebet i forbindelse med eksponentiel vækst. 
@@ -88,11 +102,5 @@ Bestem følgende:
 \begin{enumerate}[label=\roman*)]
 \item En person låner 40000 som forbrugslån. Han skal betale 19$\%$ i årlig rente. Opstil en model for de penge han skylder som funktion af tiden målt i år, hvis han ikke afdrager på lånet. Hvornår skylder han 100.000?
 \item En radioaktiv isotop har en halveringstid på 2 sekunder, og vi starter med et kilo af isotopen. Opstil en model for massen af isotopen som funktion af tiden målt i sekunder. Hvornår er der 10 gram tilbage? Hvornår er der 0?
-\end{enumerate}
-\section*{Opgave 5}
-\begin{enumerate}[label=\roman*)]
-\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
-\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
-\item Bevis, at  $\ln(a^x) = x\ln(a)$.
 \end{enumerate}
 
