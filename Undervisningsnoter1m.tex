@@ -11,7 +11,7 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Aflevering 2
+Modul 14
 }
 \chead{ 8/4/2022
 }
@@ -28,89 +28,115 @@ Aflevering 2
 %\end{center}
 %\section*{Opgave 1}
 %\stepcounter{section}
-
 \begin{center}
 \Huge
-Aflevering 2
+Andengradsligninger
 \end{center}
-\section*{Opgave 1}
+
+\section*{Hvad er en andengradsligning?}
 \stepcounter{section}
 
-I en by er luftpartikelkoncentrationen af en bestemt type udstødningspartikel målt fra år $2000$ til år $2009$. Den målte koncentration (i ppm) som funktion af tiden (i år) kan ses af følgende tabel:
-\begin{center}
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c}
-$t$  & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9  \\
-\hline
-$C$  &11.67 & 35.15 & 42.49 & 68.97 & 55.61 & 92.73 & 103.22 & 150.53 & 185.23 & 244.42
-\end{tabular}
-\end{center}
+Vi har tidligere set, hvordan man kan udnytte nulreglen og kvadratsætninger til at gætte løsninger til andengradsligninger. Vi vil i dag se, hvordan man mere generelt kan udregne løsninger til andengradsligninger, men vi vil først definere helt præcist hvad en andengradsligning er.
+\begin{defn}[andengradsligning]
+Hvis en ligning med ubekendt variabel $x$ er på formen 
+\begin{align*}
+ax^2+bx+c=0,
+\end{align*}
+hvor $a,b,c\in \mathbb{R}, a\neq 0$, så kalder vi ligningen for en andengradsligning. 
+\end{defn}
+Da andengradspolynomier er funktioner på formen 
+\begin{align*}
+f(x) = ax^2+bx+c, 
+\end{align*}
+så tilsvarer løsningen af en andengradsligning $ax^2+bx+c= 0$ at finde rødderne for andengradspolynomiet $f$.  
 
-\begin{enumerate}[label=\roman*)]
-\item Vi antager, at sammenhængen mellem tiden $t$ og koncentrationen $C$ er på formen
-\begin{align}\label{eq:lin}
-C(t) = at+b.
+\begin{exa}
+Vi har følgende eksempler på andengradsligninger
+\begin{align}
+2x^2+10x+7&=0\label{eq:lig1},\\
+\sqrt{3}x^2+4=0\label{eq:lig2}.
 \end{align}
-Bestem $a$ og $b$, så denne sammenhæng passer bedst på punkterne. 
-\item Lav residualanalyse på denne model og vurdér, om en sammenhængen af typen \eqref{eq:lin} beskriver datasættet godt.
-\item En genovervejelse af kilden til denne forurering får os til at tro, at sammenhængen mellem luftpartikelkoncentrationen og tiden er givet ved en eksponentiel sammenhæng i stedet. Lav eksponentiel regression på datasættet og kommentér på resultatet.
-\item Lav residualanalyse på den eksponentielle model og sammenlign med den tidligere model. Hvilken model virker til at være mest valid?
-\item Bestem residualet for begge modeller i år $2005$.
-\item Brug begge modeller til at bestemme partikelkoncentrationen i år 2010.
-\item Partikelkoncentrationen var i år 2010 på $317.23$ppm. Hvilken model rammer dette bedst?
-\item Brug dine svar på i)-vii) til at vurdere, hvilken af de to modeller, der bedst beskriver partikelkoncentrationen. 
-\end{enumerate}
+I \eqref{eq:lig1} er $a=2,$ $b=10$ og $c=7$. I \eqref{eq:lig2} er $a=\sqrt{3},$ $b=0$ og $c=4$. 
+\end{exa}
+Hvis ligninger kan omskrives til 2.gradsligninger vil vi ofte også kalde dem for andengradsligninger.
+\begin{exa}[Det gyldne snit]
+Løsninger af andengradsligninger er blevet studeret siden før antikken, men det var først i 1600-tallet at algebraiske ligninger (brug af $a,b,c$ til at betegne kendte størrelser og $x,y,z$ til at betegne ubekendte størrelser) blev introduceret. (Formentlig første gang af René Descartes). Tidligere blev andengradsligninger beskrevet med ord som "retoriske ligninger". Et eksempel på dette er det gyldne snit:
 
+Opdel et linjestykke i to stykker, så forholdet mellem det korte og det lange stykke er lig med forholdet mellem det lange stykke og hele linjestykket. Lad desuden det korte stykke have længde $1$. Lad os kalde længden på det lange stykke for $x$ og længden på det korte stykke for $y=1$. Så får vi algebraisk
+\begin{align*}
+ \frac{x}{y} = \frac{x+y}{x} &\Leftrightarrow\\
+ x = \frac{x+1}{x}.
+\end{align*}
+Det er ikke umiddelbart klart, at dette er en andengradsligning, så vi ganger derfor igennem med $x$, og får
+\begin{align*}
+x^2 = x+1\  \Leftrightarrow\ x^2-x-1=0,
+\end{align*}
+som klart er en andengradsligning.
+\end{exa}
+\section*{Løsninger af andengradsligninger}
+En andengradsligning har altid enten $0,$ $1$ eller $2$ løsninger. De kan findes ved brug af følgende sætning.
+\begin{setn}
+Løsningerne til en andengradsligning $ax^2+bx+c=0$ er givet ved formlen
+\begin{align*}
+x = \frac{-b\pm \sqrt{d}}{2a},
+\end{align*}
+hvor diskriminanten $d$ er givet ved
+\begin{align*}
+d=b^2-4ac.
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi ser på ligningen
+\begin{align*}
+ax^2+bx+c = 0.
+\end{align*}
+Vi ganger igennem med $4a$.
+\begin{align*}
+ax^2+bx+c = 0\ &\Leftrightarrow \ 4a^2x^2+4abx+4ac=0.
+\end{align*}
+Vi lægger $d = b^2-4ac$ på begge sider af lighedstegnet:
+\begin{align*}
+4a^2x^2+4abx+4ac=0 \ &\Leftrightarrow \ 4a^2x^2+4abx+4ac + b^2-4ac=b^2-4ac\\
+&\Leftrightarrow 4a^2x^2+4abx+b^2 = d\\
+&\Leftrightarrow (b+2ax)^2 = d.
+\end{align*}
+Vi kan nu isolere $x$ i formlen.
+\begin{align*}
+(b+2ax)^2 = d \ &\Leftrightarrow b+2ax = \pm \sqrt{d}\\
+&\Leftrightarrow 2ax = -b \pm \sqrt{d}\\
+&\Leftrightarrow x = \frac{-b\pm \sqrt{d}}{2a}.
+\end{align*}
+\end{proof}
+Det er klart, at hvis $d>0$, så må $ax^2+bx+c=0$ have to løsninger. Hvis $d=0$, så har ligningen netop én løsning. Og hvis $d<0$, så kan ligningen ingen reelle løsninger have. 
+\begin{exa}
+Vi kan nu løse ligningen $x^2-x-1=0$ fra tidligere eksempel. I denne ligning er $a=1$, $b=-1$, og $c = -1$. Dette indsætter vi i diskriminantformlen og får
+\begin{align*}
+x = \frac{-(-1)\pm \sqrt{(-1)^2-(4\cdot 1 \cdot (-1))}}{2\cdot 1} = \frac{1 \pm\sqrt{5}}{2}.
+\end{align*}
+$x$ skulle tilsvare længden på et linjestykke, og derfor må det være den positive løsning, vi har interesse i. Derfor skal $x$ have længden $$x = \frac{1 +\sqrt{5}}{2}\approx 1.6, $$som er det, der nogle gange kaldes det gyldne snits forhold. 
+\end{exa}
 
+\section*{Opgave 1}
+Omskriv følgende ligninger til formen $ax^2+bx+c = 0$
+\begin{align*}
+&1) \ ax^2+bx = -c   &&2) \  x^2=7  \\
+&3) \ 9-5x=3x^2   &&4) \ x(10+2x)=5   \\
+%&5) \ (x-3)^2 =0  &&6) \  \sqrt{2}x^2+7^2=9   \\
+%&7) \  (x-2)(x-10)=10  &&8) \  (x-\sqrt{2})(x-\sqrt{3})=0  \\
+%&9) \  3x^2=x^2-2  &&10) \ 5x = \frac{1}{2x}+7   \\
+\end{align*}
 \section*{Opgave 2}
-Vi har punkterne $A = (2,k)$, $B =(-4,1)$ og $C = (-1,-1)$.
-\begin{enumerate}[label=\roman*)]
-\item Bestem $k$, så $\vv{BA}$ og $\vv{BC}$ er orthogonale.
-\item Bestem $k$, så $\vv{BA}$ og $\vv{BC}$ er parallelle. 
-\item Bestem $k$, så den lille vinkel mellem $\vv{BA}$ og $\vv{BC}$ er $30^\circ$
-\end{enumerate}
+Løs følgende andengradsligninger med diskriminantformlen
+\begin{align*}
+&1) \ x^2+x-5 =0   &&2) \  x^2+8x+16 = 0  \\
+&3) \ x^2-1 = 0  &&4) \ x^2+1=0  \\
+&5) \ 2x+12x-14=0 &&6) \  4x^2-16x+64=0   \\
+&7) \  6x^2=6x+12  &&8) \  x^2=4  \\
+&9) \  \frac{1}{2}x^2 -\frac{7}{2}x=-6  &&10) \ x^4 - 8x^2+16 =0 \textnormal{ Hint: Sæt } y=x^2   \\
+&11) \  x = \frac{4}{x}  && 12) \    x-2 = \frac{15}{x}   
+\end{align*}
+
 
 \section*{Opgave 3}
-Betragt andengradspolynomierne $f$, $g$ og $h$ på Fig. \ref{fig:poly}
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-\begin{axis}[axis lines = middle, xmin = -2, xmax = 2, ytick = {}, xtick = {}]
-\addplot[samples = 1000, color = green] {x^2+2*x-3};
-\addplot[samples = 1000, color = blue] {-x^2+1};
-\addplot[samples = 1000, color = red] {-x^2+x-2};
-\legend{$f$, $g$, $h$}
-\end{axis}
-\end{tikzpicture}
-\caption{Polynomier}
-\label{fig:poly}
-\end{figure}
-\begin{enumerate}[label=\roman*)]
-\item Bestem fortegnene for koefficienterne $a,$ $b$ og $c$ for $f$, $g$ og $h$ ved at betragte Fig. \ref{fig:poly}. Begrund dit svar.
-\item Bestem fortegnet på diskriminanten for $f$, $g$ og $h$. Begrund dit svar. 
-\end{enumerate}
-
-\section*{Opgave 4}
-Et mål for sundhed hos både mænd og kvinder er det såkaldte BMI (Body Mass Index). BMI for en person bestemmes som
-\begin{align*}
-f(h,m) = \frac{m}{h^2},
-\end{align*}
-hvor $h$ er højde i meter og $m$ er vægt i $kg$. Man betegnes som normalvægtig, hvis man har en BMI i intervallet $[18.5,25]$. 
-\begin{enumerate}
-\item Gennemsnitshøjden for danske kvinder var i 2005 167cm og gennemsnitsvægten var 68kg. Hvad er BMI for gennemsnitskvinden?
-\item Hvis en person på 167cm skal være normalvægtig, hvad er så det højeste, hun må veje? Hvad med det laveste?
-\item Rekorden for højeste vægt har amerikaneren Jon Brower Minnoch. Han havde, da han var tungest en BMI på 185.5, og han var 185cm høj. Hvad vejede han?
-\item Hvor mange kg skulle Jon tabe for at blive normalvægtig?
-\end{enumerate}
-
-\section*{Opgave 5}
-En eksponentialfunktion
-\begin{align*}
-f(x) = 1.3\cdot (1.05)^x
-\end{align*}
-er givet. 
-\begin{enumerate}[label=\roman*)]
-\item Bestem $f(10)$.
-\item Løs ligningen $f(x) = 2$.
-\item Hvad er fordoblingskonstanten for $f$?
-\end{enumerate}
+Brug diskriminantformlen til at løse andengradsligningerne fra Opgave 1.
 \end{document}
