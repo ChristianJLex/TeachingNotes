@@ -1,0 +1,110 @@
+
+\begin{center}
+\Huge
+Sandsynlighedsregning og kombinatorik
+\end{center}
+\section*{Symmetrisk sandsynlighedsfordeling}
+\stepcounter{section}
+
+Vi brugte sidste gang følgende sætning op til flere gange i de tilfælde, hvor vi havde et symmetrisk sandsynlighedsfelt.
+\begin{setn}\label{setn:udfald}
+Hvis vores udfaldsrum er endeligt og har symmetrisk fordeling, så gælder der for en hændelse $A$, at
+\begin{align*}
+P(A) = \frac{\# \textit{gunstige udfald}}{\#  \textit{mulige udfald}}.
+\end{align*}
+\end{setn}
+Et meget vigtigt redskab til at anvende i Sætning \ref{setn:udfald} er kombinatorik.
+\section*{Kombinatorik}
+\stepcounter{section}
+
+\begin{setn}[Multiplikationsprincippet]
+Lad os betragte $k$ eksperimenter, og lad antallet af udfald for det $i$'te eksperiment være $n_i$. Så er antallet af udfald af de $k$ eksperimenter $n_1\cdot n_2\cdots n_k.$
+\end{setn}
+Vi kan bruge denne sætning til at fortælle, hvor mange udfald en række stokastiske eksperimenter har. Dette er specielt brugbart, når vi har med symmetriske sandsynlighedsfordelinger at gøre. 
+\begin{exa}
+Vi skal slå fem gange med en terning. Antallet af forskellige udfald er derfor $6\cdot 6 \cdot 6\cdot 6\cdot 6 = 6^5$.
+\end{exa}
+\begin{exa}
+En pose indeholder en rød bold, en blå bold, en hvid bold og en sort bold. På hvor mange forskellige måder kan vi tømme posen en bold ad gangen? Den første har 4 muligheder, den næste 3, så 2 og så 1, altså $4\cdot 3 \cdot 2 \cdot 1 = 4\!$.
+\end{exa}
+\begin{exa}
+I en klasse med 19 elever, hvad er så sandsynligheden for at mindst 2 deler fødselsdag? For at løse dette problem, vil vi se på komplementet til hændelsen: Hvad er sandsynligheden for at ingen deler fødselsdag. Vi har $365^{19}$ mulige udfald, og $365\cdot 364 \cdots 347$ gunstige udfald - første fødselsdag kan vi vælge frit, næste dag har vi et mindre valg osv. indtil vil har valgt alle $19$ dage.
+Sandsynligheden for at ingen deler fødselsdag er derfor
+\begin{align*}
+P(\textit{ingen deler fødselsdag}) = \frac{365\cdot 364 \cdots 347}{365^{19}} \approx 0.653
+\end{align*}
+Vi må have, at for hændelsen $A= \{\textit{mindst to deler fødselsdag}\}$, så er $A^C = \{\textit{ingen deler fødselsdag}\}$. Derfor må det gælde, at 
+\begin{align*}
+P(\textit{mindst to deler fødselsdag}) = P(A) = 1-P(A^C) \approx 0.347
+\end{align*}
+\end{exa}
+Skal vi bestemme antallet af muligheder for at udvælge $k$ elementer blandt $n$ elementer uden tilbagelægning men med betydning af rækkefølge, skal vi bruge binomialkoefficienten. 
+\begin{defn}
+Binomialkoefficienten er defineret som \[
+\binom{n}{k} = \frac{n!}{k!(n-k)!},
+\]
+og beskriver antallet af muligheder for at udvælge $k$ elementer blandt $n$ elementer uden tilbagelægning og uden betydning af rækkefølge.
+\end{defn}
+Binomialkoefficienten skrives i bogen med $K(n,k)$, men dette navn er ikke sædvanligt brugt.
+Det er ikke umiddelbart klart hvorfor binomialkoefficienten rent faktisk beskriver det, den gør. Vi gør os derfor følgende betragtning. Antallet af måder, vi kan vælge $k$ symboler blandt $n$ symboler uden tilbagelægning, men hvor rækkefølgen har betydning er 
+\begin{align*}
+P(n,k) = \frac{n!}{(n-k)!}.
+\end{align*}
+Dette følger direkte af multiplikationsprincippet.
+Antallet af måder, vi kan permutere hver følge af udvalgte symboler er $k!$ igen af multiplikationsprincippet, så hver følge optræder $k!$ gange for meget. Derfor fås 
+\begin{align*}
+\binom{n}{k} = \frac{\frac{n!}{(n-k)!}}{k!} =\frac{n!}{k!(n-k)!} .
+\end{align*}
+\begin{exa}
+Vi skal udvælge tre personer i en klasse på 15 til at gøre rent efter modulet. Det er ligegyldigt om du bliver valgt først eller sidst - du skal alligevel gøre rent. Hvad er sandsynligheden for at det lige præcis er Hannah, Sylvester og Mahjar, der bliver valgt? 
+
+For at besvare dette spørgsmål har vi tidligere opskrevet alle muligheder og så talt, men det bliver omstændigt i dette tilfælde. Derfor bruger vi binomialkoefficienten og bestemmer antallet af muligheder.
+\begin{align*}
+\binom{n}{k} = \frac{19!}{3!\cdot 16!} = 969.
+\end{align*}
+Derfor så gælder der, at sandsynligheden for at de bliver udvalgt er
+\begin{align*}
+P(\{Hannah,Sylvester,Mahjar\}) = \frac{1}{969}.
+\end{align*}
+\end{exa}
+Det sidste vi skal omkring i dag er uafhængighed af hændelser.
+\begin{defn}
+To hændelser $A$ og $B$ siges at være uafhængige, hvis $P(A \cap B) = P(A)\cdot P(B).$
+\end{defn}
+\begin{exa}
+Vi trækker et kort fra et kortspil (uden jokere) og betragter de to hændelser $A= \{\textit{kortet er et es}\}$ og $B=\{\textit{kortets kulør er spar}\}$. Disse hændelser er uafhængige, da 
+\begin{align*}
+P(A \cap B) = P({\textit{kortet er spar es}}) = \frac{1}{52},
+\end{align*}
+og 
+\[
+P(A)\cdot P(B) = \frac{1}{13} \cdot \frac{1}{4} = \frac{1}{52}, 
+\]
+så $P(A\cap B) = P(A)\cdot P(B).$
+Intuitivt giver dette også fin mening, da det ikke siger noget om kortets tal om det er en spar.
+\end{exa}
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item En nummerplade består af to bogstaver og 5 tal. Hvor mange forskellige nummerplader findes der? Hvis nummerplader blev uddelt uniformt tilfældigt, hvad er så sandsynligheden for at få en nummerplade, der har dine initialer?
+\item I eksemplet med rengøring, hvad er så sandsynligheden for at vælge $\\
+\{Hannah, Sylvester, Mahjar\}$ i netop den rækkefølge?
+\end{enumerate}
+\section*{Opgave 2}
+I Netflix-serien \textit{Squid Game} skal 16 deltagere krydse to broer bestående af hver $18$ glaspaneler i det femte spil. De kan springe frem og tilbage mellem de to broer, men hver gang de træder frem til næste glaspanel, vil kun en af de to broers glaspanel kunne bære dem. Når de har passeret de 18 paneler, har de krydset broen og er i sikkerhed.
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at den første person overlever?
+\item Hvor mange personer skal der i gennemsnit bruges for at krydse broerne? (Lidt svær)
+\item Hvor mange personer vil der i gennemsnit være tilbage, når de har krydset broerne?
+\end{enumerate}
+\section*{Opgave 3}
+I poker får hver spiller uddelt en hånd på 5 kort (eller 7 kort). 
+\begin{enumerate}[label=\roman*)]
+\item Hvor mange forskellige hænder er der i poker?
+\item Hvis du har fem kort med samme kulør, så har du en flush. På hvor mange forskellige måder kan du få flush? Hvad er sandsynligheden for flush så?
+\end{enumerate}
+\section*{Opgave 4}
+Pascals trekant er opbygget på følgende måde: I toppen står der 1 og under hvert tal skal der stå to tal, der er summen af de to tal, der er over tallet. Række to består altså af $1$ og $1$ og række 3 består af $1$, $2$ og $1$.
+\begin{enumerate}[label=\roman*)]
+\item Lav de næste fire rækker i trekanten
+\item for hver indgang i Pascals trekant bestem så binomialkoefficienten $\binom{n}{k}$, hvor $n$ er rækkenummeret (første række er række 0) og $k$ er antallet af tal til venstre for tallet.
+\end{enumerate}
