@@ -1,0 +1,276 @@
+
+\begin{center}
+\Huge
+Gensyn med linjens ligning og parametrisering
+\end{center}
+
+\section*{Repræsentationer for linjen}
+\stepcounter{section}
+
+Vi husker på, at vi kan beskrive en linje $l$ ud fra et punkt på linjen $P=(x_0,y_0)$ samt en normalvektor til linjen $\vv{n} = \begin{pmatrix}a\\ b\end{pmatrix}.$ Dette gøres ud fra følgende kendsgærning. Vi kan danne en vektor fra $(x_0,y_0)$ til ethvert andet punkt $(x,y)$ som \begin{align}\label{eq:eq1}
+\begin{pmatrix}
+x-x_0\\y-y_0
+\end{pmatrix}.
+\end{align}
+Vi husker på, at to vektorer er orthogonale hvis og kun hvis deres prikprodukt er 0. Derfor må alle punkter $(x,y)$ opfylde, at vektoren \eqref{eq:eq1} og $\vv{n}$ er orthogonale, altså
+\begin{align*}
+\begin{pmatrix}
+x-x_0\\ y-y_0
+\end{pmatrix} \cdot 
+\begin{pmatrix}
+a\\ b
+\end{pmatrix} = 0,
+\end{align*}
+hvilket medfører, at 
+\begin{align*}
+a(x-x_0) + b(y-y_0) = 0.
+\end{align*}
+Vi kan nu konkludere med en sætning.
+\begin{setn}[Linjens ligning]
+Alle punkter $(x,y)$, der ligger på en linje $l$ opfylder,  at
+\begin{align*}
+a(x-x_0) + b(y-y_0) = 0,
+\end{align*}
+hvor $P = (x_0,y_0)$ er et punkt på linjen og $\vv{n} = \begin{pmatrix}
+a\\ b
+\end{pmatrix}$
+er en normalvektor til $l$. 
+\end{setn}
+
+\begin{exa}
+På linjen $l$ kender vi punktet $P = (-1,3)$ og normalvektoren $\vv{n} = \begin{pmatrix}
+2 \\ 4
+\end{pmatrix}$. Ligningen for $l$ er derfor givet
+\begin{align*}
+2(x+1) + 4(y-3) = 0.
+\end{align*}
+\end{exa}
+
+Vi kan repræsentere linjen ved hjælp af en retningsvektor i stedet. Har vi en linje $l$, der går gennem et punkt $P = (x_0,y_0)$, samt har en retningsvektor $\vv{r} = \begin{pmatrix}
+r_1 \\ r_2
+\end{pmatrix}$, så må punktet $(x,y)$, der opfylder, at
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= \begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix} + \begin{pmatrix}
+r_1 \\ r_2
+\end{pmatrix}
+\end{align*}
+ligge på $l$. Men for $t\in \mathbb{R}$ ved vi, at alle vektorer $t\vv{r}$ er parallelle med $\vv{r}.$ Derfor må der desuden gælde, at alle punkter $(x,y)$, der opfylder, at 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+=
+\begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix} 
++
+t
+\begin{pmatrix}
+r_1 \\ r_2
+\end{pmatrix}
+ \end{align*}
+Må være præcist de punkter, der ligger på linjen $l$. Dette leder os til følgende sætning.
+\begin{setn}[Parametrisering af linjen]
+For en linje $l$ gælder der, at alle punkter $(x,y)$, der ligger på $l$ opfylder, at
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+=
+\begin{pmatrix}
+x_0 \\ y_0
+\end{pmatrix} 
++
+t
+\begin{pmatrix}
+r_1 \\ r_2
+\end{pmatrix},
+\end{align*} 
+hvor $P=(x_0,y_0)$ er et punkt på linjen og $\vv{r} = \begin{pmatrix}
+r_1 \\ r_2
+\end{pmatrix}$
+er en retningsvektor for linjen. Vi kalder dette for en \textit{parametrisering af l}.
+\end{setn}
+
+\begin{exa}
+Har vi et punkt $P = (-1,3)$ og en retningsvektor $\vv{r} = \begin{pmatrix}
+5 \\ 1
+\end{pmatrix}$ kan vi bestemme parametriseringen for linjen $l$, der går gennem $P$ og har retningsvektor $\vv{r}$:
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+-1 \\ 3
+\end{pmatrix} +  
+t
+\begin{pmatrix}
+5 \\ 1
+\end{pmatrix}.
+\end{align*}
+Da $\begin{pmatrix}
+-1 \\ 5
+\end{pmatrix}$
+er orthogonal til $\vv{r}$ vil denne vektor være en normalvektor til $l$. Vi kan derfor også repræsentere $l$ ved ligningen
+\begin{align*}
+-1(x+1) + 5(y-3) = 0.
+\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+Bestem linjens ligning for følgende punkter $P = (x_0,y_0)$ og normalvektorer\\ $\vv{n} = \begin{pmatrix}
+a \\ b
+\end{pmatrix}$
+\begin{align*}
+&1) \ P = (1,1), \ \vv{n} = \begin{pmatrix}
+-2 \\ 3
+\end{pmatrix}.   &&2) \ P = (-5,-3), \ \vv{n} = \begin{pmatrix}
+2 \\ 7
+\end{pmatrix}.    \\
+&3) \ P = (\frac{-2}{5},13), \ \vv{n} = \begin{pmatrix}
+-10 \\ 20
+\end{pmatrix}.   &&4) \ P = (\sqrt{2},\sqrt{3}), \ \vv{n} = \begin{pmatrix}
+\frac{1}{5} \\ \frac{7}{10}
+\end{pmatrix}.   \\
+&5) \ P = (0,0), \ \vv{n} = \begin{pmatrix}
+1 \\ 1
+\end{pmatrix}.   &&6) \ P = (-100,5), \ \vv{n} = \begin{pmatrix}
+-\frac{\sqrt{2}}{2} \\ -9
+\end{pmatrix}.   \\
+\end{align*}
+
+\section*{Opgave 2}
+Bestem parametriseringen for en linje, der står vinkelret på hver af linjerne fra Opgave 1.
+
+\section*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+\item Bestem en parametrisering for linjen $l$ givet ved ligningen 
+\begin{align*}
+2(x-2) + 3(y+1) = 0.
+\end{align*}
+\item Bestem en parametrisering for linjen $l$ givet ved ligningen 
+\begin{align*}
+-10(x-10) + 10(y+10) = 0.
+\end{align*}
+\item Bestem en ligning for linjen $l$ givet ved parametriseringen 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+2 \\ 3
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+-4 \\ 6
+\end{pmatrix}.
+\end{align*}
+\item Bestem en ligning for linjen $l$ givet ved parametriseringen 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+\sqrt{5} \\ \frac{4}{3}
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+\frac{8}{3} \\ \sqrt{10}
+\end{pmatrix}
+\end{align*}
+\end{enumerate}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+\item Bestem skæringen mellem linjerne $l$ og $m$, der har følgende ligninger henholdsvist:
+\begin{align*}
+(x-3) + (y-4) = 0
+\end{align*}
+og 
+\begin{align*}
+4(x+2) + 2(y-1) = 0
+\end{align*}
+
+\item Bestem skæringen mellem linjerne $l$ og $m$, der har følgende ligninger henholdsvist:
+\begin{align*}
+2(x+1) + 3(y-1) = 0
+\end{align*}
+og 
+\begin{align*}
+4(x-4) + 1(y-2) = 0
+\end{align*}
+
+\item Bestem skæringen mellem linjerne $l$ og $m$, der har følgende parametriseringer henholdsvist:
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1 \\ -1
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+2 \\ 1
+\end{pmatrix}
+\end{align*}
+og 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+-3 \\ 3
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+-2 \\ 1
+\end{pmatrix}
+\end{align*}
+
+\item Bestem skæringen mellem linjerne $l$ og $m$, der har følgende parametriseringer henholdsvist:
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+5 \\ 2
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+3 \\ 4
+\end{pmatrix}
+\end{align*}
+og 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+-1 \\ 6
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+-3 \\ 6
+\end{pmatrix}
+\end{align*}
+
+\end{enumerate}

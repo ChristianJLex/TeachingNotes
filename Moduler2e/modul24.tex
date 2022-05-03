@@ -1,0 +1,98 @@
+\begin{center}
+\Huge
+Anvendelser af integraler
+\end{center}
+
+\section*{Integration ved substitution}
+\stepcounter{section}
+
+\begin{setn}
+For en differentiabel funktion $g$ og en kontinuert funktion $f$ gælder der, at 
+\begin{align*}
+\int f(g(x))\cdot g'(x) \intd x = F(g(x)) + k
+\end{align*}
+\end{setn}
+\begin{proof}
+Det er blot at differentiere højresiden
+\begin{align*}
+\left(F(g(x)) + k \right)' = f(g(x))\cdot g'(x),
+\end{align*}
+hvoraf resultatet følger direkte.
+\end{proof}
+
+\section*{Kurvelængder}
+\stepcounter{section}
+\begin{setn}
+Kurvelængde $s$ af grafen for en differentiabel funktion $f$ på intervallet $[a,b]$ er givet ved
+\begin{align*}
+s = \int_a^b\sqrt{1+(f'(x))^2} \intd x
+\end{align*}
+\end{setn}
+
+\begin{exa}
+Lad $f$ være givet ved
+\begin{align*}
+f(x) = x^2.
+\end{align*}
+Så kan vi finde længden af kurven på intervallet $[0,2]$ ved følgende:
+\begin{align*}
+s = \int_0^2\sqrt{1+4x^2}\intd x.
+\end{align*}
+Med et CAS-værktøj bestemmer vi derfor $s$ til at være
+\begin{align*}
+s \approx 4.64
+\end{align*}
+\end{exa}
+
+\section*{Gennemsnit af funktioner}
+\stepcounter{section}
+Skal vi bestemme et gennemsnit af højden af alle i en klasse, vil vi måle højden på alle i klassen, summere det og dele med antallet af studerende i klassen. Vi kan generalisere dette til kontinuerte funktioner ved hjælp af integraler.
+
+\begin{defn}
+Gennemsnittet af en kontinuert funktion $f$ på intervallet $[a,b]$ defineres som integralet
+\begin{align*}
+I = \frac{1}{b-a}\int_a^bf(x)\intd x.
+\end{align*}
+\end{defn}
+
+\begin{exa}
+Koncentrationen af en bestemt type partikel i en by kan beskrives ved eksponentialfunktionen
+\begin{align*}
+f(x) = 22.145\cdot (1.32)^x,
+\end{align*}
+hvor $f$ er i ppm og $x$ er i år efter år 2000. Ønsker vi at bestemme den gennemsnitlige koncentration fra år 2002 til år 2010, så kan vi bestemme det som
+\begin{align*}
+I = \frac{1}{10-2}\int_2^{10}22.145\cdot (1.32)^x \intd x, 
+\end{align*}
+som med et CAS-værktøj bestemmes til at være
+$$I = 142.751 ppm.$$
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Bestem kurvelængden af funktionen $f(x) = 2x+3$ på intervallet $[-5,5]$.
+\item Bestem kurvelængden af funktionen $f(x) = \sqrt{x}$ på intervallet $[0,10]$.
+\item Bestem kurvelængden af funktionen $f(x) = 3x^3+2x^2+x+1$ på intervallet $[-1,2]$.
+\end{enumerate}
+
+\section*{Opgave 2}
+Et reb hænger mellem to punkter $A = (-10,20)$ og $B = (10,20)$. Den bue, rebet danner er tilnærmelsesvist en parabel for funktionen $f$ med forskriften
+\begin{align*}
+f(x) = \frac{3}{20}x^2+5.
+\end{align*}
+Bestem længden på rebet. 
+
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Bestem gennemsnittet af funktionen $x^2$ på intervallet $[0,10]$.
+\item Bestem gennemsnittet af funktionen $\cos(x)$ på intervallet $[-\pi,\pi]$. 
+\item Bestem gennemsnittet af funktionen $3x^2+10x+1$ på intervallet $[-1,3]$. 
+\end{enumerate}
+
+\section*{Opgave 4}
+Vi skal bevise rumfangsformlen for en kugle med radius $r$. Formlen lyder som bekendt $V = \frac{4\pi r^3}{3}$.
+\begin{enumerate}[label=\roman*)]
+\item ligningen for en cirkel med radius $r$ og centrum i $(0,0)$ er $x^2+y^2 = r^2$. Isolér $y$ i dette udtryk. 
+\item Brug dette udtryk for $y$ til at bestemme rumfanget af omdregningslegemet dette udtryk danner på intervallet $[-r,r]$. Dette burde være rumfanget af kuglen. (Hint: Omdregningslegemets rumfang er givet ved $\pi \int_a^b(f(x))^2\intd x)$.
+\end{enumerate}

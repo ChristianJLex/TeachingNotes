@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  18 MAR 2022 07:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  20 APR 2022 08:55
 entering extended mode
 **./Undervisningsnoter2c.tex
 (Undervisningsnoter2c.tex
@@ -1577,6 +1577,12 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 fd
 File: uesvect.fd 
 )
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1596,7 +1602,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2] 
+[2]
+Overfull \hbox (17.63905pt too wide) in paragraph at lines 116--121
+ [] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[3] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1606,33 +1625,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3] (Undervisningsnoter2c.aux)
+[4] (Undervisningsnoter2c.aux)
 Package logreq Info: Writing requests to 'Undervisningsnoter2c.run.xml'.
 \openout1 = `Undervisningsnoter2c.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45797 strings out of 478907
- 1018917 string characters out of 2848099
- 1970275 words of memory out of 3000000
- 62949 multiletter control sequences out of 15000+600000
- 410383 words of font info for 56 fonts, out of 8000000 for 9000
+ 45854 strings out of 478907
+ 1019863 string characters out of 2848099
+ 1969777 words of memory out of 3000000
+ 62993 multiletter control sequences out of 15000+600000
+ 409729 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,20n,111p,773b,2270s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 107i,12n,111p,773b,2091s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NRGY-chri88mh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/N
-RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/NRGY-chri88mh/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Undervisningsnoter2c.pdf (3 pages, 127483 bytes).
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/N
+RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.
+pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Undervisningsnoter2c.pdf (4 pages, 125620 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
+ 109 PDF objects out of 1000 (max. 8388607)
+ 37 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
