@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Modul 28
+Modul 29
 }
-\chead{2/5/2021
+\chead{6/5/2021
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -33,116 +33,151 @@ Modul 28
 
 \begin{center}
 \Huge
-Afstand mellem linje og punkt
+Cirkler og cirklens ligning
 \end{center}
+\section*{Cirklens ligning}
+\stepcounter{section}
 
-Vi kan bruge projektioner af vektorer til at bestemme afstanden mellem et punkt $P$ og en linje $l$ i planen. Det er ikke umiddelbart klart ud fra formlen at det er projektioner, vi bruger, men det vil ses af beviset. Afstanden findes ved følgende sætning. 
-
-\begin{setn}[Afstand mellem punkt og linje]
-Har vi et punkt $Q(x_1,y_1)$ og en linje $l$ givet ved ligningen
+Hvis vi har en linje $l$, så kan vi finde en ligning, der beskriver alle de punkter, der ligger på linjen. Det samme kan vi gøre for cirkler. Ligningen for en cirkel kaldes naturligt nok for \textit{cirklens ligning}, og for at bestemme ligningen for en cirkel skal vi kende dens midtpunkt og dens radius. Dette er beskrevet i følgende sætning.
+\begin{setn}[Cirklens ligning]
+Ethvert punkt $(x,y)$ ligger på cirklen $c$ med radius $r$ og centrum i $(x_0,y_0)$ præcist når det er opfyldt, at 
 \begin{align*}
-ax+by+c = 0, 
-\end{align*}
-så kan vi bestemme afstanden mellem $l$ og $Q$ ved
-\begin{align*}
-\textnormal{dist}(Q,l) = \frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}
+(x-x_0)^2+(y-y_0)^2 = r^2.
 \end{align*}
 \end{setn}
 \begin{proof}
-Vi vælger et punkt  $P(x_0,y_0)$ på $l$. Da $l$ har ligningen
+Punktet $(x,y)$ ligger på cirklen præcist i de tilfælde, hvor vektoren 
 \begin{align*}
-ax+by+c = 0, 
-\end{align*}
-må der gælde, at 
-\begin{align*}
-ax_0+by_0+c = 0, 
-\end{align*}'
-og derfor har vi et udtryk for $c$ givet ved
-\begin{align*}
-c = -ax_0+by_0.
-\end{align*}
-Vektoren $\vv{PQ}$ er givet ved
-\begin{align*}
-\vv{PQ} = \begin{pmatrix}
-x_1 - x_0 \\ y_1 - y_0.
-\end{pmatrix}
-\end{align*}
-Vi har en normalvektor til $l$ givet ved 
-\begin{align*}
-\vv{n}=
 \begin{pmatrix}
-a \\ b
+x-x_0 \\ y-y_0
 \end{pmatrix}
 \end{align*}
-Vi bemærker nu, at længden af projektionen $\vv{PQ_{\vv{n}}}$ må være afstanden fra $l$ til $Q$. Vi bestemmer derfor længden af denne projektion:
+har længde $r$. Dette er ensbetydende med, at 
 \begin{align*}
-\left|\vv{PQ_{\vv{n}}}\right| &= \frac{|\vv{PQ_{\vv{n}}}\cdot \vv{n}|}{|\vv{n}|} \\ 
-&= \frac{\left|\begin{pmatrix}
-x_1-x_0 \\ y_1 - y_0
-\end{pmatrix}\cdot \begin{pmatrix}
-a \\ b
-\end{pmatrix} \right|}{\left|\begin{pmatrix}
-a \\ b
-\end{pmatrix}\right|}\\
-&=\frac{|a(x_1-x_0)+b(y_1-y_0)|}{\sqrt{a^2+b^2}}\\
-&= \frac{|ax_1+by_1 -ax_0-by_0|}{\sqrt{a^2+b^2}}\\
-&= \frac{|ax_1+by_1+c|}{a^2+b^2}.
+\left|\begin{pmatrix}
+x-x_0 \\ y-y_0
+\end{pmatrix}\right| = r \ &\Leftrightarrow \ \sqrt{(x-x_0)^2+(y-y_0)^2} = r \\
+&\Leftrightarrow \ (x-x_0)^2+(y-y_0)^2 = r^2.
 \end{align*}
 \end{proof}
 
-
 \begin{exa}
-Vi skal bestemme afstanden fra punktet $P(1,1)$ til linjen med ligningen $4(x-1) + 3(y+1) = 0$. Vi starter med at hæve parenteserne i ligningen:
+Vi betragter cirklen på Fig. \ref{fig:cirkel}. Den har centrum i punktet $(1,1)$ og radius $2$. Derfor lyder cirklens ligning for denne cirkel
 \begin{align*}
-4(x-1) + 3(y+1) = 0 \Leftrightarrow 4x+3y-1 = 0.
+(x-1)^2 + (y-1)^2 = 4.
 \end{align*}
-Vi kan nu bruge formlen for afstand mellem punkt og linje og får:
-\begin{align*}
-\textnormal{dist}(P,l) &= \frac{|4\cdot 1 + 3\cdot 1-1|}{\sqrt{3^2+4^2}}\\
-&=\frac{6}{5},
-\end{align*}
-hvilket er afstanden fra punktet $P$ til linjen $l$. 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -2, xmax = 4, ymin = -2, ymax = 4,
+grid = both
+]
+\draw[color = blue!50, thick]  (axis cs:1,1) circle (2);
+\end{axis}
+\end{tikzpicture}
+\caption{Cirkel}
+\label{fig:cirkel}
+\end{figure}
 \end{exa}
 
 \begin{exa}
-Vi skal bestemme $k$, så punktet $P(4,k)$ og linjen $l$ med ligningen 
+Vi betragter cirklen på Fig. \ref{fig:cirkel2}. Vi skal bestemme de tangenter til cirklen, der har hældning -1. Dette gøres i Geogebra (\href{yada}{\color{blue!60} Link til fil}), og tangenterne findes til at have ligningerne 
 \begin{align*}
-2x-4y-3 = 0
+y = -x+5 
 \end{align*}
-har afstand 1. Vi bruger afstandsformlen og får
+og
 \begin{align*}
-\textnormal{dist}(P,l) = \frac{|2\cdot 4-4\cdot k-3|}{\sqrt{2^2+4^2}|} = \frac{|5-4k|}{\sqrt{20}} =  1.
+y = -x +1, 
 \end{align*}
-Vi løser denne ligning og får, at $k \approx 0.63$. 
+som vi kan se på figuren.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -2, xmax = 4, ymin = -2, ymax = 4,
+grid = both
+]
+\draw[color = blue!50, thick]  (axis cs:2,1) circle (1.41421356237);
+\addplot[color = red, thick] {-x+5};
+\addplot[color = red, thick] {-x+1};
+\end{axis}
+\end{tikzpicture}
+\caption{Cirkel}
+\label{fig:cirkel2}
+\end{figure}
 \end{exa}
 
 \section*{Opgave 1}
-Bestem afstanden mellem linjen $l$ med ligningen 
-\begin{align*}
--1(x+4) + 3(y-1) = 0
-\end{align*}
-og følgende punkter:
-\begin{align*}
-&1) \ (-1,1)  &&2) \ (3,4)    \\
-&3) \ (\sqrt{2},\sqrt{2})  &&4) \ (-5,6)   \\
-&5) \ (0,0)  &&6) \  (-\frac{1}{2},2)   \\
-\end{align*}
-Tegn desuden situationen i Geogebra og tjek, at du har fundet den korrekte afstand. 
+Bestem ligningerne for følgende cirkler
+\begin{figure}[H]
+\centering
+\resizebox{0.45\textwidth}{0.45\textwidth}
+{
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -6, xmax = 1, ymin = -5, ymax = 2,
+grid = both]
+\draw[color = blue!50, thick]  (axis cs:-3,-2) circle (3);
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}
+{
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -2, xmax = 4, ymin = -2, ymax = 4,
+grid = both]
+\draw[color = blue!50, thick]  (axis cs:2,2) circle (1);
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}
+{
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -2, xmax = 4, ymin = -5, ymax = 1,
+grid = both]
+\draw[color = blue!50, thick]  (axis cs:1,-2) circle (2);
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}
+{
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -3, xmax = 3, ymin = -3, ymax = 3,
+grid = both]
+\draw[color = blue!50, thick]  (axis cs:0,0) circle (1);
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}
+{
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -3, xmax = 3, ymin = -3, ymax = 3,
+grid = both]
+\draw[color = blue!50, thick]  (axis cs:0,0) circle (1.4142135623);
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}
+{
+\begin{tikzpicture}
+\begin{axis}[axis lines = middle, xmin = -2, xmax = 2, ymin = -2, ymax = 2,
+grid = both]
+\draw[color = blue!50, thick]  (axis cs:0.5,0) circle (0.5);
+\end{axis}
+\end{tikzpicture}
+}
+\caption{Cirkler}
+\label{fig:cirkler}
+\end{figure}
 
 \section*{Opgave 2}
 \begin{enumerate}[label=\roman*)]
-\item Bestem $k$, så afstanden mellem linjen givet ved 
+\item En cirkel har ligningen $(x-2)^2+(y+3)^2 = 4$, og en linje har ligningen 
 \begin{align*}
-x-5y+10 = 0
+y=2x-1.
 \end{align*}
-og punktet $P(k,1)$ har afstand $4$. Start med at tegne det i Geogebra.
-\item Bestem $b$, så $l$ med ligningen
-\begin{align*}
-y = 2x+b,
-\end{align*}
- og punktet $P(1,1)$ har afstand 5. Start med at tegne i Geogebra.
+Bestem skæringen mellem linjen og cirklen i Geogebra. 
+\item En cirkel har ligningen $x^2+y^2-1=0$. Bestem de tangenter, der har hældning $0$ til cirklen i Geogebra. 
+\item En cirkel har ligningen $(x+1)^2 +(y-1)^2 = 9$, og et punkt $(-4,1)$ ligger på cirklen. Bestem ligningen for tangenten til cirklen i dette punkt i Geogebra. 
 \end{enumerate}
-
 \section*{Opgave 3}
 Aflevering
 \end{document}
