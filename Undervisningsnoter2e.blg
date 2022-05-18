@@ -1,14 +1,12 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Undervisningsnoter2e.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
-A level-1 auxiliary file: Moduler2e/modul2.aux
 I found no \citation commands---while reading file Undervisningsnoter2e.aux
 I found no \bibdata command---while reading file Undervisningsnoter2e.aux
 I found no \bibstyle command---while reading file Undervisningsnoter2e.aux
 You've used 0 entries,
             0 wiz_defined-function locations,
-            84 strings with 534 characters,
+            83 strings with 514 characters,
 and the built_in function-call counts, 0 in all, are:
 = -- 0
 > -- 0

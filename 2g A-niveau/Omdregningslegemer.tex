@@ -1,0 +1,42 @@
+
+\begin{center}
+\Huge
+Omdregningslegemer
+\end{center}
+\stepcounter{section}
+Integralregning kan bruges til at bestemme rumfanget af mange forskellige typer af tre-dimensionelle objekter. Vi vil bestemme rumfang af \textit{omdregningslegemer}. Disse opstår ved at rotere kontinuerte funktioner omkring $x$-aksen på et interval $[a,b]$. Rumfanget af et omdregningslegeme kan findes ved følgende sætning, som vi ikke vil bevise. 
+\begin{setn}[Rumfang af omdregningslegeme]\label{setn:omdreg}
+Omdregningslegemet, der dannes ved at rotere en kontinuert funktion $f$ omkring $x$-aksen på intervallet $[a,b]$ har rumfang $V$ givet ved
+\begin{align*}
+V = \pi\int_a^b (f(x))^2 \intd x.
+\end{align*}
+\end{setn}
+
+Vi kan bruge denne formel til at bestemme rumfanget af en kugle:
+\begin{setn}[Rumfang af kugle]
+En kugle med radius $r$ har rumfang $V$ givet ved
+\begin{align*}
+V = \frac{4}{3}\pi r^3
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi vil gerne bevise dette ved brug af omdregningslegemer. Vi skal derfor finde en funktion $f$, der - når den roteres omkring $x$-aksen giver os en kugle. Vi betragter derfor cirklens ligning for en cirkel med radius $r$ og centrum i $(0,0)$. Denne har ligning
+\begin{align*}
+x^2+y^2 = r^2.
+\end{align*}
+Vi vil gerne rotere den øvre halvcirkel omkring $x$-aksen, da dette så vil give os en kugle med radius $r$ som omdregningslegeme. For at beskrive den øvre halvcirkel som funktion, isolerer vi $y$ i cirklens ligning og får
+\begin{align*}
+x^2+y^2 = r^2 \ &\Leftrightarrow \ y^2 = r^2-x^2 \\
+& \Leftrightarrow \ y = \sqrt{r^2-x^2}.
+\end{align*}
+
+Vi bestemmer nu rumfanget $V$ af dette omdregningslegeme med Sætning \ref{setn:omdreg}. Dette giver 
+\begin{align*}
+V &= \pi\int_{-r}^r r^2-x^2 \intd x\\
+&= \pi\left[r^2x-\frac{1}{3}x^3\right]_{-r}^r\\
+&= \pi\left(r^3-\frac{1}{3}r^3\right)-\pi\left(-r^3-\frac{1}{3}(-r)^3\right) \\
+&= \pi\left(2r^3-\frac{2}{3}r^3\right)\\
+&= \frac{4}{3}\pi r^3
+\end{align*}
+
+\end{proof}
