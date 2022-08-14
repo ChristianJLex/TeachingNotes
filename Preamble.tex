@@ -14,7 +14,7 @@
 \usepackage{changepage}
 \usepackage{pdfpages}
 \usepackage[parfill]{parskip}
-
+\usepackage{anyfontsize}
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -39,6 +39,7 @@
 \usepackage{pgfplots}
 %Ændre følgende, hvis du vil have en anden bredde på pgfplots
 \pgfplotsset{width=10cm,compat = 1.9}
+
 
 
 
@@ -116,7 +117,7 @@
 \newenvironment{delopgave}[2]
 {
 	\begin{minipage}[t]{0.15\textwidth}
-		\hspace{0.3cm} (#1)
+		\hspace{0.3cm} #1
 	\end{minipage}
 	\begin{minipage}[t]{0.85\textwidth}
 	\begin{minipage}[t]{0.3cm}
