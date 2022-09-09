@@ -1,0 +1,188 @@
+\begin{center}
+\Huge
+Planen og kuglens ligning
+\end{center}
+\section*{Planens ligning}
+\stepcounter{section}
+
+Vi har tidligere set, at linjens ligning er givet ved
+\begin{align*}
+	a(x-x_0)+b(y-y_0) = 0,
+\end{align*}
+hvor vektoren $\vv{n}$ givet ved
+\begin{align*}
+	\vv{n} =
+	\begin{pmatrix}
+		a \\ b
+	\end{pmatrix}
+\end{align*}
+er en normalvektor til linjen og punktet $P(x_0,y_0)$ ligger på linjen. Udledningen af denne ligning består i at betragte alle vektorer, der er orthogonale til $\vv{n}$ og som starter i punktet $P$ må beskrive punktmængden for linjen. Vi kan gøre noget tilsvarende i rummet.
+
+Vi lader $\vv{n}$ være en normalvektor til en plan, hvor 
+\begin{align*}
+	\vv{n} = 
+	\begin{pmatrix}
+		a \\ b \\ c
+	\end{pmatrix}.
+\end{align*}
+Desuden lader vi $P(x_0,y_0,z_0)$ være et punkt på planen. Vi konstruerer nu planens ligning som følgende: Ethvert punkt $(x,y,z)$ på planen giver os en vektor langs planen, der  er orthogonal til normalvektoren $\vv{n}$ givet ved
+\begin{align*}
+	\vv{v} = 
+	\begin{pmatrix}
+		x-x_0 \\ y-y_0 \\ z-z_0.
+	\end{pmatrix}
+\end{align*}
+Der må derfor gælde, at $\vv{v}\cdot \vv{n} = 0$. Skrives dette ud fås 
+\begin{align*}
+	\vv{v} \cdot \vv{n}\  &\Leftrightarrow 
+	\begin{pmatrix}
+		x-x_0 \\ y-y_0 \\ z-z_0
+	\end{pmatrix} \cdot 
+	\begin{pmatrix}
+		a \\ b \\ c
+	\end{pmatrix}\ \\
+	 &\Leftrightarrow  a(x-x_0) + b(y-y_0) + c(z-z_0) = 0
+\end{align*}
+Denne ligning kaldes for \textit{planens ligning}.
+\begin{setn}[Planens ligning]
+	Lad $P(x_0,y_0,z_0)$ være et punkt på en plan og lad 
+	\begin{align*}
+		\vv{n} = 
+		\begin{pmatrix}
+			a \\ b \\ c
+		\end{pmatrix}
+	\end{align*}
+	være en normalvektor til planen. Så er planens ligning givet ved
+	\begin{align*}
+		a(x-x_0)+b(y-y_0)+c(z-z_0)=0.
+	\end{align*}
+\end{setn}
+\begin{exa}
+Lad $P(1,2,3)$ være et punkt på en plan, og lad
+\begin{align*}
+	\vv{n} = 
+	\begin{pmatrix}
+		-2\\ 4\\ -3
+	\end{pmatrix}
+\end{align*}
+være en normalvektor til planen. Så har planen ligningen
+\begin{align*}
+	-2(x-1)+4(y-2)-3(z-3) = 0.
+\end{align*}
+\end{exa}
+\section*{Kuglens ligning}
+\stepcounter{section}
+Som det er tilfældet med cirklens ligning i planen kan vi også bestemme kuglens ligning i rummet. Vi lader $K$ være en kugle med centrum i $C(x_0,y_0,z_0)$ og med radius $r$. Ethvert punkt $P(x,y,z)$ på kuglens overflade vil så opfylde, at afstanden fra centrum til $(x,y,z)$ vil være $r$. Vektoren, der går fra $C$ til $P$ skal derfor have længde $r$. Skrives dette ud fås
+\begin{align*}
+	\left|
+	\begin{pmatrix}
+		x-x_0 \\ y-y_0 \\ z-z_0
+	\end{pmatrix}
+	\right| = r \ &\Leftrightarrow 
+	\sqrt{(x-x_0)^2+(y-y_0)^2+(z-z_0)^2} = r \\\ &\Leftrightarrow \ (x-x_0)^2+(y-y_0)^2+(z-z_0)^2 = r^2.
+\end{align*} 
+Vi kan nu konkludere med en sætning:
+\begin{setn}[Kuglens ligning]
+	Lad $K$ være en kugle med centrum i $C(x_0,y_0,z_0)$ og radius $r$. Så er \textit{kuglens ligning} givet ved
+	\begin{align*}
+		(x-x_0)^2 + (y-y_0)^2 + (z-z_0)^2 = r^2.
+	\end{align*}
+\end{setn}
+
+\begin{exa}
+	Kuglen med radius i $C(4,2,-3)$ og radius $3$ har ligningen
+	\begin{align*}
+		(x-4)^2 + (y-2)^2 + (z+3)^2 = 9
+	\end{align*}
+\end{exa}
+
+\begin{exa}
+	En kugle har ligningen 
+	\begin{align}\label{eq:ligning1}
+		x^2-2x+y^2-4y+z^2-6z = 2.
+	\end{align}
+	Vi skal bestemme centrum og radius for kuglen, og skal derfor kvadratkomplettere som i tilfældet med cirklens ligning. Da vi har 
+	\begin{align*}
+		-2xx_0 &= -2x, \\
+		-2yy_0 &= -4y, \\
+		-2zz_0 &= -6z,
+	\end{align*}
+	så må $x_0=1$, $y_0 = 2$ og $z_0 = 3$. Vi lægger derfor $1^2+2^2+3^2$ til på begge sider af lighedstegnet i \eqref{eq:ligning1} og får
+	\begin{align*}
+		x^2-2x+y^2-4y+z^2-6z+14 = 2+14 = 16, .
+	\end{align*}
+	og derfor at cirklens radius er $\sqrt{16}=4$.
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item På en plan $L$ ligger punktet $P(5,4,-2)$ og den har 
+	\begin{align*}
+		\vv{n} = 
+		\begin{pmatrix}
+			7 \\ 2 \\ -4
+		\end{pmatrix} 
+	\end{align*}
+	som normalvektor. Bestem en ligning for $K$. 
+	\item På en plan $L$ ligger punktet $P(1,10,5)$ og den har 
+	\begin{align*}
+		\vv{n} = 
+		\begin{pmatrix}
+			-11 \\ -12 \\ 13
+		\end{pmatrix} 
+	\end{align*}
+	som normalvektor. Bestem en ligning for $K$. 
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item En plan $L$ har ligningen
+	\begin{align*}
+		2(x-2) + 3(y+3) +5(z-1) = 0.
+	\end{align*}
+	Afgør om punkterne $(1,1,1)$ og $(1,6,-4)$ ligger på $L$. 
+	\item En plan $L$ har ligningen 
+	\begin{align*}
+		z=0.
+	\end{align*}
+	Afgør, om punkterne $(10000,4,2)$ og $(\pi, e,0)$ ligger på $L$.
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item En kugle $K$ har centrum i $(0,0,0)$ og radius $1$. Bestem ligningen for $K$. 
+	\item En kugle $K$ har centrum i $(-2,4,8)$ og radius $5$. Bestem ligningen for $K$.
+\end{enumerate}
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item En kugle $K$ har ligningen 
+	\begin{align*}
+		x^2 -4x+y^2+4y+z^2-8z=1.
+	\end{align*}
+	Bestem centrum og radius for $K$.
+	\item En kugle $K$ har ligningen 
+	\begin{align*}
+		x^2-6x+y^2-6y+z^2-10z=21.
+	\end{align*}
+	Bestem centrum og radius for $K$.
+	\item Tjek i GeoGebra, at du har fundet de rigtige kugler. (-: 
+\end{enumerate}
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item En plan $L$ er givet ved ligningen 
+	\begin{align*}
+		2x+3y+6z = 45.
+	\end{align*}
+	Omskriv ligningen for $L$ til formen 
+	\begin{align*}
+		a(x-x_0)+b(y-y_0)+c(z-z_0) = 0.
+	\end{align*}
+	\item En plan $L$ er givet ved ligningen 
+	\begin{align*}
+		-4x+9y+7z = 9.
+	\end{align*}
+	Omskriv ligningen for $L$ til formen 
+	\begin{align*}
+		a(x-x_0)+b(y-y_0)+c(z-z_0) = 0.
+	\end{align*}
+\end{enumerate}

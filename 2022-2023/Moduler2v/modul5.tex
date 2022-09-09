@@ -1,0 +1,203 @@
+\begin{center}
+\Huge
+Opgaver om linjer
+\end{center}
+
+\section*{Tværvektorer}
+\stepcounter{section}
+
+Vi starter ud med en definition
+\begin{defn}[Tværvektor]
+	Lad $\vv{v}$ være givet ved
+	\begin{align*}
+		\vv{v} = 
+		\begin{pmatrix}
+			a\\b
+		\end{pmatrix}.	
+	\end{align*}
+	Så definerer vi \textit{tværvektoren} til $\vv{v}$ som
+	\begin{align*}
+		\widehat{\vv{v}} = 
+		\begin{pmatrix}
+			-b \\ a
+		\end{pmatrix}.
+	\end{align*}
+	$\widehat{\vv{v}}$ skal læses som hat-v.
+\end{defn}
+
+Det er ikke svært at overbevise sig om, at tværvektoren $ \widehat{\vv{v}}$ og $\vv{v}$ er orthogonale, siden
+\begin{align*}
+	\widehat{\vv{v}}\cdot \vv{v} = 
+	\begin{pmatrix}
+		a \\ b
+	\end{pmatrix} \cdot 
+	\begin{pmatrix}
+		-b \\ a
+	\end{pmatrix} =
+	a(-b) + b\cdot a	 = 0	.
+\end{align*}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ er givet ved ligningen 
+	\begin{align*}
+		l: \ -7(x-4) + 2(y+5) =0.
+	\end{align*}
+	Bestem en parameterfremstilling for $l$. 
+	\item En linje $l$ er givet ved parameterfremstillingen'
+	\begin{align*}
+		l: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix}=
+		\begin{pmatrix}
+			-1 \\ 10
+		\end{pmatrix}+ t
+		\begin{pmatrix}
+			5  \\ 6
+		\end{pmatrix}.
+	\end{align*}
+	Bestem en ligning for $l$ på formen 
+	\begin{align*}
+		a(x-x_0) + b(y-y_0) = 0.
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ er givet ved ligningen
+	\begin{align*}
+		l: \ 2(x-2) + 3(y-4) = 0.
+	\end{align*}
+	Afgør om følgende to punkter ligger på $l$:
+	\begin{align*}
+	&1) \ (5,2)  &&2) \ (7,1).
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+	\item For punktet $P(2,4)$ og vektoren $\vv{v}$ givet ved
+	\begin{align*}
+		\vv{v} = 
+		\begin{pmatrix}
+			-1\\1
+		\end{pmatrix}
+	\end{align*}
+	bestem så både en ligning for linjen $l$ der har $\vv{v}$ som normalvektor og skærer
+	gennem $P$ samt en parameterfremstilling for linjen $m$, der har $\vv{v}$ som 
+	retningsvektor og skærer gennem $P$.
+	\item Bestem en parameterfremstilling for linjen, der skærer gennem punkterne $(1,1)$ og
+	$ (2,-4)$.
+	\item En linje $l$ skærer gennem punktet $(2,-1)$ og har $\vv{n}$ givet ved
+	\begin{align*}
+		\vv{n} = 
+		\begin{pmatrix}
+			-6\\7
+		\end{pmatrix}	
+	\end{align*}
+	som normalvektor. Bestem en ligning for linjen $m$, der går gennem $(2,-1)$ og står 
+	vinkelret på $l$. 
+\end{enumerate}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ er givet ved ligningen 
+	\begin{align*}
+		l: \ 1(x-2) -2(y+-2) = 0
+	\end{align*}
+	og en linje $m$ er givet ved parameterfremstillingen
+	\begin{align*}
+		m: \
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} =
+		\begin{pmatrix}
+			8\\ 4
+		\end{pmatrix}
+		+ t
+		\begin{pmatrix}
+			2\\6
+		\end{pmatrix}.	
+	\end{align*}
+	Bestem skæringspunktet mellem $l$ og $m$. 
+	\item En linje $l$ er givet ved ligningen 
+	\begin{align*}
+		l: \ y = 4x+1
+	\end{align*}
+	og en linje $m$ er givet ved parameterfremstillingen
+	\begin{align*}
+		m: \
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} =
+		\begin{pmatrix}
+			5\\ 1
+		\end{pmatrix}
+		+ t
+		\begin{pmatrix}
+			4\\-4
+		\end{pmatrix}.	
+	\end{align*}
+	Bestem skæringspunktet mellem $l$ og $m$. 
+	\item Undersøg, om I har fundet det rigtige skæringspunkt i Maple
+\end{enumerate}
+
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ har ligningen 
+	\begin{align*}
+		l: \ 6(x+2) -4(y-1) = 0,
+	\end{align*}
+	og en linje $m$ har ligningen 
+	\begin{align*}
+		m: \ 10(x-11) +11(y-12) =0.
+	\end{align*}
+	Bestem vinklen $v$ mellem $l$ og $m$ og bekræft dit resultat ved at tegne linjerne i GeoGebra.
+	\item En linje $l$ har parameterfremstillingen 
+	\begin{align*}
+		l: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			2 \\ 2
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			5 \\ -11
+		\end{pmatrix},
+	\end{align*}
+	og en linje $m$ har parameterfremstillingen 
+	\begin{align*}
+		m: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			4 \\ -3
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			-6 \\-13
+		\end{pmatrix}.
+	\end{align*}
+	Bestem vinklen $v$ mellem $l$ og $m$ og bekræft dit resultat ved at tegne linjerne i GeoGebra.
+	\item En linje $l$ er givet ved ligningen 
+	\begin{align*}
+		l: \ 12(x-1) -7(y-\frac{1}{2}) = 0,
+	\end{align*}
+	og en linje $m$ er givet ved parameterfremstillingen
+	\begin{align*}
+		m: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			-\frac{3}{2} \\ \frac{2}{3}
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			1 \\ 1
+		\end{pmatrix}.
+	\end{align*}
+	Bestem vinklen mellem $l$ og $m$. Bekræft dit resultat ved at tegne linjerne i GeoGebra.
+\end{enumerate}
