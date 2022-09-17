@@ -1,0 +1,59 @@
+
+\begin{center}
+\Huge
+Stationære punkter
+\end{center}
+
+\section*{Stationære punkter i én variabel}
+\stepcounter{section}
+
+Vi så sidste år på hvordan vi kunne bruge differentialregning til at bestemme ekstremumspunkter for funktioner. Sådanne punkter kaldes også for \textit{stationære punkter}. Vi skal bruge de partielle afledede til at afgøre, hvilken type stationært punkt et stationært punkt er. Vi starter med at betragte funktioner af én variabel.
+
+\begin{setn}[Stationære punkter]
+	Lad $f$ være differentiabel i $x_0$ og antag, at $f'(x_0) = 0$. 
+	\begin{enumerate}[label=\roman*)]
+		\item Hvis $f''(x_0) >0$, så er $x_0$ et minimumspunkt. 
+		\item Hvis $f''(x_0)<0$, så er $x_0$ et maksimumspunkt. 
+		\item Hvis $f''(x_0)=0$, så kan intet konkluderes.
+	\end{enumerate}
+\end{setn}
+Vi vil ikke bevise denne sætning, men en intuitit forklaring kan ses af Fig. \ref{fig:fmm}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0) node  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			ymin = -1,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {x^2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (3,0) node
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			ymin = -1,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {2*x};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		
+		\draw (6,0) node
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			ymin = -1,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+	\end{tikzpicture}
+\end{figure}

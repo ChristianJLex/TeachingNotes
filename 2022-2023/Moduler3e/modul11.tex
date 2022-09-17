@@ -1,0 +1,131 @@
+
+\begin{center}
+\Huge
+Tangentplaner og kugler
+\end{center}
+
+\stepcounter{section}
+Har vi en funktion $f:\mathbb{R}^2 \to \mathbb{R}$, så kan vi i et punkt $(x_0,y_0,f(x_0,y_0))$ finde en tangentplan for $f$. 
+\begin{setn}[Tangentplan]
+	Lad $f:\mathbb{R}^2 \to \mathbb{R}$ samt et punkt $P(x_0,y_0,f(x_0,y_0))$ være givet. Så er ligningen for tangentplanen $T$ for $f$ i $P$ givet ved
+	\begin{align*}
+		z = f(x_0,y_0) + f_x'(x_0,y_0)(x-x_0) + f_y'(x_0,y_0)(y-y_0).
+	\end{align*}
+\end{setn}
+\begin{proof}
+Det skal I selv.
+\end{proof}
+\begin{exa}
+	Lad $f$ være givet ved
+	\begin{align*}
+		f(x) = x^2 + y^2.
+	\end{align*}
+	Vi finder så tangentplanen i et punkt $P(2,2)$ ved
+	\begin{align*}
+		z &= f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)\\
+		&= 8 + 4(x-2) + 4(y-2).
+	\end{align*}
+\end{exa}
+
+\begin{exa}
+	Lad en kugle $K$ være givet ved ligningen
+	\begin{align*}
+		(x-3)^2 + (y+1)^2 + (z-1)^2 = 16.
+	\end{align*}
+	Vi vil gerne bestemme tangentplanen i punktet $P(2,-1,1)$. Vi bestemmer derfor en vektor til centrum $C(3,-1,1)$ fra $P$:
+	\begin{align*}
+		\vv{PC} = 
+		\begin{pmatrix}
+			3-2 \\ -1-(-1) \\ 1-(1+\sqrt{15}) 
+		\end{pmatrix}=
+		\begin{pmatrix}
+			1 \\ 0 \\ -\sqrt{15}. 
+		\end{pmatrix}
+	\end{align*}
+	Dette er en normalvektor til tangentplanen. Vi kan derfor bestemme tangentplanens ligning ud fra planens ligning.
+	\begin{align*}
+		1(x-2) + 0(y+1) - \sqrt{15}(z-1-\sqrt{15}) = 0 \ \Leftrightarrow	\\
+		x-2-\sqrt{15}(z-1-\sqrt{15}) = 0
+	\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en tangentplan for funktionen $f$ givet ved
+	\begin{align*}
+		f(x,y) = \sin(\frac{xy}{4}) 
+	\end{align*}
+	i $(0,2\pi)$. 
+	\item Bestem en tangentplan for funktionen $f$ givet ved
+	\begin{align*}
+		f(x,y) = (xy)^4
+	\end{align*}
+	i $(-2,-3)$.
+	\item Bestem en tangentplan for funktionen $f$ givet ved
+	\begin{align*}
+		f(x,y) = (x^2+y^2)^4
+	\end{align*}
+	i $(-1,2)$.  
+\end{enumerate}
+
+\section*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en tangentplan for kuglen $K$ med ligningen
+	\begin{align*}
+		x^2+y^2+z^2=9
+	\end{align*}
+	i punktet $(0,0,3)$.
+	\item Bestem en tangentplan for kuglen $K$ med ligningen 
+	\begin{align*}
+		(x-4)^2+(y-4)^2 + (z-1)^2 = 25
+	\end{align*}
+	i punktet $(2,2,1+\sqrt{17})$.
+	\item Bestem en tangentplan for kuglen $K$ med ligningen
+	\begin{align*}
+		x^2-2x+y^2-4x+z^2-6z=-10
+	\end{align*}
+	i punktet $(1,2,3+\sqrt{3})$. 
+\end{enumerate}
+
+\section*{Opgave 3}
+Dette er en guidet tour gennem beviset for Sætning 1.1.
+
+\begin{enumerate}[label=\roman*)]
+	\item Argumentér for, at vektoren $\vv{v_x}$ givet ved
+	\begin{align*}
+		\vv{v_x} = 
+		\begin{pmatrix}
+			1 \\ 0 \\ f_x'(x_0,y_0)
+		\end{pmatrix}
+	\end{align*}
+	er en retningsvektor for tangentlinjen i $(x_0,y_0)$ for snitfunktionen langs $y$-aksen.
+	\item Argumentér for, at vektoren $\vv{v_x}$ givet ved
+	\begin{align*}
+		\vv{v_y} = 
+		\begin{pmatrix}
+			0 \\ 1 \\ f_y'(x_0,y_0)
+		\end{pmatrix}
+	\end{align*}
+	er en retningsvektor for tangentlinjen i $(x_0,y_0)$ for snitfunktionen langs $x$-aksen.
+	\item Givet to vektorer i rummet $\vv{a}$ og $\vv{b}$ kan vi bestemme deres krydsprodukt $\vv{a}\times \vv{b}$ ved
+	\begin{align*}
+		\vv{a} \times \vv{b} = 
+		\begin{pmatrix}
+			a_1 \\ a_2 \\ a_3 
+		\end{pmatrix} \times 
+		\begin{pmatrix}
+			b_1 \\ b_2 \\ b_3
+		\end{pmatrix} =
+		\begin{pmatrix}
+			a_2b_3-a_3b_2 \\
+			-a_1b_3+a_3b_1 \\
+			a_1b_2-a_2b_1
+		\end{pmatrix}.
+	\end{align*}
+	Krydsproduktet af to vektorer er orthogonalt til begge vektorerne $\vv{a}$ og $\vv{b}$. 
+	Argumenter for, at $\vv{v_x}\times \vv{v_y}$ må være en normalvektor til tangentplanen og brug dette til at udlede ligningen for tangentplanen. 
+\end{enumerate}
+
+\section*{Opgave 4}
+Aflevering!
