@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Modul 11
+Modul 13
 }
-\chead{14. september 2022
+\chead{23. september 2022
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -30,135 +30,127 @@ Modul 11
 %\end{center}
 %\section*{Opgave 1}
 %\stepcounter{section}
-
 \begin{center}
 \Huge
-Tangentplaner og kugler
+Nyt emne: Differentialligninger!
 \end{center}
 
+\section*{Introduktion}
 \stepcounter{section}
-Har vi en funktion $f:\mathbb{R}^2 \to \mathbb{R}$, så kan vi i et punkt $(x_0,y_0,f(x_0,y_0))$ finde en tangentplan for $f$. 
-\begin{setn}[Tangentplan]
-	Lad $f:\mathbb{R}^2 \to \mathbb{R}$ samt et punkt $P(x_0,y_0,f(x_0,y_0))$ være givet. Så er ligningen for tangentplanen $T$ for $f$ i $P$ givet ved
-	\begin{align*}
-		z = f(x_0,y_0) + f_x'(x_0,y_0)(x-x_0) + f_y'(x_0,y_0)(y-y_0).
-	\end{align*}
-\end{setn}
-\begin{proof}
-Det skal I selv.
-\end{proof}
+
+Differentialligninger er en betegnelse for alle typer ligninger, hvori der indegår en differentieret funktion. Når vi skal løse differentialligninger er stragetien generelt at gætte en løsning, og derefter gøre prøve for at undersøge, om en løsning rent faktisk er en løsning.
+
+Differentialligninger kan beskrive mange virkelige fænomener, og hvis I vil skrive SRP i differentialligninger, så vil der være en god sandsynlighed for, at den vil omhandle differentialligninger. 
+
 \begin{exa}
-	Lad $f$ være givet ved
-	\begin{align*}
-		f(x) = x^2 + y^2.
-	\end{align*}
-	Vi finder så tangentplanen i et punkt $P(2,2)$ ved
-	\begin{align*}
-		z &= f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)\\
-		&= 8 + 4(x-2) + 4(y-2).
-	\end{align*}
+Ligningen
+\begin{align*}
+	\frac{\intd y}{\intd x} = yx
+\end{align*}
+er en differentialligning, da der indgår en afledt i ligningen. Første indskydelse er at integrere begge sider, men så fås
+\begin{align*}
+	\int y' \intd x =\int yx \intd x = y,
+\end{align*}
+men dette hjælper os ikke tættere på en løsning, da vi ikke ved, hvordan vi skal løse ligningen
+\begin{align*}
+	\int y x \intd x = y.
+\end{align*}
+Vi gætter derfor på en løsning $y = e^{\frac{1}{2}x^2}$, og vi gør prøve: Dette betyder, at vi indsætter vores gæt i ligningen på højre og venstre side af lighedstegnet.
+Venstresiden giver
+\begin{align*}
+	y' = \left(e^{\frac{1}{2}x^2}\right)' = xe^{\frac{1}{2}x^2}.
+\end{align*}
+Højresiden giver
+\begin{align*}
+	xy = xe^{\frac{1}{2}x^2}.
+\end{align*}
+Da venstresiden og højresiden er ens, så vil $y=e^{\frac{1}{2}x^2}$ være en løsning til differentialligningen. 
+
+Det er også værd at gøre opmærksom på, at $y=e^{\frac{1}{2}x^2}$ ikke er den eneste løsning til ligningen. Vælger vi løsningen $y=5e^{\frac{1}{2}x^2}$, så vil dette også være en løsning. Ja, gør vi prøve fås på venstresiden
+\begin{align*}
+	y' = \left(5e^{\frac{1}{2}x^2}\right) = 5xe^{\frac{1}{2}x^2}.
+\end{align*}
+Tilsvarende fås på højresiden
+\begin{align*}
+	xy = x5e^{\frac{1}{2}x^2},
+\end{align*}
+og siden højre og venstresiden er ens, er dette også en løsning. Disse kaldes for \textit{partikulære løsninger for differentialligningen}. Tilsvarende kaldes mængden af alle løsninger til en differentialligning for \textit{den fuldstændige løsning til en differentialligning}.
 \end{exa}
 
 \begin{exa}
-	Lad en kugle $K$ være givet ved ligningen
-	\begin{align*}
-		(x-3)^2 + (y+1)^2 + (z-1)^2 = 16.
-	\end{align*}
-	Vi vil gerne bestemme tangentplanen i punktet $P(2,-1,1)$. Vi bestemmer derfor en vektor til centrum $C(3,-1,1)$ fra $P$:
-	\begin{align*}
-		\vv{PC} = 
-		\begin{pmatrix}
-			3-2 \\ -1-(-1) \\ 1-(1+\sqrt{15}) 
-		\end{pmatrix}=
-		\begin{pmatrix}
-			1 \\ 0 \\ -\sqrt{15}. 
-		\end{pmatrix}
-	\end{align*}
-	Dette er en normalvektor til tangentplanen. Vi kan derfor bestemme tangentplanens ligning ud fra planens ligning.
-	\begin{align*}
-		1(x-2) + 0(y+1) - \sqrt{15}(z-1-\sqrt{15}) = 0 \ \Leftrightarrow	\\
-		x-2-\sqrt{15}(z-1-\sqrt{15}) = 0
-	\end{align*}
+Vi betragter følgende simple differentialligning
+\begin{align*}
+f'(x) = 7.
+\end{align*}
+Denne differentialligning kan løses ved at integrere, fordi $f(x)$ ikke indgår på højresiden. Vi integrerer derfor:
+\begin{align*}
+	\int f'(x)\intd x = f(x) = 7x + k.
+\end{align*}
+Dette er den fuldstændige løsning til differentialligningen $f'(x) = 7.$ Det skal dog bemærkes at LANGT de fleste differentialligninger ikke kan løses ved at integrere. 
 \end{exa}
 
 \section*{Opgave 1}
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en tangentplan for funktionen $f$ givet ved
+	\item Bestem en partikulær løsning til differentialligningen 
 	\begin{align*}
-		f(x,y) = \sin(\frac{xy}{4}) 
+		f'(x) = 2x
 	\end{align*}
-	i $(0,2\pi)$. 
-	\item Bestem en tangentplan for funktionen $f$ givet ved
+	\item Bestem en fuldstændig løsning til differentialligningen
 	\begin{align*}
-		f(x,y) = (xy)^4
+		f'(x) = \frac{1}{x} + x
 	\end{align*}
-	i $(-2,-3)$.
-	\item Bestem en tangentplan for funktionen $f$ givet ved
+	\item Argumenter for, at alle partikulære løsninger til differentialligningen
 	\begin{align*}
-		f(x,y) = (x^2+y^2)^4
+		f''(x) = x
 	\end{align*}
-	i $(-1,2)$.  
+	er tredjegradspolynomier. 
 \end{enumerate}
 
 \section*{Opgave 2}
-
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en tangentplan for kuglen $K$ med ligningen
+	\item Forsøg at gætte en partikulær løsning til differentialligningen 
 	\begin{align*}
-		x^2+y^2+z^2=9
+		f'(x) = f(x)
 	\end{align*}
-	i punktet $(0,0,3)$.
-	\item Bestem en tangentplan for kuglen $K$ med ligningen 
+	\item Forsøg at gætte en partikulær løsning til differentialligningen
 	\begin{align*}
-		(x-4)^2+(y-4)^2 + (z-1)^2 = 25
+		f(x) - f'(x) = 10x-10
 	\end{align*}
-	i punktet $(2,2,1+\sqrt{17})$.
-	\item Bestem en tangentplan for kuglen $K$ med ligningen
+	\item Forsøg at gætte en løsning til differentialligningen 
 	\begin{align*}
-		x^2-2x+y^2-4x+z^2-6z=-10
+		f''(x) = -f(x)
 	\end{align*}
-	i punktet $(1,2,3+\sqrt{3})$. 
 \end{enumerate}
-
 \section*{Opgave 3}
-Dette er en guidet tour gennem beviset for Sætning 1.1.
 
 \begin{enumerate}[label=\roman*)]
-	\item Argumentér for, at vektoren $\vv{v_x}$ givet ved
+	\item Vis, at $y = ce^{\frac{1}{2}x^2}$ er en løsning til differentialligningen
 	\begin{align*}
-		\vv{v_x} = 
-		\begin{pmatrix}
-			1 \\ 0 \\ f_x'(x_0,y_0)
-		\end{pmatrix}
+		y' = xy.
 	\end{align*}
-	er en retningsvektor for tangentlinjen i $(x_0,y_0)$ for snitfunktionen langs $y$-aksen.
-	\item Argumentér for, at vektoren $\vv{v_x}$ givet ved
+	\item Vis, at $y = 3e^{-2x} + 1$ er en partikulær løsning til differentialligningen
 	\begin{align*}
-		\vv{v_y} = 
-		\begin{pmatrix}
-			0 \\ 1 \\ f_y'(x_0,y_0)
-		\end{pmatrix}
+		y' = -2y+2
 	\end{align*}
-	er en retningsvektor for tangentlinjen i $(x_0,y_0)$ for snitfunktionen langs $x$-aksen.
-	\item Givet to vektorer i rummet $\vv{a}$ og $\vv{b}$ kan vi bestemme deres krydsprodukt $\vv{a}\times \vv{b}$ ved
+	\item Afgør, om $g(x) = -\sqrt{x^2-3}$ er en løsning til differentialligningen
 	\begin{align*}
-		\vv{a} \times \vv{b} = 
-		\begin{pmatrix}
-			a_1 \\ a_2 \\ a_3 
-		\end{pmatrix} \times 
-		\begin{pmatrix}
-			b_1 \\ b_2 \\ b_3
-		\end{pmatrix} =
-		\begin{pmatrix}
-			a_2b_3-a_3b_2 \\
-			-a_1b_3+a_3b_1 \\
-			a_1b_2-a_2b_1
-		\end{pmatrix}.
+		g'(x) = \frac{x}{g(x)}
 	\end{align*}
-	Krydsproduktet af to vektorer er orthogonalt til begge vektorerne $\vv{a}$ og $\vv{b}$. 
-	Argumenter for, at $\vv{v_x}\times \vv{v_y}$ må være en normalvektor til tangentplanen og brug dette til at udlede ligningen for tangentplanen. 
+	\item Vis, at både $f(x) = \cos(x)$, $g(x) = \sin(x)$ og $h(x) = e^{-x}$ er løsninger til differentialligningen
+	\begin{align*}
+		f^{(4)}(x) = f(x).
+	\end{align*}
+	($f^{(4)}$ er den 4-gange differentierede).
+	\item Vis, at $y = \ln(e^{x}+e-1)$ er en løsning til differentialligningen
+	\begin{align*}
+		\frac{\intd y}{\intd x} = e^{x-y}
+	\end{align*}
+	\item Redegør for, at funktionen $f(x) = \frac{75}{1-10e^{-300t}}$ er en løsning til differentialligningen
+	\begin{align*}
+		y'(x) = 4y(75-y)
+	\end{align*}
 \end{enumerate}
 
-\section*{Opgave 4}
-Aflevering!
+
+
 \end{document}

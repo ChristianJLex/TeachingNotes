@@ -1,0 +1,71 @@
+
+\section*{Opgave 1}
+Tegn en linje med den korteste afstand mellem følgende linjer og punkter. Giv et overslag over længden og bestem derefter afstanden ved at bruge afstandsformlen. 
+\begin{center}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -0.5, ymax = 4.5, 
+	grid]
+		\addplot[thick, color = blue!40] {x+1};
+		\filldraw[purple]  (axis cs:2,1) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] (axis cs: 2,3) --(axis cs:4,1);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -0.5, ymax = 4.5, 
+	grid]
+			\addplot[thick, color = blue!40] {-x+2};
+		\filldraw[purple]  (axis cs:0,0) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] (axis cs: 1,1) --(axis cs:2,2);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\begin{center}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -1.5, xmax = 4.5, ymin = -4.5, ymax = 1.5, 
+	grid]
+		\addplot[thick, color = blue!40] {0.5*x-3};
+		\filldraw[purple]  (axis cs:-1,-1) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] 
+		(axis cs: 2,-2) --(axis cs:3,-4);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -3.5, xmax = 3.5, ymin = -3.5, ymax = 3.5, 
+	grid]
+		\addplot[thick, color = blue!40] {-1/3*x+2};
+		\filldraw[purple]  (axis cs:-3,-2) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] 
+		(axis cs: 3,1) --(axis cs:2,-2); 
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\newpage
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem $k$, så afstanden mellem linjen givet ved 
+\begin{align*}
+x-5y+10 = 0
+\end{align*}
+og punktet $P(k,1)$ har afstand $4$. Start med at tegne det i Geogebra.
+\item Bestem $b$, så $l$ med ligningen
+\begin{align*}
+y = 2x+b,
+\end{align*}
+ og punktet $P(1,1)$ har afstand 5. Start med at tegne i Geogebra.
+\end{enumerate}
+
+\section*{Opgave 3}
+Aflevering

@@ -15,6 +15,7 @@
 \usepackage{pdfpages}
 \usepackage[parfill]{parskip}
 \usepackage{anyfontsize}
+\usepackage{alphalph}
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -122,7 +123,7 @@
 	\end{minipage}
 	\begin{minipage}[t]{0.85\textwidth}
 	\begin{minipage}[t]{0.3cm}
-		\romannumeral #2)
+		\symbol{\numexpr96+ #2})
 	\end{minipage}
 	\begin{minipage}[t]{\textwidth -0.3cm} \ 
 }{
