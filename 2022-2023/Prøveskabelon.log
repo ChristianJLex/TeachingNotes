@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  22 SEP 2022 13:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  4 OCT 2022 11:59
 entering extended mode
 **./Prøveskabelon.tex
 (Prøveskabelon.tex
@@ -1462,7 +1462,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'danish'.
- (Prøveskabelon.aux (Screening/versionB.aux))
+ (Prøveskabelon.aux (Screening/versionC.aux))
 \openout1 = `Prøveskabelon.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1703,183 +1703,95 @@ l.85 \newpage
               [1
 
 ]
-\openout2 = `Screening/versionA.aux'.
+\openout2 = `Screening/versionC.aux'.
 
- (Screening/versionA.tex
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+ (Screening/versionC.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
 
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 14--14
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 15--15
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 14--16
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 15--17
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
 
  []
 
 
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 17--17
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 18--18
 []\OT1/cmr/m/n/12 b) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 17--19
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 18--20
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
 
-LaTeX Warning: Reference `fig:lines' on page 2 undefined on input line 21.
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 9--21
+[][] []
+ []
 
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 9--21
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 9--21
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--21
 
  []
 
 
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 56--56
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 28--28
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 56--58
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 28--30
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
 
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 59--59
-[]\OT1/cmr/m/n/12 b) 
- []
-
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 59--61
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 22--31
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--61
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 8--62
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 8--62
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 22--31
 [] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 8--62
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 8--62
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 8--62
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 8--62
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--62
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
-
- []
-
-
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 69--69
-[]\OT1/cmr/m/n/12 a) 
- []
-
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 69--71
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--71
-
- []
-
-
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 72--72
-[]\OT1/cmr/m/n/12 b) 
- []
-
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 72--74
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 72--74
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 63--75
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 63--75
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 63--75
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--75
+Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
@@ -1894,148 +1806,157 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [2
 
 ]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+ []
+
+<Billeder/container.jpg, id=33, 5323.89pt x 7981.82pt>
+File: Billeder/container.jpg Graphic file (type jpg)
+<use Billeder/container.jpg>
+Package pdftex.def Info: Billeder/container.jpg  used on input line 35.
+(pdftex.def)             Requested size: 164.4556pt x 246.50824pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 104--104
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 39--39
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 104--106
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 39--41
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
 
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 107--107
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 42--42
 []\OT1/cmr/m/n/12 b) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 107--109
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 42--44
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
 
-Overfull \hbox (1.25566pt too wide) in paragraph at lines 110--110
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Overfull \hbox (1.25566pt too wide) in paragraph at lines 48--48
 []\OT1/cmr/m/n/12 c) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 110--112
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 48--50
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--112
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 76--113
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 33--51
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 76--113
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 33--51
 [] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 76--113
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 33--51
 [] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 76--113
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 33--51
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--113
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 33--51
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--51
+
+ []
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
- []
-
-<Billeder/sand.jpg, id=36, 5463.41125pt x 3642.60875pt>
-File: Billeder/sand.jpg Graphic file (type jpg)
-<use Billeder/sand.jpg>
-Package pdftex.def Info: Billeder/sand.jpg  used on input line 116.
-(pdftex.def)             Requested size: 246.68967pt x 164.46614pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
-
- []
-
-
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 135--135
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 80--80
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 135--137
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 80--82
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
 
 
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 138--138
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 83--83
 []\OT1/cmr/m/n/12 b) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 138--140
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 83--85
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--140
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 114--141
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 52--86
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 114--141
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 52--86
 [] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 114--141
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 52--86
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--141
+Underfull \hbox (badness 10000) in paragraph at lines 52--86
 
  []
 
@@ -2047,49 +1968,103 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+[3 <./Billeder/container.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 92--94
 
  []
 
 
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 171--171
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 95--95
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 171--173
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 95--97
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 142--174
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 98--98
+[]\OT1/cmr/m/n/12 b) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 98--100
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 142--174
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--101
+[][] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--101
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--174
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--101
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+<Billeder/sne.jpg, id=41, 2244.385pt x 3141.7375pt>
+File: Billeder/sne.jpg Graphic file (type jpg)
+<use Billeder/sne.jpg>
+Package pdftex.def Info: Billeder/sne.jpg  used on input line 105.
+(pdftex.def)             Requested size: 164.4556pt x 230.20303pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+
+ []
+
+
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 126--126
+[]\OT1/cmr/m/n/12 a) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 126--128
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 103--129
+[][] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 103--129
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--129
 
  []
 
@@ -2101,48 +2076,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[4 <./Billeder/sand.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
-
- []
-
-<Billeder/el.jpg, id=53, 3675.7325pt x 2289.55376pt>
-File: Billeder/el.jpg Graphic file (type jpg)
-<use Billeder/el.jpg>
-Package pdftex.def Info: Billeder/el.jpg  used on input line 177.
-(pdftex.def)             Requested size: 205.57263pt x 128.03946pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
-
+[4]
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 130--130
+[]\OT1/cmr/m/n/12 b) 
  []
 
 
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 182--182
-[]\OT1/cmr/m/n/12 a) 
- []
-
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 182--185
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 130--132
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
 )
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 175--87
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 130--87
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 175--87
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--87
+Underfull \hbox (badness 10000) in paragraph at lines 130--87
 
  []
 
@@ -2154,44 +2109,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[5 <./Billeder/el.jpg>] 
+[5 <./Billeder/sne.jpg>] 
 AED: lastpage setting LastPage
-(Prøveskabelon.aux (Screening/versionA.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(Prøveskabelon.aux (Screening/versionC.aux))
 Package logreq Info: Writing requests to 'Prøveskabelon.run.xml'.
 \openout1 = `Prøveskabelon.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46709 strings out of 478907
- 1039112 string characters out of 2848099
- 1864357 words of memory out of 3000000
- 63830 multiletter control sequences out of 15000+600000
+ 46663 strings out of 478907
+ 1038173 string characters out of 2848099
+ 1859212 words of memory out of 3000000
+ 63789 multiletter control sequences out of 15000+600000
  410682 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,14n,86p,767b,2198s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.5} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.6} has been referenced but does not exist, rep
-laced by a fixed one
-
-<C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NRG
-Y-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
+ 89i,14n,86p,767b,2215s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/N
+RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.
 pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmti12.pfb>
-Output written on Prøveskabelon.pdf (6 pages, 4819206 bytes).
+sfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Prøveskabelon.pdf (6 pages, 9163548 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  34 words of extra memory for PDF output out of 10000 (max. 10000000)
 

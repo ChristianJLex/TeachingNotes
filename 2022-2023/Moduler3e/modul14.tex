@@ -1,0 +1,147 @@
+\begin{center}
+\Huge
+Partikulære løsninger og integralkurver
+\end{center}
+
+\section*{Partikulære løsninger og integralkurver}
+\stepcounter{section}
+
+Vi så sidst, at differentialligninger kan have uendeligt mange løsninger nøjagtigt som integraler kan have det. Vi skal i dag arbejde med, hvordan man bestemmer differentialligningsløsninger, der går gennem bestemte punkter. 
+
+\begin{exa}
+	Vi betragter differentialligningen 
+	\begin{align*}
+		y' = xy,
+	\end{align*}
+	som vi fra sidst husker har den generelle løsning 
+	\begin{align*}
+		y(x) = ce^{-\frac{1}{2}x^2}.
+	\end{align*}
+	Vi ønsker at bestemme den differentialligningsløsning, der går gennem punktet $(0,4)$.
+	Dette indsættes derfor i løsningen, og vi får
+	\begin{align*}
+		4=y(0) = ce^{-\frac{1}{2}0^2} = ce^0= c, 
+	\end{align*}
+	så vi ved, at $c=4$. Vi har derfor den partikulære løsning 
+	\begin{align*}
+		y(x) = 4e^{-\frac{1}{2}x^2}.
+	\end{align*}
+	Grafen for en partikulær løsning kaldes for en \textit{integralkurve}, og $y(x)$ er altså
+	bestemt, så integralkurven går gennem punktet $(0,4)$. 
+\end{exa}
+
+\begin{exa}
+	Vi betragter den simple differentialligning
+	\begin{align}\label{eq:1}
+		f'(x) = 6x.
+	\end{align}
+	Vi skal bestemme en løsning til ligningen, så integralkurven for $f$ går gennem $(2,15)$. 
+	Vi bestemmer først den generelle løsning ved at integrere
+	\begin{align*}
+		\int 6x \intd x = 3x^2 + k.
+	\end{align*}
+	Vi indsætter nu punktet.
+	\begin{align*}
+		15=f(3) = 3(2)^2+k = 12+k,
+	\end{align*}
+	så $k=3$. 
+	Vi har altså bestemt, at den partikulære løsning til \eqref{eq:1} med en integralkurve, 
+	der går gennem $(2,15)$ er givet ved 
+	\begin{align*}
+		f(x) = 3x^2+3.
+	\end{align*}
+\end{exa}
+
+
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en partikulær løsning til følgende differentialligning, hvis integralkurve
+	går gennem punktet $(2,6)$. 
+	\begin{align*}
+		f'(x) = 5
+	\end{align*}
+	\item Bestem en partikulær løsning til følgende differentialligning, hvis integralkurve 
+	går gennem punktet $(e^{3},16)$.
+	\begin{align*}
+		f'(x) = \frac{5}{x} 
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+	Det oplyses, at 
+	\begin{align*}
+		y(x) = ce^x-x-1
+	\end{align*}
+	er den generelle løsning til differentialligningen
+	\begin{align}\label{eq:2}
+		\frac{\intd y}{\intd x} = y+x.
+	\end{align}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at $y(x) = ce^x -x-1$ er en løsning til \eqref{eq:2}.
+\item Bestem en løsning til \eqref{eq:2}, der går gennem punktet $(2,3)$.
+\end{enumerate}
+
+
+\section*{Opgave 3}
+	Det oplyses, at 
+	\begin{align*}
+		y(x) = cx
+	\end{align*}
+	er den generelle løsning til differentialligningen
+	\begin{align}\label{eq:3}
+		y' = \frac{y}{x}
+	\end{align}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at $y(x) = cx$ er en løsning til \eqref{eq:3}.
+\item Bestem en løsning til \eqref{eq:3}, der går gennem punktet $(-4,5)$.
+\end{enumerate}
+
+
+\section*{Opgave 4}
+	Det oplyses, at 
+	\begin{align*}
+		y(x) = \pm\sqrt{c+x^2}
+	\end{align*}
+	er den generelle løsning til differentialligningen
+	\begin{align}\label{eq:4}
+		\frac{\intd y}{\intd x} = \frac{x}{y}.
+	\end{align}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at $y(x) = \pm\sqrt{c+x^2}$ er en løsning til \eqref{eq:4}.
+\item Bestem en løsning til \eqref{eq:4}, der går gennem punktet $(-4,6)$. (Vælg den positive løsning).
+\end{enumerate}
+
+
+\section*{Opgave 5}
+	Det oplyses, at 
+	\begin{align*}
+		y(x) = -\ln(c-e^x)
+	\end{align*}
+	er den generelle løsning til differentialligningen
+	\begin{align}\label{eq:5}
+		y'(x) = e^{y+x}.
+	\end{align}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at $y(x) = -\ln(c-e^x)$ er en løsning til \eqref{eq:5}.
+\item Bestem en løsning til \eqref{eq:5}, der går gennem punktet $(2,-2)$. 
+\end{enumerate}
+
+\section*{Opgave 6}
+
+	Det oplyses, at 
+	\begin{align*}
+		y(x) = c_1\sin(x)+c_2\cos(x)
+	\end{align*}
+	er den generelle løsning til differentialligningen
+	\begin{align}\label{eq:6}
+		y'' = y.
+	\end{align}
+\begin{enumerate}[label=\roman*)]
+\item Vis, at $y(x) = c_1\sin(x)+c_2\cos(x)$ er en løsning til \eqref{eq:6}.
+\item Bestem en løsning til \eqref{eq:6}, der går gennem punkterne $(0,4)$ og 
+$\left(\frac{\pi}{2}, -3\right)$.
+\end{enumerate}
+
+\section*{Opgave 7}
+Opgaver fra sidst.
