@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  23 OCT 2022 18:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  1 NOV 2022 15:45
 entering extended mode
 **./Undervisningsnoter3e.tex
 (Undervisningsnoter3e.tex
@@ -1640,16 +1640,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[5] 
+[4] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1659,35 +1650,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[6] (Undervisningsnoter3e.aux)
+[5] (Undervisningsnoter3e.aux)
 Package logreq Info: Writing requests to 'Undervisningsnoter3e.run.xml'.
 \openout1 = `Undervisningsnoter3e.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46335 strings out of 478907
- 1032031 string characters out of 2848099
- 1993530 words of memory out of 3000000
- 63469 multiletter control sequences out of 15000+600000
+ 45778 strings out of 478907
+ 1016996 string characters out of 2848099
+ 1837290 words of memory out of 3000000
+ 62909 multiletter control sequences out of 15000+600000
  410383 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,86p,773b,2147s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,16n,86p,773b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NRGY-chri88mh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/N
-RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/NRGY-chri88mh/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users
-/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbol
-s/msam10.pfb>
-Output written on Undervisningsnoter3e.pdf (6 pages, 206939 bytes).
+type1/public/amsfonts/cm/cmex10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/
+NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
+NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmti12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/NRGY-chri88mh/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Undervisningsnoter3e.pdf (5 pages, 155585 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

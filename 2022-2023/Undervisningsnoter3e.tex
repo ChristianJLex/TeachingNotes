@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Modul 19
+Modul 22
 }
-\chead{25. oktober 2022
+\chead{2. november 2022
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -30,232 +30,192 @@ Modul 19
 %\end{center}
 %\section*{Opgave 1}
 %\stepcounter{section}
+
+
 \begin{center}
 \Huge
-Logistisk vækst og grafer
+Lineære differentialligninger af 1. orden
 \end{center}
-
-
-\section*{Logistisk vækst og grafer}
+\section*{Førsteordens lineære differentialligninger}
 \stepcounter{section}
 
-Den eksponentielle differentialligning givet ved
+Vi har indtil nu arbejdet med to klasser af differentialligninger. Lineære differentialligninger og separable differentialligninger. Differentialligningerne
 \begin{align*}
 	y' = b-ay
 \end{align*}
-har den grafiske repræsentation set på Fig. \ref{fig:eksp}.
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-		\begin{axis}
-			[
-			axis lines = center,
-			xmin = -1, xmax = 7, 
-			ymin = -1, ymax = 7, 
-			ticks = none, 
-			xlabel = {$y$}, ylabel = {$y'$},
-			]
-			\addplot[thick, color = blue!50, domain = 0:6] {3-0.5*x};
-			\node at (axis cs: 0-0.3,3) {$b$};
-			\draw[dashed, color = purple, thick] (axis cs:1,2.5) to (axis cs: 3,2.5);
-			\draw[dashed, color = purple, thick] (axis cs:3,2.5) to (axis cs: 3, 1.5);
-			\node at (axis cs: 3.3,2) {$a$};
-		\end{axis}
-	\end{tikzpicture}
-	\caption{Grafisk repræsentation af differentialligningen $y' = b-ay$.}
-	\label{fig:eksp}
-\end{figure}
-
-Vi kan tilsvarende lave en grafisk repræsentation af den logistiske differentialligning
+og specialtilfældet
 \begin{align*}
-	y' = ay(M-y) = -ay^2+aMy.
+	y' = ay
 \end{align*}
-Det er ikke svært at overbevise sig om, at dette bliver en "sur" parabel, der skærer i (0,0). Den grafiske repræsentation af denne differentialligning kan ses på Fig. \ref{fig:logist}
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-		\begin{axis}
-			[
-			axis lines = center, 
-			xmin = -1, xmax = 6,
-			ymin = -1, ymax = 8,
-			ticks = none, 			
-			xlabel = {$y$}, ylabel = {$y'$},
-			]
-			\addplot[color = blue!50, thick, domain = 0:5, samples = 1000] {x*(5-x)};
-			\draw[dashed, color = purple, thick] (axis cs: 2.5,0) to (axis cs: 2.5,25/4);
-			\node at (axis cs: 2.5, -0.5) {$\frac{M}{2}$};
-		\end{axis}
-	\end{tikzpicture}
-	\caption{Grafisk repræsentation af den logistiske differentialligning $y' = ay(M-y)$.}
-	\label{fig:logist}
-\end{figure}
-Af Fig. \ref{fig:logist} kan vi se, at differentialligningens vækst $y'$ er maksimeret, når $y = M/2$. Dette vil vi vise.
-\begin{setn}
-	Den logistiske differentialligning 
+er eksempler på lineære differentialligninger af første orden. 
+\begin{defn}[Førsteordens lineære differentialligninger]
+	Lad $a:\mathbb{R}\to \mathbb{R}$ og $b:\mathbb{R}\to \mathbb{R}$ være kontinuerte funktioner. Så kaldes en differentialligning
+	på formen
 	\begin{align*}
-		y' = ay(M-y)
+		y' + a(x)y = b(x)
 	\end{align*}
-	har maksimal vækst, når $y = M/2$. 
-\end{setn}
-\begin{proof}
-	For at finde toppunktet, differentierer vi polynomiet 
-	\begin{align*}
-		p(y) =ay(M-y) = aMy-ay^2.
-	\end{align*}
-	Dette giver
-	\begin{align*}
-		p'(y) = aM-2ay
-	\end{align*}
-	Vi sætter dette lig 0 for at finde toppunktet.
-	\begin{align*}
-		aM-2ay = 0 \ &\Leftrightarrow \ aM = 2ay \\
-		&\Leftrightarrow	 \ \frac{aM}{2a} = y \\
-		&\Leftrightarrow	 \ \frac{M}{2} = y.
-	\end{align*}
-\end{proof}
+	for en \textit{førsteordens lineær differentialligning}.
+	I fald $b(x)=0$ kaldes ligningen for en \textit{homogen førsteordens lineær differentialligning.} Hvis $h(x) \neq 0$, så siges ligningen at være 
+	\textit{inhomogen.}
+\end{defn}
+
+Vi vil typisk kræve, at $a(x)\neq 0$, da vores differentialligning ellers i realiteten blot er et ubestemt integral. 
+Ordet førsteorden kommer af, at der kun optræder en gange afledede i ligningen. 
 
 \begin{exa}
-	Vi betragter den logistiske differentialligning repræsenteret på Fig. \ref{fig:logist2}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -1, xmax = 5,
-				ymin = -1, ymax = 3, 
-				]
-				\addplot[thick, color = blue!50, domain = 0:4, samples = 1000] {0.5*x*(4-x)};
-				\draw[color = purple, thick, dashed] (axis cs:0,2) to (axis cs: 2,2);
-				\draw[color = purple, thick, dashed] (axis cs:2,0) to (axis cs: 2,2);
-			\end{axis}
-		\end{tikzpicture}
-		\caption{Grafisk repræsentation af en logistisk differentialligning.}
-		\label{fig:logist2}
-	\end{figure}
-	Vi kan se, at denne parabel har rødder i 0 og 4. Derfor er differentialligningen på formen
+	Differentialligningen 
 	\begin{align*}
-		y' = ay(4-y),
+		y' + xy = e^x
 	\end{align*}
-	og $M =4$. Vi bestemmer nu toppunktet af parablen.
+	er en lineær differentialligning. Funktionerne $a$ og $b$ er givet ved
 	\begin{align*}
-		a\frac{M}{2}(4-\frac{M}{2}) = a\frac{4}{2}(4-\frac{4}{2}) = a\cdot 2\cdot 2. = 4a
-	\end{align*}
-	Vi kan af Fig. \ref{fig:logist2} se, at den maksimale vækst er $y' = 2$, så vi må have, at $4a = 2$, og $a=0.5$.
-	Vores differentialligning lyder da
-	\begin{align*}
-		y' = 0.5y(4-y).
-	\end{align*}
-	Denne differentialligning har den fuldstændige løsning
-	\begin{align*}
-		y(x) = \frac{4}{1+ce^{-2x}}.
+		&a(x) = x, &&b(x) = e^x.
 	\end{align*}
 \end{exa}
 
-\newpage
+Vi kan løse lineære førsteordens differentialligninger ved brug af den såkaldte \textit{panserformel}. Det kan ofte være \textit{overkill} at bruge panserformlen, men 
+den virker til gengæld altid, når vi har med lineære differentialligninger af 1. orden at gøre. 
+
+\begin{setn}[Panserformlen]
+	Lad $a:\mathbb{R} \to \mathbb{R}$ og $b:\mathbb{R} \to \mathbb{R}$ være kontinuerte funktioner.
+	Så har differentialligningen
+	\begin{align*}
+		y' + a(x) y =b(x)
+	\end{align*}
+	den fuldstændige løsning
+	\begin{align*}
+		y(x) = e^{-A(x)}\int b(x)e^{-A(x)} dx + ce^{-A(x)},
+	\end{align*}
+	hvor $A$ er en stamfunktion til $a$ og $c\in \mathbb{R}$.
+\end{setn}
+\begin{proof}
+	Antag, at $y(x)$ er en løsning til differentialligningen
+	\begin{align}\label{eq:diffeq}
+		y' + a(x)y = b(x).
+	\end{align}
+	Vi indfører nu hjælpefunktionen 
+	\begin{align*}
+		z(x) = e^{A(x)}y(x)
+	\end{align*}
+	for en stamfunktion $A$ til $a$. 
+	Vi differentierer nu $z$ ved hjælp af produktreglen for differentiation.
+	\begin{align*}
+		z'(x) &= a(x)e^{A(x)}y(x)+e^{A(x)}y'(x)\\
+			  &= e^{A(x)}\underbrace{\left(a(x)y(x)+y'(x)\right)}_{=b(x)} \\
+			  &= e^{A(x)}b(x).
+	\end{align*}
+	Vi får så, at 
+	\begin{align*}
+		z(x) = \int e^{A(x)}b(x) dx + c.
+	\end{align*}
+	Da 
+	\begin{align*}
+		z(x) = e^{A(x)}y(x),
+	\end{align*}
+	så gælder det, at 
+	\begin{align*}
+		y(x) &= e^{-A(x)}z(x)\\
+		&= e^{-A(x)}\int b(x)e^{A(x)} dx + ce^{-A(x)}.
+	\end{align*}
+	For en god ordens skyld, lad os nu vise, at 
+	\begin{align*}
+		y(x) = e^{-A(x)}\int b(x)e^{A(x)}dx + ce^{-A(x)}
+	\end{align*}
+	er en løsning. 
+	Vi indsætter i \eqref{eq:diffeq}, og starter med $y'$.
+	\begin{align*}
+		y'(x) &= \left(e^{-A(x)}\int b(x)e^{A(x)}dx + ce^{-A(x)}\right)' \\
+		&=-a(x)e^{-A(x)}\int b(x)e^{A(x)}dx + e^{-A(x)}b(x)e^{A(x)} -a(x)ce^{-A(x)} \\
+		&= -a(x)\left(e^{-A(x)}\int b(x)e^{A(x)}dx + ce^{-A(x)}\right) + b(x) \\
+		&= -a(x)y(x) + b(x),
+	\end{align*}
+	og dette var, hvad vi skulle vise. 
+\end{proof}
+
+\begin{exa}
+	Vi betragter den lineære differentialligning af 1. orden
+	\begin{align*}
+		y' + 2xy = \frac{1}{2}x.
+	\end{align*}
+	Her er $b(x) = \frac{1}{2}x$ og $a(x) = 2x.$
+	Vi bestemmer først $A(x) = \int 2x dx = x^2$. 
+	Vi indsætter nu i panserformlen.
+	\begin{align*}
+		y(x) &= e^{-x^2}\int\frac{1}{2}xe^{x^2} dx  + ce^{-x^2}\\
+		&=	e^{-x^2}\frac{1}{4}e^{x^2} + ce^{-x^2}\\
+		&= \frac{1}{4}+ce^{-x^2}.
+	\end{align*}
+\end{exa}
+
 \section*{Opgave 1}
-Bestem fuldstændige løsninger til følgende grafisk repræsenterede differentialligninger.
-\begin{center}
-	\resizebox{0.45\textwidth}{!}
-	{
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -0.5, xmax = 2.5,
-				ymin = -0.5, ymax = 1.5, 
-				grid
-				]
-				\addplot[thick, color = blue!50, domain = 0:2, samples = 1000] {x*(2-x)};
-			\end{axis}
-		\end{tikzpicture}
-	}
-	\resizebox{0.45\textwidth}{!}
-	{
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -0.5, xmax = 4.5,
-				ymin = -0.5, ymax = 4.5, 
-				grid
-				]
-				\addplot[thick, color = blue!50, domain = 0:4, samples = 1000] {x*(4-x)};
-			\end{axis}
-		\end{tikzpicture}
-	}
-	\resizebox{0.45\textwidth}{!}
-	{
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -0.5, xmax = 3.5,
-				ymin = -0.5, ymax = 10.5, 
-				grid
-				]
-				\addplot[thick, color = blue!50, domain = 0:3, samples = 1000] {4*x*(3-x)};
-			\end{axis}
-		\end{tikzpicture}
-	}	
-	\resizebox{0.45\textwidth}{!}
-	{
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -0.5, xmax = 6.5,
-				ymin = -0.5, ymax = 4.5, 
-				grid
-				]
-				\addplot[thick, color = blue!50, domain = 0:6, samples = 1000] {(1/3)*x*(6-x)};
-			\end{axis}
-		\end{tikzpicture}
-	}	
-\end{center}
-\newpage
-\section*{Opgave 2}
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en fuldstændig løsning til følgende grafisk repræsenterede differentialligning.
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -0.5, xmax = 8.5,
-				ymin = -0.5, ymax = 8.5, 
-				grid
-				]
-				\addplot[thick, color = blue!50, domain = 0:8, samples = 1000] {0.5*x*(8-x)};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	\item Bestem nu en partikulær løsning, der går gennem punktet $(0,4)$. 
-	\item Hvad er væksten af $y$, når $y=5$?
-	\item Bestem $y(2)$. 
+	\item Argumentér for, hvorfor differentialligningen 
+	\begin{align*}
+		y' = k
+	\end{align*}
+	er en lineær førsteordens differentialligning (Hint: Bestem $a(x)$ og $b(x)$).
+	\item Argumentér for, hvorfor differentialligningen 
+	\begin{align*}
+		y' = ay
+	\end{align*}
+	er en lineær førsteordens differentialligning (Hint: Bestem $a(x)$ og $b(x)$).
+	\item Argumentér for, hvorfor differentialligningen 
+	\begin{align*}
+		y' = b-ay
+	\end{align*}
+	er en lineær førsteordens differentialligning (Hint: Bestem $a(x)$ og $b(x)$).
 \end{enumerate}
-\newpage
+
+\section*{Opgave 2}
+Følgende differentialligninger er førsteordens lineære differentialligninger på formen
+\begin{align*}
+	y' + a(x)y=b(x).
+\end{align*}
+Bestem $a(x)$ og $b(x)$. 
+\begin{align*}
+	&1) \ y' + y = 0   &&2) \ y' + \cos(x)y = \sin(x)   \\
+	&3) \ y' = -\sqrt{x}y+x^2   &&4) \ y' + (13x^2+4x)y = \sin(x^2)  \\
+	&5) \ y'+2xy-\ln(x) = 0   &&6) \ y' = \cos(x)+\sin(x)y  \\
+	&7) \ y' -y = 5   &&8) \ \frac{y'}{y} +x = \frac{\sqrt{x}}{y}  \\
+\end{align*}
+
 \section*{Opgave 3}
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en fuldstændig løsning til følgende grafisk repræsenterede differentialligning.
-	\begin{center}
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -0.5, xmax =6.5 ,
-				ymin = -0.5, ymax = 6.5, 
-				grid
-				]
-				\addplot[thick, color = blue!50, domain = 0:6, samples = 1000] {(2/3)*x*(6-x)};
-			\end{axis}
-		\end{tikzpicture}
-	\end{center}
-	\item Bestem nu en partikulær løsning, der går gennem punktet $(0,12)$.
-	\item Hvad er væksten af $y$, når $y=2$?
-	\item Bestem $y(4)$.  
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + x^3y = 0.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y'  = -cos(x)y.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen 
+	\begin{align*}
+		y' + 2xy = x^2
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + 3y = e^x
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + \cos(x)y = 3\cos(x).
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + 2xy = e^{-x^2}.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' - \cos(x)y = e^{sin(x)}.
+	\end{align*}
 \end{enumerate}
 
-
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Brug Panserformlen til at bevise løsningsformlen for differentialligningen
+	\begin{align*}
+		y' =b-ay.
+	\end{align*}
+\end{enumerate}
 \end{document}
