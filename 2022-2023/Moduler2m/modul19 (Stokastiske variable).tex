@@ -1,0 +1,99 @@
+\begin{center}
+\Huge
+Stokastiske variable
+\end{center}
+\section*{Definitioner}
+\stepcounter{section}
+
+Vi har tidligere set på sandsynligheder i stil med 
+\begin{align*}
+P(\{\textit{en familie på tre har netop en datter}\}),
+\end{align*}
+men det ville være smart, hvis vi i udgangspunktet havde kvantificeret alle udfaldene, så vi i stedet for at opskrive hændelser, så blot kunne opskrive et tal. Til dette vil vi definere begrebet stokastisk variabel.
+\begin{defn}
+En stokastisk variabel er en funktion, der sender en hændelse af et stokastisk eksperiment over i et reelt tal. 
+\end{defn}
+En stokastisk variabel vil typisk betegnes med $X$.
+\begin{exa}
+Vi kaster en mønt to gange og lader $X$ betegne antallet af gange, vi slår plat. Billedmængden (de værdier $X$ kan tage) er $\{0,1,2\}$ og vi har følgende sandsynligheder for udfaldene af $X$:
+\begin{align*}
+P(X=0) = \frac{1}{4}, \ P(X=1) = \frac{1}{4}, \ P(X=2) = \frac{1}{2}. 
+\end{align*}
+Som vi tidligere har nævnt, så kaldes disse sandsynligheder for fordelingen af $X$.
+\end{exa}
+\begin{exa}
+Vi lader $X_1$ være den totale levetid for en amerikansk mand og $X_2$ er levetiden for en amerikansk kvinde. Så gælder der, at billedmængderne for de to variable er $[0,\infty)$ og
+\begin{align*}
+P(X_1\leq 30) \approx 0.16
+\end{align*} 
+samt
+\begin{align*}
+P(X_2\leq 30) \approx 0.11.
+\end{align*}
+\end{exa}
+\begin{exa}
+Vi slår med en terning og lader $X$ være antallet af øjne på terningen. Fordelingen af $X$ vil så være givet ved
+\[P(X=1) = P(X=2) = \cdots = P(X=6) = \frac{1}{6}.\]
+\end{exa}
+Hvis fordelingen af en stokastisk variabel opfylder, at alle udfald af den stokastiske variabel er lige sandsynlige, så siger vi, at fordelingen af $X$ er uniform eller symmetrisk, og vi skriver at $X \sim \textnormal{Unif}$.
+
+\begin{exa}\label{exa:exa1}
+Vi ønsker at bestemme sandsynligheden for at få netop to seksere blandt seks kast. For at bestemme det, bruger vi multiplikationsprincippet til at bestemme, hvad sandsynligheden for at få to seksere i de to første kast og nul i resten. Det må være givet ved
+\begin{align*}
+P(\{\textit{seksere i netop de to første kast}\}) &= \left( \frac{1}{6}\right)\left( \frac{1}{6}\right)\left( \frac{5}{6}\right)\left( \frac{5}{6}\right)\left( \frac{5}{6}\right)\left( \frac{5}{6}\right) \\
+&= \left( \frac{1}{6}\right)^2\left( \frac{5}{6}\right)^4
+\end{align*}
+
+Vi skal nu tage højde for, at sekserne ikke nødvendigvis behøver at optræde i de to første kast. Vi skal derfor bestemme på hvor mange forskellige måder, vi kan flytte positionen af sekserne rundt. Dette er netop givet af binomialkoefficienten 
+\begin{align*}
+\binom{6}{2},
+\end{align*}
+derfor er sandsynligheden for at få netop to seksere i seks forsøg givet ved
+\begin{align*}
+P(\{\textit{netop to seksere}\}) = \binom{6}{2}\left(\frac{1}{6}\right)^2\left(\frac{1}{6}\right)^4 \approx 0.2
+\end{align*}
+\end{exa}
+Vi kan generalisere dette eksempel. Først skal vi bruge følgende definition:
+\begin{defn}[Bernoulli-stokastisk variabel]
+En stokastisk variabel $X$ kaldes en Bernoulli-stokastisk variabel, hvis den har to udfald (ofte betegnet $0$ og 1). Vi betegner $X=1$ som "succes" og $X=0$ som "fiasko". Sandsynligheden $p= P(X=1)$ kaldes for sandsynlighedsparametren og vi skriver, at $X \sim \textnormal{Ber}(p)$. 
+\end{defn}
+\begin{defn}[Binomialfordelt stokastisk variabel]
+En stokastisk variabel, der beskriver antallet af successer af $n$ på hinanden følgende Bernoulli eksperimenter med sandsynlighedsparameter $p$ kaldes for en binomialfordelt stokastisk variabel, og vi skriver, at $X \sim B(n,p)$. $X$ er defineret som den stokastiske variabel med fordelingsfunktion
+\begin{align*}
+P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}.
+\end{align*}
+\end{defn}
+Argumentet går som i Eksempel \ref{exa:exa1}. Sandsynligheden for $k$ successer i de $k$ første eksperimenter er
+\begin{align*}
+ \underbrace{p\cdot p \cdots p}_{k\textnormal{ gange}}\cdot \underbrace{(1-p)\cdot (1-p)\cdots (1-p)}_{n-k\textnormal{ gange}}=p^k(1-p)^{n-k}.
+\end{align*}
+Antallet af måder, vi kan flytte rundt på de $k$ successer er $\binom{n}{k}$. Derfor fås sandsynligheden for nøjagtigt $k$ successer i $n$ forsøg som 
+\begin{align*}
+P(X=k) = \binom{n}{k}p^k(1-p)^{n-k}.
+\end{align*}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Bestem en passende stokastisk variabel for udfaldet af to terningekast og bestem sandsynligheden for hvert udfald af variablen. 
+\item Bestem en passende stokastisk variabel for udfaldet af tre kast med en mønt og bestem sandsynlighederne for hvert udfald af variablen. 
+\item Slå op på en tilfældig side i en bog på 400 sider. Bestem en stokastisk variabel, der beskriver udfaldet af dette eksperiment og bestem sandsynligheden for hvert udfald. 
+\item Bestem en stokastisk variabel, der beskriver udfaldene af antal af døtre i en søskendeflok på tre og bestem sandsynligheden for hvert udfald. 
+\end{enumerate}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynlighedsparametren for den Bernoulli-stokastiske variabel, der beskriver et møntkast
+\item Hvad er sandsynlighedsparametren for den Bernoulli-stokastiske variabel, der beskriver et slag på mere end 2 med en terning.
+\end{enumerate}
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at slå nøjagtigt fem seksere på seks slag med en terning?
+\item Hvad er sandsynligheden for at få mindst 3 seksere?
+\item Hvad er sandsynligheden for at få mindre en 4 nøjagtigt 2 gange?
+\end{enumerate}
+\section*{Opgave 4}
+Et præparat bruges til en bestemt behandling, og gives til 10 personer. Sandsynligheden for helbredelse er 20$\%$. 
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for, at to personer helbredes?
+\item Hvad er sandsynligheden for, at alle personer helbredes?
+\item Hvad er sandsynligheden for, at mindst 4 helbredes? 
+\end{enumerate}

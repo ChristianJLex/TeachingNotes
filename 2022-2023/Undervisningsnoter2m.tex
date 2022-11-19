@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Modul 18
+Modul 23
 }
-\chead{ 4. november 2022
+\chead{ 21. november 2022
 }
 
 \begin{document}
@@ -31,105 +31,74 @@ Modul 18
 
 \begin{center}
 \Huge
-Mere sandsynlighed
+Opgaver i konfidensintervaller og binomialtest
 \end{center}
-\section*{Symmetrisk sandsynlighedsfordeling}
-\stepcounter{section}
 
-Vi brugte sidste gang følgende sætning op til flere gange i de tilfælde, hvor vi havde et symmetrisk sandsynlighedsfelt.
-\begin{setn}\label{setn:udfald}
-Hvis vores udfaldsrum er endeligt og har symmetrisk fordeling, så gælder der for en hændelse $A$, at
-\begin{align*}
-P(A) = \frac{\# \textit{gunstige udfald}}{\#  \textit{mulige udfald}}.
-\end{align*}
-\end{setn}
-\begin{exa}
-Vi skal bestemme sandsynligheden for at slå et primtal, hvis vi slår med to terninger.
-Vi bruger Sætning \ref{setn:udfald}, og skal altså afgøre, hvilke udfald, der er gunstige. Det er udfaldene 2, 3, 5, 7 og 11. Der er $6\cdot 6$ mulige udfald for at slå med to terninger. Vi mangler kun kun at bestemme antallet af måder, vi kan slå hvert primtal. 
-\begin{itemize}
-\item Vi kan slå en toer ved at slå (1,1).
-\item Vi kan slå en treer ved at slå (1,2) og (2,1).
-\item Vi kan slå en femmer ved at slå (1,4), (4,1), (2,3) og (3,2).
-\item Vi kan slå en syver ved at slå (1,6), (6,1), (2,5), (5,2), (4,3) og (3,4).
-\item Vi kan slå en ellever ved at slå (6,5) og (5,6).
-\end{itemize}
-Lægger vi alle disse lige sandsynlige udfald sammen, så får vi 15 gunstige udfald. Sandsynligheden for at slå et primtal med to terninger er derfor 
-\begin{align*}
-P(\textit{primtal}) = \frac{15}{36}.
-\end{align*}
-\end{exa}
-\begin{exa}
-
-Vi skal bestemme sandsynligheden for at to personer i klassen deler fødselsdag. I klassen er der 30 elever. Det vil vise sig, at det er lettere at bestemme sandsynligheden for at ingen personer deler fødselsdag. Vi antager, at alle dage er lige sandsynlige som fødselsdag (og ser derfor bort fra d. 29 februar og sæsonvise afvigelser), og bestemmer antallet af gunstige udfald. For den første persons fødselsdag har vi derfor 365 valg, den næste 364, så 363 osv. Antallet af gunstige udfald er derfor af multiplikationsprincippet
-\begin{align*}
-365\cdot 364\cdot 363 \cdots 336.
-\end{align*}
-Antallet af mulige udfald for fødselsdage er $365^{30}$. Derfor er sandsynligheden for at ingen personer deler fødselsdag givet ved
-\begin{align*}
-P(\textit{ingen deler fødselsdag}) = \frac{365\cdot 364 \cdots 336}{365^{30}} \approx 0.3
-\end{align*}
-Det vil derfor sige, at sandsynligheden for, at mindst to deler fødselsdag er 
-\begin{align*}
-P(\textit{mindst to deler fødselsdag}) \approx 1-0.3 = 0.7.
-\end{align*}
-Altså er der omtrent $70\%$ sandsynlighed for at to i klassen deler fødselsdag. 
-\end{exa}
 
 \section*{Opgave 1}
-Du spiller et spil med en ven. Du slår med en 20-sidet terning. Hvis du slår 16 eller over, så vinder du. Hvis du slår 12 eller under, så vinder din ven. Ellers vinder ingen.
 \begin{enumerate}[label=\roman*)]
-	\item Hvad er sandsynligheden for, at du ikke vinder?
-	\item Hvad er sandsynligheden for, at din ven ikke vinder?
+\item En producent af et lægemiddel påstår, at $12\%$ af anvendelserne af lægemiddelet er succesfulde. Ud af 100 personer bliver kun 5 helbredt. Vores nulhypotese er, at producenten taler sandt. Med et signifikansniveau på $5\%$, vil vi så forkaste nulhypotesen? Hvad er den kritiske mængde for forsøget?
+\item Til seneste valg spurgte vi 300 personer om, hvad de stemte. 30 stemte på liste Q. Vi har nu spurgt 300 nye personer og denne gang har partiet fået 25 stemmer. Er det rimeligt at antage, at partiets vælgertilslutning er faldet? Hvis vores nulhypotese er, at tilslutningen ikke er faldet, kan vi så med et signifikansniveau på $5\%$ forkaste denne nulhypotese? Bestem desuden den kritiske mængde
+\item En mand finder 3 sten i sit glas med oliven og synes, at det er lidt for mange. Han kigger på glasset, og der er det lovet, at glasset er $99\%$ stenfri. I glasset er der 70 oliven. Har han grund til sin skepsis? Opstil nulhypotese og se, om den kan forkastes med et signifikansniveau på $5\%$. Bestem desuden den kritiske mængde. 
+\item Vi kaster med en mønt, og vil se, om plat og krone er lige sandsynlige. Vi slår 150 gange og får plat 72 gange. Nulhypotesen er $H_0$: Plat og krone er lige sandsynlige. Bestem med et signifikansniveau på $5\%$ om vi vil forkaste nulhypotesen. Bestem desuden den kritiske mængde. 
 \end{enumerate}
 
 \section*{Opgave 2}
-Du slår plat og krone tre gange, og noterer dit resultat.
+En butik har et klientel, der består af $30\%$ mænd. 
 \begin{enumerate}[label=\roman*)]
-	\item Hvad er sandsynligheden for, at du får plat alle tre gange?
-	\item Hvad er sandsynligheden for at få plat mindst én gang?
-	\item Hvad er sandsynligheden for at få krone præcis to gange?
-	\item Hvad er sandsynligheden for slet ikke at få plat?
+\item Opstil en binomialmodel, der beskriver antallet af mænd i en stikprøve på $50$ personer.
+\item Hvad er sandsynligheden for, at 12 af personerne i stikprøven er mænd?
+\item En dag havde butikken $220$ kunder. 79 af disse var mænd. Opstil en nulhypotese, der beskriver undersøgelsen, og brug en binomialtest med et signifikansniveau på $5\%$ til at undersøge nulhypotesen. 
 \end{enumerate}
 
 \section*{Opgave 3}
-Du slår med en terning to gange og lægger antallet af øjne sammen. 
+En sjusket producent af chokoladejulekalendre sælger en julekalender med lys chokolade og en julekalender med mørk chokolade. Han holder ikke styr på hvor meget han sælger af hver, og han ved derfor
+ikke, hvor meget han skal købe af forskellige ingredienser. Sidste år var andelen af solgte chokoladekalendre med lys chokolade 71.2$\%$. 
+
+Han laver en stikprøve af solgte chokoladekalendre og opdager, at 351 ud af 522 chokoladekalendre er med lys chokolade.
 \begin{enumerate}[label=\roman*)]
-	\item Hvad er sandsynligheden for at slå 2?
-	\item Hvad er sandsynligheden for at slå 7?
-	\item Hvad er sandsynligheden for at slå 6 eller mindre?
-	\item Hvad er sandsynligheden for at slå 10 eller over?
+	\item Bestem et $95\%$-konfidensinterval for andelen af chokoladekalendre med lys chokolade ud fra stikprøven.
+	\item Brug konfidensintervallet til at afgøre, om andelen af chokoladekalendre med lys chokolade har ændret sig signifikant. 
 \end{enumerate}
 
+
 \section*{Opgave 4}
+Laver vi krydsninger med en bestemt type røde og violette blomster siger Mendels love, at $75\%$ af blomsterne vil være røde og $75\%$ af blomsterne vil være hvide. I et krydsningsforsøg har vi 705 violette blomster og 224 hvide blomster. 
 \begin{enumerate}[label=\roman*)]
-\item En nummerplade består af to bogstaver og 5 tal. Hvor mange forskellige nummerplader findes der? Hvis nummerplader blev uddelt med symmetrisk fordeling, hvad er så sandsynligheden for at få en nummerplade, der har dine initialer?
-\item Hvis tre personer i klassen skal vælges til at gøre rent, hvad er så sandsynligheden for, at det bliver dig og de to, der sidder ved siden af dig?
-\item Hvad er sandsynligheden for, at mindst en i klassen deler din fødselsdato?
+\item Opstil en nulhypotese, der kan benyttes til at afgøre, om blomsternes farve følger Mendels love
+\item Bestem de forventede antal violette og hvide blomster, hvis nulhypotesen er sand
+\item Benyt binomialtest for at afgøre, om vi skal forkaste nulhypotesen. Signifikansniveauet er som altid $5\%$.
+\item Hvad er den kritiske mængde for dette eksperiment?
 \end{enumerate}
+
 \section*{Opgave 5}
-I Netflix-serien \textit{Squid Game} skal 16 deltagere krydse to broer bestående af hver $18$ glaspaneler i det femte spil. De kan springe frem og tilbage mellem de to broer, men hver gang de træder frem til næste glaspanel, vil kun en af de to broers glaspanel kunne bære dem. Når de har passeret de 18 paneler, har de krydset broen og er i sikkerhed.
+I en skov er fordelingen af løvtræer og nåletræer fordelt omtrent ligeligt. En gruppe biologistuderende antager, at spættearten \textit{den store flagspætte} er ligeglad med, om den laver bo i et udgået løvtræ eller et udgået nåletræ. I skoven finder de 201 spætteboer i nåletræer og 167 i løvtræer. 
 \begin{enumerate}[label=\roman*)]
-\item Hvad er sandsynligheden for at den første person overlever?
-\item Hvor mange personer skal der i gennemsnit bruges for at krydse broerne? 
-\item Hvor mange personer vil der i gennemsnit være tilbage, når de har krydset broerne?
+\item Bestem et $95\%$-konfidensinterval for andelen af spætteboer i nåletræer.
+\item Brug konfidensintervallet til at afgøre, om de biologistuderende har ret i deres antagelse.
+
 \end{enumerate}
 
 \section*{Opgave 6}
-Du er med i game-showet \textit{Let's Make a Deal}. I dette gameshow beder showets vært, Monty Hall, dig om at vælge en dør blandt tre døre. Bag to af dørene står en ged, og bag den sidste dør står en ny bil. Lad os for spillets skyld antage, at du godt vil vinde en bil, og ikke en ged. Du vinder den genstand, der står bag din valgte dør. 
+Meyer er et terningespil, hvor hver spiller skiftes til at slå med to terninger. Det bedste slag er Meyer, der er en toer og en etter. Du spiller Meyer med en gruppe af dine venner, og du synes, at en af dem får Meyer lidt for ofte. Du tæller, at han ud af 93 slag har fået Meyer 11 gange.
 \begin{enumerate}[label=\roman*)]
-\item Hvad er sandsynligheden for at vinde en bil?
+\item Hvad er sandsynligheden for at slå Meyer med to terninger?
+\item Hvilken fordeling vil du forvente, at antallet af Meyere i 93 slag vil følge? Hvad er parametrene for fordelingen?
+\item Opstil en nulhypotese, der undersøger din formodning.
+\item Undersøg din nulhypotese med en passende test. 
+\item Du spiller med 10 venner. Kan du med et signifikansniveau på $5\%$ sige, at ingen af disse bør få 11 eller flere gange Meyer?
 \end{enumerate}
-Efter, at du har valgt en dør, åbner Monty en dør, hvor der står en ged bag. Du får nu valget mellem at blive på din valgte dør eller skifte mening.
-\begin{enumerate}[label=\roman*)]
-\stepcounter{enumi}
-\item Afgør, om du skal skifte mening eller blive stående for at maksimere sandsynligheden for, at du får en bil.
-\item Hvad er sandsynligheden for at vinde en bil, hvis du skifter dør?
-\item Hvad er sandsynligheden for at vinde en bil, hvis du ikke skifter dør?
-\end{enumerate}
+
 \section*{Opgave 7}
-I poker får hver spiller uddelt en hånd på 5 kort (eller 7 kort). 
+En medicinalvirksomhed med dårlig moral tester et nyt præparat op mod placebo. De giver $500$ personer placebo, og det viser sig, at $15\%$ af disse personer opnår fremgang i henseende A. De tester nu deres nye præparat på en tilsvarende gruppe af $500$ personer, og oplever, at $90$ personer opnår fremgang i henseende $A$. 
 \begin{enumerate}[label=\roman*)]
-\item Hvor mange forskellige hænder er der i poker?
-\item Hvis du har fem kort med samme kulør, så har du en flush. På hvor mange forskellige måder kan du få flush? Hvad er sandsynligheden for flush så?
+\item Hvis præparatet hverken er bedre eller værre end placebo, hvor mange forventer vi så at helbrede?
+\item Under nulhypotesen, at præparatet ikke er bedre end placebo, test så med binomialtest om denne nulhypotese kan forkastes med et signifikansniveau på $5\%$.
 \end{enumerate}
+I virksomheden har de glemt at slette deres indbyrdes sms'er, og det kommer frem, at virksomheden udover at teste for henseende A også har testet for forbedring inden for 26 andre henseender uden at kunne se en effekt. Det kaldes en type I fejl at forkaste en sand nulhypotese, og med et signifikansniveau på $5\%$ er sandsynligheden for at lave en type I fejl generelt mindre end $5\%$. 
+\begin{enumerate}[label=\roman*)]
+\setcounter{enumi}{2}
+\item Hvad er sandsynligheden for at lave en type I fejl, hvis man tester for forbedring i 27 forskellige henseender op mod placebo hver med et signifikansniveau på $5\%$?
+\end{enumerate}
+
 \end{document}

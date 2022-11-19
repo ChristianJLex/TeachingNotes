@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  1 NOV 2022 15:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  17 NOV 2022 09:35
 entering extended mode
 **./Undervisningsnoter3e.tex
 (Undervisningsnoter3e.tex
@@ -1575,34 +1575,32 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
 LaTeX Info: Redefining \nameref on input line 21.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+<Billeder/opg1.jpg, id=6, 811.53188pt x 244.66406pt>
+File: Billeder/opg1.jpg Graphic file (type jpg)
+<use Billeder/opg1.jpg>
+Package pdftex.def Info: Billeder/opg1.jpg  used on input line 42.
+(pdftex.def)             Requested size: 293.41432pt x 88.45978pt.
+<Billeder/opg2.jpg, id=7, 788.9475pt x 252.19218pt>
+File: Billeder/opg2.jpg Graphic file (type jpg)
+<use Billeder/opg2.jpg>
+Package pdftex.def Info: Billeder/opg2.jpg  used on input line 44.
+(pdftex.def)             Requested size: 293.41432pt x 93.79065pt.
+<Billeder/opg3.jpg, id=8, 1005.00468pt x 365.86688pt>
+File: Billeder/opg3.jpg Graphic file (type jpg)
+<use Billeder/opg3.jpg>
+Package pdftex.def Info: Billeder/opg3.jpg  used on input line 46.
+(pdftex.def)             Requested size: 293.41432pt x 106.81325pt.
+<Billeder/opg4.jpg, id=9, 660.21657pt x 289.08pt>
+File: Billeder/opg4.jpg Graphic file (type jpg)
+<use Billeder/opg4.jpg>
+Package pdftex.def Info: Billeder/opg4.jpg  used on input line 48.
+(pdftex.def)             Requested size: 293.41432pt x 128.47478pt.
+<Billeder/opg5.jpg, id=10, 962.84718pt x 481.04718pt>
+File: Billeder/opg5.jpg Graphic file (type jpg)
+<use Billeder/opg5.jpg>
+Package pdftex.def Info: Billeder/opg5.jpg  used on input line 50.
+(pdftex.def)             Requested size: 293.41432pt x 146.59071pt.
 
-
-(C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
-d
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
-
-
-(C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
-d
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 43
-.
-
-(C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
-fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-43.
-
-(C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.
-fd
-File: uesvect.fd 
-)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1613,7 +1611,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{C:/Users/NRGY-chri88mh/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
-]
+ <./Billeder/opg1.jpg> <./Billeder/opg2.jpg> <./Billeder/opg3.jpg> <./Billeder/
+opg4.jpg>]
+<Billeder/opg6.jpg, id=22, 809.27344pt x 347.79938pt>
+File: Billeder/opg6.jpg Graphic file (type jpg)
+<use Billeder/opg6.jpg>
+Package pdftex.def Info: Billeder/opg6.jpg  used on input line 52.
+(pdftex.def)             Requested size: 293.41432pt x 126.09924pt.
+<Billeder/opg7.jpg, id=23, 950.04938pt x 353.82187pt>
+File: Billeder/opg7.jpg Graphic file (type jpg)
+<use Billeder/opg7.jpg>
+Package pdftex.def Info: Billeder/opg7.jpg  used on input line 54.
+(pdftex.def)             Requested size: 293.41432pt x 109.27333pt.
+<Billeder/opg8.jpg, id=24, 960.58875pt x 252.945pt>
+File: Billeder/opg8.jpg Graphic file (type jpg)
+<use Billeder/opg8.jpg>
+Package pdftex.def Info: Billeder/opg8.jpg  used on input line 56.
+(pdftex.def)             Requested size: 293.41432pt x 77.26196pt.
+<Billeder/opg9.jpg, id=25, 870.25125pt x 176.15813pt>
+File: Billeder/opg9.jpg Graphic file (type jpg)
+<use Billeder/opg9.jpg>
+Package pdftex.def Info: Billeder/opg9.jpg  used on input line 58.
+(pdftex.def)             Requested size: 293.41432pt x 59.393pt.
+<Billeder/opg1m.jpg, id=26, 903.375pt x 277.78781pt>
+File: Billeder/opg1m.jpg Graphic file (type jpg)
+<use Billeder/opg1m.jpg>
+Package pdftex.def Info: Billeder/opg1m.jpg  used on input line 63.
+(pdftex.def)             Requested size: 293.41432pt x 90.22485pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1622,7 +1647,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2]
+[2 <./Billeder/opg5.jpg> <./Billeder/opg6.jpg> <./Billeder/opg7.jpg> <./Billede
+r/opg8.jpg> <./Billeder/opg9.jpg>]
+<Billeder/opg2m.jpg, id=32, 675.27281pt x 322.95656pt>
+File: Billeder/opg2m.jpg Graphic file (type jpg)
+<use Billeder/opg2m.jpg>
+Package pdftex.def Info: Billeder/opg2m.jpg  used on input line 65.
+(pdftex.def)             Requested size: 293.41432pt x 140.3322pt.
+<Billeder/opg3m.jpg, id=33, 962.84718pt x 411.78844pt>
+File: Billeder/opg3m.jpg Graphic file (type jpg)
+<use Billeder/opg3m.jpg>
+Package pdftex.def Info: Billeder/opg3m.jpg  used on input line 67.
+(pdftex.def)             Requested size: 293.41432pt x 125.48532pt.
+<Billeder/opg4m.jpg, id=34, 941.76843pt x 415.5525pt>
+File: Billeder/opg4m.jpg Graphic file (type jpg)
+<use Billeder/opg4m.jpg>
+Package pdftex.def Info: Billeder/opg4m.jpg  used on input line 69.
+(pdftex.def)             Requested size: 293.41432pt x 129.4667pt.
+<Billeder/opg5m.jpg, id=35, 959.08313pt x 300.3722pt>
+File: Billeder/opg5m.jpg Graphic file (type jpg)
+<use Billeder/opg5m.jpg>
+Package pdftex.def Info: Billeder/opg5m.jpg  used on input line 71.
+(pdftex.def)             Requested size: 293.41432pt x 91.89067pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1631,16 +1678,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[4] 
+[3 <./Billeder/opg1m.jpg> <./Billeder/opg2m.jpg> <./Billeder/opg3m.jpg> <./Bill
+eder/opg4m.jpg>]
+<Billeder/opg6m.jpg, id=42, 963.6pt x 431.36156pt>
+File: Billeder/opg6m.jpg Graphic file (type jpg)
+<use Billeder/opg6m.jpg>
+Package pdftex.def Info: Billeder/opg6m.jpg  used on input line 73.
+(pdftex.def)             Requested size: 293.41432pt x 131.34457pt.
+<Billeder/opg7m.jpg, id=43, 786.68906pt x 347.04657pt>
+File: Billeder/opg7m.jpg Graphic file (type jpg)
+<use Billeder/opg7m.jpg>
+Package pdftex.def Info: Billeder/opg7m.jpg  used on input line 75.
+(pdftex.def)             Requested size: 293.41432pt x 129.44313pt.
+<Billeder/opg8m.jpg, id=44, 785.18344pt x 509.65407pt>
+File: Billeder/opg8m.jpg Graphic file (type jpg)
+<use Billeder/opg8m.jpg>
+Package pdftex.def Info: Billeder/opg8m.jpg  used on input line 77.
+(pdftex.def)             Requested size: 293.41432pt x 190.451pt.
+ 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1650,38 +1705,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[5] (Undervisningsnoter3e.aux)
+[4 <./Billeder/opg5m.jpg> <./Billeder/opg6m.jpg> <./Billeder/opg7m.jpg> <./Bill
+eder/opg8m.jpg>] (Undervisningsnoter3e.aux)
 Package logreq Info: Writing requests to 'Undervisningsnoter3e.run.xml'.
 \openout1 = `Undervisningsnoter3e.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45778 strings out of 478907
- 1016996 string characters out of 2848099
- 1837290 words of memory out of 3000000
- 62909 multiletter control sequences out of 15000+600000
- 410383 words of font info for 56 fonts, out of 8000000 for 9000
+ 45796 strings out of 478907
+ 1017728 string characters out of 2848099
+ 1827216 words of memory out of 3000000
+ 62959 multiletter control sequences out of 15000+600000
+ 404633 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,16n,86p,773b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,12n,86p,773b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmex10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/
-NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
-2.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
-NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmti12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/NRGY-chri88mh/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Undervisningsnoter3e.pdf (5 pages, 155585 bytes).
+type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on Undervisningsnoter3e.pdf (4 pages, 1063334 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 

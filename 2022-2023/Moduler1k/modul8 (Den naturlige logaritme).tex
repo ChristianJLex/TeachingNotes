@@ -1,0 +1,86 @@
+\begin{center}
+\Huge
+Den naturlige logaritme
+\end{center}
+
+\section*{Bevis for regneregler for titalslogaritmen}
+\stepcounter{section}
+Vi så sidste gang følgende regneregler for titalslogaritmen. Vi vil her give et bevis.
+\begin{setn}[Logaritmeregneregler]
+	For $a,b>0$ gælder der, at
+	\begin{enumerate}[label=\roman*)]
+		\item $\log(a\cdot b) = \log(a)+ \log(b)$,
+		\item $\log\left(\frac{a}{b}\right) = \log(a)-\log(b)$,
+		\item $\log(a^x) = x\log(a).$
+	\end{enumerate}		
+\end{setn}
+\begin{proof}
+	Vi vil løbende udnytte, at $\log(10^a) = a$ og $10^{\log(a)} = a$. Vi betragter udtrykkene.
+	\\
+	i)
+	\begin{align*}
+		\log(a\cdot b) &= \log(10^{\log(a)}10^{\log(b)}) \\
+		&= \log(10^{\log(a)+\log(b)})\\
+		&\log(a) + \log(b).
+	\end{align*}
+	ii)
+	\begin{align*}
+		\log\left(\frac{a}{b}\right) &= \log\left(\frac{10^a}{10^b}\right)\\
+		&= \log(10^{\log(a)-\log(b)})\\
+		&= \log(a)-\log(b).
+	\end{align*}
+	iii)
+	\begin{align*}
+		\log(a^x) &= \log\left( \left(10^{\log(a)}\right)^x\right)\\
+		&= \log\left(10^{\log(a)x}\right)\\
+		&= x\log(a),
+    \end{align*}		
+    og vi er færdige med beviset. 
+\end{proof}
+\section*{Den naturlige logaritme}
+\stepcounter{section}
+\begin{defn}
+Den naturlige logaritme er den entydige funktion $\ln$, der opfylder, at
+\begin{align*}
+\ln(e^x) = x, 
+\end{align*}
+og
+\begin{align*}
+e^{\ln(x)} = x,
+\end{align*}
+hvor $e$ er Euler's tal. ($e \approx 2.7182$)
+\end{defn}
+Funktionen $e^x$ kaldes for den naturlige eksponentialfunktion, og vi vil senere beskrive den nærmere.
+
+\begin{setn}[Regneregler for $\ln$]
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, at
+\begin{enumerate}[label=\roman*)]
+\item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
+\item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
+\item $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+\end{setn}
+
+
+
+\section*{Opgave 1}
+Løs følgende ligninger
+\begin{align*}
+&1) \ \ln(x)=1   &&2) \ \ln(x)=e    \\
+&3) \ \ln(3x+7) = 3   &&4) \  \ln(x^2) = e^4   \\
+\end{align*}
+\section*{Opgave 2}
+Bestem følgende:
+\begin{align*}
+&1) \  \ln(e)  &&2) \  \ln(e^3)    \\
+&3) \  \ln(\sqrt{e})  &&4) \ \ln(\sqrt[5]{e^4})      \\
+\end{align*}
+
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+(Vink: Brug beviset for regnereglerne for titalslogaritmen som skabelon.)

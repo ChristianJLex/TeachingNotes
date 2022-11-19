@@ -10,10 +10,10 @@
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
 
 %Husk at rette modul og dato!
-\lhead{Matematik B\\
-Modul 2
+\lhead{Matematik A\\
+Modul 6
 }
-\chead{ 4. november 2022
+\chead{ 23. november 2022
 }
 
 \begin{document}
@@ -29,82 +29,123 @@ Modul 2
 %\section*{Opgave 1}
 %\stepcounter{section}
 
-
-
 \begin{center}
 \Huge
-Brøker
+Nyt forløb: Vækst!
 \end{center}
 
-\section*{Brøkregneregler}
+\section*{Procentregning}
 \stepcounter{section}
 
-Vi skal i dag arbejde med brøkregneregler.
-\begin{enumerate}[label=\roman*)]
-\item Addition og subtraktion af brøker. For to brøker $\frac{a}{b}$ og $\frac{c}{d}$ er summen og differensen givet ved
+Procentregning handler om forhold mellem tal. Hvis vi eksempelvis vil bestemme hvor stor en del af en klasse, der er højere en $180cm$, så udregner vi forholdet 
 \begin{align*}
-\frac{a}{b} \pm \frac{c}{d} = \frac{ad\pm cb}{bd}.
+	\frac{\textnormal{Antal personer højere end }180cm}{\textnormal{Det samlede antal personer}}.
 \end{align*}
-\item Multiplikation af brøker. Produktet mellem $\frac{a}{b}$ og $\frac{c}{d}$ er givet ved
+ Hvis vi vil have det i procent, så ganger vi med $100$ (da procent betyder pr. hundrede), og får
 \begin{align*}
-\frac{a}{b}\cdot \frac{c}{d} = \frac{ac}{bd}.
+\frac{\textnormal{Antal personer højere end }180cm}{\textnormal{Det samlede antal personer}}\cdot 100.
 \end{align*}
-Specielt er produktet mellem en brøk $\frac{a}{b}$ og et tal $c$ givet ved
+Lad os sige, at 6 personer i 1.k er højere end $180cm$. Inklusiv undertegnede er vi i alt $27$ personer. Det vil altså sige, at procentdelen af personer i 1.k, der er højere end 180cm er 
 \begin{align*}
-c\cdot \frac{a}{b} = \frac{ca}{b}.
+\frac{6}{26}\cdot 100 = 23.08\%.
 \end{align*}
-\item Division af brøker. Forholdet mellem to brøker $\frac{a}{b}$ og $\frac{c}{d}$ er givet ved
+\section*{Procentregneregler}
+\stepcounter{section}
+Vi har følgende procentregneregler
+\begin{regel}[Procentregneregel 1]
+Skal vi bestemme $p\ \%$ af en størrelse $S$, så bestemmes den ved 
 \begin{align*}
-\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}.
-\end{align*}
-(Vi ganger med den omvendte brøk.) Specielt er en brøk $\frac{a}{b}$ divideret med et tal $c$ givet ved
-\begin{align*}
-\frac{\frac{a}{b}}{c} = \frac{a}{bc},
-\end{align*}
-og et tal $c$ divideret med en brøk $\frac{a}{b}$ givet ved
-\begin{align*}
-\frac{c}{\frac{a}{b}} = \frac{ac}{b}
-\end{align*}
-\item Brøker og potenser/rødder. En brøk $\frac{a}{b}$ opløftet i et tal $c$ er givet ved 
-\begin{align*}
-\left(\frac{a}{b}\right)^{c} = \frac{a^c}{b^c}.
-\end{align*}
-$n$'te roden af en brøk $\frac{a}{b}$ er givet ved 
-\begin{align*}
-\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}.
-\end{align*}
-\end{enumerate}
+\frac{p}{100}\cdot S.
+\end{align*} 
+\end{regel}
 \begin{exa}
-Lad os se på et eksempel, hvor vi anvender nogle af disse regler:
+Vi skal bestemme $p=10\%$ af $S=200$. Vi bruger Procentregneregel 1 og bestemmer
 \begin{align*}
-\frac{\frac{2}{5}+\frac{5}{7}}{\frac{10}{3}} \overset{\textnormal{i)}}{=} \frac{\frac{14+25}{35}}{\frac{10}{3}} = \frac{\frac{39}{35}}{\frac{10}{3}} \overset{\textnormal{iii)}}{=} \frac{39\cdot 3}{35 \cdot 10} = \frac{117}{350}.
+\frac{10}{100}\cdot 200 = 20. 
+\end{align*} 
+Normalt vil vi omskrive brøken $10/100$ til $0.1$, så regnestykket lyder
+\begin{align*}
+0.1\cdot 200 = 20.
+\end{align*} 
+\end{exa}
+\begin{regel}[Procentregneregel 2]
+Vi bestemmer den procentvise andel en størrelse $S$ udgør af en størrelse $T$ ved 
+\begin{align*}
+\frac{S}{T}\cdot 100
+\end{align*}
+\end{regel}
+\begin{regel}[Procentregneregel 3]
+Vi øger en størrelse $S$ med $p$ procent ved at bestemme
+\begin{align*}
+S\cdot(1+\frac{p}{100}). 
+\end{align*}
+$(1+\frac{p}{100})$ er det, der kaldes fremskrivningsfaktoren. 
+Tilsvarende mindsker vi en størrelse $S$ med $p$ procent ved at bestemme
+\begin{align*}
+S \cdot (1-\frac{p}{100}).
+\end{align*}
+\end{regel}
+\begin{exa}
+Vi skal øge 130 med $15 \%$. Vi bestemmer derfor 
+\begin{align*}
+130 (1+\frac{15}{100}) = 130\cdot 1.15 = 149.5.
+\end{align*}
+Vi skal mindske $149.5$ med $15 \%$. Vi bestemmer
+\begin{align*}
+149.5(1-\frac{15}{100}) = 149.5\cdot 0.85 = 127.075.
 \end{align*}
 \end{exa}
+Det er klart nemmest altid at bruge fremskrivningsfaktoren, når vi skal øge med en bestemt procentdel. 
 
+\begin{regel}[Procentregneregel 4]
+Hvis vi skal bestemme den procentvise ændring af en størrelse $S$ til en størrelse $T$, så beregnes dette 
+\begin{align*}
+\frac{T-S}{S}\cdot 100.
+\end{align*}
+\end{regel}
+\begin{exa}
+Prisen på 1000 liter fyringsolie var d. 24 august 2021 $9318.5$ kr. D. 24 november koster 1000 liter fyringsolie $10328.5$ kr. Vi bestemmer den procentvise ændring
+\begin{align*}
+\frac{10328.5-9318,5}{9318.5}\cdot 100 = 10.83\%. 
+\end{align*}
+\end{exa}
 \section*{Opgave 1}
-Udregn følgende brøker (forkort så meget som muligt). Brug Maple til at tjekke jeres svar
-\begin{align*}
-	&1)\  \frac{6}{7} + \frac{3}{1}            &&2)\ \frac{7}{22} + \frac{9}{10}\\
- 	&3)\ \frac{4}{5} + \frac{3}{2}      &&4)\ \frac{1}{2} - \frac{3}{4}\\
- 	&5)\  2\frac{2}{3} + \frac{7+4}{2}              &&6)\ \frac{4}{\frac{5}{7}}\\
- 	&7)\  \frac{\frac{2}{3}}{6} - 2           &&8)\ \frac{-7+\frac{2}{6}}{8} + \frac{9}{5}\\
-	&9)\ \frac{\frac{4}{3}}{\frac{2}{3}} &&10)\ \frac{\frac{10}{3}-\frac{2}{4}}{\frac{4}{3}+\frac{5}{3}} \\
-	&11)\  \frac{\frac{1}{2}-\frac{7}{10}}{\frac{2}{5}+\frac{11}{3}} -  \frac{\frac{22}{3}+ \frac{-23}{6}}{\frac{1}{2}}        &&12)\ \sqrt{\frac{16}{25}} + \left(\frac{3}{2+4}\right)^2\\
-	&13)\ \sqrt{\frac{\frac{100}{36}}{\frac{25}{49}}} && 14) \   \left(\frac{\sqrt{\frac{5}{7}}}{\sqrt{\frac{2}{9}}}\right)^2 + \sqrt[3]{\frac{\left(\frac{2+5}{3+11}\right)^3}{\left( \frac{5}{7-6}\right)^3}}
-\end{align*}
-
+\begin{enumerate}[label=\roman*)]
+\item Bestem $10\%$, $50\%$ og $150\%$ af $300$.
+\item Bestem $93\%$, $107\%$ og $1.2\%$ af 45.
+\item Hvor mange procent er $7$, $11.5$ og $13$ af $100$?
+\item Hvor stor en procentdel er $500$ af $100000$?
+\item Øg 50 med $80\%$. 
+\item Øg 20 med $12,5\%$.
+\item Gør 166 65$\%$ mindre
+\item Gør 10005 99$\%$ mindre.
+\end{enumerate}
 \section*{Opgave 2}
-Udregn følgende brøker og forkort så meget som muligt. 
-\begin{align*}
-	&1) \ \frac{ab}{a}   &2) \  \frac{a+b}{b} + \frac{a-c}{a}    \\
-	&3) \ \frac{(a+b)b-ab}{b}   &4) \  \left(\frac{a}{b}\right)^2 - \frac{a^3}{b^3}   \\
-\end{align*}
+\begin{enumerate}[label=\roman*)]
+\item Der er udsalg, og priserne på en bestemt trøje er gået fra 300kr til $170$kr. Hvad er det procentvise fald i prisen?
+\item En mand er gået op i vægt. Han vejede tidligere for et år siden $92$kg og vejer nu $165$kg. Hvor stor er hans procentvise stigning i vægt?
+\item  To huse er  hhv. 5 og 6 meter høje. Hvor stor procentvis forskel er der på deres højder? (Både det lille hus i forhold til det store, og det store i forhold til det lille.)
+\end{enumerate}
 
 \section*{Opgave 3}
-Løs følgende ligninger.
-\begin{align*}
-	&1) \ \frac{x}{9} = \frac{4}{x}   &&2) \ \frac{x}{4+\frac{2}{5}} = 2     \\
-	&3) \ \sqrt{\frac{x}{4}} = \frac{\frac{2}{5}+\frac{16}{10}}{\frac{1}{2}}    &&4) \ \frac{\frac{1}{4}}{\frac{1}{8}} + \frac{x+\frac{4}{2}x}{2} = \frac{7}{\frac{1}{2}}    \\
-\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Du sætter 9500kr ind på en investeringskonto, der lover et årligt afkast på 10$\%$. Hvor meget forventer du,
+	 at der er på kontoen efter et år? Hvad med to år? Hvad med 10 år?
+	\item Hvor stor en procentvis stigning vil du have opnået efter 6 år, hvis du sætter et vilkårligt beløb ind til at
+	starte med?
+	\item Efter 15 år finder du ud af, at det totale procentvise afkast efter 15 år er $300\%$. Er det mere eller mindre 
+	end hvad udbyderen af kontoen lovede?
+\end{enumerate}
+
+\section*{Opgave 4}
+Du indtager et bestemt lægemiddel, og har umiddelbart efter indtagelsen af lægemiddelet en blodkoncentration 
+	på $234.12 \mu g / l$. Hver gang der går en time, så vil koncentrationen af lægemiddelet aftage med 4.3$\%$. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er blodkoncentrationen efter en time? 
+	\item Hvad er blodkoncentrationen efter 7 timer?
+	\item Vi antager, at lægemiddelet kan betragtes som nedbrudt, når blodkoncentrationen af lægemiddelet er mindre end
+	 $1\mu g/l$. Hvornår kan lægemiddelet betragtes som nedbrudt?
+\end{enumerate}
+
 \end{document}
 
