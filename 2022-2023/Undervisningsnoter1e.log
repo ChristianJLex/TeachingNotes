@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  19 NOV 2022 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  20 NOV 2022 12:15
 entering extended mode
 **./Undervisningsnoter1e.tex
 (Undervisningsnoter1e.tex
@@ -1575,21 +1575,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
 d
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
 d
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 40
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 41
 .
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
@@ -1597,7 +1597,7 @@ fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-40.
+41.
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.
 fd
@@ -1622,7 +1622,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2] 
+[2]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[4] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1632,19 +1650,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3] (Undervisningsnoter1e.aux)
+[5] (Undervisningsnoter1e.aux)
 Package logreq Info: Writing requests to 'Undervisningsnoter1e.run.xml'.
 \openout1 = `Undervisningsnoter1e.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45781 strings out of 478907
- 1017008 string characters out of 2848099
- 1837219 words of memory out of 3000000
- 62906 multiletter control sequences out of 15000+600000
- 410036 words of font info for 55 fonts, out of 8000000 for 9000
+ 46347 strings out of 478907
+ 1032431 string characters out of 2848099
+ 1905449 words of memory out of 3000000
+ 63470 multiletter control sequences out of 15000+600000
+ 410383 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,86p,773b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,12n,86p,773b,2181s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
@@ -1653,10 +1671,12 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/N
 RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
 .pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Undervisningsnoter1e.pdf (3 pages, 94184 bytes).
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/NRGY-chri88mh/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Undervisningsnoter1e.pdf (5 pages, 137378 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
+ 120 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

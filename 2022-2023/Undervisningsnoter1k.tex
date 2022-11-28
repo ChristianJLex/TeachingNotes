@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Modul 10
+Modul 12
 }
-\chead{ 21. november 2022
+\chead{ 29. november 2022
 }
 
 \begin{document}
@@ -29,129 +29,112 @@ Modul 10
 %\section*{Opgave 1}
 %\stepcounter{section}
 
-
 \begin{center}
 \Huge
-Eksponentialfunktion gennen to punkter. 
+Eksponentiel regression
 \end{center}
-\section*{Topunktsformlen for ekspontialfunktioner}
 \stepcounter{section}
-Har vi to punkter $(x_1,y_1)$ og $(x_2,y_2)$, så kan vi finde den entydige rette linje med ligning $y = ax + b$, der skærer gennem disse punkter ved brug af topunktsformlen. Den fortæller os, at hældningskoefficienter $a$ er givet som
-\begin{align*}
-a = \frac{y_2-y_1}{x_2-x_1},
-\end{align*}
-og vi kan så finde skæringen med $y$-aksen $b$ ved
-\begin{align*}
-b = y_1 - ax_1.
-\end{align*}
-
-Vi kan tilsvarende finde en entydig eksponentialfunktion, der skærer gennem to punkter.
-Vi starter med at huske på, hvordan en eksponentialfunktion er defineret
-\begin{defn}[Eksponentialfunktion]
-	Lad $a,b>0$. Så kaldes en funktion $f$ givet ved
-	\begin{align*}
-		f(x)=b\cdot a^x
-	\end{align*}
-	for en \textit{eksponentialfunktion}. Tallet $b$ kaldes for \textit{begyndelsesværdien} og tallet $a$ kaldes for \textit{fremskrivningsfaktoren}.
-\end{defn}
-
-\begin{setn}
-Givet to punkter $(x_1,y_1)$ og $(x_2,y_2)$ er der en entydig eksponentialfunktion $f$ givet ved
+Vi husker på, at en eksponentiel funktion er en funktion på formen
 \begin{align*}
 f(x) = b\cdot a^x,
 \end{align*}
-hvis graf går gennem disse punkter. Fremskrivningsfaktoren $a$ er givet ved
+hvor $a,b>0.$ Eksponentiel vækst kan se ud på forskellige måder. Der skældnes generelt mellem to tilfælde: $a>1$ og $1>a>0$ (Hvad sker der, hvis $a=1$?). Disse to tilfælde fremgår af Fig. \ref{fig:eksp}.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis lines=middle, ticks = none,
+ymin = 0,
+xlabel = (1),
+ylabel = (2)]
+\addplot[color=blue!40,thick, domain=-3:3, samples=1000]{2*0.5^x};
+\addplot[color=red!40,thick, domain=-3:3, samples=1000]{2*1.5^x};
+\legend{$1>a>0$,$a>1$}
+\end{axis}
+\end{tikzpicture}
+\caption{Eksponentiel vækst i de to tilfælde, at $1>a>0$ og $a>1$.}
+\label{fig:eksp}
+\end{figure}
+
+\section*{Eksponentiel regression}
+
+Vi har tidligere arbejdet med lineær regression af et datasæt. Dette bruger vi, når vi forventer at datasættet kan beskrives af en sammenhæng af typen
 \begin{align*}
-a=\sqrt[(x_2-x_1)]{\frac{y_2}{y_1}}.
+	f(x) = ax+b.
 \end{align*}
-Skæringen med $y$-aksen $b$ er givet ved
+
+I tilfældet at vi antager, at datasættet kan beskrives ved en sammenhæng af typen 
 \begin{align*}
-b = \frac{y_1}{a^{x_1}}.
+	g(x) = b\cdot a^x, 
 \end{align*}
-\end{setn}
-\begin{proof}
-Vi skal bestemme en eksponentiel funktion
-\begin{align*}
-f(x) = b\cdot a^x, 
-\end{align*}
-der går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$. Vi må derfor have, at $y_1 = b\cdot a^{x_1}$ og $y_2 = b\cdot a^{x_2}$. Vi finder nu forholdet mellem $y_2$ og $y_1$ som
-\begin{align*}
-\frac{y_2}{y_1} &= \frac{b\cdot a^{x_2}}{b\cdot a^{x_1}}\\
-				&= \frac{a^{x_2}}{a^{x_1}}\\
-				&=a^{x_2-x_1}.
-\end{align*}
-Vi tager nu $x_2-x_1$'te roden på begge sider af lighedstegnet.
-\begin{align*}
-\sqrt[(x_2-x_1)]{\frac{y_2}{y_1}} = \sqrt[(x_2-x_1)]{a^{x_2-x_1}} = a,
-\end{align*}
-og vi har altså bestemt $a$, siden $a>0$. Da vi ved, at $y_1 = b\cdot a^{x_1}$, så får vi ved at dividere igennem med $a^{x_1}$, at 
-\begin{align*}
-\frac{y_1}{a^{x_1}} = \frac{b\cdot a^{x_1}}{a^{x_1}} = b, 
-\end{align*}
-og beviset er færdigt. 
-\end{proof}
-Bemærk, at vi gerne vil have, at punkterne ligger over x-aksen.
+så skal vi bruge et andet værktøj - eksponentiel regression. 
+
+
 \begin{exa}
-Vi skal bestemme den eksponentialfunktion, der går gennem $(1,2)$ og $(3,8)$. Vi bruger topunktsformlen for eksponentialfunktioner, og får
+Af Tab. \ref{tab:1} fremgår et datasæt, der beskriver sammenhængen mellem antallet af bakterier i en petriskål og tiden, der er forløbet.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c}
+		$t$ (tid i timer) & 0 & 5 & 10 & 15 & 20 & 25 & 30\\
+		\hline
+		$B$ (Antal bakterier) & 3.99 & 4.71 & 9.63 & 15.13 & 13.77 & 30.84 & 29.20
+	\end{tabular}
+	\caption{Sammenhæng mellem forløbet tid $t$ (i timer) og antal bakterier $B$ (i mia.)}
+	\label{tab:1}
+\end{table}
+
+Vi laver eksponentiel regression i Maple ved at skrive følgende.
 \begin{align*}
-a = \sqrt[3-1]{\frac{8}{2}} = \sqrt[2]{4} = 2, 
+	&\texttt{with(Gym):}\\
+	&\texttt{X:=[0,5,10,15,20,25,30]}\\
+	&\texttt{Y:=[3.99,4.71,9.63,15.13,13.77,30.84,29.20]}\\
+	&\texttt{ExpReg(X,Y)}
 \end{align*}
-og 
+
+Resultatet af regressionen kan ses af Fig. \ref{fig:regres}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Billeder/EkspReg.jpg}
+	\caption{Eksponentiel regression på datasæt.}
+	\label{fig:regres}
+\end{figure}
+Den eksponentialfunktion $B$, der bedst passer på datasættet er derfor
 \begin{align*}
-b = \frac{2}{2^{1}} = 1.
+	B(t) = 4.0417\cdot 1.0747^t
 \end{align*}
-Den eksponentialfunktion, der går gennem disse punkter er derfor 
-\begin{align*}
-f(x) = 1\cdot 2^x = 2^x.
-\end{align*}
+
 \end{exa}
 
 \section*{Opgave 1}
-Bestem de eksponentialfunktioner, der går gennem følgende par af punkter (Uden Maple)
-\begin{align*}
-&1) \ (0,3), \ (1,6)  &&2) \ (1,3), \ (3,27)      \\
-&3) \ (1,2), \  (3,8)   &&4) \  (0,4), \ (3,8)    \\
-&5) \ (1,e), \ (3,e^3)   &&6) \ (2,8),\  (4,32)       \\
-\end{align*}
 
-\section*{Opgave 2 (med Maple)}
-Vi har efter 3 år 6750kr på en konto og efter 7 år 7433kr på samme konto. Beløbet på kontoen kan beskrives ved eksponentiel vækst
+I \href{}{\color{blue!60} dette datasæt} fremgår sammenhængen mellem antallet af personer i en by (i tusinde) fra år 1900 til år 2000.
+
 \begin{enumerate}[label=\roman*)]
-	\item Bestem den eksponentialfunktion, der beskriver beløbet på kontoen efter $x$ år.
-	\item Afgør, hvornår meget der står på kontoen efter 12 år.
-	\item Hvornår står der 10.000kr på kontoen?
+	\item Anvend eksponentiel regression på datasættet, der beskriver antallet af personer i byen.
+	\item Brug din eksponentialregression til at bestemme antallet af personer, der vil være i år 2010 ifølge modellen.
+	\item Afgør, hvornår der vil være 150.000 personer i byen ifølge modellen. 
 \end{enumerate}
 
 
-\section*{Opgave 3 (med Maple)}
-Vi har placeret en radioaktiv isotop på en vægt. Den vejer til start 1 kg. Efter 10 dage vejer den 0.997kg. Henfaldet af isotopen antages at kunne beskrives ved eksponentiel vækst.
+\section*{Opgave 2}
+To biologistuderende har brugt absorbansen af en væske til at måle antallet af bakterier i væsken. De antager, at sammenhængen mellem den forløbne tid (i minutter) og antallet af bakterier (i mia.) kan beskrives ved en eksponentiel sammenhæng. Deres data kan findes \href{}{\color{blue!60} her}.
+
 \begin{enumerate}[label=\roman*)]
-	\item  Bestem den eksponentialfunktion, der beskriver vægten af den radioaktive isotop.
-	\item Hvor meget vejer isotopen efter en måned?
+	\item Lav eksponentiel regression og lineær regression på datasættet.
+	\item Lav en kvalitativ vurdering af de to modeller. Hvilken virker til at være bedst?
+	\item Sammenlign forklaringsgraderne for de to modeller. Hvilken en er bedst? Tror du, at forklaringsgrader kan bruges til at sammenligne forskellige regressionsmodeller?
+	\item Brug din valgte model til at afgøre, hvornår der vil være 1 bio. bakterier i væsken. 
+\end{enumerate}
+
+\section*{Opgave 3}
+8 kg af en radioaktiv isotop placeres på en vægt i år 1810 og vægten nedskrives hvert år indtil år 2010. Vægten af isotopen (i kg) sammen med den passerede tid fremgår af \href{}{\color{blue!60} dette datasæt}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav eksponentiel regression på datasættet.
+	\item Hvor meget vil isotopen veje i år 2050 ifølge modellen.
 	\item Hvornår er vægten af isotopen halveret?
+	\item Hvis vi antager, at isotopen er helt væk efter 10 halveringstider, hvornår er isotopen så væk?
 \end{enumerate}
 
-\section*{Opgave 4 (med Maple)}
-En bakteriekoloni vokser med 5$\%$ hver time. Efter 8 timer er der i kolonien 1.3 mia bakterier. 
-\begin{enumerate}[label=\roman*)]
-	\item Bestem forskriften på den eksponentialfunktion, der beskriver antallet af bakterier i kolonien. 
-	\item Hvad var begyndelsesværdien for eksponentialfunktionen?
-	\item Hvornår overstiger antallet af bakterier 3 mia.?
-\end{enumerate}
-
-\section*{Opgave 5 (med Maple)}
-\begin{enumerate}[label=\roman*)]
-	\item En eksponentialfunktion er givet ved
-	\begin{align*}
-		f(x) = b \cdot 1.3^x.
-	\end{align*}
-	Udnyt, at $f(2) = 7$ til at bestemme $b$.
-	\item En eksponentialfunktion er givet ved
-	\begin{align*}
-		g(x) = 0.743\cdot a^x
-	\end{align*}
-	Udnyt, at $g(0.1) = 1.236$ til at bestemme $a$.  
-\end{enumerate}
 
 \end{document}
 
