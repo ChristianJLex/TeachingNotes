@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  30 NOV 2022 19:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  7 DEC 2022 19:24
 entering extended mode
 **./Undervisningsnoter1e.tex
 (Undervisningsnoter1e.tex
@@ -1575,21 +1575,21 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
 d
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
 d
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 37
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 38
 .
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
@@ -1597,7 +1597,7 @@ fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-37.
+38.
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.
 fd
@@ -1614,12 +1614,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/NRGY-chri88mh/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ]
-<Billeder/EkspReg.jpg, id=24, 501.875pt x 501.875pt>
-File: Billeder/EkspReg.jpg Graphic file (type jpg)
-<use Billeder/EkspReg.jpg>
-Package pdftex.def Info: Billeder/EkspReg.jpg  used on input line 95.
-(pdftex.def)             Requested size: 293.41432pt x 293.43105pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1628,16 +1622,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2 <./Billeder/EkspReg.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[3] 
+[2] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1647,31 +1632,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[4] (Undervisningsnoter1e.aux)
+[3] (Undervisningsnoter1e.aux)
 Package logreq Info: Writing requests to 'Undervisningsnoter1e.run.xml'.
 \openout1 = `Undervisningsnoter1e.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46277 strings out of 478907
- 1030897 string characters out of 2848099
- 2003042 words of memory out of 3000000
- 63407 multiletter control sequences out of 15000+600000
- 410541 words of font info for 58 fonts, out of 8000000 for 9000
+ 45870 strings out of 478907
+ 1019295 string characters out of 2848099
+ 1839266 words of memory out of 3000000
+ 63012 multiletter control sequences out of 15000+600000
+ 410383 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,20n,86p,773b,2297s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,12n,86p,773b,1645s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NRGY-chri88mh/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/N
-RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17
-.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Undervisningsnoter1e.pdf (4 pages, 140879 bytes).
+type1/public/amsfonts/cm/cmex10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/
+NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NRGY-chri88mh/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/N
+RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmsy8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/NRGY-chr
+i88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb>
+Output written on Undervisningsnoter1e.pdf (3 pages, 155873 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

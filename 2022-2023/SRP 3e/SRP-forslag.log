@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  7 DEC 2022 19:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  9 DEC 2022 11:54
 entering extended mode
-**./Undervisningsnoter1k.tex
-(Undervisningsnoter1k.tex
+**./SRP-forslag.tex
+(SRP-forslag.tex
 LaTeX2e <2021-06-01> patch level 1
 L3 programming layer <2021-10-18>
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cl
@@ -1426,27 +1426,27 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'danish'.
- (Undervisningsnoter1k.aux)
-\openout1 = `Undervisningsnoter1k.aux'.
+ (SRP-forslag.aux)
+\openout1 = `SRP-forslag.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\sup
 p-pdf.mkii
@@ -1521,7 +1521,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 19.
+(lastpage)             ! on input line 21.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
@@ -1548,14 +1548,15 @@ Package biblatex Info: ... and expl3
 se-expl3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout4 = `Undervisningsnoter1k.bcf'.
+\openout4 = `SRP-forslag.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Undervisningsnoter1k.bbl' found.
- (Undervisningsnoter1k.bbl)
-Package biblatex Info: Reference section=0 on input line 19.
-Package biblatex Info: Reference segment=0 on input line 19.
-Package hyperref Info: Link coloring OFF on input line 19.
+Package biblatex Info: ... file 'SRP-forslag.bbl' not found.
+
+No file SRP-forslag.bbl.
+Package biblatex Info: Reference section=0 on input line 21.
+Package biblatex Info: Reference segment=0 on input line 21.
+Package hyperref Info: Link coloring OFF on input line 21.
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\namere
 f.sty
@@ -1571,24 +1572,24 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count498
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 41.
+LaTeX Info: Redefining \ref on input line 21.
+LaTeX Info: Redefining \pageref on input line 21.
+LaTeX Info: Redefining \nameref on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.f
 d
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 41.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.f
 d
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 41
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 40
 .
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.
@@ -1596,7 +1597,7 @@ fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-41.
+40.
 
 (C:\Users\NRGY-chri88mh\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.
 fd
@@ -1613,12 +1614,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/NRGY-chri88mh/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1627,25 +1622,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[3]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[4] 
+[2] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1655,38 +1632,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[5] (Undervisningsnoter1k.aux)
-Package logreq Info: Writing requests to 'Undervisningsnoter1k.run.xml'.
-\openout1 = `Undervisningsnoter1k.run.xml'.
+[3] (SRP-forslag.aux)
+Package logreq Info: Writing requests to 'SRP-forslag.run.xml'.
+\openout1 = `SRP-forslag.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46349 strings out of 478907
- 1032586 string characters out of 2848099
- 1903074 words of memory out of 3000000
- 63474 multiletter control sequences out of 15000+600000
- 410383 words of font info for 56 fonts, out of 8000000 for 9000
+ 45749 strings out of 478907
+ 1016625 string characters out of 2848099
+ 1834195 words of memory out of 3000000
+ 62902 multiletter control sequences out of 15000+600000
+ 410036 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,20n,86p,773b,2364s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,11n,86p,764b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmex10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/
-NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NRGY-chri88mh/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/N
-RGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Undervisningsnoter1k.pdf (5 pages, 176330 bytes).
+type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on SRP-forslag.pdf (3 pages, 59703 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 31 named destinations out of 1000 (max. 500000)
+ 47 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

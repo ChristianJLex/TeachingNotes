@@ -33,106 +33,92 @@ Modul 30
 
 \begin{center}
 	\Huge
-	Lineær regression og residualer
+	Transformation af data
 \end{center}
-\section*{Kvalitet af lineær model}
+\section*{Linearisering af data}
 \stepcounter{section}
 
-Vi har tidligere set på residualplots for at afgøre kvaliteten af en lineær model på et datasæt. Vi har nu et bedre værktøj til at afgøre, hvor god en regressionsmodel passer på et datasæt - fraktilplottet. 
+Har vi data, vi forventer kan beskrives ved en eksponentiel model vil det være en fordel at kunne transformere datasættet, så det kan beskrives ved en lineær model. Dette gælder tilsvarende hvis vi har data, der kan beskrives ved en potensmodel. Vi kan anvende følgende sætninger, når vi skal transformere data.
+\begin{setn}
+	Hvis der er en eksponentiel sammenhæng mellem to variable $x$ og $y$, altså at
+	\begin{align*}
+		y = b\cdot a^x,
+	\end{align*}
+	så er der en lineær sammenhæng mellem $x$ og $\log(y)$.
+\end{setn}
+\begin{proof}
+	Vi har, at 
+	\begin{align*}
+		y = b\cdot a^x,
+	\end{align*}
+	så derfor gælder der, at 
+	\begin{align}\label{enkeltlog}
+		\log(y) &= \log(b\cdot a^x) \nonumber \\
+		&= \log(b) + \log(a^x)\nonumber \\
+		&= \log(b) + x\log(a).
+	\end{align}
+\end{proof}
+\begin{setn}
+	Hvis der er en potenssammenhæng mellem to variable $x$ og $y$, altså at
+	\begin{align*}
+		y = b\cdot x^a,
+	\end{align*}
+	så er der en lineær sammenhæng mellem $\log(x)$ og $\log(y)$.
+\end{setn}
+\begin{proof}
+	Vi har, at
+	\begin{align*}
+		y = b\cdot x^a.
+	\end{align*}
+	Som før fås nu, at 
+	\begin{align*}
+		\log(y) &= \log(b \cdot x^a)\\
+		&= \log(b) + \log(x^a)\\
+		&= \log(b) + a\log(x).
+	\end{align*}
+\end{proof}
 
 \begin{exa}
-	155 personer har målt deres makspuls. Sammenhængen mellem deres alder og makspuls fremgår af \href{}{\color{blue!60} dette datasæt}. Vi laver lineær regression i Maple som
-	vi plejer:
-	\begin{align*}
-		&\texttt{with(Gym):}\\
-		&\texttt{alder := [...]}\\
-		&\texttt{puls := [...]}\\
-		&\texttt{LinReg(alder,puls)}
-	\end{align*}
-	Resultatet af dette kan ses på Fig. \ref{fig:linreg}.
+	Vi har følgende \href{hyper}{\color{blue!60}datasæt}, der beskriver sammenhængen mellem forløbne timer og antallet af bakterier i en opløsning. 
+	Vi udfører eksponentiel regression i Maple og får regressionslinjen, der kan ses af Fig. \ref{fig:expreg}.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\textwidth]{Billeder/linregpuls.jpg}
-		\caption{Lineær regression på pulsdata i Maple}
-		\label{fig:linreg}
+		\includegraphics[width=0.7\textwidth]{Billeder/bakterieexpreg.jpg}
+		\caption{Eksponentiel regression på bakteriedata}
+		\label{fig:expreg}
 	\end{figure}
-	Af Fig. \ref{fig:linreg} ser regressionen ud til at passe godt til datasættet, men vi fortsætter vores regressionsanalyse. Vi laver først et residualplot som vi plejer. 
-	Dette gøres i Maple ved at skrive
+	Vi får følgende sammenhæng mellem antallet af bakterier $y$ (i mia.) og forløbne timer $x$.
 	\begin{align*}
-		&\texttt{with(Gym):}\\
-		&\texttt{alder := [...]}\\
-		&\texttt{puls := [...]}\\
-		&\texttt{plotResidualer(alder,puls,LinReg)}
+		y = 1.5138\cdot 1.13^x.
 	\end{align*}
-	Resultatet af dette kan ses på Fig. \ref{fig:linres}
+	Vi tager $\ln$ af alle $y$-værdierne og laver i stedet lineær regression. Dette giver regressionslinjen, der kan ses af Fig. \ref{fig:linlogreg}.
+	At transformere alle y-værdierne ved at tage logaritmen af dem giver os et \textit{enkeltlogaritmisk koordinatsystem}.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\textwidth]{Billeder/linrespuls.jpg}
-		\caption{Residualplot for lineær regression på pulsdata i Maple}
-		\label{fig:linres}
+		\includegraphics[width=0.7\textwidth]{Billeder/bakterielinreg.jpg}
+		\caption{Lineær regression i enkeltlogaritmisk koordinatsystem}
+		\label{fig:linlogreg}
 	\end{figure}
-	Igen ser resultatet fint ud og residualerne ser ud til at være normalfordelte. Vi afslutter med at lave et fraktilplot af residualerne. Dette gøres i Maple som
+	Den lineære model lyder
 	\begin{align*}
-		&\texttt{with(Gym):}\\
-		&\texttt{alder := [...]}\\
-		&\texttt{puls := [...]}\\
-		&\texttt{residualQQplot(alder,puls,LinReg)}
+		\log(y) = 0.12223x+0.41465.
 	\end{align*}
-	Resultatet af dette kan ses på Fig. \ref{fig:qqplot}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.7\textwidth]{Billeder/qqplotpuls.jpg}
-		\caption{Fraktilplot for residualerne af pulsdata i Maple}
-		\label{fig:qqplot}
-	\end{figure}
-	Residualerne ser ud til at følge den rette linje pænt. Derfor antager vi, at residualerne er normalfordelte og dermed at en lineær model beskriver sammenhængen mellem alder
-	og makspuls godt - i hvert fald i vores datas tilfælde. 
-	Til slut vil vi gerne bestemme et $95\%$-konfidensinterval for parametrene $a$ og $b$ i vores lineære model 
+	Ønsker vi at bestemme den eksponentielle sammenhæng ud fra dette data, så skal vi transformere koefficienterne tilbage som det fremgår af \eqref{enkeltlog}.
+	Vi får derfor, at 
 	\begin{align*}
-		y = ax + b.
-	\end{align*}		
-	Dette gøres i Maple ved at skrive 
-	\begin{align*}
-		&\texttt{with(Gym):}\\
-		&\texttt{alder := [...]}\\
-		&\texttt{puls := [...]}\\
-		&\texttt{testLin(alder,puls)}
+		b = e^{0.41465} = 1.5138
 	\end{align*}
-	Dette giver os et $95\%$-konfidensinterval for $a$ på
+	og
 	\begin{align*}
-		[-1.00216,-0.95978]
+		a = e^{0.12223} = 1.1300,
 	\end{align*}
-	og for $b$
+	og den eksponentielle sammenhæng mellem den forløbne tid $x$ og antallet af bakterier $y$ er derfor
 	\begin{align*}
-		[218.75654,220.64216].
+		y = 1.5138\cdot 1.13^x,
 	\end{align*}
-	
+	hvilket er nøjagtigt hvad vi bestemte ved den eksponentielle regression. Der er dog værd at notere, at det formentlig er præcist sådan at Maple laver eksponentiel 
+	regression, og derfor er det heller ikke mærkeligt, at vi opnår det samme resultat.
 \end{exa}
 
-\section*{Opgave 1}
-
-Prisen på en volatil aktie i en tidsperiode på 401 sekunder kan findes i \href{}{\color{blue!60} dette datasæt}.
-\begin{enumerate}[label=\roman*)]
-	\item Lav lineær regression på datasættet.
-	\item Lav et residualplot og overvej, om residualerne ser ud til at være normalfordelte.
-	\item Lav et fraktilplot og overvej, om residualerne ser ud til at være normalfordelte. 
-	\item Brug modellen til at afgøre, hvornår prisen er 680kr. Bestem sandsynligheden for, at prisen til dette tidspunkt er under 678 kr. 
-	\item Bestem et $95\%$-konfidensinterval for $a$ og $b$ i den lineære model. 
-\end{enumerate}
-
-\section*{Opgave 2}
-
-250 frø er sået på forskellige tidspunkter og højden på planten er målt efter et antal dage. Sammenhængen mellem alderen og højden kan ses i \href{}{\color{blue!60} dette datasæt.}
-
-\begin{enumerate}[label=\roman*)]
-	\item Lav lineær regression på datasættet.
-	\item Lav et residualplot og overvej, om residualerne ser ud til at være normalfordelte.
-	\item Lav et fraktilplot og overvej, om residualerne ser ud til at være normalfordelte. 
-	\item Hvad er sandsynligheden for, at planten er under 12cm efter 100 dage?
-	\item Brug modellen til at afgøre, hvornår planterne er 50cm høje.
-	\item Bestem et $95\%$-konfidensinterval for $a$ og $b$ i den lineære model. 
-\end{enumerate}
-
-\section*{Opgave}
 
 \end{document}
