@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  2 JAN 2023 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  2 JAN 2023 14:08
 entering extended mode
 **./Afleveringsskabelon2v.tex
 (Afleveringsskabelon2v.tex
@@ -1944,93 +1944,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--186
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 195--195
-[]\OT1/cmr/m/n/12 a) 
- []
-
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 195--197
-[][] []
- []
-
+<Billeder/bygge.jpg, id=44, 4835.06375pt x 3224.045pt>
+File: Billeder/bygge.jpg Graphic file (type jpg)
+<use Billeder/bygge.jpg>
+Package pdftex.def Info: Billeder/bygge.jpg  used on input line 193.
+(pdftex.def)             Requested size: 287.80043pt x 191.8601pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
-
- []
-
-
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 202--202
-[]\OT1/cmr/m/n/12 b) 
- []
-
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 202--205
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 202--205
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--206
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--206
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--206
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--206
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 217--217
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 198--198
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 217--219
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 198--200
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
 
 
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 220--220
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
+
+ []
+
+
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 205--205
 []\OT1/cmr/m/n/12 b) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 205--208
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--208
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--209
+[][] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--209
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--209
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 191--209
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+
+ []
+
+
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 220--220
+[]\OT1/cmr/m/n/12 a) 
  []
 
 
@@ -2044,37 +2039,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--222
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 211--223
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 223--223
+[]\OT1/cmr/m/n/12 b) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 223--225
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 211--223
-[] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 211--223
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--223
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--236
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 229--237
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 214--226
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--237
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 214--226
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 214--226
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--226
 
  []
 
@@ -2086,97 +2081,130 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[4]
-Overfull \hbox (1.90843pt too wide) in paragraph at lines 238--238
+[4 <./Billeder/bygge.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+<Billeder/Bakterie.jpg, id=50, 6022.5pt x 4015.0pt>
+File: Billeder/Bakterie.jpg Graphic file (type jpg)
+<use Billeder/Bakterie.jpg>
+Package pdftex.def Info: Billeder/Bakterie.jpg  used on input line 234.
+(pdftex.def)             Requested size: 287.80043pt x 191.81723pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--243
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 232--244
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--244
+
+ []
+
+
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 245--245
 []\OT1/cmr/m/n/12 a) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 238--240
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 245--247
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--240
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 238--241
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 245--248
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 238--241
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
 
  []
 
 
-Overfull \hbox (2.5612pt too wide) in paragraph at lines 242--242
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 249--249
 []\OT1/cmr/m/n/12 b) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 242--244
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 249--251
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--244
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 242--245
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 249--252
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--245
+Underfull \hbox (badness 10000) in paragraph at lines 249--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--252
+Underfull \hbox (badness 10000) in paragraph at lines 257--259
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 246--253
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 253--260
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--253
+Underfull \hbox (badness 10000) in paragraph at lines 253--260
 
  []
 
 
-Overfull \hbox (1.25566pt too wide) in paragraph at lines 254--254
+Overfull \hbox (1.25566pt too wide) in paragraph at lines 261--261
 []\OT1/cmr/m/n/12 c) 
  []
 
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 254--256
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 261--263
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 254--257
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 261--264
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 261--264
 
  []
 
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[5 <./Billeder/Bakterie.jpg>] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2186,16 +2214,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[5] (Afleveringsskabelon2v.aux)
+[6] (Afleveringsskabelon2v.aux)
 Package logreq Info: Writing requests to 'Afleveringsskabelon2v.run.xml'.
 \openout1 = `Afleveringsskabelon2v.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46156 strings out of 478907
- 1024059 string characters out of 2848099
+ 46172 strings out of 478907
+ 1024386 string characters out of 2848099
  1853584 words of memory out of 3000000
- 63296 multiletter control sequences out of 15000+600000
+ 63308 multiletter control sequences out of 15000+600000
  410682 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,22n,86p,774b,1645s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2213,9 +2241,9 @@ ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
 /NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/esvect/vect10.pfb>
-Output written on Afleveringsskabelon2v.pdf (6 pages, 214288 bytes).
+Output written on Afleveringsskabelon2v.pdf (7 pages, 7035508 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
- 24 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
+ 34 words of extra memory for PDF output out of 10000 (max. 10000000)
 

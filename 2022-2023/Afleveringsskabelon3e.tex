@@ -93,88 +93,109 @@ Delprøve uden hjælpemidler
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 1}
-	På \ref{fig:haeldning} ses et hældningsfelt for en differentialligning.
-	\begin{figure}[H]
+	En stokastisk variabel $X$ har sandsynlighedsfunktion $P$ og udfaldsrum  \\
+	$U = \{a,b,c,d,e\}$. Fordelingen for $X$ 
+	kan ses af Tab. \ref{tab:fordeling}.
+	\begin{table}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{Billeder/haeldning.png}
-		\caption{Hældningsfelt for differentialligning.}
-		\label{fig:haeldning}
-	\end{figure}
+		\begin{tabular}{c|c|c|c|c|c}
+			$U$ & $a$ & $b$ &  $c$ & $d$ & $e$ \\
+			\hline
+			$P(X=x)$ & 0.5 & 0.1 & 0.05 & 0.05 & $P(X=e)$
+		\end{tabular}
+		\caption{Fordeling for den stokastiske variabel $X$. }
+		\label{tab:fordeling}		
+	\end{table}
 	\phantom{h}
 \end{opgavetekst}
 	\begin{delopgave}{}{1}
-		Afgør, om funktionen $f$ givet ved
-		\begin{align*}
-			f(x) = e^{-2x}
-		\end{align*}
-		kan være en partikulær løsning til differentialligningen
+		Bestem $P(X=e)$.
 	\end{delopgave}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 2}
-	En funktion $f:\mathbb{R}^2 \to \mathbb{R}$ er givet ved
+	Af Fig. \ref{fig:fordeling} ses fordelingsfunktionerne $F$ og $G$ for to normalfordelte stokastiske variable
 	\begin{align*}
-		f(x,y) = xy^2-x-y.
+		X \sim N(\mu,1)
 	\end{align*}
+	og 
+	\begin{align*}
+		Y \sim N(\mu,1.5).
+	\end{align*}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{Billeder/fordelingafl.jpg}
+		\caption{Fordelingsfunktionerne $F$ og $G$.}
+		\label{fig:fordeling}
+	\end{figure}
 	\phantom{h}
 \end{opgavetekst}
 	\begin{delopgave}{}{1}
-		Vis, at punkterne 
-		\begin{align*}
-			&\left(-\frac{1}{2},-1,f\left(-\frac{1}{2},-1\right)\right)\textnormal{ og} 
-			&&\left(\frac{1}{2},1,f\left(\frac{1}{2},1\right)\right)
-		\end{align*}
-		er stationære punkter for $f$. 
+		Bestem middelværdien $\mu$ for de to stokastiske variable.
 	\end{delopgave}
 	\begin{delopgave}{}{2}
-		Arten af de stationære punkter er ens. Bestem arten af de stationære punkter. 
+		Hvilken af de to kurver tilsvarer fordelingsfunktionen for henholdsvist $X$ og $Y$?
+	\end{delopgave}
+	\begin{delopgave}{}{3}
+		Bestem sandsynlighederne
+		\begin{align*}
+			P(2<X<4) \textnormal{ og } P(1<Y).
+		\end{align*}
 	\end{delopgave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{opgavetekst}{Opgave 3}
-	En kugle $K$ er givet ved ligningen
-	\begin{align*}
-		K: \ x^2-2x+y^2-4y+z^2+8z=4
-	\end{align*}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{Billeder/pizza.jpg}
+	\end{center}
+	For en bestemt type stafylokok-bakterie gælder det, at væksten af dem $S'$ (i mio. pr. minut) i fødevarer ved stuetemperatur er proportional med antallet af bakterier $S$ (i mio.). 
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Afgør, om punktet $(1,2,2)$ ligger på kuglen.
+	Opstil en differentialligningsmodel, der beskriver væksten af stafylokokbakterien i fødevarer, når det oplyses at proportionalitetskonstanten er 0.024.
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Bestem centrum og radius for $K$.
+	Opskriv en partikulær løsning til differentialligningsmodellen, hvis det oplyses, at antallet af bakterier til $t=0$ er 792 mio. 
 \end{delopgave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 4 }
-	En differentialligning er givet ved 
-	\begin{align}\label{eq:diffyq}
-		y' + \frac{2}{x}y = 3\cos(x^3).
-	\end{align}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{Billeder/choko.jpg}
+	\end{center}
+	En producent af chokoladebarer har undersøgt en bestemt slags af sine chokoladebarer og opdaget, at vægten af netop dén type chokoladebar er normalfordelt
+	med en middelværdi på 51g og en spredning på 4.5g.
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Vis, at \eqref{eq:diffyq} er en førsteordens lineær differentialligning.
+	Afgør, om en chokoladebar på 57g er et normalt udfald. 
 \end{delopgave}
+\begin{meretekst}
+	Vi lader $f$ betegne tæthedsfunktionen for den normalfordelte stokastiske variabel, der beskriver vægten af chokoladebarerne. 
+\end{meretekst}
 \begin{delopgave}{}{2}
-	Bestem en løsning til \eqref{eq:diffyq}, der går gennem punktet $(1,\sin(1))$.
+	Hvad siger følgende integral om vægten af chokoladebarerne?
+	\begin{align*}
+		\int_{48}^{65} f(x)dx \approx  0.747.
+	\end{align*}
 \end{delopgave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 5}
-	På en plan $L$ ligger punktet $(1,4,-5)$. Desuden har planen vektoren $\vv{n}$ givet ved
+	En funktion $f:\mathbb{R}^2 \to \mathbb{R}$ er givet ved
 	\begin{align*}
-		\vv{n} = 
-		\begin{pmatrix}
-			-6 \\ 1/2 \\ 10
-		\end{pmatrix}
+		f(x,y) = \ln(x)\cdot(x-y) + y^2x
 	\end{align*}
-	som normalvektor.
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Bestem en ligning for $L$.
+	Bestem $f(1,2)$
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem $f_x'(x,y)$ og $f_y'(x,y)$
 \end{delopgave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
