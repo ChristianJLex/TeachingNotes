@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  9 DEC 2022 11:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  15 DEC 2022 08:26
 entering extended mode
 **./SRP-forslag.tex
 (SRP-forslag.tex
@@ -1603,6 +1603,11 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 fd
 File: uesvect.fd 
 )
+Overfull \hbox (4.40594pt too wide) in paragraph at lines 58--61
+[]\OT1/cmr/bx/n/12 Normalfordelingen og kva-dra-tur/nu-me-risk in-te-gra-tion (
+Samf)\OT1/cmr/m/n/12 . Hvor-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1614,6 +1619,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/NRGY-chri88mh/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ]
+Overfull \hbox (8.83292pt too wide) in paragraph at lines 80--83
+[]\OT1/cmr/bx/n/12 Kunstig in-tel-li-gens (Ma-skin-lring/-da-ta-mi-ning) (Rel/
+-Fil/-Samf) \OT1/cmr/m/n/12 Hvad
+ []
+
+
+Overfull \hbox (10.18735pt too wide) in paragraph at lines 83--85
+[]\OT1/cmr/bx/n/12 Huslan (maske no-get med fi-nanskri-se) (Samf) \OT1/cmr/m/
+n/12 Hvor-dan er lanestrukturen
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1624,25 +1640,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2] 
 AED: lastpage setting LastPage
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[3] (SRP-forslag.aux)
+(SRP-forslag.aux)
 Package logreq Info: Writing requests to 'SRP-forslag.run.xml'.
 \openout1 = `SRP-forslag.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45749 strings out of 478907
- 1016625 string characters out of 2848099
- 1834195 words of memory out of 3000000
- 62902 multiletter control sequences out of 15000+600000
- 410036 words of font info for 55 fonts, out of 8000000 for 9000
+ 45745 strings out of 478907
+ 1016572 string characters out of 2848099
+ 1836192 words of memory out of 3000000
+ 62901 multiletter control sequences out of 15000+600000
+ 409430 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,11n,86p,764b,1643s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
@@ -1650,9 +1658,9 @@ onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on SRP-forslag.pdf (3 pages, 59703 bytes).
+Output written on SRP-forslag.pdf (2 pages, 63447 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
+ 40 PDF objects out of 1000 (max. 8388607)
+ 3 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

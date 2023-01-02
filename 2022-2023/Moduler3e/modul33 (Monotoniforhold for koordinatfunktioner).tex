@@ -1,0 +1,109 @@
+\begin{center}
+	\Huge
+	Monotoniforhold for koordinatfunktionerne
+\end{center}
+\section*{Monotoniforhold}
+\stepcounter{section}
+
+Vi kan bestemme monotoniforholdene for koordinatfunktionerne $x$ og $y$ for en vektorfunktion
+\begin{align*}
+	\vv{r}(t) = 
+	\begin{pmatrix}
+		x(t) \\
+		y(t).
+	\end{pmatrix}
+\end{align*}
+Dette gøres nøjagtigt som da vi bestemte monotoniforhold for differentiable funktioner af én variabel i 2.g. Fortolkningen er også mere eller mindre analog. 
+\begin{align*}
+	&\textnormal{Hvis $y'(t)>0$, så bevæger partiklen sig opad på grafen.}\\
+	&\textnormal{Hvis $y'(t)<0$, så bevæger partiklen sig nedad på grafen.}\\
+	&\textnormal{Hvis $x'(t)>0$, så bevæger partiklen sig til højre på grafen.}\\
+	&\textnormal{Hvis $x'(t)<0$, så bevæger partiklen sig til venstre på grafen.}\\
+\end{align*}
+
+\begin{exa}
+Vi ønsker at bestemme monotoniforholdene for vektorfunktionen 
+\begin{align*}
+	\vv{r}(t) = 
+	\begin{pmatrix}
+		t^2-t+6 \\
+		t^4-2t^2
+	\end{pmatrix}
+\end{align*}
+Vi bestemmer de afledede af koordinatfunktionerne og sætter dem lig 0.
+\begin{align*}
+	x'(t) = 2t-1 = 0\\
+\end{align*},
+så $t=0.5$.
+Tilsvarende for $y(t)$.
+\begin{align*}
+	y'(t) = 4t^3-4t = 0,
+\end{align*}
+så $t=0$, $t=1$ eller $t=-1$. 
+Vi bestemmer desuden hældningerne mellem toppunkterne:
+\begin{align*}
+	x'(0) = 2\cdot 0 -1 = -1,
+\end{align*}
+og
+\begin{align*}
+	x'(1) = 2\cdot 1-1 = 1.
+\end{align*}
+Vi har derfor monotoniforholdene for $x$:
+\begin{align*}
+	&\textnormal{$x(t)$ er aftagende for $t\in (-\infty,0.5]$},\\
+	&\textnormal{$x(t)$ er voksende for $t \in [0.5,\infty)$}.
+\end{align*}
+Tilsvarende bestemmer vi hældningerne for $y(t)$:
+\begin{align*}
+	y(-2) &= 4(-2)^3 -4(-2) = -24,\\
+	y(-0.5) &= 4(-0.5)^3 - 4(-0.5) = 1.5,\\
+	y(0.5) &= 4(0.5)^3 - 4(0.5) = -1.5,\\
+	y(2) &= 4(2)^2 - 4(2) = 24.
+\end{align*}
+Derfor lyder monotoniforholdene for $y$:
+\begin{align*}
+	&\textnormal{$y(t)$ er aftagende for $t\in (-\infty,-1]$},\\
+	&\textnormal{$y(t)$ er voksende for $t \in [-1,0]$},\\
+	&\textnormal{$y(t)$ er aftagende for $t\in [0,1]$},\\
+	&\textnormal{$y(t)$ er voksende for $t \in [1,\infty)$}.
+\end{align*}
+
+\end{exa}
+
+\section*{Opgave 1}
+
+Bestem monotoniforholdene for koordinatfunktionerne for følgende funktioner. Tegn parameterkurverne i Maple og undersøg, at du har fundet de korrekte monotoniforhold. 
+\begin{align*}
+	&1) \ \vv{r} = 
+	\begin{pmatrix}
+		t-4\\
+		t^2-2
+	\end{pmatrix}   
+	&&2) \ \vv{r} = 
+	\begin{pmatrix}
+		2t^3\\
+		t-7t^4
+	\end{pmatrix}   \\
+	&3) \ \vv{r} = 
+	\begin{pmatrix}
+		t^2-t-1\\
+		t^4-t^3-t^2-t-1
+	\end{pmatrix}   
+	 &&4) \ \vv{r} = 
+	\begin{pmatrix}
+		t^6-t\\
+		t^3+t
+	\end{pmatrix}   \\
+	&5) \ 
+	\vv{r} = 
+	\begin{pmatrix}
+		3t^2-2t\\
+		4t^3-3t^2
+	\end{pmatrix}  
+	  &&6) \
+	  \vv{r} = 
+	\begin{pmatrix}
+		2t-1\\
+		3t-2
+	\end{pmatrix}    
+\end{align*}
