@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Modul 28
+Modul 29
 }
-\chead{ 4. januar 2023
+\chead{ 10. januar 2023
 }
 
 \begin{document}
@@ -31,80 +31,125 @@ Modul 28
 %Overskrift
 \begin{center}
 \Huge
-Ekstrema
+Monotonisætningen og monotoniforhold
 \end{center}
-
-\section*{Ekstrema for differentiable funktioner}
+\section*{Monotonisætningen}
 \stepcounter{section}
-
-I mange sammenhænge er det en fordel at kunne bestemme \textit{toppunkter/maksima og minima} for en funktion $f$. Hvis $f$ er en differentiabel funktion, så kan vi udnytte differentialregning til at bestemme sådanne punkter. Et punkt, der enten er et maksimum eller et minimum kaldes et \textit{ekstremumspunkt}. 
-
-Vi har følgende sætning:
-\begin{setn}[Ekstremumspunkter]
-	Lad $f$ være en differentiabel funktion. Hvis et punkt $P(x_0,f(x_0))$ er et ekstremumspunkt for $f$, så gælder der, at 
-	\begin{align*}
-		f'(x_0) = 0.
-	\end{align*}
+Hvis en funktion aftager efter et toppunkt og funktionen ikke har flere ekstremumspunkter til højre for dette toppunkt, så virker det intuitivt at funktionen bliver ved med at aftage efter toppunktet. Dette gælder også tilsvarende for voksende funktioner og minima. Vi har en sætning, der præciserer denne idé for differentiable funktioner. Denne kalder vi for monotonisætningen. 
+\begin{setn}[Monotonisætningen]
+Lad $f$ være differentiabel på et interval $I$. Så gælder der følgende:
+\begin{enumerate}[label=\roman*)]
+\item Hvis $f'(x)>0$ for alle $x$ i intervallet $I$, så vil $f$ være voksende på $I$.
+\item Hvis $f'(x)<0$ for alle $x$ i intervallet $I$, så vil $f$ være aftagende på $I$. 
+\item Hvis $f'(x)=0$ for alle $x$ i intervallet $I$, så er $f$ konstant på $I$.
+\end{enumerate}
 \end{setn}
-Det er dog værd at bemærke, at vi ikke nødvendigvis har den omvendte implikation; hvis $f'(x_0)=0$, så er $(x_0,f(x_0))$ ikke nødvendigvis et ekstremumspunkt. Vi kalder sådanne for \textit{vendetangenter}, og vi vil se eksempler på disse senere. 
+Det er ikke svært at bevise monotonisætningen, men det er derimod en smule omfattende. 
 
+Vi skal hovedsagligt bruge monotonisætningen til at bestemme monotoniforhold for differentiable funktioner. Vi skal altså afgøre på hvilke intervaller funktioner er monotone. Lad os betragte et eksempel.
 \begin{exa}
-	Lad $f$ være givet ved
-	\begin{align*}
-		f(x) = x^3-6x^2+5.
-	\end{align*}
-	Vi ønsker at bestemme ekstrema for $f$. Vi differentierer derfor først $f$.
-	\begin{align*}
-		f'(x) = 3x^2-12x = 3x(x-4).
-	\end{align*}
-	Dette sættes nu lig $0$, og vi får
-	\begin{align*}
-		3x(x-4) = 0, 
-	\end{align*}
-	og ved hjælp af nulreglen ved vi, at $x=0$ eller $x = 4$. Vi bestemmer nu de tilhørende $y$-værdier og vi får
-	\begin{align*}
-		f(0) = 5
-	\end{align*}
-	og 
-	\begin{align*}
-		f(4) &= 4^3 - 6\cdot 4^2+5\\
-		&= 64-96+5\\
-		&= -27.
-	\end{align*}
-	Vi har derfor en vandret tangent i $P(0,5)$ og $Q(4,-27)$. For at bestemme, om det er et ekstremumspunkt, så tegner vi grafen. Denne kan ses af Fig. \ref{fig:ekstrema}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}[axis lines = middle,
-			xmin = -2, xmax = 7,
-			ymin = -30, ymax = 40,
-			xlabel = $x$, 
-			ylabel = $y$]
-				\addplot[color = blue!50, samples = 200, domain = -2:7, thick] {x^3-6*x^2+5};
-				\filldraw[color = purple] (axis cs:0,5) circle (2pt);
-				\filldraw[color = purple] (axis cs:4,-27) circle (2pt);
-				\node at (axis cs: 0.2,8) {$P$};
-				\node at (axis cs: 4.2,-24) {$Q$};
-			\end{axis}
-		\end{tikzpicture}
-		\caption{Graf for funktionen $f$.}
-		\label{fig:ekstrema}
-	\end{figure}
-\end{exa}
-Af Fig. \ref{fig:ekstrema} kan vi se, at punkterne $P$ og $Q$ er ekstremumspunkter. $P$ er et \textit{lokalt maksimum} og $Q$ er et \textit{lokalt minimum}. Vi kan også se, at $f$ ikke har nogle 
-\textit{globale ekstrema}.
-
-
-
-\section*{Opgave 1}
-
-Bestem ekstremumspunkter for følgende funktioner. Løs først ligningen $f'(x)=0$ og tegn derefter grafen for funktionen.  Afgør til sidst, om der er tale om globale maksimum/minimum eller lokale maksimum/minimum.
-
+Vi ønsker at bestemme monotoniforholdene for funktionen 
 \begin{align*}
-	&1) \ -x^2+10    &&2) \  x^3     \\
-	&3) \  x^4-8x^2   &&4) \ \ln(x) - \frac{1}{2}x^2      \\
-	&5) \ \sqrt{x}-x^3    &&6) \   \frac{1}{x} +x^2    \\
-	&7) \  x^5-10x^4   &&8) \ \frac{4}{x} - 2x      \\
+	f(x) = \frac{1}{3}x^3-\frac{1}{2}x^2-2x.
+\end{align*}
+ Vi starter med at plotte $f$ som kan ses af Fig. \ref{fig:monof}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[axis lines=middle,
+xlabel = $x$,
+ylabel = $y$]
+\addplot[color=blue!40,thick, domain=-3:4, samples=1000]{1/3*x^3-1/2*x^2-2*x};
+\end{axis}
+\end{tikzpicture}
+\caption{Plot af funktionen $f$}
+\label{fig:monof}
+\end{figure}
+For at finde monotoniforholdene for $f$ starter vi med at differentiere $f$ for at se, hvor $f$ har ekstremumspunkter. Vi finder derfor $f'(x) = x^2-x-2$ og sætter denne lig nul:
+\begin{align*}
+f'(x)=x^2-x-2 = 0,
+\end{align*}
+som har løsningerne $x=-1$ og $x=2$. Funktionen $f$ har derfor ekstremumspunkter i $x=-1$ og $x=2$. Vi bruger $f'$ til at afgøre, hvornår $f$ er voksende og aftagende ved at indsætte et tal på $x$ plads mellem $-1$ og $2$, et tal mindre end $-1$ og et tal større end $2$. Derfor får vi
+\begin{align*}
+f'(-2) = (-2)^2+2-2 = 4, 
+\end{align*} 
+og monotonisætningen siger derfor, at $f$ vokser på intervallet $]-\infty,-1]$. 
+\begin{align*}
+f'(0) = 0^2-0-2 = -2,
+\end{align*}
+og monotonisætningen siger derfor, at $f$ aftager på intervallet $[-1,2]$.
+\[ 
+f(3) = 3^2-3-2 = 9-5=4,
+\]
+og monotonisætningen siger derfor, at $f$ vokser på intervallet $[2,\infty[.$
+For at være helt præcise opskriver vi monotoniforholdene:
+\begin{align*}
+	&\textnormal{$f$ er voksende for $x \in ]-\infty,-1]$},\\
+	&\textnormal{$f$ er aftagende for $x \in [-1,2]$},\\
+	&\textnormal{$f$ er voksende for $x \in [2,\infty[$}.
+\end{align*}
+Vi opskriver desuden en monotonilinje
+\begin{center}
+\begin{tikzpicture}
+\node at (0,0) {$x$};
+\node at (0,-1) {$f'(x)$};
+\node at (0,-2) {$f(x)$};
+\node at (2,0) {$-1$};
+\node at (4,0) {$2$};
+\node at (2,-1) {0};
+\node at (4,-1) {0};
+\node at (1,-1) {$+$};
+\node at (3,-1) {$-$};
+\node at (5,-1) {$+$};
+\draw[->,thick] (-0.2,-0.5) to (6,-0.5);
+\draw[thick] (2,-0.6) to (2,-0.4);
+\draw[thick] (4,-0.6) to (4,-0.4);
+\draw[thick] (0.6,0.3) to (0.6,-2.3);
+\draw[->,thick] (0.75,-2.2) to (1.25,-1.8);
+\draw[->,thick] (2+0.75,-1.8) to (2+1.25,-2.2);
+\draw[->,thick] (4+0.75,-2.2) to (4+1.25,-1.8);
+\end{tikzpicture}
+\end{center}
+Bemærk, at vi i princippet ikke behøver grafen for funktionen for at bestemme monotoniforholdene. 
+\end{exa}
+
+For en god ordens skyld opskriver vi de differentialeregneregler, vi kender.
+
+\begin{center}
+	\begin{tabular}{c|c}
+		$\boldsymbol{f(x)}$ & $\boldsymbol{f'(x)}$\\
+		\hline
+		$k$ & $0$\\
+		\hline
+		$x$ & $1$\\
+		\hline 
+		$x^2$ & $2x$\\
+		\hline
+		$x^3$ & $3x^2$\\
+		\hline
+		$x^a$ & $ax^{a-1}$\\
+		\hline 
+		$\sqrt{x}$ & $\frac{1}{2\sqrt{x}}$ \\
+		\hline
+		$\ln(x)$ & $\frac{1}{x}$\\
+		\hline
+		$a^x$ & $a^x\ln(a)$\\
+		\hline 
+		$e^x$ & $e^x$\\
+		\hline 
+		$\cos(x)$ & $-\sin(x)$\\
+		\hline
+		$\sin(x)$ & $\cos(x)$
+	\end{tabular}
+\end{center}
+\section*{Opgave 1}
+Bestem monotoniforholdene for følgende funktioner. Sørg også for at tegne funktionerne for at verificere dine monotoniforhold. 
+\begin{align*}
+&1) \ x^2   &&2)\ x+10  \\
+&3) \ x^3 - 3x^2 - 9x -10 &&4)\ x^4 \\
+&5) \ x^4-8x^2 &&6)\ \ln(x) -\frac{1}{2}x^2 \\
+&7) \ \sin(x)  &&8)\ \cos(x)  
 \end{align*}
 \end{document}
 

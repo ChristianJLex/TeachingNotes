@@ -12,9 +12,9 @@
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
 
 %Husk at rette modul og dato!
-\lhead{Aflevering 4 \\ Matematik A
+\lhead{Aflevering 5 \\ Matematik A
 }
-\chead{2. december 2022
+\chead{20. januar 2023
 }
 
 \begin{document}
@@ -42,7 +42,7 @@
 {\fontsize{50}{60}\selectfont Matematik-\\aflevering}\\
 \phantom{h}\\
 \rule{0.7\textwidth}{0.3mm}\\
-\Large 2022\\
+\Large 2023\\
 \Large 3.e MA
 
 \end{center}
@@ -197,38 +197,12 @@ Delprøve uden hjælpemidler
 \begin{delopgave}{}{2}
 	Bestem $f_x'(x,y)$ og $f_y'(x,y)$
 \end{delopgave}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{opgavetekst}{Opgave 6}
-	En differentialligning er repræsenteret grafisk på Fig. \ref{fig:logist}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}
-				[
-				axis lines = center, 
-				xmin = -1, xmax = 7,
-				ymin = -1, ymax = 4,
-				xlabel = {$y$},
-				ylabel = {$y'$}, 
-				]
-				\addplot[thick, color = blue!50, domain = 0:6, samples = 1000] {1/3*x*(6-x)};
-				\draw[color = purple, thick, dashed] (axis cs:0,3) to (axis cs: 3,3);
-				\draw[color = purple, thick, dashed] (axis cs:3,0) to (axis cs: 3,3);
-			\end{axis}
-		\end{tikzpicture}
-		\caption{Grafisk repræsentation af differentialligning.}
-		\label{fig:logist}
-	\end{figure}
-	\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{}{1}
-	Bestem den fuldstændige løsning til differentialligningen repræsenteret grafisk på  Fig. \ref{fig:logist}.
-\end{delopgave}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%							Ny Opgave!!!!!							%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \newpage
 \begin{center}
@@ -242,94 +216,92 @@ Delprøve med hjælpemidler
 
 
 \begin{opgavetekst}{Opgave 6}
-	En differentialligning er givet ved
-	\begin{align}\label{eq:logistdiff}
-		y' = ay(1.73-y).
-	\end{align}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{Billeder/measure.jpg}
+	\end{center}
+	I en by har man målt alle drenges højde på deres 12-års fødselsdag. Deres højde kan findes \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2022-2023/Data%20og%20lign/Hojde.xlsx}{\color{blue!60} her}.
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Udnyt, at $y' = 0.0106$, når $y = 0.02$.
+	Vis, at datasættet er approksimativt normalfordelt og bestem middelværdien og spredningen for datasættet. 
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Bestem en partikulær løsning $f$ til \eqref{eq:logistdiff}, der går gennem punktet $(4,0.67)$.
+	Bestem sandsynligheden for at en tolvårig dreng har en højde på under 140cm. 
 \end{delopgave}
 \begin{delopgave}{}{3}
-	Bestem tallet $f(11)$.
+	Er en højde på 110cm et exceptionelt udfald?
 \end{delopgave}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 7}
-	\begin{center}
-		\includegraphics[width=0.4\textwidth]{Billeder/by.jpg}
-	\end{center}
- 	På Tab. \ref{tab:beboere} ses sammenhængen mellem antallet af beboere i en landsby og antal år efter år 1970.
-	\begin{table}[H]
-	\centering
-	\begin{tabular}{c|c|c|c|c|c|c|c|c}
-		År efter år 1970 & $0$ & $5$ & $10$ & $15$ & $20$ & $25$ & $30$&$35$\\
-		\hline
-		Beboere i tusinde & $1.36$ & $1.99$ & $7.56$ & $11.31$ & $14.73$ & $15.29$ & $15.05$ & $15.15$
-	\end{tabular}
-	\caption{Antal Beboere i landsby efter år 1970.}
-	\label{tab:beboere}
-	\end{table}
-	\phantom{h}
+	En vektorfunktion $\vv{r}: \mathbb{R} \to \mathbb{R}^2$ er givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			2t^3-t^2+7\\
+			4t^4-6t^2-t-9
+		\end{pmatrix}
+	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Lav lineær, eksponentiel og logistisk regression på tallene fra Tab. \ref{tab:beboere}.
+	Tegn $\vv{r}$ på parameterintervallet $[-2,2]$.
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Brug residualerne for de forskellige modeller for at afgøre hvilken af modellerne, der bedst beskriver datasættet. 
-\end{delopgave}
-\begin{meretekst}
-	En analysevirksomhed beslutter sig for at bruge den logistiske model grundet tidligere erfaringer.
-\end{meretekst}
-\begin{delopgave}{}{3}
-	Hvad er det maksimale antal beboere ifølge modellen?
+	Bestem parameterkurven for $\vv{r}$'s skæring med akserne. 
 \end{delopgave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 8}
-	\begin{center}
-		\includegraphics[width=0.7\textwidth]{Billeder/tyre.jpg}
-	\end{center}
-	En importør af bildæk får lovet fra fabrikanten, at der kun vil være fejl på $0.1\%$ af de dæk, han køber. I en sending på 1500 dæk opdager han, at der er fejl på 6 af dækkene, hvilket gør ham 
-	mistænksom.
+	Lad $f$ og $g$ være givet ved
+	\begin{align*}
+		f(x) = \ln(x)-x^2+10
+	\end{align*}
+	og 
+	\begin{align*}
+		g(x) = x^2-1.
+	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Argumentér for, at antallet af fejl på bildækkene er binomialfordelt og angiv antals- og sandsynlighedsparameteren for fordelingen.
+	Tegn graferne for $f$ og $g$ på intervallet $[0,4]$.
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Opstil en nulhypotese, der kan bruges til at afkræfte mandens mistanke. 
+	Bestem skæringspunkterne mellem graferne for de to funktioner. 
 \end{delopgave}
+\begin{meretekst}
+	Graferne for de to funktioner afgrænser sammen med $x$-aksen et trekantlignende område $M$.
+\end{meretekst}
 \begin{delopgave}{}{3}
-	Lav binomialtest på dataet og afgør, om vi skal forkaste nulhypotesen. 
+	Bestem arealet af $M$. 
 \end{delopgave}
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %							Ny Opgave!!!!!							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{opgavetekst}{Opgave 9}
-	\begin{center}
-		\includegraphics[width=0.7\textwidth]{Billeder/bees.jpg}
-	\end{center}
-	I en differentialligningsmodel er en bi-bestands vækst $I'$ proportional med antallet af bier $I(t)$ i tusinde efter $t$ uger.
+	Taget på en bestemt kvadratisk bygning er udformet, så taget tilsvarer grafen for funktionen $f:\mathbb{R}^2 \to \mathbb{R}$ givet ved
+	\begin{align*}
+		f(x,y) = xy + y^2 -xy^2
+	\end{align*}
+	for $(x,y) \in [-1,2]\times [-0.4,0]$. (Bemærk, at skaleringen på akserne ikke tilsvarer den virkelige skala.)
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Opstil en differentialligningsmodel, der beskriver væksten af bierne.
+	Tegn grafen for $f$ så $(x,y) \in [-1,2] \times [-0.4,0]$. 
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Udnyt, at $I' = 7.2$, når $I = 120$ til at bestemme proportionalitetsfaktoren. 
+	Bestem de stationære punkter for $f$. 
 \end{delopgave}
 \begin{delopgave}{}{3}
-	Udnyt, at $I(0) = 102.5$ til at bestemme en partikulær løsning til differentialligningen.
+	Bestem arten af de stationære punkter. 
 \end{delopgave}
+\begin{meretekst}
+	Snitkurven $f(x,-0.4)$ udgør siden af taget til en af siderne.
+\end{meretekst}
 \begin{delopgave}{}{4}
-	Bestem antallet af bier efter 30 uger. 
+	Bestem minimum af snitkurven $f(x,-0.4)$. 
 \end{delopgave}
 \end{document}
 
