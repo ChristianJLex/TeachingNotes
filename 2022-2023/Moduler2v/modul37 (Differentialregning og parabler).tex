@@ -1,0 +1,91 @@
+\begin{center}
+\Huge
+Differentialregning og poylnomier
+\end{center}
+
+\section*{Toppunkt og hældning}
+\stepcounter{section}
+
+Vi kan bruge differentialregning til at bestemme toppunktet for et andetgradspolynomium.
+\begin{setn}[Toppunktsformlen]
+	Lad $f$ være et andetgradspolynomium givet ved
+	\begin{align*}
+		f(x) = ax^2+bx+c.
+	\end{align*}
+	Så er toppunktet for parablen for $f$ givet ved
+	\begin{align*}
+		\left(\frac{-b}{2a},\frac{-d}{4a} \right),
+	\end{align*}
+	hvor $d$ er givet ved $b^2-4ac$.
+\end{setn}
+\begin{proof}
+	Vi differentierer $f$ og sætter funktionen lig $0$. 
+	\begin{align*}
+		f'(x) = 2ax+b=0 \ &\Leftrightarrow \ 2ax = -b \\
+		&\Leftrightarrow \ x = \frac{-b}{2a}.
+	\end{align*}
+	Dette udtryk indsættes nu i forskriften for $f$.
+	\begin{align*}
+		f\left( \frac{-b}{2a}\right) &= a\left(\frac{-b}{2a}\right)^2 + b\frac{-b}{2a} + c\\
+		&= a \frac{b^2}{4a^2} - \frac{b^2}{2a} + c \\
+		&= \frac{b^2}{4a} - \frac{b^2}{2a} + c \\
+		&= \frac{b^2}{4a} - \frac{2b^2}{4a} + \frac{4ac}{4a} \\
+		&= \frac{b^2 - 2b^2 + 4ac}{4a} \\
+		&= \frac{-b^2 + 4ac}{4a} \\
+		&= \frac{-d}{4a},
+	\end{align*}
+	hvor $d=b^2-4ac$.
+\end{proof}
+Vi kan også bruge differentialregning til at afgøre, hvorfor hældningen af en parabel i skæringspunktet med $y$-aksen er lig $b$.
+\begin{setn}
+	Lad $f$ være et andetgradspolynomium givet ved
+	\begin{align*}
+		f(x) = ax^2+bx+c.
+	\end{align*}
+	Så tilsvarer $b$ hældningen af parablen for $f$ i skæringen med $y$-aksen. 
+\end{setn}
+\begin{proof}
+	Hældningen af grafen i skæringspunktet med $y$-aksen må være givet ved $f'(0)$. Dette bestemmes.
+	\begin{align*}
+		f'(0) = 2a\cdot 0 + b = b.
+	\end{align*}
+\end{proof}
+
+Følgende er det sidste bevis, vi skal se i differentialregning.
+\begin{setn}
+	Der gælder, at 
+	\begin{align*}
+		\left(\frac{1}{x}\right)' = -\frac{1}{x^2}
+	\end{align*}
+	for $x\neq 0$. 
+\end{setn}
+\begin{proof}
+	Vi anvender definitionen af differentialkvotienten for $f$ givet ved
+	\begin{align*}
+		f(x) = \frac{1}{x}.
+	\end{align*}
+	Denne er givet som
+	\begin{align*}
+		f'(x) &= \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \\
+		&= \lim_{h \to 0} \frac{\frac{1}{x+h} - \frac{1}{x}}{h} \\
+		&= \lim_{h \to 0} \frac{\frac{x}{x(x+h)}-\frac{x+h}{x(x+h)}}{h} \\
+		&= \lim_{h \to 0} \frac{\frac{x-x-h}{x(x+h)}}{h} \\
+		&= \lim_{h \to 0} \frac{-h}{x(x+h)h} \\
+		&= \lim_{h \to 0} \frac{-1}{x(x+h)} \\
+		&= \lim_{h \to 0} \frac{-1}{x^2+xh} \\
+		&= -\frac{1}{x^2}.
+	\end{align*}
+\end{proof}
+
+\section*{Opgave 1}
+
+Del jer ind i 6 grupper. Bevis én af følgende differentialregningsregler i jeres gruppe.
+\begin{align*}
+	&(f(x)+g(x))' = f'(x)+ g'(x) \\
+	&(x^2)' = 2x  \\
+	&(x^3)' = 3x^2 \\
+	&\textnormal{Tangentligningen er givet ved } y = f'(x_0)(x-x_0) + f(x_0) \\
+	&\left( \frac{1}{x}\right)' = -\frac{1}{x^2}\\
+	&\textnormal{Toppunkt for parabel er givet ved } \left(\frac{-b}{2a},\frac{-d}{4a}\right)
+\end{align*}
+Fremlæggelse for hinanden i slutningen af modulet. 

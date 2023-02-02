@@ -1,0 +1,121 @@
+
+\begin{center}
+	\Huge
+	Den jævne cirkelbevægelse
+\end{center}
+
+\section*{Den jævne cirkelbevægelse}
+\stepcounter{section}
+
+Vi kan parametrisere en cirkel ved hjælp af de trigonometriske funktioner $\cos$ og $\sin$.
+\begin{defn}[Jævn cirkelbevægelse]
+	\textit{Den jævne cirkelbevægelse} defineres som partiklen, hvis stedfunktion er vektorfunktionen $\vv{r}$ givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			r\cos(\omega t) \\
+			r\sin(\omega t )
+		\end{pmatrix}.
+	\end{align*}
+\end{defn}
+Vi vil gerne vise, at hastigheden af partiklen er konstant, og at partiklens bane udgør en cirkel med radius $r$. 
+\begin{setn}
+	Den jævne cirkelbevægelse beskrevet ved vektorfunktionen
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			r\cos(\omega t)\\
+			r\sin(\omega t)
+		\end{pmatrix}		
+	\end{align*}
+	har konstant hastighed $\omega r$ og banekurven for partiklen udgør en cirkel med radius $r$ og centrum i $(0,0)$.
+\end{setn}
+\begin{proof}
+	Vi betragter først hastighedsfunktionen for $\vv{r}$.
+	\begin{align*}
+		\vv{v}(t) = \vv{r}'(t) = 
+		\begin{pmatrix}
+			-r \omega \sin(\omega t) \\
+			r \omega \cos(\omega t)
+		\end{pmatrix}.
+	\end{align*}
+	Vi bestemmer nu farten $|\vv{v}|$.
+	\begin{align*}
+		|\vv{v}(t)| &= \left|
+		\begin{pmatrix}
+			-r\omega \sin(\omega t) \\	
+			r \omega \cos( \omega t)
+		\end{pmatrix}				
+		\right| \\
+		&= \sqrt{(-r\omega \sin(\omega t))^2 + (r \omega\cos(\omega t))^2} \\
+		&= \sqrt{r^2\omega^2(\sin(\omega t)^2+\cos(\omega t)^2)}\\
+		&= r\omega \sqrt{\sin(\omega t)^2 + \cos(\omega t )^2}\\
+		&= \omega r,
+	\end{align*}
+	hvor den sidste lighed følger af idiotformlen
+	\begin{align*}
+		\cos(x)^2 + \sin(x)^2 = 1.
+	\end{align*}
+	Vi definerede en cirkel som alle punkter, der har afstand $r$ fra centrum. Vi undersøger derfor længden af stedfunktionen $\vv{r}$, da dette må tilsvare afstanden fra 
+	$(0,0)$. 
+	\begin{align*}
+		|\vv{r}(t)| &= 
+		\left| 
+		\begin{pmatrix}
+			r\cos(\omega t) \\
+			r\sin(\omega t)		
+		\end{pmatrix}
+		\right| \\
+		&= \sqrt{(r\cos(\omega t))^2 + (r\sin(\omega t))^2} \\
+		&= \sqrt{r^2(\cos(\omega t)^2 + \sin(\omega t)^2)} \\
+		&= r\sqrt{\cos(\omega t)^2 + \sin(\omega t)^2} \\
+		&= r,
+	\end{align*}
+	hvor vi igen udnytter idiotformlen. Da stedvektoren har konstant afstand $r$ fra origo, er kontinuert og har konstant fart må banekurven for $\vv{r}$ udgøre en cirkel med 
+	radius $r$.
+\end{proof}
+
+
+\section*{Opgave 1}
+Lad en jævn cirkelbevægelse være givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			2\cos(\pi t) \\
+			2\sin(\pi t)
+		\end{pmatrix}.
+	\end{align*}	
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $r(0)$ og $r(1)$.
+	\item Bestem de værdier for $t$, så 
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			0 \\ 1
+		\end{pmatrix}
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+Lad en jævn cirkelbevægelse være givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			2\cos(\omega t) \\
+			2\sin(\omega t)
+		\end{pmatrix}.
+	\end{align*}	
+\begin{enumerate}[label=\roman*)]
+	\item Det oplyses, at $P_0(1,0)$, $P_1(1,0)$ og $P_2(-1,0)$. Bestem ud fra dette vinkelhastigheden $\omega$, så $\omega \leq 2\pi$.
+	\item Hvis det oplyses, at omløbstiden er givet ved $T$, hvordan findes vinkelhastigheden $\omega$ så?
+\end{enumerate}
+
+\section*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+	\item Vis, at hastighedsvektoren for den jævne cirkelbevægelse er parallel med stedvektoren $\vv{r}$.
+	\item Vis, at accelerationsvektoren for den jævne cirkelbevægelse peger i modsat retning af $\vv{r}$.
+\end{enumerate}
+
+
+

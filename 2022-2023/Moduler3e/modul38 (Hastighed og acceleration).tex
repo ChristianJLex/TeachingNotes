@@ -1,0 +1,208 @@
+\begin{center}
+	\Huge
+	Hastighed og acceleration
+\end{center}
+
+\section*{Vektorfunktioner som stedfunktioner}
+\stepcounter{section}
+
+Da vi introducerede vektorfunktioner bemærkede vi, at vektorfunktioner kan udgøre stedfunktioner for partikler i planen. Præcist som i kender det fra fysik, så er hastigheden af et objekt givet som den afledede af stedfunktionen.
+\begin{defn}[Hastighed]
+	Lad $\vv{r}: \mathbb{R}\to \mathbb{R}^2$ være en stedfunktion for en partikel givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			x(t) \\
+			y(t)
+		\end{pmatrix},
+\end{align*}		
+hvor koordinatfunktionerne $x$ og $y$ begge er differentiable. 
+Så er \textit{hastigheden} af partiklen til tiden $t$ givet ved
+\begin{align*}
+	\vv{v}(t) =  \vv{r}'(t) = 
+	\begin{pmatrix}
+		x'(t) \\
+		y'(t)
+	\end{pmatrix}.
+\end{align*}
+\end{defn}
+
+\begin{exa}\label{exa:exa1}
+	Vi betragter en partikel, hvis position er beskrevet ved vektorfunktionen $\vv{r}$ givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t^2-2t \\
+			\frac{1}{5}t^5+3t^3
+		\end{pmatrix}.
+	\end{align*}
+	Hastighedsfunktionen for denne vektorfunktion er så givet ved
+	\begin{align*}
+		\vv{v}(t) = \vv{r}'(t) = 
+		\begin{pmatrix}
+			2t-2 \\
+			t^4+9t^2
+		\end{pmatrix}.
+	\end{align*}
+	Skal vi bestemme hastigheden til tidspunktet $t=2$, så indsættes $2$ i hastighedsfunktionen. 
+	\begin{align*}
+		\vv{v}(2) = 
+		\begin{pmatrix}
+			2\cdot 2 - 2 \\
+			2^4+9\cdot 2^2
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			2 \\
+			52
+		\end{pmatrix}.
+	\end{align*}
+	I $x$-aksens retning er hastigheden derfor $2$ og i $y$-aksens retning er hastigheden $52$. 
+\end{exa}
+Som I også ved fra jeres fysikundervisning, så beskriver den afledede af en hastighedsfunktion accelerationen af partiklen. 
+\begin{defn}[Acceleration]
+Lad $\vv{r}:\mathbb{R} \to \mathbb{R}^2$ være en stedfunktion til en partikel givet ved
+\begin{align*}
+	\vv{r}(t) = 
+	\begin{pmatrix}
+		x(t) \\
+		y(t)
+	\end{pmatrix},
+\end{align*}
+hvor koordinatfunktionerne $x$ og $y$ begge er to gange differentiable funktioner. Så er \textit{accelerationen} af partiklen til tiden $t$ givet ved
+\begin{align*}
+	\vv{a}(t) = \vv{v}'(t) = \vv{r}''(t) = 
+	\begin{pmatrix}
+		x''(t) \\
+		y''(t)
+	\end{pmatrix}.
+\end{align*}
+\end{defn}
+
+\begin{exa}
+	Vi betragter igen vektorfunktionen $\vv{r}$ fra Eksempel \ref{exa:exa1} givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t^2-2t \\
+			\frac{1}{5}t^5+3t^3
+		\end{pmatrix}.	
+	\end{align*}
+	For at bestemme accelerationen for partiklen bestemmer vi $\vv{r}'':$
+	\begin{align*}
+		\vv{a}(t) = \vv{r}''(t) = 
+		\begin{pmatrix}
+			2 \\
+			4t^3 + 18t
+		\end{pmatrix}.
+	\end{align*}
+	Accelerationen af partiklen til tidspunktet $t=2$ er derfor
+	\begin{align*}
+		\vv{a}(2) = 
+		\begin{pmatrix}
+			2 \\
+			4\cdot 2^3 + 18\cdot 2
+		\end{pmatrix} =
+		\begin{pmatrix}
+			2 \\
+			68
+		\end{pmatrix}.
+	\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+
+Bestem hastigheds- og accelerationsvektorfunktionerne $\vv{v}$ og $\vv{a}$ for følgende vektorfunktioner.
+\begin{align*}
+	&1) \ \vv{r}(t) =
+	\begin{pmatrix}
+		\cos(t)  \\
+		\sin(t)
+	\end{pmatrix}
+	&&2) \ \vv{r}(t) =
+	\begin{pmatrix}
+		t^4  \\
+		t^2
+	\end{pmatrix}   \\
+	&3) \ \vv{r}(t) =
+	\begin{pmatrix}
+		t^3-t^2  \\
+		t^5-15t^3
+	\end{pmatrix}
+	&&4) \ \vv{r}(t) =
+	\begin{pmatrix}
+		t^3+t^2+t+1  \\
+		t^6-10t^3
+	\end{pmatrix}   \\
+\end{align*}
+
+\section*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+	\item En partikels stedfunktion er givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			e^{2t} \\
+			t^3-3t
+		\end{pmatrix}.
+	\end{align*}
+	Bestem hastighedsvektoren til tidspunktet $t=0$ og accelerationsvektoren til tidspunktet $t=1$. 
+	\item En partikels stedfunktion er givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\sin(2t) \\
+			\cos(4t)
+		\end{pmatrix}.
+	\end{align*}
+	Bestem hastighedsvektoren til tidspunktet $t=\pi$ og accelerationsvektoren til tidspunktet $t=\pi/2$.
+\end{enumerate}
+
+\section*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+	\item En partikels stedfunktion er givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\frac{1}{3}t^3 + \frac{1}{2}t^2+t+2 \\
+			3t^2+2t+1
+		\end{pmatrix}.
+	\end{align*}
+	Bestem $t$, så hastighedsvektoren for partiklen er givet ved
+	\begin{align*}
+		\begin{pmatrix}
+			13 \\
+			20
+		\end{pmatrix}
+	\end{align*}
+	\item En partikels stedfunktion er givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t^4-4t^2 \\
+			2t^2-2t
+		\end{pmatrix}.
+	\end{align*}
+	Bestem de værdier for $t$, så accelerationen for partiklen er givet ved
+	\begin{align*}
+		\begin{pmatrix}
+			56 \\
+			4
+		\end{pmatrix}.
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item En partikels stedfunktion er givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t^2-8t \\
+			\frac{1}{3}t^3-4t
+		\end{pmatrix}.
+	\end{align*}
+	Bestem de værdier for $t$, så hastighedsvektoren er lodret, og bestem de værdier for $t$, så hastighedsvektoren er vandret. 
+\end{enumerate}
+\textsl{•}

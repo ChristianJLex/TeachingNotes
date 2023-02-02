@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  2 JAN 2023 14:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  8 JAN 2023 14:47
 entering extended mode
 **./Afleveringsskabelon2v.tex
 (Afleveringsskabelon2v.tex
@@ -1948,7 +1948,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-<Billeder/bygge.jpg, id=44, 4835.06375pt x 3224.045pt>
+<Billeder/bygge.jpg, id=43, 4835.06375pt x 3224.045pt>
 File: Billeder/bygge.jpg Graphic file (type jpg)
 <use Billeder/bygge.jpg>
 Package pdftex.def Info: Billeder/bygge.jpg  used on input line 193.
@@ -2086,7 +2086,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-<Billeder/Bakterie.jpg, id=50, 6022.5pt x 4015.0pt>
+<Billeder/Bakterie.jpg, id=49, 6022.5pt x 4015.0pt>
 File: Billeder/Bakterie.jpg Graphic file (type jpg)
 <use Billeder/Bakterie.jpg>
 Package pdftex.def Info: Billeder/Bakterie.jpg  used on input line 234.
@@ -2237,13 +2237,12 @@ NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
 amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users
-/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/esvect/vect10.pfb>
-Output written on Afleveringsskabelon2v.pdf (7 pages, 7035508 bytes).
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/User
+s/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.
+pfb>
+Output written on Afleveringsskabelon2v.pdf (7 pages, 7026756 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
  34 words of extra memory for PDF output out of 10000 (max. 10000000)
 

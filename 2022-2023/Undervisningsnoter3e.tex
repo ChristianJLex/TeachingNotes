@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Modul 36
+Modul 43
 }
-\chead{10. januar 2023
+\chead{31. januar 2023
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -33,286 +33,120 @@ Modul 36
 
 \begin{center}
 	\Huge
-	Differentialkvotient for vektorfunktioner
+	Den jævne cirkelbevægelse
 \end{center}
-\section*{Differentiation af vektorfunktioner}
+
+\section*{Den jævne cirkelbevægelse}
 \stepcounter{section}
 
-Da vi bestemte monotoniforhold for vektorfunktioner udnyttede vi, at vi kunne differentiere koordinatfunktionerne $x$ og $y$ for vektorfunktionen
-\begin{align*}
-	\vv{r}(t) = 
-	\begin{pmatrix}
-		x(t) \\
-		y(t)
-	\end{pmatrix}.
-\end{align*}
-Vi vil definere hvad vi mener med differentialkvotienten for en vektorfunktion lidt mere præcist. Den opfører sig (heldigvist) præcist som vi vil forvente. 
-\begin{defn}[Differentialkvotient for vektorfunktion]
-	Lad $\vv{r}: \mathbb{R} \to \mathbb{R}^2$ være en vektorfunktion.
-	Så er differentialkvotienten for $\vv{r}$ defineret ved grænseværdien
-	\begin{align*}
-		\vv{r}'(t) = \lim_{h\to 0}\frac{\vv{r}(t+h)-\vv{r}(t)}{h},
-	\end{align*}
-	hvis grænsen eksisterer. 	
-\end{defn} 
-Følgende sætning sikrer os i, at differentiation af vektorfunktioner blot er differentiation af koordinatfunktioner. 
-\begin{setn}
-	Lad $\vv{r}(t):\mathbb{R} \to \mathbb{R}^2$ være givet ved
+Vi kan parametrisere en cirkel ved hjælp af de trigonometriske funktioner $\cos$ og $\sin$.
+\begin{defn}[Jævn cirkelbevægelse]
+	\textit{Den jævne cirkelbevægelse} defineres som partiklen, hvis stedfunktion er vektorfunktionen $\vv{r}$ givet ved
 	\begin{align*}
 		\vv{r}(t) = 
 		\begin{pmatrix}
-			x(t) \\
-			y(t)
-		\end{pmatrix},
-	\end{align*}
-	hvor både $x$ og $y$ er differentiable funktioner. Så gælder der, at 
-	\begin{align*}
-		\vv{r}'(t) = 
-		\begin{pmatrix}
-			x'(t) \\
-			y'(t)
+			r\cos(\omega t) \\
+			r\sin(\omega t )
 		\end{pmatrix}.
 	\end{align*}
+\end{defn}
+Vi vil gerne vise, at hastigheden af partiklen er konstant, og at partiklens bane udgør en cirkel med radius $r$. 
+\begin{setn}
+	Den jævne cirkelbevægelse beskrevet ved vektorfunktionen
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			r\cos(\omega t)\\
+			r\sin(\omega t)
+		\end{pmatrix}		
+	\end{align*}
+	har konstant hastighed $\omega r$ og banekurven for partiklen udgør en cirkel med radius $r$ og centrum i $(0,0)$.
 \end{setn}
 \begin{proof}
-	Vi betragter definitionen af differentialkvotienten for $\vv{r}$:
+	Vi betragter først hastighedsfunktionen for $\vv{r}$.
 	\begin{align*}
-		r'(t) &= \lim_{h\to 0}\frac{\vv{r}(t+h)-\vv{r}(t)}{h}\\
-		&= \lim_{h\to 0 }
-		\frac{
+		\vv{v}(t) = \vv{r}'(t) = 
 		\begin{pmatrix}
-			x(t+h) \\
-			y(t+h)
-		\end{pmatrix} -
-		\begin{pmatrix}
-			x(t) \\
-			y(t)
-		\end{pmatrix}
-		}{	
-		h
-		} \\
-		&=
-		\lim_{h\to 0 }
-		\frac{
-		\begin{pmatrix}
-			x(t+h)-x(t) \\
-			y(t+h)-y(t)
-		\end{pmatrix}
-		}{
-		h
-		}
-		\\
-		&=
-		\lim_{h\to 0}
-		\begin{pmatrix}
-			\frac{x(t+h)-x(t)}{h} \\
-			\frac{y(t+h)-y(t)}{h}
-		\end{pmatrix} \\
-		&=
-		\begin{pmatrix}
-			x'(t) \\
-			y'(t)
-		\end{pmatrix},
+			-r \omega \sin(\omega t) \\
+			r \omega \cos(\omega t)
+		\end{pmatrix}.
 	\end{align*}
-	hvor vi i sidste lighed udnytter, at $x$ og $y$ begge er differentiable funktioner.
+	Vi bestemmer nu farten $|\vv{v}|$.
+	\begin{align*}
+		|\vv{v}(t)| &= \left|
+		\begin{pmatrix}
+			-r\omega \sin(\omega t) \\	
+			r \omega \cos( \omega t)
+		\end{pmatrix}				
+		\right| \\
+		&= \sqrt{(-r\omega \sin(\omega t))^2 + (r \omega\cos(\omega t))^2} \\
+		&= \sqrt{r^2\omega^2(\sin(\omega t)^2+\cos(\omega t)^2)}\\
+		&= r\omega \sqrt{\sin(\omega t)^2 + \cos(\omega t )^2}\\
+		&= \omega r,
+	\end{align*}
+	hvor den sidste lighed følger af idiotformlen
+	\begin{align*}
+		\cos(x)^2 + \sin(x)^2 = 1.
+	\end{align*}
+	Vi definerede en cirkel som alle punkter, der har afstand $r$ fra centrum. Vi undersøger derfor længden af stedfunktionen $\vv{r}$, da dette må tilsvare afstanden fra 
+	$(0,0)$. 
+	\begin{align*}
+		|\vv{r}(t)| &= 
+		\left| 
+		\begin{pmatrix}
+			r\cos(\omega t) \\
+			r\sin(\omega t)		
+		\end{pmatrix}
+		\right| \\
+		&= \sqrt{(r\cos(\omega t))^2 + (r\sin(\omega t))^2} \\
+		&= \sqrt{r^2(\cos(\omega t)^2 + \sin(\omega t)^2)} \\
+		&= r\sqrt{\cos(\omega t)^2 + \sin(\omega t)^2} \\
+		&= r,
+	\end{align*}
+	hvor vi igen udnytter idiotformlen. Da stedvektoren har konstant afstand $r$ fra origo, er kontinuert og har konstant fart må banekurven for $\vv{r}$ udgøre en cirkel med 
+	radius $r$.
 \end{proof}
 
-\begin{exa}
-	Differentialkvotienten af vektorfunktionen
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			t^2+2t+1 \\
-			\ln(t) + 3e^{2t}
-		\end{pmatrix}
-	\end{align*}
-	er givet ved
-	\begin{align*}
-		\vv{r}'(t) = 
-		\begin{pmatrix}
-			(t^2+2t+1)' \\
-			(\ln(t) + 3e^{2t})'
-		\end{pmatrix} =
-		\begin{pmatrix}
-			2t+2 \\
-			\frac{1}{t} + 6e^{2t}
-		\end{pmatrix}.
-	\end{align*}
-\end{exa}
-
-\section*{Tangentvektorer}
-\stepcounter{section}
-
-Vi vil bruge differentialkvotienten for en vektorfunktion til at definere tangentvektoren til en parameterkurve for en vektorfunktion. 
-\begin{defn}
-	Lad $\vv{r}:\mathbb{R} \to \mathbb{R}^2$ være en vektorfunktion. Så er tangentvektoren til parameterkurven for $\vv{r}$ i punktet $P_t(x(t),y(t))$ givet ved $\vv{r}'(t)$. 
-\end{defn}
-\begin{exa}
-	Betragt vektorfunktionen
-	\begin{align*}
-		\vv{r}(t) =
-		\begin{pmatrix}
-			t^4-2t^2 \\
-			t^3-t
-		\end{pmatrix}
-	\end{align*}
-	Vi ønsker at bestemme en parameterfremstilling for tangentlinjen for parameterkurven for $\vv{r}$ gennem punktet 
-	\begin{align*}
-		P_2(x(2),y(2)) = P_2(2^4-2\cdot 2^2,2^3-2) = P_2(8,6).
-	\end{align*}
-	Tangentvektoren for $\vv{r}$ er givet ved
-	\begin{align*}
-		\vv{r}'(t) =
-		\begin{pmatrix}
-			4t^3-4t \\
-			3t^2-1
-		\end{pmatrix}.
-	\end{align*}
-	Dermed er retningsvektoren for tangenten gennem $P_2$ givet ved
-	\begin{align*}
-		\vv{r}'(2) = 
-		\begin{pmatrix}
-			4\cdot 2^3 - 4\cdot 2 \\
-			3\cdot 2^2-1
-		\end{pmatrix}
-		=
-		\begin{pmatrix}
-			24 \\
-			11
-		\end{pmatrix}.				
-	\end{align*}
-	Da er parameterfremstillingen for tangentlinjen givet ved
-	\begin{align*}
-		\begin{pmatrix}
-			x \\
-			y
-		\end{pmatrix} =
-		\begin{pmatrix}
-			8 \\
-			6
-		\end{pmatrix} +
-		t \begin{pmatrix}
-			24 \\
-			11
-		\end{pmatrix}.
-	\end{align*}
-	
-	Vi kan også bestemme en ligning for tangenten. Da 
-	\begin{align*}
-		\begin{pmatrix}
-			24 \\
-			11
-		\end{pmatrix}
-	\end{align*}
-	er en retningsvektor for tangenten, så vil
-	\begin{align*}
-		\begin{pmatrix}
-			11 \\
-			-24
-		\end{pmatrix}
-	\end{align*}
-	være en normalvektor til tangenten. Derfor er en ligning for tangenten givet ved
-	\begin{align*}
-		11(x-8) -24(y-6) = 0.
-	\end{align*}
-\end{exa}
 
 \section*{Opgave 1}
-Bestem den afledede af følgende vektorfunktioner
-\begin{align*}
-	&1) \ \vv{r}(t) = 
-	\begin{pmatrix}
-		6t^2+2t+1\\
-		5t^2+10t
-	\end{pmatrix}	
-	  &&2) \ \vv{r}(t) = 
-	\begin{pmatrix}
-		\ln(t^2)\\
-		4t^4
-	\end{pmatrix}	   \\
-	&3) \ \vv{r}(t) = 
-	\begin{pmatrix}
-		\cos(t) \sin(t)\\
-		\cos(t)
-	\end{pmatrix}	  &&4) \  \vv{r}(t) = 
-	\begin{pmatrix}
-		\sqrt{t}\ln(t)\\
-		\sin(t^4+2t^2)
-	\end{pmatrix}	  \\
-\end{align*}
+Lad en jævn cirkelbevægelse være givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			2\cos(\pi t) \\
+			2\sin(\pi t)
+		\end{pmatrix}.
+	\end{align*}	
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $r(0)$ og $r(1)$.
+	\item Bestem de værdier for $t$, så 
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			0 \\ 1
+		\end{pmatrix}
+	\end{align*}
+\end{enumerate}
 
 \section*{Opgave 2}
+Lad en jævn cirkelbevægelse være givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			2\cos(\omega t) \\
+			2\sin(\omega t)
+		\end{pmatrix}.
+	\end{align*}	
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en parameterfremstilling for tangenten til parameterkurven for
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			\ln(t) \\
-			t^2
-		\end{pmatrix}
-	\end{align*}
-	i punktet $P_1$.
-	\item Bestem en parameterfremstilling for tangenten til parameterkurven for
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			\frac{1}{3}t^3 - \frac{1}{2}t^2 \\
-			t
-		\end{pmatrix}
-	\end{align*}
-	i punktet $P_4$.
-	\item Bestem en parameterfremstilling for tangenten til parameterkurven
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			\cos(t) \\
-			\sin(t)
-		\end{pmatrix}
-	\end{align*}
-	i punktet $P_{\pi}$.
+	\item Det oplyses, at $P_0(1,0)$, $P_1(1,0)$ og $P_2(-1,0)$. Bestem ud fra dette vinkelhastigheden $\omega$, så $\omega \leq 2\pi$.
+	\item Hvis det oplyses, at omløbstiden er givet ved $T$, hvordan findes vinkelhastigheden $\omega$ så?
 \end{enumerate}
 
 \section*{Opgave 3}
 
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en ligning for tangenten til parameterkurven for 
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			t(t^2-1) \\
-			2\sqrt{t}
-		\end{pmatrix}
-	\end{align*}
-	i punktet $P_4$.
-	\item Bestem en ligning for tangenten til parameterkurven for 
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			\cos(t)\sin(t)
-			1
-		\end{pmatrix}
-	\end{align*}
-	i punktet $P_{\pi/2}$.
+	\item Vis, at hastighedsvektoren for den jævne cirkelbevægelse er parallel med stedvektoren $\vv{r}$.
+	\item Vis, at accelerationsvektoren for den jævne cirkelbevægelse peger i modsat retning af $\vv{r}$.
 \end{enumerate}
 
-\section*{Opgave 4}
-
-\begin{enumerate}[label=\roman*)]
-	\item Brug definitionen af differentialkvotienten for vektorfunktioner til at bestemme differentialkvotienten for 
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			t^2 \\
-			t^3
-		\end{pmatrix}
-	\end{align*}
-	\item Brug definitionen af differentialkvotienten for vektorfunktioner til at bestemme differentialkvotienten for 
-	\begin{align*}
-		\vv{r}(t) = 
-		\begin{pmatrix}
-			\frac{1}{t} \\
-			4t^2+2t+1
-		\end{pmatrix}
-	\end{align*}
-\end{enumerate}
 \end{document}

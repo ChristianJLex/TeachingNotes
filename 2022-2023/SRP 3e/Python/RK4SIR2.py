@@ -25,7 +25,7 @@ end = 15
 
 #The model parameters are assigned here
 beta = 2.4
-gamma = 2.5
+gamma = 0.7
 N = 1001
 
 #The main algorithm
