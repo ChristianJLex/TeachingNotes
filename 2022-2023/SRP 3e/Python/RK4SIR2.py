@@ -16,17 +16,17 @@ Created on Thu Jan  5 17:32:55 2023
 """
 
 import matplotlib.pyplot as plt
-
+import pandas as pd
 
 #The conditions for the numerical ODE-solver are assigned here
-step_size = 0.05
-init_val = [1000,1,0]
-end = 15
+step_size = 0.01
+init_val = [60000-212,8,212]
+end = 20
 
 #The model parameters are assigned here
-beta = 2.4
-gamma = 0.7
-N = 1001
+beta = 2.33988
+gamma = 1.396
+N =60000
 
 #The main algorithm
 def RK4SIR(step_size, beta, gamma, N, init_val, end):
@@ -66,3 +66,9 @@ res = RK4SIR(step_size, beta, gamma, N, init_val, end)
 
 #A plot of our result. Nice!
 plt.plot(res[0],res[1],res[0],res[2],res[0],res[3])
+
+
+
+data = pd.DataFrame({"tid":res[0],"S":res[1],"I":res[2],"R":res[3]})
+
+data.to_excel('pest.xlsx',sheet_name="sheet1",index=False)
