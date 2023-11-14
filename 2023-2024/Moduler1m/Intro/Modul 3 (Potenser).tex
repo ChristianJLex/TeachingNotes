@@ -1,0 +1,108 @@
+
+
+\begin{center}
+\Huge
+Potenser og rødder
+\end{center}
+
+
+\section*{Potenser/rødder og det udvidede potensbegreb}
+\stepcounter{section}
+
+Når vi opløfter et tal $a$ i et naturligt tal $n$ så tilsvarer det
+\begin{align}\label{eq:powerdef}
+a^n = \underbrace{a\cdot a \cdots a}_{n\textnormal{ gange}},
+\end{align}
+vi multiplicerer altså tallet $a$ $n$ gange med sig selv. Vi vil snart forklare, hvad det betyder at opløfte et tal i både en positiv og negativ brøk. Vi vil først diskutere regnereglerne for potenser. Vi vil udnytte repræsentationen \eqref{eq:powerdef} for at udlede regnereglerne for multiplikation.
+Af repræsentationen \eqref{eq:powerdef} må vi for eksempel have
+\begin{align*}
+a^5a^3 = (a\cdot a\cdot a\cdot a\cdot a)(a\cdot a\cdot a) = a\cdot a\cdot a\cdot a\cdot a\cdot a\cdot a\cdot a = a^8, 
+\end{align*}
+og mere generelt for naturlige tal $m,n$ så har vi
+\begin{align*}
+a^na^m = \underbrace{(a\cdot a\cdots a)}_{n \textnormal{ gange}}\underbrace{(a\cdot a\cdots a)}_{m \textnormal{ gange}} = a^{m+n}
+\end{align*}
+Tilsvarende har vi for eksempel, at 
+\begin{align*}
+\frac{a^5}{a^3} = \frac{a\cdot a\cdot a\cdot a\cdot a}{a\cdot a\cdot a} = a\cdot a =a^2,
+\end{align*}
+og mere generelt for naturlige tal $m,n$, så
+\begin{align*}
+\frac{a^n}{a^m} = \underbrace{(a \cdot a \cdots a)}_{n\textnormal{ gange}}/\underbrace{(a \cdot a \cdots a)}_{m\textnormal{ gange}} = a^{n-m}.
+\end{align*}
+Derfor må vi også kunne udvide vores potensbegreb til negative eksponenter, og $a^{-n}$ må være lig $\frac{1}{a^n}$ af vores argumentation. Det burde også være klart, hvorfor $a^0 =1$ i det 
+\begin{align*}
+1 = \frac{a^{1}}{a^{1}} = a^{1-1} = a^0.
+\end{align*}
+Vi vil nu opskrive vores første potensregneregler:
+\begin{enumerate}[label=\roman*)]
+\item Potens/rod af produkt: $(ab)^n =a^nb^n $ og $\sqrt[n]{ab} = \sqrt[n]{a}\sqrt[n]{b}$.
+\item Multiplikation/division af potenser: $a^na^m = a^{n+m}$ og $\frac{a^n}{a^m} = a^{n-m}$.
+\end{enumerate}
+Med vores nuværende regler, vil vi se, om vi kan udlede flere regler. Vi har eksempelvis
+\begin{align*}
+(a^5)^2 = a^5a^5 \overset{\textnormal{ii)}}{=} a^{10}, 
+\end{align*}
+eller mere generelt for hele tal $m,n$ så
+\begin{align}\label{eq:powerpower}
+(a^m)^n = \underbrace{a^m\cdot a^m\cdots a^m}_{n \textnormal{ gange}} \overset{\textnormal{ii)}}{=}  a^{m+m+\cdots+m} = a^{mn}.
+\end{align}
+På samme tid, så har vi, at 
+\begin{align*}
+\sqrt[n]{a^n} = a. 
+\end{align*}
+Hvis vi sammenligner dette med \eqref{eq:powerpower}, så må vi have
+\begin{align*}
+a = \sqrt[n]{a^n} = (a^n)^{1/n},
+\end{align*}
+altså tilsvarer $n$'teroden at opløfte i $1/n$'te potens. Vi kan nu konstruere potenser med alle brøker $\frac{n}{m}$ som
+\begin{align*}
+a^{n/m} = \sqrt[m]{a^n},
+\end{align*}
+og vi kan derfor også give mening til at opløfte tal i andet end heltal. 
+Vi kan nu opskrive vores resterende potensregneregler:
+\begin{enumerate}[label=\roman*)]
+\item Potenser af potenser: $(a^n)^m = a^{nm}$,\\
+\item Rødder og potenser: $\sqrt[m]{a^n} = a^{\frac{n}{m}}$.
+\end{enumerate}
+
+I Tabel \ref{tab:regneregel} er potensregnereglerne opskrevet
+
+\bgroup
+\def\arraystretch{2}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c | c | c}
+		$a^m\cdot a^n = a^{m+n}$ & $\frac{a^m}{a^n} = a^{m-n}$ & $ (a^m)^n = a^{m\cdot n} $\\
+		$(a\cdot b)^n = a^n\cdot b^n $ & $ \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$ & $a^0 = 1$ \\
+		$a^{-n} = \frac{1}{a^n} $ & $a^{-1} = \frac{1}{a}$ & $\sqrt[n]{a} = a^{1/n} $ \\ 
+		$ \sqrt[n]{a^m}  = a^{m/n}$ & $\sqrt{a\cdot b} = \sqrt{a}\cdot \sqrt{b}$ & $\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}}$ 
+	\end{tabular}
+	\caption{Potensregneregler}
+	\label{tab:regneregel}
+\end{table}
+
+\egroup
+\section*{Opgave 1}
+Forkort følgende så meget som muligt. 
+\begin{align*}
+&1)\ (xy)^6   &&2)\ (ab^4)^2     \\
+&3)\ (2a)^2   &&4)\  (ab)^2(ab)^3    \\
+&5)\  (4x^3)^4             &&6)\ \frac{(a^2)^4b^3}{ab^2}\\
+ &7)\ (abc)^2      &&8)\ (a^5)^2(a^2)^5\\
+ &9)\ \frac{6^3}{6^2} &&10)\ \frac{2^8\cdot 3^5}{3^4\cdot 4^4}\\
+ &11)\  (x^5)^{1/5}            &&12)\ \sqrt[3]{27}\\
+ &13)\ \sqrt{5}\sqrt{20}      &&14)\ 3\sqrt{4}\sqrt{3}\\
+ &15)\ 3\sqrt{10}\cdot3\sqrt{2} &&16)\ 4\sqrt{3}\cdot2\sqrt{6} \\
+&17)\ \left(\frac{2^\frac{1}{2}}{4^2}\right)^4  &&18) \left(\frac{ab}{b^3}\right)^3
+\end{align*}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Forklar, hvorfor $(-1)^n = 1$, hvis $n$ er lige og  $(-1)^n=-1$, hvis n er ulige. 
+	\item Hvis $n$ er ulige, hvad er så fortegnet på
+	\begin{align*}
+		((-1)(-2)(-3))^n?
+	\end{align*}
+\end{enumerate}
+
