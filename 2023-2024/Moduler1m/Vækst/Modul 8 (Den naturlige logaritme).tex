@@ -1,0 +1,130 @@
+
+\begin{center}
+\Huge
+Den naturlige logaritme
+\end{center}
+\stepcounter{section}
+
+\section*{Den naturlige logaritme}
+
+Vi så sidst på titalslogaritmen $\log$, der opfyldte at 
+\begin{align*}
+	\log(10^x) = x,
+\end{align*}
+og
+\begin{align*}
+	10^{\log(x)} = x.
+\end{align*}
+Vi skal i dag arbejde med den naturlige logaritme $\ln$, der kan bruges i forbindelse med \textit{den naturlige eksponentialfunktion }
+\begin{align*}
+	f(x) = \textnormal{e}^x,
+\end{align*}
+hvor $\textnormal{e} \approx 2.72$ er \textit{Eulers tal}. Vi kommer til at arbejde med Eulers tal igen senere. 
+
+\begin{defn}[Den naturlige logaritme]
+	Den naturlige logaritme $\ln$ er funktionen, der opfylder at 
+	\begin{align*}
+		\ln(\e^x) = x,
+	\end{align*}
+	og 
+	\begin{align*}
+		\e^{\ln(x)} = x.
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	Det gælder eksempelvis, at 
+	\begin{align*}
+		\ln(\e^{7}) = 7,
+	\end{align*}
+	eller 
+	\begin{align*}
+		\e^{\ln(3)} = 3.
+	\end{align*}
+\end{exa}
+Som for titalslogaritmen gælder der tilsvarende nogle regneregler
+\begin{setn}[Logaritmeregneregler]
+	For $a,b>0$ gælder der, at
+	\begin{enumerate}[label=\roman*)]
+		\item $\ln(a\cdot b) = \ln(a)+ \ln(b)$,
+		\item $\ln\left(\frac{a}{b}\right) = \ln(a)-\ln(b)$,
+		\item $\ln(a^x) = x\ln(a).$
+	\end{enumerate}		
+\end{setn}
+\begin{proof}
+	Vi vil løbende udnytte, at $\ln(\e^a) = a$ og $\e^{\ln(a)} = a$. Vi betragter udtrykkene.
+	\\
+	i)
+	\begin{align*}
+		\ln(a\cdot b) &= \ln(\e^{\log(a)}\e^{\ln(b)}) \\
+		&= \ln(\e^{\ln(a)+\ln(b)})\\
+		&\ln(a) + \ln(b).
+	\end{align*}
+	ii)
+	\begin{align*}
+		\ln\left(\frac{a}{b}\right) &= \ln\left(\frac{\e^a}{\e^b}\right)\\
+		&= \ln(\e^{\ln(a)-\ln(b)})\\
+		&= \ln(a)-\ln(b).
+	\end{align*}
+	iii)
+	\begin{align*}
+		\ln(a^x) &= \ln\left( \left(\e^{\ln(a)}\right)^x\right)\\
+		&= \ln\left(\e^{\ln(a)x}\right)\\
+		&= x\ln(a),
+    \end{align*}		
+    og vi er færdige med beviset. 
+\end{proof}
+
+
+\subsection*{Opgave 1}
+En tabel med funktionsværdier for $10^x$ er givet.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		$x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 \\
+		\hline
+		$\e^x$ & 0.018 & 0.049 & 0.135& 0.368 & 1 & 2.718 & 7.389 & 20.085 & 54.598 & 148.413
+	\end{tabular}
+\end{table}
+Brug tabellen til at bestemme følgende.
+\begin{align*}
+	&1) \ \ln(20.085)     &&2) \ \ln(54.598)    \\
+	&3) \ \ln(1)     &&4) \  \ln(0.018)		\\
+	&5) \ \ln(0.049) &&6) \ \ln(148.413)    
+\end{align*}
+
+
+\subsection*{Opgave 2}
+Bestem følgende udtryk 
+\begin{align*}
+	&1) \ \ln(\e^3)    &&2) \ \ln(\e^17)   \\  
+	&3) \ \ln(\e^{\sqrt{4}})   &&4) \ \ln(\e)     \\  
+	&5) \ \ln(1)   &&6) \ \ln(\e^{-0.157})   \\  
+\end{align*}
+
+
+\subsection*{Opgave 3}
+Vi har set på logaritmerne $\ln$ og $\log$, der er den omvendte funktion til $\e^x$ og $10^x$ henholdsvist. For hver eksponentialfunktion $a^x$ findes en tilsvarende logaritme
+$\log_a$. Der gælder eksempelvist at
+\begin{align*}
+	\log_5(5^3) = 3
+\end{align*}
+eller 
+\begin{align*}
+	\log_2(8) = 3.
+\end{align*}
+Vi skal altså for $\log_a(x) = y$ finde det tal $y$, som vi skal opløfte $a$ i for at få $x$.  \\
+
+Brug dette til at bestemme følgende.
+\begin{align*}
+	&1) \  \log_{10}(1000)      &2) \  \log_5(25)       \\
+	&3) \  \log_2(16)       &4) \ \log_3(9)         \\
+	&5) \  \log_3(27)      &6) \  \log_7(1)      \\
+	&7) \  \log_8(1)      &8) \  \log_2(1024)      \\
+	&9) \  \log_{10}(1000000)     &10) \  \log_4(64)        \\
+\end{align*}
+
+
+\subsection*{Opgave 4}
+
+Aflevering

@@ -1,0 +1,141 @@
+
+\begin{center}
+\Huge
+Logaritmer
+\end{center}
+\stepcounter{section}
+
+\section*{Titalslogaritmen}
+Har vi en ligning af typen $x^2 = k$, så kan vi bestemme $x$ ved at tage kvadratroden på begge sider af lighedstegnet og bestemme (en af) løsningerne til ligningen. I forbindelse med eksponentiel vækst
+vil vil gerne kunne løse ligninger af typen $10^x = k$ og $e^x=k$  (hvor $e$ betegner Eulers tal, $e \approx 2.71)$. Til dette vil vi introducere logaritmefunktionerne. 
+
+Logaritmefunktionen er en omvendt funktion til eksponentialfunktionen. I følgende tabel kan vi se eksponentialfunktionen $f$ givet ved
+\begin{align*}
+	f(x) = 10^x.
+\end{align*}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$x$ & 0 & 1 & 2 & 3 & 4 & 5\\
+		\hline
+		$10^x$ & 1 & 10 & 100 & 1000 & 10000 & 100000
+	\end{tabular}
+\end{table}
+Da $\log(x)$ gør det omvendte af $10^x$, så vil en tilsvarende tabel se ud som følgende.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$x$ & 1 & 10 & 100 & 1000 & 10000 & 100000 \\
+		\hline
+		$\log(x)$ & 0 & 1 & 2 & 3 & 4 & 5
+	\end{tabular}
+\end{table}
+\begin{defn}[Titalslogaritmen]
+	Titalslogaritmen $\log$ er den entydige funktion, der opfylder, at 
+	\begin{align*}
+		\log(10^x) = x
+	\end{align*}
+	og 
+	\begin{align*}
+		10^{\log(x)} = x.
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	Vi har, at 
+	\begin{align*}
+		\log(100) = \log(10^2) = 2.
+	\end{align*}
+\end{exa}
+
+For titalslogaritmen gælder der en række regneregler. 
+\begin{setn}[Logaritmeregneregler]
+	For $a,b>0$ gælder der, at
+	\begin{enumerate}[label=\roman*)]
+		\item $\log(a\cdot b) = \log(a)+ \log(b)$,
+		\item $\log\left(\frac{a}{b}\right) = \log(a)-\log(b)$,
+		\item $\log(a^x) = x\log(a).$
+	\end{enumerate}		
+\end{setn}
+\begin{proof}
+	Vi vil løbende udnytte, at $\log(10^a) = a$ og $10^{\log(a)} = a$. Vi betragter udtrykkene.
+	\\
+	i)
+	\begin{align*}
+		\log(a\cdot b) &= \log(10^{\log(a)}10^{\log(b)}) \\
+		&= \log(10^{\log(a)+\log(b)})\\
+		&\log(a) + \log(b).
+	\end{align*}
+	ii)
+	\begin{align*}
+		\log\left(\frac{a}{b}\right) &= \log\left(\frac{10^a}{10^b}\right)\\
+		&= \log(10^{\log(a)-\log(b)})\\
+		&= \log(a)-\log(b).
+	\end{align*}
+	iii)
+	\begin{align*}
+		\log(a^x) &= \log\left( \left(10^{\log(a)}\right)^x\right)\\
+		&= \log\left(10^{\log(a)x}\right)\\
+		&= x\log(a),
+    \end{align*}		
+    og vi er færdige med beviset. 
+\end{proof}
+
+\begin{exa}
+	Vi ønsker at løse ligningen $10^{x+5} = 1000$. Vi tager derfor logaritmen på begge sider af lighedstegnet:
+	\begin{align*}
+		\log\left(10^{x+5}\right) = \log(1000) \ \Leftrightarrow \ x+5 = \log(1000) = 3 \ \Leftrightarrow	\ x = -2.
+	\end{align*}	 
+\end{exa}
+\begin{exa}
+	Vi ønsker at løse ligningen 
+	\begin{align*}
+		\log(4x) = 4. 
+	\end{align*}
+	Vi opløfter derfor $10$ i begge sider af lighedstegnet.
+	\begin{align*}
+		10^{\log(4x)} = 10^4 \ \Leftrightarrow \ 4x = 10000 \ \Leftrightarrow	\ x = 2500.
+	\end{align*}
+\end{exa}
+
+\subsection*{Opgave 1}
+En tabel med funktionsværdier for $10^x$ er givet.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		$x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 \\
+		\hline
+		$10^x$ & 0.0001 & 0.001 & 0.01& 0.1 & 1 & 10 & 100 & 1000 & 10000 & 100000
+	\end{tabular}
+\end{table}
+Brug tabellen til at bestemme følgende.
+\begin{align*}
+	&1) \ \log(10)     &&2) \ \log(1)    \\
+	&3) \ \log(0.001)     &&4) \  \log(100000)   
+\end{align*}
+
+
+\subsection*{Opgave 2}
+Bestem følgende udtryk 
+\begin{align*}
+	&1) \ \log(10^7)    &&2) \ \log(10000)   \\  
+	&3) \ \log(10^{1.5})   &&4) \ \log(10^{\sqrt{2}})     \\  
+	&5) \ \log(10000000)   &&6) \ \log(1)   \\  
+	&7) \ \log(100)			&&8) \ \log(1000)  \\
+	&9) \ \log(10^{-4})     &&10) \ \log(0.00001) \\ 
+\end{align*}
+
+\subsection*{Opgave 3}
+\begin{align*}
+	&1) \ \log(2\cdot 10^3) && 2) \ \log(3000) \\
+	&3) \ \log(500)        && 4) \ \log(10) + \log(1000) \\
+	&5) \  \log(2500)  &&6) \ \log(20)+ \log(5)   \\   
+	&7) \  \log(5^6)  &&8) \ \log(4000) - \log(4)   \\   
+	&9) \  \log(2)+\log(2)+\log(5) + \log(5)  &&10) \ \log(50)-\log(5)  \\ 
+\end{align*}	
+
+
+\subsection*{Opgave 4}
+
+Aflevering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  6 DEC 2023 12:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  6 DEC 2023 17:49
 entering extended mode
 **./Afleveringsskabelon1m.tex
 (Afleveringsskabelon1m.tex
@@ -1995,16 +1995,204 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--183
  []
 
 
-Overfull \hbox (12.28706pt too wide) in paragraph at lines 178--184
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 184--184
+[]\OT1/cmr/m/n/12 a) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 184--186
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--184
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 187--187
+[]\OT1/cmr/m/n/12 b) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 187--189
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
+
+ []
+
+
+Overfull \hbox (1.25566pt too wide) in paragraph at lines 197--197
+[]\OT1/cmr/m/n/12 c) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 197--199
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
+
+ []
+
+
+Overfull \hbox (12.28706pt too wide) in paragraph at lines 178--200
+[][] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 178--200
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 178--200
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 178--200
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 178--200
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--200
+
+ []
+
+
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 201--201
+[]\OT1/cmr/m/n/12 d) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 201--203
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 201--204
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
+
+ []
+
+<Billeder/alien.png, id=45, 4776.84625pt x 3184.89874pt>
+File: Billeder/alien.png Graphic file (type png)
+<use Billeder/alien.png>
+Package pdftex.def Info: Billeder/alien.png  used on input line 207.
+(pdftex.def)             Requested size: 246.68967pt x 164.45421pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+
+ []
+
+
+Overfull \hbox (1.90843pt too wide) in paragraph at lines 215--215
+[]\OT1/cmr/m/n/12 a) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 215--217
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--217
+
+ []
+
+
+Overfull \hbox (2.5612pt too wide) in paragraph at lines 218--218
+[]\OT1/cmr/m/n/12 b) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 218--220
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
+
+ []
+
+
+Overfull \hbox (1.25566pt too wide) in paragraph at lines 221--221
+[]\OT1/cmr/m/n/12 c) 
+ []
+
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 221--223
+[][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
+
+ []
+
+
+Overfull \hbox (12.28706pt too wide) in paragraph at lines 205--224
+[][] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 205--224
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 205--224
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 205--224
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 205--224
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[4 <./Billeder/Bakterie.jpg>] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2014,16 +2202,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[4 <./Billeder/Bakterie.jpg>] (Afleveringsskabelon1m.aux)
+[5 <./Billeder/alien.png>] (Afleveringsskabelon1m.aux)
 Package logreq Info: Writing requests to 'Afleveringsskabelon1m.run.xml'.
 \openout1 = `Afleveringsskabelon1m.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46611 strings out of 478907
- 1037052 string characters out of 2848099
- 1861566 words of memory out of 3000000
- 63748 multiletter control sequences out of 15000+600000
+ 46624 strings out of 478907
+ 1037308 string characters out of 2848099
+ 1861567 words of memory out of 3000000
+ 63759 multiletter control sequences out of 15000+600000
  410383 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,14n,86p,774b,2167s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2038,9 +2226,9 @@ amsfonts/cm/cmr17.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Afleveringsskabelon1m.pdf (5 pages, 3527579 bytes).
+Output written on Afleveringsskabelon1m.pdf (6 pages, 22568099 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 29 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
+ 34 words of extra memory for PDF output out of 10000 (max. 10000000)
 
