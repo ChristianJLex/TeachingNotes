@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  11 JAN 2024 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  11 JAN 2024 18:52
 entering extended mode
 **./Undervisningsnoter1m.tex
 (Undervisningsnoter1m.tex
@@ -1629,7 +1629,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2] 
+[2]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[3] 
 AED: lastpage setting LastPage
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1639,7 +1648,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3] (Undervisningsnoter1m.aux)
+[4] (Undervisningsnoter1m.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1648,15 +1657,15 @@ Package logreq Info: Writing requests to 'Undervisningsnoter1m.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46346 strings out of 478907
- 1032158 string characters out of 2848099
+ 46353 strings out of 478907
+ 1032227 string characters out of 2848099
  1843472 words of memory out of 3000000
- 63473 multiletter control sequences out of 15000+600000
+ 63474 multiletter control sequences out of 15000+600000
  410334 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,86p,773b,2115s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{page.4} has been referenced but does not exist, r
-eplaced by a fixed one
+pdfTeX warning (dest): name{figure.caption.6} has been referenced but does no
+t exist, replaced by a fixed one
 
 <C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/ty
@@ -1668,9 +1677,9 @@ fb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr8.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Undervisningsnoter1m.pdf (3 pages, 110066 bytes).
+Output written on Undervisningsnoter1m.pdf (4 pages, 113589 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
+ 110 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
