@@ -13,7 +13,7 @@
 \lhead{Matematik B\\
 Vækst
 }
-\chead{13. december 2023
+\chead{12. januar 2024
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -33,269 +33,126 @@ Vækst
 
 \begin{center}
 \Huge
-Fordoblingskonstanten for eksponentialfunktioner
+Grafer for potensfunktioner
 \end{center}
-\section*{Fordoblingskonstanten}
+
+\section*{Potensfunktioner}
 \stepcounter{section}
-Perspektivet var før at overveje, hvordan funktionsværdien af eksponentiel vækst udvikler sig, når vi øger $x$ med $1$. Vi kan tilsvarende betragte problemet fra den modsatte side: hvad skal vi øge $x$ med for at fordoble/halvere funktionsværdien. Vi skal altså bestemme en størrelse $T_2$, så 
+
+Vi vil nu betragte grafer for potensfunktioner. Vi skal mere præcist se, hvad tallene $a$ og $b$ har af betydning for grafen for en potensfunktion $f$ givet ved
 \begin{align*}
-f(x+T_2) = 2f(x)
+	f(x) = b\cdot x^a.
 \end{align*}
-for en eksponentialfunktion $f$. Denne idé er præsenteret i Figur \ref{fig:Fordobling}. 
-\begin{figure}[H]
-\center
-\begin{tikzpicture}
-\foreach \i in {0}{
-\draw (\i*0.9,0) -- (\i*0.9,1);
-}
-\draw (-0.9,0.5) -- (1.5,0.5);
-\foreach \i in {0}{
-\node at (\i*0.9+ 0.75,0.75) {$x+T_2$};
-\node at (\i*0.9+0.75,0.25) {$2f(x)$};
-}
-\node at (-0.45,0.75) {$x$};
-\node at (-0.45,0.25) {$f(x)$};
-\foreach \i in {0}{
-\draw [->] (\i*0.9-0.3,1) to [out=30,in=150] (\i*0.9+0.3,1);
-\node at (\i*0.9,1.25) {$\scriptstyle+T_2$};
-\draw [->] (\i*0.9-0.3,-0) to [out=-30,in=-150] (\i*0.9+0.3,-0);
-\node at (\i*0.9,-0.25) {$\scriptstyle\cdot 2$};
-}
-\end{tikzpicture}
 
-\caption{Fordoblingskonstant}
-\label{fig:Fordobling}
-\end{figure}
-
-Dette kan tilsvarende ses grafisk på Figur \ref{fig:grafisk}
+Grafer for potensfunktioner falder ind i én af tre klasser; aftagende potensfunktioner, voksende potensfunktioner, der vokser mere og mere og voksende potensfunktioner, der vokser langsommere og langsommere. Disse tre tilfælde kan ses på Figur \ref{fig:tregrafer}.
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}
-		[axis lines = center,
-		ticks = none,
-		xmin = -1, xmax = 4,
-		ymin = -2,
-		ylabel = $y$, xlabel = $x$
-		]
-			\addplot[thick, color = olive, samples = 100] {2^x};
-			\draw[dashed, thick, color = teal] (axis cs: 1,0) to (axis cs: 1,2);
-			\draw[dashed, thick, color = teal] (axis cs: 2,0) to (axis cs: 2,4);
-			\draw[dashed, thick, color = teal] (axis cs: 0,2) to (axis cs: 1,2);
-			\draw[dashed, thick, color = teal] (axis cs: 0,4) to (axis cs: 2,4);
-			\node at (axis cs:-0.4,2) {$f(x_0)$};
-			\node at (axis cs:-0.45,4) {$2f(x_0)$};
-			\node at (axis cs: 1,-1) {$x_0$};
-			\node at (axis cs: 2,-1) {$x_0 + T_2$};
+			[axis lines = center,
+			xmin = -0.1, xmax = 2,
+			ymin = -0.3, ymax = 4,
+			ticks = none,
+			xlabel = $x$, ylabel = $y$]
+			\addplot[thick, color = teal, samples = 100, domain = 0.1:4] {1/x};
+			\addplot[thick, color = purple, samples = 100, domain = 0:4] {x^0.5};
+			\addplot[thick, color = cyan, samples = 100, domain = 0:4] {x^2};
+			\draw[thick, color = purple, dashed] (axis cs:1,0) -- (axis cs:1,1);
+			\draw[thick, color = purple, dashed] (axis cs:0,1) -- (axis cs:1,1);
+			\node at (axis cs:-0.05,1) {$b$}; 
+			\node at (axis cs:1,-0.13) {1};
 		\end{axis}
+		\node[color = teal, anchor = west] at (8.4,4+0.5) {Aftager};
+		\node[color = purple, anchor = west] at (8.4,3.4+0.5) {Vokser, men mindre og mindre};
+		\node[color = cyan, anchor = west] at (8.4,2.8+0.5) {Vokser mere og mere};
+		\node[circle, fill, inner sep = 1.5pt, color = teal] at (8.3,4+0.5) {};
+		\node[circle, fill, inner sep = 1.5pt, color = purple] at (8.3,3.4+0.5) {};
+		\node[circle, fill, inner sep = 1.5pt, color = cyan] at (8.3,2.8+0.5) {};
 	\end{tikzpicture}
-	\caption{Grafisk præsentation af fordoblingskonstanten.}
-	\label{fig:grafisk}
+	\caption{Tre typer af potensfunktioner}.
+	\label{fig:tregrafer}
 \end{figure}
 
+I Opgave 1 skal I selv afgøre, hvordan $a$ og $b$ påvirker grafen for potensfunktionen $f$. 
 
-\begin{exa}
-	Vi betragter eksponentialfunktionen $f$ givet ved
-	\begin{align*}
-		f(x) = 2^x.
-	\end{align*}
-	Grafen for denne kan ses på Figur \ref{fig:eksempel}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}[axis lines = center, grid = both,
-			xmin = -0.8, xmax = 3.8,
-			xlabel = $x$,ylabel = $y$
-			]
-				\addplot[thick, color = olive, samples = 100] {2^x};
-			\end{axis}
-		\end{tikzpicture}
-		\caption{Graf for funktionen $f(x) = 2^x$.}
-		\label{fig:eksempel}
-	\end{figure}
-	Vi kan på figuren aflæse, at fordoblingskonstanten for $f$ er $1$, da vi skal øge $x$ med $1$ for at funktionsværdien fordobles. 
-\end{exa}
-For eksponentialvækst, hvor fremskrivningsfaktoren $a$ er større end $1$ er det muligt at finde et sådan tal $T_2>0$. Følgende sætning fortæller, hvordan vi skal finde dette tal, og vi kalder tallet for \textit{Fordoblingskonstanten for f}.
-\begin{setn}
-For en eksponentialfunktion $f$ gælder det, at fordoblingskonstanten $T_2$, der opfylder, at
-\begin{align*}
-f(x+T_2) = 2f(x)
-\end{align*}
-er givet ved 
-\begin{align*}
-T_2 = \frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)}
-\end{align*}
-Tilsvarende er halveringskonstanten $T_{1/2}$, der opfylder, at 
-\begin{align*}
-f(x+T_{1/2}) = \frac{1}{2}f(x)
-\end{align*}
-bestemt ved
-\begin{align*}
-T_{1/2} = \frac{\ln(1/2)}{\ln(a)} = \frac{\log(1/2)}{\log(a)}.
-\end{align*}
-Desuden gælder der, at $a = \sqrt[T_2]{2}= \sqrt[T_{1/2}]{1/2}$
-\end{setn}
-\begin{proof}
-Vi beviser tilfældet for fordoblingskonstanten. Tilfældet for halveringskonstanten beviset fuldstændig analogt. Lad os derfor for en eksponentialfunktion $f$ givet ved
-\begin{align*}
-f(x) = b\cdot a^x
-\end{align*}
-antage, at tallet $T_2$ opfylder, at $f(x+T_2) = 2f(x)$ for alle $x\in \mathbb{R}$. Vi har så, at 
-\begin{align*}
-f(x+T_2) = 2f(x) \ &\Leftrightarrow \ b\cdot a^{x}a^{T_2}=2b\cdot a^x\\
-&\Leftrightarrow\ a^{T_2} = 2\\
-&\Leftrightarrow\ \ln(a^{T_2}) = \ln(2)\\
-&\Leftrightarrow\ T_2\ln(a) = \ln(2)\\
-&\Leftrightarrow\ T_2 = \frac{\ln(2)}{\ln(a)},
-\end{align*}
-og vi har givet et bevis for fordoblingskonstanten. Siden vi har, at $a^{T_2} = 2$, så må der desuden gælde, at $a=\sqrt[T_2]{2}$, da $a>0$. 
-\end{proof}
 
-\begin{exa}
-	Vi bruger sætningen til at bestemme fordoblingskonstanten for eksponentialfunktionen
-	\begin{align*}
-		f(x) = 2^x.
-	\end{align*}
-	Vi får, at 
-	\begin{align*}
-		T_2 = \frac{\ln(2)}{\ln(a)} = \frac{\ln(2)}{\ln(2)} = 1,
-	\end{align*}
-	som også var det vi kom frem til ved at bruge Figur \ref{fig:eksempel}.
-\end{exa}
-
-\newpage
 \subsection*{Opgave 1}
-Aflæs fordoblings/halveringskonstanten for følgende eksponentialfunktioner.
-\begin{center}
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 40,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$,
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {4*1.05^x};
-		\end{axis}
-	\end{tikzpicture}	
-}	
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 40,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {2*1.1^x};
-		\end{axis}
-	\end{tikzpicture}
-}
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 30,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {60*0.8^x};
-		\end{axis}
-	\end{tikzpicture}
-}
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 30,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {20*0.97^x};
-		\end{axis}
-	\end{tikzpicture}
-}
-\end{center}
+
+
 
 \subsection*{Opgave 2}
-Bestem fordoblingskonstanten eller halveringskonstanten for følgende eksponentialfunktioner
-\begin{align*}
-	&1) \ 5\cdot 2^x   &&2) \ 7\cdot 0.95^x   \\
-	&3) \ 1.03\cdot 1.004^x   &&4) \ 6\cdot 5.09^x   \\
-	&5) \ 0.01\cdot 1.75^x   &&6) \ 7.19\cdot 1.179^x   \\		
-	&7) \ 10\cdot 0.1^x   && 7) \ 6.13 \cdot 10^x  
-\end{align*}
 
+Aflæs $a$ og $b$ for følgende potensfunktioner
+\begin{align*}
+	&a) \ 2\cdot x^2  &&b) \ 5\cdot x^{10} \\
+	&c) \ \sqrt{3}\cdot x^{3.2} &&d) \ x^{-0.5}  \\
+\end{align*}
 
 \subsection*{Opgave 3}
-Bestem enten fordoblings eller halveringskonstanten for følgende eksponentialfunktioner
-\begin{align*}
-&1) \ f_1(x) = 0.5\cdot 2^x   &&2) \ f_2(x)=2\cdot 0.5^x  \\
-&3) \ f_3(x) = 2000\cdot(0.003)^x  &&4) \ f_4(x) = 4\e^x  \\
-\end{align*}
+På Figur \ref{fig:opgavegrafer} kan graferne for de to potensfunktioner $f$ og $g$ ses. 
+\begin{figure}[H]
+	\center
+	\begin{tikzpicture}
+		\begin{axis}[
+		axis lines = middle, 
+		xmin = -0.1, xmax = 5.1,
+		ymin = -0.1, ymax = 71,
+		xlabel = $x$, ylabel = $y$, 
+		grid = both, minor tick num = 5]
+			\addplot[color = magenta, thick, domain = 0.1:5, samples = 100] {3*x^2};		
+			\addplot[color = olive, thick, domain = 0.2:5, samples = 100] {14*x^(-1)};
+			\node[color = olive] at (axis cs: 0.8,60) {$g$};
+			\node[color = magenta] at (axis cs: 3,40) {$f$};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Grafer for to potensfunktioner $f$ og $g$.}
+	\label{fig:opgavegrafer}
+\end{figure}
+Brug Figur \ref{fig:opgavegrafer} til at løse følgende opgaver.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $f(2)$.
+	\item Bestem $g(4)$.
+	\item Løs ligningen $g(x) = 44$.
+	\item Løs ligningen $f(x) = 30$.
+	\item Løs ligningen $f(x) = g(x)$.
+\end{enumerate}
 
 \subsection*{Opgave 4}
-
+Et rektangel har højde $4x$ og bredde $3x$. 
 \begin{enumerate}[label=\roman*)]
-	\item En bakteriekoloni vokser med 30 procent per døgn. Bestem fordoblingskonstanten for denne bakteriekoloni.
-	\item En radioaktiv isotop henfalder med 10 procent om året. Bestem halveringskonstanten for denne isotop.
-	\item Befolkningen i en by vokser med 2 procent om året. Bestem fordoblingskonstanten for befolkningen. 
-	\item Du får 4 procent på en højrentekonto i banken. Hvor længe vil der gå, før du har fordoblet dine penge?
-	\item Infektionstallet for en person falder med 12 procent i timen. Hvad er halveringskonstanten for infektionstallet?
+	\item Opskriv et udtryk for arealet $A(x)$ som funktion af højden og bredden. 
+	\item Bestem $A(4)$.
+	\item Brug $A(x)$ til at bestemme højden og bredden af rektanglet, hvis det skal have et areal på 1200.
 \end{enumerate}
-\newpage
+
 \subsection*{Opgave 5}
-Tetrahydrocannabinol (THC) er det primære psykoaktive stof i hampplanten. Koncentrationen af stoffet efter indtagelse hos en bestemt person kan ses af Tabel \ref{tab:cannabis}.
-
-\begin{table}[H]
-	\centering
-	\rowcolors{2}{gray!25}{white}
-	\begin{tabular}{cc}
-		\textbf{Tid i timer} & \textbf{Koncentration i mg/L} \\
-
-		0 & 0.30249 \\
-
-		8 & 0.24512 \\
- 
-		16 &  0.20132 \\
-
-		24 & 0.16371 \\
-
-		32 & 0.13303\\
-
-		40 & 0.11069\\
-
-		48 & 0.08757\\
-		56 & 0.07317\\
-
-		64 & 0.05748
-	\end{tabular}
-	\caption{Koncentration af tetrahydrocannabiol (THC)}
-	\label{tab:cannabis}
-\end{table}
-
-Det antages at sammenhængen mellem antal forløbne timer $x$ og blodkoncentrationen af THC $f(x)$ er givet ved en sammenhæng af typen
+To potensfunktioner $f$ og $g$ er givet ved
 \begin{align*}
-	f(x) = b \cdot a^x
+	f(x) = 2\cdot x^3
 \end{align*}
-\begin{enumerate}[label=\roman*)]
-	\item Lav regression på observationerne fra Tabel \ref{tab:cannabis} og bestem en forskrift for $f$.
-	\item Bestem halveringskonstanten for $f$.
-\end{enumerate}
-Et stof eller lægemiddel vil betragtes som helt metaboliseret efter fem halveringstider.
+og 
+\begin{align*}
+	g(x) = 10 \cdot x^2
+\end{align*}
 
 \begin{enumerate}[label=\roman*)]
-	\setcounter{enumi}{2}
-	\item Hvor lang tid skal der gå, før vi kan sige, at der ikke er mere THC i kroppen på personen?
+	\item Bestem $g(3)$.
+	\item Tegn graferne for $f$ og $g$ i samme koordinatsystem.
+	\item Bestem skæringspunktet mellem $f$ og $g$ ved at løse en ligning. 
 \end{enumerate}
+
+\subsection*{Opgave 6}
+\begin{enumerate}[label=\roman*)]
+\item En cylinder har samme diameter som højde. Bestem den potensfunktion, der beskriver rumfanget af cylinderen som funktion af cylinderens radius. 
+\item En kasse har bredde, højde og længde $x$. Bestem rumfanget af $x$, og afgør, hvad $a$ og $b$ er i denne potensfunktion.
+\item For et bestemt objekt kan vindmodstanden på objektet beskrives ved 
+\begin{align*}
+F(v)= \frac{1}{2}v^2,
+\end{align*}
+hvor $v$ er hastigheden i $m/s$, objektet bevæger sig med, og $F$ er vindmodstanden målt i $N$. Hvad er vindmodstanden, når objektet bevæger sig med 50$m/s$? Hvor hurtigt skal objektet bevæge sig, for at modstanden på objektet er 20$N$?
+
+\end{enumerate}
+
 
 \end{document}
 
