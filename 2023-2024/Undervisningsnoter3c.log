@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  21 JAN 2024 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.25)  21 JAN 2024 13:57
 entering extended mode
 **./Undervisningsnoter3c.tex
 (Undervisningsnoter3c.tex
@@ -1582,10 +1582,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 21.
 LaTeX Info: Redefining \pageref on input line 21.
 LaTeX Info: Redefining \nameref on input line 21.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 35.
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
 
 
@@ -1614,12 +1610,6 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line
 fd
 File: uesvect.fd 
 )
-
-Package hyperref Warning: Suppressing link with empty target on input line 48.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 59.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1659,9 +1649,9 @@ onts/cm/cmbx12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/NRGY-chri88mh/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NRGY-chri88mh/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Undervisningsnoter3c.pdf (2 pages, 55193 bytes).
+Output written on Undervisningsnoter3c.pdf (2 pages, 55832 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  19 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
