@@ -13,7 +13,7 @@
 \lhead{Matematik A\\
 Normalfordelingen
 }
-\chead{18. januar 2023
+\chead{25. januar 2023
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -32,49 +32,85 @@ Normalfordelingen
 %\stepcounter{section}
 
 \subsection*{Opgave 1}
-I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/Løndata.xlsx}{\color{blue!60} dette datasæt} fremgår løndata for 200 medarbejdere hos en virksomhed. Det antages, at sammenhængen mellem løn og anciennitet er lineær.
+
+En radioaktiv kilde placeres i varierende afstand fra en Geiger-tæller, der måler radioaktivitet. I følge afstandskvadratloven vil antallet af aktiveringer per sekund $A$ kunne beskrives ved sammenhængen
+\begin{align*}
+	A(x) = \frac{1}{x^2}\cdot k,
+\end{align*}
+hvor $x$ er afstanden fra kilden i meter, og $k$ er en passende proportionalitetskonstant. Resultatet af forsøget fremgår af \href{}{dette datasæt.}
 
 \begin{enumerate}[label=\roman*)]
-	\item Lav lineær regression på datasættet
-	\item Brug residualerne for den lineære regression til at afgøre, om sammenhængen mellem anciennitet og løn er 
-	lineær
-	\item Bestem den forventede løn efter 10 år.
-	\item Bestem sandsynligheden for, at lønnen efter 10 år er mellem 39000 og 41000 månedligt.
-	\item \textbf{Svær:} Bestem et $95\%$-konfidensinterval for lønnen efter 5 år.
-\end{enumerate}  
+	\item Lav en passende datatransformation og lav derefter lineær regression på datasættet.
+	\item Hvor mange aktiveringer forventer vi, hvis afstanden er 4 meter?
+	\item Hvad skal afstanden være, hvis antallet af aktiveringer skal være på 3 per sekund?
+\end{enumerate}
 
 \subsection*{Opgave 2}
 
-En gruppe af tomatentutiaster har en antagelse om, at en bestemt sort af tomatplanter bliver ved med at vokse i august. De har derfor målt vægten af deres tomatplanter i løbet af august måned. Vægten af planterne fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/TomatVægt.xlsx}{\color{blue!60} dette datasæt.}
-
+Et objekt kastes ud fra en højde på 100 meter. Højden $H$ over jorden som funktion af den forløbne tid i sekunder $x$ antages at kunne beskrives ved en sammenhæng af typen
+\begin{align*}
+	H(x) = -ax^2 + b
+\end{align*}
 \begin{enumerate}[label=\roman*)]
-	\item Lav lineær regression på datasættet.
-	\item Brug residualerne for regression til at afgøre, om sammenhængen mellem forløbne dage og vægt er lineær
-	\item Bestem et $95\%$-konfidensinterval for hældningen $a$, og brug dette til at afgøre, om vi kan konkludere, at 
-	planterne stadig vokser.
+	\item Lav en passende datatransformation, og lav derefter lineær regression på datasættet
+	\item Hvornår rammer objektet jorden?
+	\item Hvad er objektets hastighed, når det rammer jorden?
 \end{enumerate}
+
 
 \subsection*{Opgave 3}
 
-En virksomhed producerer slikposer i størrelserne 50, 100, 150, 200 og 250 gram. De har målt variationen på posens forventede vægt og den reelle vægt. Resultatet af deres undersøgelse fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/VariationSlikpose.xlsx}{\color{blue!60} dette regneark}.
-
-
-\begin{enumerate}[label = \roman*) ]
-	\item Lav lineær regression på datasættet.
-	\item Brug residualerne for regressionen til at afgøre, om sammenhængen mellem den forventede vægt og variationen 
-	fra den forventede vægt er lineær.
-	\item Bestem et $95\%$-konfidensinterval for hældningen af den lineære sammenhæng.
-	\item Tegn tre lineære funktioner i samme koordinatsystem; én for hver af $a$-værdierne:
-	\begin{itemize}
-		\item[$\cdot$] Den nedre grænse for konfidensintervallet,
-		\item[$\cdot$] $a$-værdien, som regressionen giver,
-		\item[$\cdot$] Den øvre grænse for konfidensintervallet.
-	\end{itemize}
-	\item \textbf{Svær:} Bestem sandsynligheden for, at en pose, der bør veje 200 gram har en vægt på mellem 180g og
-	 220g
+I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data%20og%20lign/Bakteriedata.xlsx}{\color{blue!60}dette datasæt} fremgår antallet af bakterier i mia. samt den forløbne tid i timer.
+Det antages, at antallet af bakterier $B$ og den forløbne tid $x$ kan beskrives ved en sammenhæng af typen
+\begin{align*}
+	\ln(B(x)) = ax + b
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Lav en passende datatransformation, og lav derefter lineær regression på datasættet
+	\item Hvor mange bakterier vil der være efter 100 timer?
+	\item Brug modellen til at afgøre, hvornår antallet af bakterier vil være på 700 mia.
 \end{enumerate}
 
+\subsection*{Opgave 4}
 
+Man har for en bestemt biltype målt den effekt (i hk (hestekræfter)) det kræves at køre ved bestemte hastigheder. Resultatet af undersøgelsen kan ses i \href{}{dette datasæt.}
+
+Det antages, at effekten $E$ som funktion af hastigheden $x$ (i km/t) kan beskrives ved en sammenhæng af typen
+\begin{align*}
+	\ln(E(x)) = a\ln(x) + b
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav en passende datatransformation og lav derefter lineær regression på datasættet.
+	\item Bestem den effekt det kræves for at køre 200km/t
+	\item Hvor stærkt kører man, hvis man har en konstant effekt på 600hk?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+
+Det viser sig, at man også kan lave lineær regression på eksponentiel data ved en passende variabeltransformation. En eksponentialfunktion er som bekendt en funktion af typen
+\begin{align*}
+	f(x) = b\cdot a^x
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Anvend $\ln(x)$ på begge sider af lighedstegnet af eksponentialfunktionen
+	\item Brug logaritmeregneregler til at lave en lineær sammenhæng mellem $ln(f(x))$ og $x$. 
+	\item Bestem hældningen og begyndelsesværdien for denne lineære sammenhæng.
+	\item Prøv at lave eksponentiel regression på datasættet fra Opgave 3 og tag $\ln(x)$ af begyndelsesværdien og fremskrivningsfaktoren for denne regression. Sammenlign disse tal med den lineære regressions hældning og begyndelsesværdi fra Opgave 3.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Det viser sig også, at man kan lave lineær regression på potensdata. Vi husker os selv på, at en potensfunktion er en funktion af typen
+\begin{align*}
+	g(x) = b\cdot x^a.
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Anvend $\ln(x)$ på begge sider af lighedstegnes af potensfunktionen
+	\item Brug logaritmeregneregler til at lave en lineær sammenhænd mellem $\ln(g(x))$ og $\ln(x)$.
+	\item Bestem hældningen og begyndelsesværdien for denne lineære sammenhæng.
+	\item Prøv at lave potensregression på datasættet fra Opgave 4 og tag $\ln(x)$ af $b$-værdien for denne regression. Sammenlign disse tal med den lineære regressions hældning og begyndelsesværdi fra Opgave 4.
+\end{enumerate}
 
 
 
