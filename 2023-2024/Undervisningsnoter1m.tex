@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik B\\
-Funktioner
+Andengradspolynomier
 }
-\chead{19. februar 2024
+\chead{27. februar 2024
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -33,120 +33,186 @@ Funktioner
 
 \begin{center}
 \Huge
-	Den naturlige eksponentialfunktion
+Rødder for andengradspolynomier
 \end{center}
-\section*{Eksponentialfunktionen som $e^{kx}$}
+\section*{Diskriminanten}
 \stepcounter{section}
 
-Vi husker på, at en eksponentialfunktion er en funktion på formen
-\begin{align*}
-	f(x) = b\cdot a^x.
-\end{align*}
-Målet er at omskrive dette til formen
-\begin{align*}
-	f(x) = b\cdot e^{kx},
-\end{align*}
-hvor $e \approx 2.7182$ er Eulers tal. Hvis vi har en eksponentialfunktion
-\begin{align*}
-	f(x) = b\cdot a^x,
-\end{align*}
-så kan vi skrive
-\begin{align*}
-	f(x) &= b \cdot a^x \\
-	&= b \cdot \left(e^{\ln(a)}\right)^x\\
-	&= b \cdot e^{\ln(a)\cdot x}\\
-	&= b \cdot e^{kx},
-\end{align*}
-hvor $k = \ln(a)$. For at omskrive eksponentialfunktionen til formen 
-\begin{align*}
-	f(x) = b\cdot e^{kx},
-\end{align*}
-er opgaven altså at bestemme $k = \ln(a)$, som gøres med Maple. 
+En rod for et andengradspolynomium er en $x$-værdi der opfylder, at parablen for polynomiet skærer $x$-aksen i netop denne $x$-værdi. For andengradspolynomier gælder der, at de kan have enten nul, én eller to rødder. Antallet af rødder kan vi afgøre ved brug af \textit{diskriminanten.} 
+\begin{setn}[Diskriminanten]
+	For et andengradspolynomium $f$ givet ved
+	\begin{align*}
+		f(x) = ax^2+bx+c
+	\end{align*}
+	gælder der, at tallet 
+	\begin{align*}
+		d = b^2 - 4ac
+	\end{align*}
+	fortæller os, hvor mange rødder $f$ har. 
+	\begin{itemize}
+		\item[$\cdot$] Hvis $d > 0$, så har $f$ to rødder.
+		\item[$\cdot$] Hvis $d = 0$, så har $f$ én rod.
+		\item[$\cdot$] Hvis $d < 0$, så har $f$ nul rødder. 
+	\end{itemize}
+\end{setn}
 
 \begin{exa}
-	En eksponentialfunktion $f$ er givet ved
+	Polynomiet $f$ givet ved
 	\begin{align*}
-		f(x) = b \cdot 1.2^x.
+		f(x) = 3x^2 +2x-4
 	\end{align*}
-	For at omskrive den til formen
+	har diskriminanten $d$ givet ved
 	\begin{align*}
-		f(x) = b\cdot e^{kx},
-	\end{align*}			
-	så bestemmes $\ln(1.2) = 0.182,$ og vi kan omskrive eksponentialfunktionen til
-	\begin{align*}
-		f(x) = b \cdot e^{0.182x}
+		d = 2^2 - 4 \cdot 3 \cdot (-4) = 4 + 48 = 52 > 0.
 	\end{align*}
+	Da dette tal er større end 0, så har $f$ to rødder.
 \end{exa}
-
 \begin{exa}
-	En eksponentialfunktion $g$ er givet ved
+	Polynomiet $g$ givet ved
 	\begin{align*}
-		g(x) = 3\cdot e^{-0.5x}.
+		g(x) = x^2 -4x + 4
 	\end{align*}
-	Vi vil gerne omskrive den til formen
+	har diskriminanten $d$ givet ved
 	\begin{align*}
-		g(x) = 3 \cdot a^x.
+		d = (-4)^2-4\cdot 1 \cdot 4 = 16 - 16 = 0.
 	\end{align*}
-	Vi går derfor den omvendte vej og bestemmer $e^{-0.5} = 0.606$.
-	Eksponentialfunktionen $g$ kan derfor skrives som
+	Da diskriminanten er lig $0$, så har $g$ netop én rod.
+\end{exa}
+\begin{exa}
+	Polynomiet $h$ givet ved
 	\begin{align*}
-		g(x) = 3 \cdot 0.606^x
+		h(x) = -2x^2 + 5x - 4
 	\end{align*}
+	har diskriminanten $d$ givet ved
+	\begin{align*}
+		d = 5^2 - 4\cdot (-2) \cdot (-4) = 25-32 = -7 < 0.
+	\end{align*}
+	Da diskriminanten er mindre end 0, så har $h$ ingen rødder. 
 \end{exa}
 
-Vi kan opsamle på de to eksempler. Kender vi en eksponentialfunktion på formen 
-\begin{align*}
-	f(x) = b\cdot a^x
-\end{align*}
-og vil omskrive den til 
-\begin{align*}
-	f(x) = b\cdot e^{kx}, 
-\end{align*}
-så findes $k$ som $\ln(a) = k$.
+\section*{Rødder for andengradspolynomier}
+\stepcounter{section}
 
-Kender vi derimod en eksponentialfunktion på formen
-\begin{align*}
-	g(x) = b \cdot e^{kx}
-\end{align*}
-og vil omskrive den til formen
-\begin{align*}
-	g(x) = b \cdot a^x,
-\end{align*}
-så findes $a$ som $a = e^k$.
-
+Hvis vi skal bestemme rødderne for et andengradspolynomium, så skal vi bruge løsningsformlen for andengradsligninger, som vi også til tider kalder for diskriminantformlen. Denne er givet ved følgende. 
+\begin{setn}[Løsningsformlen for andengradsligninger]
+	Rødderne for et andengradspolynomium $f$ givet ved
+	\begin{align*}
+		f(x) = ax^2+bx+c
+	\end{align*}
+	er givet ved
+	\begin{align*}
+		x = \frac{-b \pm \sqrt{d}}{2a},
+	\end{align*}
+	hvor vi antager, at diskriminanten $d = b^2 - 4ac$ er ikke-negativ.
+\end{setn}
+Grunden til, at vi kalder rodformlen for andengradspolynomier for løsningsformlen for andengradsligninger er, at en andengradsligning netop er en ligning, hvor løsningen er en rod til et andengradspolynomium. Vi vil bevise formlen senere, men vil for nu blot fokusere på at anvende den. 
+\begin{exa}
+	Et polynomium $f$ er givet ved
+	\begin{align*}
+		f(x) = x^2 - x - 2,
+	\end{align*}
+	og vi ønsker at bestemme rødderne. Vi indsætter koefficienterne i løsningsformlen og får
+	\begin{align*}
+		x &= \frac{-(-1) \pm \sqrt{(-1)^2-4\cdot 1 \cdot (-2)}}{2\cdot 1}\\
+		&= \frac{1\pm \sqrt{9}}{2}\\
+		&= \frac{1\pm 3}{2}.
+	\end{align*}
+	Rødderne er derfor givet ved $x = 2$ og $x = -1$. For at verificere løsningen tegner vi grafen for $f$. Denne kan ses af Fig. \ref{fig:rødder}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				axis lines = middle, 
+				xmin = -2, xmax = 3,
+				ymin = -3, ymax = 4
+				]	
+				\addplot[color = teal, samples = 100, thick] {x^2-x-2};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Parabel for $f$}
+		\label{fig:rødder}
+	\end{figure}
+	Det ser på Figur \ref{fig:rødder} ud til at rødderne er fundet korrekt.
+\end{exa}
 \subsection*{Opgave 1}
-Omskriv følgende eksponentialfunktioner til formen
-\begin{align*}
-	f(x) = b \cdot e^{kx}.
-\end{align*}
-
-\begin{align*}
-	&1) \ f(x) = 1.7\cdot 2^x   &   &2) \ f(x) = 10 \cdot 0.9^x   \\
-	&3) \ f(x) = \sqrt{2}\cdot 1.79^x  &   &4) \ f(x) = 7\cdot 0.2^x   \\
-	&5) \ f(x) = 6\cdot 10^x  &   &6) \ f(x) = 2.13\cdot 7.389^x   
-\end{align*}
+For parablerne i Figur \ref{fig:andenpolys}
+\begin{enumerate}[label=\roman*)]
+\item Bestem fortegnet på koefficienterne $a$ og $b$. 
+\item Bestem $c$.
+\end{enumerate}
+\begin{figure}[H]
+\centering
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 100, color = teal] {-x^2-x+3};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 100, color = teal] {x^2-2*x+2};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -3, xmax = 3, ymin = -4, ymax = 2
+ ]
+\addplot[thick, samples = 1000, color = teal] {-x^2-2*x-1};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 100, color = teal] {x^2+x};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{Fire parabler}
+\label{fig:andenpolys}
+\end{figure}
 
 \subsection*{Opgave 2}
-Omskriv følgende eksponentialfunktioner til formen 
-\begin{align*}
-	f(x) = b \cdot a^x
-\end{align*}
-\begin{align*}
-	&1) \ f(x) = 2\cdot e^{2x}   &   &2) \ f(x) = b\cdot e^{-2.3x}  \\
-	&3) \ f(x) = 0.1\cdot e^{x}  &   &4) \ f(x) = 6\cdot e^{10x}   
-\end{align*}
+Bestem fortegnet for diskriminanten for de fire polynomier hvis parabler ses på Figur \ref{fig:andenpolys}.
 
 \subsection*{Opgave 3}
-Prøv at tegne nogle af eksponentialfunktionerne på formen 
+Bestem diskriminanten for følgende polynomier, og brug diskriminanten til at afgøre hvor mange rødder, polynomierne har. Tegn efterfølgende graferne i Maple og brug grafen til at verificere dit svar.
+
 \begin{align*}
-	f(x) = b\cdot e^{kx}
+&1) \ 2x^2+4x - 6   &&2) \ 2x^2-8x+4   \\
+&3) \ x^2 - 6 x + 9  &&4) \ 3x^2+6    \\
 \end{align*}
-fra Opgave 1 og Opgave 2 i Maple.
-\begin{enumerate}[label=\roman*)]
-	\item Kan du gennemskue, hvad der skal være opfyldt for $k$ for at $f$ er voksende?
-	\item Hvad skal gælde for at $f$ er voksende?
-	\item Hvilken betydning har $k$ for grafens forløb?
-\end{enumerate}
+
+\subsection*{Opgave 4}
+Bestem rødderne for følgende polynomier ved at bruge løsningsformlen for andengradsligninger. Verificér dit svar ved at tegne graferne i Maple. (I kan genbruge diskriminanten fra før i de tre første opgaver)
+\begin{align*}
+&1) \ 2x^2+4x - 6    &&2) \ 2x^2-8x+4  \\
+&3) \ x^2 - 6 x + 9  &&4) \   3x^2-3  \\
+&5) \ x^2 - 4 x + 4 &&6) \ x^2-3x+2   \\
+\end{align*}
+
 
 
 \end{document}

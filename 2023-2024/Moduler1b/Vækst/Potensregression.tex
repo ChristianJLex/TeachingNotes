@@ -1,0 +1,93 @@
+
+\begin{center}
+\Huge
+Potensregression
+\end{center}
+
+\section*{Regression i Maple}
+\stepcounter{section}
+
+Har vi fået givet et datasæt, som vi forventer kan beskrives ved en potensfunktion, altså en funktion på formen
+\begin{align*}
+	f(x) = b\cdot x^a,
+\end{align*}
+så kan vi bestemme den potensfunktion, der bedst beskriver datasættet ved at bruge \textit{potensregression}. Dette gøres i Maple ved at skrive
+
+\begin{align*}
+	&\texttt{restart}\\
+	&\texttt{with(Gym):}\\
+	&\texttt{PowReg(data)}
+\end{align*}
+hvor \texttt{data} er navnet på dit datasæt.
+
+\begin{exa}
+	Vi antager, at \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/PotensData.xlsx}{\color{blue!60} dette datasæt} kan beskrives ved en potensfunktion.
+	Vi importerer datasættet til Maple og laver potensregression. Resultatet af dette kan ses 
+	på Figur \ref{fig:potensregression}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{Billeder/Potensregression}
+		\caption{Potensregression lavet i Maple}
+		\label{fig:potensregression}
+	\end{figure}
+\end{exa}
+
+
+\subsection*{Opgave 1}
+
+Det oplyses, at sammenhængen mellem længden på et pendul og svingningstiden kan beskrives ved en potenssammenhæng. Følgende tabel angiver sammenhængen mellem udvalgte længder af pendulet
+
+\begin{center}\begin{tabular}{c|c|c|c|c|c}
+Længde (m)& 0.5 & 0.75 & 1.00 & 1.25 & 1.50\\ \hline
+Svingningstid (s) & 1.4 & 1.7 & 2.1 & 2.2 & 2.5 
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav potensregression på tallene fra tabellen. 
+	\item Hvor lang er svingningstiden på et pendul med længde 2m?
+	\item Hvor langt skal et pendul være, hvis svingningstiden skal være 5 sekunder?
+\end{enumerate}
+
+
+\subsection*{Opgave 2}
+I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data%20og%20lign/H%C3%B8jdeV%C3%A6gt.xlsx}{\color{blue!60} dette datasæt} fremgår højde og vægt for 30 personer. Det antages, at sammenhængen mellem højde og vægt kan beskrives af en sammenhæng af typen
+\begin{align*}
+	f(x) = b \cdot x^a.
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav regression på datasættet.
+	\item Brug regressionen til at afgøre, hvad en person på 210 cm vil veje
+	\item Hvor høj vil en person være, hvis personen vejer 35 kg?
+\end{enumerate}
+
+\subsection*{Opgave 3}
+For en række forskellige biler af samme type har man målt effekten det har krævet (i hk) det kræver for at køre ved en bestemt hastighed (i km/t). Dette fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/hk.xlsx}{\color{blue!60} dette datasæt}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav potensregression på datasættet.
+	\item Brug modellen til at afgøre, hvor stor en effekt det kræves for at køre 200km/t
+	\item Brug modellen til at afgøre, hvor hurtigt man vil køre, hvis man kører med en effekt 
+	på 450 hk.
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+En gejser vil danne en højere vandsøjle jo højere vandtrykket er i det underjordiske kammer, vandet kommer fra. Man har for en bestemt gejser målt vandtrykket og højden af vandsøjlen. Resultatet af dette fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/Gejser.xlsx}{\color{blue!60} dette datasæt}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav potensregression på tallene fra datasættet.
+	\item Hvor høj vil vandsøjlen være, hvis trykket i vandkammeret før udbruddet er 250 bar?
+	\item Hvor højt skal trykket være, hvis vandsøjlen skal være 75 meter høj?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+
+En Geigertæller peges mod et radioaktivt objekt. Antallet af aktiveringer per sekund som funktion af afstanden (i cm) kan beskrives ved en potenssammenhæng. For et bestemt radioaktivt objekt kan resultatet ses af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data%20og%20lign/Geiger.xlsx}{\color{blue!60} dette datasæt.}
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav regression på datasættet.
+	\item Bestem antallet af aktiveringer ved en afstand på 1 cm. 
+	\item Hvad skal afstanden være, hvis antallet af aktiveringer per sekund skal være under 1?
+\end{enumerate}
