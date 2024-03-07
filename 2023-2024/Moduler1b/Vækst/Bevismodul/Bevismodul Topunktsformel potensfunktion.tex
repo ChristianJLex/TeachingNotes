@@ -1,0 +1,78 @@
+
+\begin{center}
+	\begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
+		\hline
+		Vi indsætter punkterne $(x_1,y_1)$ og $(x_2,y_2)$ i forskriften for potensfunktionen.
+		\vspace{0.8cm}
+		& 	
+		\begin{center}		
+		\begin{tabular}{c} 
+			$f(x_1) = b \cdot x_1^a = y_1$ \\
+			$f(x_2) = b \cdot x_2^a = y_2$  
+		\end{tabular}
+		\end{center}				  	 
+		\\
+		\hline
+		Vi dividerer udtrykket for $y_2$ med udtrykket for $y_1$.\vspace{1.3cm}
+		& 
+		$$
+			\frac{y_2}{y_1} = \frac{b\cdot x_2^a}{b\cdot x_1^a} 	
+		$$
+		\\
+		\hline
+		Da $b$ er ganget på udtrykket både i tælleren og i nævneren, lader vi $b$ gå ud.
+		\vspace{1.3cm}
+		&
+		$$
+		\frac{y_2}{y_1} = \frac{x_2^a}{x_1^a}
+		$$
+		\\
+		\hline
+		Vi anvender regnereglen $\left(\frac{x}{y}\right)^a = \frac{x^a}{y^a}$.\vspace{1.7cm}
+		&
+		$$
+			\frac{y_2}{y_1} = \left(\frac{x_2}{x_1}\right)^a
+		$$
+		\\
+		\hline
+		Vi tager logaritmen på begge sider af lighedstegnet. \vspace{1.3cm}
+		&
+		$$ 
+			\log\left(\frac{y_2}{y_1} \right) 
+			= \log\left( \left(\frac{x_2}{x_1}\right)^a\right)
+		$$
+		\\
+		\hline
+		Vi anvender logaritmeregnereglen $\log(x^a) = a\log(x)$
+		\vspace{1.3cm}
+		&
+		$$ 
+			\log\left(\frac{y_2}{y_1} \right) 
+			= a\log\left(\frac{x_2}{x_1}\right)
+		$$
+		\\
+		\hline
+		Vi isolerer $a$ ved at dividere med $\log\left(\frac{x_2}{x_1}\right)$ på begge
+		sider af lighedstegnet
+		&
+		$$
+			\frac{\log\left(\frac{y_2}{y_1}\right)}{\log\left(\frac{x_2}{x_1}\right)} = a
+		$$
+		\\
+		\hline
+		Vi anvender regnereglen 
+		$$
+		\log\left(\frac{a}{b}\right) = \log(a) - \log(b)
+		$$
+		&
+		$$
+		\frac{\log(y_2)-\log(y_1)}{\log(x_2)-\log(x_1)} = a
+		$$
+		\\
+		\hline
+		Vi er nu færdige
+		&
+		$\blacksquare$\\
+		\hline
+	\end{tabular}
+\end{center}

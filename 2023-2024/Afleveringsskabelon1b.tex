@@ -83,18 +83,18 @@ Besvarelsen af rene matematikopgaver skal indeholde en angivelse af givne oplysn
 Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en kort præsentation af modellens kontekst, herunder betydning af modellens parametre. De enkelte delspørgsmål skal afsluttes med en præcis konklusion præsenteret i et klart sprog i relation til konteksten.
 \end{itemize}
 
-\end{comment}
 \newpage
+\end{comment}
 
 
 \begin{opgavetekst}{Opgave 1}
 	\begin{center}
-		\includegraphics[width = 0.5\textwidth]{Billeder/Zoo1}
+		\includegraphics[width = 0.6\textwidth]{Billeder/Zoo1}
 	\end{center}
-	En zoologisk have har hvert år siden år 1980 målt antallet af besøgende. Deres målinger 
-	fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/ZooBesoegende.xlsx}{\color{blue!60} dette datasæt}.
-	Den zoologiske have har en forventning om, at antallet af besøgende $f$ kan beskrives
-	ved forskriften
+	Den zoologiske have Metropol Zoo har hvert år siden år 1980 målt antallet af besøgende. Deres målinger 
+	fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/BesoegendeiZoo.xlsx}{\color{blue!60} dette datasæt}.
+	Metropol Zoo har en forventning om, at antallet af besøgende $f$ (i tusinde) kan
+	beskrives ved forskriften
 	\begin{align*}
 		f(x) = b\cdot x^a,
 	\end{align*}
@@ -103,11 +103,29 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 
 
 \begin{delopgave}{}{1}
-	Brug tallene fra datasættet til at bestemme en forskrift for $f$. 
+	Brug tallene fra datasættet til at bestemme tallene $a$ og $b$, og opskriv forskriften for 
+	modellen, der beskriver antallet af besøgende.
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Beste
+	Bestem antallet af besøgende i år 2030 i følge modellen. 
 \end{delopgave}
+\begin{meretekst}
+	Da initiativtagerne bag Metropol Zoo opstartede zooen, så havde de en forventning
+	om, at antallet af besøgende kunne beskrives ved sammenhængen
+	\begin{align*}
+		g(x) = 4x + 200,
+	\end{align*}
+	hvor $g$ betegner det årlige antal besøgende i tusinde og $x$ betegner antal år efter år 
+	1980
+\end{meretekst}
+\begin{delopgave}{}{3}
+	Tegn forskriften for $f$ og $g$ i samme koordinatsystem på intervallet $[1,100]$. 
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Bestem det årstal, hvor $g$ forudser, at der vil være flere besøgende i Metropol Zoo end
+	modellen $f$.
+\end{delopgave}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,24 +135,47 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{opgavetekst}{Opgave 2}
-	To funktioner $f$ og $g$ er givet ved henholdsvis
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/penge}
+	\end{center}
+	Metropol Zoo ønsker sig et bæverhabitat i haven. De har ikke råd til 
+	at betale for habitatet, så de skal have et lån i banken. Banken fortæller 
+	dem at beløbet de skylder banken vil kunne beskrives ved funktionen 
 	\begin{align*}
-		f(x) = \sqrt{x}
+		h(x) = 19.2\cdot 1.052^x,
 	\end{align*}
-	og
-	\begin{align*}
-		g(x) = x^2-2x+4.
-	\end{align*}
+	hvis de ikke betaler af på deres lån. $h$ betegner det skyldige beløb i mio. kr.,
+	og $x$ betegner antal år efter optagelsen af lånet. 
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Bestem forskriften for den sammensatte funktion
-	\begin{align*}
-		h(x) = f(g(x))
-	\end{align*}
+	Forklar, hvad tallene 19.2 og 1.052 siger om banklånet.
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Bestem $f(g(2))$
+	Afgør, hvor længe der vil gå før Metropol Zoo skylder 30 mio., hvis de ikke betaler af på
+	deres lån.
 \end{delopgave}
+\begin{meretekst}
+	Metropol Zoo skal selvfølgelig betale af på deres lån. Deres lån kan beskrives ved formlen
+	\begin{align*}
+		19.2 = y\cdot \frac{1 - (1+r)^{-n}}{r}.
+	\end{align*}
+	For formlen gælder der, at 
+	\begin{itemize}
+		\item[$\cdot$] $y$ er beløbet, der afdrages årligt på lånet (i mio. kr.).
+		\item[$\cdot$] $r$ er renten på lånet. 
+		\item[$\cdot$] $n$ er antal terminer på lånet - altså i dette tilfælde antal år, som 
+		lånet skal løbe i.  	
+	\end{itemize}
+	\phantom{h}
+\end{meretekst}	
+\begin{delopgave}{}{3}
+	Indsæt renten fra a) og bestem, hvad Metropol Zoo skal betale tilbage hvert år, hvis de 
+	skal betale lånet af på 30 år.
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Afgør hvornår lånet er betalt tilbage, hvis de afdrager 1 mio. kr. om året på lånet. 
+\end{delopgave}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,16 +186,34 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \begin{opgavetekst}{Opgave 3}
-	For en bestemt bil gælder der, at den forbrugte mængde brændstof $x$ (i L) er ligefrem proportional med den kørte afstand $y$ (i km). Proportionalitetskonstanten er 18.
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/beaver}
+	\end{center}
+	En fuldvoksen europæisk bæver spiser omkring 1.8kg plantemateriale om dagen, der 
+	hovedsagligt består af græsser, vandplanter og bark. Metropol Zoo vil gerne have 8 bævere 
+	i haven.
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Opskriv en sammenhæng mellem $x$ og $y$. 
+	Opstil en model, der beskriver mængden af foder til bæverne som Metropol Zoo har forbrugt
+	som funktion af antal forløbne dage. 
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Bestem hvor langt bilen kan køre på 3 liter brændstof
+	Brug modellen til at bestemme hvor meget bæverfoder, haven forbruger på et år.
 \end{delopgave}
+\begin{meretekst}
+	For både føde og materiale til dæmninger fælder den europæiske bæver træer på op til 60cm i
+	diameter. Tiden, det tager for bæveren at fælde et aspetræ er givet ved
+	\begin{align*}
+		f(x) = 0.00162\cdot \pi \cdot x^3,
+	\end{align*}
+	hvor $f$ er tiden i timer og $x$ er radius på stammen i cm. 
+\end{meretekst}
 \begin{delopgave}{}{3}
-	Afgør, hvor meget brændstof bilen har forbrændt på 162 km. 
+	Afgør, hvilken funktionstype $f$ er, og bestem tallene $a$ og $b$. 
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Bestem hvor mange gange længere det vil tage for en bæver at fælde et træ, hvis radius af 
+	træet fordobles.
 \end{delopgave}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,97 +225,33 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \begin{opgavetekst}{Opgave 4}
-	Afgør, om følgende sammenhænge er ligefrem eller omvendt proportionale.
-\end{opgavetekst}
-\begin{delopgave}{}{1}
-	\begin{align*}
-		&a) \ y = 4x   &    &b) \  y\cdot x = 12   \\
-		&c) \ \frac{y}{x} = -0.2  &    &d) \ y = \frac{4.15}{x}    \\
-	\end{align*}
-\end{delopgave}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-\begin{center}
-	\LARGE Med hjælpemidler
-\end{center}
-
-
-
-\begin{opgavetekst}{Opgave 5}
 	\begin{center}
-		\includegraphics[width = 0.6\textwidth]{Billeder/apples}
-	\end{center}	
-	En dreng har målt højden og vægten af en række æbler. Resultatet af hans målinger kan 
-	findes i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/aeble.xlsx}{\color{blue!60} dette datasæt.} Han ved ikke, om sammenhængen mellem vægten er en potenssammenhæng, en lineær sammenhæng eller en eksponentiel sammenhæng.
+		\includegraphics[width=0.6\textwidth]{Billeder/tigerunge}
+	\end{center}
+	En løvinde hos Metropol Zoo har født løveungen Jørgen. De håber på, at dette kan øge
+	 deres omsætning med 15 procent det næste år. De har dog kun en forventning
+	 om, at løveungen vil øge deres besøgstal med 8 procent. 
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Lav regressioner på datasættet og anvend residualanalyse til at afgøre hvilken model, der 
-	bedst beskriver sammenhængen mellem æblernes højde og vægt.
-\end{delopgave}	
-\begin{delopgave}{}{2}
-	Brug din valgte model til at afgøre, hvor højt et æble der vejer 300 gram er.
+	Bestem hvor meget Metropol Zoo skal øge deres billetpriser med, hvis de skal opnå en
+	stigning i omsætningen på 15$\%$. 
 \end{delopgave}
-\begin{delopgave}{}{3}
-	Brug din valgte model til at afgøre, hvad et æble der er 4 cm vil veje.
-\end{delopgave}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{opgavetekst}{Opgave 6}
-	Prisen for at rejse med taxafirmaet taxA kan beskrives ved funktionen $p$ givet ved
-	\begin{align*}
-		p(x) = \begin{cases}
-			10x + 50, &\textnormal{ hvis } x \leq 10, \\
-			8x + 70,  &\textnormal{ hvis } 10 < x \leq 25, \\
-			6x + 120, &\textnormal{ hvis } 25 < x,
-		\end{cases}
-	\end{align*}
-hvor $x$ betegner antal kørte kilometer og $p$ er prisen i kr.
-\end{opgavetekst}
-%
-\begin{delopgave}{}{1}
-	Tegn grafen for $p$ på intervallet [0,40].
-\end{delopgave}
-%
-\begin{delopgave}{}{2}
-	Bestem prisen for at køre 20km med TaxA.
-\end{delopgave}
-%
 \begin{meretekst}
-	Et andet taxafirma TaxB har prissætningen, som beskrives af funktionen $q$ givet ved
+	Vægten af løveungen beskrives ved funktionen
 	\begin{align*}
-		q(x) = \begin{cases}
-			15x + 10, &\textnormal{ hvis } x < 15, \\
-			12x + 55, &\textnormal{ hvis } 15 \leq x.
-		\end{cases}
+		V(t) = 260\cdot(1-e^{-0.082(t+3.54)}),
 	\end{align*}
+	hvor $V$ er vægten i kg og $t$ er løvens alder i måneder. 
 \end{meretekst}
 %
-\begin{delopgave}{}{3}
-	Bestem længden på den rejse der gør, at TaxA bliver billigere at rejse med end TaxB.
+\begin{delopgave}{}{2}
+	Tegn grafen for $V$ på et passende interval, og se om du ud fra grafen kan
+	gennemskue hvad tallet 260 betyder for modellen. 
 \end{delopgave}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{delopgave}{}{3}
+	Bestem hvad Jørgen vejer efter ét år i følge modellen.
+\end{delopgave}
 
 \end{document}
 
