@@ -34,68 +34,79 @@ Polynomier
 
 \begin{center}
 \Huge
-Rødder for andengradspolynomier
+Forberedelse til prøve
 \end{center}
 
-\section*{Rødder for andengradspolynomier}
-\stepcounter{section}
+\subsection*{Opgave 1}
 
-Hvis vi skal bestemme rødderne for et andengradspolynomium, så skal vi bruge løsningsformlen for andengradsligninger, som vi også til tider kalder for diskriminantformlen. Denne er givet ved følgende. 
-\begin{setn}[Løsningsformlen for andengradsligninger]
-	Rødderne for et andengradspolynomium $f$ givet ved
-	\begin{align*}
-		f(x) = ax^2+bx+c
-	\end{align*}
-	er givet ved
-	\begin{align*}
-		x = \frac{-b \pm \sqrt{d}}{2a},
-	\end{align*}
-	hvor vi antager, at diskriminanten $d = b^2 - 4ac$ er ikke-negativ.
-\end{setn}
-\begin{proof}
-	Vi skal løse ligningen 
-	\begin{align}
-		\label{eq:1}
-		ax^2+bx+c = 0.
-	\end{align}
-	Før vi går i gang med at løse ligningen, så vil vi gerne udregne et hjælperesultat. Vi vil 		gerne hæve parentesen i 
-	\begin{align}
-		\label{eq:2}
-		(2ax+b)^2,
-	\end{align}
-	og til dette skal vi bruge kvadratsætningen
-	\begin{align*}
-		(a+b)^2 = a^2+b^2+2ab.
-	\end{align*}
-	Vi anvender denne kvadratsætning på \eqref{eq:2} og får
-	\begin{align}
-		\label{eq:3}
-		(2ax + b)^2 = 4a^2x^2+b^2+4axb.
-	\end{align}
-	Dette skal vi bruge senere i beviset. Vi vender nu tilbage til ligningen \eqref{eq:1} og 			ganger begge sider af lighedstegnet med $4a$.
-	\begin{align*}
-		4a^2x^2 + 4abx + 4ac = 0
-	\end{align*}
-	Vi lægger nu diskriminanten $d = b^2 - 4ac$ til på begge sider af lighedstegnet.
-	\begin{align*}
-		4a^2x^2+4abx + b^2 = b^2 - 4ac.
-	\end{align*}
-	Vi skal nu anvende \eqref{eq:2} på venstresiden og får
-	\begin{align*}
-		(2ax + b)^2 = d.
-	\end{align*}
-	Da $d$ er ikke-negativ, så kan vi tage kvadratroden på begge sider af lighedstegnet, og vi 
-	får
-	\begin{align*}
-		2ax + b = \pm \sqrt{d}
-	\end{align*}
-	Vi kan nu isolere $x$ og får
-	\begin{align*}
-		2ax + b = \pm \sqrt{d} &\Leftrightarrow 2ax = -b \pm \sqrt{d} \\
-		&\Leftrightarrow \frac{-b \pm \sqrt{d}}{2a}.
-	\end{align*}
-	Med dette er vi færdige.
-\end{proof}
+Afgør for følgende sammenhænge mellem $x$ og $y$ om de er ligefrem eller omvendt proportionale.
+\begin{align*}
+	&a) \ y\cdot x = 5 &&b) \  y = -4x   \\
+	&c) \ \frac{y}{x} = 2  &&d) \ y = \frac{6}{x}   
+\end{align*}
+
+
+\subsection*{Opgave 2}
+
+For følgende funktioner $f$ og $g$ bestem da den sammensatte funktion $f(g(x))$. 
+
+\begin{align*}
+	&a) \  f(x) = x^2 \textnormal{ og } g(x) = 2x+1\\
+	&b) \  f(x) = \sqrt{x} \textnormal{ og } g(x) = 4x-3\\
+	&c) \  f(x) = \ln(x) \textnormal{ og } g(x) = \sqrt{x}\\
+	&d) \  f(x) = x^4 \textnormal{ og } g(x) = x^3\\
+\end{align*}
+
+\subsection*{Opgave 3}
+
+En stykvist defineret funktion er defineret ved
+\begin{align*}
+	f(x) = 
+	\begin{cases}
+		\sqrt{x}, &\textnormal{ hvis } x \geq 0,\\
+		x^2-2x+1, &\textnormal{ hvis } x < 0.		
+	\end{cases}
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Tegn grafen for $f$ på intervallet $[-4,4]$.
+	\item Bestem $f(4)$.
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+Bestem graden for følgende polynomier.
+
+\begin{align*}
+	&1) \ x^2+4x+1   &&2) \ x^5-2x^2    \\
+	&3) \ -4x^3+5x^7   &&4) \  x^2+2x^3+3x^4+4x^5+5x^6    \\
+\end{align*}
+
+\subsection*{Opgave 5}
+
+Andengradspolynomierne $f$ og $g$ har henholdsvist parablerne $A$ og $B$, som kan ses på Figur \ref{fig:parabler}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+		axis lines = center,
+		xmin = -3, xmax = 5,
+		ymin = -4, ymax = 6
+		]
+			\addplot[color = teal, samples = 200, thick] {x^2+x-1};
+			\addplot[color = olive, samples = 200, thick] {-x^2+x+2};
+			\node[color = olive] at (axis cs: 3, -2) {B};
+			\node[color = teal] at (axis cs:2.3,4) {A};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Parablerne $A$ og $B$}
+	\label{fig:parabler}
+\end{figure}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $c$-værdien for $f$ og $g$.
+	\item Bestem fortegnet på $a$ og $b$
+\end{enumerate}
 \end{document}
 
 

@@ -8,24 +8,18 @@ Regressioner og regressionsanalyse
 Vi skal i dag se på regressionsanalyse.
 
 \begin{exa}
-Har vi et datasæt 
-\begin{center}
-\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
-$x$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
-$y$ & 0.1 & 1 & 2 & 3.1 & 3.9 & 4.9 & 6.2 & 8.0 & 10.1 & 12.0
-\end{tabular}
-\end{center}
-uden at vide, hvilken underlæggende sammenhæng, der skaber dataet, kan vi prøve at lave forskellige regressioner på det. Dette gøres i Maple og kan ses af Fig. \ref{fig:regression}
+Vi betragter datapunkterne fra \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/regression_eksempel.xlsx}{\color{blue!60} dette datasæt}.
+Vi ved ikke, hvilken underlæggende sammenhæng, der skaber dataet, kan vi prøve at lave forskellige regressioner på det. Dette gøres i Maple og kan ses af Fig. \ref{fig:regression}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth*4/10]{Billeder/linreg.png}
-\includegraphics[width = \textwidth*4/10]{Billeder/expreg3.png}
-\includegraphics[width = \textwidth*4/10]{Billeder/powreg.png}
+\includegraphics[width = \textwidth*4/10]{Billeder/LinRegtilRes.png}
+\includegraphics[width = \textwidth*4/10]{Billeder/ExpRegtilRes.png}
+\includegraphics[width = \textwidth*4/10]{Billeder/PowRegtilRes.png}
 \caption{Lineær regression, eksponentiel regression og potensregression på datasæt}
 \label{fig:regression}
 \end{figure}
-Hvordan afgør vi så, hvilken af modellerne der er bedst, hvis vi ikke har yderligere information omkring kilden af dataet? Man kan ikke sammenligne korrelationskoefficienter mellem modeller. Derfor skal vi lave regressionsanalyse. En del af regressionsanalyse er blot at betragte de fittede modeller og se, hvilken model der ser ud til at passe bedst. I dette tilfælde er det den lineære model eller potensmodellen. 
+Hvordan afgør vi så, hvilken af modellerne der er bedst, hvis vi ikke har yderligere information omkring kilden af dataet? Man kan ikke sammenligne korrelationskoefficienter mellem modeller. Derfor skal vi lave regressionsanalyse. En del af regressionsanalyse er blot at betragte de fittede modeller og se, hvilken model der ser ud til at passe bedst. I dette tilfælde ser det ud til at være potensmodellen. 
 \end{exa}
 
 
@@ -48,13 +42,14 @@ Betragter vi regressionerne fra tidligere eksempel, kan vi finde residualerne fo
  i fald residualerne skal findes for lineær regression. Residualerne for de tre modeller kan ses af Fig. \ref{fig:resplot}
 \begin{figure}[H]
 \centering
-\includegraphics[width = \textwidth*4/10]{Billeder/residuallin.png}
-\includegraphics[width = \textwidth*4/10]{Billeder/residualexp.png}
-\includegraphics[width = \textwidth*4/10]{Billeder/residualpow.png}
+\includegraphics[width = \textwidth*4/10]{Billeder/LinRegResidual.png}
+\includegraphics[width = \textwidth*4/10]{Billeder/ExpRegResidual.png}
+\includegraphics[width = \textwidth*4/10]{Billeder/PowRegResidual.png}
 \caption{Lineær regression, eksponentiel regression og potensregression på datasæt}
 \label{fig:resplot}
 \end{figure}
-Det er lineær regression og potensregression, der har mindst spredning i residualerne, men det ser ud til, at der er struktur i residualerne for alle tre tilfælde. Derfor kunne det tyde på, at ingen af de tre regressioner passer godt til datasættet.
+	Vi ønsker at se et tilfældigt mønster i residualerne, og derfor ser det ud til at 
+	potensregressionen beskriver datapunkterne bedst
 \end{exa}
 \subsection*{Opgave 1}
 \stepcounter{section}
@@ -103,4 +98,5 @@ I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data
 \begin{enumerate}[label=\roman*)]
 	\item Afgør, hvilken regressionstype, der bedst beskriver BNP ved at anvende residualerne for modellen
 	\item Hvis vi antager, at der er et konstant befolkningstal på 10 millioner mennesker i landet, hvornår vil landets samlede BNP så være på 1 billion dollars?
+	
 \end{enumerate}
