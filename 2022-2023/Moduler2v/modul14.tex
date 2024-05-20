@@ -1,0 +1,165 @@
+\begin{center}
+\Huge
+Kombinatorik og sandsynlighedsregning
+\end{center}
+
+\section*{Kombinatorik}
+\stepcounter{section}
+Kombinatorik omhandler at tælle. Vi skal se på forskellig måder at tælle antallet af kombinationer af udvælgelse i forskellige situationer.
+
+\begin{exa}
+Vi skal afgøre på hvor mange måder, vi kan udtrække en blå bold, en gul bold, en rød bold og en sort bold fra en pose på fire bolde med netop disse farver. Den første bold kan trækkes på fire måder, den næste på tre, den tredje på to, og den sidste på én. Dette giver i alt
+\begin{align*}
+4\cdot 3\cdot 2\cdot 1 = 24
+\end{align*}
+forskellige muligheder for at trække de fire bolde. Denne måde at bestemme antallet af udfald kaldes for multiplikationsprincippet.
+\end{exa}
+
+\begin{defn}[Multiplikationsprincippet]
+Skal vi udvælge et element blandt $m$ elementer \textit{og} et element blandt $n$ elementer, så har vi i alt
+\begin{align*}
+m\cdot n
+\end{align*}
+muligheder.
+\end{defn}
+
+\begin{exa}
+Lad os sige, at du har to poser med bolde. Der er syv bolde i den ene pose, og fem bolde i den anden pose. På hvor mange måder kan man så vælge en bold fra den ene pose eller den anden pose. Dette må klart være på
+\begin{align*}
+7+5 = 12
+\end{align*}
+forskellige måder. Dette er et eksempel på anvendelse af additionsprincippet. 
+\end{exa}
+\begin{defn}[Additionsprincippet]
+Skal vi udvælge et element blandt $m$ elementer \textit{eller} blandt $n$ elementer, så har vi i alt 
+\begin{align*}
+m+n
+\end{align*}
+muligheder for at udvælge et element. 
+\end{defn}
+
+\begin{exa}
+Lad os sige, at vi i det første eksempel opskriver den rækkefølge, vi har trukket boldene i. Et eksempel på dette kunne være Blå, Rød, Sort, Gul. Dette kalder vi for en permutation af elementerne, vi betragter; i dette tilfælde en permutation af boldene. Vi har allerede bestemt antallet af permutationer af alle de fire bolde. Det var $4\cdot 3\cdot 2\cdot 1 = 24.$.
+\end{exa}
+\begin{defn}[Permutationer]
+Vi kalder en følge af $k$ elementer udvalg blandt $n$ elementer for en permutation.
+\end{defn}
+
+\begin{defn}[Fakultet]
+Vi definerer $n!$ (læst $n$-fakultet) som produktet af de $n$ første naturlige tal
+\begin{align*}
+n! = n(n-1)\cdots 2\cdot 1.
+\end{align*}
+\end{defn}
+
+
+\begin{exa}
+	\begin{align*}
+		6! = 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 720
+	\end{align*}
+\end{exa}
+
+\begin{setn}
+	Vi kalder antallet af permutationer af $k$ elementer blandt $n$ elementer for $P(n,k)$. Dette tal kan findes som
+	\begin{align*}
+		P(n,k) = \frac{n!}{(n-k)!}.
+	\end{align*}
+\end{setn}
+
+\begin{proof}
+	Vi anvender multiplikationsprincippet, da vi skal vælge $k$ elementer. Det første element kan vælges på $n$ måder, det næste på $n-1$ osv. indtil vi har valgt $k$ elementer. Dette er givet ved
+		\begin{align*}
+			P(n,k) = n(n-1) \cdots (n-k+1).
+		\end{align*}
+	Dette er blot $n!$, hvor vi har fjernet de sidste $n-k$ faktorer. Men dem må vi også kunne fjerne ved at dividere med $(n-k)!.$ Derfor fås, at 
+	\begin{align*}
+		P(n,k) = n(n-1) \cdots (n-k+1) = \frac{n!}{(n-k)!}.
+	\end{align*}
+\end{proof}
+
+\begin{exa}
+	Skal vi bestemme antallet af permutationer blandt fire elever i en klasse på 30, så får vi, at dette er givet ved
+	\begin{align*}
+		P(30,4) = 30\cdot 29 \cdot 28 \cdot 27 = 657720.
+	\end{align*}
+	Dette er altså antallet af måder, vi kan stille fire elever i rækkefølge i en klasse på 30. 
+\end{exa}
+
+
+\section*{Opgave 1}
+En pose indeholder 6 forskellige bolde
+\begin{enumerate}[label=\roman*)]
+	\item På hvor mange forskellige måder kan du tage 4 bolde ud af posen én bold af gangen?
+	\item På hvor mange forskellige måder kan du tømme posen én bold af gangen?
+	\item På hvor mange forskellige måder kan du trække 3 bolde ud af posen én af gangen, hvis du hver gang lægger bolden tilbage i posen igen?
+\end{enumerate}
+
+
+
+
+\section*{Opgave 2}
+En kombinationslås har tre skiver med tallene $0,\hdots, 9$ på hver skive. Kun én permutation åbner låsen.
+\begin{enumerate}[label=\roman*)]
+\item På hvor mange forskellige måder kan man lave en kode?
+\item Lad os antage, at det tager ét sekund at afprøve en kombination, og du vil gerne åbne låsen, men du kender ikke koden. Hvor lang tid tager det i værste fald at åbne låsen?
+\end{enumerate}
+
+\section*{Opgave 3}
+Vi har tre poser med bolde. Den første pose indeholder 2 forskellige bolde, den anden pose indeholder 4 forskellige bolde og den tredje pose indeholder 6 forskellige bolde. 
+
+\begin{enumerate}[label=\roman*)]
+	\item På hvor mange forskellige måder kan vi udtrække en bold fra hver pose
+	\item På hvor mange forskellige måder kan vi udtrække én bold fra én af poserne. 
+	\item Hvis poserne tømmes i rækkefølgen: Pose 1, pose 2, pose 3, på hvor mange forskellige måder kan poserne så tømmes?
+	\item Hvad hvis de tømmes i rækkefølgen: Pose 2, pose 1, pose 3?
+	\item På hvor mange forskellige måder kan poserne tømmes, hvis de ikke nødvendigvis skal tømmes i rækkefølge?
+\end{enumerate}
+
+\section*{Opgave 4}
+En nummerplade i Danmark består af to bogstaver efterfulgt af fem cifre. 
+\begin{enumerate}[label=\roman*)]
+\item Bestem antallet af forskellige danske nummerplader.
+\item I Sverige består en nummerplade af tre bogstaver efterfulgt af tre cifre. Hvor mange svenske nummerplademuligheder er der?
+\item Er der flest danske eller svenske nummerplademuligheder?
+\end{enumerate}
+
+\section*{Opgave 5}
+I det danske alfabet er der 29 bogstaver. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvor mange forskellige ord kan vi lave med det danske alfabet på 3 bogstaver (de behøver ikke at være meningsfulde)?
+	\item Hvor mange ord kan man lave med 5 bogstaver, hvis det første skal være en konsonant og det andet skal være en vokal?
+	\item Hvor mange ord kan man lave med 3 bogstaver, hvis det første bogstav skal være æ,ø eller å og det sidste skal være a,b eller c?
+\end{enumerate}
+
+\section*{Opgave 6}
+Titalssystemet består af cifrene $0,\hdots,9$. 
+\begin{enumerate}[label=\roman*)]
+	\item På hvor mange forskellige måder kan du lave et "ord" på 4 cifre?
+	\item Hvad med 7 cifre?
+\end{enumerate}
+
+\section*{Opgave 7}
+Du er på restaurant, og du skal blandt 14 forretter, 7 hovedretter og 4 desserter bestemme dig for et måltid. 
+\begin{enumerate}[label=\roman*)]
+\item På hvor mange forskellige måder kan du vælge en forret, en hovedret og en dessert, hvis du skal have alle tre dele?
+\item Hvis du kun har råd til enten en hovedret og en forret eller en hovedret og en dessert, på hvor mange forskellige måder kan du så sammensætte dit måltid?
+\item Hvor mange muligheder har du, hvis du kun må vælge én ret?
+\end{enumerate}
+
+\section*{Opgave 8}
+På en computer gemmes information i bits. Disse er enten 0 eller 1. En byte består af otte bits i rækkefølge; et eksempel på en byte kunne lyde (10110010).
+\begin{enumerate}[label=\roman*)]
+\item Hvor mange forskellige bytes er der?
+\item Vi vil gerne associere en følge af bits med et symbol - Eksempelvis kunne vi sige, at a tilsvarer (10001), b tilsvarer (10010) osv, og vi har 128 symboler, vi vil associere med en følge af bits. Hvis alle følgerne skal være lige lange, hvad er så det mindste antal bits vi kan bruge for at beskrive alle 128 symboler med bits?
+\end{enumerate}
+\section*{Opgave 9}
+Vi skal i en klasse på 28 udvælge to til at gøre rent efter undervisningen. Den første vasker borde af, og den sidste fejer gulvet. 
+\begin{enumerate}[label=\roman*)]
+
+\item På hvor mange forskellige måder kan vi vælge disse personer?
+\item Vi skal også have en til at tørre tavlen af. Hvor mange muligheder har vi så?
+
+\end{enumerate}
+\section*{Opgave 10}
+I et kortspil på 52 kort, på hvor mange forskellige måder kan vi så udtrække en hånd på 5 kort, hvis rækkefølgen af kort trukket er vigtig? I et spil kort er det normalt ikke vigtigt, hvilken rækkefølge kortene trækkes i. Har du en idé til, hvordan vi kan tage højde for, at antallet af muligheder er for højt, når rækkefølgen ikke betyder noget. 
+\textsl{•}

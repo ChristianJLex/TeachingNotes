@@ -1,0 +1,120 @@
+\begin{center}
+\Huge
+Nyt emne: Differentialligninger!
+\end{center}
+
+\section*{Introduktion}
+\stepcounter{section}
+
+Differentialligninger er en betegnelse for alle typer ligninger, hvori der indegår en differentieret funktion. Når vi skal løse differentialligninger er stragetien generelt at gætte en løsning, og derefter gøre prøve for at undersøge, om en løsning rent faktisk er en løsning.
+
+Differentialligninger kan beskrive mange virkelige fænomener, og hvis I vil skrive SRP i differentialligninger, så vil der være en god sandsynlighed for, at den vil omhandle differentialligninger. 
+
+\begin{exa}
+Ligningen
+\begin{align*}
+	\frac{\intd y}{\intd x} = yx
+\end{align*}
+er en differentialligning, da der indgår en afledt i ligningen. Første indskydelse er at integrere begge sider, men så fås
+\begin{align*}
+	\int y' \intd x =\int yx \intd x = y,
+\end{align*}
+men dette hjælper os ikke tættere på en løsning, da vi ikke ved, hvordan vi skal løse ligningen
+\begin{align*}
+	\int y x \intd x = y.
+\end{align*}
+Vi gætter derfor på en løsning $y = e^{\frac{1}{2}x^2}$, og vi gør prøve: Dette betyder, at vi indsætter vores gæt i ligningen på højre og venstre side af lighedstegnet.
+Venstresiden giver
+\begin{align*}
+	y' = \left(e^{\frac{1}{2}x^2}\right)' = xe^{\frac{1}{2}x^2}.
+\end{align*}
+Højresiden giver
+\begin{align*}
+	xy = xe^{\frac{1}{2}x^2}.
+\end{align*}
+Da venstresiden og højresiden er ens, så vil $y=e^{\frac{1}{2}x^2}$ være en løsning til differentialligningen. 
+
+Det er også værd at gøre opmærksom på, at $y=e^{\frac{1}{2}x^2}$ ikke er den eneste løsning til ligningen. Vælger vi løsningen $y=5e^{\frac{1}{2}x^2}$, så vil dette også være en løsning. Ja, gør vi prøve fås på venstresiden
+\begin{align*}
+	y' = \left(5e^{\frac{1}{2}x^2}\right) = 5xe^{\frac{1}{2}x^2}.
+\end{align*}
+Tilsvarende fås på højresiden
+\begin{align*}
+	xy = x5e^{\frac{1}{2}x^2},
+\end{align*}
+og siden højre og venstresiden er ens, er dette også en løsning. Disse kaldes for \textit{partikulære løsninger for differentialligningen}. Tilsvarende kaldes mængden af alle løsninger til en differentialligning for \textit{den fuldstændige løsning til en differentialligning}.
+\end{exa}
+
+\begin{exa}
+Vi betragter følgende simple differentialligning
+\begin{align*}
+f'(x) = 7.
+\end{align*}
+Denne differentialligning kan løses ved at integrere, fordi $f(x)$ ikke indgår på højresiden. Vi integrerer derfor:
+\begin{align*}
+	\int f'(x)\intd x = f(x) = 7x + k.
+\end{align*}
+Dette er den fuldstændige løsning til differentialligningen $f'(x) = 7.$ Det skal dog bemærkes at LANGT de fleste differentialligninger ikke kan løses ved at integrere. 
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en partikulær løsning til differentialligningen 
+	\begin{align*}
+		f'(x) = 2x
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		f'(x) = \frac{1}{x} + x
+	\end{align*}
+	\item Argumenter for, at alle partikulære løsninger til differentialligningen
+	\begin{align*}
+		f''(x) = x
+	\end{align*}
+	er tredjegradspolynomier. 
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Forsøg at gætte en partikulær løsning til differentialligningen 
+	\begin{align*}
+		f'(x) = f(x)
+	\end{align*}
+	\item Forsøg at gætte en partikulær løsning til differentialligningen
+	\begin{align*}
+		f(x) - f'(x) = 10x-10
+	\end{align*}
+	\item Forsøg at gætte en løsning til differentialligningen 
+	\begin{align*}
+		f''(x) = -f(x)
+	\end{align*}
+\end{enumerate}
+\section*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+	\item Vis, at $y = ce^{\frac{1}{2}x^2}$ er en løsning til differentialligningen
+	\begin{align*}
+		y' = xy.
+	\end{align*}
+	\item Vis, at $y = 3e^{-2x} + 1$ er en partikulær løsning til differentialligningen
+	\begin{align*}
+		y' = -2y+2
+	\end{align*}
+	\item Afgør, om $g(x) = -\sqrt{x^2-3}$ er en løsning til differentialligningen
+	\begin{align*}
+		g'(x) = \frac{x}{g(x)}
+	\end{align*}
+	\item Vis, at både $f(x) = \cos(x)$, $g(x) = \sin(x)$ og $h(x) = e^{-x}$ er løsninger til differentialligningen
+	\begin{align*}
+		f^{(4)}(x) = f(x).
+	\end{align*}
+	($f^{(4)}$ er den 4-gange differentierede).
+	\item Vis, at $y = \ln(e^{x}+e-1)$ er en løsning til differentialligningen
+	\begin{align*}
+		\frac{\intd y}{\intd x} = e^{x-y}
+	\end{align*}
+	\item Redegør for, at funktionen $f(x) = \frac{75}{1-10e^{-300t}}$ er en løsning til differentialligningen
+	\begin{align*}
+		y'(x) = 4y(75-y)
+	\end{align*}
+\end{enumerate}

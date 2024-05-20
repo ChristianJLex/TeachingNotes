@@ -1,0 +1,308 @@
+\begin{center}
+	\Huge
+	Tværvektorer og determinanter
+\end{center}
+
+\section*{Tværvektor}
+\stepcounter{section}
+
+Ønsker vi at bestemme en vektor, der står vinkelret på en vektor, kan vi konstruere den vektor, vi kalder for tværvektoren.
+
+\begin{defn}[Tværvektor]
+	For en vektor $\vv{v}$ med koordinaterne
+	\begin{align*}
+		\vv{v} = 
+		\begin{pmatrix}
+			v_1 \\ v_2
+		\end{pmatrix}
+	\end{align*}
+	defineret \textit{tværvektoren} til $\vv{v}$ som
+	\begin{align*}
+		\hat{\vv{v}} = 
+		\begin{pmatrix}
+			-v_2 \\ v_1
+		\end{pmatrix}.
+	\end{align*}
+\end{defn}	
+
+På Figur \ref{fig:tværvektor} kan vi se, tværvektoren for en vektor.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1, xmax = 6.5, 
+			ymin = -1, ymax = 6.5, 
+			x = 1.5cm, y = 1.5cm,
+			ticks = none, 
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 4,1) -- (axis cs: 6,4) node[midway, xshift = 7pt, yshift = -7pt] {$\vv{v}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 4,1) -- (axis cs: 1,3) node[midway,xshift = 7pt, yshift = 7pt] {$\hat{\vv{v}}$};
+
+		\end{axis}
+	\end{tikzpicture}
+	\caption{En vektor og dens tværvektor}
+	\label{fig:tværvektor}
+\end{figure}
+
+\begin{exa}
+	Vektoren
+	\begin{align*}
+		\begin{pmatrix}
+			4 \\ 2
+		\end{pmatrix}
+	\end{align*}
+	har vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			-2 \\ 4
+		\end{pmatrix}
+	\end{align*}
+	som tværvektor. 
+\end{exa}
+
+\section*{Determinanter}
+\stepcounter{section}
+
+\begin{defn}[Determinanter]
+	For to vektorer $\vv{u}$ og $\vv{v}$ givet ved
+	\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			u_1 \\ u_2
+		\end{pmatrix}& &\textnormal{og} &
+		&\vv{v} = 
+		\begin{pmatrix}
+			v_1 \\ v_2
+		\end{pmatrix}
+	\end{align*}
+	 defineres \textit{determinanten} mellem $\vv{u}$ og $\vv{v}$ som
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = u_1v_2 - u_2v_1.
+	\end{align*}
+	Dette skrives også til tider
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = 
+		\left|
+		\begin{array}{cc}
+			u_1 & v_1 \\
+			u_2 & v_2
+		\end{array}
+		\right|
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	For vektorerne
+	\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			2 \\ 1
+		\end{pmatrix}& &\textnormal{og} &
+		&\vv{v} = 
+		\begin{pmatrix}
+			-3 \\ 5
+		\end{pmatrix}
+	\end{align*}	 
+	er determinanten givet ved
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = 2\cdot 5 - 1\cdot(-3) = 10+3 = 13
+	\end{align*}
+\end{exa}
+
+\begin{setn}[Areal og determinant]
+	For to vektorer $\vv{u}$ og $\vv{v}$ gælder der, at arealet af deres 
+	udspændende parallelogram er lig $|\det(\vv{u},\vv{v})|$.
+\end{setn}
+
+På Figur \ref{fig:determinant} kan vi se arealet, som determinanten tilsvarer
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1, xmax = 5, 
+			ymin = -1, ymax = 5, 
+			x = 1.5cm, y = 1.5cm,
+			ticks = none, 
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 0,0) -- (axis cs: 2,1) node[midway, xshift = 7pt, yshift = -7pt] {$\vv{u}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 0,0) -- (axis cs: 1,3) node[midway,xshift = 7pt, yshift = -7pt] {$\vv{v}$};
+			\fill[olive,nearly transparent] (axis cs: 0,0) -- (axis cs: 2,1) -- (axis cs:3,4) -- (axis cs: 1,3) -- cycle;
+			\node[color = teal] at (axis cs:1.5,2) {$|\det(\vv{u},\vv{v})|$};
+
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Determinant som areal}
+	\label{fig:determinant}
+\end{figure}
+
+Skal vi bestemme determinanten i Maple, så skal vi skrive
+\begin{align*}
+	&\texttt{with(Gym):}\\
+	&\texttt{$\vv{\texttt{u}}$ := <u$_{1}$,u$_{2}$>}\\
+	&\texttt{$\vv{\texttt{v}}$ := <v$_{1}$,v$_{2}$>}\\
+	&\texttt{det($\vv{\texttt{u}}$,$\vv{\texttt{v}}$)}
+\end{align*}
+
+\newpage
+\subsection*{Opgave 1}
+
+Bestem tværvektoren for følgende vektorer 
+\begin{align*}
+	&a) \ 
+	\begin{pmatrix}
+		2 \\ 5
+	\end{pmatrix}		
+	&
+    &b) \ 
+    \begin{pmatrix}
+    		-7 \\ 11
+    \end{pmatrix}   \\
+    &c) \
+    \begin{pmatrix}
+    		3 \\ -0.5
+    \end{pmatrix}
+    &
+    &d) \
+    \begin{pmatrix}
+    		-\sqrt{3} \\ -27
+    \end{pmatrix}
+\end{align*}
+
+\subsection*{Opgave 2}
+
+Bestem determinanten for følgende par af vektorer
+
+\begin{align*}
+	&a) \	
+	\begin{pmatrix}
+		3 \\ -2
+	\end{pmatrix}
+	\textnormal{ og }
+	\begin{pmatrix}
+		5 \\ 1
+	\end{pmatrix}
+	&
+	&b) \ 
+	\begin{pmatrix}
+		6 \\ 10
+	\end{pmatrix}
+	\textnormal{ og }
+	\begin{pmatrix}
+		4 \\ -7
+	\end{pmatrix}
+\end{align*}
+
+\subsection*{Opgave 3}
+Udregn følgende
+\begin{align*}
+	&a) \ 
+	\left|
+	\begin{array}{cc}
+		5 & 7 \\
+		-2 & -5
+	\end{array}
+	\right|
+	&
+	&b) \
+	\left|
+	\begin{array}{cc}
+		-9 & 4 \\
+		4 & -6
+	\end{array}
+	\right|
+\end{align*}
+
+\newpage
+\subsection*{Opgave 4}
+
+Beregn arealet af det skraverede område på følgende figur.
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -3, xmax = 7, 
+			ymin = -3, ymax = 7, 
+			x = 1.5cm, y = 1.5cm,
+			grid,
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,-1) -- (axis cs: 2,-2) node[midway, xshift = -7pt, yshift = -7pt] {$\vv{u}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,-1) -- (axis cs: -1,6) node[midway,xshift = -7pt, yshift = 7pt] {$\vv{v}$};
+			\fill[olive,nearly transparent] (axis cs: -2,-1) -- (axis cs: 2,-2) -- (axis cs:3,5) -- (axis cs: -1,6) -- cycle;
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\subsection*{Opgave 5}
+Vektorerne $\vv{a}$ og $\vv{b}$ givet ved
+\begin{align*}
+	&\vv{a} =	
+	\begin{pmatrix}
+		2 \\ -4
+	\end{pmatrix}
+	&
+	&\textnormal{og}
+	&
+	&\vv{b} =
+	\begin{pmatrix}
+		4 \\ -8
+	\end{pmatrix}
+\end{align*}
+er parallelle, da $2\vv{a} = \vv{b}$.
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $\det(\vv{a},\vv{b})$. Hvorfor giver resultatet god mening? Tænk på den geometriske fortolkning af determinanten
+	\item Hvordan kan vi undersøge, om to vektorer er parallelle?
+\end{enumerate} 
+
+
+\subsection*{Opgave 6}
+
+To vektorer $\vv{u}$ og $\vv{v}$ er givet ved
+\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			t+2 \\ 5
+		\end{pmatrix}
+		& 
+		&\textnormal{og} 
+		&
+		&\vv{v} =
+		\begin{pmatrix}
+			-t+3 \\ 4
+		\end{pmatrix}
+\end{align*}	
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $\det(\vv{u},\vv{v})$, hvis $t = 6$
+	\item Bestem $t$, så arealet af vektorernes udspændende parallelogram er 20.
+\end{enumerate}
+
+\subsection*{Opgave 7}
+\begin{enumerate}[label=\roman*)]
+	\item Bevis, at en vektor $\vv{v}$ og dens tværvektor $\hat{\vv{v}}$ er orthogonale
+	\item Bevis, at der for to vektorer $\vv{u}$ og $\vv{v}$ givet ved
+	\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			u_1 \\ u_2
+		\end{pmatrix}
+		& 
+		&\textnormal{og} 
+		&
+		&\vv{v} =
+		\begin{pmatrix}
+			v_1 \\ v_2
+		\end{pmatrix}
+	\end{align*}
+	gælder, at
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = \hat{\vv{u}}\cdot \vv{v}.
+	\end{align*}
+\end{enumerate}

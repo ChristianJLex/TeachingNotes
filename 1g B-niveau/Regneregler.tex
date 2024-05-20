@@ -1,0 +1,163 @@
+
+%Overskrift
+\begin{center}
+\Huge
+Regneregler
+\end{center}
+Vi starter med at huske os selv på regnearternes hierarki også kaldet operatorpræcedens, der fortæller os i hvilken rækkefølge, vi skal anvende operatorerne i et givent regnestykke. Altså i hvilken rækkefølge, vi skal lægge sammen, gange, dividere, tage potenser osv. 
+\begin{defn}[Regnearternes hierarki]
+I en udregning anvender vi operatorerne i følgende rækkefølge:
+\begin{enumerate}[label=\roman*)]
+\item Parentes. Betegnes med $()$. (Alt, der står i parentes udregnes først efter rækkefølgen bestemt for de resterende operatorer).
+\item Fakultet. Betegnes med $!$. Vi husker på, at for $n\in \mathbb{N}$ er $n!$ defineret som 
+\begin{align*}
+n! = \begin{cases}
+1 \ &\textnormal{ for }n=0,\\
+n(n-1)(n-2)\cdots 2\cdot 1 \ &\textnormal{ for }n>0.
+\end{cases}
+\end{align*}
+\item Potenser og rødder. Et tal $a$ i $n$'te potens og $n$'te rod betegnes med henholdsvist $a^n$ og $\sqrt[n]{a}$.
+\item Multiplikation og division. Betegnes med henholdsvist $\cdot$ og $/$.
+\item Addition og subtraktion. Betegnes med henholdsvist $+$ og $-$.
+\end{enumerate}
+\end{defn} 
+\begin{exa}
+Lad os betragte regnestykket
+\begin{align}\label{eq:exa1}
+7+10-\underbrace{(5-2\cdot \frac{3}{6}+3!^2)}_{\textnormal{Parentes 1}}+\underbrace{(7-9)}_{\textnormal{Parentes 2}}*4.
+\end{align}
+Vi starter med at udregne Parentes 1. Vi følger regnearternes hierarki:
+\begin{align*}
+(5-2\cdot \frac{3}{6}+3!^2) &\overset{\textnormal{ii)}}{=} (5-2\cdot \frac{3}{6}+6^2)\\
+							&\overset{\textnormal{iii)}}{=} (5-2\cdot \frac{3}{6}+36)\\
+							&\overset{\textnormal{iv)}}{=} (5-1+36)\\
+							&\overset{\textnormal{v)}}{=} (40).
+\end{align*}
+Og Parentes 2 tilsvarende:
+\begin{align*}
+(7-9) &\overset{\textnormal{v)}}{=} (-2).
+\end{align*}
+Disse indsættes nu i \eqref{eq:exa1}, og vi anvender igen regnearternes hierarki til at udregne:
+\begin{align*}
+7+10+\underbrace{40}_{\textnormal{Par. 1}} + \underbrace{(-2)}_{\textnormal{Par. 2}}\cdot 3 &\overset{\textnormal{iv)}}{=} 7+10+40 -6 \\
+&\overset{\textnormal{v)}}{=} 51.
+\end{align*}
+\end{exa}
+\section*{Brøker}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Addition og subtraktion af brøker. For to brøker $\frac{a}{b}$ og $\frac{c}{d}$ er summen og differensen givet ved
+\begin{align*}
+\frac{a}{b} \pm \frac{c}{d} = \frac{ad\pm cb}{bd}.
+\end{align*}
+\item Multiplikation af brøker. Produktet mellem $\frac{a}{b}$ og $\frac{c}{d}$ er givet ved
+\begin{align*}
+\frac{a}{b}\cdot \frac{c}{d} = \frac{ac}{bd}.
+\end{align*}
+Specielt er produktet mellem en brøk $\frac{a}{b}$ og et tal $c$ givet ved
+\begin{align*}
+c\cdot \frac{a}{b} = \frac{ca}{b}.
+\end{align*}
+\item Division af brøker. Forholdet mellem to brøker $\frac{a}{b}$ og $\frac{c}{d}$ er givet ved
+\begin{align*}
+\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}.
+\end{align*}
+(Vi ganger med den omvendte brøk.) Specielt er en brøk $\frac{a}{b}$ divideret med et tal $c$ givet ved
+\begin{align*}
+\frac{\frac{a}{b}}{c} = \frac{a}{bc},
+\end{align*}
+og et tal $c$ divideret med en brøk $\frac{a}{b}$ givet ved
+\begin{align*}
+\frac{c}{\frac{a}{b}} = \frac{ac}{b}
+\end{align*}
+\item Brøker og potenser/rødder. En brøk $\frac{a}{b}$ opløftet i et tal $c$ er givet ved 
+\begin{align*}
+\left(\frac{a}{b}\right)^{c} = \frac{a^c}{b^c}.
+\end{align*}
+$n$'te roden af en brøk $\frac{a}{b}$ er givet ved 
+\begin{align*}
+\sqrt[n]{\frac{a}{b}} = \frac{\sqrt[n]{a}}{\sqrt[n]{b}}.
+\end{align*}
+\end{enumerate}
+\begin{exa}
+Lad os se på et eksempel, hvor vi anvender nogle af disse regler:
+\begin{align*}
+\frac{\frac{2}{5}+\frac{5}{7}}{\frac{10}{3}} \overset{\textnormal{i)}}{=} \frac{\frac{14+25}{35}}{\frac{10}{3}} = \frac{\frac{39}{35}}{\frac{10}{3}} \overset{\textnormal{iii)}}{=} \frac{39\cdot 3}{35 \cdot 10} = \frac{117}{350}.
+\end{align*}
+\end{exa}
+\section*{Potenser/rødder og det udvidede potensbegreb}
+\stepcounter{section}
+
+Når vi opløfter et tal $a\in \mathbb{R}$ i et naturligt tal $n\in \mathbb{N}$ så tilsvarer det
+\begin{align}\label{eq:powerdef}
+a^n = \underbrace{a\cdot a \cdots a}_{n\textnormal{ gange}},
+\end{align}
+vi multiplicerer altså tallet $a$ $n$ gange med sig selv. Vi vil snart forklare, hvad det betyder at opløfte et tal i både en positiv og negativ brøk. Vi vil først diskutere regnereglerne for potenser. Vi vil udnytte repræsentationen \eqref{eq:powerdef} for at udlede regnereglerne for multiplikation.
+Af repræsentationen \eqref{eq:powerdef} må vi for eksempel have
+\begin{align*}
+a^5a^3 = (a\cdot a\cdot a\cdot a\cdot a)(a\cdot a\cdot a) = a\cdot a\cdot a\cdot a\cdot a\cdot a\cdot a\cdot a = a^8, 
+\end{align*}
+og mere generelt for $m,n\in \mathbb{N}$, så har vi
+\begin{align*}
+a^na^m = \underbrace{(a\cdot a\cdots a)}_{n \textnormal{ gange}}\underbrace{(a\cdot a\cdots a)}_{m \textnormal{ gange}} = a^{m+n}
+\end{align*}
+Tilsvarende har vi for eksempel, at 
+\begin{align*}
+\frac{a^5}{a^3} = \frac{a\cdot a\cdot a\cdot a\cdot a}{a\cdot a\cdot a} = a\cdot a =a^2,
+\end{align*}
+og mere generelt for $m,n\in \mathbb{N}$, så
+\begin{align*}
+\frac{a^n}{a^m} = \underbrace{(a \cdot a \cdots a)}_{n\textnormal{ gange}}/\underbrace{(a \cdot a \cdots a)}_{m\textnormal{ gange}} = a^{n-m}.
+\end{align*}
+Derfor må vi også kunne udvide vores potensbegreb til negative eksponenter, og $a^{-n}$ må være lig $\frac{1}{a^n}$ af vores argumentation. Det burde også være klart, hvorfor $a^0 =1$ i det 
+\begin{align*}
+1 = \frac{a^{1}}{a^{1}} = a^{1-1} = a^0.
+\end{align*}
+Vi vil nu opskrive vores første potensregneregler:
+\begin{enumerate}[label=\roman*)]
+\item Potens/rod af produkt: $(ab)^n =a^nb^n $ og $\sqrt[n]{ab} = \sqrt[n]{a}\sqrt[n]{b}$.
+\item Multiplikation/division af potenser: $a^na^m = a^{n+m}$ og $\frac{a^n}{a^m} = a^{n-m}$.
+\end{enumerate}
+Med vores nuværende regler, vil vi se, om vi kan udlede flere regler. Vi har eksempelvis
+\begin{align*}
+(a^5)^2 = a^5a^5 \overset{\textnormal{ii)}}{=} a^{10}, 
+\end{align*}
+eller mere generelt for $m,n\in \mathbb{Z}$ så
+\begin{align}\label{eq:powerpower}
+(a^m)^n = \underbrace{a^m\cdot a^m\cdots a^m}_{n \textnormal{ gange}} \overset{\textnormal{ii)}}{=}  a^{m+m+\cdots+m} = a^{mn}.
+\end{align}
+På samme tid, så har vi, at 
+\begin{align*}
+\sqrt[n]{a^n} = a. 
+\end{align*}
+Hvis vi sammenligner dette med \eqref{eq:powerpower}, så må vi have
+\begin{align*}
+a = \sqrt[n]{a^n} = (a^n)^{1/n},
+\end{align*}
+altså tilsvarer $n$'teroden at opløfte i $1/n$'te potens. Vi kan nu konstruere potenser med alle brøker $\frac{n}{m}\in \mathbb{Q}$ som
+\begin{align*}
+a^{n/m} = \sqrt[m]{a^n},
+\end{align*}
+og vi kan derfor også give mening til at opløfte tal i andet end heltal. 
+Vi kan nu opskrive vores resterende potensregneregler:
+\begin{enumerate}[label=\roman*)]
+\item Potenser af potenser: $(a^n)^m = a^{nm}$,\\
+\item Rødder og potenser: $\sqrt[m]{a^n} = a^{\frac{n}{m}}$.
+\end{enumerate}
+\section*{Opgave 1}
+Udregn følgende brøker (forkort så meget som muligt). Brug Maple til at tjekke jeres svar
+\begin{align*}
+&1)\  \frac{6}{7} + 3              &&2)\ \frac{7}{22} + \frac{9}{10}\\
+ &3)\ \frac{4}{5} + \frac{3}{2}      &&4)\ \frac{1}{2} - \frac{3}{4}\\
+ &5)\ \frac{\frac{4}{3}}{\frac{2}{3}} &&6)\ \frac{\frac{10}{3}-\frac{2}{4}}{\frac{4}{3}+\frac{5}{3}}
+\end{align*}
+\section*{Opgave 2}
+Forkort følgende så meget som muligt. 
+\begin{align*}
+&1)\  (4x^3)^4             &&2)\ \frac{(a^2)^4b^3}{ab^2}\\
+ &3)\ (abc)^2      &&4)\ (a^4+bc^2)^5\\
+ &5)\ \frac{6^3}{6^2} &&6)\ \frac{2^8\cdot 3^5}{3^4\cdot 4^4}\\
+ &7)\  (x^5)^{1/5}            &&8)\ \sqrt[3]{27}\\
+ &9)\ \sqrt{5}\sqrt{20}      &&10)\ 3\sqrt{4}\sqrt{3}\\
+ &11)\ 3\sqrt{10}\cdot3\sqrt{2} &&12)\ 4\sqrt{3}\cdot2\sqrt{6}
+\end{align*}

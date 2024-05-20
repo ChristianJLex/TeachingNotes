@@ -1,0 +1,120 @@
+
+\begin{center}
+\Huge
+Logaritmer
+\end{center}
+\stepcounter{section}
+\section*{Titalslogaritmen}
+Logaritmer er en slags omvendte funktioner til eksponentialfunktioner. Vi ser primært på logaritmer for to eksponentialfunktioner $f(x) = 10^x$ og $g(x) = e^x$. Princippet er, at vi gerne vil have en funktion, der - når vi stopper $f(x)$ ind i funktionen - så giver den $x$. Vi definerer derfor følgende.
+\begin{defn}
+Vi definerer titalslogaritmefunktionen $\log_{10}(x)$, som den entydige funktion, der opfylder, at 
+\begin{align*}
+\log_{10}(10^x) = x
+\end{align*}
+og 
+\begin{align*}
+10^{log_{10}(x)} = x.
+\end{align*}
+\end{defn}
+Vi vil typisk udelade $10$-tallet og blot skrive $\log(x)$.
+
+\begin{exa}
+Der gælder, at $\log(100) = 2$, da
+\begin{align*}
+\log(100) = \log(10^2) = 2.
+\end{align*}
+\end{exa}
+\begin{exa}
+Der gælder, at $\log(10000) = 4$, da
+\begin{align*}
+\log(10000) = \log(10^4) = 4.
+\end{align*}
+\end{exa}
+
+\section*{Den naturlige logaritme}
+\stepcounter{section}
+\begin{defn}
+Den naturlige logaritme er den entydige funktion $\ln$, der opfylder, at
+\begin{align*}
+\ln(e^x) = x, 
+\end{align*}
+og
+\begin{align*}
+e^{\ln(x)} = x,
+\end{align*}
+hvor $e$ er Euler's tal. ($e \approx 2.7182$)
+\end{defn}
+Funktionen $e^x$ kaldes for den naturlige eksponentialfunktion.
+
+\begin{setn}[Regneregler for $\log$.]
+For titalslogaritmen $\log_{10} =\log$ gælder der for $a,b>0$, at 
+\begin{enumerate}
+\item $\log(a\cdot b) = \log(a) + \log(b)$. 
+\item $\log\left(\frac{a}{b}\right) = \log(a)-\log(b)$.
+\item $\log(a^x) = x\log(a)$.
+\end{enumerate} 
+\end{setn}
+\begin{proof}
+Ad $i)$:
+\begin{align*}
+\log(a\cdot b) &= \log(10^{\log(a)}\cdot 10^{\log(b)})\\
+&= \log(10^{\log(a)+\log(b)})\\
+&= \log(a)+\log(b).
+\end{align*}
+Ad $ii)$:
+\begin{align*}
+\log\left(\frac{a}{b}\right) &= \log \left(\frac{10^{\log(a)}}{10^{\log(b)}}\right)\\
+&= \log(10^{\log(a)-\log(b)})\\
+&= \log(a)-\log(b).
+\end{align*}
+Ad $iii)$:
+\begin{align*}
+\log(a^x) &= \log((10^{\log(a)})^x)\\
+&= \log(10^{x\log(a)})\\
+&= x\log(a).
+\end{align*}
+\end{proof}
+\begin{setn}[Regneregler for $\ln$]
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, at
+\begin{enumerate}[label=\roman*)]
+\item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
+\item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
+\item $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+\end{setn}
+\section*{Opgave 1}
+Løs følgende ligninger
+\begin{align*}
+&1) \  \log(x) = 1  &&2) \ \log(x) = 2.5    \\
+&3) \ \log(2x) = 4   &&4) \ \log(3x+10)=3    \\
+&5) \ \log(x^2) = 10   &&6) \  \log(5x) = 5    \\
+\end{align*}
+\section*{Opgave 2}
+Bestem følgende 
+\begin{align*}
+&1) \ \log(\sqrt{10})    &&2) \  \log(\sqrt[3]{100})  \\
+&3) \ \log(\sqrt[n]{1000})   &&4) \ \log(2) + \log(50)    \\
+&5) \ \log(200)-\log(20)   &&6) \ \log(2\cdot 10^5)   
+\end{align*}
+
+\section*{Opgave 3}
+Løs følgende ligninger
+\begin{align*}
+&1) \ \ln(x)=1   &&2) \ \ln(x)=e    \\
+&3) \ \ln(3x+7) = 3   &&4) \  \ln(x^2) = e^4   \\
+\end{align*}
+\section*{Opgave 4}
+Bestem følgende:
+\begin{align*}
+&1) \  \ln(e)  &&2) \  \ln(e^3)    \\
+&3) \  \ln(\sqrt{e})  &&4) \ \ln(\sqrt[5]{e^4})      \\
+\end{align*}
+
+
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+

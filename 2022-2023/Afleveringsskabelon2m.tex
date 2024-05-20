@@ -1,0 +1,269 @@
+\documentclass[12pt,x11names,a4paper]{article}
+\input{preamble}
+
+
+\newgeometry{margin=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Nørre Gymnasium\\2.m
+}
+\cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
+
+%Husk at rette modul og dato!
+\lhead{Aflevering 5 \\ Matematik B
+}
+\chead{20. januar 2023
+}
+
+\begin{document}
+
+%\includepdf[pages=-]{Forsider/aarsprove_1v.pdf}
+\savegeometry{art}
+
+\begin{titlepage}
+\newgeometry{margin=0pt}
+
+\begin{minipage}{0.27\textwidth}
+
+\begin{tikzpicture}[overlay]
+\fill[top color = NorregGroen!40, bottom color = NorregGroen] (6,10) rectangle (-10,-30);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.73\textwidth}
+\begin{center}
+\phantom{h} \vspace{1cm}\\
+\hspace{4cm}
+\includegraphics[scale = 1]{Billeder/Norreg.png} \\
+\phantom{h} \vspace{5cm}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\phantom{h}\\
+{\fontsize{50}{60}\selectfont Matematik-\\aflevering}\\
+\phantom{h}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\Large 2023\\
+\Large 2.m Ma
+
+\end{center}
+\end{minipage}
+\end{titlepage}
+\loadgeometry{art}
+
+%Udfyld afsnit herunder og lav til egen Latex-fil
+
+%Kopier følgende til overskrift:
+
+%\begin{center}
+%\Huge
+%Aflevering 1
+%\end{center}
+%\section*{Opgave 1}
+%\stepcounter{section}
+\begin{center}
+Opgavesætter er delt i to dele:\\
+Delprøve 1 kun med den centralt udmeldte formelsamling.\\
+Delprøve 2 med alle hjælpemidler.
+\end{center}
+
+\section*{Krav til formidling af din besvarelse}
+
+Ved bedømmelse af helhedsindtrykket af besvarelsen af de enkelte opgaver lægges særlig vægt på følgende fire punkter:
+\begin{itemize}
+\item[$\cdot$] \textbf{Redegørelse og dokumentation for metode} \\
+Besvarelsen skal indeholde en redegørelse for den anvendte løsningsstragegi med dokumentation i form af et passende antal mellemregninger \textit{eller} matematiske forklaringer på metoden, når et matematisk værktøjsprogram anvendes.
+\item[$\cdot$] \textbf{Figurer, grafer og andre illustrationer} \\
+Besvarelsen skal indeholde hensigtsmæssig brug af figurer, grafer og andre illustrationer, og der skal være tydelige henvisninger til brug af disse i den forklarende tekst.
+\item[$\cdot$] \textbf{Notation og layout}\\
+Besvarelsen skal i overensstemmelse med god matematisk skik opstilles med hensigtsmæssig brug af symbolsprog, og med en redegørelse for den matematiske notation, der indføres og anvendes, og som ikke kan henføres stil standardviden.
+\item[$\cdot$] \textbf{Formidling og forklaring}\\
+Besvarelsen af rene matematikopgaver skal indeholde en angivelse af givne oplysninger og korte forklaringer knyttet til den anvendte løsningsstrategi beskrevet med brug af almindelig matematisk notation. 
+
+Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en kort præsentation af modellens kontekst, herunder betydning af modellens parametre. De enkelte delspørgsmål skal afsluttes med en præcis konklusion præsenteret i et klart sprog i relation til konteksten.
+\end{itemize}
+
+\newpage
+
+\begin{center}
+\LARGE
+Delprøve uden hjælpemidler 
+\end{center}
+\stepcounter{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 1}
+	En stokastisk variabel $X$ har sandsynlighedsfunktion $P$ og udfaldsrum  \\
+	$U = \{a,b,c,d,e\}$. Fordelingen for $X$ 
+	kan ses af Tab. \ref{tab:fordeling}.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c|c|c|c}
+			$U$ & $a$ & $b$ &  $c$ & $d$ & $e$ \\
+			\hline
+			$P(X=x)$ & 0.5 & 0.1 & 0.05 & 0.05 & $P(X=e)$
+		\end{tabular}
+		\caption{Fordeling for den stokastiske variabel $X$. }
+		\label{tab:fordeling}		
+	\end{table}
+	\phantom{h}
+\end{opgavetekst}
+	\begin{delopgave}{}{1}
+		Bestem $P(X=e)$.
+	\end{delopgave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 2}
+	Et polynomium $f$ er givet ved
+	\begin{align*}
+		f(x) = x^3-9x^2+24x+7.
+	\end{align*}
+	Funktionen $f$ har ikke nogle vendetangenter.
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem ekstremumspunkterne for $f$. 
+\end{delopgave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 3}
+	En linje $l$ går gennem punktet $(-1,-2)$ og har normalvektoren $\vv{n}$ givet ved
+	\begin{align*}
+		\vv{n} = 
+		\begin{pmatrix}
+			4 \\ 3
+		\end{pmatrix}.
+	\end{align*}	
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem linjens ligning for $l$. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Afgør, om punktet $(2,7)$ ligger på linjen. 
+\end{delopgave}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 4}
+	En funktion er givet ved
+	\begin{align*}
+		f(x) = x^3\cdot 2\sqrt{x}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem $f'(x)$. 
+\end{delopgave}
+
+
+\newpage
+\begin{center}
+\LARGE
+Delprøve med hjælpemidler 
+\end{center}
+\stepcounter{section}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 5}
+	En funktion $f$ er givet ved
+	\begin{align*}
+		f(x) = x^5 + 8x^4+7x^2+2x+1
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem ligningen for tangenten i punktet $P(2,f(2))$.
+\end{delopgave}
+\begin{meretekst}
+	I et andet punkt $Q$ er hældningen for tangenten til $f$ lig hældningen for tangenten i punktet $P$. 
+\end{meretekst}
+\begin{delopgave}{}{2}
+	Bestem koordinaterne for punktet $Q$.
+\end{delopgave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opgavetekst}{Opgave 6}
+	\begin{center}
+		\includegraphics[width = 0.7\textwidth]{Billeder/bygge.jpg}
+	\end{center}
+	1000 personer er i en meningsmåling blevet spurgt til deres holdning til et byggeri i lokalområdet. Af disse har
+	351 personer tilkendegivet, at de er utilfredse med byggeriet. 
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem et $95\%$-konfidensinterval for andelen af personer i området, der er utilfredse med byggeriet. 
+\end{delopgave}
+\begin{meretekst}
+	Efter flere forsinkelser af byggeriet spørges 1000 nye personer igen om deres holdning til byggeriet. Denne gang 
+	tilkendegiver 399 personer, at de er utilfredse med byggeriet. 
+\end{meretekst}
+\begin{delopgave}{}{2}
+	Begrund på baggrund af dit $95\%$-konfidensinterval om holdningen til byggeriet har ændret sig signifikant siden 
+	den første meningsmåling. 
+\end{delopgave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opgavetekst}{Opgave 7}
+	En cirkel er givet ved ligningen 
+	\begin{align*}
+		x^2-4x+y^2-6y=23.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Afgør, om punktet $P(1,1)$ ligger på cirklen. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem centrum og radius for cirklen. 
+\end{delopgave}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Ny Opgave!!!!!							%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{opgavetekst}{Opgave 8}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{Billeder/Bakterie.jpg}
+	\end{center}
+	I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2022-2023/Data%20og%20lign/BakterierAfl5.xlsx}{\color{blue!60} dette datasæt} er sammenhængen mellem forløbet tid (i timer) og antallet af 	
+	   bakterier (i mia.) i en opløsning givet. Det antages at antallet af bakterier $B$ (i mia) kan beskrives ved en 
+	model af typen
+	\begin{align*}
+		B(t) = b\cdot a^t,
+	\end{align*}
+	hvor $t$ beskriver den forløbne tid (i timer).
+\end{opgavetekst}
+
+\begin{delopgave}{}{1}
+	Brug datasættet til at bestemme tallene $a$ og $b$.
+\end{delopgave}
+
+\begin{delopgave}{}{2}
+	Brug din model til at bestemme antallet af bakterier efter 130 timer. 
+\end{delopgave}
+
+\begin{meretekst}
+	I en anden opløsning kan antallet af bakterier beskrives ved sammenhængen 
+	\begin{align*}
+		C(t) = 3.55 \cdot 1.006^t,
+	\end{align*}
+	hvor $C$ er antallet af bakterier (i mia.) og $t$ er den forløbne tid (i timer).
+\end{meretekst}
+
+\begin{delopgave}{}{3}
+	Afgør, hvor mange bakterier der er i de to opløsninger, når der er lige mange bakterier i opløsningerne. 
+\end{delopgave}
+
+
+\end{document}
+
+
+

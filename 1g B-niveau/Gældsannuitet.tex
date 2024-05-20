@@ -1,0 +1,60 @@
+
+\begin{center}
+\Huge
+Gældsannuitet
+\end{center}
+
+\section*{Gældsannuitet}
+\stepcounter{section}
+
+Princippet er lidt det samme som i opsparingsannuitet - nu trækker vi bare et fast beløb fra i stedet for at lægge et fast beløb til. Mere præcist lånes der et beløb i banket $G$, som vi kalder for \textit{hovedstolen}. På lånet er der en bestemt rente $r$, der tilsvarer vækstraten. Til hver termin indbetaler vi et fast beløb $Y$, vi kalder for ydelsen. Vi vil gerne bestemme, hvor meget der fortsat skyldes efter $n$ terminer. 
+\begin{exa}
+Vi låner $G=100.000$kr i banken til en årlig rente på $5\%$. Vi betaler en terminsvis ydelse på $Y=10.000$kr.
+Efter $0$ terminer er restgælden $G=100.000$kr. Efter $1$ termin er gælden
+\begin{align*}
+G_1 = \underbrace{100.000}_{=G}\cdot 1,05 - 10.000 = 95.000.
+\end{align*}   
+Efter to terminer er gælden 
+\begin{align*}
+G_2 = \underbrace{95.000}_{=G_1}\cdot 1,05-10.000 = 89.750.
+\end{align*}
+Efter tre terminer gælden 
+\begin{align*}
+G_3 = \underbrace{89.750}_{=G_2} \cdot 1,05 - 10.000 = 84237.5,
+\end{align*}
+og så videre. 
+\end{exa}
+Vi kan bestemme restgælden efter $n+1$ terminer, hvis vi kender restgælden efter $n$ terminer som
+\begin{align*}
+G_{n+1} = G_{n}\cdot (1+r) - Y, 
+\end{align*}
+hvor $(1+r)$ så tilsvarer fremskrivningsfaktoren fra eksponentiel vækst. 
+\begin{setn}
+Låner vi $G$ med en terminsvis rente på $r$ og indbetaler en fast ydelse per termin på $Y$ og skal have afbetalt vores lån på $n$ terminer, har vi følgende sammenhæng mellem vores variable.
+\begin{align*}
+G = Y\cdot \frac{1-(1+r)^{-n}}{r}.
+\end{align*}
+Hvis ydelsen er ubekendt har vi desuden følgende formel
+\begin{align*}
+Y = G\cdot \frac{r}{1-(1+r)^{-n}}
+\end{align*}
+\end{setn}
+\begin{exa}
+Om et forbrugslån gælder følgende betingelser for et lån på 20000kr: Lånet skal betales tilbage efter 5 terminer, og ydelsen skal være på 6000kr. Hvad er renten på lånet? Vi opstiller ligningen
+\begin{align*}
+20000 = 6000\cdot \frac{1-(1+r)^{-5}}{r},
+\end{align*}
+og løser med et CAS-værktøj. Dette giver os $r = 0.152$, altså en procentvis rente på $15,2\%$.
+\end{exa}
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Vi låner $150.000$ i banken til en rente på $6\%$ og betaler en ydelse på $12.000$. Hvor meget er restgælden efter 1,2,3,4 og 5 terminer?
+\item Vi låner $50.000$ til en rente på $10\%$, og betaler en ydelse på 80.000. Bliv ved med at fremskrive restgælden til lånet er afbetalt. Hvor lang til går der?
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Vi låner 1.000.000kr til en rente på $2\%$, og vi vil gerne betale lånet af på 20 år. Hvor meget skal vi betale i termin?
+\item Vi betaler $15.000$kr i termin til en rente på $4\%$, og vi har betalt vores lån af på 30 år. Hvor meget har vi lånt?
+\item Vi låner 2.000.000 til en rente på $3\%$, og vi betaler $20.000$ per termin. Hvornår er vores lån tilbagebetalt?
+\end{enumerate}

@@ -1,0 +1,179 @@
+\begin{center}
+\Huge
+Spredning
+\end{center}
+\section*{Spredning}
+\stepcounter{section}
+
+Vi genopfrisker definitionen for middelværdi fra sidst.
+\begin{defn}[Middelværdi]
+	Middelværdien for en stokastisk variabel $X$ med værdimængde $\{x_1,x_2,\hdots, x_n\}$ er 
+	defineret veed
+	\begin{align*}
+		\mu = x_1\cdot P(X = x_1) + x_2 \cdot P(X = x_2) \cdots + x_n \cdot P(X = x_n).
+	\end{align*}
+\end{defn}
+Middelværdien giver os et indblik i, hvad den stokastiske variabel mest sandsynligt antager af værdi, men den siger ikke noget om, hvor meget værdierne, variablen kan antage varierer omkring middelværdien $\mu$. Vi vil definere variansen som den "gennemsnitlige variation fra middelværdien". Derfor ville det give mening at definere variansen som 
+\begin{align*}
+\textnormal{Var} = \mathbb{E}(X-\mu), 
+\end{align*}
+men dette vil tage højde for, at $X-\mu$ nogle gange er negativ og nogle gange er positiv. Vi vil bare gerne vide, hvor langt $X$ ligger fra $\mu$, så derfor definerer vi variansen på følgende vis:
+\begin{defn}[Varians og spredning]
+Lad $X$ være en (diskret) stokastisk variabel med værdimængde $\{x_1,x_2,\hdots,x_n\}$ og fordelingsfunktion $P$. Så defineres \textit{variansen} for $X$ som
+\begin{align*}
+\textnormal{Var}(X) = \sigma^2 &= E[(X-\mu)^2]\\
+&= (x_1-\mu)^2\cdot P(X=x_1) + \cdots + (x_n-\mu)^2 \cdot P(X=x_n)\\
+&= \sum_{i=1}^n (x_i-\mu)^2\cdot P(X=x_i).
+\end{align*}
+Tallet $\sigma = \sqrt{\textnormal{Var}(X)}$ kaldes for spredningen af $X$. 
+\end{defn}
+
+\begin{exa}
+Lad os fortsætte eksemplet med terningekastet. Vi vil bestemme middelværdien $\mathbb{E}(X)$ for den stokastiske variabel $X$, der beskriver et terningekast. Dette bestemmes ifølge definitionen som
+\begin{align*}
+\mathbb{E}(X) = 1\cdot \frac{1}{6} + 2\cdot \frac{1}{6}+3\cdot \frac{1}{6}+4\cdot \frac{1}{6}+5\cdot \frac{1}{6}+6\cdot \frac{1}{6} = \frac{21}{6} = 3.5,
+\end{align*}
+hvilket er tæt på det vi eksperimentelt havde bestemt gennemsnittet til at være. 
+Variansen er så
+\begin{align*}
+\textnormal{Var}(X) &= (1-3.5)^2 \cdot \frac{1}{6} + (2-3.5)^2 \cdot \frac{1}{6} + (3-3.5)^2 \cdot \frac{1}{6}\\
+ &+ (4-3.5)^2 \cdot \frac{1}{6} + (5-3.5)^2 \cdot \frac{1}{6} +(6-3.5)^2 \cdot \frac{1}{6} \approx 2.92
+\end{align*}
+Spredningen er derfor 
+\begin{align*}
+\sigma \approx \sqrt{2,92} \approx 1.71.
+\end{align*}
+Det er svært at give en god fortolkning af spredningen ud over at det er den gennemsnitlige afstand et slag vil have fra middelværdien. 
+\end{exa}
+
+\section*{Middelværdi og spredning af binomialfordeling}
+\stepcounter{section}
+Vi husker på, at vi skriver, at en binomialfordelt stokastisk variabel $X$ med sandsynlighedsparameter $p$ og antalsparameter $p$ som
+\begin{align*}
+X \sim \textnormal{B}(n,p).
+\end{align*}
+
+\begin{setn}
+Lad $X$ være en binomialfordelt stokastisk variabel - mere præcist $X \sim \textnormal{Bin}(n,p)$. Så gælder der, at middelværdien $\mu$ og spredningen $\sigma$ er givet ved
+\begin{align*}
+ \mu &= n\cdot p,\ \textnormal{ og}
+&\sigma = \sqrt{n\cdot p\cdot (1-p)}. 
+\end{align*} 
+\end{setn}
+Der gælder altså, at $\mathbb{E}[X] = n\cdot p$ og $\textnormal{Var}[X] = n\cdot p\cdot (1-p)$. 
+
+Vi vil ikke bevise denne sætning, men den kan bevises ved at udnytte, at fordelingsfunktionen for $X$ er givet som
+\begin{align*}
+P(X = k) = \binom{n}{k}(p)^k(1-p)^{n-k}.
+\end{align*}
+\begin{exa}
+Vi lader $X$ beskrive den binomialfordelte stokastiske variabel der tilsvarer antallet af slåede sekser efter ti slag med en terning. I dette tilfælde har vi antalsparameter $n = 10$ og sandsynlighedsparameter $p = \frac{1}{6}$, og 
+\begin{align*}
+X \sim \textnormal{Bin}(10,\frac{1}{6}). 
+\end{align*}
+Middelværdien af $X$ er altså
+\[
+\mathbb{E}[X] = 10\cdot \frac{1}{6} \approx 1.66.
+\]
+Vi forventer derfor at få omtrent 1,6 seksere på ti slag.
+Variansen af $X$ er tilsvarende
+\begin{align*}
+\textnormal{Var}[X] = 10\cdot \frac{1}{6}\cdot \frac{5}{6} = \frac{50}{36} \approx 1.3
+\end{align*}
+\end{exa}
+
+\section*{Betydning af spredning}
+\stepcounter{section}
+
+Hvis vi modtager et datasæt, og vi forventer, at dette data er skabt af en binomialfordeling (eller en hvilken som helst anden fordeling), så vil det være oplagt at bruge spredningen og middelværdien til at bestemme, om det er sandsynligt, at dette data følger en binomialfordeling. Vi vil derfor gerne bestemme sandsynligheden for at ligge inden for den gennemsnitlige afvigelse for en binomialfordeling. Vi betragter igen en binomialfordelt stokastisk variabel 
+\begin{align*}
+X \sim \textnormal{B}(n,p).
+\end{align*}
+Sandsynligheden for at $X$ ligger inden for den gennemsnitlige afvigelse $\sigma$ fra middelværdien $\mu$ må være
+\begin{align*}
+P(\mu - \sigma \leq X \leq \mu + \sigma).
+\end{align*}
+Tilsvarende kan vi bestemme sandsynligheden for at ligge inden for to eller tre gennemsnitlige afvigelser som
+\begin{align*}
+&P(\mu - 2\cdot \sigma \leq X \leq \mu + 2\cdot \sigma), \textnormal{ og}
+&P(\mu - 3\cdot \sigma \leq X \leq \mu + 3\cdot \sigma).
+\end{align*}
+Disse sandsynligheder afhænger selvfølgelig af, hvad fordelingen af $X$ er. 
+\begin{exa}
+Lad $X$ være en binomialfordelt stokastisk variabel
+\[
+X \sim \textnormal{Bin}(1000,0.1),
+\]
+der beskriver behandlingen af 1000 patienter med et lægemiddel, der har en succesrate på 10$\%$. Middelværdien for $X$ vil så være
+\begin{align*}
+\mathbb{E}[X] = \mu = 0,1\cdot 1000 = 100,
+\end{align*}
+og spredningen vil være
+\begin{align*}
+\sqrt{\textnormal{Var}[X]} = \sigma = \sqrt{1000\cdot 0.1 \cdot 0.9} = \sqrt{90} \approx 9.5.
+\end{align*}
+Sandsynligheden for at ligge inden for en gennemsnitlig afvigelse vil så være
+\begin{align*}
+P(100-9.5 \leq X \leq 100+9.5) = 0.684.
+\end{align*}
+Sandsynligheden for at ligge inden for en gennemsnitlig afvigelse fra middelværdien er derfor $68\%$ (dette tal er bestemt med en computer). Tilsvarende kan vi finde sandsynligheden for at ligge inden for to eller tre gennemsnitlige afvigelser som
+\begin{align*}
+P(100-2\cdot 9.5 \leq X \leq 100+2\cdot 9.5 ) &= 0.950,\\
+P(100-3\cdot 9.5 \leq X \leq 100+3\cdot 9.5) &= 0.997.
+\end{align*}
+Derfor er sandsynligheden for at ligge inden for to spredninger fra middelværdien $95\%$ og inden for tre spredninger fra middelværdien $99.7\%$. Sandsynligheden for at mindre end $70$ personer helbredes er altså forsvindende lille, hvis medicinalfirmaet taler sandt. Tilsvarende vil sandsynligheden for at mere end $130$ personer helbredes også være forsvindende lille. 
+\end{exa}
+
+
+
+
+
+
+\subsection*{Opgave 1}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Slå plat og krone, og lad $X=1$, hvis udfaldet er plat og $X=0$ ellers. Hvad er sredningen af $X$?
+\item Slå plat og krone to gange og lad $X$ være antallet af plat. Hvad er spredningen af $X$?
+\item Kast en 12-sidet terning og lad $X$ være antallet af øjne. Hvad er spredningen af $X$?
+
+\end{enumerate}
+
+\subsection*{Opgave 2}
+
+Fordelingen for en stokastisk variabel $X$ kan beskrives ved følgende tabel.
+
+\begin{center}
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$x$ & -5 & 2 & 3 & 4 & 7 & 11 \\
+		\hline
+		$P(X = x)$ & 0.1 & 0.2 & 0.1 & 0.4 & 0.05 & 0.15
+	\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem middelværdien for $X$.
+	\item Bestem spredningen for $X$.
+\end{enumerate}
+
+\subsection*{Opgave 3}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Lad $X$ være en Bernoulli-fordelt stokastisk variabel med sandsynlighedsparameter $p$. Hvad er middelværdien og variansen af $X$?
+\item Forklar med ord, hvorfor det giver god mening, at middelværdien for en binomialfordelt stokastisk variabel er $n\cdot p$. 
+\end{enumerate}
+
+\subsection*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+\item Et lægemiddel helbreder 15$\%$ af behandlede personer. Lad $X$ beskrive antallet af helbredte personer, når vi prøver at helbrede $10000$ personer. Hvad er middelværdien og variansen af $X$?
+\item Vi slår fem gange med en terning, og lader $X$ beskrive antallet af gange, vi slår mere end 4. Hvad er middelværdien og variansen for $X$?
+
+\end{enumerate}
+
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Lad $X\sim \textnormal{Bin}(100,1/3)$. Hvad er spredningen for $X$? Hvad er sandsynligheden for at ligge inden for en spredning fra middelværdien? Hvad med to spredninger? 
+\item Hvad er sandsynligheden for, at få mindre end 20 ettere, hvis vi slår med en terning 100 gange?
+\end{enumerate}
+\subsection*{Opgave 6}
+En producent af en bestemt type bildæk lover, at kun 0,01$\%$ af deres dæk er defekte fra produktionen. En importør af disse dæk synes, at lidt for mange af dækkene er defekte. Han har importeret 1.200 dæk, og 5 af disse var defekte. Hvad er sandsynligheden for at mere end 4 dæk er defekte? Har importøren grund i hans mistanke.

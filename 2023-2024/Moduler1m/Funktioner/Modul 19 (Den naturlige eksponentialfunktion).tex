@@ -1,0 +1,117 @@
+\begin{center}
+\Huge
+	Den naturlige eksponentialfunktion
+\end{center}
+\section*{Eksponentialfunktionen som $e^{kx}$}
+\stepcounter{section}
+
+Vi husker på, at en eksponentialfunktion er en funktion på formen
+\begin{align*}
+	f(x) = b\cdot a^x.
+\end{align*}
+Målet er at omskrive dette til formen
+\begin{align*}
+	f(x) = b\cdot e^{kx},
+\end{align*}
+hvor $e \approx 2.7182$ er Eulers tal. Hvis vi har en eksponentialfunktion
+\begin{align*}
+	f(x) = b\cdot a^x,
+\end{align*}
+så kan vi skrive
+\begin{align*}
+	f(x) &= b \cdot a^x \\
+	&= b \cdot \left(e^{\ln(a)}\right)^x\\
+	&= b \cdot e^{\ln(a)\cdot x}\\
+	&= b \cdot e^{kx},
+\end{align*}
+hvor $k = \ln(a)$. For at omskrive eksponentialfunktionen til formen 
+\begin{align*}
+	f(x) = b\cdot e^{kx},
+\end{align*}
+er opgaven altså at bestemme $k = \ln(a)$, som gøres med Maple. 
+
+\begin{exa}
+	En eksponentialfunktion $f$ er givet ved
+	\begin{align*}
+		f(x) = b \cdot 1.2^x.
+	\end{align*}
+	For at omskrive den til formen
+	\begin{align*}
+		f(x) = b\cdot e^{kx},
+	\end{align*}			
+	så bestemmes $\ln(1.2) = 0.182,$ og vi kan omskrive eksponentialfunktionen til
+	\begin{align*}
+		f(x) = b \cdot e^{0.182x}
+	\end{align*}
+\end{exa}
+
+\begin{exa}
+	En eksponentialfunktion $g$ er givet ved
+	\begin{align*}
+		g(x) = 3\cdot e^{-0.5x}.
+	\end{align*}
+	Vi vil gerne omskrive den til formen
+	\begin{align*}
+		g(x) = 3 \cdot a^x.
+	\end{align*}
+	Vi går derfor den omvendte vej og bestemmer $e^{-0.5} = 0.606$.
+	Eksponentialfunktionen $g$ kan derfor skrives som
+	\begin{align*}
+		g(x) = 3 \cdot 0.606^x
+	\end{align*}
+\end{exa}
+
+Vi kan opsamle på de to eksempler. Kender vi en eksponentialfunktion på formen 
+\begin{align*}
+	f(x) = b\cdot a^x
+\end{align*}
+og vil omskrive den til 
+\begin{align*}
+	f(x) = b\cdot e^{kx}, 
+\end{align*}
+så findes $k$ som $\ln(a) = k$.
+
+Kender vi derimod en eksponentialfunktion på formen
+\begin{align*}
+	g(x) = b \cdot e^{kx}
+\end{align*}
+og vil omskrive den til formen
+\begin{align*}
+	g(x) = b \cdot a^x,
+\end{align*}
+så findes $a$ som $a = e^k$.
+
+\subsection*{Opgave 1}
+Omskriv følgende eksponentialfunktioner til formen
+\begin{align*}
+	f(x) = b \cdot e^{kx}.
+\end{align*}
+
+\begin{align*}
+	&1) \ f(x) = 1.7\cdot 2^x   &   &2) \ f(x) = 10 \cdot 0.9^x   \\
+	&3) \ f(x) = \sqrt{2}\cdot 1.79^x  &   &4) \ f(x) = 7\cdot 0.2^x   \\
+	&5) \ f(x) = 6\cdot 10^x  &   &6) \ f(x) = 2.13\cdot 7.389^x   
+\end{align*}
+
+\subsection*{Opgave 2}
+Omskriv følgende eksponentialfunktioner til formen 
+\begin{align*}
+	f(x) = b \cdot a^x
+\end{align*}
+\begin{align*}
+	&1) \ f(x) = 2\cdot e^{2x}   &   &2) \ f(x) = b\cdot e^{-2.3x}  \\
+	&3) \ f(x) = 0.1\cdot e^{x}  &   &4) \ f(x) = 6\cdot e^{10x}   
+\end{align*}
+
+\subsection*{Opgave 3}
+Prøv at tegne nogle af eksponentialfunktionerne på formen 
+\begin{align*}
+	f(x) = b\cdot e^{kx}
+\end{align*}
+fra Opgave 1 og Opgave 2 i Maple.
+\begin{enumerate}[label=\roman*)]
+	\item Kan du gennemskue, hvad der skal være opfyldt for $k$ for at $f$ er voksende?
+	\item Hvad skal gælde for at $f$ er voksende?
+	\item Hvilken betydning har $k$ for grafens forløb?
+\end{enumerate}
+

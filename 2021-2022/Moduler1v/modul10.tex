@@ -1,0 +1,90 @@
+
+\begin{center}
+\Huge
+Eksponentiel vækst og eksponentialfunktioner
+\end{center}
+\stepcounter{section}
+Har vi en sammenhæng af typen $b\cdot a^x = y$, og ønsker vi at bestemme $x$ for et bestemt $y$, så er det oplagt at anvende enten den naturlige logaritme eller titalslogaritmen. Vi isolerer $x$ som følgende
+\begin{align}
+\begin{split}\label{eq:expsolvex}
+b\cdot a^x = y &\Leftrightarrow a^x = \frac{y}{b}\\
+&\Leftrightarrow \ln(a^x) = \ln\left(\frac{y}{b}\right)\\
+&\Leftrightarrow x\ln(a) = \ln(y)-\ln(b)\\
+&\Leftrightarrow x = \frac{\ln(y)-\ln(b)}{\ln(a)}
+\end{split}
+\end{align}
+
+\begin{exa}
+Vi ønsker at løse ligningen 
+\begin{align*}
+3e^{x} = 1.
+\end{align*}
+Vi følger fremgangsmåden fra \eqref{eq:expsolvex}, og får
+\begin{align*}
+3e^x=1 &\Leftrightarrow e^x = \frac{1}{3}\\
+&\Leftrightarrow \ln(e^x) = \ln\left(\frac{1}{3}\right)\\
+&\Leftrightarrow x\ln(e) = \ln(1) - \ln(3)\\
+&\Leftrightarrow x = \frac{\ln(1)-\ln(3)}{\ln(e)}\\
+& \Leftrightarrow x = \frac{0-\ln(3)}{1}\\
+&\Leftrightarrow x = -\ln(3)
+\end{align*}
+\end{exa}
+
+\section*{Eksponentiel vækst}
+Vi vil hovedsagligt bruge logaritmebegrebet i forbindelse med eksponentiel vækst. 
+\begin{defn}
+Hvis vi har en sammenhæng $y = b\cdot a^x$ for konstanter $a,b\in \mathbb{R}, a>0$, så siges sammenhængen mellem $x$ og $y$ at være eksponentiel. En funktion $f$ med forskriften
+\begin{align*}
+f(x) = b\cdot a^x
+\end{align*}
+siges at være en eksponentiel funktion. 
+\end{defn}
+Eksponentiel vækst vokser ved at gange med fremskrivningsfaktoren $a$ efter hver tidsenhed.
+\begin{exa}\label{exa:bacteria}
+Lad os sige, at vi har en bakteriekoloni med ubegrænset næringsstof og plads, og lad os se på væksten af en enkelt bakterie i kolonien. Lad os sige, at den en gang per time deler sig i to. Så vil den efter 1 time være to bakterier, efter to timer være 4 bakterier, efter 3 timer være 8 bakterier osv. Efter hver time ganger vi altså bakterieantallet med 2. Antallet af bakterier $B$ må derfor kunne beskrives som 
+\begin{align*}
+B(t) = B_0\cdot 2^t,
+\end{align*}
+hvor $t$ er tiden i timer, og $B_0$ er antallet af bakterier til tid $t=0$, da $B(0) = B_02^0 = B_0.$
+Dette er eksponentiel vækst, da $a = 2$, og $b = B_0$.
+\end{exa}
+\begin{exa}\label{exa:loan}
+Vi tager et lån i banken og låner 100000kr. Banken giver os en månedlig rente på $1\%$. Efter hver måned skal vi altså gange med $1,01$, og en model for mængden vi skylder, hvis vi ikke afdrager på lånet er
+\begin{align*}
+f(x) = 100.000\cdot (1,01)^t,
+\end{align*}
+hvor $t$ er tiden efter vores lån i måneder. Efter 3 år vil vi derfor skylde
+\begin{align*}
+f(36) = 100.000\cdot (1,01)^{36} \approx 143.000
+\end{align*}
+\end{exa} 
+\section*{Opgave 1}
+Løs følgende ligninger:
+\begin{align*}
+&1) \  e^x = 1  &&2) \ 10\cdot 2^x = 4   \\
+&3) \ 3\cdot 10^x = 300   &&4) \ 1,5\cdot e^{2x+1} = 2   \\
+\end{align*}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item En person låner 40000 som forbrugslån. Han skal betale 19$\%$ i årlig rente. Opstil en model for de penge han skylder som funktion af tiden målt i år, hvis han ikke afdrager på lånet. Hvornår skylder han 100.000? Hvor mange procent er hans lån steget med på 5 år?
+\item En radioaktiv isotop har en halveringstid på 2 sekunder, og vi starter med et kilo af isotopen. Opstil en model for massen af isotopen som funktion af tiden målt i sekunder. Hvornår er der 10 gram tilbage? Hvornår er der 0?
+\end{enumerate}
+
+\section*{Opgave 3}
+Følgende funktioner er alle eksponentialfunktioner. Vis, hvorfor. Hint: Omskriv dem til formen $f(x) = b\cdot a^x$. 
+\begin{align*}
+&1) \ f_1(x) = e^{2x}    &&2) \  f_2(x) = 2\cdot 3^x + 4\cdot 3^x  \\
+&3) \ f_3(x) =  100000\cdot 2^{\frac{t}{60}}  &&4) \ f_4(x) = 5x^2 +7e^{10x}    \\
+\end{align*}
+
+\section*{Opgave 4}
+Omskriv de eksponentielle modeller fra Eksemplerne \ref{exa:bacteria} og \ref{exa:loan} så vi får væksten per minut og per år henholdsvist.
+
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+Hint: Skriv $a = e^{\ln(a)}$ og $b=e^{\ln(b)}$ og anvend potensregneregler. 

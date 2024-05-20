@@ -1,0 +1,148 @@
+\begin{center}
+\Huge
+Separable differentialligninger
+\end{center}
+
+
+\section*{Separable differentialligninger}
+\stepcounter{section}
+
+Vi har tidligere set på differentialligningen
+\begin{align*}
+	\frac{dy}{dx} =xy,
+\end{align*}
+som vi påstod havde den fuldstændige løsning
+\begin{align*}
+y(x) = ce^{\frac{1}{2}x^2}.
+\end{align*}
+Denne differentialligning tilhører en stor klasse af differentialligninger kaldet \textit{separable differentialligninger}, og vi skal i dag se på, hvordan man går til denne differentialligningstype.
+\begin{defn}[Separabel differentialligning]
+	En differentialligning på formen
+	\begin{align*}
+		\frac{dy}{dx} = h(x)g(y)
+ 	\end{align*}		
+ 	for kontinuerte funktioner $g$ og $h$ kaldes for en separabel differentialligning. 
+\end{defn}
+
+\begin{setn}[Separation af variable]
+	Lad $f$ og $g$ være kontinuerte funktioner, samt $g \neq 0$. 
+	Så har differentialligningen
+	\begin{align*}
+		y' = h(x)g(y)
+	\end{align*}
+	den fuldstændige løsning $y = f(x)$, der opfylder, at 
+	\begin{align*}
+		\int \frac{1}{g(y)}dy = \int h(x) dx.
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Vi antager, at $y = f(x)$ er en løsning til differentialligningen
+	\begin{align*}
+		y' = h(x)g(y).
+	\end{align*}
+	Vi definerer nu 
+	\begin{align*}
+		\tilde{g}(x) = \frac{1}{g(x)},
+	\end{align*}
+	så 
+	\begin{align*}
+		g(x) = \frac{1}{\tilde{g}(x)}.
+	\end{align*}
+	Vi får derfor
+	\begin{align*}
+		y' = h(x)g(y) \ &\Leftrightarrow \ f'(x) = \frac{h(x)}{\tilde{g}(f(x))}\\
+					&\Leftrightarrow \tilde{g}(f(x))f'(x) = h(x). 
+	\end{align*}
+	Vi integrerer med hensyn til $x$ på begge sider af lighedstegnet.
+	\begin{align}\label{eq:1}
+		\int\tilde{g}(f(x))f'(x) dx = \int h(x) dx.
+	\end{align}
+	Vi integrerer nu venstresiden ved integration ved substitution og får
+	\begin{align*}
+		\int\tilde{g}(f(x))f'(x) dx = \tilde{G}(f(x)) +k
+	\end{align*}
+	hvor $\tilde{G}$ er en stamfunktion til $\tilde{g}$. Vi indsætter nu $y =f(x)$ og får
+	\begin{align*}
+		\int\tilde{g}(f(x))f'(x) dx &= \tilde{G}(f(x)) +k \\
+		 &= \tilde{G}(y) + k \\
+		&= \int \tilde{g}(y) dy \\
+		&= \int \frac{1}{g(y)}dy.
+	\end{align*}
+	Dette er lig venstresiden i \eqref{eq:1}, så det indsættes og vi får
+	\begin{align*}
+		\int \frac{1}{g(y)}dy = \int h(x) dx,
+	\end{align*}
+	og vi er færdige.
+\end{proof}
+
+\begin{exa}
+	Vi betragter differentialligningen
+	\begin{align*}
+		y' = xy
+	\end{align*}
+	for $y>0$. 
+	Vi har så, at 
+	\begin{align*}
+		y' = h(x)g(y)
+	\end{align*}
+	for $g(x) =x $ og $h(y) = y$. Vi løser denne ved separation af variable og får
+	\begin{align*}
+	\int \frac{1}{g(y)}d(y) = \int h(x) dx  \ &\Leftrightarrow \ \int \frac{1}{y} dy = \int x dx\\
+	&\Leftrightarrow \ \ln(y) = \frac{1}{2}x^2 + k \\
+	& \Leftrightarrow \ y = e^{\frac{1}{2}x^2+k} = e^{k}e^{\frac{1}{2}x^2} = ce^{\frac{1}{2}x^2}.
+	\end{align*}
+	Vi har nu fundet den generelle løsning til differentialligningen 
+	\begin{align*}
+		y' = xy.
+	\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = 2xy
+	\end{align*}
+	\item  Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = x^2y
+	\end{align*}
+	 \item Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = \frac{y}{x}
+	\end{align*}
+	\item Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = x^2e^{-y}
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = 2x\cos(x^2)y.
+	\end{align*}
+	\item Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = 4x(-y^2).
+	\end{align*}
+	\item Bestem en generel løsning til differentialligningen 
+	\begin{align*}
+		y' = 3x^2e^{x^3}y^2.
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem den partikulære løsning til differentialligningen
+	\begin{align*}
+		y' = 2xe^y,
+	\end{align*}
+	der går gennem punktet $(0,1)$.
+	\item Bestem den partikulære løsning til differentialligningen 
+	\begin{align*}
+		y' = (2x+2)sin(x^2+2x)y,
+	\end{align*}
+	der går gennem punktet $(0,1)$. 
+\end{enumerate}

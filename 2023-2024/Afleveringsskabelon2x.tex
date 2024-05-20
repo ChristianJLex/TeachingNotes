@@ -1,0 +1,188 @@
+\documentclass[12pt,x11names,a4paper]{article}
+\input{preamble}
+
+
+\newgeometry{margin=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Nørre Gymnasium\\2.x
+}
+\cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
+
+%Husk at rette modul og dato!
+\lhead{Sandsynlighedsregning \\ Matematik A
+}
+\chead{28. november 2023
+}
+
+\begin{document}
+
+%\includepdf[pages=-]{Forsider/aarsprove_1v.pdf}
+\savegeometry{art}
+
+\begin{titlepage}
+\newgeometry{margin=0pt}
+
+\begin{minipage}{0.27\textwidth}
+
+\begin{tikzpicture}[overlay]
+\fill[top color = NorregGroen!40, bottom color = NorregGroen] (6,10) rectangle (-10,-30);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.73\textwidth}
+\begin{center}
+\phantom{h} \vspace{1cm}\\
+\hspace{4cm}
+\includegraphics[scale = 1]{Billeder/Norreg.png} \\
+\phantom{h} \vspace{5cm}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\phantom{h}\\
+{\fontsize{50}{60}\selectfont Matematik-\\aflevering}\\
+\phantom{h}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\Large 2023\\
+\Large 2.x Ma
+
+\end{center}
+\end{minipage}
+\end{titlepage}
+\loadgeometry{art}
+
+%Udfyld afsnit herunder og lav til egen Latex-fil
+
+%Kopier følgende til overskrift:
+
+%\begin{center}
+%\Huge
+%Aflevering 1
+%\end{center}
+%\section*{Opgave 1}
+%\stepcounter{section}
+\begin{center}
+%Opgavesætter er delt i to dele:\\
+%Delprøve 1 kun med den centralt udmeldte formelsamling.\\
+%Delprøve 2 med alle hjælpemidler.
+\end{center}
+
+\section*{Krav til formidling af din besvarelse}
+
+Ved bedømmelse af helhedsindtrykket af besvarelsen af de enkelte opgaver lægges særlig vægt på følgende fire punkter:
+\begin{itemize}
+\item[$\cdot$] \textbf{Redegørelse og dokumentation for metode} \\
+Besvarelsen skal indeholde en redegørelse for den anvendte løsningsstragegi med dokumentation i form af et passende antal mellemregninger \textit{eller} matematiske forklaringer på metoden, når et matematisk værktøjsprogram anvendes.
+\item[$\cdot$] \textbf{Figurer, grafer og andre illustrationer} \\
+Besvarelsen skal indeholde hensigtsmæssig brug af figurer, grafer og andre illustrationer, og der skal være tydelige henvisninger til brug af disse i den forklarende tekst.
+\item[$\cdot$] \textbf{Notation og layout}\\
+Besvarelsen skal i overensstemmelse med god matematisk skik opstilles med hensigtsmæssig brug af symbolsprog, og med en redegørelse for den matematiske notation, der indføres og anvendes, og som ikke kan henføres stil standardviden.
+\item[$\cdot$] \textbf{Formidling og forklaring}\\
+Besvarelsen af rene matematikopgaver skal indeholde en angivelse af givne oplysninger og korte forklaringer knyttet til den anvendte løsningsstrategi beskrevet med brug af almindelig matematisk notation. 
+
+Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en kort præsentation af modellens kontekst, herunder betydning af modellens parametre. De enkelte delspørgsmål skal afsluttes med en præcis konklusion præsenteret i et klart sprog i relation til konteksten.
+\end{itemize}
+
+\newpage
+
+
+
+\begin{opgavetekst}{Opgave 1}
+	To mængder $A$ og $B$ er givet ved
+	\begin{align*}
+		A &= \{1,2,3,4,5\},  \\
+		B &= \{2,4,5,6,a,b\}.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem $A \cup B$, $A \cap B$ og $A \backslash B$.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	For to vilkårlige mængder $S$ og $T$ tegn et Venn-diagram, der viser mængden
+	\begin{align*}
+		(S \cup T) \backslash (S \cap T).
+	\end{align*}
+\end{delopgave}
+
+\begin{delopgave}{}{3}
+	Bestem mængden 
+	\begin{align*}
+		C = (A \cup B) \backslash (A \cap B)
+	\end{align*}
+\end{delopgave}
+
+
+\begin{opgavetekst}{Opgave 2}
+	I en klasse på 28 elever skal tre personer vælges til at gøre rent.
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem antallet af måder, de tre personer kan udvælges, hvis den første person skal feje 
+	gulvet, den næste skal tørre tavlen af og den sidste skal vaske tavlen.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem antallet af måder de kan vælges, hvis de alle skal feje gulvet
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 3}
+	Du er til fest og alle får serveret et glas champagne. Alle skåler med alle og du hører 780
+	klir.
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem antallet af gæster til festen. 
+\end{delopgave}
+
+\newpage
+
+\begin{opgavetekst}{Opgave 4}
+	Du kaster med en særlig mønt der lander på højkant 20$\%$ af gangene, på plat $40\%$ af 
+	gangene og på krone $40\%$ af gangene. Du kaster med mønten to gange og observerer 
+	resultatet.
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem udfaldsrummet for dette eksperiment
+\end{delopgave}
+\begin{meretekst}
+	En stokastisk variabel $X$ tæller antallet af plat, du har slået med mønten
+\end{meretekst}
+
+\begin{delopgave}{}{2}
+	Bestem værdimængden for $X$.
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Bestem fordelingen for $X$.
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 5}
+	En stokastisk variabel $X$ har følgende fordeling.
+	\begin{center}
+		\vspace{0.5cm}
+		\begin{tabular}{c|c|c|c|c|c|c}
+			$x$ & 1 & 2 & 3 & 4 & 5 & 6 \\
+			\hline
+			$P(X = x)$ & 0.1 & 0.1 & 0.4 & 0.05 & 0.05 & $P(X = 6)$
+		\end{tabular}
+	\end{center}
+	\phantom{h}
+\end{opgavetekst}
+
+\begin{delopgave}{}{1}
+	Bestem $P(X = 6)$.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem $P(X > 3)$.
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Bestem $P(X \in \{2,4,6\})$.
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 6}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem sandsynligheden for, at en tilfældig familie med tre børn har netop én datter
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem sandsynligheden for, at en pige med to søskende ingen søstre har. 
+\end{delopgave}
+\end{document}
+
+
+

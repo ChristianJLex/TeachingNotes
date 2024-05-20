@@ -1,0 +1,94 @@
+
+\begin{center}
+\Huge
+Vækst og væksthastighed
+\end{center}
+\section*{Differentialkvotient af potensfunktion}
+\stepcounter{section}
+Vi har tidligere set, at for en funktion $f(x) = x^a$, så er $f'(x) = ax^{a-1}$. Vi vil vise, at dette gælder i tilfældet, at $a$ er et positivt heltal.  
+\begin{setn}
+For $a$ et ikke-negativt heltal gælder der for $f(x) = x^a$, at 
+\begin{align*}
+f'(x) = ax^{a-1}.
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi vil bevise dette ved induktion. Vi starter derfor med basistilfældet $a = 1$. Vi får så, at 
+$f(x) = x^1 = x$, som vi tidligere har set differentieres til $f'(x) = 1 = 1\cdot x^{1-1}$, og basistilfældet er altså sandt. 
+
+Vi er nu kommet til induktionsskridtet. Vi antager derfor, at der gælder, at $f(x) = x^{a-1}$ har afledet funktion $f'(x) = (a-1)x^{a-2}$, og vi ser så på $(x^a)'$.
+Vi må have, at 
+\begin{align*}
+(x^a)' = (x^{a-1}x)' = (x^{a-1})'\cdot x + (x)'\cdot x^{a-1},
+\end{align*}
+hvor vi har anvendt produktreglen for differentiation. Per induktionsantagelsen så gælder der, at $(x^{a-1})' = (a-1)x^{a-2}$, så vi får
+\begin{align*}
+(x^a)' &=  (x^{a-1})'\cdot x + (x)'\cdot x^{a-1}\\
+&= (a-1)x^{a-2}\cdot x + 1\cdot x^{a-1}\\
+&= (a-1)x^{a-1} + 1\cdot x^{a-1}\\
+&= ax^{a-1},
+\end{align*}
+og vi har bevist sætningen. 
+\end{proof}
+\section*{Relation mellem vækst og differentialregning}
+\stepcounter{section}
+
+\begin{defn}
+Har vi en differentiabel funktion $f(t)$, som funktion af tid $t$, så kalder vi $f'(t)$ for væksthastigheden til tidspunktet $t$. 
+\end{defn}
+\begin{exa}
+En accelererende bil kører vinkelret væk fra os, og dens afstand fra os kan beskrives ved funktionen \begin{align*}
+D(t) = 3\cdot t^2 + 5,
+\end{align*}
+hvor $t$ betegner tid i sekunder og $D(t)$ betegner afstanden fra os i $m$ efter $t$ sekunder. Væksthastigheden af bilen til tiden $t$ er 
+\begin{align*}
+D'(t) = 6t.
+\end{align*}
+Efter to sekunder bevæger bilen sig med $D'(2) = 12 m/s.$ Vi kan også bestemme accelerationen af bilen som væksthastigheden af væksthastigheden:
+\begin{align*}
+D''(t) = 6,
+\end{align*}
+altså er accelerationen af bilen $6m/s^2$. Dette betyder, at hastigheden af bilen vokser med $6m/s$ hvert sekund.  
+Hvis vi skal finde ud af, hvor langt bilen er væk efter $4$ sekunder bestemmer vi
+\begin{align*}
+D(4) = 3\cdot 4^2 +5 = 53,
+\end{align*}
+altså er bilen $53 m$ væk. 
+Hvis vi vil bestemme hastigheden efter $4$ sekunder, så får vi 
+\begin{align*}
+D'(4) = 6\cdot 4 = 24, 
+\end{align*}
+altså er hastigheden efter $4$ sekunder givet ved $24 m/s$.
+\end{exa}
+\section*{Opgave 1}
+Antallet af bakterier i en bakteriekoloni kan bestemmes ved
+\begin{align*}
+N(t) = 0.7\cdot e^{0.3t},
+\end{align*}
+hvor t betegner tid i timer og $N(t)$ er antal bakterier i mio. 
+\begin{enumerate}
+\item Hvor mange bakterier er der efter $7$ timer? Hvad med 14?
+\item Hvad er bakterievæksten efter et døgn? Forklar bakterievæksten med ord.
+\item Bliver antallet af bakterier ved med at stige? Er det realistisk? 
+\item Bliver væksten ved med at stige? Er det realistisk?
+\end{enumerate}
+\section*{Opgave 2}
+Vægten i kg af et radioaktivt stof til efter $t$ timer kan beskrives ved
+\begin{align*}
+V(t) =10\cdot e^{-0.98t}.
+\end{align*}
+\begin{enumerate}
+\item Hvad er vægten af stoffet efter $0$ timer? Hvad med efter $10$ timer?
+\item Hvad er væksten af stoffet efter en uge? Beskriv væksten med ord.
+\end{enumerate}
+\section*{Opgave 3}
+Den faldne afstand for et objekt i frit fald kan approksimeres ved funktionen $A$ givet ved
+\begin{align*}
+A(t) = 4,91 \cdot t^2, 
+\end{align*}
+hvor $t$ er tiden i sekunder og $A$ er den faldne længde i $m$.
+\begin{enumerate}
+\item Hvor langt er objektet faldet efter 10 sekunder?
+\item Med hvilken hastighed falder objektet efter 10 sekunder?
+\item Hvad er accelerationen af faldet?
+\end{enumerate}

@@ -1,0 +1,59 @@
+
+\section*{Bevis}
+\stepcounter{section}
+
+Vi vil gerne vise, at hvis et datasæt $x_1,x_2,\hdots,x_n$ er approksimativt normalfordelt, så vil deres $z$-værdier
+\begin{align*}
+	z_i = \frac{x_i-\mu}{\sigma}
+\end{align*}
+være standardnormalfordelte. 
+\begin{setn}
+	Lad $X\sim \textnormal{N}(\mu,\sigma)$ være en normalfordelt stokastisk variabel. Så gælder der, at
+	\begin{align*}
+		Z = \frac{X-\mu}{\sigma} \sim \textnormal{N}(0,1),
+	\end{align*}
+	altså at $Z$ er standardnormalfordelt.
+\end{setn}
+\begin{proof}
+	Strategien i beviset er at vise, at $P(Z<a) = \Phi(a)$, altså at fordelingsfunktionen for $Z$ er den samme som fordelingsfunktionen for den standardnormalfordelte
+	stokastiske variabel.
+	Vi betragter følgende.
+	\begin{align*}
+		P(Z < a) &= P(\frac{X-\mu}{\sigma} < a)\\
+		&= P(X-\mu < a\sigma)\\
+		&= P(X < a\sigma + \mu).
+	\end{align*}
+	Dette er netop fordelingsfunktion $F$ for $X$, som bekendt er givet ved
+	\begin{align*}
+		P(X < a\sigma + \mu) &= F(a\sigma + \mu)\\
+		&= \int_{-\infty}^{a\sigma + \mu} \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}dx
+	\end{align*}
+	Vi ønsker at lave substitutionen $z = \frac{x-\mu}{\sigma}$, og vi får derfor
+	\begin{align*}
+		\frac{dz}{dx} = \frac{1}{\sigma}
+	\end{align*}
+	eller 
+	\begin{align*}
+		dz\sigma = dx.
+	\end{align*}
+	Vi skal også ændre grænserne. For den nedre grænse får vi
+	\begin{align*}
+		\frac{-\infty - \mu}{\sigma} = -\infty
+	\end{align*}
+	og for den øvre grænse får vi
+	\begin{align*}
+		\frac{a\sigma + \mu - \mu}{\sigma} = \frac{a\sigma}{\sigma} = a.
+	\end{align*}
+	Vi substituerer og får
+	\begin{align*}
+		\int_{-\infty}^{a\sigma + \mu} \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}dx 
+		&= \int_{-\infty}^{a} \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(z)^2}dz \sigma \\
+		&= \int_{-\infty}^{a} \frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}z^2}dz \\
+		&= \Phi(a).
+	\end{align*}
+	Vi har nu fundet ud af, at 
+	\begin{align*}
+		P(Z < a) = \Phi(a),
+	\end{align*}
+	så derfor må $Z$ være standardnormalfordelt. 
+\end{proof}

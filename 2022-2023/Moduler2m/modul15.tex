@@ -1,0 +1,87 @@
+\begin{center}
+\Huge
+Kombinatorik og binomialkoefficienten
+\end{center}
+
+\section*{Binomialkoefficienten}
+\stepcounter{section}
+Vi diskuterede sidste gang permutationer og antallet af permutationer af $k$ elementer blandt $n$ elementer. I den bearbejdning tog vi ikke højde for, at permutationers rækkefølge ofte er ligegyldig. Trækker vi fem kort i et kortspil, så er vi ligeglade med, om vi har trukket spar to før klør fem eller omvendt. Dette vil vi tage højde for nu. D
+
+\begin{defn}
+Vi betegner antallet af måder, vi kan udvælge $k$ elementer blandt $n$ elementer, hvor rækkefølgen ikke har betydning som
+\begin{align*}
+K(n,k) = \binom{n}{k},
+\end{align*}
+hvoraf det er den sidste skrivemåde, der er klart mest anvendt (men jeres bog bruger $K(n,k)$). Dette symbol kaldes for binomialkoefficienten. En måde at udvælge $k$ elementer uden betydning af rækkefølge kaldes for en \textit{kombination}.
+\end{defn}
+\begin{setn}
+Binomialkoefficienten $\binom{n}{k}$ er givet ved
+\begin{align*}
+\binom{n}{k} = \frac{n!}{k!(n-k)!}.
+\end{align*}
+\end{setn}
+\begin{proof}
+Antallet af måder, vi kan udvælge $k$ elementer blandt $n$ elementer, hvor rækkefølge har betydning så vi sidst var $P(n,k) = n!/(n-k)!$. Vi skal nu tage højde for alle de permutationer, der består af de samme elementer i forskellige rækkefølge. Men for ethvert valg af $k$ elementer, så er der jo lige præcis $k!$ måder at permutere dem. Derfor må vi have $k!$ gange for mange permutationer med. Altså er $\binom{n}{k}$ givet ved
+\begin{align*}
+ \binom{n}{k} = \frac{P(n,k)}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} = \frac{n!}{k!(n-k)!}.
+\end{align*}
+\end{proof}
+
+\begin{exa}
+Vi skal bestemme på hvor mange måder, vi kan udvælge 3 kort i et kortspil. Da rækkefølge ikke betyder noget, og da der er 52 kort i et kortspil, så er det givet som
+\begin{align*}
+\binom{52}{3} = \frac{52!}{3!(49)!} = 21000.
+\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+Vi har en pose med fem forskellige bolde. 
+\begin{enumerate}[label=\roman*)]
+	\item På hvor mange forskellige måder kan vi vælge to bolde i posen, hvis rækkefølgen ikke betyder noget?
+	\item På hvor mange forskellige måder kan vi vælge 4 bolde i posen, hvis rækkefølgen ikke betyder noget?
+\end{enumerate}
+
+\section*{Opgave 2}
+En isbutik har 12 forskellige typer is, og vi er ligeglade med rækkefølgen af kugler
+\begin{enumerate}[label=\roman*)]
+	\item På hvor mange forskellige måder kan vi bestille 3 kugler is?
+	\item Hvis vi vil have chokolade som den sidste kugle, på hvor mange forskellige måder kan vi så bestille is?
+	\item Hvis vi vil have chokolade, men er ligeglade med placeringen, på hvor mange forskellige måder kan vi så
+	 bestille en is?
+\end{enumerate}
+
+
+
+\section*{Opgave 3}
+En mand har i sit klædeskab syv skjorter, fem par bukser og 3 jakker. Han skal have tre skjorter, to par bukser og en jakke med på ferie. På hvor mange måder kan han pakke sin kuffert?
+
+\section*{Opgave 4}
+Bestem følgende binomialkoefficienter:
+\begin{align*}
+&1) \ \binom{7}{2}  &&2) \ \binom{10}{3}  \\
+&3) \ \binom{5}{4}  &&4) \ \binom{200}{1}   \\
+\end{align*}
+
+\section*{Opgave 5}
+En pokerhånd består af fem kort fra et kortspil på 52 kort.
+\begin{enumerate}[label=\roman*)]
+\item Hvor mange hænder er der i poker?
+\item En flush består af fem kort i samme kulør. På hvor mange forskellige måder kan man få flush med hjerter? På hvor mange måder kan man få flush i alt?
+\item En straight består af 5 kort i følge; e.g. 2,3,4,5,6. På hvor mange forskellige måder kan man få straight?
+\end{enumerate} 
+
+\section*{Opgave 6}
+Du skal i biografen med klassen. I en biograf med 200 sæder, på hvor mange forskellige måder kan I så vælge jeres sæder?
+
+\section*{Opgave 7}
+I skal lave netværksgrupper i klassen. Disse består af 5 personer.
+\begin{enumerate}[label=\roman*)]
+	\item På hvor mange forskellige måder kan man lave en netværksgruppe.
+\end{enumerate}
+
+\section*{Opgave 8}
+Vi er til dimission og alle får serveret et glas champagne (eller hvad end, de nu ønsker). Alle gæster skåler med alle andre gæster, og vi hører i alt 435 klir fra glas, der støder sammen.
+\begin{enumerate}[label=\roman*)]
+	\item Hvor mange er der til dimissionen?
+	\item Gæsterne skåler nu tre og tre på alle mulige måder. Hvor mange klir hører vi nu?
+\end{enumerate}

@@ -1,0 +1,65 @@
+
+\begin{center}
+\Huge
+Rødder for andengradspolynomier
+\end{center}
+
+\section*{Rødder for andengradspolynomier}
+\stepcounter{section}
+
+Hvis vi skal bestemme rødderne for et andengradspolynomium, så skal vi bruge løsningsformlen for andengradsligninger, som vi også til tider kalder for diskriminantformlen. Denne er givet ved følgende. 
+\begin{setn}[Løsningsformlen for andengradsligninger]
+	Rødderne for et andengradspolynomium $f$ givet ved
+	\begin{align*}
+		f(x) = ax^2+bx+c
+	\end{align*}
+	er givet ved
+	\begin{align*}
+		x = \frac{-b \pm \sqrt{d}}{2a},
+	\end{align*}
+	hvor vi antager, at diskriminanten $d = b^2 - 4ac$ er ikke-negativ.
+\end{setn}
+\begin{proof}
+	Vi skal løse ligningen 
+	\begin{align}
+		\label{eq:1}
+		ax^2+bx+c = 0.
+	\end{align}
+	Før vi går i gang med at løse ligningen, så vil vi gerne udregne et hjælperesultat. Vi vil 		gerne hæve parentesen i 
+	\begin{align}
+		\label{eq:2}
+		(2ax+b)^2,
+	\end{align}
+	og til dette skal vi bruge kvadratsætningen
+	\begin{align*}
+		(a+b)^2 = a^2+b^2+2ab.
+	\end{align*}
+	Vi anvender denne kvadratsætning på \eqref{eq:2} og får
+	\begin{align}
+		\label{eq:3}
+		(2ax + b)^2 = 4a^2x^2+b^2+4axb.
+	\end{align}
+	Dette skal vi bruge senere i beviset. Vi vender nu tilbage til ligningen \eqref{eq:1} og 			ganger begge sider af lighedstegnet med $4a$.
+	\begin{align*}
+		4a^2x^2 + 4abx + 4ac = 0
+	\end{align*}
+	Vi lægger nu diskriminanten $d = b^2 - 4ac$ til på begge sider af lighedstegnet.
+	\begin{align*}
+		4a^2x^2+4abx + b^2 = b^2 - 4ac.
+	\end{align*}
+	Vi skal nu anvende \eqref{eq:2} på venstresiden og får
+	\begin{align*}
+		(2ax + b)^2 = d.
+	\end{align*}
+	Da $d$ er ikke-negativ, så kan vi tage kvadratroden på begge sider af lighedstegnet, og vi 
+	får
+	\begin{align*}
+		2ax + b = \pm \sqrt{d}
+	\end{align*}
+	Vi kan nu isolere $x$ og får
+	\begin{align*}
+		2ax + b = \pm \sqrt{d} &\Leftrightarrow 2ax = -b \pm \sqrt{d} \\
+		&\Leftrightarrow \frac{-b \pm \sqrt{d}}{2a}.
+	\end{align*}
+	Med dette er vi færdige.
+\end{proof}

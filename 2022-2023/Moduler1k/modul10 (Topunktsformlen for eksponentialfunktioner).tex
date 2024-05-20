@@ -1,0 +1,123 @@
+
+\begin{center}
+\Huge
+Eksponentialfunktion gennen to punkter. 
+\end{center}
+\section*{Topunktsformlen for ekspontialfunktioner}
+\stepcounter{section}
+Har vi to punkter $(x_1,y_1)$ og $(x_2,y_2)$, så kan vi finde den entydige rette linje med ligning $y = ax + b$, der skærer gennem disse punkter ved brug af topunktsformlen. Den fortæller os, at hældningskoefficienter $a$ er givet som
+\begin{align*}
+a = \frac{y_2-y_1}{x_2-x_1},
+\end{align*}
+og vi kan så finde skæringen med $y$-aksen $b$ ved
+\begin{align*}
+b = y_1 - ax_1.
+\end{align*}
+
+Vi kan tilsvarende finde en entydig eksponentialfunktion, der skærer gennem to punkter.
+Vi starter med at huske på, hvordan en eksponentialfunktion er defineret
+\begin{defn}[Eksponentialfunktion]
+	Lad $a,b>0$. Så kaldes en funktion $f$ givet ved
+	\begin{align*}
+		f(x)=b\cdot a^x
+	\end{align*}
+	for en \textit{eksponentialfunktion}. Tallet $b$ kaldes for \textit{begyndelsesværdien} og tallet $a$ kaldes for \textit{fremskrivningsfaktoren}.
+\end{defn}
+
+\begin{setn}
+Givet to punkter $(x_1,y_1)$ og $(x_2,y_2)$ er der en entydig eksponentialfunktion $f$ givet ved
+\begin{align*}
+f(x) = b\cdot a^x,
+\end{align*}
+hvis graf går gennem disse punkter. Fremskrivningsfaktoren $a$ er givet ved
+\begin{align*}
+a=\sqrt[(x_2-x_1)]{\frac{y_2}{y_1}}.
+\end{align*}
+Skæringen med $y$-aksen $b$ er givet ved
+\begin{align*}
+b = \frac{y_1}{a^{x_1}}.
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi skal bestemme en eksponentiel funktion
+\begin{align*}
+f(x) = b\cdot a^x, 
+\end{align*}
+der går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$. Vi må derfor have, at $y_1 = b\cdot a^{x_1}$ og $y_2 = b\cdot a^{x_2}$. Vi finder nu forholdet mellem $y_2$ og $y_1$ som
+\begin{align*}
+\frac{y_2}{y_1} &= \frac{b\cdot a^{x_2}}{b\cdot a^{x_1}}\\
+				&= \frac{a^{x_2}}{a^{x_1}}\\
+				&=a^{x_2-x_1}.
+\end{align*}
+Vi tager nu $x_2-x_1$'te roden på begge sider af lighedstegnet.
+\begin{align*}
+\sqrt[(x_2-x_1)]{\frac{y_2}{y_1}} = \sqrt[(x_2-x_1)]{a^{x_2-x_1}} = a,
+\end{align*}
+og vi har altså bestemt $a$, siden $a>0$. Da vi ved, at $y_1 = b\cdot a^{x_1}$, så får vi ved at dividere igennem med $a^{x_1}$, at 
+\begin{align*}
+\frac{y_1}{a^{x_1}} = \frac{b\cdot a^{x_1}}{a^{x_1}} = b, 
+\end{align*}
+og beviset er færdigt. 
+\end{proof}
+Bemærk, at vi gerne vil have, at punkterne ligger over x-aksen.
+\begin{exa}
+Vi skal bestemme den eksponentialfunktion, der går gennem $(1,2)$ og $(3,8)$. Vi bruger topunktsformlen for eksponentialfunktioner, og får
+\begin{align*}
+a = \sqrt[3-1]{\frac{8}{2}} = \sqrt[2]{4} = 2, 
+\end{align*}
+og 
+\begin{align*}
+b = \frac{2}{2^{1}} = 1.
+\end{align*}
+Den eksponentialfunktion, der går gennem disse punkter er derfor 
+\begin{align*}
+f(x) = 1\cdot 2^x = 2^x.
+\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+Bestem de eksponentialfunktioner, der går gennem følgende par af punkter (Uden Maple)
+\begin{align*}
+&1) \ (0,3), \ (1,6)  &&2) \ (1,3), \ (3,27)      \\
+&3) \ (1,2), \  (3,8)   &&4) \  (0,4), \ (3,8)    \\
+&5) \ (1,e), \ (3,e^3)   &&6) \ (2,8),\  (4,32)       \\
+\end{align*}
+
+\section*{Opgave 2 (med Maple)}
+Vi har efter 3 år 6750kr på en konto og efter 7 år 7433kr på samme konto. Beløbet på kontoen kan beskrives ved eksponentiel vækst
+\begin{enumerate}[label=\roman*)]
+	\item Bestem den eksponentialfunktion, der beskriver beløbet på kontoen efter $x$ år.
+	\item Afgør, hvornår meget der står på kontoen efter 12 år.
+	\item Hvornår står der 10.000kr på kontoen?
+\end{enumerate}
+
+
+\section*{Opgave 3 (med Maple)}
+Vi har placeret en radioaktiv isotop på en vægt. Den vejer til start 1 kg. Efter 10 dage vejer den 0.997kg. Henfaldet af isotopen antages at kunne beskrives ved eksponentiel vækst.
+\begin{enumerate}[label=\roman*)]
+	\item  Bestem den eksponentialfunktion, der beskriver vægten af den radioaktive isotop.
+	\item Hvor meget vejer isotopen efter en måned?
+	\item Hvornår er vægten af isotopen halveret?
+\end{enumerate}
+
+\section*{Opgave 4 (med Maple)}
+En bakteriekoloni vokser med 5$\%$ hver time. Efter 8 timer er der i kolonien 1.3 mia bakterier. 
+\begin{enumerate}[label=\roman*)]
+	\item Bestem forskriften på den eksponentialfunktion, der beskriver antallet af bakterier i kolonien. 
+	\item Hvad var begyndelsesværdien for eksponentialfunktionen?
+	\item Hvornår overstiger antallet af bakterier 3 mia.?
+\end{enumerate}
+
+\section*{Opgave 5 (med Maple)}
+\begin{enumerate}[label=\roman*)]
+	\item En eksponentialfunktion er givet ved
+	\begin{align*}
+		f(x) = b \cdot 1.3^x.
+	\end{align*}
+	Udnyt, at $f(2) = 7$ til at bestemme $b$.
+	\item En eksponentialfunktion er givet ved
+	\begin{align*}
+		g(x) = 0.743\cdot a^x
+	\end{align*}
+	Udnyt, at $g(0.1) = 1.236$ til at bestemme $a$.  
+\end{enumerate}

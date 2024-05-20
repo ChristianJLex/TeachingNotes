@@ -1,0 +1,149 @@
+
+\begin{center}
+\Huge
+Projektioner af vektorer
+\end{center}
+
+\section*{Projektioner}
+\stepcounter{section}
+
+Har vi to vektorer $\vv{a}$ og $\vv{b}$, så kan vi være interesserede i at bestemme den vektor $\vv{a_{\vv{b}}}$, der peger i samme retning som $\vv{b}$ og som i en forstand er så tæt på $\vv{a}$ som muligt. Vi kalder i et sådant tilfælde vektoren $\vv{a_{\vv{b}}}$ for projektionen af $\vv{a}$ på $\vv{b}$. Vi skriver også 
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \vv{a}_{\vv{b}}.
+\end{align*}
+
+Vi starter med at vise, hvordan vi finder projektionen af en vektor på en anden vektor. 
+\begin{setn}[Projektionssætningen]
+For to vektorer $\vv{a}$ og $\vv{b}$ er projektionen af $\vv{a}$ på $\vv{b}$, som vi betegner
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \vv{a}_{\vv{b}}, 
+\end{align*}
+givet ved
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2} \vv{b}.
+\end{align*}
+Længden af  $\vv{a}_{\vv{b}}$ er givet ved
+\begin{align*}
+\left|\vv{a}_{\vv{b}}\right| = \frac{|\vv{a}\cdot \vv{b}|}{|\vv{b}|}
+\end{align*}
+\end{setn}
+\begin{proof}
+Af konstruktionen af projektionen $\vv{a_{\vv{b}}}$ så findes der et tal $k$, så 
+\begin{align*}
+k\vv{b} = \vv{a_{\vv{b}}}.
+\end{align*}
+Lad $n$ være en normalvektor til $\vv{u}$, der opfylder, at 
+\begin{align*}
+\vv{a_{\vv{b}}} + \vv{n} = \vv{a}.
+\end{align*}
+Vi har så, at 
+\begin{align*}
+\vv{n} = \vv{a} - \vv{a_{\vv{b}}}.
+\end{align*}
+Da $\vv{n}$ er en normalvektor til $\vv{b}$, så får vi følgende prikprodukt.
+
+\begin{align*}
+\vv{n} \cdot \vv{b}=0 &\Leftrightarrow (\vv{a}-\vv{a_{\vv{b}}}) \cdot \vv{b} = 0 \\
+&\Leftrightarrow \vv{a}\cdot \vv{b} - \vv{a_{\vv{b}}}\cdot \vv{b} = 0 \\
+&\Leftrightarrow \vv{a}\cdot \vv{b} = \vv{a_{\vv{b}}}\cdot \vv{b} = k \vv{b} \cdot \vv{b} \\
+&\Leftrightarrow k  = \frac{\vv{a}\cdot \vv{b}}{\vv{b} \cdot \vv{b}} = \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}
+\end{align*}
+
+Derfor får vi, at 
+\begin{align*}
+\vv{a_{\vv{b}}} &= k \vv{b}\\
+&= \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2} \vv{b}.
+\end{align*} 
+
+Vi kan nu bestemme længden af vektoren:
+\begin{align*}
+|\vv{a_{\vv{b}}}| &= \left|\frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}\vv{b}\right|\\
+&= \left|\frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}\right||b| \\
+&= \frac{\vv{a} \cdot \vv{b}}{|b|}
+\end{align*}
+\end{proof}
+
+\begin{exa}
+Vi skal bestemme projektionen af vektoren 
+\begin{align*}
+\vv{a} = \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}
+\end{align*}
+på vektoren 
+\begin{align*}
+\vv{b} = \begin{pmatrix}
+5 \\ 7
+\end{pmatrix}.
+\end{align*}
+Vi bestemmer først
+\begin{align*}
+\vv{a} \cdot \vv{b} = \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}
+\cdot \begin{pmatrix}
+5 \\ 7
+\end{pmatrix}
+= 1\cdot 5 + 2\cdot 7 = 19
+\end{align*}
+Vi bestemmer så
+\begin{align*}
+|b|^2 = (\sqrt{5^2+7^2})^2 =25+49 = 74
+\end{align*}
+Vi kan nu bestemme projektionen $\vv{a_{\vv{b}}}$ som
+\begin{align*}
+\vv{a_{\vv{b}}} &= \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}\vv{b} \\&= \frac{19}{74}\begin{pmatrix}
+5 \\ 7
+\end{pmatrix} &= \begin{pmatrix}
+\frac{95}{74} \\ \frac{134}{74}
+\end{pmatrix}
+\end{align*}
+
+
+\section*{Opgave 1}
+Projicér vektoren $\vv{v}$ givet ved
+\begin{align*}
+\vv{v} = \begin{pmatrix}1 \\ 1
+\end{pmatrix}
+\end{align*}
+ned på følgende vektorer:
+\begin{align*}
+&1) \ \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}  &&2) \   \begin{pmatrix}
+4 \\ 5
+\end{pmatrix}  \\
+&3) \ \begin{pmatrix}
+-2 \\ 1
+\end{pmatrix}  &&4) \ \begin{pmatrix}
+4 \\ -2
+\end{pmatrix}    \\
+&5) \ \begin{pmatrix}
+-3 \\ -3
+\end{pmatrix}  &&6) \  \begin{pmatrix}
+6 \\ 5
+\end{pmatrix}   \\
+\end{align*}
+\end{exa}
+
+\section*{Opgave 2}
+En linje $\l$ er givet ved parametriseringen
+\begin{align*}
+\begin{pmatrix}
+x \\ y 
+\end{pmatrix} = \begin{pmatrix}
+1 \\ 2
+\end{pmatrix} + 
+t\begin{pmatrix}
+2 \\ 3
+\end{pmatrix}
+\end{align*}
+Bestem projektionen af følgende punkter ned på $l$. 
+\begin{align*}
+&1) \ (1,1)  &&2) \  (-2,3)   \\
+&3) \ (5,2)  &&4) \  (-3,-4)   \\
+&5) \ (4,7)  &&6) \  (3,-5)   \\
+\end{align*}
+
+\section*{Opgave 3}
+I har fået en aflevering

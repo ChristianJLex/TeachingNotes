@@ -1,0 +1,49 @@
+\begin{center}
+\Huge
+Model for bakterievækst
+\end{center}
+
+\section*{Model for bakterievækst}
+\stepcounter{section}
+\section*{Opgave 1}
+Vi husker på, at en bakteriekoloni med ubegrænset mad og plads vokser eksponentielt. En bakterie bliver til to, to bliver til 4 osv. 
+\begin{enumerate}[label=\roman*)]
+\item Lav eksponentiel regression på følgende datasæt, der beskriver antallet af bakterier i en beholder.
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|c}
+Tid (timer) & 0 & 1 & 2 & 3 & 4 & 5 & 6\\ \hline
+Bakterier (mio) & 1.2 & 15.9 & 24.9 & 21.2 & 28.3 & 49.1 &  76.9
+\end{tabular}
+\item Hvor mange bakterier vil der ifølge denne model være efter ti døgn? Er dette realistisk? (Hint: Jorden er udgjort af omtrent $10^{50}$ atomer.)
+\end{center}
+\end{enumerate}
+\section*{Opgave 2}
+Vi må kunne tage højde for, at der skal være en eller anden form for kapacitet af bakterier. Hvad den helt præcist skal være vil afhænge af mængden af hovedsagligt mad og plads. 
+Lad os kalde antallet af bakterier for $B(t)$. Lad os antage, at bakterierne kan beskrives ved eksponentiel vækst. Så har vi, at 
+\begin{align*}
+B(t) = Ce^{r t}
+\end{align*}
+for konstanter $k$ og $C$. Disse afhænger af enheder, bakterietype, mad, plads og andet. Der gælder så, at væksten for $B$ til tid $t$ kan findes som den differentierede:
+\begin{align*}
+\frac{dB(t)}{dt} = r\cdot Ce^{rt} = r\cdot B(t).
+\end{align*}
+Hældningen til et givent punkt er bare givet som funktionsværdien gange $r$, som vi kalder for vækstraten. Lad os nu betragte situationen, hvor det maksimale antal bakterier (vores kapacitet) er $K$. Vi vil gerne have, at væksten af antallet af bakterier er $0$, når vi når kapaciteten $K$, så vi antager, at der findes en funktion $B(t)$, der har vækst
+\begin{align}
+\label{difflign}
+\frac{dB(t)}{dt} = r\cdot B(t) - r\cdot B(t) \frac{B(t)}{K} = rB(t)\left(1-\frac{B(t)}{K} \right).
+\end{align}
+En sådan funktion $B$ vil have samme væksttype i starten, men vil flade ud, når antallet af bakterier kommer nær $K$. En ligning som \eqref{difflign} kaldes for en differentialligning. 
+\begin{enumerate}[label=\roman*)]
+\item Vis, at funktionen
+\begin{align}\label{solution}
+B(t) = \frac{KB_0e^{rt}}{K+B_0(e^{rt}-1)} 
+\end{align}
+løser ligningen \eqref{difflign}. $B_0$ er begyndelsesværdien for antallet af bakterier.
+\item Denne type funktion kaldes en logistisk funktion og er generelt på formen
+\begin{align*}
+f(x) = \frac{K}{1+e^{-r(x-x_0)}}.
+\end{align*}
+Vis, at \eqref{solution} er på denne form.
+\item I Maple lav nu logistisk regression på datasættet fra bakterievæksten og bestem antallet af bakterier om ti døgn. Er dette mere realistisk?
+\item Hvornår er væksten størst for den logistiske funktion?
+\end{enumerate}

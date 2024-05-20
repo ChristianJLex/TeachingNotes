@@ -1,0 +1,96 @@
+
+\begin{center}
+\Huge
+Recap i differentialregning
+\end{center}
+\section*{Definition af differentialkvotient}
+\stepcounter{section}
+Vi husker på, at differentialkvotienten er defineret som en grænseværdi. Differentialkvotienten for en funktion $f$ definerer vi på følgende vis: Vi starter med at bestemme hældningen af den rette linje, der går gennem punkterne $(x,f(x))$ og $(x+h,f(x+h))$
+\begin{align*}
+D = \frac{f(x+h)-f(x)}{x+h-x} = \frac{f(x+h)-f(x)}{h}.
+\end{align*}
+Denne kvotient kaldes for differentkvotienten. Vi tager så grænseværdien
+\begin{align*}
+\lim_{h\to 0}D = \lim_{h\to 0} \frac{f(x+h)-f(x)}{h} = f'(x),
+\end{align*}
+og denne grænseværdi kalder vi så for differentialkvotienten for $f$ i $x$, hvis den eksisterer.
+
+En vigtig pointe er, at differentialkvotienten til $f(x)$ er hældningen af tangenten til $f$ i punktet $(x,f(x))$.
+\begin{exa}
+Vi bestemmer differentialkvotienten for $f(x) = x^2$ ved brug af definitionen:
+\begin{align*}
+f'(x)=\lim_{h\to 0} \frac{f(x+h)-f(x)}{h} &= \lim_{h\to 0}\frac{(x+h)^2-x^2}{h} \\
+&= \lim_{h\to 0}\frac{x^2+h^2+2xh-x^2}{h}\\
+&= \lim_{h\to 0}h+2x = 2x,
+\end{align*}
+og vi har så bestemt $f'(x) = 2x$.
+\end{exa}
+\section*{Differentiation af produkt af funktioner og sammensatte funktioner}
+\stepcounter{section}
+Vi vil ikke her gennemgå alle differentiationsregnereglerne, vi vil blot huske på, at differentiation af sammensatte funktioner og produkter af funktioner differentieres på en særlig måde.
+\begin{setn}
+For differentiable funktioner $f$ og $g$ har vi, at 
+\begin{align*}
+(f(x)\cdot g(x))' = f'(x)\cdot g(x) + g'(x)\cdot f(x)
+\end{align*}
+og 
+\begin{align*}
+[f(g(x))]' = f'(g(x))\cdot g'(x)
+\end{align*}
+\end{setn}
+
+\section*{Tangentligninger}
+\stepcounter{section}
+Skal vi bestemme ligningen for tangentlinjen til en differentiabel funktion i $x_0$ husker vi på, at en ret linje har ligning $y=ax+b$ for konstanter $a,b$. Koefficienten $a$ er hældningen af tangentlinjen, altså $f'(x_0)$. Vi mangler derfor blot at bestemme $b$. Da tangentlinjen må gå gennem punktet $(x_0,f(x_0))$, altså kan vi bestemme $b$ ved at løse ligningen 
+\begin{align*}
+f(x_0) = f'(x_0)\cdot x_0 + b \Leftrightarrow b = f(x_0)-f'(x_0)\cdot x_0.
+\end{align*}
+Disse betragtninger kan vi samle og få en ligning for tangenten:
+\begin{align*}
+y = f'(x_0)\cdot x + f(x_0)-f'(x_0)\cdot x_0 = f'(x_0)(x-x_0) + f(x_0).
+\end{align*}
+\section*{Ekstremumspunkter}
+Vi kalder et punkt for et ekstremumspunkt, hvis det lokalt er enten det største eller mindste punkt (lidt upræcist, men o.k. for intuition). Altså hvis det danner et toppunkt eller et minimumspunkt. Hældningen af tangenten til en funktion i et sådant punkt vil være $0$, og derfor kan vi finde sådanne punkter ved at løse ligningen 
+\begin{align*}
+f'(x)=0.
+\end{align*}
+
+Et særligt tilfælde er, hvis vores funktion er et andengradspolynomium/en parabel. Så har vores funktion forskriften
+\begin{align*}
+f(x) = ax^2+bx+c. 
+\end{align*}
+Skal vi finde toppunktet/minimumspunktet for denne funktion, starter vi med at differentiere funktionen:
+\begin{align*}
+f'(x) = 2ax +b.
+\end{align*}
+Dette udtryk sætter vi lig nul og så bestemmer vi $x$:
+\begin{align*}
+f'(x) = 2ax+b = 0 \Leftrightarrow -b = 2ax \Leftrightarrow x=-\frac{b}{2a}.
+\end{align*}
+Vi har altså, at $x$-værdien til toppunktet er $x_T = \frac{-b}{2a}.$
+\section*{Opgave 1}
+Differentiér følgende funktioner:
+\begin{align*}
+&1) \ x^3  &&2) \  10x+\frac{1}{x}   \\
+&3) \ \sqrt{\ln(x)}  &&4) \  \frac{x^2}{\sqrt{x}}    \\
+&5) \ 4x^3\sqrt{x}  &&6) \ \ln(27x^{0.5})    
+\end{align*}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem ligningen for tangenten for funktionen $f(x)=2x^3$ i punktet $(1,f(1)).$
+\item Bestem ligningen for tangenten for funktionen $\sqrt{2x}$ i punktet $(2,f(2)).$
+\end{enumerate}
+\section*{Opgave 3}
+Bestem de steder, hvor tangenthældningen for følgende funktioner er $0$. 
+\begin{align*}
+&1) \ x^2  &&2) \ 3x^3-2x+10    
+\end{align*}
+Bestem ekstremumspunkterne til følgende funktioner og afgør, om det er lokale eller globale ekstrema ved at plotte dem
+\begin{align*}
+&1)\ x^{4} && 2)\ 1+2x+3x^2+4x^3 
+\end{align*}
+\section*{Opgave 4}
+Bestem monotoniforholdene for følgende funktioner:
+\begin{align*}
+&1) \ 3x^2+4x+1 &&2)\ \cos(x)
+\end{align*}

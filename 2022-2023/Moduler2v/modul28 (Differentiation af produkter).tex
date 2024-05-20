@@ -1,0 +1,76 @@
+\begin{center}
+\Huge
+Differentiation af produkt af funktioner
+\end{center}
+
+\section*{Lidt flere regneregler}
+\stepcounter{section}
+\begin{setn}
+Vi har følgende forhold mellem differentiable funktioner $f$ og deres afledede $f'$:
+\begin{center}
+\begin{tabular}{c|c}
+$f(x)$ & $f'(x)$\\
+\hline
+$\ln(x)$ & $\frac{1}{x}$\\
+$a^x$ & $a^x\ln(a)$\\
+$e^x$ & $e^x$\\
+\end{tabular}
+\end{center}
+\end{setn}
+
+\section*{Produktreglen}
+\stepcounter{section}
+
+Det er endnu ikke klart, hvordan vi skal differentiere produktet af to funktioner. Vi har tidligere set, at den afledede af summen af to funktioner blot er summen af de afledede, men det forholder sig desværre ikke tilsvarende for produkter af funktioner. Vi skal derimod anvende produktreglen.
+\begin{setn}[Produktreglen]
+Lad $f$ og $g$ være to funktioner begge differentiable i $x$. Så er funktionen $f\cdot g$ differentiabel i $x$ og 
+\begin{align}\label{eq:produktregel}
+\frac{d}{dx} f(x)\cdot g(x) = \left(f(x)\cdot g(x)\right)' = f'(x)\cdot g(x) + f(x)\cdot g'(x).
+\end{align}
+\end{setn}
+\begin{proof}
+Vi anvender definitionen af differentialkvotienten på højresiden af \eqref{eq:produktregel} og får
+\begin{align*}
+f'(x)g(x)+g'(x)f(x) &= \underbrace{\lim_{h\to 0}\left(\frac{f(x+h)-f(x)}{h}\right)}_{=f'(x)}g(x) + \underbrace{\lim_{h\to 0}\left(\frac{g(x+h)-g(x)}{h}\right)}_{=g'(x)}f(x)\\
+&=\lim_{h\to 0} \frac{f(x+h)g(x)-f(x)g(x)+g(x+h)f(x)-g(x)f(x)}{h}
+\end{align*}
+Da $g(x)$ er kontinuert i $x$ (differentiabilitet medfører kontinuitet), så har vi, at $g(x) = \lim_{h\to 0}g(x+h)$, og vi kan substituere $g(x)$ med $g(x+h)$ i to af leddene.
+\begin{align*}
+f'(x)g(x)+g'(x)f(x) &=  \lim_{h\to 0} \frac{f(x+h)g(x)-f(x)g(x)+g(x+h)f(x)-g(x)f(x)}{h}\\
+&=\lim_{h\to 0} \frac{f(x+h)g(x+h)-f(x)g(x+h)+g(x+h)f(x)-g(x)f(x)}{h}\\
+&=\lim_{h\to 0} \frac{f(x+h)g(x+h) -g(x)f(x)}{h}\\
+&= (f(x)\cdot g(x))'
+\end{align*}
+\end{proof}
+
+\begin{exa}
+Vi skal differentiere funktionen $h(x) = x^2\cdot 2\sqrt{x}$. Dette er et produkt af to funktioner
+$f(x) = x^2$ og $g(x)= 2\sqrt{x}$. Vi skal derfor anvende produktreglen til at udregne $h'(x)$. I produktreglen skal vi bruge $f'(x)$ og $g'(x)$, så dem bestemmer vi:
+\begin{align*}
+f'(x) &= (x^2)' = 2x\\
+g'(x) &= (2\sqrt{x})' = \frac{2}{2\sqrt{x}} = \frac{1}{\sqrt{x}}.
+\end{align*} 
+Vi kan nu bestemme $h'(x) = (f(x)\cdot g(x))'$ ved brug af produktreglen:
+\begin{align*}
+h'(x) &= (f(x)g(x))' \\
+&= f'(x)g(x)+g'(x)f(x) \\
+&= 2x\cdot 2\sqrt{x} + \frac{1}{\sqrt{x}}\cdot x^2\\
+&= 4x\sqrt{x} + \frac{x^2}{\sqrt{x}}.
+\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+Differentiér følgende funktioner ved brug af produktreglen:
+\begin{align*}
+&1) \   x^2\sqrt{x}   &&2) \  e^x\frac{1}{x}     \\
+&3) \  x\cdot \ln(x)  &&4) \  x^4\cdot e^x	\\
+&5) \   (2x+3)e^x  &&6) \   2x^{3.5}\sqrt[3]{x}    \\
+&7) \  3x + \ln(x)x^2    &&8) \ x^3(x^2+2\ln(x))      \\
+&9) \  10^xx^{10}    &&10) \  \frac{x^4}{x^3}     \\
+&11) \   7x^{\frac{3}{2}}\sqrt{x}   &&12) \     \frac{\ln(x)}{x}   \\
+\end{align*}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem ligningen for tangenten til funktionen $f(x)=2x^2e^x$ i punktet $(0,f(0))$.
+\item Bestem ligningen for tangenten til funktionen $f(x) = 10\sqrt{x}\ln(x)$ i punktet $(1,f(1))$.
+\end{enumerate}

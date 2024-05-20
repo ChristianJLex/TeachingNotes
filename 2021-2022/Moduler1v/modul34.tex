@@ -1,0 +1,99 @@
+
+\begin{center}
+\Huge
+Trigonometriske funktioner og retvinklede trekanter
+\end{center}
+\section*{Retvinklede trekanter}
+\stepcounter{section}
+
+\begin{setn}
+Lad $ABC$ være en trekant med punkterne $A$,  $B$ og $C$ som hjørner, og lad $C$ være en ret vinkel. Så gælder der for vinklen $v$, der er vinklen i enten hjørnet $A$ eller $B$, at 
+\begin{align*}
+\cos(v) &= \frac{\textnormal{hosliggende katete}}{\textnormal{hypotenuse}}\\
+\sin(v) &= \frac{\textnormal{modstående katete}}{\textnormal{hypotenuse}}\\
+\tan(v) &= \frac{\textnormal{modstående katete}}{\textnormal{hosliggende katete}}
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi anvender definitionen af $\cos(v)$ og $\sin(v)$. Lad $v$ være vinklen i $A$. Så kalder vi længden af hypotenusen for $c$, længden af den hosliggende katete for $b$ og længden af den modstående katete for $a$. Lader vi $A$ være $(0,0)$ i et koordinatsystem, vil vektoren $\vv{AB}$ så have koordinater
+\begin{align*}
+\vv{AB} = \begin{pmatrix}
+b \\ a
+\end{pmatrix}.
+\end{align*}
+Vi laver nu $\vv{AB}$ til en enhedsvektor. Vi dividerer derfor $\vv{AB}$ med $|\vv{AB}|$. Men $|\vv{AB}| = c$, så vi får en enhedsvektor
+\begin{align*}
+\frac{\vv{AB}}{c}.
+\end{align*}
+Men da dette er en enhedsvektor med vinkel $v$ mellem $x$-aksen og vektoren, så har denne vektor koordinater
+\begin{align*}
+\frac{\vv{AB}}{c} = \begin{pmatrix}
+\cos(v) \\ \sin(v)
+\end{pmatrix}.
+\end{align*}
+Vi minder om, at $\vv{AB}=\begin{pmatrix}
+b\\ a
+\end{pmatrix},$
+så
+\begin{align*}
+\frac{\vv{AB}}{c} = \begin{pmatrix}
+\frac{b}{c} \\ \frac{a}{c}
+\end{pmatrix} = \begin{pmatrix}
+\cos(v) \\ \sin(v)
+\end{pmatrix}.
+\end{align*}
+Vi mangler nu kun $\tan$. Dette følger, da 
+\begin{align*}
+\tan(v) = \frac{\sin(v)}{\cos(v)} =  \frac{\frac{a}{c}}{\frac{b}{c}} = \frac{a}{b}.
+\end{align*}
+\end{proof}
+
+\section*{Opgave 1}
+Bestem de ukendte sider og vinkler i følgende trekanter:
+
+\begin{tikzpicture}
+\node at (0,0) (1) {$A$};
+\node at (5,0) (2) {$C$};
+\node at (5,3)(3)	{$B$};
+\node at (1.2,0.3) (4)   {\scriptsize $30^\circ$};
+\node at (2.5,-0.5)  {$5$};
+
+
+\draw (1) -- (2);
+\draw (2) -- (3);
+\draw (3) -- (1);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node at (0,0) (1) {$A$};
+\node at (4,0) (2) {$C$};
+\node at (4,4) (3)	{$B$};
+\node at (1.2,0.3)  {};% {\scriptsize $30^\circ$};
+\node at (2,-0.5)  {$3$};
+\node at (1.8,2.2)   {$4$};
+
+\draw (1) -- (2);
+\draw (2) -- (3);
+\draw (3) -- (1);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node at (0,0) (1) {$A$};
+\node at (3,0) (2) {$C$};
+\node at (3,6) (3)	{$B$};
+\node at (1.5,-0.3)  {$3$};
+\node at (3.3,3)  {$6$};
+
+
+\draw (1) -- (2);
+\draw (2) -- (3);
+\draw (3) -- (1);
+\end{tikzpicture}
+
+\section*{Opgave 2}
+Vi står foran en høj bygning og vil gerne bestemme, hvor høj den er. Vi står 300m fra bygningen og måler, at vinklen mellem jorden og sigtelinjen fra jorden til toppen af bygningen er $25^\circ$.
+\begin{enumerate}[label=\roman*)]
+\item Hvor langt er der i lige linje fra os til toppen af bygningen?
+\item Hvor høj er bygningen?
+\end{enumerate}

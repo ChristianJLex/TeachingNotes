@@ -1,0 +1,121 @@
+\begin{center}
+\Huge
+To ligninger med to ubekendte
+\end{center}
+\section*{To lineære ligninger med to ubekendte}
+\stepcounter{section}
+
+Hvis vi har to linjer $l$ og $m$ i planen, så har disse netop et skæringspunkt, hvis de ikke er parallelle. Vi husker på, at rette linjer kan beskrives ved følgende ligninger:
+
+\begin{align*}
+	&l:\ y=ax + b,\\
+	&m:\ y=cx + d.
+\end{align*}
+Skal vi finde skæringen mellem sådan to linjer, så tilsvarer det at løse to lineære ligninger med to ubekendte. Vi skal i dag lære to metoder til at løse sådanne ligningssystemer.
+\begin{exa}[Lige store koefficienters metode]
+	Vi skal bestemme løsningen til ligningerne
+	\begin{align}\label{eq:1}
+		4x+6y = 12
+	\end{align}
+	og 
+	\begin{align}\label{eq:2}
+		x+2y=6.
+	\end{align}
+	Vi vil bruge lige store koefficienters metode. Vi starter med at gange \eqref{eq:2} med 4 og får
+	\begin{align*}
+		4x+8y=24.
+	\end{align*}
+	Vi trækker nu \eqref{eq:2} fra \eqref{eq:1} og får
+	\begin{align*}
+		4x-4x+6y-8y = 12-24 \ &\Leftrightarrow\ -2y = -12\\
+		&\Leftrightarrow y = 6.
+	\end{align*}
+	Vi indsætter nu 	$y=6$ i \eqref{eq:2}.
+	\begin{align*}
+		x + 2y = 6 \ &\Leftrightarrow \ x+2\cdot 6 = 6\\
+		&\Leftrightarrow	\ x = 6-12 = -6.
+	\end{align*}
+	Løsningen til ligningssystemet er derfor $(x,y) = (-6,6)$.
+\end{exa}
+
+\begin{exa}[Substitutionsmetoden]
+	Vi skal bestemme løsningen til samme ligninger som før.
+		\begin{align}\label{eq:3}
+		4x+6y = 12
+	\end{align}
+	og 
+	\begin{align}\label{eq:4}
+		x+2y=6.
+	\end{align}
+	Vi vil nu benytte os af substitutionsmetoden, som I har set i grundforløbet. 
+	Vi isolerer $x$ i \eqref{eq:4}.
+	\begin{align*}
+		x+2y = 6 \ &\Leftrightarrow \ x = 6-2y 
+	\end{align*}
+	Dette indsættes nu i \eqref{eq:3}.
+	\begin{align*}
+		4x+6y = 12 \ &\Leftrightarrow \ 4(6-2y)+6y = 12	\\
+		&\Leftrightarrow \ 24-8y+6y = 12\\
+		&\Leftrightarrow	\ -2y = -12\\
+		&\Leftrightarrow	\ y = 6.
+	\end{align*}
+	Dette indsættes i ligningen for $x$, vi brugte før.
+	\begin{align*}
+		x&= 6-2y\\
+		&=6-2 \cdot 6\\
+		&=6-12\\
+		&= -6.
+	\end{align*}
+	Også med denne metode finder vi altså løsningen $(x,y) = (-6,6)$. 
+\end{exa}
+
+\section*{Opgave 1}
+Løs følgende ligningssystemer ved brug af både substitution og lige store koefficienters metode:
+\begin{enumerate}[label=\roman*)]
+	\item 
+	\begin{align*}
+		y = 4x+2,\\
+		x+y=2.		
+	\end{align*}
+\item \begin{align*}
+x+y&=0,\\
+-3x+6y&=0.
+\end{align*}
+\item 
+\begin{align*}
+2x-10y&=8,\\
+-x+6y&=1.
+\end{align*}
+\item
+\begin{align*}
+1x-2y&=3,\\
+4x-5y&=6.
+\end{align*}
+\item
+\begin{align*}
+\frac{1}{6}x-\frac{1}{3}y&=3,\\
+3x-9y&=3.
+\end{align*}
+\item 
+\begin{align*}
+2x+4y&=8,\\
+3x-9y&=27.
+\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Løs følgende ikke-lineære ligningssystem ved substitutionsmetoden.
+	\begin{align*}
+		x^2 -x = y,\\
+		x+y = 4
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 3}
+Løs følgende ligningssystem ved lige store koefficienters metode.
+\begin{align*}
+x+y+z&=4,\\
+x-y+2z&=8,\\
+2x-2y+8z&=8.
+\end{align*}

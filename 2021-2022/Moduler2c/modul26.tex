@@ -1,0 +1,33 @@
+
+\begin{center}
+\Huge
+Opstilling af modeller
+\end{center}
+
+\section*{En model}
+\stepcounter{section}
+Opstilling af matematiske modeller vil ofte være ret varierende alt efter hvad vi ønsker at modellere. Dog er der nogle fællestræk. Vi vil altid prøve at beskrive de variable og parametre, vi tror på har størst betydning ift. vores model, og vi ønsker, at der er nogle grundlæggende sammenhænge mellem disse variable. 
+\begin{exa}
+Vi vil gerne optimere den kørte hastighed på motorvejen i den forstand at vi ønsker at så mange biler passerer per tidsenhed som muligt. Vi har desuden nogle ønsker om sikkerhedsafstand. For simplicitet gør vi os nogle antagelser: 
+\begin{itemize}
+\item En bil er 4 meter lang.
+\item Reaktionstiden for føreren af en bil er 1 sekund.
+\item Bremselængden er givet ved $L(v) = k\cdot v^2$, hvor $v$ er hastigheden i $m/s$ og $L$ er angivet i $m$. 
+\item Konstanten $k$, der afgænger af vejens beskaffenhed, vindmodstand, vejr osv. antager vi er $0.07$. 
+\end{itemize}
+Ud fra disse antagelser kan vi bestemme, at det en enkelt bil fylder er $4+1\cdot v + k\cdot v^2$. Derfor vil antallet af passerende biler være givet ved
+\begin{align*}
+f(x) = \frac{v}{4+1\cdot v + k\cdot v^2},
+\end{align*}
+og denne funktion skal optimeres.
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Optimér funktionen $f(x)$. Er resultatet realistisk?
+\item Overvej, hvilke antagelser, der kan ændres på for at gøre resultatet mere realistisk.
+\item Hvis den optimale hastighed skal være $30m/s$, hvad skal $k$ så være?
+\end{enumerate}
+
+\section*{Opgave 2}
+Lav jeres aflevering.

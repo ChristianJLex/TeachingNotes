@@ -1,0 +1,260 @@
+\documentclass[12pt,x11names,a4paper]{article}
+\input{preamble}
+
+
+\newgeometry{margin=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Nørre Gymnasium\\1.b
+}
+\cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
+
+%Husk at rette modul og dato!
+\lhead{Delprøve 1 - prøveeksamen\\ Matematik B
+}
+\chead{29. februar
+}
+
+\begin{document}
+
+%\includepdf[pages=-]{Forsider/aarsprove_1v.pdf}
+\savegeometry{art}
+
+\begin{titlepage}
+\newgeometry{margin=0pt}
+
+\begin{minipage}{0.27\textwidth}
+
+\begin{tikzpicture}[overlay]
+\fill[top color = NorregGroen!40, bottom color = NorregGroen] (6,10) rectangle (-10,-30);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.73\textwidth}
+\begin{center}
+\phantom{h} \vspace{1cm}\\
+\hspace{4cm}
+\includegraphics[scale = 1]{Billeder/Norreg.png} \\
+\phantom{h} \vspace{5cm}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\phantom{h}\\
+{\fontsize{50}{60}\selectfont Delprøve 1 \\ Prøveeksamen}\\
+\phantom{h}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\Large 2024\\
+\Large 1.b Ma
+
+\end{center}
+\end{minipage}
+\end{titlepage}
+\loadgeometry{art}
+
+%Udfyld afsnit herunder og lav til egen Latex-fil
+
+%Kopier følgende til overskrift:
+
+%\begin{center}
+%\Huge
+%Aflevering 1
+%\end{center}
+%\section*{Opgave 1}
+%\stepcounter{section}
+\begin{center}
+%Opgavesætter er delt i to dele:\\
+%Delprøve 1 kun med den centralt udmeldte formelsamling.\\
+%Delprøve 2 med alle hjælpemidler.
+\end{center}
+
+\begin{comment}
+\section*{Krav til formidling af din besvarelse}
+
+Ved bedømmelse af helhedsindtrykket af besvarelsen af de enkelte opgaver lægges særlig vægt på følgende fire punkter:
+\begin{itemize}
+\item[$\cdot$] \textbf{Redegørelse og dokumentation for metode} \\
+Besvarelsen skal indeholde en redegørelse for den anvendte løsningsstragegi med dokumentation i form af et passende antal mellemregninger \textit{eller} matematiske forklaringer på metoden, når et matematisk værktøjsprogram anvendes.
+\item[$\cdot$] \textbf{Figurer, grafer og andre illustrationer} \\
+Besvarelsen skal indeholde hensigtsmæssig brug af figurer, grafer og andre illustrationer, og der skal være tydelige henvisninger til brug af disse i den forklarende tekst.
+\item[$\cdot$] \textbf{Notation og layout}\\
+Besvarelsen skal i overensstemmelse med god matematisk skik opstilles med hensigtsmæssig brug af symbolsprog, og med en redegørelse for den matematiske notation, der indføres og anvendes, og som ikke kan henføres stil standardviden.
+\item[$\cdot$] \textbf{Formidling og forklaring}\\
+Besvarelsen af rene matematikopgaver skal indeholde en angivelse af givne oplysninger og korte forklaringer knyttet til den anvendte løsningsstrategi beskrevet med brug af almindelig matematisk notation. 
+
+Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en kort præsentation af modellens kontekst, herunder betydning af modellens parametre. De enkelte delspørgsmål skal afsluttes med en præcis konklusion præsenteret i et klart sprog i relation til konteksten.
+\end{itemize}
+
+\newpage
+\end{comment}
+
+
+\begin{opgavetekst}{Opgave 1}
+	\begin{center}
+		\includegraphics[width = 0.6\textwidth]{Billeder/Zoo1}
+	\end{center}
+	Den zoologiske have Metropol Zoo har hvert år siden år 1980 målt antallet af besøgende. Deres målinger 
+	fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/BesoegendeiZoo.xlsx}{\color{blue!60} dette datasæt}.
+	Metropol Zoo har en forventning om, at antallet af besøgende $f$ (i tusinde) kan
+	beskrives ved forskriften
+	\begin{align*}
+		f(x) = b\cdot x^a,
+	\end{align*}
+	hvor $x$ betegner antal år efter år 1980.
+\end{opgavetekst}
+
+
+\begin{delopgave}{}{1}
+	Brug tallene fra datasættet til at bestemme tallene $a$ og $b$, og opskriv forskriften for 
+	modellen, der beskriver antallet af besøgende.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem antallet af besøgende i år 2030 i følge modellen. 
+\end{delopgave}
+\begin{meretekst}
+	Da initiativtagerne bag Metropol Zoo opstartede zooen, så havde de en forventning
+	om, at antallet af besøgende kunne beskrives ved sammenhængen
+	\begin{align*}
+		g(x) = 4x + 200,
+	\end{align*}
+	hvor $g$ betegner det årlige antal besøgende i tusinde og $x$ betegner antal år efter år 
+	1980
+\end{meretekst}
+\begin{delopgave}{}{3}
+	Tegn forskriften for $f$ og $g$ i samme koordinatsystem på intervallet $[1,100]$. 
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Bestem det årstal, hvor $g$ forudser, at der vil være flere besøgende i Metropol Zoo end
+	modellen $f$.
+\end{delopgave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 2}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/penge}
+	\end{center}
+	Metropol Zoo ønsker sig et bæverhabitat i haven. De har ikke råd til 
+	at betale for habitatet, så de skal have et lån i banken. Banken fortæller 
+	dem at beløbet de skylder banken vil kunne beskrives ved funktionen 
+	\begin{align*}
+		h(x) = 19.2\cdot 1.052^x,
+	\end{align*}
+	hvis de ikke betaler af på deres lån. $h$ betegner det skyldige beløb i mio. kr.,
+	og $x$ betegner antal år efter optagelsen af lånet. 
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Forklar, hvad tallene 19.2 og 1.052 siger om banklånet.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Afgør, hvor længe der vil gå før Metropol Zoo skylder 30 mio., hvis de ikke betaler af på
+	deres lån.
+\end{delopgave}
+\begin{meretekst}
+	Metropol Zoo skal selvfølgelig betale af på deres lån. Deres lån kan beskrives ved formlen
+	\begin{align*}
+		19.2 = y\cdot \frac{1 - (1+r)^{-n}}{r}.
+	\end{align*}
+	For formlen gælder der, at 
+	\begin{itemize}
+		\item[$\cdot$] $y$ er beløbet, der afdrages årligt på lånet (i mio. kr.).
+		\item[$\cdot$] $r$ er renten på lånet. 
+		\item[$\cdot$] $n$ er antal terminer på lånet - altså i dette tilfælde antal år, som 
+		lånet skal løbe i.  	
+	\end{itemize}
+	\phantom{h}
+\end{meretekst}	
+\begin{delopgave}{}{3}
+	Indsæt renten fra a) og bestem, hvad Metropol Zoo skal betale tilbage hvert år, hvis de 
+	skal betale lånet af på 30 år.
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Afgør hvornår lånet er betalt tilbage, hvis de afdrager 1 mio. kr. om året på lånet. 
+\end{delopgave}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{opgavetekst}{Opgave 3}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/beaver}
+	\end{center}
+	En fuldvoksen europæisk bæver spiser omkring 1.8kg plantemateriale om dagen, der 
+	hovedsagligt består af græsser, vandplanter og bark. Metropol Zoo vil gerne have 8 bævere 
+	i haven.
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Opstil en model, der beskriver mængden af foder til bæverne som Metropol Zoo har forbrugt
+	som funktion af antal forløbne dage. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Brug modellen til at bestemme hvor meget bæverfoder, haven forbruger på et år.
+\end{delopgave}
+\begin{meretekst}
+	For både føde og materiale til dæmninger fælder den europæiske bæver træer på op til 60cm i
+	diameter. Tiden, det tager for bæveren at fælde et aspetræ er givet ved
+	\begin{align*}
+		f(x) = 0.00162\cdot \pi \cdot x^3,
+	\end{align*}
+	hvor $f$ er tiden i timer og $x$ er radius på stammen i cm. 
+\end{meretekst}
+\begin{delopgave}{}{3}
+	Afgør, hvilken funktionstype $f$ er, og bestem tallene $a$ og $b$. 
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Bestem hvor mange gange længere det vil tage for en bæver at fælde et træ, hvis radius af 
+	træet fordobles.
+\end{delopgave}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{opgavetekst}{Opgave 4}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/tigerunge}
+	\end{center}
+	En løvinde hos Metropol Zoo har født løveungen Jørgen. De håber på, at dette kan øge
+	 deres omsætning med 15 procent det næste år. De har dog kun en forventning
+	 om, at løveungen vil øge deres besøgstal med 8 procent. 
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem hvor meget Metropol Zoo skal øge deres billetpriser med, hvis de skal opnå en
+	stigning i omsætningen på 15$\%$. 
+\end{delopgave}
+\begin{meretekst}
+	Vægten af løveungen beskrives ved funktionen
+	\begin{align*}
+		V(t) = 260\cdot(1-e^{-0.082(t+3.54)}),
+	\end{align*}
+	hvor $V$ er vægten i kg og $t$ er løvens alder i måneder. 
+\end{meretekst}
+%
+\begin{delopgave}{}{2}
+	Tegn grafen for $V$ på et passende interval, og se om du ud fra grafen kan
+	gennemskue hvad tallet 260 betyder for modellen. 
+\end{delopgave}
+%
+\begin{delopgave}{}{3}
+	Bestem hvad Jørgen vejer efter ét år i følge modellen.
+\end{delopgave}
+
+\end{document}
+
+
+
+

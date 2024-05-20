@@ -1,0 +1,165 @@
+\begin{center}
+\Huge
+Vinkler mellem linjer
+\end{center}
+
+\section*{Vinkler mellem linjer}
+\stepcounter{section}
+
+
+I 1.g lærte vi, hvordan vi bestemte vinklen mellem to vektorer. Givet to vektorer $\vv{a}$ og $\vv{b}$, så gælder der følgende forhold mellem vinklen $v$ mellem $\vv{a}$ og $\vv{b}$ og deres indbyrdes prikprodukt:
+\begin{align*}
+	\vv{a}\cdot \vv{b} = \cos(v)\cdot |\vv{a}|\cdot |\vv{b}|.
+\end{align*}
+Vi kan derfor finde vinklen $v$ ved 
+\begin{align*}
+	\cos(v) = \frac{\vv{a}\cdot \vv{b}}{|\vv{a}|\cdot |\vv{b}|} \ \Leftrightarrow \ v
+	= \cos^{-1}\left(\frac{\vv{a}\cdot \vv{b}}{|\vv{a}|\cdot |\vv{b}|}\right).
+\end{align*}
+Typisk vil vi blot bruge ligningen til venstre og så løse med \texttt{solve}-kommandoen i Maple. 
+Lad os betragte et par eksempler.
+\begin{exa}
+	En linje $l$ er givet ved ligningen
+	\begin{align*}
+		l: \ 2(x-1) + 3(y-2) = 0,
+	\end{align*}
+	og en linje $m$ er givet ved ligningen
+	\begin{align*}
+		m: \ -1(x+2) -5(y-1) = 0,
+	\end{align*}
+	Linjen $l$ har derfor normalvektoren $\vv{n_l}$ givet ved
+	\begin{align*}
+		\vv{n_l} = \begin{pmatrix}
+			2 \\ 3	
+		\end{pmatrix},
+	\end{align*}
+	og linjen $m$ har normalvektoren $\vv{n_m}$ givet ved
+	\begin{align*}
+		\vv{n_m} = \begin{pmatrix}
+			-1\\-5
+		\end{pmatrix}.
+	\end{align*}
+	Vinklen mellem linjerne $l$ og $m$ må være lig vinklen mellem deres normalvektorer. 
+	Vinklen $v$ mellem linjerne bestemmes derfor ved at løse ligningen
+	\begin{align*}
+		\cos(v) = \frac{2(-1)+3(-5)}{\sqrt{2^2+3^2}\cdot\sqrt{(-1)^2+(-5)^2}}. 
+	\end{align*}
+	Dette løses i Maple, og vinklen mellem linjerne fås til at være $157,62^{\circ}$. Dette er 
+	klart den stumpe vinkel. Den spidse vinkel mellem linjerne er derfor 
+	\begin{align*}
+		180-157,62 = 22,38^{\circ}.
+	\end{align*}
+\end{exa}
+\begin{exa}
+	To linjer $l$ og $m$ er givet ved følgende to parameterfremstillinger henholdsvist.
+	\begin{align*}
+		&l: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			1 \\ -1
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			-7 \\ 4
+		\end{pmatrix}
+		\\
+		&m: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} =
+		\begin{pmatrix}
+			-2 \\ -4
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			3 \\ 5
+		\end{pmatrix}
+	\end{align*}
+	Tilsvarende eksemplet med linjens ligning må vinklen mellem to linjer være lig vinklen
+	mellem linjernes retningsvektorer $\vv{r_l}$ og $\vv{r_m}$. Derfor findes vinklen mellem
+	$l$ og $m$ som vinklen mellem 
+	\begin{align*}
+		\vv{r_l} = 
+		\begin{pmatrix}
+			-7 \\ 4
+		\end{pmatrix}\\
+	\end{align*}
+	og 
+	\begin{align*}
+		\vv{r_m} = 
+		\begin{pmatrix}
+			3 \\ 5
+		\end{pmatrix}
+	\end{align*}
+	
+	Dette gøres igen i Maple, og vi får, at vinklen mellem linjerne $l$ og $m$ er givet ved
+	$v = 91.22^{\circ}$. 
+\end{exa}
+
+\section*{Opgave 1}
+
+\begin{enumerate}[label=\roman*)]
+	\item To linjer $l$ og $m$ har følgende ligninger:
+	\begin{align*}
+		&l: \	4(x-1) + 4(y-1) =0,\\
+		&m: \ 2(x+1) -2(y-7) = 0.
+	\end{align*}	 
+	Bestem den spidse vinkel mellem $l$ og $m$. 
+	\item To linjer $l$ og $m$ har følgende ligninger:
+	\begin{align*}
+		&l: \ -7(x+13) - 20(y-1) = 0,\\
+		&m: \ \frac{1}{3}(x+4) + \sqrt{2}(y-2) = 0.
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item To linjer $l$ og $m$ har følgende parameterfremstillinger:
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 \\ 1
+		\end{pmatrix}+ t
+		\begin{pmatrix}
+			-4 \\ 5
+		\end{pmatrix}.
+	\end{align*}
+	Bestem vinklen $v$ mellem $l$ og $m$. 
+	
+	\item To linjer $l$ og $m$ har følgende parameterfremstillinger:
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix}=
+		\begin{pmatrix}
+			0 \\ 1
+		\end{pmatrix}+ t
+		\begin{pmatrix}
+			-4 \\ 5
+		\end{pmatrix}.
+	\end{align*}
+	Bestem vinklen $v$ mellem $l$ og $m$.
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ er givet ved ligningen
+	\begin{align*}
+		6(x-6) + 8(y-8) = 0,
+	\end{align*}
+	og en linje $m$ er givet ved parametriseringen
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			\frac{1}{2} \\ \frac{2}{3}
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			\frac{3}{2} \\ \frac{4}{5}
+		\end{pmatrix}
+	\end{align*}
+	Bestem vinklen $v$ mellem $l$ og $m$. 
+\end{enumerate}

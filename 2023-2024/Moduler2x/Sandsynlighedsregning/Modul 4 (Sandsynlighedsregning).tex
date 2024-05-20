@@ -1,0 +1,141 @@
+\begin{center}
+\Huge
+Sandsynlighedsregning
+\end{center}
+\section*{Grundlæggende sandsynlighedsbegreber}
+\stepcounter{section}
+I sandsynlighedsregning beskæftiger vi os med matematikken bag tilfældighed. Vi vil ikke gøre os mange overvejelser om, hvad tilfældighed betyder, men vi kan betragte tilfældighed som noget, der er introduceret, hver gang vi ikke kan forudse et givet udfald af en situation med sikkerhed. Sandsynlighed kan vi også beskrive med mere uformelle betragtninger, men vi vil gerne gøre det mere præcist.
+
+Enhver situation, hvor vi har tilfældighed introduceret vil vi kalde for et \textit{stokastisk eksperiment}. Et eksempel på et stokastisk eksperiment kan være at kaste en mønt og observere, om der slås plat eller krone. Et andet eksperiment kan være at slå en terning og observere udfaldet af terningekastet. 
+\begin{defn}
+Givet et stokastisk eksperiment kalder vi mængden af mulige udfald af eksperimentet for \textit{udfaldsrummet}, og vi betegner det med $U$.
+\end{defn}
+\begin{exa}
+Slår vi med en terning, så er vores udfaldrum $U_1=\{1,2,3,4,5,6\}$, og kaster vi en mønt, så er vores udfaldsrum $U_2 = \{p,k\}$. 
+\end{exa}
+Vi ønsker også at kunne sige noget om sandsynligheden af mere end et enkelt udfald. Til dette vil vi definere hændelser.
+\begin{defn}
+En delmængde $A\subseteq U$ af udfaldsrummet kaldes for en \textit{hændelse}. 
+\end{defn}
+\begin{exa}
+At slå et lige tal med en terning tilsvarer en hændelse $A = \{2,4,6\}\subseteq \{1,2,3,4,5,6\}$. At slå enten plat eller krone med en mønt tilsvarer en hændelse $\{p,k\}\subseteq \{p,k\}.$ 
+\end{exa}
+
+Vi vil definere en sandsynlighedsfunktion $P$, der fortæller, hvad sandsynligheden for en given hændelse er.
+\begin{defn}
+Vi definerer en sandsynlighedsfunktion $P$, der for alle hændelser $A,B, A\cap B = \emptyset$ opfylder følgende:
+\begin{enumerate}[label=\roman*)]
+\item $P(U)=1$.
+\item $0 \leq P(A) \leq 1$.
+\item $P(A \cup B) = P(A) + P(B)$.
+\end{enumerate}
+\end{defn}
+
+For at være helt præcise, så vil vi også definere, hvad vi mener med sandsynligheden for en hændelse.
+\begin{defn}
+	Hvis $A = \{a_1, a_2, \hdots, a_n\}$ er en hændelse, så er sandsynligheden af hændelsen defineret som
+	\begin{align*}
+		P(A) = P(a_1) + P(a_2) + \cdots + P(a_n).
+	\end{align*}	 
+\end{defn}
+
+\begin{exa}
+Alle udfald af et terningekast har sandsynlighed $1/6$. Har vi en hændelse $A= \{1,3\}$ og en hændelse $B= \{2,4,5\}$, så vil vi have sandsynligheden
+\begin{align*}
+P(A) = P(\{1\}) + P(\{2\}) =  \frac{1}{6} + \frac{1}{6} = \frac{1}{3}.
+\end{align*}
+Tilsvarende er $P(B) = 1/2$, og derfor siden $A \cap B = \emptyset$, så får vi, at
+\begin{align*}
+P(A)+P(B) = 1/3+1/2 = 5/6.
+\end{align*}
+Hændelsen $A^C=\{2,4,5,6\}$ betegner sandsynligheden for ikke hændelsen $A$, og den bestemmes som
+\begin{align*}
+P(A^C) = 1-P(A) = \frac{2}{3}.
+\end{align*}  
+\end{exa}
+
+Vi har defineret begreberne udfaldsrum og sandsynlighedsfunktion. Disse udgør til sammen det, vi kalder for et sandsynlighedsfelt. 
+\begin{defn}[Sandsynlighedsfelt]
+	Et sandsynlighedsfelt er et par $(U,P)$ af et udfaldsrum $U$ og en sandsynlighedsfunktion $P$. 
+\end{defn}
+
+\begin{exa}
+	Vi slår plat og krone to gange med en mønt. Vores udfaldsrum bliver i dette tilfælde produktmængden $U_2 \times U_2 = \{(p,p), (p,k), (k,p), (k,k) \}$.
+	Vores sandsynlighedsfunktion $P: U \to \mathbb{R}$ er da funktionen beskrevet ved
+	$$	
+		\begin{pmatrix}
+			(p,p) & (p,k) & (k,p) & (k,k) \\
+			0.25 & 0.25 & 0.25 & 0.25
+		\end{pmatrix}
+	$$
+\end{exa}
+
+
+\subsection*{Opgave 1}
+Bestem sandsynligheden for følgende udfald:
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at slå et lige tal med en terning?
+\item Hvad er sandsynligheden for at slå et ulige tal med en terning?
+\item Hvad er sandsynligheden for at slå et primtal med en terning? Hvad med to terninger, hvis vi lægger antallet af øjne sammen?
+\item Hvad er sandsynligheden for at trække en rød bold fra en pose med tre røde bolde og fire blå bolde? Hvad med en blå bold?
+\end{enumerate}
+
+\subsection*{Opgave 2}
+For et sandsynlighedsfelt med sandsynlighedsfunktionen $P$ givet ved
+$$
+	\begin{pmatrix}
+		a & b & c & d & e \\
+		0.1 & 0.2 & 0.1 & x & 0.3 
+	\end{pmatrix}
+$$
+\begin{enumerate}[label=\roman*)]
+	\item Bestem sandsynligheden $P(d)$. 
+	\item Bestem sandsynligheden for hændelsen $\{a,b,d\}$. 
+\end{enumerate}
+
+\subsection*{Opgave 3}
+Bestem udfaldsrum og sandsynlighedsfunktion for følgende sandsynlighedsfelter
+\begin{enumerate}[label=\roman*)]
+\item Kast en mønt tre gange og observér, om der er slået plat eller krone. 
+\item Slå med en terning to gange og læg tallene sammen. Hvad med tre gange?
+\item To heltal mellem $0$ og $5$ udvælges tilfældigt, og de opskrives i voksende rækkefølge.
+\item En terning kastes fem gange og antallet af seksere nedskrives (Du behøver kun at opskrive udfaldsrummet her)
+\end{enumerate}
+\subsection*{Opgave 4}
+For udfaldsrum $U$ og hændelser $A,B\subseteq U$ gælder der, at 
+\begin{enumerate}[label=\roman*)]
+\item $P(A^C) = 1-P(A)$.
+\item $P(A \backslash B) = P(A) - P(A\cap B)$.
+\item $P(A\cup B) = P(A)+P(B)-P(A\cap B)$.
+\item $A\subseteq B \Rightarrow P(A)\leq P(B).$ 
+\end{enumerate}
+Brug Venn-diagrammer til at overbevise dig om, at i) til iv) er sande.
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Hvis sandsynligheden for regn er $1/2$ lørdag og $1/2$ søndag, hvad er så sandsynligheden for, at det regner i løbet af weekenden, givet at de to udfald er uafhængige?
+\item Hvis jeg kaster en mønt to gange, hvad er så sandsynligheden for at få mindst en plat? Hvad med præcist en plat.
+\item Hvis jeg slår med en terning to gange og lægger resultatet sammen, hvad er så sandsynligheden for at resultatet er $2$? Hvad med $3$?
+\item Hvad er sandsynligheden for at en tilfældig familie med tre børn har netop en datter?
+\item Hvad er sandsynligheden for at en tilfældig valgt pige med to søskende ikke har søstre?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+Bestem sandsynligheden for følgende udfald:
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for at trække en spar i et kortspil?
+	\item Hvad er sandsynligheden for at trække et billedkort i et kortspil?
+	\item Hvad er sandsynligheden for at trække et kort med et lige tal?
+	\item Hvad er sandsynligheden for enten at trække en toer, treer eller fire, eller at trække et rødt kort?
+	\item Hvad er sandsynligheden for at trække spar es eller klør to?
+\end{enumerate}
+
+\subsection*{Opgave 6 (Svær)}
+
+\begin{enumerate}[label=\roman*)]
+	\item Brug betingelserne for en sandsynlighedsfunktion $P$ til at vise, at 
+	\begin{align*}
+		P(\emptyset) = 0
+	\end{align*}
+	\item Brug betingelserne for en sandsynlighedsfunktion $P$ til at vise, at udsagnene i Opgave 4 er sande. 
+\end{enumerate}

@@ -1,0 +1,136 @@
+
+\begin{center}
+\Huge
+Lineære ligningssystemer og nulreglen
+\end{center}
+
+\section*{Lineære ligninger}
+\stepcounter{section}
+Vi skal se på lineære ligningssystemer. 
+\begin{defn}
+Et lineært ligningssystem er et system af $n\in \mathbb{N}$ lineære ligninger ligninger
+\begin{align*}
+b_1&= a_{1,1}x_1+a_{1,2}x_2+\hdots a_{1,m}x_m, \\
+b_2&= a_{2,1}x_1+a_{2,2}x_2+\hdots a_{2,m}x_m,\\
+&\vdots\\
+b_n&= a_{n,1}x_1+a_{n,2}x_2+\hdots a_{n,m}x_m,
+\end{align*}
+hvor $b_i,a_{i,j}\in \mathbb{R}$ og $x_j$ er $m$ ubekendte, vi ønsker at bestemme. Hvis der findes et $x_j \in \mathbb{R}$, der løser systemet, så kaldes systemet konsistent.
+\end{defn}
+Det er ikke vigtigt at huske den præcise definition af et ligningssystem, og næsten alle de ligningssystemer, vi vil beskæftige os med er konsistente. Vi vil desuden næsten kun se på ligningssystemer af $2$ eller måske $3$ ubekendte. For at kunne løse et ligningssystem med $n$ ubekendte skal vi mindst have $m$ (lineært uafhængige) ligninger. Vi skal altså have $2$ ligninger, hvis vi har to ubekendte, og de må ikke være parallele. Tilsvarende skal vi have $3$ ligninger for at kunne løse bestemme tre ubekendte. Disse må ikke alle ligge i et plan.
+
+ Lad os se på et par eksempler:
+\begin{exa}[Lige store koefficienters metode]
+Vi har to ligninger
+\begin{align}
+2x+3y &= 4,\\
+4x+8y &= 2.\label{eq:ligning2}
+\end{align}
+Der er to umiddelbare fremgangsmetoder, når man har sådan et ligningssystem. Den første vi skal se på er lige store koefficienters metode. Vi ganger \eqref{eq:ligning2} igennem med $1/2$ og får systemet
+\begin{align*}
+2x+3y &= 4,\\
+2x+4y &= 1.
+\end{align*}
+Vi kan nu trække de to ligninger fra hinanden og få
+\begin{align*}
+2x+3y-(2x-4y) = 4-1 \ &\Leftrightarrow\\
+3y-4y=3 &\Leftrightarrow\\
+y=-3.
+\end{align*}
+Dette kan vi så stoppe ind i en af de oprindelige ligninger og få 
+\begin{align*}
+2x+3\cdot(-3) =4 \ &\Leftrightarrow\\
+2x -9 = 4 &\Leftrightarrow\\
+2x = 13 &\Leftrightarrow\\
+x = \frac{13}{2},
+\end{align*}
+og en løsning på ligningssystemet er derfor $(x,y) = (13/2,-3)$.
+\end{exa}
+\begin{exa}[Substitutionsmetoden]
+Vi betragter igen ligningssystemet
+\begin{align}
+2x+3y &= 4\label{eq:ligning1},\\
+4x+8y &= 2\label{eq:ligning22}.
+\end{align}
+I substitutionsmetoden isolerer vi enten $x$ eller $y$ i en af ligningerne. Lad os isolere $x$ i \eqref{eq:ligning1}:
+\begin{align*}
+2x + 3y = 4 \ &\Leftrightarrow\\
+2x = 4-3y &\Leftrightarrow\\
+x = \frac{4-3y}{2}.
+\end{align*}
+Dette sættes nu ind i \eqref{eq:ligning22}:
+\begin{align*}
+4x+8y = 2 &\Leftrightarrow\\
+4\frac{4-3y}{2}+8y=2 &\Leftrightarrow\\
+\frac{16}{2}-\frac{12}{2}y+8y=2 &\Leftrightarrow\\
+8+2y = 2 &\Leftrightarrow\\
+2y = -6 &\Leftrightarrow\\
+y=-3.
+\end{align*}
+Vi kan nu stoppe $y=3$ ind i udtrykket $x = \frac{4-3y}{2}$ og vi får
+\begin{align*}
+x = \frac{4-3y}{2} = \frac{4+9}{2} = \frac{13}{2},
+\end{align*}
+Og vi er igen kommet frem til løsningen for ligningssystemet $(x,y) = (13/2,-3)$.
+\end{exa}
+
+\section*{Nulreglen}
+\stepcounter{section}
+Vi skal i dag bruge kvadratsætningerne i forbindelse med nulreglen. 
+\begin{setn}[Nulreglen]
+Hvis $ab = 0$ for $a,b\in \mathbb{R}$, så medfører det, at enten $a=0$ eller $b=0$. 
+\end{setn}
+Vi vil ofte anvende nulreglen sammen med kvadratsætninger for hurtigt at løse 2.gradsligninger. 
+\begin{exa}
+Lad os betragte 2.gradsligningen $x^2+8x+16=0$ (det kaldes en 2.gradsligning, da største potens af den ubekendte er 2.). En sådan ligning kan have enten 0, 1 eller 2 reelle løsninger. Vi kan anvende kvadratsætningen $(x+a)^2 = x^2+a^2+2ax$ til at løse ligningen, da 
+\begin{align*}
+(x+4)^2 = x^2+8x+16=0, 
+\end{align*}
+så derfor må løsningen til $x^2+8x+16=0$ være $x=-4$.
+\end{exa}
+\begin{exa}
+Betragt nu ligningen $(x-2)(x+3)=0$. Denne ligning må af nulreglen have løsningerne $x=2$ og $x=-3$.
+\end{exa}
+\section*{Opgave 1}
+Løs følgende ligningssystemer ved brug af både substitution og lige store koefficienters metode:
+\begin{enumerate}[label=\roman*)]
+\item \begin{align*}
+x+y&=0,\\
+-3x+6y&=0.
+\end{align*}
+\item 
+\begin{align*}
+2x-10y&=5,\\
+-x+6y&=6.
+\end{align*}
+\item
+\begin{align*}
+1x-2y&=3,\\
+4x-5y&=6.
+\end{align*}
+\item
+\begin{align*}
+\sqrt{2}x-\frac{1}{2}y&=0,\\
+x-10y&=20.
+\end{align*}
+\item 
+\begin{align*}
+2x+4y&=8,\\
+3x-9y&=27.
+\end{align*}
+\item
+\begin{align*}
+x+y+z&=0,\\
+x-y+2z&=0,\\
+2x-2y+8z&=0.
+\end{align*}
+\end{enumerate}
+\section*{Opgave 2}
+Brug nulreglen og eventuelt kvadratsætninger til at løse følgende ligninger i $x$
+\begin{align*}
+&1) \ (x-a)(x-b) = 0  &&2) \ 4(x-3)2(x-6) = 0   \\
+&3) \ x^2-16 = 0   &&4) \ x^2+4x+4 =0  \\
+&5) \ x^2-4x+4 = 0   &&6) \ 4x^2-16 = 0   \\
+&7) \ x^2-6x = 9  &&8) \ 4x^2-32x+64=0   \\
+&9) \ x^4-8x^2+16 =0 &&10) \ x^8+256-32x^4=0   \\
+\end{align*}

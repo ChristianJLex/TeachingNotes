@@ -1,0 +1,162 @@
+
+
+\begin{center}
+\Huge
+Opsparing og gæld
+\end{center}
+
+\section*{Opsparingsannuitet}
+\stepcounter{section}
+
+Da vi arbejdede med renteformlen, indsatte vi i starten af en periode ét beløb på en konto og lod det forrente. Når man sparer op, så gør man derimod ofte det, at man hver termin indsætter et fast beløb. Til at regne på dette skal vi bruge begrebet \textit{opsparingsannuitet}.
+
+\begin{setn}[Opsparingsannuitet]
+	Indsættes $B$ kroner hver termin på en konto med en terminsvis rente på $r$, så vil beløbet på kontoen efter $n$ terminer være givet ved
+	\begin{align*}
+		A = B \cdot \frac{(1+r)^n-1}{r}
+	\end{align*}
+\end{setn}
+
+\begin{exa}
+	Indsætter vi hvert år 5000kr på en konto med en årlig rente på 2 procent og vi ønsker at bestemme, hvad der står på kontoen efter 10 år, så udregnes $A$.
+	\begin{align*}
+		A = 5000\cdot \frac{(1+0.02)^{10}-1}{0.02} = 54748.6050
+	\end{align*}
+	Der vil altså stå 54748.6 kr på kontoen efter 10 år.
+\end{exa}
+
+\begin{exa}
+	Vi skal om 6 år bruge 200000kr på udbetalingen til et hus. Vi indsætter et fast beløb $B$ på kontoen og får en årlig rente på 1.5 procent. Vi skal afgøre, hvor meget vi 
+	skal indsætte på kontoen årligt. Vi opstiller ligningen
+	\begin{align*}
+		200000 = B\cdot \frac{(1+0.015)^6-1}{0.015}
+	\end{align*}
+	og løser den i Maple. Vi får af dette løsningen $B = 32105$, og vi skal derfor årligt indsætte 32105 kr på kontoen for at have nok til udbetalingen af huset.  
+\end{exa}
+\section*{Gældsannuitet}
+\stepcounter{section}
+
+Princippet er lidt det samme som i opsparingsannuitet - nu trækker vi bare et fast beløb fra i stedet for at lægge et fast beløb til. Mere præcist lånes der et beløb i banket $G$, som vi kalder for \textit{hovedstolen}. På lånet er der en bestemt rente $r$, der tilsvarer vækstraten. Til hver termin indbetaler vi et fast beløb $Y$, vi kalder for ydelsen. Vi vil gerne bestemme, hvor meget der fortsat skyldes efter $n$ terminer. 
+\begin{exa}
+Vi låner $G=100.000$kr i banken til en årlig rente på $5\%$. Vi betaler en terminsvis ydelse på $Y=10.000$kr.
+Efter $0$ terminer er restgælden $G=100.000$kr. Efter $1$ termin er gælden
+\begin{align*}
+G_1 = \underbrace{100.000}_{=G}\cdot 1,05 - 10.000 = 95.000.
+\end{align*}   
+Efter to terminer er gælden 
+\begin{align*}
+G_2 = \underbrace{95.000}_{=G_1}\cdot 1,05-10.000 = 89.750.
+\end{align*}
+Efter tre terminer gælden 
+\begin{align*}
+G_3 = \underbrace{89.750}_{=G_2} \cdot 1,05 - 10.000 = 84237.5,
+\end{align*}
+og så videre. 
+\end{exa}
+Dette kan generaliseres til følgende sætning, som vi ikke beviser.
+\begin{setn}
+	Låner vi $G$ med en terminsvis rente på $r$ og indbetaler en fast ydelse per termin på $Y$ og skal have afbetalt vores lån på $n$ terminer, har vi følgende sammenhæng
+	mellem vores variable.
+	\begin{align*}
+		G = Y\cdot \frac{1-(1+r)^{-n}}{r}.
+	\end{align*}
+\end{setn}
+\begin{exa}
+	Om et forbrugslån gælder følgende betingelser for et lån på 20000kr: Lånet skal betales tilbage efter 5 terminer, og ydelsen skal være på 6000kr. Hvad er renten på lånet?
+	Vi opstiller ligningen
+	\begin{align*}
+		20000 = 6000\cdot \frac{1-(1+r)^{-5}}{r},
+	\end{align*}
+	og løser med et CAS-værktøj. Dette giver os $r = 0.152$, altså en procentvis rente på $15,2\%$.
+\end{exa}
+
+\subsection*{Opgave 1}
+
+\begin{enumerate}[label = \roman*)]
+	\item Du indsætter årligt 200kr på en konto, der giver dig en årlig rente på 4 procent. Hvor mange penge står der på kontoen efter 5 år?
+	\item Du ønsker at købe en ny computer, og du kan spare 300kr op om måneden. Banken giver 0.5 procent i månedlig rente. Prisen på computeren er 12000 kr. Hvor længe går
+	der før du har råd til computeren?
+	\item Du skal om 10 år bruge 500000 til udbetalingen på et hus, og du kan indbetale 35000 kr årligt. Hvilken årlig rente skal du have af banken, for at dette kan lade sig gøre?
+	\item Du skal om 18 måneder købe et kørekort, og kan i banken få en månedlig rente på 0.6 procent. Prisen på kørekortet er 14000kr. Hvor meget skal du indsætte månedligt
+	for at få råd til kørekortet?
+\end{enumerate}
+
+\subsection*{Opgave 2}
+Du indsætter på en konto løbende 50000kr om året. Banken giver dig en årlig rente på 3 procent. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvor mange penge står der på kontoen efter 5 år?
+	\item Hvis du i stedet havde indbetalt alle 250000kr på kontoen på én gang, hvor meget ville der så stå på kontoen efter 5 år?
+\end{enumerate}
+
+\subsection*{Opgave 3}
+Du indbetaler månedligt 2000 kr på en investeringskonto, der har et forventet afkast på 5 procent årligt. 
+\begin{enumerate}[label = \roman*)]
+	\item Hvor mange penge vil du forvente, at der står på kontoen efter 10 år?
+\end{enumerate}
+I stedet for et afkast på 5 procent, har kontoen kun givet dig et afkast på 4.7 procent årligt.
+\begin{enumerate}[label = \roman*)]
+	\setcounter{enumi}{1}	
+	\item Hvor meget mindre står der på kontoen end det, du havde forventet?
+\end{enumerate}
+Efter 20 år står der 1.1 mio kroner på kontoen
+\begin{enumerate}[label = \roman*)]
+	\setcounter{enumi}{2}	
+	\item Hvad har det gennemsnitlige afkast været på i procent?
+	\item Hvor meget af beløbet på investeringskontoen består af indbetaling og hvor meget består af renteafkast?
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+Du indsætter halvårlig 4000 kr på en konto med 0.4 procent i månedlig rente.
+\begin{enumerate}[label= \roman*) ]
+	\item Hvad er den årlige rente?
+	\item Hvor mange penge vil stå på kontoen efter 6 år?
+	\item Hvornår vil du have 50000 kr på kontoen?
+	\item Hvornår ville du have 50000 kr på kontoen, hvis den månedlige rente i stedet var 0.6 procent?
+\end{enumerate}
+
+
+\subsection*{Opgave 5}
+
+Følgende opgave er taget fra jeres årsprøvetræning, men indeholder lidt ændringer
+\begin{opgavetekst}{Opgave 2}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/penge}
+	\end{center}
+	Metropol Zoo ønsker sig et bæverhabitat i haven. De har ikke råd til 
+	at betale for habitatet, så de skal have et lån i banken. Banken giver dem et lån på 19.2 mio. og en rente på 5.2 procent
+\end{opgavetekst}
+
+\begin{delopgave}{}{1}
+	Bestem hvad Metropol Zoo skal betale tilbage hvert år, hvis de 
+	skal betale lånet af på 30 år.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Afgør hvornår lånet er betalt tilbage, hvis de afdrager 1 mio. kr. om året på lånet. 
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Hvor meget ville Metropol Zoo skulle afbetale, hvis de på 30 år skulle afbetale lånet med en rente på 6.2 procent?
+\end{delopgave}
+
+
+\subsection*{Opgave 6}
+\begin{enumerate}[label = \roman*)]
+	\item Vi optager et lån på 100000 med en rente på 10 procent årligt. Vi afbetaler med 12000kr årligt. Hvornår er lånet betalt af?
+	\item Vi har betalt vores lån af efter 20 år med en årlig rente på 5.3 procent, og vi har halvårligt betalt 2000 kr af på lånet. Hvor meget lånte vi til at starte med?
+	\item Du låner 60500 i banken til en rente på 8.2 procent. Du skal betale lånet af på 5 år. Hvor meget skal du betale i ydelse om året?
+\end{enumerate}
+
+
+
+\subsection*{Opgave 7}
+En familie låner 5 mio kr til et hus. De har valget mellem en fast årlig rente på 2 procent, eller en variabel årlig rente, der lige nu er på 1.5 procent
+\begin{enumerate}[label=\roman*)]
+	\item Hvad skal familien betale årligt, hvis de på 30 år skal betale lånet af med fast rente?
+	\item Hvad skal familien betale årligt, hvis de på 30 år skal betale lånet af med variabel rente, og renten ikke ændrer sig?
+\end{enumerate}
+På grund af stigende inflation øger den europæiske centralbank (ECB) renten. Dette gør, at renten kort tid efter at familien har købt hus stiger til 4 procent.
+\begin{enumerate}[label=\roman*)]
+	\item Hvad skal familien betale årligt, hvis det på 30 år skal betale lånet af med en årlig rente på 4 procent?
+	\item Hvor meget har de efter de 30 år i alt betalt for deres hus?
+	\item Hvor meget har de betalt mere end hvis de havde valgt en fast rente på 2 procent?
+\end{enumerate}

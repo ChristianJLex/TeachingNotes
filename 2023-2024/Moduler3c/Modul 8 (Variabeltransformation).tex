@@ -1,0 +1,84 @@
+
+\subsection*{Opgave 1}
+
+En radioaktiv kilde placeres i varierende afstand fra en Geiger-tæller, der måler radioaktivitet. I følge afstandskvadratloven vil antallet af aktiveringer per sekund $A$ kunne beskrives ved sammenhængen
+\begin{align*}
+	A(x) = \frac{1}{x^2}\cdot k,
+\end{align*}
+hvor $x$ er afstanden fra kilden i meter, og $k$ er en passende proportionalitetskonstant. Resultatet af forsøget fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/GeigerAktiveringer.xlsx}{\color{blue!60} dette datasæt.}
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav en passende datatransformation og lav derefter lineær regression på datasættet.
+	\item Hvor mange aktiveringer forventer vi, hvis afstanden er 4 meter?
+	\item Hvad skal afstanden være, hvis antallet af aktiveringer skal være på 3 per sekund?
+\end{enumerate}
+
+\subsection*{Opgave 2}
+
+Et objekt kastes ud fra en højde på 100 meter. Højden $H$ over jorden som funktion af den forløbne tid i sekunder $x$ antages at kunne beskrives ved en sammenhæng af typen
+\begin{align*}
+	H(x) = -ax^2 + b.
+\end{align*}
+Højden og tiden kan findes i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/Fritfald.xlsx}{\color{blue!60} dette datasæt.}
+\begin{enumerate}[label=\roman*)]
+	\item Lav en passende datatransformation, og lav derefter lineær regression på datasættet
+	\item Hvornår rammer objektet jorden?
+	\item Hvad er objektets hastighed, når det rammer jorden?
+\end{enumerate}
+
+
+\subsection*{Opgave 3}
+
+I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data%20og%20lign/Bakteriedata.xlsx}{\color{blue!60}dette datasæt} fremgår antallet af bakterier i mia. samt den forløbne tid i timer.
+Det antages, at antallet af bakterier $B$ og den forløbne tid $x$ kan beskrives ved en sammenhæng af typen
+\begin{align*}
+	\ln(B(x)) = ax + b
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Lav en passende datatransformation, og lav derefter lineær regression på datasættet
+	\item Hvor mange bakterier vil der være efter 100 timer?
+	\item Brug modellen til at afgøre, hvornår antallet af bakterier vil være på 700 mia.
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+Man har for en bestemt biltype målt den effekt (i hk (hestekræfter)) det kræves at køre ved bestemte hastigheder. Resultatet af undersøgelsen kan ses i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data og lign/hk.xlsx}{\color{blue!60}dette datasæt.}
+
+Det antages, at effekten $E$ som funktion af hastigheden $x$ (i km/t) kan beskrives ved en sammenhæng af typen
+\begin{align*}
+	\ln(E(x)) = a\ln(x) + b
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav en passende datatransformation og lav derefter lineær regression på datasættet.
+	\item Bestem den effekt det kræves for at køre 200km/t
+	\item Hvor stærkt kører man, hvis man har en konstant effekt på 600hk?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+
+Det viser sig, at man også kan lave lineær regression på eksponentiel data ved en passende variabeltransformation. En eksponentialfunktion er som bekendt en funktion af typen
+\begin{align*}
+	f(x) = b\cdot a^x
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Anvend $\ln(x)$ på begge sider af lighedstegnet af eksponentialfunktionen
+	\item Brug logaritmeregneregler til at lave en lineær sammenhæng mellem $\ln(f(x))$ og $x$. 
+	\item Bestem hældningen og begyndelsesværdien for denne lineære sammenhæng.
+	\item Prøv at lave eksponentiel regression på datasættet fra Opgave 3 og tag $\ln(x)$ af begyndelsesværdien og fremskrivningsfaktoren for denne regression. Sammenlign disse tal med den lineære regressions hældning og begyndelsesværdi fra Opgave 3.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Det viser sig også, at man kan lave lineær regression på potensdata. Vi husker os selv på, at en potensfunktion er en funktion af typen
+\begin{align*}
+	g(x) = b\cdot x^a.
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Anvend $\ln(x)$ på begge sider af lighedstegnes af potensfunktionen
+	\item Brug logaritmeregneregler til at lave en lineær sammenhæng mellem $\ln(g(x))$ og $\ln(x)$.
+	\item Bestem hældningen og begyndelsesværdien for denne lineære sammenhæng.
+	\item Prøv at lave potensregression på datasættet fra Opgave 4 og anvend $\ln(x)$ på $b$-værdien for denne regression. Sammenlign disse tal med den lineære regressions hældning og begyndelsesværdi fra Opgave 4.
+\end{enumerate}
+
+

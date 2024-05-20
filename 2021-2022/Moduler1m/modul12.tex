@@ -1,0 +1,67 @@
+\begin{center}
+\Huge
+Egenskaber for logaritmer
+\end{center}
+\stepcounter{section}
+
+\begin{setn}[Regneregler for $\log$.]
+For titalslogaritmen $\log_{10} =\log$ gælder der for $a,b>0$, at 
+\begin{enumerate}
+\item $\log(a\cdot b) = \log(a) + \log(b)$. 
+\item $\log\left(\frac{a}{b}\right) = \log(a)-\log(b)$.
+\item $\log(a^x) = x\log(a)$.
+\end{enumerate} 
+\end{setn}
+\begin{proof}
+Ad $i)$:
+\begin{align*}
+\log(a\cdot b) &= \log(10^{\log(a)}\cdot 10^{\log(b)})\\
+&= \log(10^{\log(a)+\log(b)})\\
+&= \log(a)+\log(b).
+\end{align*}
+Ad $ii)$:
+\begin{align*}
+\log\left(\frac{a}{b}\right) &= \log \left(\frac{10^{\log(a)}}{10^{\log(b)}}\right)\\
+&= \log(10^{\log(a)-\log(b)})\\
+&= \log(a)-\log(b).
+\end{align*}
+Ad $iii)$:
+\begin{align*}
+\log(a^x) &= \log((10^{\log(a)})^x)\\
+&= \log(10^{x\log(a)})\\
+&= x\log(a).
+\end{align*}
+\end{proof}
+\begin{setn}[Regneregler for $\ln$]
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, at
+\begin{enumerate}[label=\roman*)]
+\item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
+\item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
+\item $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+\end{setn}
+
+
+\section*{Opgave 1}
+Bestem følgende ved brug af logaritmeregneregler
+\begin{align*}
+&1) \ \log(\sqrt{10})    &&2) \  \log(\sqrt[3]{100})  \\
+&3) \ \log(\sqrt[n]{1000})   &&4) \ \log(2) + \log(50)    \\
+&5) \ \log(200)-\log(20)   &&6) \ \log(2\cdot 10^5)   
+\end{align*}
+
+\section*{Opgave 2}
+Bestem følgende:
+\begin{align*}
+&1) \  \ln(e)  &&2) \  \ln(e^3)    \\
+&3) \  \ln(\sqrt{e})  &&4) \ \ln(\sqrt[5]{e^4})      \\
+\end{align*}
+
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+

@@ -1,0 +1,186 @@
+\begin{center}
+\Huge
+Lineære differentialligninger af 1. orden
+\end{center}
+\section*{Førsteordens lineære differentialligninger}
+\stepcounter{section}
+
+Vi har indtil nu arbejdet med to klasser af differentialligninger. Lineære differentialligninger og separable differentialligninger. Differentialligningerne
+\begin{align*}
+	y' = b-ay
+\end{align*}
+og specialtilfældet
+\begin{align*}
+	y' = ay
+\end{align*}
+er eksempler på lineære differentialligninger af første orden. 
+\begin{defn}[Førsteordens lineære differentialligninger]
+	Lad $a:\mathbb{R}\to \mathbb{R}$ og $b:\mathbb{R}\to \mathbb{R}$ være kontinuerte funktioner. Så kaldes en differentialligning
+	på formen
+	\begin{align*}
+		y' + a(x)y = b(x)
+	\end{align*}
+	for en \textit{førsteordens lineær differentialligning}.
+	I fald $b(x)=0$ kaldes ligningen for en \textit{homogen førsteordens lineær differentialligning.} Hvis $h(x) \neq 0$, så siges ligningen at være 
+	\textit{inhomogen.}
+\end{defn}
+
+Vi vil typisk kræve, at $a(x)\neq 0$, da vores differentialligning ellers i realiteten blot er et ubestemt integral. 
+Ordet førsteorden kommer af, at der kun optræder en gange afledede i ligningen. 
+
+\begin{exa}
+	Differentialligningen 
+	\begin{align*}
+		y' + xy = e^x
+	\end{align*}
+	er en lineær differentialligning. Funktionerne $a$ og $b$ er givet ved
+	\begin{align*}
+		&a(x) = x, &&b(x) = e^x.
+	\end{align*}
+\end{exa}
+
+Vi kan løse lineære førsteordens differentialligninger ved brug af den såkaldte \textit{panserformel}. Det kan ofte være \textit{overkill} at bruge panserformlen, men 
+den virker til gengæld altid, når vi har med lineære differentialligninger af 1. orden at gøre. 
+
+\begin{setn}[Panserformlen]
+	Lad $a:\mathbb{R} \to \mathbb{R}$ og $b:\mathbb{R} \to \mathbb{R}$ være kontinuerte funktioner.
+	Så har differentialligningen
+	\begin{align*}
+		y' + a(x) y =b(x)
+	\end{align*}
+	den fuldstændige løsning
+	\begin{align*}
+		y(x) = e^{-A(x)}\int b(x)e^{A(x)} dx + ce^{-A(x)},
+	\end{align*}
+	hvor $A$ er en stamfunktion til $a$ og $c\in \mathbb{R}$.
+\end{setn}
+\begin{proof}
+	Antag, at $y(x)$ er en løsning til differentialligningen
+	\begin{align}\label{eq:diffeq}
+		y' + a(x)y = b(x).
+	\end{align}
+	Vi indfører nu hjælpefunktionen 
+	\begin{align*}
+		z(x) = e^{A(x)}y(x)
+	\end{align*}
+	for en stamfunktion $A$ til $a$. 
+	Vi differentierer nu $z$ ved hjælp af produktreglen for differentiation.
+	\begin{align*}
+		z'(x) &= a(x)e^{A(x)}y(x)+e^{A(x)}y'(x)\\
+			  &= e^{A(x)}\underbrace{\left(a(x)y(x)+y'(x)\right)}_{=b(x)} \\
+			  &= e^{A(x)}b(x).
+	\end{align*}
+	Vi får så, at 
+	\begin{align*}
+		z(x) = \int e^{A(x)}b(x) dx + c.
+	\end{align*}
+	Da 
+	\begin{align*}
+		z(x) = e^{A(x)}y(x),
+	\end{align*}
+	så gælder det, at 
+	\begin{align*}
+		y(x) &= e^{-A(x)}z(x)\\
+		&= e^{-A(x)}\int b(x)e^{A(x)} dx + ce^{-A(x)}.
+	\end{align*}
+	For en god ordens skyld, lad os nu vise, at 
+	\begin{align*}
+		y(x) = e^{-A(x)}\int b(x)e^{A(x)}dx + ce^{-A(x)}
+	\end{align*}
+	er en løsning. 
+	Vi indsætter i \eqref{eq:diffeq}, og starter med $y'$.
+	\begin{align*}
+		y'(x) &= \left(e^{-A(x)}\int b(x)e^{A(x)}dx + ce^{-A(x)}\right)' \\
+		&=-a(x)e^{-A(x)}\int b(x)e^{A(x)}dx + e^{-A(x)}b(x)e^{A(x)} -a(x)ce^{-A(x)} \\
+		&= -a(x)\left(e^{-A(x)}\int b(x)e^{A(x)}dx + ce^{-A(x)}\right) + b(x) \\
+		&= -a(x)y(x) + b(x),
+	\end{align*}
+	og dette var, hvad vi skulle vise. 
+\end{proof}
+
+\begin{exa}
+	Vi betragter den lineære differentialligning af 1. orden
+	\begin{align*}
+		y' + 2xy = \frac{1}{2}x.
+	\end{align*}
+	Her er $b(x) = \frac{1}{2}x$ og $a(x) = 2x.$
+	Vi bestemmer først $A(x) = \int 2x dx = x^2$. 
+	Vi indsætter nu i panserformlen.
+	\begin{align*}
+		y(x) &= e^{-x^2}\int\frac{1}{2}xe^{x^2} dx  + ce^{-x^2}\\
+		&=	e^{-x^2}\frac{1}{4}e^{x^2} + ce^{-x^2}\\
+		&= \frac{1}{4}+ce^{-x^2}.
+	\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Argumentér for, hvorfor differentialligningen 
+	\begin{align*}
+		y' = k
+	\end{align*}
+	er en lineær førsteordens differentialligning (Hint: Bestem $a(x)$ og $b(x)$).
+	\item Argumentér for, hvorfor differentialligningen 
+	\begin{align*}
+		y' = ay
+	\end{align*}
+	er en lineær førsteordens differentialligning (Hint: Bestem $a(x)$ og $b(x)$).
+	\item Argumentér for, hvorfor differentialligningen 
+	\begin{align*}
+		y' = b-ay
+	\end{align*}
+	er en lineær førsteordens differentialligning (Hint: Bestem $a(x)$ og $b(x)$).
+\end{enumerate}
+
+\section*{Opgave 2}
+Følgende differentialligninger er førsteordens lineære differentialligninger på formen
+\begin{align*}
+	y' + a(x)y=b(x).
+\end{align*}
+Bestem $a(x)$ og $b(x)$. 
+\begin{align*}
+	&1) \ y' + y = 0   &&2) \ y' + \cos(x)y = \sin(x)   \\
+	&3) \ y' = -\sqrt{x}y+x^2   &&4) \ y' + (13x^2+4x)y = \sin(x^2)  \\
+	&5) \ y'+2xy-\ln(x) = 0   &&6) \ y' = \cos(x)+\sin(x)y  \\
+	&7) \ y' -y = 5   &&8) \ \frac{y'}{y} +x = \frac{\sqrt{x}}{y}  \\
+\end{align*}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + x^3y = 0.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y'  = -cos(x)y.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen 
+	\begin{align*}
+		y' + 2xy = x^2
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + 3y = e^x
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + \cos(x)y = 3\cos(x).
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' + 2xy = e^{-x^2}.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' - \cos(x)y = e^{sin(x)}.
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Brug Panserformlen til at bevise løsningsformlen for differentialligningen
+	\begin{align*}
+		y' =b-ay.
+	\end{align*}
+\end{enumerate}

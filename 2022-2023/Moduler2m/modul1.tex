@@ -1,0 +1,192 @@
+\begin{center}
+\Huge
+Vektorer og analytisk geometri
+\end{center}
+
+\section*{Linjens ligning}
+\stepcounter{section}
+
+I analytisk geometri ønsker vi at beskrive geometriske objekter ved brug af ligninger og koordinatsystemer i stedet for at analysere geometriske objekter ved hjælp af lineal, passer og lignende. Vi vil eksempelvis se på ligninger for linjer og cirkler - desuden skal vi se, hvordan vi kan \textit{parametrisere} en linje. Vi lægger ud med at udlede linjens ligning.
+
+Vi lader $l$ være en vilkårlig linje og vi lader $P(x_0,y_0)$ være et punkt på denne linje. Vi kan danne en forbindelsesvektor $\vv{v}$ fra $(x_0,y_0)$ til ethvert andet punkt $(x,y)$ på $l$ ved
+\begin{align}\label{eq:eq1}
+\vv{v} = \begin{pmatrix}
+x-x_0\\y-y_0
+\end{pmatrix}.
+\end{align}
+For en normalvektor $\vv{n}$ til $l$ givet ved
+\begin{align*}
+	\vv{n} = 
+	\begin{pmatrix}
+		a\\b
+	\end{pmatrix}
+\end{align*}
+vil det gælde, at prikproduktet mellem $\vv{v}$ og $\vv{n}$ er lig 0, altså at $\vv{v}\cdot \vv{n} = 0$. Mere specifikt har vi, at 
+\begin{align*}
+	\begin{pmatrix}
+		x-x_0\\ y-y_0
+	\end{pmatrix} \cdot 
+	\begin{pmatrix}
+		a \\ b
+	\end{pmatrix} = 0,
+\end{align*}
+hvilket medfører, at 
+\begin{align*}
+a(x-x_0) + b(y-y_0) = 0.
+\end{align*}
+Linjen $l$ samt vektorerne $\vv{v}$ og $\vv{n}$ kan ses af Fig. \ref{fig:linjeligning}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle,
+		xmin = -1, 
+		ymin = -1,
+		ticks = none		
+		]
+			\addplot[color = blue!40, thick] {0.6*x+1};
+			\draw[-{Stealth[scale=1.5]}, thick] (axis cs:1,1.6) -- (axis cs:3,2.8);
+			\node[color = blue!40] at (axis cs:4.7,3.5) {$l$};
+			\node at (axis cs:2,2.4) {$\vv{v}$};
+			\draw[-{Stealth[scale = 1.5]},thick] (axis cs:1,1.6) -- (axis cs:2.2,-0.4);
+			\node at (axis cs:1.7,0.9) {$\vv{n}$};
+			\node[circle, fill = red!60, inner sep = 0pt, minimum size = 5pt] at (axis cs: 1,1.6) {};
+			\node[color = red!60] at (axis cs: 0.7,1.9) {$(x_0,y_0)$};
+			\node[circle, fill = red!60, inner sep = 0pt, minimum size = 5pt] at (axis cs:3,2.8) {};
+			\node[color = red!60] at (axis cs: 2.8,3.1) {$(x,y)$};
+			\draw[dashed] (axis cs:1.22,1.28) -- (axis cs:1.54,1.48);
+			\draw[dashed] (axis cs:1.35,1.81) -- (axis cs:1.54,1.48);
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Retningsvektor og normalvektor til linjen $l$.}
+	\label{fig:linjeligning}
+\end{figure}
+Vi kan nu konkludere med en sætning.
+\begin{setn}[Linjens ligning]
+Lad $l$ være en linje med en normalvektor $\vv{n}$ givet ved
+\begin{align*}
+	\vv{n} = 
+	\begin{pmatrix}
+		a\\b
+	\end{pmatrix},
+\end{align*} og lad $P(x_0,y_0)$ være  et punkt på linjen. Så opfylder ethvert punkt $(x,y)$, der ligger på linjen $l$, at 
+\begin{align}\label{eq:linjensligning}
+a(x-x_0) + b(y-y_0) = 0.
+\end{align}
+Vi kalder ligningen \eqref{eq:linjensligning} for \textit{linjens ligning}. Mere præcist er \eqref{eq:linjensligning} ligningen for linjen $l$.
+\end{setn}
+\begin{exa}
+På linjen $l$ kender vi punktet $P(-1,3)$ og normalvektoren $\vv{n} = \begin{pmatrix}
+2 \\ 4
+\end{pmatrix}$. Ligningen for $l$ er derfor givet
+\begin{align*}
+2(x+1) + 4(y-3) = 0.
+\end{align*}
+\end{exa}
+
+\begin{exa}
+En linje $l$ har ligningen 
+\begin{align}\label{eq:ex2}
+	3(x+1) + 4(y-1) = 0.
+\end{align}
+Vi vil undersøge, om punkterne $(3,-2)$ og $(1,0)$ ligger på $l$. Vi indsætter derfor punkterne i \eqref{eq:ex2} og regner efter. Det første punkt giver
+\begin{align*}
+3(x+1) + 4(y-1) = 0 \ &\Leftrightarrow \  3(3+1) + 4(-2-1) = 0 \\
+& \Leftrightarrow \ 3\cdot 4+4\cdot(-3) = 0\\
+% \Leftrightarrow \ 0 = 0,
+\end{align*}
+og derfor ligger punktet $(3,-2)$ på $l$. Tilsvarende for det andet punkt fås
+\begin{align*}
+3(1+1) + 4(0-1) = 0 \  \Leftrightarrow \ 2 = 0, 
+\end{align*}
+hvilket tydelige er et falsk udsagn. Derfor ligger punktet $(1,0)$ ikke på linjen $l$. 
+\end{exa}
+
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Afgør, om punkterne $(0,2)$ og $(-2,3)$ ligger på linjen med ligningen
+\begin{align*}
+	(x-2) + 2(y-1) = 0.
+\end{align*}
+\item Afgør, om punkterne $(-4,-1)$ og $(-3,6)$ ligger på linjen med ligningen 
+\begin{align*}
+	5(x+5) - 2(y-1) = 0.
+\end{align*}
+\end{enumerate}
+
+\section*{Opgave 2}
+Bestem linjens ligning for følgende punkter $P(x_0,y_0)$ og normalvektorer $$\vv{n} = \begin{pmatrix}
+a \\ b
+\end{pmatrix}.$$
+\begin{align*}
+&1) \ P(1,1), \ \vv{n} = \begin{pmatrix}
+-2 \\ 3
+\end{pmatrix}.   &&2) \ P(-5,-3), \ \vv{n} = \begin{pmatrix}
+2 \\ 7
+\end{pmatrix}.    \\
+&3) \ P\left(\frac{-2}{5},13\right), \ \vv{n} = \begin{pmatrix}
+-10 \\ 20
+\end{pmatrix}.   &&4) \ P(\sqrt{2},\sqrt{3}), \ \vv{n} = \begin{pmatrix}
+\frac{1}{5} \\ \frac{7}{10}
+\end{pmatrix}.   \\
+&5) \ P(0,0), \ \vv{n} = \begin{pmatrix}
+1 \\ 1
+\end{pmatrix}.   &&6) \ P(-100,5), \ \vv{n} = \begin{pmatrix}
+-\frac{\sqrt{2}}{2} \\ -9
+\end{pmatrix}.   \\
+\end{align*}
+
+\section*{Opgave 3}
+Vi har tidligere set linjer repræsenteret på formen $y = ax+b$, og har vi en ligning på formen $a(x-x_0) + b(y-y_0) = 0$, så kan denne omskrives til formen\\ $y = ax+b$ (bemærk, at konstanterne $a$ og $b$ uheldigvis ikke her har samme betydning). Omskriv følgende ligninger fra formen $a(x-x_0) + b(y-y_0) = 0$ til formen $y=ax+b$. Tjek at dit resultatet er korrekt ved at tegne begge linjer i eksempelvis Geogebra. 
+
+\begin{align*}
+&1) \ 2(x+2) + 3(y+3) = 0 &&2) \ -7(x-1) + 6(y-1) = 0\\
+&3) \ (x+10) + (y-9) = 0 &&4) \ 5(x-5) + 4(y-0.5) = 0\\
+\end{align*}
+
+\section*{Opgave 4}
+I følgende koordinatsystemer er tegnet en linje $l$ samt en normalvektor til linjen. Brug koordinatsystemerne til at bestemme linjens ligning for hver af linjerne.
+\begin{center}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, grid, xmin = -0.5, xmax = 5.5, ymin = -0.5, ymax = 5.5]
+		\addplot[color = blue!60] {-0.5*x+3};
+		\draw[-{Stealth[scale = 1.5]}] (axis cs:2,2) -- (axis cs: 3, 4);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, grid, xmin = -3.5, xmax = 3.5, ymin = -1.5,ymax = 5.5]
+		\addplot[color = blue!60] {2*x+6};
+		\draw[-{Stealth[scale = 1.5]}] (axis cs:-1,4) -- (axis cs: 3, 2);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\begin{center}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, grid, xmin = -1.5, xmax = 3.5, ymin = -1.5,ymax = 3.5]
+		\addplot[color = blue!60] {-x+1};
+		\draw[-{Stealth[scale = 1.5]}] (axis cs:1,0) -- (axis cs: 2, 1);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, grid,xmin = -1.5, xmax = 3.5, ymin = -1.5,ymax = 3.5]
+		\addplot[color = blue!60] {2};
+		\draw[-{Stealth[scale = 1.5]}] (axis cs:2,2) -- (axis cs: 2, -1);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+ 
+\section*{Opgave 5}
+Følgende linjer er repræsenteret på formen $y = ax + b$. Tegn dem i GeoGebra og bestem så et punkt $P(x_0,y_0)$ på linjen samt en normalvektor $\vv{n}$ til linjerne. Brug punktet $P$ og normalvektoren $\vv{n}$ til at omskrive ligningen for linjen fra formen $y = ax+b$ til formen $a(x-x_0) + b(y-y_0) = 0$. 
+\begin{align*}
+	&1) \ y = 2x+1 &&2) \ y = -\frac{1}{4}x-2\\
+	&3) \ y = x-7 &&4) \ y = 5x+0.6\\
+	&5) \ y = 12x-13 &&6) \ y = -4x\\
+\end{align*}

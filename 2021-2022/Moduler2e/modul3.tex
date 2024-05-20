@@ -1,0 +1,103 @@
+
+\begin{center}
+\Huge
+Regneregler for differentiation
+\end{center}
+\section*{Regneregler}
+\stepcounter{section}
+
+\begin{setn}
+\begin{enumerate}[label=\roman*)]
+\item For den naturlige logaritme $\ln$ har vi
+\begin{align*}
+(\ln(x))' = \frac{1}{x}.
+\end{align*}
+\item For den naturlige eksponentialfunktion $e^x$ har vi
+\begin{align*}
+(e^x)' = e^x.
+\end{align*}
+\item For en given eksponentialfunktion $a^x$ har vi
+\begin{align*}
+(a^x)' = a^x\ln(a).
+\end{align*}
+\item For potensfunktioner (og specielt polynomier) $x^a$ har vi
+\begin{align*}
+(x^a)' = ax^{a-1}
+\end{align*}
+\end{enumerate}
+\end{setn}
+Vi vil bevise iv) i tilfældet, at $a$ er et heltal. Vi vil bevise iv) ved induktion. Princippet i induktionsbeviser er som følgende: Lad os sige, at vi ønsker at bevise noget for ethvert naturligt tal $n$. Vi kan så starte med at give et bevis i tilfældet at $n=0$ eller $n=1$ og derefter vise, at hvis det er sandt for et vilkårligt naturligt tal $k$, så må det også være sandt for $k+1$.
+\begin{exa}
+Det arketypiske eksempel på et induktionsbevis er følgende: Bevis, at summen af de første $n$ heltal er givet ved $n(n+1)/2$, altså
+\begin{align}\label{eq:sumofints}
+\sum_{i=0}^n i = \frac{n(n+1)}{2}.
+\end{align}
+\begin{proof}
+Basisskridt: Antag, at $n=1$. Så er $n(n+1)/2 = 1(2)/2=1$, altså er \eqref{eq:sumofints} sand for $n=1$. 
+
+
+Induktionsskridt: Antag nu, at \eqref{eq:sumofints} er sandt for et vilkårligt $n>1$. Vi lægger $n+1$ til på begge sider af lighedstegnet i \eqref{eq:sumofints} og får
+\begin{align*}
+\sum_{i=0}^{n+1} i &= \frac{n(n+1)}{2} +n+1 \\
+&= \frac{n(n+1)}{2}+\frac{2(n+1)}{2}\\
+&= \frac{n(n+1)+2(n+1)}{2}\\
+&= \frac{(n+1)(n+2)}{2},
+\end{align*}
+og vi er færdige.
+\end{proof}
+\end{exa} 
+\begin{proof}[Bevis for iv)]
+Basisskridt: Antag, at $a=1$. Så har vi $x^a = x^1$ og $(x^1)' = 1 = 1x^0$ af en tidligere sætning. 
+
+Induktionsskridt: Antag nu, at $(x^a)' = ax^{a-1}$ for et vilkårligt $a>1$, hvor $a$ er et heltal. Vi ser på
+\begin{align*}
+x^{a+1} &= \lim_{h\to 0} \frac{(x+h)^{a+1}-x^{a+1}}{h}\\
+&= \lim_{h\to 0} \frac{(x+h)^a(x+h)-x^ax}{h}\\
+&= \lim_{h\to 0} \frac{(x+h)^ax+(x+h)^ah-x^ax}{h}\\
+&= \lim_{h\to 0} \frac{x[(x+h)^a-x^a] + (x+h)^ah}{h}\\
+&=x ax^{a-1}+x^a\\
+&= (a+1)x^a,
+\end{align*}
+og vi er færdige.
+\end{proof}
+\section*{Lidt om eksponentialfunktionen}
+Når vi har med eksponentiel vækst at gøre, vil vi ofte gerne sige noget om væksten til et bestemt tidspunkt $t$, altså tangenthældningen af funktionen i punktet tilsvarende tid $t$. Eksponentiel vækst er på formen
+\begin{align*}
+f(x) = a^x.
+\end{align*}
+Enhver eksponentiel funktion kan omskrives til den naturlige eksponentialfunktion som
+\begin{align*}
+f(x) = a^x = e^{\ln(a)x} = e^{kx},
+\end{align*}
+hvor $k=\ln(a)$. Dette er smart, da den afledede af $f$ så blot bliver en konstant gange funktionen:
+\begin{align*}
+f'(x) = ke^{kx}
+\end{align*}
+af kædereglen. Tilsvarende vil fordoblings og halveringskonstanten for $f$ så være henholdsvist givet ved
+\begin{align*}
+&T_2 = \frac{\ln(2)}{k}, &&\textnormal{og }T_{1/2} = \frac{\ln(1/2)}{k}.
+\end{align*}
+
+\section*{Opgave 1}
+Differentiér følgende funktioner
+\begin{align*}
+&1) \ x^\frac{27}{2}   &&2) \  e^{10x}   \\
+&1) \ \frac{e^{2x+3}}{x^2}   &&2) \ \frac{3}{x^{x^{\frac{3}{2}}+1}}    \\
+&1) \  4e^{2x^2}-\ln(3x)  &&2) \ \ln(25x^2)      \\
+&1) \ 10^x   &&2) \  \frac{ln(x)}{\ln(x^2)}   \\
+&1) \  ln(e^{2x})  &&2) \  e^{2ln(x^2)}   \\
+\end{align*}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item
+Antallet af mennesker i en given befolkning kan beskrives med
+\begin{align*}
+N(t) = 2.3e^{0.05t},
+\end{align*}
+hvor $t$ er tid målt i år og $N(t)$ er befolkningens størrelse målt i mio. mennesker. Hvilken væksttype vokser befolkningen med? Bestem den hastighed befolkningen vokser med både som funktion af $t$ og til tiden $t = 10$ og $t=50$. Hvad er fordoblingskonstanten for befolkningen?
+\item Temperaturen $H$ i et glas vand kan modelleres i et rum med modellen
+\begin{align*}
+H(t) = 10e^{-0.023t}.
+\end{align*}
+$t$ er tid i minutter og $H$ er grader celsius. Hvilken væksttype er dette? Hvis modellen er korrekt, hvor varmt er der så i det omkringliggende miljø? Hvad er temperaturen af vandet til tid $t=0$? Hvor hurtigt aftager vandets temperatur efter 10min? Hvad er halveringstiden for temperaturen? Hvornår er vandet 2 grader? Hvad med 0 grader?
+\end{enumerate}

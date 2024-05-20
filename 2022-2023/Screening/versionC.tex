@@ -1,0 +1,132 @@
+
+\begin{center}
+\LARGE
+Matematikscreening (8:00 - 10:00)
+\end{center}
+\stepcounter{section}
+
+
+\begin{opgavetekst}{Opgave 1}
+	En ligning er givet ved
+	\begin{align*}
+		-3x-8 = 4(x+5).
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{(10 point)}{1}
+	Løs ligningen \textbf{uden} brug af \textit{solve}, hvor du argumenter for, hvad du gør linje for linje.
+\end{delopgave}
+\begin{delopgave}{(5 point)}{2}
+	Løs ligningen \textbf{med} brug af \textit{solve}, og undersøg om dit resultat passer med resultatet fra a).
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 2}
+	En lineær funktion $f$ er givet ved
+	\begin{align*}
+		f(x) = -4x+12.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{(5 point)}{1}
+	Bestem skæringspunktet mellem grafen for $f$ og $x$-aksen. 
+\end{delopgave}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 3}
+	\begin{center}
+		\includegraphics[width=0.4\textwidth]{Billeder/container.jpg}
+	\end{center}
+	En gruppe venner skal fylde sand i en container. Containeren vejer 715 kg, og de fylder 2300 kg sand i containeren i timen. 
+\end{opgavetekst}
+\begin{delopgave}{(10 point)}{1}
+	Indfør passende variable og opstil en model, der beskriver sammenhængen mellem vægten af containeren og tiden, vennegruppen har brugt på at fylde sand i containeren. 
+\end{delopgave}
+\begin{delopgave}{(10 point)}{2}
+	Bestem vægten af containeren efter tre timer. 
+\end{delopgave}
+\begin{meretekst}
+	Én af vennerne gør de andre opmærksomme på, at den maksimale totalvægt på containeren er 10.000kg.
+\end{meretekst}
+\begin{delopgave}{(10 point)}{3}
+	Hvor længe kan de fylde sand på containeren før den overstiger maksimalvægten?
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 4}
+	På Figur \ref{fig:oneline2} ses grafen for en lineær funktion $f$ givet ved
+	\begin{align*}
+		f(x) = ax + b.
+	\end{align*}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+				axis lines = center,
+				xmin = -1, 
+				ymin = -11, 
+				ticks = none
+				]
+				\addplot[samples = 10, color = blue!40, thick] {-3*x+3};
+				\node[circle, fill = purple, inner sep = 0pt, minimum size = 5pt] at (axis cs: 0,3) {};
+				\node[circle, fill = purple, inner sep = 0pt, minimum size = 5pt] at (axis cs: 2,-3) {};
+				\node at (axis cs:0.7,3) {$P(0,3)$};
+				\node at (axis cs:2.7,-3) {$Q(2,-3)$};
+				\node at (axis cs:3.5,-6) {$\color{blue!60} f$};
+			\end{axis}
+			\node at (8.9,5.0) {(1)};
+			\node at (1.75,7.5) {(2)};
+		\end{tikzpicture}
+		\caption{Grafen for $f$.}
+		\label{fig:oneline2}
+	\end{figure}\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{(10 point)}{1}
+	Brug punkterne på Figur \ref{fig:oneline2} til at bestemme $a$ og $b$. 
+\end{delopgave}
+\begin{delopgave}{(5 point)}{2}
+	Bestem forskriften for $f$ og brug denne til at bestemme $f(-2)$. 
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 5}
+	To lineære funktioner $f$ og $g$ har forskrifterne
+	\begin{align*}
+		f(x) &= 4x-1,\\
+		g(x) &= -2x+b.	
+	\end{align*}	
+	Desuden oplyses det, at $g(2) = 1$.
+\end{opgavetekst}
+\begin{delopgave}{(5 point)}{1}
+	Bestem $b$.
+\end{delopgave}
+\begin{delopgave}{(10 point)}{2}
+	Bestem punktet, hvor graferne for $f$ og $g$ skærer hinanden. 
+\end{delopgave}
+
+
+\begin{opgavetekst}{Opgave 6}
+	\begin{center}
+	\includegraphics[width= 0.4\textwidth]{Billeder/sne.jpg}
+	\end{center}
+	To venner har fået til opgave at rydde en parkeringsplads for sne.
+	Arealet af skovlet sne sammenholdt med den forløbne tid kan ses af Tabel
+	\ref{tab:sne}.
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c|c|c|c}
+		Tid (min.) & 10 & 20 & 30 & 40 & 50 \\
+		\hline
+		Sne skovlet (m$^2$) & 24 & 50 & 73 & 96 & 120 
+		\end{tabular}
+		\caption{Skovlet sne.}
+		\label{tab:sne}
+	\end{table}
+	Vi antager, at arealet af skovlet sne $S$ (i m$^2$) som funktion af tiden $t$ (i min.) kan beskrives ved sammenhængen
+	\begin{align*}
+		S(t) = at+b.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{(10 point)}{1}
+	Brug tallene fra Tabel \ref{tab:sne} til at bestemme $a$ og $b$. 
+\end{delopgave}
+
+\begin{delopgave}{(10 point)}{2}
+	Det oplyses, at parkeringspladsen er 400m$^2$. Hvornår er de ifølge modellen færdige med at rydde sneen på parkeringspladsen?
+\end{delopgave}

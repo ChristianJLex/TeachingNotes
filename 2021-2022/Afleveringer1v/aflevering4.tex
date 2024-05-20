@@ -1,0 +1,90 @@
+
+\begin{center}
+\Huge
+Aflevering 4
+\end{center}
+
+\section*{Opgave 1}
+\stepcounter{section}
+Et taxafirma \textit{TaxA} har følgende prissætning på sine rejser: 
+\begin{itemize}
+\item Det koster 50kr at påbegynde en rejse.
+\item De første 5 km koster 15kr per km.
+\item Fra 5 til 10 km koster rejsen 10kr per km.
+\item Resten af rejsen koster 8kr per km.   
+\end{itemize}
+\begin{enumerate}[label=\roman*)]
+\item Lad $f$, $g$ og $h$ være givet ved følgende stykvist definerede funktionsforskrifter
+\begin{align*}
+f(x) &= \begin{cases} 15\cdot x, \ &0\leq x < 5,\\
+10 \cdot x, \ &5\leq x < 10,\\
+8\cdot x, \ 10 \leq x,
+\end{cases}\\
+g(x) &= \begin{cases}
+15\cdot x + 50, \ &0\leq x < 5,\\
+10 \cdot x, \ &5\leq x < 10,\\
+8\cdot x, \ &10 \leq x,
+\end{cases}\\
+h(x) &= \begin{cases}
+15\cdot x + 50, \ &0\leq x < 5,\\
+10 \cdot x + 75, \ &5\leq x < 10,\\
+8\cdot x +95, \ &10 \leq x.
+\end{cases}
+\end{align*}
+Bestem hvilken af funktionerne $f$, $g$ og $h$, der bedst beskriver prisen af en rejse med taxafirmaet. Begrund dit svar.
+\item Brug din valgte funktion til at bestemme prisen på en rejse på $2$km, 7km og 25km.
+\item Et andet taxafirma \textit{TaxB} har prissætning bestemt af følgende stykvist defineret funktion
+\begin{align*}
+p(x) = 
+\begin{cases}
+15\cdot x \ &0\leq x < 5,\\
+10 \cdot x + 25 \ &5 \leq x,
+\end{cases}
+\end{align*}
+hvor $x$ er antallet af kørte km og $p(x)$ er prisen i kr. Hvor langt skal du køre, før prisen på TaxB er højere end prisen for TaxA?
+\end{enumerate}
+
+\section*{Opgave 2}
+To funktioner $f$ og $g$ er givet ved 
+\begin{align*}
+f(x) = 2\cdot x^2 \textnormal{ og } g(x) = 3\cdot x - 4.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+\item Bestem de sammensatte funktioner $f(g(x))$ og $g(f(x))$. 
+\item Bestem rødderne til funktionerne $f(g(x))$ og $g(f(x))$. (Husk, at rødderne til en funktion er der, hvor funktionen skærer $x$-aksen.)
+\end{enumerate}
+\section*{Opgave 3}
+\stepcounter{section}
+Vi har fået opgivet et datasæt, der beskriver befolkningstallet i tusinder i en by som funktion af tid i årtier efter år 1800. Dette kan ses af Tabel \ref{tab:datatab}.
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+$x$ (Tid i årtier) & 0&1&2&3&4&5&6&7&8&9 \\ \hline
+$y$ (Befolkning i tusinder)& 12,3 & 0,1 & 1,3 & 1,9 & 7,2 & 18,4 & 15,0 & 23,1 & 55,4 & 73,5
+\end{tabular}
+\caption{Datasæt}
+\label{tab:datatab}
+\end{table}
+\begin{enumerate}[label=\roman*)]
+\item Lav både lineær regression og eksponentiel regression på datasættet, og kommentér på, hvad der ser ud til at passe bedst.
+\item Sammenlign dit kvalitative svar med forklaringsgraderne for regressionerne. Hvilken regression er bedst i følge forklaringsgraden?
+\item Brug både den lineære model og den eksponentielle model til at bestemme antallet af personer i år 1900.
+\item Det rigtige antal personer i år 1900 er 110,7 tusinde. Hvilken model rammer dette bedst?
+\end{enumerate}
+
+\section*{Opgave 4}
+Lad $P_1 = (0,3)$ og $Q_1 = (4,5)$, og lad $P_2 = (0,1)$ og $Q_2 = (1,e)$. 
+\begin{enumerate}[label=\roman*)]
+\item Brug topunktsformlen for potensfunktioner til at bestemme den potensfunktion $f$, der går gennem punkterne $P_1$ og $Q_1$.
+\item Brug topunktsformlen for eksponentialfunktioner til at bestemme den eksponentialfunktion $g$, der går gennem punkterne $P_2$ og $Q_2$. 
+\item Bestem skæringenspunktet $P_3$ mellen $f$ og $g$. 
+\item Brug topunktsformlen for lineære funktioner, til at bestemme den lineære funktion, der går gennem punkterne $(0,0)$ og $P_3$. Hvad er hældningen af denne funktion?
+\end{enumerate}
+
+\section*{Opgave 5}
+På en konto indsætter vi hvert år $3000$kr, og på kontoen er der en årlig rente på $3\%$. 
+\begin{enumerate}[label=\roman*)]
+\item Hvor meget står der på kontoen efter 15 år?
+\item Hvad har vi i alt tjent på renter på de 15 år?
+\item Hvis vi i stedet havde indsat $45000$kr på en gang ind på kontoen og så ikke indsat mere efterfølgende, hvor meget ville der så stå på kontoen efter 15 år?
+\end{enumerate}

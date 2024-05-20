@@ -1,0 +1,287 @@
+
+\begin{center}
+\Huge
+Polynomier
+\end{center}
+\section*{Introduktion}
+\stepcounter{section}
+
+Vi har tidligere arbejdet med både lineære og konstante funktioner. Disse er begge eksempler på den funktionstype, vi kalder for \textit{polynomier}. Før vi giver en definition på et polynomium, så ser vi på nogle eksempler.
+
+\begin{exa}
+	Funktionen $f(x) = 10$ er et konstant polynomium. Dette kaldes også for et
+	nultegradspolynomium.
+\end{exa}
+\begin{exa}
+	Funktionen $g(x) = 3x-4$  er et lineært polynomium eller bare en lineær funktion. Dette 
+	kalder vi også for et førstegradspolynomium.
+\end{exa}
+\begin{exa}
+	Funktionen $h(x) = 2x^2-4x+2$ er et andengradspolynomium. Denne type polynomier er den, vi
+	vi skal arbejde mest med i dette forløb. Det hedder et andengradspolynomium fordi 
+	den højeste potens af $x$ er 2.
+\end{exa}
+\begin{exa}
+	Funktionen $p(x) = 5x^7 -3x+1$ er et 7.gradspolynomium. Det kaldes et 7.gradspolynomium, da 
+	den højeste potens af $x$ er 7.
+\end{exa}
+
+\begin{defn}
+	Et polynomium er en funktion $f$ på formen
+	\begin{align*}
+		f(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1 x + a_0,
+	\end{align*}
+	hvor $a_n \neq 0$. Vi kalder $n$ for graden af $f$. 
+\end{defn}
+Vi kalder tallene $a_0,a_1,\hdots,a_n$ for et polynomiums koefficienter. På Figur \ref{fig:polys} kan vi se eksempler på et nulte, første, anden og tredjegradspolynomium.
+
+\begin{figure}[H]
+\centering
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 100] {3};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {2*x};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {-x^2+2*x+1};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {x^3-2*x^2+2};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{Henholdsvis nulte-, første-, anden- og tredjegradspolynomier.}
+\label{fig:polys}
+\end{figure}
+
+Vi vil som sagt have et særligt fokus på andengradspolynomier i dette forløb, og derfor betragtes graferne for andengradspolynomier. Disse kaldes også for \textit{parabler}.
+
+For en god ordens skyld giver vi en definition på et andengradspolynomium.
+\begin{defn}[Andengradspolynomium]
+	En funktion $f$ på formen
+	\begin{align*}
+		f(x) = ax^2+bx+c,
+	\end{align*}
+	hvor $a \neq 0$ kaldes for et andengradspolynomium.
+\end{defn}
+Vi skal kunne bruge koefficienterne i et andengradspolynomium til at afgøre, hvordan grafen for polynomiet ser ud. For koefficienterne gælder der:
+\begin{itemize}
+	\item[$\cdot$] Tallet $c$ er skæringen med $y$-aksen.
+	\item[$\cdot$] Tallet $b$ fortæller os, om parablen er voksende eller aftagende i skæringen
+	med $y$-aksen. Hvis $b > 0$, så er parablen voksende, og hvis $b<0$, så er parablen 
+	aftagende.
+	\item[$\cdot$] Tallet $a$ fortæller os, om parablens arme vender op eller ned. Hvis 
+	$a > 0$, så vender armene op ad, og hvis $a < 0$, så vender armene nedad. 
+\end{itemize}
+På Figur \ref{fig:andenpolys2} kan vi se to parabler. 
+\begin{figure}[H]
+	\centering
+	\resizebox{0.45\textwidth}{!}
+	{
+	\begin{tikzpicture}
+		\begin{axis}[
+		axis lines = middle,
+		xmin = -2, xmax = 6, ymin = -5, ymax = 4
+ 		]
+			\addplot[thick, samples = 1000] {x^2-3*x-2};
+			\node[anchor = west] at (axis cs: 4,-2) {$a > 0$};
+			\node[anchor = west] at (axis cs: 4,-2.8) {$b < 0$};
+			\node[anchor = west] at (axis cs: 4,-3.6) {$c = -2$};
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\resizebox{0.45\textwidth}{!}
+	{
+	\begin{tikzpicture}
+		\begin{axis}[
+		axis lines = middle,
+		xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ 		]
+			\addplot[thick, samples = 1000] {-x^2+2*x+1};
+			\node[anchor = west] at (axis cs: 1,3.8) {$a < 0$};
+			\node[anchor = west] at (axis cs: 1,3.3) {$b > 0$};
+			\node[anchor = west] at (axis cs: 1,2.8) {$c = 1$};
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\caption{To parabler}
+	\label{fig:andenpolys2}
+\end{figure}
+
+De steder hvor polynomier skærer $x$-aksen kaldes ofte for \textit{rødder}. Vi skal senere se, hvordan vi kan bestemme rødderne for andengradspolynomier, men for nu vil vi holde os til at afgøre, hvor mange rødder et polynomium har. Til dette har vi \textit{diskriminanten}.
+\begin{setn}[Diskriminanten]
+	For et andengradspolynomium $f$ givet ved
+	\begin{align*}
+		f(x) = ax^2+bx+c
+	\end{align*}
+	gælder der, at tallet 
+	\begin{align*}
+		d = b^2 - 4\cdot a\cdot c
+	\end{align*}
+	fortæller os, hvor mange rødder $f$ har. 
+	\begin{itemize}
+		\item[$\cdot$] Hvis $d > 0$, så har $f$ to rødder.
+		\item[$\cdot$] Hvis $d = 0$, så har $f$ én rod.
+		\item[$\cdot$] Hvis $d < 0$, så har $f$ nul rødder. 
+	\end{itemize}
+\end{setn}
+Vi kalder tallet $d$ for \textit{diskriminanten}.
+
+\begin{exa}
+	Polynomiet $f$ givet ved
+	\begin{align*}
+		f(x) = 2x^2-4x+3
+	\end{align*}
+	har nul rødder, da diskriminanten $d$ er givet ved
+	\begin{align*}
+		d = (-4)^2 - 4\cdot 2\cdot 3 = 16-24 = -8,
+	\end{align*}
+	som er mindre end 0.
+\end{exa}
+\begin{exa}
+	Polynomiet $g$ givet ved
+	\begin{align*}
+		-3x^2 + 4x+2
+	\end{align*}
+	har to rødder, da diskriminanten $d$ er givet ved
+	\begin{align*}
+		d = 4^2 -4\cdot (-3)\cdot 2 = 16 + 24 = 40,
+	\end{align*}
+	som er større end 0.
+\end{exa}
+\begin{exa}
+	Polynomiet $h$ givet ved
+	\begin{align*}
+		x^2 - 2x + 1
+	\end{align*}
+	har netop én rod, da diskriminanten $d$ er givet ved
+	\begin{align*}
+		d = (-2)^2 - 4\cdot 1 \cdot 1 = 4 - 4 = 0.
+	\end{align*}
+\end{exa}
+
+
+\subsection*{Opgave 1}
+Bestem graden af følgende polynomier.
+\begin{align*}
+	&1) \ 2x+1   &      &2) \  3x^2+4      \\
+	&3) \ x^4+2x+10   &      &4) \ -10x^5+2x^2+x-0.5      \\
+	&5) \ 2x+x^2   &      &6) \  x^9     \\
+	&7) \ -x^4+2x^3-3x^2+10x+2   &      &8) \  5x^2+10x^{12}     \\	
+\end{align*}
+
+
+\subsection*{Opgave 2}
+For parablerne i Fig. \ref{fig:andenpolys}
+\begin{enumerate}[label=\roman*)]
+\item Bestem fortegnet på diskriminanten $d$.
+\item Bestem fortegnet på koefficienterne $a$ og $b$. 
+\item Bestem $c$.
+\end{enumerate}
+\begin{figure}[H]
+\centering
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {x^2-2*x+2};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {-2*x^2+4*x-2};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -3, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {x^2+2*x-1};
+\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}
+{
+\begin{tikzpicture}
+\begin{axis}
+[
+	axis lines = middle,
+	xmin = -2, xmax = 3, ymin = -2, ymax = 4
+ ]
+\addplot[thick, samples = 1000] {-3*x^2-x+2};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{Fire parabler}
+\label{fig:andenpolys}
+\end{figure}
+
+
+\subsection*{Opgave 3}
+Bestem diskriminanten for følgende polynomier og brug den til at afgøre, hvor mange rødder polynomierne har. Tegn desuden graferne i Maple for at verificere dit resultat.
+\begin{align*}
+&1) \ 2x^2+2x-12   &&2) \ 2x^2-8x+4   \\
+&3) \ x^2-4  &&4) \   x^2+3x-4  \\
+&5) \ 6x^2-6x-12  &&6) \ 25x^2+100x+100   \\
+\end{align*}
+
+\subsection*{Opgave 4}
+Skitsér graferne for følgende polynomier og brug din skitse til at afgøre antallet af rødder. Tegn desuden graferne i Maple for at undersøge, om din skitse er korrekt.
+
+\begin{align*}
+&1) \  x^2-1   &&2) \ -10x^2    \\
+&3) \   -2x^2+2x+2  &&4) \  3x^2-x-3   \\
+&5) \ -x^2-10    &&6) \  x^2+2x+7   \\
+\end{align*}
+

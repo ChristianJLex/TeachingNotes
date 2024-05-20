@@ -1,0 +1,65 @@
+\begin{center}
+\Huge
+Kontinuitet og differentiabilitet
+\end{center}
+\section*{Kontinuitet}
+\stepcounter{section}
+
+Vi kan lidt upræcist sige, at en funktion er kontinuert, hvis den kan tegnes uden at løfte blyanten. Da vi kun arbejder med funktioner af en enkelt variabel, kan vi godt give en rimelig præcis definition af, hvad det betyder, at en funktion er kontinuert:
+\begin{defn}
+En funktion $f$ siges at være kontinuert i $x$ hvis 
+\begin{align*}
+\lim_{h\to 0}f(x+h) = f(x).
+\end{align*}
+Hvis en funktion er kontinuert for alle $x\in I$ for et interval $I$, så siges funktionen at være kontinuert på $I$. 
+\end{defn}
+\begin{exa}
+Funktionen $f$ givet ved 
+\begin{align*}
+f(x) = \begin{cases}
+x^2,\ &\textnormal{hvis }x<2,\\
+-2x,\ &\textnormal{hvis }x\geq 2,
+\end{cases}
+\end{align*}
+er kontinuert overalt på nær i $x=2$, da 
+\begin{align*}
+\lim_{h\to 0^+}f(2+h) = f(2) = -4,
+\end{align*}
+men
+\begin{align*}
+\lim_{h\to 0^-} f(2+h) = 2^2 = 4.
+\end{align*}
+\end{exa}
+\section*{Differentiabilitet}
+\stepcounter{section}
+I har tidligere set definitionen af differentiabilitet.
+\begin{defn}
+En funktion $f$ siges at være differentiabel i et punkt $x$, hvis grænsen 
+\begin{align*}
+f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
+\end{align*}
+eksisterer. 
+
+\end{defn}
+
+\section*{Opgave 1}
+
+I følgende opgaver kan de eventuelt være en fordel at plotte funktionen.
+\begin{enumerate}[label=\roman*)]
+\item Bestem grænseværdierne $\lim_{h\to 0^+}\frac{1}{0+h}$ og $\lim_{h \to 0^+}\frac{1}{0-h}$. Er $1/x$ kontinuert i $0$? 
+\item Operatoren $\lfloor x \rfloor$ betyder "rund $x$ ned til nærmeste heltal". Hvor er funktionen $\lfloor x\rfloor +x^2$ kontinuert? Hvor er den ikke kontinuert?
+\item Bestem grænseværdien
+\begin{align*}
+\lim_{h\to 2} = \frac{x^2-4}{(x-2)}.
+\end{align*} 
+
+\end{enumerate}
+
+\section*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+\item Hvorfor er funktionen $f(x) = |x|$ ikke differentiabel i $0$? 
+\item Hvad med funktionen $f(x) = \sqrt{|x|}+7$?
+\item Lav aflevering!
+\end{enumerate}
+

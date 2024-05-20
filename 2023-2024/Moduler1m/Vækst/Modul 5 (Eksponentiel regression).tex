@@ -1,0 +1,104 @@
+\begin{center}
+\Huge
+Eksponentiel regression
+\end{center}
+\stepcounter{section}
+
+\section*{Eksponentiel regression}
+
+Vi har tidligere arbejdet med lineær regression af et datasæt. Dette bruger vi, når vi forventer at datasættet kan beskrives af en sammenhæng af typen
+\begin{align*}
+	f(x) = ax+b.
+\end{align*}
+
+I tilfældet at vi antager, at datasættet kan beskrives ved en sammenhæng af typen 
+\begin{align*}
+	g(x) = b\cdot a^x, 
+\end{align*}
+så skal vi bruge et andet værktøj - eksponentiel regression. 
+
+
+\begin{exa}
+Af Tab. \ref{tab:1} fremgår et datasæt, der beskriver sammenhængen mellem antallet af bakterier i en petriskål og tiden, der er forløbet.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c}
+		$t$ (tid i timer) & 0 & 5 & 10 & 15 & 20 & 25 & 30\\
+		\hline
+		$B$ (Antal bakterier) & 3.99 & 4.71 & 9.63 & 15.13 & 13.77 & 30.84 & 29.20
+	\end{tabular}
+	\caption{Sammenhæng mellem forløbet tid $t$ (i timer) og antal bakterier $B$ (i mia.)}
+	\label{tab:1}
+\end{table}
+
+Vi laver eksponentiel regression i Maple ved at skrive følgende.
+\begin{align*}
+	&\texttt{with(Gym):}\\
+	&\texttt{X:=[0,5,10,15,20,25,30]}\\
+	&\texttt{Y:=[3.99,4.71,9.63,15.13,13.77,30.84,29.20]}\\
+	&\texttt{ExpReg(X,Y)}
+\end{align*}
+
+Resultatet af regressionen kan ses af Figur \ref{fig:regres}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Billeder/EkspReg.jpg}
+	\caption{Eksponentiel regression på datasæt.}
+	\label{fig:regres}
+\end{figure}
+Den eksponentialfunktion $B$, der bedst passer på datasættet er derfor
+\begin{align*}
+	B(t) = 4.0417\cdot 1.0747^t
+\end{align*}
+
+\end{exa}
+
+\subsection*{Opgave 1}
+
+I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2022-2023/Data%20og%20lign/Befolkningsdata.xlsx}{\color{blue!60} dette datasæt} fremgår sammenhængen mellem antallet af personer i en by (i tusinde) fra år 1900 til år 2000.
+
+\begin{enumerate}[label=\roman*)]
+	\item Anvend eksponentiel regression på datasættet, der beskriver antallet af personer i byen.
+	\item Brug din eksponentialregression til at bestemme antallet af personer, der vil være i år 2010 ifølge modellen.
+	\item Afgør, hvornår der vil være 150.000 personer i byen ifølge modellen. 
+\end{enumerate}
+
+
+\subsection*{Opgave 2}
+To biologistuderende har brugt absorbansen af en væske til at måle antallet af bakterier i væsken. De antager, at sammenhængen mellem den forløbne tid (i minutter) og antallet af bakterier (i mia.) kan beskrives ved en eksponentiel sammenhæng. Deres data kan findes \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2022-2023/Data%20og%20lign/Bakteriedata.xlsx}{\color{blue!60} her}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav eksponentiel regression og lineær regression på datasættet.
+	\item Lav en kvalitativ vurdering af de to modeller. Hvilken virker til at være bedst?
+	\item Sammenlign forklaringsgraderne for de to modeller. Hvilken en er bedst? Tror du, at forklaringsgrader kan bruges til at sammenligne forskellige regressionsmodeller?
+	\item Brug din valgte model til at afgøre, hvornår der vil være 1 bio. bakterier i væsken. 
+\end{enumerate}
+
+\subsection*{Opgave 3}
+8 kg af en radioaktiv isotop placeres på en vægt i år 1810 og vægten nedskrives hvert år indtil år 2010. Vægten af isotopen (i kg) sammen med den passerede tid fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2022-2023/Data%20og%20lign/Isotopdata.xlsx}{\color{blue!60} dette datasæt}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav eksponentiel regression på datasættet.
+	\item Hvor meget vil isotopen veje i år 2050 ifølge modellen.
+	\item Hvornår er vægten af isotopen halveret?
+	\item Hvis vi antager, at isotopen er helt væk efter 10 halveringstider, hvornår er isotopen så væk?
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+I en by har man målt antal personer i byen henover en årrække. Befolkningstallet i byen fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data%20og%20lign/befolkningibylogist.xlsx}{\color{blue!60} dette datasæt}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Plot datapunkterne i et koordinatsystem. Ser datasættet eksponentielt ud?
+	\item Lav eksponentiel regression og kommentér på resultatet. 
+\end{enumerate}
+En væksttype, der er eksponentiel i starten, men som flader ud på grund af mangel på plads, føde eller lignende kaldes for \textit{logistisk vækst}. Man kan lave logistisk regression i Maple ved at skrive \texttt{LogistReg}.
+
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{2}
+	\item Lav logistisk regression og kommentér på resultatet. Ser det bedre ud?
+	\item Brug din regression til at afgøre hvor mange mennesker, der vil være efter 110 år.
+	\item Brug din regression til at afgøre, hvornår antallet af mennesker vil overstige 7000.
+	\item Bestem antallet af personer efter 110 år med den eksponentielle regression. 
+	\item Kan du gennemskue, hvad den maksimale grænse er for befolkningen i den logistiske vækst?
+\end{enumerate}

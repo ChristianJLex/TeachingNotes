@@ -1,0 +1,60 @@
+
+\section*{Renteformlen}
+\stepcounter{section}
+
+Som det sidste emne i vækstforløbet skal vi se på opsparing og gæld. Det første vi skal introduceres for er renteformlen.
+\begin{defn}
+Renteformlen er givet ved 
+\begin{align*}
+K_n = K_0\cdot (1+r)^n, 
+\end{align*}
+hvor $K_0$ er startkapitalen, $r$ er rentefoden, $n$ er antal terminer, og $K_n$ er slutkapitalen. 
+\end{defn}
+
+Renteformlen skal forstås som følgende: Vi indsætter startkapital $K_0$ på en konto, der lover os $p$ procent i rente per termin. Dette er eksponentiel vækst (men kun defineret, når $n\in \mathbb{N}$), og vi husker på, at vækstraten $r$ tilsvarede den procentvise stigning per gået enhed. Derfor findes vækstraten som $r = \frac{p}{100}$, og dermed fremskriver vi med $a = r+1$, hver gang der er gået en termin. Vi har altså, at kapitalen $K_1$ efter første termin må være
+\begin{align*}
+K_1 = K_0\cdot (1+\frac{p}{100})   = K_0\cdot (1+r).
+\end{align*}
+Vækstraten kaldes også for \textit{rentefoden}, når vi taler om renteformlen. Tilsvarende vil renten efter $n$ terminer være givet
+\begin{align*}
+K_n = K_0\cdot (1+r)^n.
+\end{align*}
+\begin{exa}
+Vi indsætter 20.000kr på en konto. Dette er vores startkapital. Vi får $p=2\%$ i rente. Rentefoden er derfor givet $r = \frac{2}{100} = 0,02,$ og renteformlen lyder i dette tilfælde
+\begin{align*}
+K_n = 20.000\cdot (1,02)^n.
+\end{align*}
+Skal vi bestemme, hvor meget der står på kontoen efter 10 år, skal vi bestemme 
+\begin{align*}
+K_{10} = 20.000\cdot (1,02)^{10}.
+\end{align*}
+Skal vi bestemme hvornår der står $30.000$ på kontoen skal vi løse ligningen
+\[
+30.000 = 20.000\cdot (1,02)^n,
+\]
+hvilket vi kan gøre ved at bruge $\ln$ eller blot løse ligningen i Maple.
+\end{exa}
+\section*{Opgave 1}
+Bestem definitionsmængde og værdimængde for følgende funktioner
+\begin{align*}
+&1) \ x  &&2) \ \sqrt{x}  \\
+&3) \ 10x^3  &&4) \ \ln(x)  \\
+&5) \  \ln(x^2) &&6) \ x^4   \\
+\end{align*}
+\section*{Opgave 2}
+Funktionen $f(x) = \lceil x \rceil$ runder $x$ op til nærmeste heltal. Hvad er værdimængden og definitionsmængden for $f$?
+
+\section*{Opgave 3}
+Der indsættes 100.000 på en konto med en årlig rente på $3\%$. 
+\begin{enumerate}[label=\roman*)]
+\item Hvad står der på kontoen efter 5 år?
+\item Hvornår står der 110.000 på kontoen?
+\item Hvor længe går der, før pengene på kontoen er fordoblet?
+\item Hvad tilsvarer denne rente til i månedlig rente?
+\end{enumerate}
+\section*{Opgave 4}
+På en konto får du $0\%$ i rente på de første 100.000 kr. og en kvartalsvis rente på $-1\%$ i rente på alt derover. Vi indsætter $200.000$ på kontoen.
+\begin{enumerate}[label=\roman*)]
+\item Hvor meget står der på kontoen efter $10$ år?
+\item Hvornår står der $150.000$ på kontoen?
+\item Hvad er det mindste beløb, der kan stå på kontoen, hvis vi bare efterlader den?

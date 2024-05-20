@@ -1,0 +1,111 @@
+\begin{center}
+\Huge
+Andengradsligninger
+\end{center}
+
+\section*{Hvad er en andengradsligning?}
+\stepcounter{section}
+
+Vi har tidligere set, hvordan man kan udnytte nulreglen og kvadratsætninger til at gætte løsninger til andengradsligninger. Vi vil i dag se, hvordan man mere generelt kan udregne løsninger til andengradsligninger, men vi vil først definere helt præcist hvad en andengradsligning er.
+\begin{defn}[andengradsligning]
+Hvis en ligning med ubekendt variabel $x$ er på formen 
+\begin{align*}
+ax^2+bx+c=0,
+\end{align*}
+hvor $a,b,c\in \mathbb{R}, a\neq 0$, så kalder vi ligningen for en andengradsligning. 
+\end{defn}
+Da andengradspolynomier er funktioner på formen 
+\begin{align*}
+f(x) = ax^2+bx+c, 
+\end{align*}
+så tilsvarer løsningen af en andengradsligning $ax^2+bx+c= 0$ at finde rødderne for andengradspolynomiet $f$.  
+
+\begin{exa}
+Vi har følgende eksempler på andengradsligninger
+\begin{align}
+2x^2+10x+7&=0\label{eq:lig1},\\
+\sqrt{3}x^2+4=0\label{eq:lig2}.
+\end{align}
+I \eqref{eq:lig1} er $a=2,$ $b=10$ og $c=7$. I \eqref{eq:lig2} er $a=\sqrt{3},$ $b=0$ og $c=4$. 
+\end{exa}
+Hvis ligninger kan omskrives til 2.gradsligninger vil vi ofte også kalde dem for andengradsligninger.
+\begin{exa}[Det gyldne snit]
+Løsninger af andengradsligninger er blevet studeret siden før antikken, men det var først i 1600-tallet at algebraiske ligninger (brug af $a,b,c$ til at betegne kendte størrelser og $x,y,z$ til at betegne ubekendte størrelser) blev introduceret. (Formentlig første gang af René Descartes). Tidligere blev andengradsligninger beskrevet med ord som "retoriske ligninger". Et eksempel på dette er det gyldne snit:
+
+Opdel et linjestykke i to stykker, så forholdet mellem det korte og det lange stykke er lig med forholdet mellem det lange stykke og hele linjestykket. Lad desuden det korte stykke have længde $1$. Lad os kalde længden på det lange stykke for $x$ og længden på det korte stykke for $y=1$. Så får vi algebraisk
+\begin{align*}
+ \frac{x}{y} = \frac{x+y}{x} &\Leftrightarrow\\
+ x = \frac{x+1}{x}.
+\end{align*}
+Det er ikke umiddelbart klart, at dette er en andengradsligning, så vi ganger derfor igennem med $x$, og får
+\begin{align*}
+x^2 = x+1\  \Leftrightarrow\ x^2-x-1=0,
+\end{align*}
+som klart er en andengradsligning.
+\end{exa}
+\section*{Løsninger af andengradsligninger}
+En andengradsligning har altid enten $0,$ $1$ eller $2$ løsninger. De kan findes ved brug af følgende sætning.
+\begin{setn}
+Løsningerne til en andengradsligning $ax^2+bx+c=0$ er givet ved formlen
+\begin{align*}
+x = \frac{-b\pm \sqrt{d}}{2a},
+\end{align*}
+hvor diskriminanten $d$ er givet ved
+\begin{align*}
+d=b^2-4ac.
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi ser på ligningen
+\begin{align*}
+ax^2+bx+c = 0.
+\end{align*}
+Vi ganger igennem med $4a$.
+\begin{align*}
+ax^2+bx+c = 0\ &\Leftrightarrow \ 4a^2x^2+4abx+4ac=0.
+\end{align*}
+Vi lægger $d = b^2-4ac$ på begge sider af lighedstegnet:
+\begin{align*}
+4a^2x^2+4abx+4ac=0 \ &\Leftrightarrow \ 4a^2x^2+4abx+4ac + b^2-4ac=b^2-4ac\\
+&\Leftrightarrow 4a^2x^2+4abx+b^2 = d\\
+&\Leftrightarrow (b+2ax)^2 = d.
+\end{align*}
+Vi kan nu isolere $x$ i formlen.
+\begin{align*}
+(b+2ax)^2 = d \ &\Leftrightarrow b+2ax = \pm \sqrt{d}\\
+&\Leftrightarrow 2ax = -b \pm \sqrt{d}\\
+&\Leftrightarrow x = \frac{-b\pm \sqrt{d}}{2a}.
+\end{align*}
+\end{proof}
+Det er klart, at hvis $d>0$, så må $ax^2+bx+c=0$ have to løsninger. Hvis $d=0$, så har ligningen netop én løsning. Og hvis $d<0$, så kan ligningen ingen reelle løsninger have. 
+\begin{exa}
+Vi kan nu løse ligningen $x^2-x-1=0$ fra tidligere eksempel. I denne ligning er $a=1$, $b=-1$, og $c = -1$. Dette indsætter vi i diskriminantformlen og får
+\begin{align*}
+x = \frac{-(-1)\pm \sqrt{(-1)^2-(4\cdot 1 \cdot (-1))}}{2\cdot 1} = \frac{1 \pm\sqrt{5}}{2}.
+\end{align*}
+$x$ skulle tilsvare længden på et linjestykke, og derfor må det være den positive løsning, vi har interesse i. Derfor skal $x$ have længden $$x = \frac{1 +\sqrt{5}}{2}\approx 1.6, $$som er det, der nogle gange kaldes det gyldne snits forhold. 
+\end{exa}
+
+\section*{Opgave 1}
+Omskriv følgende ligninger til formen $ax^2+bx+c = 0$
+\begin{align*}
+&1) \ ax^2+bx = -c   &&2) \  x^2=7  \\
+&3) \ 9-5x=3x^2   &&4) \ x(10+2x)=5   \\
+%&5) \ (x-3)^2 =0  &&6) \  \sqrt{2}x^2+7^2=9   \\
+%&7) \  (x-2)(x-10)=10  &&8) \  (x-\sqrt{2})(x-\sqrt{3})=0  \\
+%&9) \  3x^2=x^2-2  &&10) \ 5x = \frac{1}{2x}+7   \\
+\end{align*}
+\section*{Opgave 2}
+Løs følgende andengradsligninger med diskriminantformlen
+\begin{align*}
+&1) \ x^2+x-5 =0   &&2) \  x^2+8x+16 = 0  \\
+&3) \ x^2-1 = 0  &&4) \ x^2+1=0  \\
+&5) \ 2x+12x-14=0 &&6) \  4x^2-16x+64=0   \\
+&7) \  6x^2=6x+12  &&8) \  x^2=4  \\
+&9) \  \frac{1}{2}x^2 -\frac{7}{2}x=-6  &&10) \ x^4 - 8x^2+16 =0 \textnormal{ Hint: Sæt } y=x^2   \\
+&11) \  x = \frac{4}{x}  && 12) \    x-2 = \frac{15}{x}   
+\end{align*}
+
+
+\section*{Opgave 3}
+Brug diskriminantformlen til at løse andengradsligningerne fra Opgave 1.

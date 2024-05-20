@@ -1,0 +1,94 @@
+
+\section*{Motivation og definition}
+\stepcounter{section}
+
+Har vi en stokastisk variabel $X$, så kunne vi godt tænke os at beskrive det mest sandsynlige udfald af den stokastiske variabel. Betragter vi $1000$ slag med en terning, så vil det gennemsnitlige slag være summen af alle de slåede slag delt med $1000$. Lad os se på et eksempel:
+\begin{exa}
+Vi slår $1000$ gange med en terning og får følgende resultater
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+1 & 2 & 3 & 4 & 5 & 6 \\
+\hline 
+157& 162& 165& 176& 173& 167
+\end{tabular}
+\end{center}
+Vi vil så bestemme det gennemsnitlige slag som
+\[
+\frac{1\cdot 157 + 2\cdot 162 + 3\cdot 165 + 4 \cdot 176 + 5\cdot 173 + 6\cdot 167}{1000} = 3,445.
+\]
+Vi har derfor eksperimentelt bestemt den forventede værdi, når vi slår med en terning. 
+\end{exa}
+Vi vil bruge mere eller mindre det samme princip, når vi definerer \textit{middelværdien for en stokastisk variabel}.
+\begin{defn}[Middelværdi]
+Lad $X$ være en (diskret) stokastisk variabel med billedmængde $\{x_1,x_2,\hdots,x_n\}$ og fordelingsfunktion $P$. Så defineres middelværdien $\mathbb{E}(X)$ for en stokastisk variabel som
+\begin{align*}
+\mathbb{E}(X) = \mu &= x_1 \cdot P(X = x_1) + x_2 \cdot P(X=x_2) + \cdots + x_n \cdot P(X=x_n)\\
+&= \sum_{i=1}^{n} x_i P(X=x_i).
+\end{align*} 
+\end{defn}
+Middelværdien giver os et indblik i, hvad den stokastiske variabel mest sandsynligt antager af værdi, men den siger ikke noget om, hvor meget værdierne, variablen kan antage varierer omkring middelværdien $\mu$. Vi vil definere variansen som den "gennemsnitlige variation fra middelværdien". Derfor ville det give mening at definere variansen som 
+\begin{align*}
+\textnormal{Var} = \mathbb{E}(X-\mu), 
+\end{align*}
+men dette vil tage højde for, at $X-\mu$ nogle gange er negativ og nogle gange er positiv. Vi vil bare gerne vide, hvor langt $X$ ligger fra $\mu$, så derfor definerer vi variansen på følgende vis:
+\begin{defn}[Varians]
+Lad $X$ være en (diskret) stokastisk variabel med billedmængde $\{x_1,x_2,\hdots,x_n\}$ og fordelingsfunktion $P$. Så defineres \textit{Variansen} for $X$ som
+\begin{align*}
+\textnormal{Var}(X) = \sigma^2 &= E[(X-\mu)^2]\\
+&= (x_1-\mu)^2\cdot P(X=x_1) + (x_2-\mu)^2\cdot P(X=x_2)+\cdots + (x_n-\mu)^2 \cdot P(X=x_n)\\
+&= \sum_{i=1}^n (x_i-\mu)^2\cdot P(X=x_i).
+\end{align*}
+Tallet $\sigma = \sqrt{\textnormal{Var}(X)}$ kaldes for spredningen af $X$. 
+\end{defn}
+
+\begin{exa}
+Lad os fortsætte eksemplet med terningekastet. Vi vil bestemme middelværdien $\mathbb{E}(X)$ for den stokastiske variabel $X$, der beskriver et terningekast. Dette bestemmes ifølge definitionen som
+\begin{align*}
+\mathbb{E}(X) = 1\cdot \frac{1}{6} + 2\cdot \frac{1}{6}+3\cdot \frac{1}{6}+4\cdot \frac{1}{6}+5\cdot \frac{1}{6}+6\cdot \frac{1}{6} = \frac{21}{6} = 3,5,
+\end{align*}
+hvilket er tæt på det vi eksperimentelt havde bestemt gennemsnittet til at være. 
+Variansen er så
+\begin{align*}
+\textnormal{Var}(X) &= (1-3,5)^2 \cdot \frac{1}{6} + (2-3,5)^2 \cdot \frac{1}{6} + (3-3,5)^2 \cdot \frac{1}{6}\\
+ &+ (4-3,5)^2 \cdot \frac{1}{6} + (5-3,5)^2 \cdot \frac{1}{6} +(6-3,5)^2 \cdot \frac{1}{6} \approx 2,92
+\end{align*}
+Spredningen er derfor 
+\begin{align*}
+\sigma \approx \sqrt{2,92} \approx 1,71.
+\end{align*}
+Det er svært at give en god fortolkning af spredningen ud over at det er den gennemsnitlige afstand et slag vil have fra middelværdien. 
+\end{exa}
+
+Hvis vi kender sandsynlighedsparametren $p$ og antalsparametren $n$ for en binomialfordelt stokastisk variabel, så er det muligt at bestemme middelværdien og variansen.
+\begin{setn}
+Lad $X$ være en binomialfordelt stokastisk variabel med antalsparameter $n$ og sandsynlighedsparameter $p$. Så er middelværdien $\mu$ og spredningen $\sigma$ for $X$ givet ved
+\begin{align*}
+\mathbb{E}(X) = \mu = n\cdot p,
+\end{align*} 
+og 
+\[
+\sqrt{\textnormal{Var}(X)} = \sigma = \sqrt{n\cdot p\cdot (1-p)}
+\]
+\end{setn}
+
+\section*{Opgave 1}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Slå plat og krone, og lad $X=1$, hvis udfaldet er plat og $X=0$ ellers. Hvad er middelværdien og variansen for $X$?
+\item Slå plat og krone to gange og lad $X$ være antallet af plat. Hvad er middelværdien og variansen af $X$?
+\item Kast en 12-sidet terning og lad $X$ være antallet af øjne. Hvad er middelværdien og variansen af $X$?
+\item Lad $X$ beskrive antallet af piger i en familie på $4$. Hvad er middelværdien og variansen af $X$?
+\end{enumerate}
+
+\section*{Opgave 2}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Lad $X$ være en Bernoulli-fordelt stokastisk variabel med sandsynlighedsparameter $p$. Hvad er middelværdien og variansen af $X$?
+\item Forklar med ord, hvorfor det giver god mening, at middelværdien for en binomialfordelt stokastisk variabel er $n\cdot p$. 
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Et medicinsk præparat helbreder 15$\%$ af behandlede personer. Lad $X$ beskrive antallet af helbredte personer, når vi prøver at helbrede $10000$ personer. Hvad er middelværdien og variansen af $X$?
+\item Vi slår fem gange med en terning, og lader $X$ beskrive antallet af gange, vi slår mere end 4. Hvad er middelværdien og variansen for $X$?
+\end{enumerate}

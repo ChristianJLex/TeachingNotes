@@ -1,0 +1,284 @@
+\begin{center}
+	\Huge
+	Differentialkvotient for vektorfunktioner
+\end{center}
+\section*{Differentiation af vektorfunktioner}
+\stepcounter{section}
+
+Da vi bestemte monotoniforhold for vektorfunktioner udnyttede vi, at vi kunne differentiere koordinatfunktionerne $x$ og $y$ for vektorfunktionen
+\begin{align*}
+	\vv{r}(t) = 
+	\begin{pmatrix}
+		x(t) \\
+		y(t)
+	\end{pmatrix}.
+\end{align*}
+Vi vil definere hvad vi mener med differentialkvotienten for en vektorfunktion lidt mere præcist. Den opfører sig (heldigvist) præcist som vi vil forvente. 
+\begin{defn}[Differentialkvotient for vektorfunktion]
+	Lad $\vv{r}: \mathbb{R} \to \mathbb{R}^2$ være en vektorfunktion.
+	Så er differentialkvotienten for $\vv{r}$ defineret ved grænseværdien
+	\begin{align*}
+		\vv{r}'(t) = \lim_{h\to 0}\frac{\vv{r}(t+h)-\vv{r}(t)}{h},
+	\end{align*}
+	hvis grænsen eksisterer. 	
+\end{defn} 
+Følgende sætning sikrer os i, at differentiation af vektorfunktioner blot er differentiation af koordinatfunktioner. 
+\begin{setn}
+	Lad $\vv{r}(t):\mathbb{R} \to \mathbb{R}^2$ være givet ved
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			x(t) \\
+			y(t)
+		\end{pmatrix},
+	\end{align*}
+	hvor både $x$ og $y$ er differentiable funktioner. Så gælder der, at 
+	\begin{align*}
+		\vv{r}'(t) = 
+		\begin{pmatrix}
+			x'(t) \\
+			y'(t)
+		\end{pmatrix}.
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Vi betragter definitionen af differentialkvotienten for $\vv{r}$:
+	\begin{align*}
+		r'(t) &= \lim_{h\to 0}\frac{\vv{r}(t+h)-\vv{r}(t)}{h}\\
+		&= \lim_{h\to 0 }
+		\frac{
+		\begin{pmatrix}
+			x(t+h) \\
+			y(t+h)
+		\end{pmatrix} -
+		\begin{pmatrix}
+			x(t) \\
+			y(t)
+		\end{pmatrix}
+		}{	
+		h
+		} \\
+		&=
+		\lim_{h\to 0 }
+		\frac{
+		\begin{pmatrix}
+			x(t+h)-x(t) \\
+			y(t+h)-y(t)
+		\end{pmatrix}
+		}{
+		h
+		}
+		\\
+		&=
+		\lim_{h\to 0}
+		\begin{pmatrix}
+			\frac{x(t+h)-x(t)}{h} \\
+			\frac{y(t+h)-y(t)}{h}
+		\end{pmatrix} \\
+		&=
+		\begin{pmatrix}
+			x'(t) \\
+			y'(t)
+		\end{pmatrix},
+	\end{align*}
+	hvor vi i sidste lighed udnytter, at $x$ og $y$ begge er differentiable funktioner.
+\end{proof}
+
+\begin{exa}
+	Differentialkvotienten af vektorfunktionen
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t^2+2t+1 \\
+			\ln(t) + 3e^{2t}
+		\end{pmatrix}
+	\end{align*}
+	er givet ved
+	\begin{align*}
+		\vv{r}'(t) = 
+		\begin{pmatrix}
+			(t^2+2t+1)' \\
+			(\ln(t) + 3e^{2t})'
+		\end{pmatrix} =
+		\begin{pmatrix}
+			2t+2 \\
+			\frac{1}{t} + 6e^{2t}
+		\end{pmatrix}.
+	\end{align*}
+\end{exa}
+
+\section*{Tangentvektorer}
+\stepcounter{section}
+
+Vi vil bruge differentialkvotienten for en vektorfunktion til at definere tangentvektoren til en parameterkurve for en vektorfunktion. 
+\begin{defn}
+	Lad $\vv{r}:\mathbb{R} \to \mathbb{R}^2$ være en vektorfunktion. Så er tangentvektoren til parameterkurven for $\vv{r}$ i punktet $P_t(x(t),y(t))$ givet ved $\vv{r}'(t)$. 
+\end{defn}
+\begin{exa}
+	Betragt vektorfunktionen
+	\begin{align*}
+		\vv{r}(t) =
+		\begin{pmatrix}
+			t^4-2t^2 \\
+			t^3-t
+		\end{pmatrix}
+	\end{align*}
+	Vi ønsker at bestemme en parameterfremstilling for tangentlinjen for parameterkurven for $\vv{r}$ gennem punktet 
+	\begin{align*}
+		P_2(x(2),y(2)) = P_2(2^4-2\cdot 2^2,2^3-2) = P_2(8,6).
+	\end{align*}
+	Tangentvektoren for $\vv{r}$ er givet ved
+	\begin{align*}
+		\vv{r}'(t) =
+		\begin{pmatrix}
+			4t^3-4t \\
+			3t^2-1
+		\end{pmatrix}.
+	\end{align*}
+	Dermed er retningsvektoren for tangenten gennem $P_2$ givet ved
+	\begin{align*}
+		\vv{r}'(2) = 
+		\begin{pmatrix}
+			4\cdot 2^3 - 4\cdot 2 \\
+			3\cdot 2^2-1
+		\end{pmatrix}
+		=
+		\begin{pmatrix}
+			24 \\
+			11
+		\end{pmatrix}.				
+	\end{align*}
+	Da er parameterfremstillingen for tangentlinjen givet ved
+	\begin{align*}
+		\begin{pmatrix}
+			x \\
+			y
+		\end{pmatrix} =
+		\begin{pmatrix}
+			8 \\
+			6
+		\end{pmatrix} +
+		t \begin{pmatrix}
+			24 \\
+			11
+		\end{pmatrix}.
+	\end{align*}
+	
+	Vi kan også bestemme en ligning for tangenten. Da 
+	\begin{align*}
+		\begin{pmatrix}
+			24 \\
+			11
+		\end{pmatrix}
+	\end{align*}
+	er en retningsvektor for tangenten, så vil
+	\begin{align*}
+		\begin{pmatrix}
+			11 \\
+			-24
+		\end{pmatrix}
+	\end{align*}
+	være en normalvektor til tangenten. Derfor er en ligning for tangenten givet ved
+	\begin{align*}
+		11(x-8) -24(y-6) = 0.
+	\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+Bestem den afledede af følgende vektorfunktioner
+\begin{align*}
+	&1) \ \vv{r}(t) = 
+	\begin{pmatrix}
+		6t^2+2t+1\\
+		5t^2+10t
+	\end{pmatrix}	
+	  &&2) \ \vv{r}(t) = 
+	\begin{pmatrix}
+		\ln(t^2)\\
+		4t^4
+	\end{pmatrix}	   \\
+	&3) \ \vv{r}(t) = 
+	\begin{pmatrix}
+		\cos(t) \sin(t)\\
+		\cos(t)
+	\end{pmatrix}	  &&4) \  \vv{r}(t) = 
+	\begin{pmatrix}
+		\sqrt{t}\ln(t)\\
+		\sin(t^4+2t^2)
+	\end{pmatrix}	  \\
+\end{align*}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en parameterfremstilling for tangenten til parameterkurven for
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\ln(t) \\
+			t^2
+		\end{pmatrix}
+	\end{align*}
+	i punktet $P_1$.
+	\item Bestem en parameterfremstilling for tangenten til parameterkurven for
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\frac{1}{3}t^3 - \frac{1}{2}t^2 \\
+			t
+		\end{pmatrix}
+	\end{align*}
+	i punktet $P_4$.
+	\item Bestem en parameterfremstilling for tangenten til parameterkurven
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\cos(t) \\
+			\sin(t)
+		\end{pmatrix}
+	\end{align*}
+	i punktet $P_{\pi}$.
+\end{enumerate}
+
+\section*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en ligning for tangenten til parameterkurven for 
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t(t^2-1) \\
+			2\sqrt{t}
+		\end{pmatrix}
+	\end{align*}
+	i punktet $P_4$.
+	\item Bestem en ligning for tangenten til parameterkurven for 
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\cos(t)\sin(t)
+			1
+		\end{pmatrix}
+	\end{align*}
+	i punktet $P_{\pi/2}$.
+\end{enumerate}
+
+\section*{Opgave 4}
+
+\begin{enumerate}[label=\roman*)]
+	\item Brug definitionen af differentialkvotienten for vektorfunktioner til at bestemme differentialkvotienten for 
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			t^2 \\
+			t^3
+		\end{pmatrix}
+	\end{align*}
+	\item Brug definitionen af differentialkvotienten for vektorfunktioner til at bestemme differentialkvotienten for 
+	\begin{align*}
+		\vv{r}(t) = 
+		\begin{pmatrix}
+			\frac{1}{t} \\
+			4t^2+2t+1
+		\end{pmatrix}
+	\end{align*}
+\end{enumerate}

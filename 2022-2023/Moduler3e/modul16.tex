@@ -1,0 +1,224 @@
+\begin{center}
+\Huge
+Differentialligninger og Eksponentiel vækst
+\end{center}
+
+
+\section*{Modeller}
+\stepcounter{section}
+
+Som tidligere nævnt, så bruges differentialligninger ofte til at modellere virkelige fænomener. Vi skal derfor se på forskellige situationer, hvor vi kan gøre visse antagelser om væksten af en model og ud fra dette løse en differentialligning for at beskrive modellen eksplicit. Vi begynder med tilfældet, at væksten af modellen er konstant eller mere præcist, at der for modellen $y$ gælder, at
+\begin{align*}
+	y' = k.
+\end{align*}
+Vi har tidligere set, hvordan løsningerne for sådanne differentialligninger ser ud, men vi vil nu være mere præcise.
+\begin{setn}
+	Lad en differentiabel funktion $y: \mathbb{R} \to \mathbb{R}$ opfylde, at 
+	\begin{align}\label{eq:diff1}
+		y' = k
+	\end{align}
+	for $k\in \mathbb{R}$. Så gælder der, at
+	\begin{align*}
+		y(x) = kx + c
+	\end{align*}
+	for $c\in \mathbb{R}$ er den fuldstændige løsning for differentialligningen \eqref{eq:diff1}.
+\end{setn}
+\begin{proof}
+	Vi integrerer begge sider af lighedstegnet og får, at 
+	\begin{align*}
+		y(x) = \int y' \intd x = \int k \intd x = kx + c.
+	\end{align*}
+\end{proof}
+
+En mere interessant model er en model, hvor væksten af modellen $y$ er proportional med $y$ eller mere præcist
+\begin{align*}
+	y' = ky.
+\end{align*}
+Vi har tidligere arbejdet med sådanne differentialligninger, men vi skal nu bevise løsningsformlen for denne type differentialligninger. 
+\begin{setn}\label{setn:2}
+	Lad en differentiabel funktion $y:\mathbb{R} \to \mathbb{R}$ opfylde, at
+	\begin{align}\label{eq:diff2}
+		y' = ky
+	\end{align}
+	for $k \in \mathbb{R}$. Så gælder der, at 
+	\begin{align*}
+		y(x) = ce^{kx}
+	\end{align*}
+	for $c\in \mathbb{R}$ er den fuldstændige løsning til differentialligningen \eqref{eq:diff2}.
+\end{setn}
+\begin{proof}
+	Beviset består af to dele - Vi skal vise, at $y(x) = ce^{kx}$ er en løsning, og så skal vi vise, at alle løsninger er på formen $y(x) = ce^{kx}$. Første del er en opgave,
+	og anden del klarer vi her. 
+	Antag derfor, at $y(x)$ er en løsning til $y' = ky$. Vi definerer så en hjælpefunktion
+	\begin{align*}
+		z(x) = y(x)e^{-kx},
+	\end{align*}
+	som vi differentierer.
+	\begin{align*}
+		z'(x) = y'(x)e^{-kx}+y(x)(-k)e^{-kx} = ky(x)e^{-kx}-ke^{-kx}=0.
+	\end{align*}
+	Da $z'(x)=0$, så betyder det, at $z(x) = c$. Derfor ved vi, at
+	\begin{align*}
+		z(x) = y(x)e^{-kx} = c
+	\end{align*}
+	eller 
+	\begin{align*}
+		y(x) = ce^{kx},
+	\end{align*}
+	hvilket var hvad, vi skulle vise. 		 
+\end{proof}
+
+\begin{exa}
+	En differentialligning er givet ved 
+	\begin{align*}
+		y' = 10y.
+	\end{align*}
+	Så er den fuldstændige løsning til differentialligningen givet ved
+	\begin{align*}
+		y(x) = ce^{10x}.
+	\end{align*}
+\end{exa}
+
+Den sidste type differentialligning vi skal se på i dag er den forskudte eksponentielle vækst. Vi antager derfor, at væksten af modellen er lineært aftagende som funktion af modellen - Eller mere præcist
+\begin{align*}
+y' = b-ay.
+\end{align*}
+\begin{setn}\label{setn:3}
+	Lad en differentiabel funktion $y: \mathbb{R} \to \mathbb{R}$ opfylde, at 
+	\begin{align}\label{eq:diff3}
+		y' = b-ay.
+	\end{align}
+	Så er den fuldstændige løsning til \eqref{eq:diff3} givet ved
+	\begin{align*}
+		y(x) = \frac{b}{a} +ce^{-ax}. 
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Beviset består som før af to dele - Vi skal vise, at $y(x) = \frac{b}{a} +ce^{-ax}$ er en løsning samt at enhver løsning vil være på denne form. Igen skal I selv stå for
+	første del af beviset - Vi beviser her anden del.
+	
+	Antag derfor, at $y(x)$ er en løsning til \eqref{eq:diff3}. Vi introducerer så en hjælpefunktion
+	\begin{align*}
+		z(x) = b-ay(x). 
+	\end{align*}
+	Igen differentierer vi hjælpefunktionen. 
+	\begin{align*}
+		z'(x) = -ay'(x) = -a(b-ay(x)) =-az(x). 
+	\end{align*}
+	Da $z' = -az$, så har $z$ ifølge Sætning \ref{setn:2} løsningen
+	\begin{align*}
+		z(x) = \tilde{c}e^{-ax}. 
+	\end{align*}
+	Derfor fås nu
+	\begin{align*}
+		b-ay(x) = \tilde{c}e^{-ax} \ &\Leftrightarrow \ -ay(x) = -b+\tilde{c}e^{-ax}\\
+		&\Leftrightarrow	\ y(x) = \frac{-b}{-a} + \frac{\tilde{c}}{-a}e^{-ax}\\
+		&\Leftrightarrow \ y(x) = \frac{b}{a} + ce^{-ax},
+	\end{align*}
+	hvor $-\tilde{c}/a = c$. 
+\end{proof}
+
+\begin{exa}
+	Vi skal bestemme en partikulær løsning til differentialligningen	
+	\begin{align*}
+		y' = 8-5y,
+	\end{align*}
+	der går gennem punktet $(0,3)$. Ifølge Sætning \ref{setn:3} har differentialligningen den generelle løsning
+	\begin{align*}
+		y(x) = \frac{8}{5} + ce^{-5x}.
+	\end{align*}
+	Vi indsætter nu det kendte punkt:
+	\begin{align*}
+		3=y(0) = \frac{8}{5} + ce^{-5\cdot 0} = \frac{8}{5}+ c. 
+	\end{align*}
+	Vi får derfor, at $c = 7/5$, og den partikulære løsning lyder da
+	\begin{align*}
+		y(x) = \frac{8}{5} + \frac{7}{5}e^{-5x}.
+	\end{align*}
+\end{exa}
+\section*{Opgave 1}
+Vi skal færdiggøre beviserne for Sætningerne \ref{setn:2} og \ref{setn:3}.
+\begin{enumerate}[label=\roman*)]
+	\item Vis, at 
+	\begin{align*}
+		y(x) = ce^{kx}
+	\end{align*}
+	er en løsning til differentialligningen
+	\begin{align*}
+		y' = ky
+	\end{align*}
+	\item Vis, at 
+	\begin{align*}
+		y(x) = \frac{b}{a} + ce^{-ax}
+	\end{align*}
+	er en løsning til differentialigningen 
+	\begin{align*}
+		y' = b-ay.
+	\end{align*}
+\end{enumerate}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' = 1.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		f'(x) = 6.
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		\frac{\intd y}{\intd x} = \ln(8).
+	\end{align*}
+	\item Bestem en partikulær løsning til differentialligningen 
+	\begin{align*}
+		y' = 1,
+	\end{align*}
+	der går gennem punktet $(0,2)$.
+\end{enumerate}
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' = 5y.
+	\end{align*} 
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		f'(x) = -11f(x).
+	\end{align*}
+	\item Bestem en partikulær løsning til differentialligningen
+	\begin{align*}
+		\frac{\intd y}{\intd x} = 6y,
+	\end{align*}
+	der går gennem punktet $(0,4)$
+\end{enumerate}
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en fuldstændig løsning til differentialligningen 
+	\begin{align*}
+		f'(x) = 7-13f(x)
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen 
+	\begin{align*}
+		y'(t) -\ln(6)+\sqrt{2}y(t)=0
+	\end{align*}
+	\item Bestem en partikulær løsning til differentialligningen 
+	\begin{align*}
+		y' = 2-7y,
+	\end{align*}
+	der går gennem punktet $(0,77)$. 
+\end{enumerate}
+
+\section*{Opgave 5}
+	Et objekt med en temperatur på $100^\circ$C stilles i et lokale med en temperatur på $19^\circ$C. Det er oplagt, at temperaturen falder langsomme og langsommere jo nærmere
+	temperaturen kommer på den omkringliggende temperatur. Vi antager, at temperaturfaldets hastighed er proportional med objektets temperatur eller mere præcist, at 
+	temperaturen og temperaturfaldet opfylder differentialligningen
+	\begin{align*}
+		y' = -k(y-19) = -ky+19k.
+	\end{align*}
+	\begin{enumerate}[label=\roman*)]
+		\item Brug Sætning \ref{setn:3} til at bestemme den fuldstændige løsning til differentialligningen. 
+		\item Udnyt, at $y(0) = 100$ til at bestemme konstanten $c$. 
+		\item Udnyt, at temperaturen efter 5 minutter er $80^\circ$C til at bestemme $k$. 
+		\item Opskriv modellen $y(t)$ for temperaturen af objektet. 
+	\end{enumerate}

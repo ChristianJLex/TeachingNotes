@@ -1,0 +1,75 @@
+
+
+\begin{center}
+\Huge
+Regnearternes hierarki
+\end{center}
+\stepcounter{section}
+
+Vi starter med at huske os selv på regnearternes hierarki også kaldet operatorpræcedens, der fortæller os i hvilken rækkefølge, vi skal anvende operatorerne i et givent regnestykke. Altså i hvilken rækkefølge, vi skal lægge sammen, gange, dividere, tage potenser osv. 
+\begin{defn}[Regnearternes hierarki]
+I en udregning anvender vi operatorerne i følgende rækkefølge:
+\begin{enumerate}[label=\roman*)]
+\item Parentes. Betegnes med $()$. (Alt, der står i parentes udregnes først efter rækkefølgen bestemt for de resterende operatorer).
+\item Fakultet. Betegnes med $!$. Vi husker på, at for $n\in \mathbb{N}$ er $n!$ defineret som 
+\begin{align*}
+n! = \begin{cases}
+1 \ &\textnormal{ for }n=0,\\
+n(n-1)(n-2)\cdots 2\cdot 1 \ &\textnormal{ for }n>0.
+\end{cases}
+\end{align*}
+\item Potenser og rødder. Et tal $a$ i $n$'te potens og $n$'te rod betegnes med henholdsvist $a^n$ og $\sqrt[n]{a}$.
+\item Multiplikation og division. Betegnes med henholdsvist $\cdot$ og $/$.
+\item Addition og subtraktion. Betegnes med henholdsvist $+$ og $-$.
+\end{enumerate}
+\end{defn} 
+\begin{exa}
+Lad os betragte regnestykket
+\begin{align}\label{eq:exa1}
+7+10-\underbrace{(5-2\cdot \frac{3}{6}+3!^2)}_{\textnormal{Parentes 1}}+\underbrace{(7-9)}_{\textnormal{Parentes 2}}\cdot 4.
+\end{align}
+Vi starter med at udregne Parentes 1. Vi følger regnearternes hierarki:
+\begin{align*}
+(5-2\cdot \frac{3}{6}+3!^2) &\overset{\textnormal{ii)}}{=} (5-2\cdot \frac{3}{6}+6^2)\\
+							&\overset{\textnormal{iii)}}{=} (5-2\cdot \frac{3}{6}+36)\\
+							&\overset{\textnormal{iv)}}{=} (5-1+36)\\
+							&\overset{\textnormal{v)}}{=} (40).
+\end{align*}
+Og Parentes 2 tilsvarende:
+\begin{align*}
+(7-9) &\overset{\textnormal{v)}}{=} (-2).
+\end{align*}
+Disse indsættes nu i \eqref{eq:exa1}, og vi anvender igen regnearternes hierarki til at udregne:
+\begin{align*}
+7+10+\underbrace{40}_{\textnormal{Par. 1}} + \underbrace{(-2)}_{\textnormal{Par. 2}}\cdot 4 &\overset{\textnormal{iv)}}{=} 7+10+40 -8 \\
+&\overset{\textnormal{v)}}{=} 39.
+\end{align*}
+\end{exa}
+\section*{Opgave 1}
+Udregn følgende regneudtryk. Brug Maple til at undersøge jeres svar. 
+\begin{align*}
+	&1) \ 4(2+7)   &&2) \   \frac{6}{3}\cdot 7+3\frac{10}{2}  \\
+	&3) \ 2!^3   &&4) \  (2+4)^2   \\
+	&5) \  \frac{12}{4} +9 &&6) \  -5^2+9-\frac{14}{7}\cdot(-2)   \\
+	&7) \ (-5)^3+\frac{24}{2+2}    &&8) \  (1+3!)^2   \\
+	&9) \  (2+3)!  &&10) \  \sqrt{3^2+4^2}   \\
+	&11) \ \sqrt{(-6)^2+(-8)^2}   &&12) \  \frac{(1+1+1)!+6^2}{\sqrt{4^2+20}}   \\
+\end{align*}
+
+\section*{Opgave 2}
+Forkort følgende udtryk så meget som muligt.
+\begin{align*}
+	&1) \  (a+a)b  &&2) \  \sqrt{a^2}   \\
+	&3) \  (a-b)a-a^2+ab+c  &&4) \ (\sqrt[7]{a+b})^7    \\
+\end{align*}
+
+
+\section*{Opgave 3}
+Løs følgende ligninger.	
+\begin{align*}
+	&1) \  2x = 4  &&2) \ (-5+2)x+3!x = 2x   \\
+	&3) \  5x+2x = 21  &&4) \ \sqrt{x+2} = 2   \\
+	&5) \  (x-4)! = 24  &&6) \  2^x = 8  \\
+	&7) \  3+4\cdot 2x = 11x  &&8) \ x^2 = 2x   \\
+	&9) \  \frac{x^2}{3} = x  &&10) \  \frac{x+x}{2} = 1  \\	
+\end{align*}

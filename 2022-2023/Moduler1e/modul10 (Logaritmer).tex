@@ -1,0 +1,164 @@
+
+\begin{center}
+\Huge
+Logaritmer
+\end{center}
+\stepcounter{section}
+
+\section*{Titalslogaritmen}
+Har vi en ligning af typen $x^2 = k$, så kan vi bestemme $x$ ved at tage kvadratroden på begge sider af lighedstegnet og bestemme (en af) løsningerne til ligningen. I forbindelse med eksponentiel vækst
+vil vil gerne kunne løse ligninger af typen $10^x = k$ og $e^x=k$  (hvor $e$ betegner Eulers tal, $e \approx 2.71)$. Til dette vil vi introducere logaritmefunktionerne. 
+
+\begin{defn}[Titalslogaritmen]
+	Titalslogaritmen $\log$ er den entydige funktion, der opfylder, at 
+	\begin{align*}
+		\log(10^x) = x
+	\end{align*}
+	og 
+	\begin{align*}
+		10^{\log(x)} = x.
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	Vi har, at 
+	\begin{align*}
+		\log(100) = \log(10^2) = 2.
+	\end{align*}
+\end{exa}
+
+For titalslogaritmen gælder der en række regneregler. 
+\begin{setn}[Logaritmeregneregler]
+	For $a,b>0$ gælder der, at
+	\begin{enumerate}[label=\roman*)]
+		\item $\log(a\cdot b) = \log(a)+ \log(b)$,
+		\item $\log\left(\frac{a}{b}\right) = \log(a)-\log(b)$,
+		\item $\log(a^x) = x\log(a).$
+	\end{enumerate}		
+\end{setn}
+\begin{proof}
+	Vi vil løbende udnytte, at $\log(10^a) = a$ og $10^{\log(a)} = a$. Vi betragter udtrykkene.
+	\\
+	i)
+	\begin{align*}
+		\log(a\cdot b) &= \log(10^{\log(a)}10^{\log(b)}) \\
+		&= \log(10^{\log(a)+\log(b)})\\
+		&\log(a) + \log(b).
+	\end{align*}
+	ii)
+	\begin{align*}
+		\log\left(\frac{a}{b}\right) &= \log\left(\frac{10^a}{10^b}\right)\\
+		&= \log(10^{\log(a)-\log(b)})\\
+		&= \log(a)-\log(b).
+	\end{align*}
+	iii)
+	\begin{align*}
+		\log(a^x) &= \log\left( \left(10^{\log(a)}\right)^x\right)\\
+		&= \log\left(10^{\log(a)x}\right)\\
+		&= x\log(a),
+    \end{align*}		
+    og vi er færdige med beviset. 
+\end{proof}
+Vi vil bevise denne sætning næste gang. 
+
+\begin{exa}
+	Vi ønsker at løse ligningen $10^{x+5} = 1000$. Vi tager derfor logaritmen på begge sider af lighedstegnet:
+	\begin{align*}
+		\log\left(10^{x+5}\right) = \log(1000) \ \Leftrightarrow \ x+5 = \log(1000) = 3 \ \Leftrightarrow	\ x = -2.
+	\end{align*}	 
+\end{exa}
+\begin{exa}
+	Vi ønsker at løse ligningen 
+	\begin{align*}
+		\log(4x) = 4. 
+	\end{align*}
+	Vi opløfter derfor $10$ i begge sider af lighedstegnet.
+	\begin{align*}
+		10^{\log(4x)} = 10^4 \ \Leftrightarrow \ 4x = 10000 \ \Leftrightarrow	\ x = 2500.
+	\end{align*}
+\end{exa}
+
+
+\section*{Den naturlige logaritme}
+\stepcounter{section}
+\begin{defn}
+Den naturlige logaritme er den entydige funktion $\ln$, der opfylder, at
+\begin{align*}
+\ln(e^x) = x, 
+\end{align*}
+og
+\begin{align*}
+e^{\ln(x)} = x,
+\end{align*}
+hvor $e$ er Euler's tal. ($e \approx 2.7182$)
+\end{defn}
+Funktionen $e^x$ kaldes for den naturlige eksponentialfunktion, og vi vil senere beskrive den nærmere.
+
+\begin{setn}[Regneregler for $\ln$]
+For den naturlige logaritme $\ln$ gælder der for $a,b>0$, at
+\begin{enumerate}[label=\roman*)]
+\item $\ln(a\cdot b) = \ln(a) + \ln(b)$,
+\item $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$,
+\item $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+\end{setn}
+
+
+\section*{Opgave 1}
+Løs følgende udtryk
+\begin{align*}
+	&1) \ \log(10^7)    &&2) \ \log(10000)   \\  
+	&3) \ \log(10^{1.5})   &&4) \ \log(10^{\sqrt{2}})     \\  
+	&5) \ \log(10000000)   &&6) \ \log(1)   \\  
+	&7) \  \log(10)  &&8) \ \log(20)+ \log(5)   \\   
+\end{align*}
+
+\section*{Opgave 2}
+Bestem følgende:
+\begin{align*}
+&1) \  \ln(e)  &&2) \  \ln(e^3)    \\
+&3) \  \ln(\sqrt{e})  &&4) \ \ln(\sqrt[5]{e^4})      \\
+\end{align*}
+
+\section*{Opgave 3}
+Bestem følgende 
+\begin{align*}
+&1) \ \log(\sqrt{10})    &&2) \  \log(\sqrt[3]{100})  \\
+&3) \ \log(\sqrt[n]{1000})   &&4) \ \log(2) + \log(50)    \\
+&5) \ \log(200)-\log(20)   &&6) \ \log(2\cdot 10^5)   
+\end{align*}
+
+\section*{Opgave 4}
+Løs følgende ligninger
+\begin{align*}
+&1) \ \ln(x)=1   &&2) \ \ln(x)=0    \\
+&3) \ \ln(3x+7) = 3   &&4) \  \ln(x^2) = e^4   \\
+\end{align*}
+
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item Løs ligningen
+	\begin{align*}
+		10^x = 100.
+	\end{align*}
+	\item Løs ligningen 
+	\begin{align*}
+		10^{x^2} = 10000.
+	\end{align*}
+	\item Løs ligningen 
+	\begin{align*}
+		10^{5x+9} = 10
+	\end{align*}
+	\item Løs ligningen 
+	\begin{align*}
+		10^{\sqrt{x}} = 1000
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 6}
+\begin{enumerate}[label=\roman*)]
+\item Bevis, at  $\ln(ab) = \ln(a)+\ln(b).$
+\item Bevis, at  $\ln(\frac{a}{b}) = \ln(a)-\ln(b)$.
+\item Bevis, at  $\ln(a^x) = x\ln(a)$.
+\end{enumerate}
+(Vink: Brug beviset for regnereglerne for titalslogaritmen som skabelon.)

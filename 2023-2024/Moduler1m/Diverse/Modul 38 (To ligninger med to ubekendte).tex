@@ -1,0 +1,157 @@
+\begin{center}
+\Huge
+To ligning med to ubekendte
+\end{center}
+
+\section*{To ligninger med to ubekendte}
+\stepcounter{section}
+
+Vi har i grundforløbet arbejdet ganske kort med at løse to ligninger med to ubekendte i særligt 
+lette tilfælde. Dette kunne være to ligninger i stil med
+\begin{align*}
+	y &= 2x+5 \\
+	y &= -3x+15. 
+\end{align*}
+Vi løste disse ligninger ved at sætte dem lig hinanden og løse ligningen for $x$. 
+\begin{align*}
+	2x + 5 = -3x + 15 & \Leftrightarrow 5x = 5,
+\end{align*}
+så løsningen for $x$ er $x = 2$. Vi indsætter nu dette i én af de oprindelige ligninger.
+\begin{align*}
+	y = 2x + 5 \Leftrightarrow y = 2\cdot 2 + 5 = 9,
+\end{align*}
+så løsningen på ligningssystemet er $x = 2, y = 9$, hvilket også tilsvarer de to linjers skæringspunkt. 
+
+Vi skal nu se på, hvordan vi løser to ligninger med to ubekendte, når vi får ligninger, der ikke med det samme kan sættes lig hinanden. 
+
+Lad os se på et par eksempler:
+\begin{exa}[Lige store koefficienters metode]
+	Vi har to ligninger
+	\begin{align}
+		2x+3y &= -4, \nonumber \\
+		4x+8y &= 8.\label{eq:ligning2}
+	\end{align}
+	Der er to umiddelbare fremgangsmetoder, når man har sådan et ligningssystem. Den første
+	vi skal se på er lige store koefficienters metode. Vi ganger \eqref{eq:ligning2} igennem
+	med $2$ og får systemet
+	\begin{align*}
+		2x+3y &= -8,\\
+		4x+8y &= 8.
+	\end{align*}	
+	Vi kan nu trække de to ligninger fra hinanden og få
+	\begin{align*}
+		4x+6y-(4x+8y) = -8-8 \ &\Leftrightarrow\\
+		6y-8y=-16 &\Leftrightarrow\\
+		-2y=-16 &\Leftrightarrow \\
+		y = 8
+	\end{align*}
+	Dette kan vi så stoppe ind i en af de oprindelige ligninger og få 
+	\begin{align*}
+		2x+3\cdot 8 =-4 \ &\Leftrightarrow\\
+		2x + 24 = -4 &\Leftrightarrow\\
+		2x = -28 &\Leftrightarrow\\
+		x = -14,
+	\end{align*}
+	og en løsning på ligningssystemet er derfor $(x,y) = (-14,8)$.
+	\end{exa}
+\begin{exa}[Substitutionsmetoden]
+Vi betragter igen ligningssystemet
+\begin{align}
+2x+3y &= -4\label{eq:ligning1},\\
+4x+8y &= 8\label{eq:ligning22}.
+\end{align}
+I substitutionsmetoden isolerer vi enten $x$ eller $y$ i en af ligningerne. Lad os isolere $x$ i \eqref{eq:ligning22}:
+\begin{align*}
+4x + 8y = 8 \ &\Leftrightarrow\\
+4x = 8-8y &\Leftrightarrow\\
+x = 2 - 2y.
+\end{align*}
+Dette sættes nu ind i \eqref{eq:ligning1}:
+\begin{align*}
+2x + 3y = -4 &\Leftrightarrow\\
+2(2-2y) + 3y = -4 &\Leftrightarrow\\
+4-4y +3y = -4 &\Leftrightarrow\\
+4-y = -4 &\Leftrightarrow\\
+-y = -8 &\Leftrightarrow\\
+y = 8
+\end{align*}
+Vi kan nu stoppe $y=8$ ind i udtrykket $x = 2-2y$ og vi får
+\begin{align*}
+x = 2-2\cdot 8 = 2-16 = -14
+\end{align*}
+Og vi er igen kommet frem til løsningen for ligningssystemet $(x,y) = (-14,8)$.
+\end{exa}
+\begin{exa}
+	Skal vi løse ligningssystemet i Maple skal vi skrive følgende:
+	\begin{align*}
+		&\texttt{with(Gym):}\\
+		&\texttt{solve([2x+3y = -4,4x+8y = 8],[x,y])}
+	\end{align*}
+	Dette giver også løsningen $(x = -14, y = 8)$.
+\end{exa}
+\section*{Nulreglen}
+\stepcounter{section}
+Vi skal i dag bruge kvadratsætningerne i forbindelse med nulreglen. 
+\begin{setn}[Nulreglen]
+Hvis $ab = 0$ for to tal $a$ og $b$, så medfører det, at enten $a=0$ eller $b=0$. 
+\end{setn}
+Vi vil ofte anvende nulreglen sammen med kvadratsætninger for hurtigt at løse 2.gradsligninger. 
+\begin{exa}
+	Andengradsligningen $(x-3)(x+2) = 0$ må have løsningerne $x = 3$ og $x = -2$, da disse hver
+	i sær er løsninger til faktorernes ligning $x-3 = 0$ og $x+2 = 0$ henholdsvist.  
+\end{exa}
+\section*{Opgave 1}
+Løs følgende ligningssystemer ved brug af både substitution og lige store koefficienters metode.
+\begin{enumerate}[label=\roman*)]
+\item \begin{align*}
+x+y&=0,\\
+-3x+6y&=0.
+\end{align*}
+\item 
+\begin{align*}
+2x-10y&=2,\\
+-x+6y&=3.
+\end{align*}
+\item
+\begin{align*}
+1x-2y&=3,\\
+4x-5y&=6.
+\end{align*}
+\item
+\begin{align*}
+4x-6y&=8,\\
+5x-2y&=10.
+\end{align*}
+\item 
+\begin{align*}
+2x+4y&=8,\\
+3x-9y&=27.
+\end{align*}
+\item 
+\begin{align*}
+	-7x -4y &= 4 \\
+	3x + 6y &= 9
+\end{align*}
+
+\item Brug lige store koefficienters metode til at løse følgende.
+\begin{align*}
+x+y+z&=0,\\
+x-y+2z&=0,\\
+2x-2y+8z&=0.
+\end{align*}
+\end{enumerate}
+\subsection*{Opgave 2}
+Brug nulreglen til at løse følgende ligninger.
+\begin{align*}
+	&1) \ (x-3)(x-5) = 0  &&2) \ 4(x-3)2(x-6) = 0   \\
+	&3) \ x(x+5) = 0  &&4) (x^2-4)(x+4) = 0  
+\end{align*}
+
+\subsection*{Opgave 3}
+Brug kvadratsætningen $(a+b)^2 = a^2+b^2+2ab$ samt nulreglen til at løse følgende ligninger.
+
+
+\begin{align*}
+&1) \ x^2+4x+4 = 0   &&2) \ x^2+8x+16 = 0  \\
+&3) \ x^2+6x + 9= 0  &&4) \ 4x^2-32x+64=0     
+\end{align*}

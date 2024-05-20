@@ -1,0 +1,40 @@
+\begin{center}
+\Huge
+Bestemte integraler
+\end{center}
+\stepcounter{section}
+Vi starter med en variant af analysens fundamentalsætning, der relaterer arealer under grafer og differentiation.
+\begin{setn}
+For en kontinuert, ikke-negativ funktion $f$ er arealet afgrænset af $x$-aksen, to punkter $a$ og $b$ og grafen for $f$ givet ved
+\begin{align*}
+\int_a^bf(x)\intd x.
+\end{align*} 
+\end{setn}
+\begin{proof}
+Vi betegner arealet mellem $f$, på intervallet $[a,x]$ og $x$-aksen med $A_a(x)$. For et lille $h$ har vi så, at 
+\begin{align*}
+A_a(x+h)-A_a(x) = f(x)\cdot h + O(h), 
+\end{align*}
+hvor $O(h)$ er en lille fejl, der afhænger af størrelsen på $h$. Vi skal se, at denne fejl går mod $0$, når $h$ er kontinuert. Vi isolerer $f(x)$ i dette udtryk og får
+\begin{align}\label{eq:fasarea}
+f(x) = \frac{A_a(x+h)-A_a(x)}{h} + \frac{O(h)}{h}.
+\end{align}
+Vi kan vurdere $O(h)$ opadtil ved $O(h) \leq h\cdot f(x+h_{\textnormal{max}})-h\cdot f(x+h_{\textnormal{min}})$, hvor $h_{\textnormal{max}}$ og $h_{\textnormal{min}}$ er de punkter på intervallet $[x,x+h]$ hvor $f$ tager sit maksimum hhv. minimum. Vi vil gerne lade $h$ gå mod $0$ i udtrykket \eqref{eq:fasarea}. Derfor ser vi på, hvad der sker med $\frac{O(h)}{h}$ for $h\to 0$. Vi bruger vurderingen
+\begin{align*}
+\frac{O(h)}{h} &\leq  \frac{ h\cdot f(x+h_{\textnormal{max}})-h\cdot f(x+h_{\textnormal{min}})}{h}\\ 
+&= f(x+h_{\textnormal{max}})-\cdot f(x+h_{\textnormal{min}}).
+\end{align*}
+Når vi lader $h\to 0$, så går $f(x+h_{\textnormal{max}})-\cdot f(x+h_{\textnormal{min}})$ klart mod $0$, og derfor så må $O(h)$ gå mod 0, da $O(h)\geq 0$. Derfor har vi, at 
+\begin{align*}
+f(x) &= \frac{A_a(x+h)-A_a(x)}{h} + \frac{O(h)}{h} \overset{h\rightarrow 0}{\longrightarrow} f(x)=A_a'(x)
+\end{align*}
+
+Vi har derfor, at arealfunktionen $A_a(x)$ er en stamfunktion til $f(x)$. Vi bruger den i definitionen af det bestemte integral.
+\begin{align*}
+\int_a^bf(x) \intd x = A_a(b)-A_a(a) = A_a(b),
+\end{align*}
+hvilket afslutter vores bevis.
+\end{proof}
+
+\section*{Opgave 1}
+Gennemgå bevis for sætning i fællesskab.

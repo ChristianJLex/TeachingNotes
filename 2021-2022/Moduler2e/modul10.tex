@@ -1,0 +1,71 @@
+
+\begin{center}
+\Huge
+Arealer under grafer
+\end{center}
+
+\section*{Approksimér areal under graf}
+\stepcounter{section}
+
+At bestemme arealer under grafer virker ikke umiddelbart relateret til at finde stamfunktioner, men vi vil snart se, hvordan disse koncepter relaterer. Først skal vi dog se på, hvordan vi kan approksimere arealer under grafer. Idéen er at bestemme arealer af firkanter der som bekendt har areal \textit{bredde} $\cdot$ \textit{højde}.
+\begin{exa}
+Vi vil gerne tilnærme arealet under grafen for funktionen $f(x) = x^3-3x^2+x + 4$ mellem $x = 0$ og $x=3$. Dette gør vi ved at bestemme midtpunktet mellem $0$ og $3$ og så bestemme funktionsværdien for $f$ der. Midtpunktet er $1.5$ og funktionsværdien er $2.125$. Vi kan derfor approksimere arealet under grafen for $f$ mellem 0 og 3 som $1.5\cdot 2.125=3.18325$
+Dette kan ses på Fig. \ref{fig:f1ap1}, hvor der også kan ses approksimerede arealer, hvis vi deler intervallet op i 2, 3 og 4 bidder. 
+\begin{figure}[H]
+\begin{tikzpicture}[scale = 0.8]
+\begin{axis}[ axis lines = middle,
+ xmin = -1.5,xmax = 4,
+ ymin = -1.5, ymax = 6]
+\addplot[color = blue!40,samples = 200,thick] {x^3-3*x^2+x+4};
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:0,0) rectangle (axis cs:3,2.125);
+\draw[ decorate, decoration = {brace,mirror,amplitude =5pt}] (axis cs: 0,-0.7) -- (axis cs:3,-0.7);
+\node at (axis cs:1.5,-1.2) {3};
+\draw[decorate, decoration = {brace,mirror, amplitude = 5pt}] (axis cs: 3.1,0) -- (axis cs:3.1,2.125);
+\node at (axis cs:3.6,1.0675) {2.125};
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}[scale = 0.8]
+\begin{axis}[ axis lines = middle,
+ xmin = -1.5,xmax = 4,
+ ymin = -1.5, ymax = 6]
+\addplot[color = blue!40,samples = 200,thick] {x^3-3*x^2+x+4};
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:0,0) rectangle (axis cs:1.5,3.48438);
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:1.5,0) rectangle (axis cs:3,2.45313);
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale = 0.8]
+\begin{axis}[ axis lines = middle,
+ xmin = -1.5,xmax = 4,
+ ymin = -1.5, ymax = 6]
+\addplot[color = blue!40,samples = 200,thick] {x^3-3*x^2+x+4};
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:0,0) rectangle (axis cs:1,3.875);
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:1,0) rectangle (axis cs:2,2.125);
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:2,0) rectangle (axis cs:3,3.375);
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}[scale = 0.8]
+\begin{axis}[ axis lines = middle,
+ xmin = -1.5,xmax = 4,
+ ymin = -1.5, ymax = 6]
+\addplot[color = blue!40,samples = 200,thick] {x^3-3*x^2+x+4};
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:0,0) rectangle (axis cs:0.75,4.00586);
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:0.75,0) rectangle (axis cs:1.5,2.75195);
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:1.5,0) rectangle (axis cs:2.25,1.91992);
+\draw[pattern = north east lines, pattern color = blue!20, draw = gray,very thin,dashed] (axis cs:2.25,0) rectangle (axis cs:3,4.04102);
+\end{axis}
+\end{tikzpicture}
+\caption{Approksimation af areal under graf for $f$ ved kvadratur, når vi deler interval op i 1,2,3 og 4.}
+\label{
+fig:f1ap1}
+\end{figure}
+\end{exa}
+
+\section*{Opgave 1}
+I følgende opgaver kan det være en fordel at starte med at tegne grafen for funktionen i Maple og så lave en skitse i hånden af det areal, du skal bestemme. 
+\begin{enumerate}[label=\roman*)]
+\item Approksimér arealet under grafen af funktionen $x^2$ fra $-2$ til 2 ved at dele intervallet $[-2,2]$ op i 1, 2, 3 og 4 dele. Det korrekte areal er $\frac{16}{3}$. Hvilken approksimation er bedst?
+\item Approksimér arealet under grafen af funktionen $x^3+3$ fra $0$ til 3 ved at dele intervallet $[0,3]$ op i 1, 2, 3 og 4 dele. Det korrekte areal er $29.25$. Hvilken approksimation er bedst?
+\item Approksimér arealet under grafen af funktionen $2x+4$ fra $0$ til 3 ved at dele intervallet $[0,3]$ op i 1, 2, 3 og 4 dele. Det korrekte areal er $21$. Hvilken approksimation er bedst? Er der forskel? Prøv at tegne situationen.
+\item Approksimér arealet under grafen af funktionen $x^4$ fra $-2$ til 2 ved at dele intervallet $[-2,2]$ op i 1, 2, 3 og 4 dele. Det korrekte areal er $12.8$. Hvilken approksimation er bedst?
+\end{enumerate}

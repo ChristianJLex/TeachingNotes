@@ -1,0 +1,151 @@
+%Preamble
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{esvect}
+\usepackage{xfp}
+\usepackage{xparse}
+\usepackage{array}
+\usepackage{changepage}
+\usepackage{pdfpages}
+\usepackage[parfill]{parskip}
+\usepackage{anyfontsize}
+\usepackage{alphalph}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{matlab-prettifier}
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage[margin=1.35in]{geometry}
+\usepackage{float}
+\usepackage[danish]{babel}
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usetikzlibrary{patterns}
+\usepackage{csquotes}
+\usepackage{pdfpages}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{pgfplots}
+%Ændre følgende, hvis du vil have en anden bredde på pgfplots
+\pgfplotsset{width=10cm,compat = 1.9}
+
+
+
+
+\usepackage{caption}
+\usepackage{subcaption}
+\makeatletter
+% \def\@seccntformat#1{%
+%   \expandafter\ifx\csname c@#1\endcsname\c@section\else
+%   \csname the#1\endcsname\quad
+%   \fi}
+ \makeatother
+\counterwithin*{equation}{section}
+\numberwithin{equation}{section}
+
+
+
+\newtheorem{setn}{Sætning}[section]
+\newtheorem{prop}[setn]{Proposition}
+\newtheorem{lem}[setn]{Lemma}
+\newtheorem{cor}[setn]{Korollar}
+
+\newcommand\Tr{\textnormal{Tr}}
+\newcommand\N{\textnormal{N}}
+\newcommand{\suco}[2]{\left.#1\right|_{\mathbb{F}_{#2}}}
+\renewcommand\qedsymbol{$\blacksquare$}
+\theoremstyle{definition}
+\newtheorem{defn}[setn]{Definition}
+\newtheorem{exa}[setn]{Eksempel}
+\newtheorem{regel}[setn]{Regel}
+\newcommand\Ker{\textnormal{Ker}\hspace{0.5mm}}
+\renewcommand\Im{\textnormal{Im}\hspace{0.5mm}}
+
+
+\usepackage{graphicx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{biblio.bib}
+
+\renewcommand{\mod}[1]{\ (\textnormal{mod }{#1})}
+\usepackage{hyperref, bookmark}
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage[nottoc,numbib]{tocbibind} 
+\usepackage{multirow,bigdelim}
+
+\renewcommand{\arraystretch}{1.3}
+\newcommand\intd{\textnormal{d}}
+
+
+
+
+
+\newenvironment{opgavetekst}[1]
+{
+	\begin{minipage}[t]{0.15\textwidth}
+	 	\textbf{ #1}
+	\end{minipage}
+	\begin{minipage}[t]{0.85\textwidth}
+		\rule{\textwidth}{0.3mm} \\
+}
+{ 
+\\	\end{minipage}
+}
+
+\newenvironment{meretekst}
+{
+	\begin{minipage}[t]{0.15\textwidth}
+	 	\phantom{h}
+	\end{minipage}
+	\begin{minipage}[t]{0.85\textwidth}
+}
+{ 
+\\	\end{minipage}
+}
+
+\newenvironment{delopgave}[2]
+{
+	\begin{minipage}[t]{0.15\textwidth}
+		\hspace{0.3cm} #1
+	\end{minipage}
+	\begin{minipage}[t]{0.85\textwidth}
+	\begin{minipage}[t]{0.3cm}
+		\symbol{\numexpr96+ #2})
+	\end{minipage}
+	\begin{minipage}[t]{\textwidth -0.3cm} \ 
+}{
+\end{minipage}
+\phantom{h}\\
+\end{minipage}
+}
+
+
+%\newcommand{opgavelinje}[1]{
+%\begin{minipage}[t]{0.15\textwidth}
+%\textbf{#1}
+%\end{minipage} 
+%\begin{minipage}[t]{\textwidth}
+%\rule{0.81\textwidth}{0.3mm}
+%\end{minipage}
+%}
+
+
+
+
+%Farver!
+\definecolor{NorregGroen}{RGB}{0,105,78}
+
+

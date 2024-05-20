@@ -1,0 +1,117 @@
+\begin{center}
+\Huge
+Sandsynlighedsregning
+\end{center}
+\section*{Grundlæggende sandsynlighedsbegreber}
+\stepcounter{section}
+I sandsynlighedsregning beskæftiger vi os med matematikken bag tilfældighed. Vi vil ikke gøre os mange overvejelser om, hvad tilfældighed betyder, men vi kan betragte tilfældighed som noget, der er introduceret, hver gang vi ikke kan forudse et givet udfald af en situation med sikkerhed. Sandsynlighed kan vi også beskrive med mere uformelle betragtninger, men vi vil gerne gøre det mere præcist.
+
+Enhver situation, hvor vi har tilfældighed introduceret vil vi kalde for et \textit{stokastisk eksperiment}. Et eksempel på et stokastisk eksperiment kan være at kaste en mønt og observere, om der slås plat eller krone. Et andet eksperiment kan være at slå en terning og observere udfaldet af terningekastet. 
+\begin{defn}
+Givet et stokastisk eksperiment kalder vi mængden af mulige udfald af eksperimentet for \textit{udfaldsrummet}, og vi betegner det med $U$.
+\end{defn}
+\begin{exa}
+Slår vi med en terning, så er vores udfaldrum $U_1=\{1,2,3,4,5,6\}$, og kaster vi en mønt, så er vores udfaldsrum $U_2 = \{P,K\}$. 
+\end{exa}
+Vi ønsker også at kunne sige noget om sandsynligheden af mere end et enkelt udfald. Til dette vil vi definere hændelser.
+\begin{defn}
+En delmængde $A\subseteq U$ af udfaldsrummet kaldes for en \textit{hændelse}. 
+\end{defn}
+\begin{exa}
+At slå et lige tal med en terning tilsvarer en hændelse $A = \{2,4,6\}\subseteq \{1,2,3,4,5,6\}$. At slå enten plat eller krone med en mønt tilsvarer en hændelse $\{P,K\}\subseteq \{P,K\}.$ 
+\end{exa}
+
+Vi vil definere en sandsynlighedsfunktion $P$, der fortæller, hvad sandsynligheden for en given hændelse er.
+\begin{defn}
+Vi definerer en sandsynlighedsfunktion $P$, der for alle hændelser $A,B, A\cap B = \emptyset$ opfylder følgende:
+\begin{enumerate}[label=\roman*)]
+\item $P(U)=1$.
+\item $P(\emptyset) = 0$.
+\item $0 \leq P(A) \leq 1$.
+\item $P(A \cup B) = P(A) + P(B)$.
+\end{enumerate}
+\end{defn}
+\begin{exa}
+Alle udfald af et terningekast har sandsynlighed $1/6$. Har vi en hændelse $A= \{1,3\}$ og en hændelse $B= \{2,4,5\}$, så vil vi have sandsynligheden
+\begin{align*}
+P(A) = P(\{1\}) + P(\{2\}) =  \frac{1}{6} + \frac{1}{6} = \frac{1}{3}.
+\end{align*}
+Tilsvarende er $P(B) = 1/2$, og derfor siden $A \cap B = \emptyset$, så får vi, at
+\begin{align*}
+P(A)+P(B) = 1/3+1/2 = 5/6.
+\end{align*}
+Hændelsen $A^C=\{2,4,5,6\}$ betegner sandsynligheden for ikke hændelsen $A$, og den bestemmes som
+\begin{align*}
+P(A^C) = 1-P(A) = \frac{2}{3}.
+\end{align*}  
+\end{exa}
+\section*{Sandsynlighedsfordeling}
+\stepcounter{section}
+
+Sandsynlighederne for udfaldene af et stokastisk eksperiment kaldes for en \textit{sandsynlighedsfordeling} eller et \textit{sandsynlighedsfelt}, og hvis alle udfald er lige sandsynlige, så siger vi, at sandsynlighedsfordelingen er \textit{symmetrisk} eller \textit{uniform}.
+\begin{setn}
+I et udfaldsrum med uniform sandsynlighedsfordeling bestemmes sandsynligheden for en hændelse $A$ som
+\begin{align*}
+P(A) = \frac{\# \textit{ønskede udfald}}{\# \textit{mulige udfald}}.
+\end{align*}
+\end{setn}
+\begin{exa}
+Hvis vi kaster en mønt to gange og ved, at vi har slået mindst en krone, hvad er så sandsynligheden for, at vi har slået to kroner?
+Udfaldsrummet for to kast er $\{KK,KP,PK,PP\}$, men $\{PP\}$ er ikke en mulighed, da vi ved, at vi har slået en krone. Derfor er de mulige udfald $A=\{KP,PK,KK\}$, og det ønskede udfald er $\{KK\}$, så sandsynligheden er $1/3$. 
+\end{exa}
+
+\section*{Opgave 1}
+Bestem sandsynligheden for følgende udfald:
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at slå et lige tal med en terning?
+\item Hvad er sandsynligheden for at slå et ulige tal med en terning?
+\item Hvad er sandsynligheden for at slå et primtal med en terning? Hvad med to terninger, hvis vi lægger antallet af øjne sammen?
+\item Hvad er sandsynligheden for at trække en rød bold fra en pose med tre røde bolde og fire blå bolde? Hvad med en blå bold?
+
+\end{enumerate}
+\section*{Opgave 2}
+Giv passende udfaldsrum for følgende eksperimenter:
+\begin{enumerate}[label=\roman*)]
+\item Kast en mønt to gange og observér, om der er slået plat eller krone. 
+\item Slå med en terning to gange og læg tallene sammen. Hvad med tre gange?
+\item To heltal mellem $0$ og $5$ udvælges tilfældigt, og de opskrives i voksende rækkefølge.
+\item En terning kastes fem gange og antallet af seksere nedskrives.
+\end{enumerate}
+\section*{Opgave 3}
+For udfaldsrum $U$ og hændelser $A,B\subseteq U$ gælder der, at 
+\begin{enumerate}[label=\roman*)]
+\item $P(A^C) = 1-P(A)$.
+\item $P(A \backslash B) = P(A) - P(A\cap B)$.
+\item $P(A\cup B) = P(A)+P(B)-P(A\cap B)$.
+\item $A\subseteq B \Rightarrow P(A)\leq P(B).$ 
+\end{enumerate}
+Brug Venn-diagrammer til at overbevise dig om, at i) til iv) er sande.
+
+\section*{Opgave 4}
+Bestem sandsynligheden for følgende udfald:
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for at trække en spar i et kortspil?
+	\item Hvad er sandsynligheden for at trække et billedkort i et kortspil?
+	\item Hvad er sandsynligheden for at trække et kort med et lige tal?
+	\item Hvad er sandsynligheden for enten at trække en toer, treer eller fire, eller at trække et rødt kort?
+	\item Hvad er sandsynligheden for at trække spar es eller klør to?
+\end{enumerate}
+
+\section*{Opgave 5}
+Hvilke eksperimenter har udfaldsrum med symmetrisk fordeling?
+\begin{enumerate}[label=\roman*)]
+\item Jeg kaster med en mønt.
+\item Jeg slår med en terning.
+\item Jeg slår med en terning to gange og nedskriver udfaldet.
+\item Jeg slår med en terning to gange og lægger resultatet sammen.
+\item Jeg kaster en mønt 5 gange og tæller antallet af plat.
+\item Jeg vælger en tilfældig ugedag og spørger en tilfældig person, om vedkommende er på arbejde i dag. 
+\end{enumerate}
+\section*{Opgave 6}
+\begin{enumerate}[label=\roman*)]
+\item Hvis sandsynligheden for regn er $1/2$ lørdag og $1/2$ søndag, hvad er så sandsynligheden for, at det regner i løbet af weekenden, givet at de to udfald er uafhængige?
+\item Hvis jeg kaster en mønt to gange, hvad er så sandsynligheden for at få mindst en plat? Hvad med præcist en plat.
+\item Hvis jeg slår med en terning to gange og lægger resultatet sammen, hvad er så sandsynligheden for at resultatet er $2$? Hvad med $3$?
+\item Hvad er sandsynligheden for at en tilfældig familie med tre børn har netop en datter?
+\item Hvad er sandsynligheden for at en tilfældig valgt pige med to søskende ikke har søstre?
+\end{enumerate}

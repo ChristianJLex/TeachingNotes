@@ -1,0 +1,95 @@
+
+\begin{center}
+\Huge
+Integralregning
+\end{center}
+Vi vil begynde på et nyt emne: \textit{Integralregning}. Motivationen for differentialregning så vi i starten at være bestemmelse af øjeblikkelig ændring af en funktion. Motivationen for integralregning er at bestemme arealet under funktioner. Det vil vise sig at være tæt relateret til differentialregning. Først skal vi introducere begrebet \textit{stamfunktioner}.
+\section*{Stamfunktioner og ubestemte integraler}
+\stepcounter{section}
+Hvis vi differentierer en differentiabel funktion $f$, så kan vi spørge os selv, om vi kan gå den anden vej - givet et funktion $f'$, kan vi så bestemme $f$? Dette kan vi godt op til konstantled. 
+\begin{defn}[Stamfunktion]
+En differentiabel funktion $F$ kaldes en stamfunktion til en funktion $f$, hvis det gælder, at 
+\begin{align*}
+F'(x) = f(x).
+\end{align*}
+\end{defn}
+Hvis vi vil finde en stamfunktion $F$ til en funktion $f$, så siger vi, at vi integrerer $f$ eller bestemmer det ubestemte integrale af $f$. Mere præcist har vi følgende definition.
+\begin{defn}[Ubestemt integrale]
+Det ubestemte integrale af en funktion $f$ noteres som
+\begin{align*}
+\int f(x) \text{d}x,
+\end{align*}
+og defineres som en stamfunktion til $f$. Altså, har vi, at 
+\begin{align*}
+\left(\int f(x)\text{d}x\right)' = f(x).
+\end{align*}
+\end{defn} 
+Hvis en funktion $F$ er en stamfunktion til $f$, så vil $F+k$ for $k\in \mathbb{R}$ også være en stamfunktion til $f$ i det, at 
+\begin{align*}
+(F(x)+k)' = F'(x) = f(x).
+\end{align*}
+Der er altså uendeligt mange stamfunktioner til en funktion. Dette er et specialtilfælde af følgende sætning.
+\begin{setn}
+Lad $F_1$ og $F_2$ være stamfunktioner til en funktion $f$. Så afviger $F_1$ og $F_2$ højst med en konstant. Mere præcist gælder der, at 
+\begin{align*}
+F_1-F_2 = k.
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi differentierer $F_1-F_2$ og får
+\begin{align*}
+(F_1(x)-F_2(x))' = F'_1(x)-F_2'(x) = f(x)-f(x) = 0.
+\end{align*}
+Da $(F_1-F_2)' = 0$, så må $F_1-F_2=k$.  
+\end{proof}
+
+\begin{exa}
+Funktionen $F(x) = \ln(x) +4$ er en stamfunktion til $\frac{1}{x}$, da
+\begin{align*}
+F'(x) = (\ln(x) + 4)' = \frac{1}{x},
+\end{align*}
+men $x^3$ er ikke en stamfunktion til $x^2$, da
+\begin{align*}
+(x^3)' = 3x^2 \neq x^2
+\end{align*}
+\end{exa}
+\begin{exa}
+Vi vil bestemme det ubestemte integral
+\begin{align*}
+\int x^4 \text{d}x.
+\end{align*}
+Vi ved, at $(x^5)' = 5x^4$, så for at løse integralet, må vi skulle tage højde for konstanten $5$. Vi ganger derfor med $\frac{1}{5}$ og gætter på, at
+\begin{align*}
+\int x^4 \text{d}x = \frac{1}{5}x^5.
+\end{align*}
+Vi differentierer begge sider, og får
+\begin{align*}
+(\int x^4 \text{d}x)' = \frac{1}{5}x^5 \Leftrightarrow x^4 = \frac{1}{5}5x^4 = x^4,
+\end{align*}
+hvilket er korrekt, så $\frac{1}{5}x^5$ er en stamfunktion til $x^4$. Vi husker på, at vi kan lægge en konstant til og få en anden stamfunktion. Derfor er løsningen til det ubestemte integral
+\begin{align*}
+\int x^4 \text{d}x = \frac{1}{5}x^5+k.
+\end{align*}
+\end{exa}
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+\item Er $x^2 + 10x + 10$ en stamfunktion til $2x+10$?
+\item Er $x^4$ en stamfunktion til $x^3$?
+\item Er $2\ln(x)$ en stamfunktion til $\frac{2}{x}+4$?
+\item Er $x^5+x^4+x^3+x^2+x+1$ en stamfunktion til $\frac{1}{5}x^4+\frac{1}{4}x^3+\frac{1}{3}x^2+1$?
+\item Er $10$ en stamfunktion til $10x$?
+\item Er $5$ en stamfunktion til $0$?
+\item Er $e^{x^2}$ en stamfunktion til $2xe^{x^2}$?
+\item Er $\ln(x)e^{2x}$ en stamfunktion til $e^{2x}(\frac{1}{x}+2\ln(x))$?
+\end{enumerate}
+\section*{Opgave 2}
+Bestem følgende ubestemte integraler
+\begin{align*}
+&1) \  \int10\intd x   &&2) \  \int x \intd x  \\
+&3) \  \int -12x \intd x   &&4) \ \int 2x^2 \intd x    \\
+&5) \  \int 3x^2+2x+1 \intd x &&6) \ \int \frac{10}{x} \intd x     \\
+&7) \  \int 5^x+10x   &&8) \ \int e^{3x} \intd x     \\
+&9) \   \int (2e^{2x}) \intd x  &&10) \  \int 2xe^{x^2} \intd x    \\
+\end{align*}
+\section*{Opgave 3}
+Bestem de ubestemte integraler fra Opgave 2, så de går gennem punktet $(0,0)$.

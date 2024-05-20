@@ -1,0 +1,228 @@
+\begin{center}
+\Huge
+Stationære punkter
+\end{center}
+
+\section*{Stationære punkter i én variabel}
+\stepcounter{section}
+
+Vi så sidste år på hvordan vi kunne bruge differentialregning til at bestemme ekstremumspunkter for funktioner. Sådanne punkter kaldes også for \textit{stationære punkter}. Vi skal bruge de partielle afledede til at afgøre, hvilken type stationært punkt et stationært punkt er. Vi starter med at betragte funktioner af én variabel.
+
+\begin{setn}[Stationære punkter]
+	\label{setn:1}
+	Lad $f$ være differentiabel i $x_0$ og antag, at $f'(x_0) = 0$. 
+	\begin{enumerate}[label=\roman*)]
+		\item Hvis $f''(x_0) >0$, så er $x_0$ et minimumspunkt. 
+		\item Hvis $f''(x_0)<0$, så er $x_0$ et maksimumspunkt. 
+		\item Hvis $f''(x_0)=0$, så kan intet konkluderes.
+	\end{enumerate}
+\end{setn}
+Vi vil ikke bevise denne sætning, men en intuitiv forklaring kan ses af Fig. \ref{fig:fmm}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\node at (3,1) {$f(x)$};
+		\node at (6,1) {$f'(x)$};
+		\node at (9,1) {$f''(x)$};
+		\draw (0,0) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -1, ymax = 6,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {x^2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (3,0) node[anchor = north west]
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -1, ymax = 6,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {2*x};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		
+		\draw (6,0) node[anchor = north west]
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -1, ymax = 6,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (0,-3) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -6, ymax = 1,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {-x^2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (3,-3) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -6, ymax = 1,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {-2*x};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (6,-3) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -6, ymax = 1,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {-2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (0,-6) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -3, ymax = 4,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {x^3};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (3,-6) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -3, ymax = 4,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {3*x^2};
+			\end{axis}
+		\end{tikzpicture}
+		};
+		\draw (6,-6) node[anchor = north west]  
+		{
+		\begin{tikzpicture}
+			\begin{axis}[axis lines = middle, xmin = -3, xmax = 3,
+			ticks = none,
+			xmin = -2, xmax = 2,
+			ymin = -3, ymax = 4,
+			yscale = 0.3,xscale = 0.3]
+				\addplot[color = blue!40, samples = 100, thick]  {3*x};
+			\end{axis}
+		\end{tikzpicture}
+		};
+	\end{tikzpicture}
+	\caption{Tre funktioner, der alle har et stationært punkt i $(0,0)$.}
+	\label{fig:fmm}
+\end{figure}
+
+\begin{exa}
+	Lad os bestemme stationære punkter for funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = 3x^2+2x+1.
+	\end{align*}
+	Vi differentierer og sætter den afledede lig nul:
+	\begin{align*}
+		f'(x) = 6x+2.
+	\end{align*}
+	Dette sættes lig nul:
+	\begin{align*}
+		6x+2=0,
+	\end{align*}
+	så $f$ har et stationært punkt i $x=-1/3$. Vi differentierer igen:
+	\begin{align*}
+		f''(x) = 6, 
+	\end{align*}
+	Vi indsætter nu vores stationære punkt:
+	\begin{align*}
+		f''\left( -\frac{1}{3} \right) = 6, 
+	\end{align*}
+	og da dette tal er positivt ved vi fra Sætning \ref{setn:1}, at $f$ har et minimum i $-1/3$. 
+\end{exa}
+
+\section*{Stationære punkter i to variable}
+\stepcounter{section}
+
+Vi definerer stationære punkter i to variable nøjagtigt som vi gjorde i én variabel:
+\begin{defn}[Stationære punkter]
+Lad $f:\mathbb{R}^2 \to \mathbb{R}$ være givet. Hvis et punkt $P(x_0,y_0,f(x_0,y_0))$ opfylder, at 
+\begin{align*}
+	\nabla f(x_0,y_0) = \vv{0},
+\end{align*} 
+så siges $P$ at være et stationært punkt. 
+\end{defn}
+Maksima og minima for funktioner af to variable vil også findes i stationære punkter, men ikke alle stationære punkter er maksima eller minima. Vi har et tilsvarende resultat som i tilfældet med én variabel. 
+
+\begin{setn}\label{setn:2}
+	Lad $P(x_0,y_0,f(x_0,y_0))$ være et stationært punkt for en funktion $f:\mathbb{R}^2 \to \mathbb{R}$. 
+	\begin{enumerate}[label=\roman*)]
+		\item Hvis 
+			$$f_{xx}(x_0,y_0)f_{yy}(x_0,y_0)>(f_{xy}(x_0,y_0))^2,$$
+		så er $P$ et ekstremumspunkt. Hvis $f_{xx}(x_0,y_0)>0$, så er $P$ et minimum, og hvis 
+		$f_{xx}(x_0,y_0) <0$, så er $P$ et maksimum. 
+		\item Hvis 
+			$$f_{xx}(x_0,y_0)f_{yy}(x_0,y_0)<(f_{xy}(x_0,y_0))^2,$$
+		så er $P$ et saddelpunkt.
+		\item Hvis 
+			$$f_{xx}(x_0,y_0)f_{yy}(x_0,y_0)=(f_{xy}(x_0,y_0))^2,$$	
+		så kan intet konkluderes.
+	\end{enumerate}
+\end{setn}
+
+\begin{exa}
+Vi skal bestemme, om funktionen $f$ givet ved
+\begin{align*}
+	f(x,y) = x^2+2x+y^2-4y
+\end{align*}
+har stationære punkter og i givet fald typen af dem. Vi starter med at bestemme gradienten.
+\begin{align*}
+	\nabla f(x,y) =
+	\begin{pmatrix}
+		2x+2 \\ 2y - 4		
+	\end{pmatrix}.
+\end{align*}
+Gradienten er kun $\vv{0}$ i punktet $(-1,2)$. Vi bestemmer $f_{xx}$, $f_{yy}$ og $f_(xy)$:
+\begin{align*}
+	f_{xx}(-1,2) &= 2,
+	f_{yy}(-1,2) &= 2,
+	f_{xy}(-1,2) &= 0.
+\end{align*} 
+Da $2\cdot 2>0$ er det klart, at dette er et ekstremumspunkt ifølge Sætning \ref{setn:2}. Da $f_{xx}(x_0,y_0) = 2>0,$ så er det et minimumspunkt. 
+\end{exa}
+
+\section*{Opgave 1}
+Bestem stationære punkter for følgende funktioner af én variabel, og afgør typen af de stationære punkter.
+\begin{align*}
+	&1) \  -x^2+4x+1  &&2) \ x^2-4   \\
+	&3) \ \frac{1}{3}x^3+\frac{1}{2}x^2 + x  &&4) \ \sqrt{x^2+1}
+\end{align*}
+
+\section*{Opgave 2}
+Bestem stationære punkter for følgende funktioner af to variable, og afgør typen af de stationære punkter. 
+\begin{align*}
+	&1)  \ x^2-y^2  &&2) \ x^2+yx+y^2   \\
+	&3)  \ e^{3x^2+y^2+2x} &&4) \ \sqrt{x(y^2+3y)}  \\
+	&5)  \ \ln(3x^2+4y^2+2xy)  &&6) \  \cos(x^2+yx+y^2)   \\
+\end{align*}

@@ -1,0 +1,102 @@
+
+\begin{center}
+\Huge
+Differentiation af produkt af funktioner
+\end{center}
+\section*{Recap. om tangenter}
+\stepcounter{section}
+
+Vi husker på, at fremgangsmåden for at finde ligningen for en tangent til en differentiabel funktion $f$ i et punkt $(x_0,f(x_0))$ er følgende:
+\begin{enumerate}[label=\roman*)]
+\item Vi skal finde en ligning for tangenten på formen $y=ax+b$. 
+\item Vi ved, at hældningen skal være $a = f'(x_0)$, så vi bestemmer $f'$ og evaluerer den i $x_0$.
+\item Vi ved, at ligningen for tangenten skal gå igennem punktet $(x_0,f(x_0))$, så vi bestemmer $f(x_0)$ og løser ligningen \begin{align*}
+\underbrace{f(x_0)}_{=y_0} = \underbrace{f'(x_0)}_{=a}x_0 + b\ \Leftrightarrow\ b = f(x_0) - f'(x_0)x_0.
+\end{align*}
+\item Vi har nu bestemt tangentens ligning $y = ax + b$.
+\end{enumerate}
+Vi kan samle denne algoritme til en sætning:
+\begin{setn}[Tangentens ligning]
+Lad $f$ være en differentiabel funktion i $x_0$. Så er ligningen for tangenten til $f$ i punktet $(x_0,f(x_0))$ givet ved
+\begin{align*}
+y = f'(x_0)(x-x_0) + f(x_0).
+\end{align*}
+\end{setn}
+\begin{proof}
+Da $a = f'(x_0)$ og $b =  f(x_0) - f'(x_0)x_0$ fås 
+\begin{align*}
+y = ax+b = f'(x_0)x + f(x_0)-f'(x_0)x_0 = f'(x_0)(x-x_0) + f(x_0).
+\end{align*}
+\end{proof}
+
+\section*{Lidt flere regneregler}
+\stepcounter{section}
+\begin{setn}
+Vi har følgende forhold mellem differentiable funktioner $f$ og deres afledede $f'$:
+\begin{center}
+\begin{tabular}{c|c}
+$f(x)$ & $f'(x)$\\
+\hline
+$\ln(x)$ & $\frac{1}{x}$\\
+$a^x$ & $a^x\ln(a)$\\
+$e^x$ & $e^x$\\
+$x^a$ & $ax^{a-1}$
+\end{tabular}
+\end{center}
+\end{setn}
+Bemærk, at vi kan bruge den sidste regel til at differentiere både $\frac{1}{x^a}$ og $\sqrt[a]{x}$, da $\frac{1}{x^a} = x^{-a}$ og $\sqrt[a]{x} = x^{\frac{1}{a}}$.
+\section*{Produktreglen}
+\stepcounter{section}
+
+Det er endnu ikke klart, hvordan vi skal differentiere produktet af to funktioner. Vi har tidligere set, at den afledede af summen af to funktioner blot er summen af de afledede, men det forholder sig desværre ikke tilsvarende for produkter af funktioner. Vi skal derimod anvende produktreglen.
+\begin{setn}[Produktreglen]
+Lad $f$ og $g$ være to funktioner begge differentiable i $x$. Så er funktionen $f\cdot g$ differentiabel i $x$ og 
+\begin{align}\label{eq:produktregel}
+\frac{d}{dx} f(x)\cdot g(x) = \left(f(x)\cdot g(x)\right)' = f'(x)\cdot g(x) + f(x)\cdot g'(x).
+\end{align}
+\end{setn}
+\begin{proof}
+Vi anvender definitionen af differentialkvotienten på højresiden af \eqref{eq:produktregel} og får
+\begin{align*}
+f'(x)g(x)+g'(x)f(x) &= \underbrace{\lim_{h\to 0}\left(\frac{f(x+h)-f(x)}{h}\right)}_{=f'(x)}g(x) + \underbrace{\lim_{h\to 0}\left(\frac{g(x+h)-g(x)}{h}\right)}_{=g'(x)}f(x)\\
+&=\lim_{h\to 0} \frac{f(x+h)g(x)-f(x)g(x)+g(x+h)f(x)-g(x)f(x)}{h}
+\end{align*}
+Da $g(x)$ er kontinuert i $x$ (differentiabilitet medfører kontinuitet), så har vi, at $g(x) = \lim_{h\to 0}g(x+h)$, og vi kan substituere $g(x)$ med $g(x+h)$ i to af leddene.
+\begin{align*}
+f'(x)g(x)+g'(x)f(x) &=  \lim_{h\to 0} \frac{f(x+h)g(x)-f(x)g(x)+g(x+h)f(x)-g(x)f(x)}{h}\\
+&=\lim_{h\to 0} \frac{f(x+h)g(x+h)-f(x)g(x+h)+g(x+h)f(x)-g(x)f(x)}{h}\\
+&=\lim_{h\to 0} \frac{f(x+h)g(x+h) -g(x)f(x)}{h}\\
+&= (f(x)\cdot g(x))'
+\end{align*}
+\end{proof}
+
+\begin{exa}
+Vi skal differentiere funktionen $h(x) = x^2\cdot 2\sqrt{x}$. Dette er et produkt af to funktioner
+$f(x) = x^2$ og $g(x)= 2\sqrt{x}$. Vi skal derfor anvende produktreglen til at udregne $h'(x)$. I produktreglen skal vi bruge $f'(x)$ og $g'(x)$, så dem bestemmer vi:
+\begin{align*}
+f'(x) &= (x^2)' = 2x\\
+g'(x) &= (2\sqrt{x})' = \frac{2}{2\sqrt{x}} = \frac{1}{\sqrt{x}}.
+\end{align*} 
+Vi kan nu bestemme $h'(x) = (f(x)\cdot g(x))'$ ved brug af produktreglen:
+\begin{align*}
+h'(x) &= (f(x)g(x))' \\
+&= f'(x)g(x)+g'(x)f(x) \\
+&= 2x\cdot 2\sqrt{x} + \frac{1}{\sqrt{x}}\cdot x^2\\
+&= 4x\sqrt{x} + \frac{x^2}{\sqrt{x}}.
+\end{align*}
+\end{exa}
+
+\section*{Opgave 1}
+Differentiér følgende funktioner ved brug af produktreglen:
+\begin{align*}
+&1) \   2^x\sqrt{x}   &&2) \  e^x\frac{1}{x^2}     \\
+&3) \  \frac{\ln(x)}{x}    &&4) \   2x^{3.5}\sqrt[3]{x}    \\
+&5) \  \frac{3x^2}{x} + \ln(x)x^2    &&6) \ x^3(x^2+2\ln(x))      \\
+&7) \  10^xx^{10}    &&8) \  \frac{x^4}{x^3}     \\
+&9) \   7x^{\frac{3}{2}}\sqrt{x}   &&10) \   (2x+3)e^x    \\
+\end{align*}
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem ligningen for tangenten til funktionen $f(x)=(2x^2+2x)e^x$ i punktet $(1,f(1))$.
+\item Bestem ligningen for tangenten til funktionen $f(x) = 10\sqrt[3]{x}\ln(x)$ i punktet $(1,f(1))$.
+\end{enumerate}

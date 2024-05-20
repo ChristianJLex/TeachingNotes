@@ -1,0 +1,186 @@
+\begin{center}
+\Huge
+Opgaver om eksponentialfunktioner
+\end{center}
+
+\subsection*{Opgave 1}
+
+\begin{enumerate}[label=\roman*)]
+	\item Forøg 20 med $10\%$.
+	\item Formindsk 100 med $50\%$.
+	\item Bestem $80\%$ af 300.
+	\item Hvor mange $\% $ udgør 6 af 60?
+	\item Bestem den procentvise forskel fra $200$ til $250$.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+	\item En eksponentialfunktion $f$ er givet ved
+	\begin{align*}
+		f(x) = 2\cdot 1.54^x.
+	\end{align*}
+	Bestem fremskrivningsfaktoren og vækstraten for $f$. Afgør desuden hvor mange procent $f$ stiger/falder med, hvis $x$ øges med 1.
+	\item En eksponentialfunktion $f$ er givet ved
+	\begin{align*}
+		f(x) = 100\cdot 0.96^x.
+	\end{align*}
+	Bestem fremskrivningsfaktoren og vækstraten for $f$. Afgør desuden hvor mange procent $f$ stiger/falder med, hvis $x$ øges med 1.
+	\item En eksponentialfunktion $f$ er givet ved
+	\begin{align*}
+		f(x) = \sqrt{2}\cdot 3^x.
+	\end{align*}
+	Bestem fremskrivningsfaktoren og vækstraten for $f$. Afgør desuden hvor mange procent $f$ stiger/falder med, hvis $x$ øges med 1.
+\end{enumerate}
+
+
+\subsection*{Opgave 3}
+a) En eksponentialfunktion $f$ er givet ved
+\begin{align*}
+	f(x) = 11\cdot 1.97^x.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $f(10)$.
+	\item Bestem $f(-2)$.
+\end{enumerate}
+
+b) En eksponentialfunktion $g$ har begyndelsesværdi $2$ og fremskrivningsfaktor $0.11$.
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv forskriften for $g$. 
+	\item Bestem $g(3)$. 
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+Følgende grafer for eksponentialfunktioner er givet.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $b$ for eksponentialfunktionerne
+	\item Afgør, om $a$ er større eller mindre end 1.
+\end{enumerate}
+\begin{center}
+	\resizebox{0.4\textwidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle, xmin = -1, xmax = 3,
+		ytick = {1,2,...,10},
+		ymin = -1,
+		xlabel = $x$, ylabel = $y$]
+			\addplot[teal, thick, domain = -1:4, samples = 200] {3*1.5^x};
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\resizebox{0.4\textwidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle, xmin = -1, xmax = 4,
+		ytick = {1,2,...,10},
+		ymin = -1,
+		xlabel = $x$, ylabel = $y$]
+			\addplot[teal, thick, domain = -1:4, samples = 200] {6 * 0.6^x};
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\resizebox{0.4\textwidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle, xmin = -0.2, xmax = 4,
+		ytick = {1,2,...,12},
+		ymin = -1,
+		xlabel = $x$, ylabel = $y$]
+			\addplot[teal, thick, domain = -0.2:4, samples = 200] {9 * 0.2^x};
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\resizebox{0.4\textwidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle, xmin = -1, xmax = 3,
+		ytick = {1,2,...,16},
+		ymin = -1,
+		xlabel = $x$, ylabel = $y$]
+			\addplot[teal, thick, domain = -1:3, samples = 200] {2 * 2^x};
+		\end{axis}
+	\end{tikzpicture}
+	}
+\end{center}
+
+
+\subsection*{Opgave 5}
+
+Bestem forskriften for de eksponentialfunktioner, der går gennem følgende par af punkter.
+\begin{align*}
+&1) \ (0,3), \ (1,6)  &&2) \ (1,3), \ (3,27)      \\
+&3) \ (1,2), \  (3,8)   &&4) \  (2,8), \ (5,64)    
+\end{align*}
+
+
+\subsection*{Opgave 6}
+
+To biologistuderende har brugt absorbansen af en væske til at måle antallet af bakterier i væsken. De antager, at sammenhængen mellem den forløbne tid (i minutter) og antallet af bakterier (i mia.) kan beskrives ved en eksponentiel sammenhæng. Deres data kan findes \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2022-2023/Data%20og%20lign/Bakteriedata.xlsx}{\color{blue!60} her}.
+
+\begin{enumerate}[label=\roman*)]
+	\item Lav eksponentiel regression og lineær regression på datasættet.
+	\item Lav en kvalitativ vurdering af de to modeller. Hvilken virker til at være bedst?
+	\item Sammenlign forklaringsgraderne for de to modeller. Hvilken en er bedst? Tror du, at forklaringsgrader kan bruges til at sammenligne forskellige regressionsmodeller?
+	\item Brug din valgte model til at afgøre, hvornår der vil være 1 bio. bakterier i væsken. 
+\end{enumerate}
+
+\subsection*{Opgave 7}
+
+Bestem følgende.
+\begin{align*}
+	&1) \  \log_{10}(1000)      &2) \  \log_5(25)       \\
+	&3) \  \log_2(16)       &4) \ \log_3(9)         \\
+	&5) \  \log_3(27)      &6) \  \log_7(1)      \\
+	&7) \  \log_8(1)      &8) \  \log_2(1024)      \\
+	&9) \  \log_{10}(1000000)     &10) \  \log_4(64)        \\
+\end{align*}
+
+\subsection*{Opgave 8}
+Bestem fordoblingskonstanten eller halveringskonstanten for følgende eksponentialfunktioner
+\begin{align*}
+	&1) \ 7\cdot 1.5^x   &&2) \ 15\cdot 1.2^x   \\
+	&3) \ 10.5\cdot 1.04^x   &&4) \ 1.02\cdot 0.97^x   \\
+	&5) \ 0.95\cdot 1.95^x   &&6) \ 22.9\cdot 15^x   \\		
+\end{align*}
+
+\subsection*{Opgave 9}
+Tetrahydrocannabinol (THC) er det primære psykoaktive stof i hampplanten. Koncentrationen af stoffet efter indtagelse hos en bestemt person kan ses af Tabel \ref{tab:cannabis}.
+
+\begin{table}[H]
+	\centering
+	\rowcolors{2}{gray!25}{white}
+	\begin{tabular}{cc}
+		\textbf{Tid i timer} & \textbf{Koncentration i mg/L} \\
+
+		0 & 0.30249 \\
+
+		8 & 0.24512 \\
+ 
+		16 &  0.20132 \\
+
+		24 & 0.16371 \\
+
+		32 & 0.13303\\
+
+		40 & 0.11069\\
+
+		48 & 0.08757\\
+		56 & 0.07317\\
+
+		64 & 0.05748
+	\end{tabular}
+	\caption{Koncentration af tetrahydrocannabiol (THC)}
+	\label{tab:cannabis}
+\end{table}
+
+Det antages at sammenhængen mellem antal forløbne timer $x$ og blodkoncentrationen af THC $f(x)$ er givet ved en sammenhæng af typen
+\begin{align*}
+	f(x) = b \cdot a^x
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Lav regression på observationerne fra Tabel \ref{tab:cannabis} og bestem en forskrift for $f$.
+	\item Bestem halveringskonstanten for $f$.
+\end{enumerate}
+Et stof eller lægemiddel vil betragtes som helt metaboliseret efter fem halveringstider.
+
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{2}
+	\item Hvor længe skal der gå, før vi kan sige, at der ikke er mere THC i kroppen på personen?
+\end{enumerate}

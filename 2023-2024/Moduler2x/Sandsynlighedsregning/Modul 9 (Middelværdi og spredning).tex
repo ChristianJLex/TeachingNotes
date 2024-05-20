@@ -1,0 +1,198 @@
+\begin{center}
+\Huge
+Middelværdi og spredning
+\end{center}
+\section*{Beregninger i Maple}
+\stepcounter{section}
+
+Vi husker fra sidst, at definitionen på en binomialfordelt stokastisk variabel er følgende. 
+\begin{defn}[Binomialfordelt stokastisk variabel]
+	\label{def:bin}
+	En stokastisk variabel $X$ siges at være \textit{binomialfordelt} med antalsparameter $n$ og sandsynlighedsparameter $p$ hvis sandsynlighedsfunktionen for $X$ er givet ved
+	\begin{align*}
+		f(r) = P(X = r) = \textnormal{K}(n,r)\cdot p^r\cdot (1-p)^{n-r}.
+	\end{align*}
+	Vi skriver, at $X \sim \textnormal{B}(n,p)$. 
+\end{defn}
+Vi kan bruge følgende funktion i Maple, når vi skal bruge sandsynlighedsfunktionen for den binomialfordelte stokastiske variabel.
+\begin{align*}
+	\texttt{binpdf(n,p,x)},
+\end{align*}
+hvor \texttt{n} er antalsparameteren, \texttt{p} er sandsynlighedsparameteren og \texttt{x} er udfaldet, du ønsker at bestemme sandsynligheden for.
+\begin{exa}
+	Vi ønsker i Maple at bestemme sandsynligheden for at få 2 seksere i 5 forsøg. Vi skriver i Maple
+	\begin{align*}
+		&\texttt{restart}\\
+		&\texttt{with(Gym):}\\
+		&\texttt{binpdf(5,$\frac{\texttt{1}}{\texttt{6}}$,2})
+	\end{align*}
+	og får outputtet 0.16.
+\end{exa}
+
+\subsection*{Fordelingsfunktion}
+
+Vi er ofte interesserede i sandsynligheden for, om vi har fået mindre end et bestemt antal succeser. Derfor introduceres \textit{fordelingsfunktionen}.
+\begin{defn}[Fordelingsfunktion]
+	Fordelingsfunktionen for en stokastisk variabel $X$ er en funktion $F$, der opfylder, at
+	\begin{align*}
+		F(x) = P(X \leq x).
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	Vi skal bestemme sandsynligheden for at slå mindre end eller lig 2 seksere i 5 forsøg med en terning. Vi skal derfor for den binomialfordelte stokastiske variabel $X \sim 		
+	\textnormal{B}\left(5,\frac{1}{6}\right)$ bestemme
+	\begin{align*}
+		P(X \leq 2).
+	\end{align*}
+	Dette gøres ved at bestemme 
+	\begin{align*}
+		P(X = 0) + P(X = 1) + P(X = 2) \approx 0.40 + 0.40 + 0.16 = 0.96,
+	\end{align*}
+	men kan også gøres i Maple ved at bruge funktionen \texttt{bincdf} (for binomial cumulative distribution function).
+	\begin{align*}
+		&\texttt{restart}\\
+		&\texttt{with(Gym):}\\
+		&\texttt{bincdf$\left(\texttt{5,$\frac{\texttt{1}}{\texttt{6}}$,2}\right)$}
+	\end{align*}
+	og vi får outputtet 0.96.
+\end{exa}
+
+\section*{Middelværdi og spredning}
+
+Har vi en stokastisk variabel $X$, så kunne vi godt tænke os at beskrive det mest sandsynlige udfald af den stokastiske variabel. Betragter vi $1000$ slag med en terning, så vil det gennemsnitlige slag være summen af alle de slåede slag delt med $1000$. Lad os se på et eksempel:
+\begin{exa}
+Vi slår $1000$ gange med en terning og får følgende resultater
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+1 & 2 & 3 & 4 & 5 & 6 \\
+\hline 
+157& 162& 165& 176& 173& 167
+\end{tabular}
+\end{center}
+Vi vil så bestemme det gennemsnitlige slag som
+\[
+\frac{1\cdot 157 + 2\cdot 162 + 3\cdot 165 + 4 \cdot 176 + 5\cdot 173 + 6\cdot 167}{1000} = 3,445.
+\]
+Vi har derfor eksperimentelt bestemt den forventede værdi, når vi slår med en terning. 
+\end{exa}
+Vi vil bruge mere eller mindre det samme princip, når vi definerer \textit{middelværdien for en stokastisk variabel}.
+\begin{defn}[Middelværdi]
+Lad $X$ være en (diskret) stokastisk variabel med værdimængde $\{x_1,x_2,\hdots,x_n\}$ og fordelingsfunktion $P$. Så defineres middelværdien $\mathbb{E}(X)$ for en stokastisk variabel som
+\begin{align*}
+\mathbb{E}(X) = \mu &= x_1 \cdot P(X = x_1) + x_2 \cdot P(X=x_2) + \cdots + x_n \cdot P(X=x_n)\\
+&= \sum_{i=1}^{n} x_i P(X=x_i).
+\end{align*} 
+\end{defn}
+Middelværdien giver os et indblik i, hvad den stokastiske variabel mest sandsynligt antager af værdi, men den siger ikke noget om, hvor meget værdierne, variablen kan antage varierer omkring middelværdien $\mu$. Vi vil definere variansen som den "gennemsnitlige variation fra middelværdien". Derfor ville det give mening at definere variansen som 
+\begin{align*}
+\textnormal{Var} = \mathbb{E}(X-\mu), 
+\end{align*}
+men dette vil tage højde for, at $X-\mu$ nogle gange er negativ og nogle gange er positiv. Vi vil bare gerne vide, hvor langt $X$ ligger fra $\mu$, så derfor definerer vi variansen på følgende vis:
+\begin{defn}[Varians og spredning]
+Lad $X$ være en (diskret) stokastisk variabel med værdimængde $\{x_1,x_2,\hdots,x_n\}$ og fordelingsfunktion $P$. Så defineres \textit{variansen} for $X$ som
+\begin{align*}
+\textnormal{Var}(X) = \sigma^2 &= E[(X-\mu)^2]\\
+&= (x_1-\mu)^2\cdot P(X=x_1) + \cdots + (x_n-\mu)^2 \cdot P(X=x_n)\\
+&= \sum_{i=1}^n (x_i-\mu)^2\cdot P(X=x_i).
+\end{align*}
+Tallet $\sigma = \sqrt{\textnormal{Var}(X)}$ kaldes for spredningen af $X$. 
+\end{defn}
+
+\begin{exa}
+Lad os fortsætte eksemplet med terningekastet. Vi vil bestemme middelværdien $\mathbb{E}(X)$ for den stokastiske variabel $X$, der beskriver et terningekast. Dette bestemmes ifølge definitionen som
+\begin{align*}
+\mathbb{E}(X) = 1\cdot \frac{1}{6} + 2\cdot \frac{1}{6}+3\cdot \frac{1}{6}+4\cdot \frac{1}{6}+5\cdot \frac{1}{6}+6\cdot \frac{1}{6} = \frac{21}{6} = 3.5,
+\end{align*}
+hvilket er tæt på det vi eksperimentelt havde bestemt gennemsnittet til at være. 
+Variansen er så
+\begin{align*}
+\textnormal{Var}(X) &= (1-3.5)^2 \cdot \frac{1}{6} + (2-3.5)^2 \cdot \frac{1}{6} + (3-3.5)^2 \cdot \frac{1}{6}\\
+ &+ (4-3.5)^2 \cdot \frac{1}{6} + (5-3.5)^2 \cdot \frac{1}{6} +(6-3.5)^2 \cdot \frac{1}{6} \approx 2.92
+\end{align*}
+Spredningen er derfor 
+\begin{align*}
+\sigma \approx \sqrt{2,92} \approx 1.71.
+\end{align*}
+Det er svært at give en god fortolkning af spredningen ud over at det er den gennemsnitlige afstand et slag vil have fra middelværdien. 
+\end{exa}
+
+Hvis vi kender sandsynlighedsparametren $p$ og antalsparametren $n$ for en binomialfordelt stokastisk variabel, så er det muligt at bestemme middelværdien og variansen.
+\begin{setn}
+Lad $X$ være en binomialfordelt stokastisk variabel med antalsparameter $n$ og sandsynlighedsparameter $p$. Så er middelværdien $\mu$ og spredningen $\sigma$ for $X$ givet ved
+\begin{align*}
+\mathbb{E}(X) = \mu = n\cdot p,
+\end{align*} 
+og 
+\[
+\sqrt{\textnormal{Var}(X)} = \sigma = \sqrt{n\cdot p\cdot (1-p)}
+\]
+\end{setn}
+
+
+
+\subsection*{Opgave 1}
+Et lægemiddel bruges til en bestemt behandling, og gives til 10 personer. Sandsynligheden for helbredelse er 20$\%$. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at to personer helbredes?
+	\item Hvad er sandsynligheden for, at alle personer helbredes?
+	\item Hvad er sandsynligheden for, at mindst 4 helbredes? 
+\end{enumerate}
+
+\subsection*{Opgave 2}
+I en by har 15$\%$ stemt på partiet "liste Q". 100 Personer udvælges tilfældigt og spørges "har du stemt liste Q?"
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at netop 15 personer svarer ja?
+	\item Hvad er sandsynligheden for, at ingen svarer ja?
+	\item Bestem sandsynligheden for, at mere end 20 svarer ja. 
+\end{enumerate}
+
+\subsection*{Opgave 3}
+Til kurset "Introduktion til matematisk analyse" på Husum Universitet dumper 50$\%$ af deltagerne. 20 procent af dem, der har dumpet vil lyve, når de bliver spurgt, om de har dumpet kurset. 15 personer udvælges tilfældigt og spørges, om de er dumpet. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at 3 personer svarer, at de er dumpet?
+	\item Bestem sandsynligheden for, at mere end 5 personer svarer, at de er dumpet.
+	\item Bestem sandsynligheden for, at mellem 2 og 4 personer svarer, at de er dumpet. 
+\end{enumerate}
+
+
+
+\subsection*{Opgave 4}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Slå plat og krone, og lad $X=1$, hvis udfaldet er plat og $X=0$ ellers. Hvad er middelværdien og spredningen for $X$?
+\item Slå plat og krone to gange og lad $X$ være antallet af plat. Hvad er middelværdien og spredningen af $X$?
+\item Kast en 12-sidet terning og lad $X$ være antallet af øjne. Hvad er middelværdien og spredningen af $X$?
+
+\end{enumerate}
+
+\subsection*{Opgave 5}
+
+Fordelingen for en stokastisk variabel $X$ kan beskrives ved følgende tabel.
+
+\begin{center}
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$x$ & -5 & 2 & 3 & 4 & 7 & 11 \\
+		\hline
+		$P(X = x)$ & 0.1 & 0.2 & 0.1 & 0.4 & 0.05 & 0.15
+	\end{tabular}
+\end{center}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem middelværdien for $X$.
+	\item Bestem spredningen for $X$.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+\stepcounter{section}
+\begin{enumerate}[label=\roman*)]
+\item Lad $X$ være en Bernoulli-fordelt stokastisk variabel med sandsynlighedsparameter $p$. Hvad er middelværdien og variansen af $X$?
+\item Forklar med ord, hvorfor det giver god mening, at middelværdien for en binomialfordelt stokastisk variabel er $n\cdot p$. 
+\end{enumerate}
+
+\subsection*{Opgave 7}
+\begin{enumerate}[label=\roman*)]
+\item Et lægemiddel helbreder 15$\%$ af behandlede personer. Lad $X$ beskrive antallet af helbredte personer, når vi prøver at helbrede $10000$ personer. Hvad er middelværdien og variansen af $X$?
+\item Vi slår fem gange med en terning, og lader $X$ beskrive antallet af gange, vi slår mere end 4. Hvad er middelværdien og variansen for $X$?
+
+\end{enumerate}

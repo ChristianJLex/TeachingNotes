@@ -1,0 +1,116 @@
+\begin{center}
+\Huge
+Cirklens ligning
+\end{center}
+
+\section*{Cirklens ligning}
+\stepcounter{section}
+Præcist som det er tilfældet for linjen kan vi bestemme en ligning for en cirkel. 
+\begin{setn}[Cirklens ligning]
+	Cirklen $C$ med centrum i $(x_0,y_0)$ og radius $r$ har ligningen
+	\begin{align*}
+		(x-x_0)^2 + (y-y_0)^2 = r^2.
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Lad $(x,y)$ være et punkt på cirklen $C$, og lad $(x_0,y_0)$ være cirklens centrum. Så er
+	forbindelsesvektoren $\vv{v}$ mellem $(x,y)$ og $(x_0,y_0)$ givet ved
+	\begin{align*}
+		\vv{v} = 
+		\begin{pmatrix}
+			x-x_0 \\
+			y-y_0
+		\end{pmatrix}.
+	\end{align*}
+	Da radius for $C$ er $r$, så skal længden af $\vv{v}$ være $r$. Dette medfører
+	\begin{align*}
+		r = |\vv{v}| = \sqrt{(x-x_0)^2+(y-y_0)^2}. 
+	\end{align*}
+	Vi opløfter nu begge sider af lighedstegnet i anden og får
+	\begin{align*}
+		r^2 = \left(\sqrt{(x-x_0)^2+(y-y_0)^2}\right)^2 = (x-x_0)^2 + (y-y_0)^2.
+	\end{align*}
+\end{proof}
+
+\begin{exa}
+	En cirkel har centrum i $(3,2)$ og radius $2$. Cirklens ligning er så
+	\begin{align*}
+		(x-3)^2 + (y-2)^2 = 4.
+	\end{align*}
+\end{exa}
+
+\begin{exa}
+	En cirkel har ligningen 
+	\begin{align}\label{eq:1}
+		(x-1)^2 + (y-4)^2 = 16. 
+	\end{align}
+	Vi skal afgøre, om punktet $(5,4)$ ligger på cirklen. Vi indsætter derfor dette
+	i \eqref{eq:1} og får
+	\begin{align*}
+		(5-1)^2 + (4-4)^2 = 4^2=16,
+	\end{align*}
+	og da denne lighed er korrekt, så er punktet på cirklen. 
+\end{exa}
+
+\section*{Opgave 1}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem cirklens ligning for cirklen, der har centrum i $(1,2)$
+	 og radius $r = 1$.
+	\item Bestem cirklens ligning for cirklen, der har centrum i $(0,0)$
+	og radius $r = 1$.
+	\item Bestem cirklens ligning for cirklen, der har centrum i $(-4,2)$
+	og radius $r = 3$.
+	\item Bestem cirklens ligning for cirklen, der har centrum i $(\sqrt{2},-\sqrt{3})$
+	og radius $r = \sqrt{5}$.
+	\item Bestem cirklens ligning for cirklen, der har centrum i $(\frac{1}{3},-\frac{2}{7})$
+	og radius $r = \frac{2}{3}$.
+\end{enumerate}
+
+\section*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+	\item Afgør, om punktet $(1,1)$ ligger på cirklen med ligningen
+	\begin{align*}
+		(x-1)^2 +(y-2)^2 = 1 
+	\end{align*}
+	\item Afgør, om punktet $(2,4)$ ligger på cirklen med ligningen
+	\begin{align*}
+		(x+1)^2 + (y-5)^2 = 49
+	\end{align*}
+	\item Afgør, om punktet $(1,6)$ ligger på cirklen med ligningen 
+	\begin{align*}
+		x^2-2x+y^2-4y=11
+	\end{align*}
+	\item Afgør, om punktet $(-2,2)$ ligger på cirklen med ligningen
+	\begin{align*}
+		x^2+8x+y^2-8y=32
+	\end{align*}
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item En cirkel $C$ har centrum i $(-2,-3)$ og radius $r=4$. Afgør, om punktet $(-2,-2)$ 
+	ligger på $C$.
+	\item En cirkel $C$ har centrum i $(-5,4)$ og radius $r=6$. Afgør, om punktet $(-5,10)$ 
+	ligger på $C$.
+\end{enumerate}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item En cirkel $C$ er givet ved ligningen
+	\begin{align*}
+		(x+1)^2+(y-t)^2 = 4.
+	\end{align*}
+	Bestem $t$, så punktet $(1,2)$ ligger på $C$.
+	\item En cirkel $C$ er givet ved ligningen
+	\begin{align*}
+		(x-4)^2 + (y-4)^2 = r^2.
+	\end{align*}
+	Bestem $r$, så punktet $(4,8)$ ligger på $C$.
+	\item En cirkel $C$ er givet ved ligningen
+	\begin{align*}
+		x^2-10x+y^2-2y=-1.
+	\end{align*}
+	Bestem $k$, så punktet $(k,1)$ ligger på $C$.
+\end{enumerate}

@@ -1,0 +1,114 @@
+\begin{center}
+\Huge
+Afstand mellem linje og punkt
+\end{center}
+
+Vi kan bruge projektioner af vektorer til at bestemme afstanden mellem et punkt $P$ og en linje $l$ i planen. Det er ikke umiddelbart klart ud fra formlen at det er projektioner, vi bruger, men det vil ses af beviset. Afstanden findes ved følgende sætning. 
+
+\begin{setn}[Afstand mellem punkt og linje]
+Har vi et punkt $Q(x_1,y_1)$ og en linje $l$ givet ved ligningen
+\begin{align*}
+ax+by+c = 0, 
+\end{align*}
+så kan vi bestemme afstanden mellem $l$ og $Q$ ved
+\begin{align*}
+\textnormal{dist}(Q,l) = \frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi vælger et punkt  $P(x_0,y_0)$ på $l$. Da $l$ har ligningen
+\begin{align*}
+ax+by+c = 0, 
+\end{align*}
+må der gælde, at 
+\begin{align*}
+ax_0+by_0+c = 0, 
+\end{align*}'
+og derfor har vi et udtryk for $c$ givet ved
+\begin{align*}
+c = -ax_0+by_0.
+\end{align*}
+Vektoren $\vv{PQ}$ er givet ved
+\begin{align*}
+\vv{PQ} = \begin{pmatrix}
+x_1 - x_0 \\ y_1 - y_0.
+\end{pmatrix}
+\end{align*}
+Vi har en normalvektor til $l$ givet ved 
+\begin{align*}
+\vv{n}=
+\begin{pmatrix}
+a \\ b
+\end{pmatrix}
+\end{align*}
+Vi bemærker nu, at længden af projektionen $\vv{PQ_{\vv{n}}}$ må være afstanden fra $l$ til $Q$. Vi bestemmer derfor længden af denne projektion:
+\begin{align*}
+\left|\vv{PQ_{\vv{n}}}\right| &= \frac{|\vv{PQ_{\vv{n}}}\cdot \vv{n}|}{|\vv{n}|} \\ 
+&= \frac{\left|\begin{pmatrix}
+x_1-x_0 \\ y_1 - y_0
+\end{pmatrix}\cdot \begin{pmatrix}
+a \\ b
+\end{pmatrix} \right|}{\left|\begin{pmatrix}
+a \\ b
+\end{pmatrix}\right|}\\
+&=\frac{|a(x_1-x_0)+b(y_1-y_0)|}{\sqrt{a^2+b^2}}\\
+&= \frac{|ax_1+by_1 -ax_0-by_0|}{\sqrt{a^2+b^2}}\\
+&= \frac{|ax_1+by_1+c|}{a^2+b^2}.
+\end{align*}
+\end{proof}
+
+
+\begin{exa}
+Vi skal bestemme afstanden fra punktet $P(1,1)$ til linjen med ligningen $4(x-1) + 3(y+1) = 0$. Vi starter med at hæve parenteserne i ligningen:
+\begin{align*}
+4(x-1) + 3(y+1) = 0 \Leftrightarrow 4x+3y-1 = 0.
+\end{align*}
+Vi kan nu bruge formlen for afstand mellem punkt og linje og får:
+\begin{align*}
+\textnormal{dist}(P,l) &= \frac{|4\cdot 1 + 3\cdot 1-1|}{\sqrt{3^2+4^2}}\\
+&=\frac{6}{5},
+\end{align*}
+hvilket er afstanden fra punktet $P$ til linjen $l$. 
+\end{exa}
+
+\begin{exa}
+Vi skal bestemme $k$, så punktet $P(4,k)$ og linjen $l$ med ligningen 
+\begin{align*}
+2x-4y-3 = 0
+\end{align*}
+har afstand 1. Vi bruger afstandsformlen og får
+\begin{align*}
+\textnormal{dist}(P,l) = \frac{|2\cdot 4-4\cdot k-3|}{\sqrt{2^2+4^2}|} = \frac{|5-4k|}{\sqrt{20}} =  1.
+\end{align*}
+Vi løser denne ligning og får, at $k \approx 0.63$. 
+\end{exa}
+
+\section*{Opgave 1}
+Bestem afstanden mellem linjen $l$ med ligningen 
+\begin{align*}
+-1(x+4) + 3(y-1) = 0
+\end{align*}
+og følgende punkter:
+\begin{align*}
+&1) \ (-1,1)  &&2) \ (3,4)    \\
+&3) \ (\sqrt{2},\sqrt{2})  &&4) \ (-5,6)   \\
+&5) \ (0,0)  &&6) \  (-\frac{1}{2},2)   \\
+\end{align*}
+Tegn desuden situationen i Geogebra og tjek, at du har fundet den korrekte afstand. 
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem $k$, så afstanden mellem linjen givet ved 
+\begin{align*}
+x-5y+10 = 0
+\end{align*}
+og punktet $P(k,1)$ har afstand $4$. Start med at tegne det i Geogebra.
+\item Bestem $b$, så $l$ med ligningen
+\begin{align*}
+y = 2x+b,
+\end{align*}
+ og punktet $P(1,1)$ har afstand 5. Start med at tegne i Geogebra.
+\end{enumerate}
+
+\section*{Opgave 3}
+Aflevering

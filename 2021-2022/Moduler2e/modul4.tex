@@ -1,0 +1,107 @@
+
+\begin{center}
+\Huge
+Talfølger og grænseværdier
+\end{center}
+\section*{Talfølger}
+\stepcounter{section}
+Vi vil ikke komme stringent ind på, hvad en grænseværdi er, men vi vil prøve at få en intuitiv forståelse gennem talfølger. Vi giver derfor en (måske en smule upræcis) definition af en talfølge.
+\begin{defn}[Talfølge]
+En talfølge er en (eventuelt uendelig) ordnet mængde af tal $\{a_n\}$ hver indekseret af et naturligt tal $0,1,2,3,\hdots$. En endelig talfølge $A$ af tal $a_n$ noteres 
+\begin{align}
+A = \{a_n\}_{n=0}^N,
+\end{align}
+og en uendelig talfølge $B$ af tal $b_n$ noteres
+\begin{align}\label{eq:infseq}
+B = \{b_n\}_{n=0}^\infty.
+\end{align}
+\end{defn}
+\begin{exa}
+Et eksempel på en endelig talfølge kunne være $(1,4,7)$ eller $(10,11,12)$. Et eksempel på en uendelig talfølge kunne være $A= (0,1,2,3,\hdots)$. 
+
+Hvis vi vil omskrive $A$ til formen \eqref{eq:infseq}, så skal vi finde mønsteret i listen - altså den underliggende struktur, der danner den præsenterede delfølge. Mønsteret her er, at det $n$'te tal i følgen blot er det $n$'te naturlige tal. Derfor må følgen kunne skrives
+\begin{align*}
+A = \{n\}_{n=0}^\infty.
+\end{align*}
+Hvis følgen derimod er $B = (1,2,3,\hdots)$, så må denne kunne omskrives til
+\begin{align*}
+B = \{n+1\}_{n=0}^\infty,
+\end{align*}
+og hvis følgen er $C= (1,\frac{1}{2},\frac{1}{3},\hdots)$, så kan vi skrive denne som
+\begin{align*}
+C = \left\{ \frac{1}{n+1}\right\}_{i=0}^\infty.
+\end{align*}
+\end{exa}
+\section*{Grænseværdier gennem talfølger}
+\stepcounter{section}
+
+Grænseværdien for en talfølge er løst sagt det tal, som tallene i talfølgen går mod, når $n$ går mod $\infty$. Vi noterer dette som $\lim_{n\to \infty} a_n$ for en talfølge $\{a_n\}_{n=0}^{\infty}$. Hvis følgen ikke går mod et tal, men går mod $\pm\infty$, så siger vi, at følgen går mod $\pm\infty$. Hvis følgen ikke går mod nogen af delene, så siger vi, at følgen ikke konvergerer. 
+\begin{exa}
+Vi har følgende grænseværdier for følger:
+\begin{align*}
+\lim_{n \to \infty} n  &= \infty,\\
+\lim_{n\to \infty} \frac{1}{n} &= 0,\\
+\lim_{n\to \infty} -n &= -\infty.\\
+\end{align*}
+\end{exa}
+\begin{exa}
+Hvis vi tager grænseværdien $\lim_{n\to \infty}$ af et polynomium $n^2+2n+10$, så vil polynomiet for et stort nok $n$ opfylde, at $n^2 + 2n+10 \approx n^2$. Dette gælder også mere generelt. Derfor får vi for store nok $n$, at følgen
+\begin{align*}
+\frac{n^2+100n+1}{2n^2+1} \approx \frac{n^2}{2n^2}, 
+\end{align*} 
+og grænseværdien for denne følge vil være
+\begin{align*}
+\lim_{n\to \infty}\frac{n^2+100n+1}{2n^2+1} = \frac{1}{2}
+\end{align*}
+\end{exa}
+
+%\section*{Kontinuitet}
+%Vi siger, at en funktion $f$ (i en variabel) er kontinuert i et punkt $x$, hvis grænseværdien fra højre og venstre i punktet $x$ er det samme som funktionsværdien i $x$. Mere præcist:
+%\begin{defn}
+%En funktion $f$ siges at være kontinuert i et punkt $x$, hvis 
+%\begin{align*}
+%\lim_{h\to 0}f(x+h) = \lim_{h\to 0}f(x-h) = f(x).
+%\end{align*}
+%Hvis en funktion $f$ er kontinuert for alle punkter $x$ i et interval $I$, så siger vi, at funktionen $f$ er kontinuert på $I$. Ydermere, hvis $f$ er kontinuert på hele dens domæne, så siger vi, at $f$ er overalt kontinuert. 
+%\begin{exa}
+%Funktionen 
+%\begin{align*}
+%f(x) = \begin{cases} x^2, &\textnormal{ hvis } x<2,\\
+%-2x , &\textnormal{ hvis }x \geq 2.
+%\end{cases}
+%\end{align*}
+%er kontinuert overalt på nær i punktet $2$, da $\lim_{h\to 0}f(2+h) = -4 = f(2)$, men $\lim_{h\to 0}f(2-h) = 4$. Dette kan også ses af Fig. \ref{fig:ikkekont}
+%\begin{figure}[H]
+%\includegraphics[scale=1]{Billeder/ikkekont}
+%\caption{Graf for funktionen $f$.}
+%\label{fig:ikkekont}
+%\end{figure} 
+%\end{exa}
+%\end{defn}
+
+\section*{Opgave 1}
+Find de første 5 tal i følgende talfølger:
+\begin{align*}
+&1) \  \{2n+1\}_{n=0}^\infty  &&2) \  \{(-1)^n\}_{n=0}^{\infty}   \\
+&3) \  \{n^2\}_{n=0}^\infty  &&4) \  \left\{\frac{1}{(n+1)^3}\right\}_{n=0}^\infty  \\
+&5) \  \{10\cdot2^n\}_{n=0}^\infty  &&6) \  \{ (-2)^n\}_{n=0}^\infty   \\
+&7) \  \{3+4n\}_{n=0}^\infty  &&8) \  \left\{\frac{n-1}{n+1}\right\}_{n=0}^\infty   
+\end{align*}
+
+\section*{Opgave 2}
+Opskriv følgende uendelige talfølger på formen $\{a_n\}_{n=0}^\infty$.
+\begin{align*}
+&1) \  (2,3,4,5,\hdots)   &&2) \ (0,2,4,6,8\hdots)    \\
+&3) \  (1,3,5,7\hdots)   &&4) \ (1,2,4,8,16\hdots)    \\
+&5) \  \left(1,\frac{1}{2},\frac{1}{4},\frac{1}{8},\frac{1}{16}\hdots\right)   &&6) \ (1,3,9,27,\hdots)    \\
+&7) \  (1,3,6,10,15,\hdots)   &&8) \  (3,6,9,12,\hdots)\\
+&9) \ (1,-1,1,-1,\hdots)   &&10) \ (2,10,50,250,1250,\hdots)
+\end{align*} 
+\section*{Opgave 3}
+Find grænseværdien for følgende talfølger
+\begin{align*}
+&1) \ \lim_{n\to \infty} n^2 &&2) \ \lim_{n\to \infty} \frac{1}{n}   \\
+&3) \ \lim_{n\to \infty} \frac{n^2+1}{i} &&4) \ \lim_{n\to \infty}\frac{n}{1000}   \\
+&5) \ \lim_{n\to \infty} \frac{n+2}{2n-10} &&6) \ \lim_{n\to \infty} 2n^3-\frac{1}{n^3}+10   \\
+&7) \ \lim_{n\to \infty} \frac{(n+2)(2n-1)}{3n^2-1} &&8) \ \lim_{n\to \infty}\frac{1+2+\cdots+n}{n^2}   \\
+\end{align*}

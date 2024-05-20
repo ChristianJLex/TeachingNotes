@@ -1,0 +1,166 @@
+\begin{center}
+\Huge
+Partielle afledede
+\end{center}
+
+\section*{Partielle afledede}
+\stepcounter{section}
+Vi så sidste gang på snitkurver og de funktioner, hvis grafer danner snitkurverne. Disse funktioner kalder vi \textit{snitfunktioner}. Mere præcist, hvis vi har en funktion 
+\begin{align*}
+f: \mathbb{R}^2 \to \mathbb{R},
+\end{align*}
+så har vi snitfunktionerne $g_k : \mathbb{R} \to \mathbb{R}$ og $h_k : \mathbb{R} \to \mathbb{R}$ givet ved henholdsvist
+\begin{align*}
+g_k(y) = f(k,y), \ h_k(x) = f(x,k),
+\end{align*}
+som begge er funktioner af én variabel. Hvis disse er differentiable, så kan vi bestemme deres afledede funktion præcist som vi er vant til. 
+\begin{exa}
+	Lad $f$ være givet ved
+	\begin{align*}
+		f(x,y) = x^2+2y.
+	\end{align*}
+	Så har vi for hvert $k$ snitfunktionerne
+	\begin{align*}
+		g_k(y) = f(k,y) = k^2+2y
+	\end{align*}
+	og 
+	\begin{align*}
+		h_k(x) = f(x,k) = x^2+2k.
+	\end{align*}
+	Disse er differentiable funktioner. Derfor kan de differentieres som sædvanligt:
+	\begin{align*}
+		\frac{d}{dy} g_k(y) = 2,
+	\end{align*}
+	og 
+	\begin{align*}
+		\frac{d}{dx} h_k(x) = 2x.
+	\end{align*}
+\end{exa}
+Det er dog en smule besværligt at skulle konstruere en snitfunktion hver gang vi vil bestemme en sådan afledt. Derfor defineres \textit{de partielle afledede} af en funktion af to variable.
+\begin{defn}
+	Lad $f:\mathbb{R}^2 \to \mathbb{R}$ være en funktion af to variable. Så defineres den partielle afledede i $(x,y)$ til $f$ med hensyn til $x$ som
+	grænseværdien
+	\begin{align*}
+	\frac{\partial}{\partial x} f(x,y) = \lim_{h\to 0} \frac{f(x+h,y) -f(x,y)}{h},
+	\end{align*} og den partielle afledede i $(x,y)$ med hensyn til $y$ defineres som grænseværdien
+	\begin{align*}
+	\frac{\partial}{\partial y} f(x,y) = \lim_{h\to 0} \frac{f(x,y+h)-f(x,y)}{h}.
+	\end{align*}
+\end{defn}
+
+Det er ikke nødvendigvist givet, at disse grænseværdier eksisterer, men vi vil kun betragte tilfælde, hvor de eksisterer. Vi noterer også $\frac{\partial}{\partial x}f$ som $f'_x$, og tilsvarende noteres $\frac{\partial}{\partial y}f $ som $f'_y$.
+
+Når vi laver partiel differentiation med henhold til $x$, så differentierer normalt mht. $x$ og betragter $y$ som en konstant og vice versa. 
+
+\begin{exa}
+	Rumfanget af en cylinder afhænger af to variable - radius $r$ og højde $h$. Rumfanget af en cylinder er givet ved
+	\begin{align*}
+		R(h,r) = h \pi r^2.
+	\end{align*}
+	De partielle afledede af cylinderen er derfor
+	\begin{align*}
+		\frac{\partial}{\partial h}R(h,r) = \pi r^2,
+	\end{align*}
+	og 
+	\begin{align*}
+		\frac{\partial}{\partial r}R(h,r) = 2h\pi r.
+	\end{align*}
+	Væksten i højdens retning er derfor konstant, hvorimod væksten i radius retning er lineært voksende. 
+\end{exa}
+
+\begin{exa}
+	En funktion $f:\mathbb{R}^2 \to \mathbb{R}$ er givet ved
+	\begin{align*}
+		f(x,y) = \ln(x) + \sqrt{y}.
+	\end{align*}	 
+	Så er de partielle afledede givet ved
+	\begin{align*}
+		f'_x(x,y) = \frac{1}{x}
+	\end{align*}
+	og
+	\begin{align*}
+		f'_y(x,y) = \frac{1}{2\sqrt{y}}.
+	\end{align*}
+\end{exa}
+
+Til slut defineres \textit{gradienten} for en funktion $f:\mathbb{R}^2 \to \mathbb{R}$.
+\begin{defn}[Gradient]
+	Lad $f:\mathbb{R}^2 \to \mathbb{R}$ være givet. Så defineres gradienten til $f$ som vektoren
+	\begin{align*}
+		\nabla f = 
+		\begin{pmatrix}
+			\frac{\partial}{\partial x} f(x,y) \\
+			\frac{\partial}{\partial y} f(x,y)
+		\end{pmatrix}
+	\end{align*}
+\end{defn}
+Gradienten for en funktion er den retning, hvor funktionen vokser mest i et givent punkt. 
+
+\section*{Opgave 1}
+
+Bestem de partielle afledede til følgende funktioner
+\begin{align*}
+	&1)  \ f(x,y) = x^2+3x+y   &&2) \  f(x,y) = xy+x^2+4y   \\
+	&3)  \ f(x,y) = x^2 + xy + y^2   &&4) \  f(x,y) = \sqrt{xy}+\frac{1}{x+y}   \\
+	&5)  \ f(x,y) = (x+y)(x-y)   &&6) \  f(x,y) = 10(3x+2y)^2   \\
+	&7)  \ f(x,y) = \cos(x)\sin(y)   &&8) \  f(x,y) = \cos(x+y)\sin(yx)  \\
+\end{align*}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Lad $f$ være givet ved
+	\begin{align*}
+		f(x,y) = x^2+xy+y^2.
+	\end{align*}
+	Bestem
+	\begin{align*}
+		\frac{\partial^2}{\partial x \partial y}f(x,y),
+	\end{align*}
+	og
+	\begin{align*}
+		\frac{\partial^2}{\partial y \partial x}f(x,y),
+	\end{align*}
+	og sammenlign dine resultater
+	\item Lad $f$ være givet ved
+	\begin{align*}
+		f(x,y) = e^{(x-y)(x+y)}
+	\end{align*}
+	Bestem
+	\begin{align*}
+		\frac{\partial^2}{\partial x \partial y}f(x,y),
+	\end{align*}
+	og
+	\begin{align*}
+		\frac{\partial^2}{\partial y \partial x}f(x,y),
+	\end{align*}
+	og sammenlign dine resultater.
+\end{enumerate}
+
+\section*{Opgave 3}
+Bestem gradienten til følgende funktioner:
+\begin{align*}
+	&1)  \ f(x,y) = x^2+y^2   &&2) \  f(x,y) = (x-2y)(3y-4x^2)   \\
+	&3)  \ f(x,y) = \sqrt{x^2+y}   &&4) \  f(x,y) = e^{x^2+xy+y^2}   \\
+	&5)  \ f(x,y) = \ln(x+y+10)   &&6) \  f(x,y) = (x+y)^5  
+\end{align*}
+
+\section*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Lad $f$ være givet ved
+		\begin{align*}
+			f(x,y) = x^2+xy+y^2.
+		\end{align*}
+		Bestem gradienten af $f$ i punktet $(-1,3)$.
+	\item Lad $f$ være givet ved
+	\begin{align*}
+		f(x,y) = \frac{1}{x+y}.
+	\end{align*}
+	Bestem gradienten af $f$ i punktet $(2,-4)$
+\end{enumerate}
+
+\section*{Opgave 5}
+I følgende opgave skal I bevise, at partiel differentiation fungerer nøjagtigt som normal differentiation i tilfældet at vi kan dele vores funktion af to variable op på en pæn måde.
+\begin{enumerate}[label=\roman*)]
+	\item Vis, at hvis $f(x,y) = g(x)+h(y)$, så er $f'_x(x,y) = g'(x)$ og $f'_y(x,y) = h'(y)$
+	\item Vis, at hvis $f(x,y) = g(x)\cdot h(y)$ så er $f'_x(x,y) = g'(x)h(y)$ og $f'_y(x,y) = g(x)h'(y).$
+\end{enumerate}
