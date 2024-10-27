@@ -1,0 +1,360 @@
+\begin{center}
+\Huge
+Projektioner af vektorer
+\end{center}
+
+\section*{Projektioner}
+\stepcounter{section}
+
+Har vi to vektorer $\vv{a}$ og $\vv{b}$, så kan vi være interesserede i at bestemme den vektor $\vv{a_{\vv{b}}}$, der peger i samme retning som $\vv{b}$ og som i en forstand er så tæt på $\vv{a}$ som muligt. Vi kalder i et sådant tilfælde vektoren $\vv{a_{\vv{b}}}$ for projektionen af $\vv{a}$ på $\vv{b}$. Vi skriver også 
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \vv{a}_{\vv{b}}.
+\end{align*}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle,
+		xlabel = $x$,
+		ylabel = $y$,
+		ticks = none, 
+		xmin = -1, xmax = 6,
+		ymin = -1, ymax = 6,
+		]
+			\draw[-{Stealth[scale = 1.3]}, color = blue!40, thick] (axis cs: 0,0) -- (axis cs: 5,1);
+			\draw[-{Stealth[scale = 1.3]}, color = red!40, thick] (axis cs: 0,0) -- (axis cs: 3,3);
+			\draw[dashed, thick, color = red!40] (axis cs:  45/13, 9/13) -- (axis cs: 3,3);
+			\draw[dashed, red!40, thick] (axis cs: 45/13-0.4-0.4*0.2, 9/13-0.4*0.2+0.4) -- (axis cs: 45/13-0.4, 9/13-0.4*0.2);
+			\draw[dashed, red!40, thick] (axis cs: 45/13-0.4-0.4*0.2, 9/13-0.4*0.2+0.4) -- (axis cs: 45/13-0.4*0.2, 9/13+0.4);
+			\node[color = blue!40] at (axis cs: 5,1-0.5) {$\vv{b}$};
+			\node[color = red!40] at (axis cs: 3,3+0.5) {$\vv{a}$};
+			\node[color = purple] at (axis cs:  45/13, 9/13-0.4) {$\vv{a_{\vv{b}}}$};
+			\draw[-{Stealth[scale = 1.3]}, color = purple, thick] (axis cs: 0,0) -- (axis cs:  45/13, 9/13);
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+Vi starter med at vise, hvordan vi finder projektionen af en vektor på en anden vektor. 
+\begin{setn}[Projektionssætningen]
+For to vektorer $\vv{a}$ og $\vv{b}$ er projektionen af $\vv{a}$ på $\vv{b}$, som vi betegner
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \vv{a}_{\vv{b}}, 
+\end{align*}
+givet ved
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2} \vv{b}.
+\end{align*}
+Længden af  $\vv{a}_{\vv{b}}$ er givet ved
+\begin{align*}
+\left|\vv{a}_{\vv{b}}\right| = \frac{|\vv{a}\cdot \vv{b}|}{|\vv{b}|}
+\end{align*}
+\end{setn}
+\begin{proof}
+Af konstruktionen af projektionen $\vv{a_{\vv{b}}}$ så findes der et tal $k$, så 
+\begin{align*}
+k\vv{b} = \vv{a_{\vv{b}}}.
+\end{align*}
+Lad $n$ være en normalvektor til $\vv{b}$, der opfylder, at 
+\begin{align*}
+\vv{a_{\vv{b}}} + \vv{n} = \vv{a}.
+\end{align*}
+Vi har så, at 
+\begin{align*}
+\vv{n} = \vv{a} - \vv{a_{\vv{b}}}.
+\end{align*}
+Da $\vv{n}$ er en normalvektor til $\vv{b}$, så får vi følgende prikprodukt.
+
+\begin{align*}
+\vv{n} \cdot \vv{b}=0 &\Leftrightarrow (\vv{a}-\vv{a_{\vv{b}}}) \cdot \vv{b} = 0 \\
+&\Leftrightarrow \vv{a}\cdot \vv{b} - \vv{a_{\vv{b}}}\cdot \vv{b} = 0 \\
+&\Leftrightarrow \vv{a}\cdot \vv{b} = \vv{a_{\vv{b}}}\cdot \vv{b} = k \vv{b} \cdot \vv{b} \\
+&\Leftrightarrow k  = \frac{\vv{a}\cdot \vv{b}}{\vv{b} \cdot \vv{b}} = \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}
+\end{align*}
+
+Derfor får vi, at 
+\begin{align*}
+\vv{a_{\vv{b}}} &= k \vv{b}\\
+&= \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2} \vv{b}.
+\end{align*} 
+
+Vi kan nu bestemme længden af vektoren:
+\begin{align*}
+|\vv{a_{\vv{b}}}| &= \left|\frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}\vv{b}\right|\\
+&= \left|\frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}\right||b| \\
+&= \frac{|\vv{a} \cdot \vv{b}|}{|b|}
+\end{align*}
+\end{proof}
+
+\begin{exa}
+Vi skal bestemme projektionen af vektoren 
+\begin{align*}
+\vv{a} = \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}
+\end{align*}
+på vektoren 
+\begin{align*}
+\vv{b} = \begin{pmatrix}
+3 \\ 4
+\end{pmatrix}.
+\end{align*}
+Vi bestemmer først
+\begin{align*}
+\vv{a} \cdot \vv{b} = \begin{pmatrix}
+1 \\ 2
+\end{pmatrix}
+\cdot \begin{pmatrix}
+3 \\ 4
+\end{pmatrix}
+= 1\cdot 2 + 3\cdot 4 = 14
+\end{align*}
+Vi bestemmer så
+\begin{align*}
+|b|^2 = (\sqrt{5^2+7^2})^2 = 25
+\end{align*}
+Vi kan nu bestemme projektionen $\vv{a_{\vv{b}}}$ som
+\begin{align*}
+\vv{a_{\vv{b}}} &= \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2}\vv{b} \\&= \frac{14}{25}\begin{pmatrix}
+3 \\ 4
+\end{pmatrix} = \begin{pmatrix}
+\frac{42}{25} \\ \frac{58}{25}
+\end{pmatrix}
+\end{align*}
+\end{exa}
+
+\begin{exa}
+Vi skal projicere vektoren $\vv{u}$ givet ved
+\begin{align*}
+	\vv{u}=
+	\begin{pmatrix}
+		2 \\ 3
+	\end{pmatrix}
+\end{align*}
+ned på linjen med parameterfremstillingen 
+\begin{align*}
+	\begin{pmatrix}
+		x \\ y
+	\end{pmatrix} =
+	\begin{pmatrix}
+		-1 \\ -1
+	\end{pmatrix}+ t
+	\begin{pmatrix}
+		5 \\ 1
+	\end{pmatrix}.
+\end{align*}
+Vi skal først projicere ned på retningsvektoren
+\begin{align*}
+	\vv{r} = 
+	\begin{pmatrix}
+		5 \\ 1
+	\end{pmatrix}.
+\end{align*}
+Dette gøres:
+\begin{align*}
+	\vv{v}_{\vv{r}} = \frac{\vv{v}\cdot \vv{r}}{|\vv{r}|^2}\vv{r} = 
+	\begin{pmatrix}
+		\frac{5}{2} \\ \frac{1}{2}	
+	\end{pmatrix}.
+\end{align*}
+
+\end{exa}
+
+\section*{Opgave 1}
+Projicér følgende vektorer $\color{purple} \vv{a}$ ned på vektorerne $ \color{blue!60} \vv{b}$ både ved at tegne projektionen på figuren og 
+ved at beregne projektionen. 
+\begin{center}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -0.5, ymax = 3.5, 
+	grid, x = 1.5cm, y = 1.5cm]
+		\draw[-{Stealth[scale = 1.6]}, thick, color = blue!60] (axis cs:0,0) --(axis cs: 4,1);
+		\draw[-{Stealth[scale = 1.6]}, thick, color = purple] (axis cs:0,0) --(axis cs: 2,2);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -0.5, ymax = 3.5, 
+	grid, x = 1.7cm, y = 1.7cm]
+		\draw[-{Stealth[scale = 1.6]}, thick, color = blue!60] (axis cs:0,0) --(axis cs: 2,3);
+		\draw[-{Stealth[scale = 1.6]}, thick, color = purple] (axis cs:0,0) --(axis cs: 2,1);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\begin{center}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -3.5, ymax = 1.5, 
+	grid]
+		\draw[-{Stealth[scale = 1.6]}, thick, color = blue!60] (axis cs:0,0) --(axis cs: 2,-1);
+		\draw[-{Stealth[scale = 1.6]}, thick, color = purple] (axis cs:0,0) --(axis cs: 4,1);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -3.5, xmax = 3.5, ymin = -3.5, ymax = 3.5, 
+	grid]
+		\draw[-{Stealth[scale = 1.6]}, thick, color = blue!60] (axis cs:0,0) --(axis cs: 3,3);
+		\draw[-{Stealth[scale = 1.6]}, thick, color = purple] (axis cs:0,0) --(axis cs: -3,-2);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\begin{center}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -3.5, xmax = 3.5, ymin = -0.5, ymax = 4.5, 
+	grid, x = 1.6cm, y = 1.6cm]
+		\draw[-{Stealth[scale = 1.6]}, thick, color = blue!60] (axis cs:0,0) --(axis cs: -2,4);
+		\draw[-{Stealth[scale = 1.6]}, thick, color = purple] (axis cs:0,0) --(axis cs: 1,3);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -3.5, xmax = 3.5, ymin = -3.5, ymax = 3.5, 
+	grid]
+		\draw[-{Stealth[scale = 1.6]}, thick, color = blue!60] (axis cs:0,0) --(axis cs: 3,2);
+		\draw[-{Stealth[scale = 1.6]}, thick, color = purple] (axis cs:0,0) --(axis cs: -2,3);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+
+
+\section*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			1 \\ -2
+		\end{pmatrix}
+	\end{align*}
+	ned på linjen givet ved ligningen
+	\begin{align*}
+		-1(x-12) + 9(y-1) = 0.
+	\end{align*}
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			6 \\  7
+		\end{pmatrix}
+	\end{align*}
+	ned på linjen givet ved ligningen
+	\begin{align*}
+		-7(x+1) + 2(y-2) = 0.
+	\end{align*}
+	\item Undersøg dit resultat i GeoGebra.
+\end{enumerate}
+
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Projicér vektoren $\vv{v}$ givet ved
+	\begin{align*}
+		\vv{v} = 
+		\begin{pmatrix}
+			1 \\ 1
+		\end{pmatrix}
+	\end{align*} ned på vektoren
+	\begin{align*}
+		\begin{pmatrix}
+			2 \\ 3
+		\end{pmatrix}.
+	\end{align*}
+	Tegn vektorerne i GeoGebra og undersøg, om du har fundet den korrekte projektionsvektor. 
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			3\\5
+		\end{pmatrix}
+	\end{align*}
+	ned på vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			-2 \\ 4
+		\end{pmatrix}.
+	\end{align*}
+	Tegn vektorerne i GeoGebra og undersøg, om du har fundet den korrekte projektionsvektor.
+\end{enumerate}
+
+
+\section*{Opgave 4}
+
+\begin{enumerate}[label=\roman*)]
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			-5 \\ -3
+		\end{pmatrix}
+	\end{align*}
+	ned på linjen givet ved parameterfremstillingen
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			-7 \\ 2
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			1 \\ 1
+		\end{pmatrix}
+	\end{align*}
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			-1 \\ 6
+		\end{pmatrix}
+	\end{align*}
+	ned på linjen givet ved parameterfremstillingen
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			2 \\ -9
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			6 \\ -1
+		\end{pmatrix}
+	\end{align*}
+	\item Undersøg dit resultat i GeoGebra.
+\end{enumerate}
+
+\section*{Opgave 5}
+
+\begin{enumerate}[label=\roman*)]
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			1 \\ -2
+		\end{pmatrix}
+	\end{align*}
+	ned på linjen givet ved ligningen
+	\begin{align*}
+		-1(x-12) + 9(y-1) = 0.
+	\end{align*}
+	\item Projicér vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			6 \\  7
+		\end{pmatrix}
+	\end{align*}
+	ned på linjen givet ved ligningen
+	\begin{align*}
+		-7(x+1) + 2(y-2) = 0.
+	\end{align*}
+	\item Undersøg dit resultat i GeoGebra.
+\end{enumerate}
+
+\section*{Opgave 6}
+Argumentér både geometrisk og ved hjælp af projektionsformlen for, at projektionen af en vektor ned på en ortogonal vektor giver nulvektoren. 
+

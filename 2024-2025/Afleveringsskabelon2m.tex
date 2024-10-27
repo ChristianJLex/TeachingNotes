@@ -1,0 +1,227 @@
+\documentclass[12pt,x11names,a4paper]{article}
+\input{preamble}
+
+
+\newgeometry{margin=2cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Nørre Gymnasium\\2.m
+}
+\cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
+
+%Husk at rette modul og dato!
+\lhead{Aflevering 2\\ Matematik B
+}
+\chead{20. september
+}
+
+\begin{document}
+
+%\includepdf[pages=-]{Forsider/aarsprove_1v.pdf}
+\savegeometry{art}
+
+\begin{titlepage}
+\newgeometry{margin=0pt}
+
+\begin{minipage}{0.27\textwidth}
+
+\begin{tikzpicture}[overlay]
+\fill[top color = NorregGroen!40, bottom color = NorregGroen] (6,10) rectangle (-10,-30);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.73\textwidth}
+\begin{center}
+\phantom{h} \vspace{1cm}\\
+\hspace{4cm}
+\includegraphics[scale = 1]{Billeder/Norreg.png} \\
+\phantom{h} \vspace{5cm}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\phantom{h}\\
+{\fontsize{50}{60}\selectfont Aflevering 2}\\
+\phantom{h}\\
+\rule{0.7\textwidth}{0.3mm}\\
+\Large 2024\\
+\Large 2.m Ma
+
+\end{center}
+\end{minipage}
+\end{titlepage}
+\loadgeometry{art}
+
+%Udfyld afsnit herunder og lav til egen Latex-fil
+
+%Kopier følgende til overskrift:
+
+%\begin{center}
+%\Huge
+%Aflevering 1
+%\end{center}
+%\section*{Opgave 1}
+%\stepcounter{section}
+\begin{center}
+%Opgavesætter er delt i to dele:\\
+%Delprøve 1 kun med den centralt udmeldte formelsamling.\\
+%Delprøve 2 med alle hjælpemidler.
+\end{center}
+
+\section*{Krav til formidling af din besvarelse}
+
+Ved bedømmelse af helhedsindtrykket af besvarelsen af de enkelte opgaver lægges særlig vægt på følgende fire punkter:
+\begin{itemize}
+\item[$\cdot$] \textbf{Redegørelse og dokumentation for metode} \\
+Besvarelsen skal indeholde en redegørelse for den anvendte løsningsstragegi med dokumentation i form af et passende antal mellemregninger \textit{eller} matematiske forklaringer på metoden, når et matematisk værktøjsprogram anvendes.
+\item[$\cdot$] \textbf{Figurer, grafer og andre illustrationer} \\
+Besvarelsen skal indeholde hensigtsmæssig brug af figurer, grafer og andre illustrationer, og der skal være tydelige henvisninger til brug af disse i den forklarende tekst.
+\item[$\cdot$] \textbf{Notation og layout}\\
+Besvarelsen skal i overensstemmelse med god matematisk skik opstilles med hensigtsmæssig brug af symbolsprog, og med en redegørelse for den matematiske notation, der indføres og anvendes, og som ikke kan henføres stil standardviden.
+\item[$\cdot$] \textbf{Formidling og forklaring}\\
+Besvarelsen af rene matematikopgaver skal indeholde en angivelse af givne oplysninger og korte forklaringer knyttet til den anvendte løsningsstrategi beskrevet med brug af almindelig matematisk notation. 
+
+Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en kort præsentation af modellens kontekst, herunder betydning af modellens parametre. De enkelte delspørgsmål skal afsluttes med en præcis konklusion præsenteret i et klart sprog i relation til konteksten.
+\end{itemize}
+
+\newpage
+
+\begin{center}
+\LARGE
+Delprøve uden hjælpemidler 
+\end{center}
+\stepcounter{section}
+
+\begin{opgavetekst}{Opgave 1}
+	En funktion $f$ er givet ved 
+	\begin{align*}
+		f(x) = 3x^2+2x+1
+	\end{align*}
+\end{opgavetekst}
+	\begin{delopgave}{}{1}
+		Bestem $f(7)$.
+	\end{delopgave}
+	\begin{delopgave}{}{2}
+		Bestem det punkt, hvor grafen for $f$ skærer $y$-aksen.
+	\end{delopgave}
+\begin{opgavetekst}{Opgave 2}
+	Punkterne $A(0,1)$, $B(-4,2)$ og  $C(5,3)$ er givet. 
+\end{opgavetekst}
+	\begin{delopgave}{}{1}
+		Bestem vektoren $\vv{BC}$.
+	\end{delopgave}
+	\begin{delopgave}{}{2}
+		Bestem en parameterfremstilling for linjen $l$, der går gennem $A$ og $B$.
+	\end{delopgave}
+	\begin{delopgave}{}{3}
+		Bestem en ligning for linjen $m$, der går gennem $A$ og $C$. 
+	\end{delopgave}
+	\begin{delopgave}{}{4}
+		Bestem skæringspunktet mellem $l$ og $m$. 
+	\end{delopgave}
+\begin{opgavetekst}{Opgave 3}
+	En linje $l$ er givet ved ligningen 
+	\begin{align*}
+		2(x-1) + 3(y+4) = 0
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem en ligning for linjen $m$, der er orthogonal med $l$ og som skærer gennem $P(-2,-4)$.
+\end{delopgave}
+\begin{opgavetekst}{Opgave 4}
+	En ligning er givet ved
+	\begin{align*}
+		2(s+K) = 24s
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Isolér $K$ i ligningen. 
+\end{delopgave}
+\begin{opgavetekst}{Opgave 5}
+	To punkter $P(1,2)$ og $Q(3,32)$ er givet. Funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = b\cdot a^x
+	\end{align*}
+	skærer gennem $P$ og $Q$.
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem konstanterne $a$ og $b$
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Udregn funktionsværdien $f(2)$. 
+\end{delopgave}
+
+\newpage
+\begin{center}
+\LARGE
+Delprøve med hjælpemidler 
+\end{center}
+\stepcounter{section}
+
+\begin{opgavetekst}{Opgave 6}
+	I en bakteriekoloni kan bakterieantallet $B$ i de første 24 timer beskrives ved en eksponentiel sammenhæng. Et datasæt hvori bakterieantallet $B$ til tiden $t$ er givet i 
+	Tab. \ref{tab:bakterie}.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+		$t$ (timer) &1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+		\hline
+		$B$ (bakterier i mio.) & 19.1 & 22.6 & 29.1 & 32.9 & 44.0 & 50.4 & 65.1
+		\end{tabular}
+		\caption{Antallet af bakterier $(B)$ i mio. som funktion af tiden $(t)$ i timer. }
+		\label{tab:bakterie}
+	\end{table}\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Brug datasættet fra Tab. \ref{tab:bakterie} til at bestemme en forskrift for $B$.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem, hvor mange bakterier, der er efter 10 timer. 
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Afgør, hvornår antallet af bakterier overstiger 1 mia.
+\end{delopgave}
+\begin{opgavetekst}{Opgave 7}
+	To linjer $l$ og $m$ er givet ved følgende ligning og parameterfremstilling henholdsvist:
+	\begin{align*}
+		&l: \ 2(x-5)-6(y+7) = 0 \\
+		&m: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix}=
+		\begin{pmatrix}
+			1 \\ 1
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			-2 \\ -3
+		\end{pmatrix}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem en retningsvektor for $l$ og $m$ og bestem derefter vinklen mellem linjerne. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Projicér retningsvektoren for $l$ ned på retningsvektoren for $m$.  
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Bestem skæringspunktet mellem $l$ og $m$.
+\end{delopgave}
+\begin{opgavetekst}{Opgave 9}
+	Et polynomium $f$ er givet ved
+	\begin{align*}
+		f(x) = x^5+3x^4+x^2-4.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem graden for $f$ og brug denne til at bestemme det maksimale antal rødder for $f$. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Tegn grafen for $f$ på intervallet $[-4,2]$.
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Bestem rødderne for $f$ på intervallet $[-4,2]$.
+\end{delopgave}
+
+\end{document}
+
+
+
+

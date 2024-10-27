@@ -1,0 +1,191 @@
+
+\begin{center}
+\Huge
+Afstand mellem linje og punkt
+\end{center}
+
+\section*{Afstand mellem linje og punkt}
+\stepcounter{section}
+
+Vi kan bruge projektioner af vektorer til at bestemme afstanden mellem et punkt $P$ og en linje $l$ i planen. Det er ikke umiddelbart klart ud fra formlen at det er projektioner, vi bruger, men det vil ses af beviset. Afstanden findes ved følgende sætning. 
+
+\begin{setn}[Afstand mellem punkt og linje]
+Har vi et punkt $Q(x_1,y_1)$ og en linje $l$ givet ved ligningen
+\begin{align*}
+ax+by+c = 0, 
+\end{align*}
+så kan vi bestemme afstanden mellem $l$ og $Q$ ved
+\begin{align*}
+\textnormal{dist}(Q,l) = \frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}
+\end{align*}
+\end{setn}
+\begin{proof}
+Vi vælger et punkt  $P(x_0,y_0)$ på $l$. Da $l$ har ligningen
+\begin{align*}
+ax+by+c = 0, 
+\end{align*}
+må der gælde, at 
+\begin{align*}
+ax_0+by_0+c = 0, 
+\end{align*}
+og derfor har vi et udtryk for $c$ givet ved
+\begin{align*}
+c = -ax_0-by_0.
+\end{align*}
+Vektoren $\vv{PQ}$ er givet ved
+\begin{align*}
+\vv{PQ} = \begin{pmatrix}
+x_1 - x_0 \\ y_1 - y_0.
+\end{pmatrix}
+\end{align*}
+Vi har en normalvektor til $l$ givet ved 
+\begin{align*}
+\vv{n}=
+\begin{pmatrix}
+a \\ b
+\end{pmatrix}
+\end{align*}
+Vi bemærker nu, at længden af projektionen $\vv{PQ_{\vv{n}}}$ må være afstanden fra $l$ til $Q$. Vi bestemmer derfor længden af denne projektion:
+\begin{align*}
+\left|\vv{PQ_{\vv{n}}}\right| &= \frac{|\vv{PQ_{\vv{n}}}\cdot \vv{n}|}{|\vv{n}|} \\ 
+&= \frac{\left|\begin{pmatrix}
+x_1-x_0 \\ y_1 - y_0
+\end{pmatrix}\cdot \begin{pmatrix}
+a \\ b
+\end{pmatrix} \right|}{\left|\begin{pmatrix}
+a \\ b
+\end{pmatrix}\right|}\\
+&=\frac{|a(x_1-x_0)+b(y_1-y_0)|}{\sqrt{a^2+b^2}}\\
+&= \frac{|ax_1+by_1 -ax_0-by_0|}{\sqrt{a^2+b^2}}\\
+&= \frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}.
+\end{align*}
+\end{proof}
+Argumentationen i beviset er beskrevet på Figur \ref{fig:afstand}
+\begin{figure}[H]
+	\centering
+	\resizebox{0.7\textwidth}{0.7\textwidth}{
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle, xmin = -1, ymin = -1, xmax = 4, ymax = 4]
+			\addplot[color = teal, thick] {0.5*x+0.5 };
+			\draw[-{Stealth[scale = 1.4]}, thick, teal]
+			 (axis cs: 2,1.5) -- (axis cs:1,3.5);
+			 \node at (axis cs: 1+0.4,3.5) {$\vv{n}$};
+			
+			\node at (axis cs:0.5,0.75-0.3) {$P$};
+			\node at (axis cs: 1.25-0.4,3) {$Q$};
+			\draw[-{Stealth[scale = 1.4]}, thick, teal]
+			(axis cs: 2,1.5) -- (axis cs: 1.25,3);
+			
+			\draw[-{Stealth[scale= 1.4]}, thick, color = olive]
+			(axis cs: 0.5,0.75) -- (axis cs: 1.25,3); 
+			\draw[-{Stealth[scale= 1.4]}, thick, color = olive]
+			(axis cs: 0.5+1.5,0.75+0.75) -- (axis cs: 1.25+1.5,3+0.75); 
+			\draw[thick, dashed, color = teal]
+			 (axis cs: 1.25+1.5,3+0.75) -- (axis cs: 1.25,3);
+			\node at (axis cs: 1.85,2.5) {$\vv{PQ}_{\vv{n}}$};
+			\filldraw[purple] (axis cs:0.5,0.75) circle (2pt);
+			\filldraw[purple] (axis cs: 1.25,3) circle (2pt);
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\caption{Afstand fra punkt til linje}
+	\label{fig:afstand}
+\end{figure}
+
+\begin{exa}
+Vi skal bestemme afstanden fra punktet $P(1,1)$ til linjen med ligningen $4(x-1) + 3(y+1) = 0$. Vi starter med at hæve parenteserne i ligningen:
+\begin{align*}
+4(x-1) + 3(y+1) = 0 \Leftrightarrow 4x+3y-1 = 0.
+\end{align*}
+Vi kan nu bruge formlen for afstand mellem punkt og linje og får:
+\begin{align*}
+\textnormal{dist}(P,l) &= \frac{|4\cdot 1 + 3\cdot 1-1|}{\sqrt{3^2+4^2}}\\
+&=\frac{6}{5},
+\end{align*}
+hvilket er afstanden fra punktet $P$ til linjen $l$. 
+\end{exa}
+
+\begin{exa}
+Vi skal bestemme $k$, så punktet $P(4,k)$ og linjen $l$ med ligningen 
+\begin{align*}
+2x-4y-3 = 0
+\end{align*}
+har afstand 1. Vi bruger afstandsformlen og får
+\begin{align*}
+\textnormal{dist}(P,l) = \frac{|2\cdot 4-4\cdot k-3|}{\sqrt{2^2+4^2}|} = \frac{|5-4k|}{\sqrt{20}} =  1.
+\end{align*}
+Vi løser denne ligning og får, at $k \approx 0.63$. 
+\end{exa}
+
+
+
+\section*{Opgave 1}
+Tegn en linje med den korteste afstand mellem følgende linjer og punkter. Giv et overslag over længden og bestem derefter afstanden ved at bruge afstandsformlen. 
+\begin{center}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -0.5, ymax = 4.5, 
+	grid]
+		\addplot[thick, color = blue!40] {x+1};
+		\filldraw[purple]  (axis cs:2,1) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] (axis cs: 2,3) --(axis cs:4,1);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -0.5, xmax = 4.5, ymin = -0.5, ymax = 4.5, 
+	grid]
+			\addplot[thick, color = blue!40] {-x+2};
+		\filldraw[purple]  (axis cs:0,0) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] (axis cs: 1,1) --(axis cs:2,2);
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\begin{center}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -1.5, xmax = 4.5, ymin = -4.5, ymax = 1.5, 
+	grid]
+		\addplot[thick, color = blue!40] {0.5*x-3};
+		\filldraw[purple]  (axis cs:-1,-1) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] 
+		(axis cs: 2,-2) --(axis cs:3,-4);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{0.45\textwidth}{
+\begin{tikzpicture}
+	\begin{axis}[axis lines = middle, 
+	xmin = -3.5, xmax = 3.5, ymin = -3.5, ymax = 3.5, 
+	grid]
+		\addplot[thick, color = blue!40] {-1/3*x+2};
+		\filldraw[purple]  (axis cs:-3,-2) circle (2pt);
+		\draw[-{Stealth[scale = 1.4]}, thick, color = purple] 
+		(axis cs: 3,1) --(axis cs:2,-2); 
+	\end{axis}
+\end{tikzpicture}
+}
+\end{center}
+\newpage
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem $k$, så afstanden mellem linjen givet ved 
+\begin{align*}
+x-5y+10 = 0
+\end{align*}
+og punktet $P(k,1)$ har afstand $4$. Start med at tegne det i Geogebra.
+\item Bestem $b$, så $l$ med ligningen
+\begin{align*}
+y = 2x+b,
+\end{align*}
+ og punktet $P(1,1)$ har afstand 5. Start med at tegne i Geogebra.
+\end{enumerate}
+
+\section*{Opgave 3}
+Prøv at læse og forstå beviset.

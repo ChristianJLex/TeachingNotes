@@ -1,0 +1,230 @@
+
+\begin{center}
+\Huge
+Skæring mellem linjer 2
+\end{center}
+
+Det er også muligt at bestemme skæringspunkter mellem to linjer, hvis de er givet ved linjens parameterfremstilling. 
+\section*{Skæring givet parameterfremstilling}
+\stepcounter{section}
+Tilsvarende kan vi også bestemme et skæringspunkt mellem to linjer $l$ og $m$, hvis deres parameterfremstilling er givet. 
+\begin{exa}
+	Lad $l$ og $m$ være linjer med følgende parametriseringer:
+	\begin{align*}
+		&l: \ 
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			4 \\ 4
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			2 \\ -2
+		\end{pmatrix},\\
+		&m: \ 
+		\begin{pmatrix}
+			x \\ y 
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			-4 \\ 0
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			5 \\ 1
+		\end{pmatrix}.
+	\end{align*}
+	Vi skal bestemme skæringen mellem disse linjer. Vi sætter dem derfor lig hinanden:
+	\begin{align*}
+		\begin{pmatrix}
+			4 \\ 4
+		\end{pmatrix} + t_1
+		\begin{pmatrix}
+			2 \\ -2
+		\end{pmatrix} =
+		\begin{pmatrix}
+			-4 \\ 0
+		\end{pmatrix} + t_2
+		\begin{pmatrix}
+			5 \\ -1
+		\end{pmatrix}.
+	\end{align*}
+	Dette giver os to lineære ligninger med to ubekendte, som vi enten kan løse med 
+	substitution eller ved lige store koefficienters metode. Vi bruger substitutionsmetoden. 
+	Ligningerne lyder:
+	\begin{align*}
+		4 + 2t_1 = -4+5t_2
+	\end{align*} og
+	\begin{align*}
+		4-2t_1 = t_2.
+	\end{align*}
+	Anden ligning indsættes i første ligning:
+	\begin{align*}
+		&4 + 2t_1 = -4+5t_2\\
+		\Leftrightarrow \ &4 + 2t_1 = -4+5(4-2t_1)\\
+		\Leftrightarrow \ &4+2t_1 = -4+20-10t_1\\
+		\Leftrightarrow \ &8+2t_1 = 20-10t_1\\
+		\Leftrightarrow \ &12t_1 = 12\\
+		\Leftrightarrow \ &t_1 = 1.
+	\end{align*}
+	Dette indsættes i første parameterfremstilling:
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			4 \\ 4 
+		\end{pmatrix} 
+		+ 1
+		\begin{pmatrix}
+			2 \\ -2
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			6 \\ 2
+		\end{pmatrix}.
+	\end{align*}
+	Derfor skærer linjerne $l$ og $m$ hinanden i punktet $(6,2)$. 
+\end{exa}
+
+
+\section*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+
+\item Bestem skæringen mellem linjerne $l$ og $m$, der har følgende parameterfremstillinger henholdsvist:
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+1 \\ -1
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+2 \\ 1
+\end{pmatrix}
+\end{align*}
+og 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+-3 \\ 3
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+-2 \\ 1
+\end{pmatrix}
+\end{align*}
+
+\item Bestem skæringen mellem linjerne $l$ og $m$, der har følgende parameterfremstillinger henholdsvist:
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+5 \\ 2
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+3 \\ 4
+\end{pmatrix}
+\end{align*}
+og 
+\begin{align*}
+\begin{pmatrix}
+x \\ y
+\end{pmatrix}
+= 
+\begin{pmatrix}
+-1 \\ 6
+\end{pmatrix}
++
+t
+\begin{pmatrix}
+-3 \\ 6
+\end{pmatrix}
+\end{align*}
+
+	\item Bestem skæringspunktet mellem følgende to linjer. 
+	\begin{align*}
+ 		\begin{pmatrix}
+ 			x \\ y
+ 		\end{pmatrix}
+ 		=
+ 		\begin{pmatrix}
+ 			0 \\ 1
+ 		\end{pmatrix}
+ 		+
+ 		t
+ 		\begin{pmatrix}
+ 			-4 \\ 2
+ 		\end{pmatrix}
+ 	\end{align*}  
+ 	og
+ 	\begin{align*}
+ 		\begin{pmatrix}
+ 			 x \\ y
+ 		\end{pmatrix}
+ 		=
+ 		\begin{pmatrix}
+ 			5 \\ 2
+ 		\end{pmatrix}
+ 		+
+ 		t
+ 		\begin{pmatrix}
+ 			3 \\ 2
+ 		\end{pmatrix}
+ 	\end{align*}
+ 	
+ 	
+\end{enumerate}
+
+\section*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ går gennem punkterne $(1,1)$ og $(2,3)$. Bestem en parameterfremstillinger for 
+	$l$. 
+	\item En linje $m$ går gennem punkterne $(-2,-4)$ og $(3,5)$. Bestem en ligning for $m$. 
+\end{enumerate}
+
+\section*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item En linje $l$ har parameterfremstillingen 
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			1 \\ -2
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			2 \\ 1
+		\end{pmatrix}
+	\end{align*}
+	og en anden linje $m$ har ligningen
+	\begin{align*}
+		(x-3) + 7(y+2) = 0
+	\end{align*}
+	Bestem skæringspunktet mellem $l$ og $m$. 
+	\item En linje $l$ har parameterfremstillingen 
+	\begin{align*}
+		\begin{pmatrix}
+			x \\ y
+		\end{pmatrix} = 
+		\begin{pmatrix}
+			0 \\ 5
+		\end{pmatrix} + t
+		\begin{pmatrix}
+			5 \\ 3
+		\end{pmatrix}
+	\end{align*}
+	og en anden linje $m$ har ligningen
+	\begin{align*}
+		-5(x+3) + 2(y-2) = 0
+	\end{align*}
+	Bestem skæringspunktet mellem $l$ og $m$. 
+\end{enumerate}

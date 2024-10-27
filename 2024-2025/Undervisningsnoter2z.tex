@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\input{preamble}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Nørre Gymnasium\\
+2.z
+}
+
+
+%Husk at rette modul og dato!
+\lhead{Matematik B\\
+Differentialregning
+}
+\chead{22. oktober 2024
+}
+
+\cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
+
+\begin{document}
+
+%Udfyld afsnit herunder og lav til egen Latex-fil
+
+%Kopier følgende til overskrift:
+
+%\begin{center}
+%\Huge
+%Aflevering 1
+%\end{center}
+%\section*{Opgave 1}
+%\stepcounter{section}
+%Overskrift
+
+\begin{center}
+\Huge
+Differentiation af polynomier og potensfunktioner
+\end{center}
+\section*{Polynomier og potensfunktioner}
+\stepcounter{section}
+
+Vi definerede sidste gang differentialkvotienten til en funktion som hældningen af tangenten til funktionen i et punkt. Det kan dog ofte være svært at aflæse hældningen præcist, men vi har heldigvis formler, der kan hjælpe os med at differentiere funktioner. Den differentierede af en funktion kaldes for den \textit{afledede} af funktionen. 
+
+\begin{exa}
+	Det er særligt nemt at differentiere potensfunktioner og polynomier. For at finde den afledede af $f(x) = 
+	x^2$ og $g(x) = 3x^2$, så har vi formlerne
+	\begin{align*}
+		f'(x) = 2x
+	\end{align*}
+	og 
+	\begin{align*}
+		g'(x) = 3x^2.
+	\end{align*}
+\end{exa}
+
+Vi har følgende formel, vi kan bruge mere generelt for polynomier og potensfunktioner:
+
+\begin{setn}
+	Lad $f$ være givet ved
+	\begin{align*}
+		f(x) = x^a.
+	\end{align*}
+	Så gælder, at 
+	\begin{align*}
+		f'(x) = ax^{a-1}.
+	\end{align*}
+\end{setn}
+
+Differentiation opfylder, at vi kan differentiere funktioner ledvist.
+\begin{setn}[Linearitet]
+	For to differentiable funktioner $f$ og $g$ gælder der, at 
+	\begin{align*}
+		(f(x)+g(x))' = f'(x) + g'(x).
+	\end{align*}
+	Der gælder desuden for et tal $k$, at
+	\begin{align*}
+		(k\cdot f(x) )' = k\cdot f'(x).
+	\end{align*}
+\end{setn}
+
+\begin{exa}
+	Vi skal differentiere polynomiet 
+	\begin{align*}
+		f(x) = 5x^7-12x^3-2x^2-x-1.
+	\end{align*}
+	Dette gøres ledvist og konstanter ganget på lades stå.
+	\begin{align*}
+		f'(x) &= 5\cdot 7x^6 - 12\cdot 3x^2-2\cdot 2x-1\\
+		&= 35x^6-36x^2-4x-1
+	\end{align*}
+\end{exa}
+
+\begin{exa}
+	Vi skal differentiere funktionen 
+	\begin{align*}
+		f(x) = 2x^{-\frac{1}{7}}.
+	\end{align*}
+	Vi bruger samme regel og får
+	\begin{align*}
+	 	f'(x) &= -\frac{2}{7}x^{-\frac{1}{7}-1} \\
+	 	&= -\frac{2}{7}x^{-\frac{8}{7}}
+	\end{align*}
+\end{exa}
+
+Vi har en række andre regler for differentiation.
+\begin{setn}
+Vi har følgende sammenhæng mellem funktioner $f$ og afledede funktion $f'$.
+\begin{center}
+\begin{tabular}{c|c}
+$f(x)$& $f'(x)$\\
+\hline
+\textnormal{konstant}&$0$\\
+\hline
+x&$1$\\
+\hline
+$ax+b$&$a$\\
+\hline
+$x^2$&$2x$\\
+\hline
+$x^3$&$3x^2$\\
+\hline
+$\frac{1}{x}$&$-\frac{1}{x^2}$\\
+\hline
+$\sqrt{x}$&$\frac{1}{2\sqrt{x}}$\\
+\hline
+$x^a$ & $ax^{a-1}$\\
+\hline
+$\ln(x)$ & $\frac{1}{x}$
+
+\end{tabular}
+\end{center}
+\end{setn}
+
+\subsection*{Opgave 1}
+Differentiér følgende funktioner.
+\begin{align*}
+	&1) \ x^5   &&2) \ 2x^4-6x^2+10x-11     \\
+	&3) \ \frac{1}{10}x^{10}+7x^5-11x^2+20  &&4) \ x^4-3x^2+2x+1     \\ 
+	&5) \ \frac{1}{4}x^4 + \frac{1}{3}x^3+\frac{1}{2}x^2+x + 1  &&6) \  x^\frac{1}{2}    \\ 
+	&7) \ 6x^{\frac{-5}{2}}  &&8) \  0.7x^{1.2}    \\ 
+\end{align*}
+
+\subsection*{Opgave 2}
+Bestem den afledede af følgende funktioner.
+
+\begin{align*}
+	&1) \ 2\ln(x)  &&2) \ \sqrt{x}+ 3x^7     \\
+	&3) \ x^\frac{1}{2} + \frac{1}{x} &&4) \  \frac{12}{x}+5x^2-10x+7    \\ 
+	&5) \ 0.7\sqrt{x}+\frac{1}{2}x^2  &&6) \  6\ln(x)+9    
+\end{align*}
+
+\subsection*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem hældningen af tangenten for $f(x) = x^2+3x-2$ i punktet $(-3,f(-3))$. 
+	\item Bestem hældningen af tangenten for $f(x) = 4\sqrt{x}$ i punktet $(4,f(4))$.
+	\item Bestem hældningen af tangenten for $f(x) = 10$ i punktet $(11,f(11))$.
+	\item Bestem hældningen af tangenten for $f(x) = \ln(x) + 3x^2$ i punktet $(1,f(1))$. 
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+\begin{enumerate}[label=\roman*)]
+	\item En funktion $f$ er givet ved
+	\begin{align*}
+		f(x)=2x^2-kx+ 5.
+	\end{align*}
+	Bestem tallet $k$, så hældningen af tangenten i punktet $(3,f(3))$ er lig 7.
+	\item Bestem ligningen for tangenten for $f(x) = x^3 - 2x + 1$ i punktet $(2,f(2))$.
+	\item Funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^3+2x^2-4x+2 
+	\end{align*}
+	har en tangent med ligningen $y = 11x + 36$. Den har desuden en anden tangent, der er parallel med denne. 
+	Bestem ligningen for den tangent. 
+\end{enumerate}
+
+
+
+
+
+\end{document}
