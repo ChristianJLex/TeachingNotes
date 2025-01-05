@@ -1,0 +1,176 @@
+\begin{center}
+\LARGE
+Delprøve uden hjælpemidler 
+\end{center}
+\stepcounter{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 1}
+	En funktion $f$ er givet ved
+	\begin{align*}
+		f(x) = 2x^3+4x^2-3x+6.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem $f(2)$.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem $f'(3)$.
+\end{delopgave}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 2}
+	En stykvist defineret funktion $g$ er givet ved
+	\begin{align*}
+		g(x) = \begin{cases}
+			\log_5(x) \ &\textnormal{hvis }x \geq 0, \\
+			x^2 \ &\textnormal{hvis }x < 0.		
+		\end{cases}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem $g(125)$.
+\end{delopgave}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{opgavetekst}{Opgave 3}
+	To vektorer $\vv{u}$ og $\vv{v}$ er givet ved
+	\begin{align*}
+		\vv{u} &= 
+		\begin{pmatrix}
+			3 \\ 4
+		\end{pmatrix}, \\
+		\vv{v} &= 
+		\begin{pmatrix}
+			7 \\ -2
+		\end{pmatrix}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem arealet af det parallelogram, de to vektorer udspænder. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem linjens ligning for linjen $l$, der går gennem punktet $(2,2)$ og som har $\vv{u}$ som 
+	retningsvektor.
+\end{delopgave}
+
+\newpage
+
+\begin{opgavetekst}{Opgave 4}
+	En funktion $h$ er givet ved
+	\begin{align*}
+		h(x) = \ln(x) + 3.
+	\end{align*}
+\end{opgavetekst}
+
+\begin{delopgave}{}{1}
+	Besten den afledede funktion for $h$. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem ligningen for tangentlinjen, der går gennem punktet $(1,h(1))$.
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 5}
+	Grafen for en eksponentialfunktion $f$ er givet ved Figur \ref{fig:eksp}.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+			\begin{axis}
+			[axis lines = center, 
+			xmin = 0.5, xmax = 9.5,
+			ymin = -0.25, ymax = 5.75,
+			grid = both, 
+			xlabel = $x$,
+			ylabel = $y$,
+			xtick = {-1,0,...,9,10},
+			ytick = {-1,-0.5,...,5,5.5},
+			]
+				\addplot[color = olive, thick, samples = 100, domain = -1:10] {5.0397*0.8909^x};
+			\end{axis}
+		\end{tikzpicture}
+		\caption{Graf for eksponentialfunktion}
+		\label{fig:eksp}
+	\end{figure}
+	\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem halveringskonstanten for $f$. 
+\end{delopgave}
+
+
+\newpage
+
+\begin{center}
+\LARGE
+Delprøve med hjælpemidler 
+\end{center}
+\stepcounter{section}
+
+\begin{opgavetekst}{Opgave 6}
+	En funktion $f$ er givet ved
+	\begin{align*}
+		f(x) = x^3 + x^2 + 17x + 15
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Tegn grafen for $f$ på et passende interval
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem hældningen af tangenten til $f$ i $x = 4$ og bestem en ligning for tangenten i punktet $(4,f(4))$
+\end{delopgave}
+\begin{meretekst}
+	Det oplyses, at der er ét andet punkt $(x_0,f(x_0))$, hvor tangenten er parallel til tangenten i punktet $(4,f(4))$.
+\end{meretekst}
+\begin{delopgave}{}{3}
+	Bestem punktet $(x_0,f(x_0))$ og bestem derefter en ligning for tangenten i dette punkt.
+\end{delopgave}
+\begin{delopgave}{}{4}
+	Tegn grafen for $f$ i samme koordinatsystem som de to tangenter og undersøg på denne måde, om du har fundet de rigtige tangentligninger.
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 7}
+	En linje $l$ er givet ved ligningen
+	\begin{align*}
+		l: \ 2x+9y-5 = 0.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem afstanden fra $l$ til punktet $P(7,-3)$.
+\end{delopgave}
+\begin{meretekst}
+	En vektor $\vv{PQ}$ går fra punktet $P$ til punktet $Q(-1,5)$
+\end{meretekst}
+\begin{delopgave}{}{2}
+	Bestem den spidse vinkel mellem linjen $l$ og vektoren $\vv{PQ}$. 
+\end{delopgave}
+
+
+\begin{opgavetekst}{Opgave 8}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/traening}
+	\end{center}
+	En træningsgruppe måler løbende deres træningsresultater henover 70 måneder. De måler resultatet på ét bestemt løft, og deres data kan findes 
+	\href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/Traening.xlsx}{\color{blue!60} her.}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Anvend residualanalyse til at bestemme en model, der beskriver datasættet godt. 
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Brug din valgte model til at afgøre, hvor længe der vil gå, før man kan forvente at løfte 100kg.
+\end{delopgave}
+\begin{delopgave}{}{3}
+	Bestem differentialkvotienten efter 80 måneder. Hvad fortæller os den om udviklingen af løfteevnen til dette tidspunkt?
+\end{delopgave}

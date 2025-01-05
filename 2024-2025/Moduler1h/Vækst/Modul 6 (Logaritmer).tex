@@ -1,0 +1,182 @@
+
+\begin{center}
+\Huge
+Logaritmer
+\end{center}
+\stepcounter{section}
+
+\section*{Logaritmer}
+
+Har vi et udtryk som $2^3 = 8$, så kan vi tage $\sqrt[3]{8}$ for at finde det tal, som skal opløftes i $3$ for at få $8$, navnligt $\sqrt[3]{8} = 2$. Udtrykkende $2^3 = 8$ og $\sqrt[3]{8} = 2$ er derfor to forskellige måder at skrive den samme kendsgerning. Vi bruger altså $2^3$, hvis vi ikke kender $8$ og $\sqrt[3]{8}$, hvis vi ikke kender 2. Man kan derfor overveje, om der ikke også er en måde at opskrive, hvis vi ikke kender 3. Til dette introducerer vi \textit{logaritmefunktionen} $\log_2(x)$. Denne opfylder, at
+\begin{align*}
+	\log_2(8) = 3. 
+\end{align*}
+Vi kalder derfor $\log_2$ for den \textit{omvendte} eller \textit{inverse funktion} til $2^x$ på samme måde som $\sqrt[3]{x}$ er den inverse funktion til $x^3$. Logaritmefunktioner er derfor omvendte funktioner til eksponentialfunktioner. 
+
+Før vi går videre til en særligt vigtig logaritme, så vil vi definere præcist hvad logaritmefunktionen opfylder.
+\begin{defn}[Logaritmefunktionen]
+	Logaritmefunktionen $\log_a(x)$ er den entydige funktion, der opfylder, at 
+	\begin{align*}
+		\log_a(a^x) = x,
+	\end{align*}
+	og
+	\begin{align*}
+		a^{\log_a(x)} = x.
+	\end{align*}
+\end{defn}
+\section*{Titalslogaritmen}
+\stepcounter{section}
+
+Titalslogaritmen $\log_{10}$ har en særlig rolle særligt i naturvidenskaben, og den får derfor også en særlig rolle i gymnasieundervisningen. Titalslogaritmen er den inverse funktion til 
+\begin{align*}
+	f(x) = 10^x.
+\end{align*}
+Vi kan se nogle funktionsværdier for $10^x$ i følgende tabel.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$x$ & 0 & 1 & 2 & 3 & 4 & 5\\
+		\hline
+		$10^x$ & 1 & 10 & 100 & 1000 & 10000 & 100000
+	\end{tabular}
+\end{table}
+Da $\log_{10}(x)$ gør det omvendte af $10^x$, så vil en tilsvarende tabel se ud som følgende.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$x$ & 1 & 10 & 100 & 1000 & 10000 & 100000 \\
+		\hline
+		$\log_{10}(x)$ & 0 & 1 & 2 & 3 & 4 & 5
+	\end{tabular}
+\end{table}
+
+\begin{exa}
+	Vi har, at 
+	\begin{align*}
+		\log_{10}(100) = \log_{10}(10^2) = 2.
+	\end{align*}
+\end{exa}
+
+For alle logaritmer gælder der en række regneregler. 
+\begin{setn}[Logaritmeregneregler]
+	For $a,b>0$ gælder der, at
+	\begin{enumerate}[label=\roman*)]
+		\item $\log(a\cdot b) = \log(a)+ \log(b)$,
+		\item $\log\left(\frac{a}{b}\right) = \log(a)-\log(b)$,
+		\item $\log(a^x) = x\log(a).$
+	\end{enumerate}		
+\end{setn}
+\begin{proof}
+	Vi beviser resultatet for $\log_{10}()$ og lader generaliseringen være op til læseren. For at lette 
+	notationen lader vi desuden $\log(x)$ betegne $\log_{10}(x)$.
+	Vi vil løbende udnytte, at $\log(10^a) = a$ og $10^{\log(a)} = a$. Vi betragter udtrykkene.
+	\\
+	i)
+	\begin{align*}
+		\log(a\cdot b) &= \log(10^{\log(a)}10^{\log(b)}) \\
+		&= \log(10^{\log(a)+\log(b)})\\
+		&=\log(a) + \log(b).
+	\end{align*}
+	ii)
+	\begin{align*}
+		\log\left(\frac{a}{b}\right) &= \log\left(\frac{10^a}{10^b}\right)\\
+		&= \log(10^{\log(a)-\log(b)})\\
+		&= \log(a)-\log(b).
+	\end{align*}
+	iii)
+	\begin{align*}
+		\log(a^x) &= \log\left( \left(10^{\log(a)}\right)^x\right)\\
+		&= \log\left(10^{\log(a)x}\right)\\
+		&= x\log(a),
+    \end{align*}		
+    og vi er færdige med beviset. 
+\end{proof}
+
+\begin{exa}
+	Vi ønsker at løse ligningen $10^{x+5} = 1000$. Vi tager derfor logaritmen på begge sider af lighedstegnet:
+	\begin{align*}
+		\log_{10}\left(10^{x+5}\right) = \log_{10}(1000) \ \Leftrightarrow \ x+5 = \log_{10}(1000) = 3 \ \Leftrightarrow	\ x = -2.
+	\end{align*}	 
+\end{exa}
+\begin{exa}
+	Vi ønsker at løse ligningen 
+	\begin{align*}
+		\log_{10}(4x) = 4. 
+	\end{align*}
+	Vi opløfter derfor $10$ i begge sider af lighedstegnet.
+	\begin{align*}
+		10^{\log_{10}(4x)} = 10^4 \ \Leftrightarrow \ 4x = 10000 \ \Leftrightarrow	\ x = 2500.
+	\end{align*}
+\end{exa}
+
+\subsection*{Opgave 1}
+En tabel med funktionsværdier for $10^x$ er givet.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+		$x$ & -4 & -3 & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5 \\
+		\hline
+		$10^x$ & 0.0001 & 0.001 & 0.01& 0.1 & 1 & 10 & 100 & 1000 & 10000 & 100000
+	\end{tabular}
+\end{table}
+Brug tabellen til at bestemme følgende.
+\begin{align*}
+	&1) \ \log_{10}(10)     &&2) \ \log_{10}(1)    \\
+	&3) \ \log_{10}(0.001)     &&4) \  \log_{10}(100000)   
+\end{align*}
+
+
+\subsection*{Opgave 2}
+Bestem følgende udtryk 
+\begin{align*}
+	&1) \ \log_{10}(10^7)    &&2) \ \log_{10}(10000)   \\  
+	&3) \ \log_{10}(10^{1.5})   &&4) \ \log_{10}(10^{\sqrt{2}})     \\  
+	&5) \ \log_{10}(10000000)   &&6) \ \log_{10}(1)   \\  
+	&7) \ \log_{10}(100)			&&8) \ \log_{10}(1000)  \\
+	&9) \ \log_{10}(10^{-4})     &&10) \ \log_{10}(0.00001) \\ 
+\end{align*}
+
+\subsection*{Opgave 3}
+Bestem følgende udtryk
+\begin{align*}
+	&1) \ \log_2(4) &    &2) \ \log_2(16) \\
+	&3) \ \log_3(9) &    &4) \ \log_4(16) \\
+	&5) \ \log_5(25) &    &6) \ \log_4(256) \\
+	&7) \ \log_2(1024) &    &8) \ \log_5(125) \\
+	&9) \ \log_6(216) &    &10) \ \log_{16}(256) \\
+	&11) \ \log_{\sqrt{2}}(2) &    &12) \ \log_{\sqrt[3]{2}}(5) \\
+\end{align*}
+
+\subsection*{Opgave 4}
+\begin{align*}
+	&1) \ \log_{10}(2\cdot 10^3) && 2) \ \log_{10}(3000) \\
+	&3) \ \log_{10}(500)        && 4) \ \log_{10}(10) + \log_{10}(1000) \\
+	&5) \  \log_{10}(2500)  &&6) \ \log_{10}(20)+ \log_{10}(5)   \\   
+	&7) \  \log_{10}(5^6)  &&8) \ \log_{10}(4000) - \log_{10}(4)   \\   
+	&9) \  \log_{10}(2)+\log_{10}(2)+\log_{10}(5) + \log_{10}(5)  &&10) \ \log_{10}(50)-\log_{10}(5)  \\ 
+\end{align*}	
+
+\subsection*{Opgave 5}
+
+Isolér $x$ i følgende ligninger
+
+\begin{align*}
+	&1) \  2^{5+x} = 512 &    &2) \  5^{x-7} = 25 \\
+	&3) \  3^{\frac{x}{2}} = 27 &    &4) \  7^{2x-10} = 49 \\
+	&5) \  2^{7x+28} = 1 &    &6) \  3^{x-13} = 81 \\
+	&7) \  6^{\sqrt{x}} = 36 &    &8) \  10^{\sqrt{x}+1} = 100000 \\
+\end{align*}
+
+\subsection*{Opgave 6}
+
+Isolér $x$ i følgende ligninger
+
+\begin{align*}
+	&1) \  \log_2(4+x) = 3 &    &2) \  \log_5(x-1) = 2 \\
+	&3) \  \log_{10}(2x) = 4 &    &4) \  \log_4(8x) = 3 
+\end{align*}
+
+\subsection*{Opgave 7}
+
+Læs beviset for $\log(a\cdot b) = \log(a) + \log(b)$ og prøv at bevise regnereglerne $\log(\frac{a}{b}) =
+\log(a)-\log(b)$ og $\log(a^x) = x\log(a)$ på samme vis. 
