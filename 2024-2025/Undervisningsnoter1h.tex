@@ -13,7 +13,7 @@
 \lhead{Matematik A\\
 Vækst
 }
-\chead{3. december 2024
+\chead{6. januar 2024
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -35,280 +35,173 @@ Vækst
 
 
 
+
+
 \begin{center}
 \Huge
-Fordoblingskonstanten for eksponentialfunktioner
+Forberedelse til prøve	
 \end{center}
-\section*{Fordoblingskonstanten}
-\stepcounter{section}
-Perspektivet var før at overveje, hvordan funktionsværdien af eksponentiel vækst udvikler sig, når vi øger $x$ med $1$. Vi kan tilsvarende betragte problemet fra den modsatte side: hvad skal vi øge $x$ med for at fordoble/halvere funktionsværdien. Vi skal altså bestemme en størrelse $T_2$, så 
+
+\subsection*{Opgave 1 (Uden hjælpemidler)}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem fremskrivningsfaktoren og begyndelsesværdien for eksponentialfunktionen $f$ givet ved
+	\begin{align*}
+		f(x) = 7\cdot 1.3^x
+	\end{align*}
+	\item Bestem vækstraten for eksponentialfunktionen $g$ givet ved
+	\begin{align*}
+		g(x) = 0.7\cdot 0.9^x
+	\end{align*}
+	og beskriv, hvad denne fortæller om væksten for $g$. 
+\end{enumerate}
+
+
+\subsection*{Opgave 2 (Med hjælpemidler)}
+
+I en by er der i år 2000 $750\TS 000$ personer. Antallet af personer stiger med 3$\%$ om året.
+\begin{enumerate}[label = \roman*)]
+	\item Opskriv en model, der beskriver antallet af personer til $t$ år efter år 2000.
+	\item Hvor mange mennesker er der i byen efter 10 år?
+	\item Hvornår vil der være $1\TS 000\TS 000$ personer i byen?
+\end{enumerate}
+
+\subsection*{Opgave 3 (Uden hjælpemidler)}
+
+For en funktion $f$ givet ved 
 \begin{align*}
-f(x+T_2) = 2f(x)
+	f(x) = b\cdot a^x
 \end{align*}
-for en eksponentialfunktion $f$. Denne idé er præsenteret i Figur \ref{fig:Fordobling}. 
-\begin{figure}[H]
-\center
-\begin{tikzpicture}
-\foreach \i in {0}{
-\draw (\i*0.9,0) -- (\i*0.9,1);
-}
-\draw (-0.9,0.5) -- (1.5,0.5);
-\foreach \i in {0}{
-\node at (\i*0.9+ 0.75,0.75) {$x+T_2$};
-\node at (\i*0.9+0.75,0.25) {$2f(x)$};
-}
-\node at (-0.45,0.75) {$x$};
-\node at (-0.45,0.25) {$f(x)$};
-\foreach \i in {0}{
-\draw [->] (\i*0.9-0.3,1) to [out=30,in=150] (\i*0.9+0.3,1);
-\node at (\i*0.9,1.25) {$\scriptstyle+T_2$};
-\draw [->] (\i*0.9-0.3,-0) to [out=-30,in=-150] (\i*0.9+0.3,-0);
-\node at (\i*0.9,-0.25) {$\scriptstyle\cdot 2$};
-}
-\end{tikzpicture}
+gælder det, at $f(1) = 7$ og $f(4) = 56$.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem tallene $a$ og $b$. 
+	\item Bestem tallet $f(2)$.
+\end{enumerate}
 
-\caption{Fordoblingskonstant}
-\label{fig:Fordobling}
-\end{figure}
+\subsection*{Opgave 4 (Uden hjælpemidler)}
 
-Dette kan tilsvarende ses grafisk på Figur \ref{fig:grafisk}
+Udregn følgende.
+\begin{align*}
+	&1) \   \ln(1)  &  &2) \ \log_{10}(100\TS 000)\\
+	&3) \ \log_3(81)  &  &4) \ \log_{2}(512) 
+\end{align*}
+
+\subsection*{Opgave 5 (Uden hjælpemidler)}
+
+Isolér $x$ i følgende ligninger.
+\begin{align*}
+	&1) \ 2^{3x + 10} = 16 &&2) \ \log_5(4x + 105) = 3 \\
+\end{align*}
+\subsection*{Opgave 6 (Med hjælpemidler)}
+
+I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data og lign/Smittetal.xlsx}{\color{blue!60} dette datasæt} fremgår antal smittede i tusinde i et stort land med en smitsom infektionssygdom. Tidsenheden er i måneder. 
+Det antages, at sammenhængen mellem den forløbne tid $t$ og antallet af smittede $f(t)$ kan beskrives ved en eksponentiel sammenhæng. 
+\begin{enumerate}[label=\roman*)]
+	\item Brug datasættet til at bestemme en forskrift for $f$. 
+	\item Afgør, hvornår antallet af smittede vil nå 10 mio. smittede.
+\end{enumerate} 
+
+\subsection*{Opgave 7 (Med hjælpemidler)}
+Koncentrationen af et lægemiddel i blodet efter intagelse kan beskrives ved sammenhængne
+\begin{align*}
+	K(t) = 1.07\cdot 0.93^x,
+\end{align*}
+hvor $t$ betegner tiden i timer og $K$ betegner koncentrationen i mg/l.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem halveringskonstanten for $K$ og forklar, hvad denne fortæller om lægemiddelet.
+	\item Hvor længe vil der gå før der kun er en 64.-del tilbage af lægemiddelet?
+\end{enumerate}
+\newpage
+\subsection*{Opgave 8 (Uden hjælpemidler)}
+Graferne for funktionerne $f$ og $g$ kan ses af Figur \ref{fig:forhalv}. De er begge eksponentialfunktioner. 
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis}
-		[axis lines = center,
-		ticks = none,
-		xmin = -1, xmax = 4,
-		ymin = -2,
-		ylabel = $y$, xlabel = $x$
-		]
-			\addplot[thick, color = olive, samples = 100] {2^x};
-			\draw[dashed, thick, color = teal] (axis cs: 1,0) to (axis cs: 1,2);
-			\draw[dashed, thick, color = teal] (axis cs: 2,0) to (axis cs: 2,4);
-			\draw[dashed, thick, color = teal] (axis cs: 0,2) to (axis cs: 1,2);
-			\draw[dashed, thick, color = teal] (axis cs: 0,4) to (axis cs: 2,4);
-			\node at (axis cs:-0.4,2) {$f(x_0)$};
-			\node at (axis cs:-0.45,4) {$2f(x_0)$};
-			\node at (axis cs: 1,-1) {$x_0$};
-			\node at (axis cs: 2,-1) {$x_0 + T_2$};
-		\end{axis}
+	\begin{axis}[
+	axis lines = center, 
+	xmin = -0.5, xmax = 9.5,
+	ymin = -0.5, ymax = 20,
+	grid = both,
+	xtick = {-1,0,...,9,10},
+	ytick = {-1,1,...,17,19},
+	minor y tick num = 1
+	]
+		\addplot[thick, color = teal, domain = -1:10, samples = 200] {15.874*0.79370^x};
+		\addplot[thick, color = olive, domain = -1:10, samples = 200] {1.5000*1.2599^x};
+		\node[color = olive, anchor = south] at (axis cs: 7,8) {$f$};
+		\node[color = teal, anchor = south] at (axis cs: 3,8) {$g$};
+	\end{axis}
 	\end{tikzpicture}
-	\caption{Grafisk præsentation af fordoblingskonstanten.}
-	\label{fig:grafisk}
+	\caption{Graferne for eksponentialfunktionerne $f$ og $g$.}
+	\label{fig:forhalv}
 \end{figure}
-
-
-\begin{exa}
-	Vi betragter eksponentialfunktionen $f$ givet ved
-	\begin{align*}
-		f(x) = 2^x.
-	\end{align*}
-	Grafen for denne kan ses på Figur \ref{fig:eksempel}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}[axis lines = center, grid = both,
-			xmin = -0.8, xmax = 3.8,
-			xlabel = $x$,ylabel = $y$
-			]
-				\addplot[thick, color = olive, samples = 100] {2^x};
-			\end{axis}
-		\end{tikzpicture}
-		\caption{Graf for funktionen $f(x) = 2^x$.}
-		\label{fig:eksempel}
-	\end{figure}
-	Vi kan på figuren aflæse, at fordoblingskonstanten for $f$ er $1$, da vi skal øge $x$ med $1$ for at funktionsværdien fordobles. 
-\end{exa}
-For eksponentialvækst, hvor fremskrivningsfaktoren $a$ er større end $1$ er det muligt at finde et sådan tal $T_2>0$. Følgende sætning fortæller, hvordan vi skal finde dette tal, og vi kalder tallet for \textit{Fordoblingskonstanten for f}.
-\begin{setn}
-For en eksponentialfunktion $f$ gælder det, at fordoblingskonstanten $T_2$, der opfylder, at
-\begin{align*}
-f(x+T_2) = 2f(x)
-\end{align*}
-er givet ved 
-\begin{align*}
-T_2 = \frac{\log(2)}{\log(a)} = \frac{\ln(2)}{\ln(a)}
-\end{align*}
-Tilsvarende er halveringskonstanten $T_{1/2}$, der opfylder, at 
-\begin{align*}
-f(x+T_{1/2}) = \frac{1}{2}f(x)
-\end{align*}
-bestemt ved
-\begin{align*}
-T_{1/2} = \frac{\ln(1/2)}{\ln(a)} = \frac{\log(1/2)}{\log(a)}.
-\end{align*}
-Desuden gælder der, at $a = \sqrt[T_2]{2}= \sqrt[T_{1/2}]{1/2}$
-\end{setn}
-\begin{proof}
-Vi beviser tilfældet for fordoblingskonstanten. Tilfældet for halveringskonstanten beviset fuldstændig analogt. Lad os derfor for en eksponentialfunktion $f$ givet ved
-\begin{align*}
-f(x) = b\cdot a^x
-\end{align*}
-antage, at tallet $T_2$ opfylder, at $f(x+T_2) = 2f(x)$ for alle $x\in \mathbb{R}$. Vi har så, at 
-\begin{align*}
-f(x+T_2) = 2f(x) \ &\Leftrightarrow \ b\cdot a^{x}a^{T_2}=2b\cdot a^x\\
-&\Leftrightarrow\ a^{T_2} = 2\\
-&\Leftrightarrow\ \ln(a^{T_2}) = \ln(2)\\
-&\Leftrightarrow\ T_2\ln(a) = \ln(2)\\
-&\Leftrightarrow\ T_2 = \frac{\ln(2)}{\ln(a)},
-\end{align*}
-og vi har givet et bevis for fordoblingskonstanten. Siden vi har, at $a^{T_2} = 2$, så må der desuden gælde, at $a=\sqrt[T_2]{2}$, da $a>0$. 
-\end{proof}
-
-\begin{exa}
-	Vi bruger sætningen til at bestemme fordoblingskonstanten for eksponentialfunktionen
-	\begin{align*}
-		f(x) = 2^x.
-	\end{align*}
-	Vi får, at 
-	\begin{align*}
-		T_2 = \frac{\ln(2)}{\ln(a)} = \frac{\ln(2)}{\ln(2)} = 1,
-	\end{align*}
-	som også var det vi kom frem til ved at bruge Figur \ref{fig:eksempel}.
-\end{exa}
-
-\newpage
-\subsection*{Opgave 1}
-Aflæs fordoblings/halveringskonstanten for følgende eksponentialfunktioner.
-\begin{center}
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 40,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$,
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {4*1.05^x};
-		\end{axis}
-	\end{tikzpicture}	
-}	
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 40,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {2*1.1^x};
-		\end{axis}
-	\end{tikzpicture}
-}
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 30,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {60*0.8^x};
-		\end{axis}
-	\end{tikzpicture}
-}
-\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = center,
-		xmin = -0.8, xmax = 30,
-		ymin = -0.8,ymax = 28,
-		grid = both,
-		minor tick num = 5,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[thick, samples = 1000, color = teal, domain = -0.8:40] {20*0.97^x};
-		\end{axis}
-	\end{tikzpicture}
-}
-\end{center}
-
-\subsection*{Opgave 2 (Med Maple)}
-Bestem fordoblingskonstanten eller halveringskonstanten for følgende eksponentialfunktioner
-\begin{align*}
-	&1) \ 5\cdot 2^x   &&2) \ 7\cdot 0.95^x   \\
-	&3) \ 1.03\cdot 1.004^x   &&4) \ 6\cdot 5.09^x   \\
-	&5) \ 0.01\cdot 1.75^x   &&6) \ 7.19\cdot 1.179^x   \\		
-	&7) \ 10\cdot 0.1^x   && 7) \ 6.13 \cdot 10^x  
-\end{align*}
-
-
-\subsection*{Opgave 3 (Med Maple)}
-Bestem enten fordoblings eller halveringskonstanten for følgende eksponentialfunktioner
-\begin{align*}
-&1) \ f_1(x) = 0.5\cdot 2^x   &&2) \ f_2(x)=2\cdot 0.5^x  \\
-&3) \ f_3(x) = 2000\cdot(0.003)^x  &&4) \ f_4(x) = 4\e^x  \\
-\end{align*}
-
-\subsection*{Opgave 4 (Med Maple)}
-
 \begin{enumerate}[label=\roman*)]
-	\item En bakteriekoloni vokser med 30 procent per døgn. Bestem fordoblingskonstanten for denne bakteriekoloni.
-	\item En radioaktiv isotop henfalder med 10 procent om året. Bestem halveringskonstanten for denne isotop.
-	\item Befolkningen i en by vokser med 2 procent om året. Bestem fordoblingskonstanten for befolkningen. 
-	\item Du får 4 procent på en højrentekonto i banken. Hvor længe vil der gå, før du har fordoblet dine penge?
-	\item Infektionstallet for en person falder med 12 procent i timen. Hvad er halveringskonstanten for infektionstallet?
+	\item Bestem fordoblings-/halveringskonstanten for de to funktioner.
+	\item Løs ligningen $f(x) = g(x)$. Afrund til nærmeste heltal.
 \end{enumerate}
-\newpage
-\subsection*{Opgave 5 (Med Maple)}
-Tetrahydrocannabinol (THC) er det primære psykoaktive stof i hampplanten. Koncentrationen af stoffet efter indtagelse hos en bestemt person kan ses af Tabel \ref{tab:cannabis}.
 
-\begin{table}[H]
+\subsection*{Opgave 9 (Uden hjælpemidler)}
+På Figur \ref{fig:potens} ses graferne for tre potensfunktioner.
+\begin{figure}[H]
 	\centering
-	\rowcolors{2}{gray!25}{white}
-	\begin{tabular}{cc}
-		\textbf{Tid i timer} & \textbf{Koncentration i mg/L} \\
+	\begin{tikzpicture}
+	\begin{axis}[
+	axis lines = center, 
+	xmin = -0.5, xmax = 5.5,
+	ymin = -0.5, ymax = 10.5,
+	grid = both,
+	xtick = {-1,0,...,9,10},
+	ytick = {-1,1,...,17,19},
+	minor y tick num = 1
+	]
+		\addplot[thick, color = teal, domain = 0.5:10, samples = 200] {7*x^(-1.2)};
+		\addplot[thick, color = olive, domain = 0.05:10, samples = 200] {5*x^(-0.3)};
+		\addplot[thick, color = purple, domain = 0:10, samples = 200] {2*x^(1.9)};
+		\node[color = teal, anchor = south west] at (axis cs: 1,7) {$f$};
+		\node[color = olive, anchor = north east] at (axis cs: 1,5) {$g$};
+		\node[color = purple, anchor = north west] at (axis cs: 2,7) {$h$};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Graferne for potensfunktionerne $f$, $g$ og $h$.}
+	\label{fig:potens}
+\end{figure}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $b$-værdien for hver af de tre potensfunktioner $f$, $g$ og $h$. 
+	\item Afgør, hvilke af de tre følgende intervaller, $a$-værdierne ligger i for de tre potensfunktioner. 
+	\begin{align*}
+		&a < 0,\\
+		&1 > a > 0,\\
+		&a > 1.
+	\end{align*}
+\end{enumerate}
 
-		0 & 0.30249 \\
+\subsection*{Opgave 10 (Med hjælpemidler)}
+Grafen for en potensfunktion $f$ skærer gennem punkterne $(2,9)$ og $(6,31)$. 
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en forskrift for $f$. 
+	\item Bestem tallet $f(9)$. 
+	\item Løs ligningen $f(x) = 100$.
+\end{enumerate}
 
-		8 & 0.24512 \\
- 
-		16 &  0.20132 \\
+\subsection*{Opgave 11 (Med hjælpemidler)}
 
-		24 & 0.16371 \\
-
-		32 & 0.13303\\
-
-		40 & 0.11069\\
-
-		48 & 0.08757\\
-		56 & 0.07317\\
-
-		64 & 0.05748
-	\end{tabular}
-	\caption{Koncentration af tetrahydrocannabiol (THC)}
-	\label{tab:cannabis}
-\end{table}
-
-Det antages at sammenhængen mellem antal forløbne timer $x$ og blodkoncentrationen af THC $f(x)$ er givet ved en sammenhæng af typen
+En styrketræningsgruppe har henover en række måneder målt deres løfteevne på et bestemt løft. De har samlet deres data i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data og lign/Traening.xlsx}{\color{blue!60} dette datasæt.} De antager, at løfteevnen kan beskrives ved en sammenhæng $L$ givet ved 
 \begin{align*}
-	f(x) = b \cdot a^x
+	L(x) = b\cdot x^a,
 \end{align*}
-\begin{enumerate}[label=\roman*)]
-	\item Lav regression på observationerne fra Tabel \ref{tab:cannabis} og bestem en forskrift for $f$.
-	\item Bestem halveringskonstanten for $f$.
-\end{enumerate}
-Et stof eller lægemiddel vil betragtes som helt metaboliseret efter fem halveringstider.
+hvor $x$ betegner den forløbne tid i måneder og $L$ er løfteevnen i kg. 
 
 \begin{enumerate}[label=\roman*)]
-	\setcounter{enumi}{2}
-	\item Hvor lang tid skal der gå, før vi kan sige, at der ikke er mere THC i kroppen på personen?
+	\item Brug datasættet til at bestemme tallene $b$ og $a$. 
+	\item Afgør, hvor længe de skal træne for at forvente at kunne løfte 100kg.
 \end{enumerate}
 
-\subsection*{Opgave 6}
+\subsection*{Opgave 12 (Uden hjælpemidler)}
 
+Et rektangel med bredde $5x$ og højde $2x$ er givet
 \begin{enumerate}[label=\roman*)]
-	\item Læs beviset for formlen for fordoblingskonstanten.
-	\item Lav beviset om, så du beviser formlen for halveringskonstanten. 
-	\item Kan vi forestille os andre typer af vækstkonstanter? Hvordan vil formlen se ud for disse? Kan du 
-	i så fald bevise formlen?
+	\item Opstil en sammenhæng, der beskriver arealet af rektanglet som funktion af tallet $x$. 
+	\item Afgør, hvor meget større arealet af rektanglet bliver, hvis $x$ ganges med 4. 
 \end{enumerate}
-
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  1 DEC 2024 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  5 JAN 2025 14:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1521,34 +1521,29 @@ No file Undervisningsnoter1h.bbl.
 Package biblatex Info: Reference section=0 on input line 21.
 Package biblatex Info: Reference segment=0 on input line 21.
 Package hyperref Info: Link coloring OFF on input line 21.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
 
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 44
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 48
 .
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-44.
+48.
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1560,11 +1555,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1600,16 +1590,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[5]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 27.18335pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.18335pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
-
-[6] 
+[5] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (Undervisningsnoter1h.aux)
  ***********
@@ -1621,32 +1602,24 @@ Package logreq Info: Writing requests to 'Undervisningsnoter1h.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48269 strings out of 474486
- 1080482 string characters out of 5744228
- 2122409 words of memory out of 5000000
- 69777 multiletter control sequences out of 15000+600000
- 565733 words of font info for 68 fonts, out of 8000000 for 9000
+ 48143 strings out of 474486
+ 1077500 string characters out of 5744228
+ 1960773 words of memory out of 5000000
+ 69642 multiletter control sequences out of 15000+600000
+ 564473 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,90p,754b,2303s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,12n,90p,754b,2180s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NGCJ/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGC
-J/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
-sers/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mti12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/symbols/msam10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on Undervisningsnoter1h.pdf (6 pages, 211371 bytes).
+nts/cm/cmmi12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGCJ/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Undervisningsnoter1h.pdf (5 pages, 112574 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 119 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
