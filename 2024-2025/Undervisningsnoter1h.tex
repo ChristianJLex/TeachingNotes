@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Vækst
+Funktioner
 }
-\chead{6. januar 2024
+\chead{16. februar 2025
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -33,175 +33,337 @@ Vækst
 %Overskrift
 
 
-
-
-
-
 \begin{center}
-\Huge
-Forberedelse til prøve	
+	\Huge
+	Variabeltransformation
 \end{center}
 
-\subsection*{Opgave 1 (Uden hjælpemidler)}
+\section*{Linearisering}
+\stepcounter{section}
 
-\begin{enumerate}[label=\roman*)]
-	\item Bestem fremskrivningsfaktoren og begyndelsesværdien for eksponentialfunktionen $f$ givet ved
+Vi husker os selv på, at forskriften for en eksponentialfunktion $f$ er givet ved
+\begin{align*}
+	f(x) = b\cdot a^x.
+\end{align*}
+Det viser sig, at vi kan lave grafen for $f$ til en ret linje ved at betragte et koordinatsystem med en sædvanlig $x$-akse og en $y$-akse, hvor vi har tallene $\log_{10}(y)$ i stedet for $y$. Et sådant koordinatsystem kaldes for et \textit{enkeltlogaritmisk koordinatsystem}. Hvilken logaritme, der anvendes er i vores sammenhæng underordnet.
+\begin{setn}
+	Grafen for funktionen $f$ givet ved
 	\begin{align*}
-		f(x) = 7\cdot 1.3^x
+		f(x) = b\cdot a^x
 	\end{align*}
-	\item Bestem vækstraten for eksponentialfunktionen $g$ givet ved
+	vil være en ret linje i et enkeltlogaritmisk koordinatsystem.
+\end{setn}
+\begin{proof}
+	Vi betragter udtrykket
 	\begin{align*}
-		g(x) = 0.7\cdot 0.9^x
+		y = b\cdot a^x.
 	\end{align*}
-	og beskriv, hvad denne fortæller om væksten for $g$. 
-\end{enumerate}
+	Vi tager $\log_{10}$ på begge sider af lighedstegnet og får
+	\begin{align*}
+		\log_{10}(y) &= \log_{10}(b\cdot a^x)\\
+		&= \log_{10}(b) + \log_{10}(a^x)\\
+		&= \log_{10}(b) + x\log_{10}(a).
+	\end{align*}
+	Der er altså en lineær sammenhæng mellem $x$ og $\log_{10}(y)$. 
+\end{proof}
 
-
-\subsection*{Opgave 2 (Med hjælpemidler)}
-
-I en by er der i år 2000 $750\TS 000$ personer. Antallet af personer stiger med 3$\%$ om året.
-\begin{enumerate}[label = \roman*)]
-	\item Opskriv en model, der beskriver antallet af personer til $t$ år efter år 2000.
-	\item Hvor mange mennesker er der i byen efter 10 år?
-	\item Hvornår vil der være $1\TS 000\TS 000$ personer i byen?
-\end{enumerate}
-
-\subsection*{Opgave 3 (Uden hjælpemidler)}
-
-For en funktion $f$ givet ved 
+På Figur \ref{fig:exp} kan vi se grafen for funktionen $f$ givet ved
 \begin{align*}
-	f(x) = b\cdot a^x
+	f(x) = 2^x
 \end{align*}
-gælder det, at $f(1) = 7$ og $f(4) = 56$.
-\begin{enumerate}[label=\roman*)]
-	\item Bestem tallene $a$ og $b$. 
-	\item Bestem tallet $f(2)$.
-\end{enumerate}
-
-\subsection*{Opgave 4 (Uden hjælpemidler)}
-
-Udregn følgende.
-\begin{align*}
-	&1) \   \ln(1)  &  &2) \ \log_{10}(100\TS 000)\\
-	&3) \ \log_3(81)  &  &4) \ \log_{2}(512) 
-\end{align*}
-
-\subsection*{Opgave 5 (Uden hjælpemidler)}
-
-Isolér $x$ i følgende ligninger.
-\begin{align*}
-	&1) \ 2^{3x + 10} = 16 &&2) \ \log_5(4x + 105) = 3 \\
-\end{align*}
-\subsection*{Opgave 6 (Med hjælpemidler)}
-
-I \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data og lign/Smittetal.xlsx}{\color{blue!60} dette datasæt} fremgår antal smittede i tusinde i et stort land med en smitsom infektionssygdom. Tidsenheden er i måneder. 
-Det antages, at sammenhængen mellem den forløbne tid $t$ og antallet af smittede $f(t)$ kan beskrives ved en eksponentiel sammenhæng. 
-\begin{enumerate}[label=\roman*)]
-	\item Brug datasættet til at bestemme en forskrift for $f$. 
-	\item Afgør, hvornår antallet af smittede vil nå 10 mio. smittede.
-\end{enumerate} 
-
-\subsection*{Opgave 7 (Med hjælpemidler)}
-Koncentrationen af et lægemiddel i blodet efter intagelse kan beskrives ved sammenhængne
-\begin{align*}
-	K(t) = 1.07\cdot 0.93^x,
-\end{align*}
-hvor $t$ betegner tiden i timer og $K$ betegner koncentrationen i mg/l.
-\begin{enumerate}[label=\roman*)]
-	\item Bestem halveringskonstanten for $K$ og forklar, hvad denne fortæller om lægemiddelet.
-	\item Hvor længe vil der gå før der kun er en 64.-del tilbage af lægemiddelet?
-\end{enumerate}
-\newpage
-\subsection*{Opgave 8 (Uden hjælpemidler)}
-Graferne for funktionerne $f$ og $g$ kan ses af Figur \ref{fig:forhalv}. De er begge eksponentialfunktioner. 
+i et sædvanligt koordinatsystem og på Figur \ref{fig:linexp} kan vi se grafen for $f$ i et enkeltlogaritmisk koordinatsystem.
 \begin{figure}[H]
 	\centering
+	\begin{minipage}{0.48\textwidth}
+	\centering
+	\resizebox{0.95\textwidth}{!}{
 	\begin{tikzpicture}
 	\begin{axis}[
 	axis lines = center, 
-	xmin = -0.5, xmax = 9.5,
-	ymin = -0.5, ymax = 20,
-	grid = both,
-	xtick = {-1,0,...,9,10},
-	ytick = {-1,1,...,17,19},
-	minor y tick num = 1
+	xmin = -1.5, xmax = 7.5,
+	ymin = -10.5, ymax = 135,
+	xtick = {0,1,...,7,8},
+	ytick = {-50,0,...,100,150},
+	minor y tick num = 1,
+	grid = both
 	]
-		\addplot[thick, color = teal, domain = -1:10, samples = 200] {15.874*0.79370^x};
-		\addplot[thick, color = olive, domain = -1:10, samples = 200] {1.5000*1.2599^x};
-		\node[color = olive, anchor = south] at (axis cs: 7,8) {$f$};
-		\node[color = teal, anchor = south] at (axis cs: 3,8) {$g$};
+		
+		\addplot[color = olive, thick, domain = -2:8, samples = 400] {2^x};
+
+		\filldraw[color = teal] (axis cs: 4 , { 2^4 } ) circle (2pt);
+		\draw[color = teal, dashed, thick] (axis cs: 4,0) -- (axis cs: 4, {2^4});
+		\draw[color = teal, dashed, thick] (axis cs: 0,{2^4}) -- (axis cs: 4, {2^4});
+		\node[anchor = east, color = teal] at (axis cs: 0,{2^4}) {$16$};
+		\filldraw[color = teal] (axis cs: 5 , { 2^5 } ) circle (2pt);
+		\draw[color = teal, dashed, thick] (axis cs: 5,0) -- (axis cs: 5, {2^5});
+		\draw[color = teal, dashed, thick] (axis cs: 0,{2^5}) -- (axis cs: 5, {2^5});
+		\node[anchor = east, color = teal] at (axis cs: 0,{2^5}) {$32$};
+		\filldraw[color = teal] (axis cs: 7 , { 2^7 } ) circle (2pt);
+		\draw[color = teal, dashed, thick] (axis cs: 7,0) -- (axis cs: 7, {2^7});
+		\draw[color = teal, dashed, thick] (axis cs: 0,{2^7}) -- (axis cs: 7, {2^7});
+		\node[anchor = east, color = teal] at (axis cs: 0,{2^7}) {$128$};
+		\node[color = olive] at (axis cs: 6.5,110) {$2^x$};
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Graferne for eksponentialfunktionerne $f$ og $g$.}
-	\label{fig:forhalv}
-\end{figure}
-\begin{enumerate}[label=\roman*)]
-	\item Bestem fordoblings-/halveringskonstanten for de to funktioner.
-	\item Løs ligningen $f(x) = g(x)$. Afrund til nærmeste heltal.
-\end{enumerate}
-
-\subsection*{Opgave 9 (Uden hjælpemidler)}
-På Figur \ref{fig:potens} ses graferne for tre potensfunktioner.
-\begin{figure}[H]
+	}
+	\caption{Graf for funktionen $2^x$ i et sædvanligt koordinatsystem.}
+	\label{fig:exp}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
 	\centering
+	\resizebox{0.95\textwidth}{!}{
 	\begin{tikzpicture}
 	\begin{axis}[
 	axis lines = center, 
-	xmin = -0.5, xmax = 5.5,
-	ymin = -0.5, ymax = 10.5,
-	grid = both,
-	xtick = {-1,0,...,9,10},
-	ytick = {-1,1,...,17,19},
-	minor y tick num = 1
+	xmin = -1.5, xmax = 7.5,
+	ymin = -10.5, ymax = 135,
+	ticks = none, 
+	xlabel =
 	]
-		\addplot[thick, color = teal, domain = 0.5:10, samples = 200] {7*x^(-1.2)};
-		\addplot[thick, color = olive, domain = 0.05:10, samples = 200] {5*x^(-0.3)};
-		\addplot[thick, color = purple, domain = 0:10, samples = 200] {2*x^(1.9)};
-		\node[color = teal, anchor = south west] at (axis cs: 1,7) {$f$};
-		\node[color = olive, anchor = north east] at (axis cs: 1,5) {$g$};
-		\node[color = purple, anchor = north west] at (axis cs: 2,7) {$h$};
+		\pgfplotsinvokeforeach {1,...,10}
+		{
+		\draw[thin, color = gray] (axis cs: 0,{ 30.103/2*ln(#1)/ln(2) }) -- (axis cs: 8, { 30.103/2*ln(#1)/ln(2) });
+		\draw[thin, color = gray] (axis cs: 0,{ 30.103/2*ln(#1)/ln(2) + 50 }) -- (axis cs: 8, { 30.103/2*ln(#1)/ln(2) + 50 });
+		\draw[thin, color = gray] (axis cs: 0,{ 30.103/2*ln(#1)/ln(2) + 100 }) -- (axis cs: 8, { 30.103/2*ln(#1)/ln(2) + 100 });
+		\draw[thin, color = gray] (axis cs: #1,0) -- (axis cs: #1,140);
+		\node[anchor = north] at (axis cs: #1, 0) {$#1$};
+		}
+		\draw[color = white, very thick] (axis cs: 0,-30) -- (axis cs: 0,0);
+		\pgfplotsinvokeforeach {1,2,4,10,20,40,100}
+		{
+		\node[anchor = east] at (axis cs: 0, { 30.103/2*ln(#1)/ln(2) }) {$#1$};
+		}
+		\addplot[color = white, very thick, domain = -5:0] {0}; 
+		\draw[color = white, very thick] (axis cs: 0,-30) -- (axis cs: 0,0);
+		\addplot[color = olive, thick, domain = 0:8] {15.052*x};
+		\draw[color = teal, thick, dashed] (axis cs: 4,0) -- (axis cs: 4, 15.052*4);
+		\draw[color = teal, thick, dashed] (axis cs: 5,0) -- (axis cs: 5, 15.052*5);
+		\draw[color = teal, thick, dashed] (axis cs: 7,0) -- (axis cs: 7, 15.052*7);
+		\filldraw[color = teal] (axis cs: 4, 15.052*4) circle (2pt);
+		\filldraw[color = teal] (axis cs: 5, 15.052*5) circle (2pt);
+		\filldraw[color = teal] (axis cs: 7, 15.052*7) circle (2pt);
+		\draw[color = teal, thick, dashed] (axis cs: 0,15.052*4) -- (axis cs: 4, 15.052*4);
+		\draw[color = teal, thick, dashed] (axis cs: 0,15.052*5) -- (axis cs: 5, 15.052*5);
+		\draw[color = teal, thick, dashed] (axis cs: 0,15.052*7) -- (axis cs: 7, 15.052*7);
+		\node[color = teal, anchor = east] at (axis cs: -0.7, 15.052*4) {$16$};
+		\node[color = teal, anchor = east] at (axis cs: -0.7, 15.052*5) {$32$};
+		\node[color = teal, anchor = east] at (axis cs: -0.7, 15.052*7) {$128$};
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Graferne for potensfunktionerne $f$, $g$ og $h$.}
-	\label{fig:potens}
+ 	}
+ 	\caption{Graf for funktionen $2^x$ i et enkeltlogaritmisk koordinatsystem.}
+ 	\label{fig:linexp}
+	\end{minipage}
 \end{figure}
-\begin{enumerate}[label=\roman*)]
-	\item Bestem $b$-værdien for hver af de tre potensfunktioner $f$, $g$ og $h$. 
-	\item Afgør, hvilke af de tre følgende intervaller, $a$-værdierne ligger i for de tre potensfunktioner. 
+
+På samme måde som vi kan tegne en eksponentialfunktion som en ret linje i et enkeltlogaritmisk koordinatsystem kan vi tegne en potensfunktion som en ret linje i et \textit{dobbeltlogaritmisk koordinatsystem.} Et sådant koordinatsystem har akserne $\log_{10}(x)$ i stedet for $x$-aksen og $\log_{10}(y)$ i stedet for $y$-aksen. Igen er det ikke vigtigt, hvilken logaritme, vi bruger.
+\begin{setn}
+	Grafen for en potensfunktion $f$ givet ved
 	\begin{align*}
-		&a < 0,\\
-		&1 > a > 0,\\
-		&a > 1.
+		f(x) = b\cdot x^a
 	\end{align*}
-\end{enumerate}
+	er en ret linje i et dobbeltlogaritmisk koordinatsystem.
+\end{setn}
+\begin{proof}
+	Vi har i en potenssammenhæng følgende sammenhæng mellem $x$ og $y$.
+	\begin{align*}
+		y = b\cdot x^a.
+	\end{align*}
+	Vi tager logaritmen på begge sider af lighedstegnet og får
+	\begin{align*}
+	 	\log_{10}(y) = \log_{10}(y \cdot x^a) \ &\Leftrightarrow \ \log_{10}(y) = \log_{10}(b) + 
+	 	\log_{10}(x^a) \\
+	 	&\Leftrightarrow	 \ \log_{10}(y) = \log_{10}(b) + a \log_{10}(x).
+	\end{align*}
+	Der er altså en lineær sammenhæng mellem $\log_{10}(y)$ og $\log_{10}(x)$.
+\end{proof}
+Vi kan på Figur \ref{fig:pow} se grafen for potensfunktionen $x^2$ i et sædvanligt koordinatsystem og på Figur \ref{fig:linpow} se grafen for $x^2$ i et dobbeltlogaritmisk koordinatsystem. 
 
-\subsection*{Opgave 10 (Med hjælpemidler)}
-Grafen for en potensfunktion $f$ skærer gennem punkterne $(2,9)$ og $(6,31)$. 
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.48\textwidth}
+	\centering
+	\resizebox{0.95\textwidth}{!}{
+	\begin{tikzpicture}
+	\begin{axis}[
+	axis lines = center, 
+	xmin = -1.5, xmax = 12.5,
+	ymin = -10.5, ymax = 135,
+	xtick = {0,1,...,11,12},
+	ytick = {-50,0,...,100,150},
+	minor y tick num = 1,
+	grid = both
+	]
+		
+		\addplot[color = olive, thick, domain = -2:13, samples = 400] {x^2};
+
+		\filldraw[color = teal] (axis cs: 4 , { 4^2 } ) circle (2pt);
+		\draw[color = teal, dashed, thick] (axis cs: 4,0) -- (axis cs: 4, {4^2});
+		\draw[color = teal, dashed, thick] (axis cs: 0,{4^2}) -- (axis cs: 4, {4^2});
+		\node[anchor = east, color = teal] at (axis cs: 0,{4^2}) {$16$};
+		\filldraw[color = teal] (axis cs: 6 , { 6^2 } ) circle (2pt);
+		\draw[color = teal, dashed, thick] (axis cs: 6,0) -- (axis cs: 6, {6^2});
+		\draw[color = teal, dashed, thick] (axis cs: 0,{6^2}) -- (axis cs: 6, {6^2});
+		\node[anchor = east, color = teal] at (axis cs: 0,{6^2}) {$36$};
+		\filldraw[color = teal] (axis cs: 9 , { 9^2 } ) circle (2pt);
+		\draw[color = teal, dashed, thick] (axis cs: 9,0) -- (axis cs: 9, {9^2});
+		\draw[color = teal, dashed, thick] (axis cs: 0,{9^2}) -- (axis cs: 9, {9^2});
+		\node[anchor = east, color = teal] at (axis cs: 0,{9^2}) {$81$};
+		\node[color = olive] at (axis cs: 9.5,110) {$x^2$};
+	\end{axis}
+	\end{tikzpicture}
+	}
+	\caption{Graf for funktionen $x^2$ i et sædvanligt koordinatsystem.}
+	\label{fig:pow}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+	\centering
+	\resizebox{0.95\textwidth}{!}{
+	\begin{tikzpicture}
+	\begin{axis}[
+	axis lines = center, 
+	xmin = -20.5, xmax = 135,
+	ymin = -10.5, ymax = 135,
+	ticks = none, 
+	xlabel =
+	]
+		\pgfplotsinvokeforeach {1,...,10}
+		{
+		\draw[thin, color = gray] (axis cs: 0, { 30.103/2*ln(#1)/ln(2) }) -- (axis cs:150,  { 30.103/2*ln(#1)/ln(2) });
+		\draw[thin, color = gray] (axis cs: 0,{ 30.103/2*ln(#1)/ln(2) + 50 }) -- (axis cs: 150 , { 30.103/2*ln(#1)/ln(2) + 50 });
+		\draw[thin, color = gray] (axis cs: 0, { 30.103/2*ln(#1)/ln(2) + 100 }) -- (axis cs: 150, { 30.103/2*ln(#1)/ln(2) + 100 });
+		\draw[thin, color = gray] (axis cs: { 30.103/2*ln(#1)/ln(2) }, 0) -- (axis cs:  { 30.103/2*ln(#1)/ln(2) }, 150);
+		\draw[thin, color = gray] (axis cs: { 30.103/2*ln(#1)/ln(2) + 50 }, 0) -- (axis cs:  { 30.103/2*ln(#1)/ln(2) + 50 }, 150);
+		\draw[thin, color = gray] (axis cs: { 30.103/2*ln(#1)/ln(2) + 100 }, 0) -- (axis cs:  { 30.103/2*ln(#1)/ln(2) + 100 }, 150);
+		}
+		\draw[color = white, very thick] (axis cs: 0,-30) -- (axis cs: 0,0);
+		\addplot[color = white, very thick, domain = -50:0] {0}; 
+		\draw[color = white, very thick] (axis cs: 0,-30) -- (axis cs: 0,0);
+		\addplot[color = olive, thick, domain = 0:150] {2*x};
+		\draw[color = teal, thick, dashed] (axis cs: {30.103/2*ln(4)/ln(2)},0) -- (axis cs: {30.103/2*ln(4)/ln(2)}, {30.103/2*2*ln(4)/ln(2)});
+		\draw[color = teal, thick, dashed] (axis cs: {30.103/2*ln(6)/ln(2)},0) -- (axis cs: {30.103/2*ln(6)/ln(2)}, {30.103/2*2*ln(6)/ln(2)});
+		\draw[color = teal, thick, dashed] (axis cs: {30.103/2*ln(9)/ln(2)},0) -- (axis cs: {30.103/2*ln(9)/ln(2)}, {30.103/2*2*ln(9)/ln(2)});
+		\filldraw[color = teal] (axis cs: {30.103/2*ln(4)/ln(2)}, {2*30.103/2*ln(4)/ln(2)}) circle (2pt);
+		\filldraw[color = teal] (axis cs: {30.103/2*ln(6)/ln(2)}, {2*30.103/2*ln(6)/ln(2)}) circle (2pt);
+		\filldraw[color = teal] (axis cs: {30.103/2*ln(9)/ln(2)}, {2*30.103/2*ln(9)/ln(2)}) circle (2pt);
+		\draw[color = teal, thick, dashed] (axis cs: 0,{2*30.103/2*ln(4)/ln(2)}) -- (axis cs: {30.103/2*ln(4)/ln(2)}, {2*30.103/2*ln(4)/ln(2)});
+		\draw[color = teal, thick, dashed] (axis cs: 0,{2*30.103/2*ln(6)/ln(2)}) -- (axis cs: {30.103/2*ln(6)/ln(2)}, {2*30.103/2*ln(6)/ln(2)});
+		\draw[color = teal, thick, dashed] (axis cs: 0,{2*30.103/2*ln(9)/ln(2)}) -- (axis cs: {30.103/2*ln(9)/ln(2)}, {2*30.103/2*ln(9)/ln(2)});
+		\pgfplotsinvokeforeach {1,2,4,10,20,40,100}
+		{
+		\node[anchor = east] at (axis cs: 0, { 30.103/2*ln(#1)/ln(2) }) {$#1$};
+		\node[anchor = north] at (axis cs: {30.103/2*ln(#1)/ln(2)}, 0) {$#1$};
+		}
+		\pgfplotsinvokeforeach {16,36,81}
+		{
+		\node[anchor = east, color = teal] at (axis cs: -10, { 30.103/2*ln(#1)/ln(2) }) {$#1$};
+		}
+	\end{axis}
+	\end{tikzpicture}
+ 	}
+ 	\caption{Graf for funktionen $x^2$ i et dobbeltlogaritmisk koordinatsystem.}
+ 	\label{fig:linpow}
+	\end{minipage}
+\end{figure}
+
+\subsection*{Opgave 1}
 \begin{enumerate}[label=\roman*)]
-	\item Bestem en forskrift for $f$. 
-	\item Bestem tallet $f(9)$. 
-	\item Løs ligningen $f(x) = 100$.
+	\item Tegn punkterne $(1,2)$ og $(4,16)$ ind på et enkeltlogaritmisk og forbind dem med en ret 
+	linje.
+	\item Brug linjen til at udfylde følgende tabel.
+	\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+			$x$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+			\hline
+			$y$ & 2 & \phantom{4}  & \phantom{8}  &16 & \phantom{32}  & \phantom{64}  & \phantom{128}  & \phantom{256}  & \phantom{512}  & \phantom{1024}
+		\end{tabular}
+	\item Kan du gennemskue hvilken sammenhæng, linjen beskriver? (Vink: Overvej, hvad der sker med
+	tallene, når $x$ øges med 1.)
+	\end{center}
 \end{enumerate}
 
-\subsection*{Opgave 11 (Med hjælpemidler)}
+\subsection*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Tegn punkterne $(2,18)$ og $(4,162)$ ind på et enkeltlogaritmisk koordinatsystem og forbind dem med en ret 
+	linje.
+	\item Brug linjen til at udfylde følgende tabel.
+	\begin{center}
+		\begin{tabular}{c|c|c|c|c|c}
+			$x$ & 1 & 2 & 3 & 4 & 5  \\
+			\hline
+			$y$ & \phantom{6} & 18 & \phantom{54} & 162 & \phantom{486}
+		\end{tabular}
+	\end{center}
+	\item Kan du gennemskue hvilken sammenhæng, linjen beskriver? 
+\end{enumerate}
 
-En styrketræningsgruppe har henover en række måneder målt deres løfteevne på et bestemt løft. De har samlet deres data i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data og lign/Traening.xlsx}{\color{blue!60} dette datasæt.} De antager, at løfteevnen kan beskrives ved en sammenhæng $L$ givet ved 
-\begin{align*}
-	L(x) = b\cdot x^a,
-\end{align*}
-hvor $x$ betegner den forløbne tid i måneder og $L$ er løfteevnen i kg. 
+\subsection*{Opgave 3}
 
 \begin{enumerate}[label=\roman*)]
-	\item Brug datasættet til at bestemme tallene $b$ og $a$. 
-	\item Afgør, hvor længe de skal træne for at forvente at kunne løfte 100kg.
+	\item Grafen for en funktion $f$ er en ret linje i et enkeltlogaritmisk koordinatsystem. Grafen for $f$ går 
+	gennem punkterne $(3,2)$ og $(6,16)$. Bestem en forskrift for $f$ uden at tegne grafen.
 \end{enumerate}
 
-\subsection*{Opgave 12 (Uden hjælpemidler)}
+\subsection*{Opgave 4}
 
-Et rektangel med bredde $5x$ og højde $2x$ er givet
 \begin{enumerate}[label=\roman*)]
-	\item Opstil en sammenhæng, der beskriver arealet af rektanglet som funktion af tallet $x$. 
-	\item Afgør, hvor meget større arealet af rektanglet bliver, hvis $x$ ganges med 4. 
+	\item Tegn punkterne $(2,4)$ og $(6,36)$ ind på et dobbeltlogaritmisk koordinatsystem og forbind dem med 
+	en ret linje.
+	\item Brug linjen til at udfylde følgende tabel.
+	\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c|c|c|c|c}
+			$x$ & 1 & 2 & 3 & 4 & 5 & 6 & 10 & 20 & 40 & 80 \\
+			\hline
+			$y$ & \phantom{1} & 4  & \phantom{8}  &\phantom{16} & \phantom{32}  & 36  & \phantom{128}  & \phantom{256}  & \phantom{512}  & \phantom{1024}
+		\end{tabular}
+	\item Kan du gennemskue hvilken sammenhæng, linjen beskriver? 
+	\end{center}
 \end{enumerate}
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item Tegn punkterne $(1,2)$ og $(4,128)$ ind på et enkeltlogaritmisk koordinatsystem og forbind dem med en ret 
+	linje.
+	\item Brug linjen til at udfylde følgende tabel.
+	\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c}
+			$x$ & 1 & 2 & 3 & 4 & 5 & 6  \\
+			\hline
+			$y$ & 2 & \phantom{18} & \phantom{54} & 162 & \phantom{486}& \phantom{600}
+		\end{tabular}
+	\end{center}
+	\item Kan du gennemskue hvilken sammenhæng, linjen beskriver? 
+\end{enumerate}
+
+\subsection*{Opgave 6 (Med Maple)}
+\begin{enumerate}[label=\roman*)]
+	\item Grafen for en funktion $f$ er på et dobbeltlogaritmisk koordinatsystem en ret linje. Grafen for $f$
+	går gennem punkterne $(5,9)$ og $(13,107)$. Bestem en forskrift for $f$ uden at tegne grafen. 
+\end{enumerate}
+
+\subsection*{Opgave 7}
+Vi skal vise, at eksponentielle sammenhænge mellem to variable $x$ og $y$ vil være lineære på enkeltlogaritmisk papir. Vi husker os selv på, at en eksponentiel sammenhæng mellem to variable er på formen
+\begin{align}
+	\label{eq:exp}
+	y = b\cdot a^x
+\end{align}
+\begin{enumerate}[label=\roman*)]
+	\item Tag logaritmen på begge sider af lighedstegnet på \eqref{eq:exp}.
+	\item Anvend to logaritmeregneregler på udtrykket.
+	\item Er der en lineær sammenhæng mellem $x$ og $\log(y)$?
+\end{enumerate}
+
+\subsection*{Opgave 8}
+Vi skal vise, at potenssammenhænge mellem to variable $x$ og $y$ vil være lineære på dobbeltlogaritmisk papir. Vi husker os selv på, at en potenssammenhæng mellem to variable er på formen
+\begin{align}
+	\label{eq:pow}
+	y = b\cdot x^a
+\end{align}
+\begin{enumerate}[label=\roman*)]
+	\item Tag logaritmen på begge sider af lighedstegnet på \eqref{eq:pow}.
+	\item Anvend to logaritmeregneregler på udtrykket.
+	\item Er der en lineær sammenhæng mellem $\log(x)$ og $\log(y)$?
+\end{enumerate}
+
 
 \end{document}

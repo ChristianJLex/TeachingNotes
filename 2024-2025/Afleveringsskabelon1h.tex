@@ -12,7 +12,7 @@
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
 
 %Husk at rette modul og dato!
-\lhead{Aflevering 2\\ Matematik A
+\lhead{Aflevering 5\\ Matematik A
 }
 \chead{
 }
@@ -39,10 +39,10 @@
 \phantom{h} \vspace{5cm}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \phantom{h}\\
-{\fontsize{50}{60}\selectfont Aflevering 2}\\
+{\fontsize{50}{60}\selectfont Aflevering 5}\\
 \phantom{h}\\
 \rule{0.7\textwidth}{0.3mm}\\
-\Large 2024\\
+\Large 2025\\
 \Large 1.h MA
 
 \end{center}
@@ -89,159 +89,188 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 	Uden hjælpemidler
 \end{center}
 \begin{opgavetekst}{Opgave 1}
-	Bestem følgende brøker
+	To mængder $A$ og $B$ er givet ved
 	\begin{align*}
-		&1) \   \frac{3}{5} + \frac{9}{15}   &&2) \  \frac{7}{9}\cdot\frac{2}{3}     \\
-		&3) \  \frac{\frac{1}{2}}{\frac{4}{10}}    &&4) \  2\cdot \frac{1}{4} + \frac{7}{6}    
+		A &= \{1,2,3,4,5\}, \\
+		B &= \{2,4,5,6,a,b\}.
 	\end{align*}
 \end{opgavetekst}
-
-\begin{opgavetekst}{Opgave 2}
-	Reducér følgende så meget som muligt
-	\begin{align*}
-		&1) \   a^2\cdot a^5    &&2) \ \frac{b^9}{b^5}     \\
-		&3) \   \frac{2^{10}\cdot 5^7}{5^5\cdot 4^5}    &&4) \  \left(\frac{d^7\cdot d^3}{d^2}\right)^3    
-	\end{align*}
-\end{opgavetekst}
-
-\begin{opgavetekst}{Opgave 3}
-\end{opgavetekst}
-
 \begin{delopgave}{}{1}
-	Bestem $10\%$ af 200.
+	Bestem $A \cup B$, $A \cap B$ og $A \backslash B$. 
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Forøg 50 med $20\%$.
+	For to vilkårlige mængder $S$ og $T$ tegn da et Venn-diagram, der illustrerer mængden 
+	\begin{align*}
+		(S\cup T)\backslash (S\cap T)
+	\end{align*}
 \end{delopgave}
 \begin{delopgave}{}{3}
-	Bestem den procentvise forskel fra 50 til 70.
-\end{delopgave}
-
-
-\begin{opgavetekst}{Opgave 4}
-	En eksponentialfunktion $f$ er givet ved
+	Bestem mængden $C$ givet ved
 	\begin{align*}
-		f(x) = 7.2\cdot 1.4^x
+		C = (A\cup B)\backslash (A \cap B).
 	\end{align*}
-\end{opgavetekst}
-\begin{delopgave}{}{1}
-	Aflæs fremskrivningsfaktoren og begyndelsesværdien for $f$
 \end{delopgave}
-\begin{delopgave}{}{2}
-	Bestem vækstraten for $f$ og forklar, hvad denne vækstrate betyder for væksten af $f$. 
-\end{delopgave}
-
-\begin{opgavetekst}{Opgave 5}
-	På Figur \ref{fig:grafer} ses graferne $A,$ $B$ og $C$ for tre eksponentialfunktioner
-	\begin{align*}
-		f(x) &= 5\cdot 1.2^x,\\
-		g(x) &= 5 \cdot 0.7^x,  \\
-		h(x) &= 3 \cdot 1.4^x.
-	\end{align*}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}[
-				axis lines = center,
-				xmin = -1, xmax = 5,
-				ymin = -1, ymax = 10,
-				xlabel = $x$, ylabel = $y$]
-				\addplot[thick, color = teal, domain = -1:10] {5*1.2^x};
-				\addplot[thick, color = purple, domain = -1:10] {3*1.4^x};
-				\addplot[thick, color = cyan, domain = -1:10] {5*0.7^x};
-				\node[color = teal] at (axis cs: 1,6.7) {$B$};
-				\node[color = purple] at (axis cs: 2.7,6) {$A$};
-				\node[color = cyan] at (axis cs: 4,2) {$C$};
-			\end{axis}
-		\end{tikzpicture}	
-		\caption{Graferne $A$, $B$ og $C$.}
-		\label{fig:grafer}
+\begin{opgavetekst}{Opgave 2}
+	En funktion $f$ er givet ved grafen på Figur \ref{fig:defværd}
+	\begin{figure}[H]	
+	\centering
+	\resizebox{0.45\textwidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}
+		[axis lines = center, 
+		xmin = -3.5, xmax = 7.5,
+		ymin = -3.5, ymax = 7.5,
+		grid = both,
+		xtick = {-4,-2,...,8,10},
+		ytick = {-4,-2,...,8,10},
+		minor tick num = 1,
+		xlabel = $x$, ylabel = $y$
+		]
+			\addplot[color = olive, thick, domain = -1:4, samples = 200] {1.3797*1.3797^x};	
+			\filldraw[color = white](axis cs: 4,5) circle (2pt);
+			\draw[color = olive](axis cs: 4,5) circle (2pt);
+			\filldraw[color = olive](axis cs: -1,1) circle (2pt);
+			\node[color = olive, anchor = north] at (axis cs: 2.5,3) {$f$};
+		\end{axis}
+	\end{tikzpicture}
+	}
+	\caption{Graf for funktionen $f$.}
+	\label{fig:defværd}
 	\end{figure}
 	\phantom{h}
 \end{opgavetekst}
 \begin{delopgave}{}{1}
-	Afgør hvilke af graferne $A$, $B$ og $C$ der tilhører funktionerne $f$, $g$ og $h$. Begrund dit svar.
+	Bestem $f(-1)$.
 \end{delopgave}
-
-\begin{opgavetekst}{Opgave 7}
-	Udregn følgende logaritmer
-	\begin{align*}
-		&1) \  \log_2(512)  &   &2) \log_3(27) \\
-		&3) \  \log_{10}(5) + \log_{10}(5) + \log_{10}(4)  &   &4) \log_5(100) - \log_5(4) \\
-	\end{align*}
-\end{opgavetekst}
-
-\begin{opgavetekst}{Opgave 8}
-	Løs følgende ligninger ved brug af logaritmer og potenser
-	\begin{align*}
-		&1) \ 2^{x-7} = 256 &   &2) \ 5^{4x-9} = 125\\
-		&3) \ \log_{10}(2x) = 3 &   &4) \ \log_{5}(4x+1) = 2\\
-	\end{align*}
-\end{opgavetekst}
+\begin{delopgave}{}{2}
+	Bestem definitionsmængden $\textnormal{Dm}(f)$ og værdimængden $\textnormal{Vm}(f)$.
+\end{delopgave}
 
 \newpage
 
-\begin{center}
-	\LARGE
-	Med hjælpemidler
-\end{center}
-
-\begin{opgavetekst}{Opgave 9}
-	Grafen for eksponentialfunktionen $f$ skærer gennem punkterne $(4,5)$ og $(6,22)$.
-\end{opgavetekst}
-\begin{delopgave}{}{1}
-	Bestem forskriften for $f$. 
-\end{delopgave}
-\begin{delopgave}{}{2}
-	Løs ligningen $f(x) = 30$. 
-\end{delopgave}
-
-\begin{opgavetekst}{Opgave 10}
-	\begin{center}
-		\includegraphics[width= 0.6\textwidth]{Billeder/Bakterie}
-	\end{center}
-	Antallet af bakterier i Bakteriekoloni $\alpha$ er på 1250 bakterier. Antallet af bakterier vokser med 15 procent hvert døgn.
-\end{opgavetekst}
-\begin{delopgave}{}{1}
-	Opstil en model, der beskriver antallet af bakterier i kolonien efter $x$ døgn. 
-\end{delopgave}
-\begin{delopgave}{}{2}
-	Bestem antallet af bakterier efter 14 døgn. 
-\end{delopgave}
-\begin{meretekst}
-	Bakteriekoloni $\beta$ har en bakterievækst, der kan beskrives ved funktionen
+\begin{opgavetekst}{Opgave 3}
+	En funktion $f: \mathbb{R} \to \mathbb{R}$ er givet ved
 	\begin{align*}
-		g(x) = 600\cdot 1.25^x,
-	\end{align*}
-	hvor $x$ er den passerede tid i døgn og $g$ er antal bakterier. 
-\end{meretekst}
-\begin{delopgave}{}{3}
-	Tegn graferne for $f$ og $g$ i samme koordinatsystem.
-\end{delopgave}
-
-\begin{delopgave}{}{4}
-	Bestem tidspunktet hvor antallet af bakterier i Bakteriekoloni $\beta$ overstiger antallet af bakterier i Bakteriekoloni $\alpha$ ved at løse en ligning. 
-\end{delopgave}	
-
-\begin{opgavetekst}{Opgave 11}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{Billeder/alien}
-	\end{center}
-	På planeten Glorb, der er naboplanet til Flarp er sygdommen glub også brudt ud. Antallet af smittede kan ses af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2023-2024/Data%20og%20lign/smittedeGlorb.xlsx}{\color{blue!60} dette regneark}. Det antages, at antal smittede Glorbere kan beskrives ved en funktion af typen
-	\begin{align*}
-		f(x) = b \cdot a^x,
-	\end{align*}
-	hvor $x$ er antal passerede dage og $f$ er antal smittede Glorbere.
+		f(x) = 4x-5.
+	\end{align*}	 
 \end{opgavetekst}
+
 \begin{delopgave}{}{1}
-	Lav regression på datasættet og bestem tallene $a$ og $b$.
+	For mængden $A = \{1,3,5\}$ bestem da billedmængden $f(A)$.
 \end{delopgave}
 \begin{delopgave}{}{2}
-	Hvor mange smittede Glorbere er der efter 50 dage i følge modellen?
+	Bestem urbilledet af $B = \{-9,20,-5\}$ under $f$.
 \end{delopgave}
-\begin{delopgave}{}{3}
-	Hvornår overstiger antal smittede Glorbere 2 mio i følge modellen?
+
+\begin{opgavetekst}{Opgave 4}
+	To funktioner $f$ og $g$ er givet ved henholdsvis
+	\begin{align*}
+		f(x) &= \log_{2}(x), \\
+		g(x) &= x^2 - 4x + 4 
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Bestem $f(g(6))$.
+\end{delopgave}
+
+\newpage
+
+\begin{opgavetekst}{Opgave 5}
+	Grafen for en stykvist defineret funktion $g$ kan ses af Figur \ref{fig:stykvis}.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}
+		[
+		axis lines = middle, 
+		xmin = -5.5, xmax = 8.5,
+		ymin = -5.5, ymax = 8.5,
+		xtick = {-6,-4,...,8,10},
+		ytick = {-6,-4,...,8,10},
+		minor tick num = 1,
+		xlabel = $x$, ylabel = $y$,	
+		grid = both,	
+		]
+			\addplot[color = olive, thick, domain = -4:-1] {x + 6};
+			\addplot[color = olive, thick, domain = -1:3] {-x + 7};
+			\addplot[color = olive, thick, domain = 3:6] {2*x - 4};
+			\filldraw[color = olive] (axis cs: -4,2) circle (2pt);
+			\filldraw[color = white] (axis cs: -1,5) circle (2pt);
+			\draw[color = olive] (axis cs: -1,5) circle (2pt);
+			\filldraw[color = olive] (axis cs: -1,8) circle (2pt);
+			\filldraw[color = white] (axis cs: 3,4) circle (2pt);
+			\draw[color = olive] (axis cs: 3,4) circle (2pt);
+			\filldraw[color = olive] (axis cs: 3,2) circle (2pt);
+			\filldraw[color = white] (axis cs: 6,8) circle (2pt);
+			\draw[color = olive] (axis cs: 6,8) circle (2pt);
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Graf for funktionen $g$.}
+		\label{fig:stykvis}
+	\end{figure}
+	\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Opskriv en forskrift for funktionen $g$.
+\end{delopgave}
+\begin{delopgave}{}{2}
+	Bestem løsningerne til ligningen $g(x) = 4$.
+\end{delopgave}
+
+\newpage 
+
+\begin{opgavetekst}{Opgave 6}
+	Grafen for en funktion $h:[-4,3[ \to [-4,5]$ er givet på Figur \ref{fig:injsur}.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}
+		[
+		axis lines = middle, 
+		xmin = -5.5, xmax = 5.5,
+		ymin = -5.5, ymax = 5.5,
+		xtick = {-6,-4,...,8,10},
+		ytick = {-6,-4,...,8,10},
+		minor tick num = 1,
+		xlabel = $x$, ylabel = $y$,	
+		grid = both,	
+		]
+			\addplot[color = olive, thick, domain = -4:-1] {x};
+			\addplot[color = olive, thick, domain = -1:3] {x + 2};
+			\filldraw[color = olive] (axis cs: -4,-4) circle (2pt);
+			\filldraw[color = white] (axis cs: -1,-1) circle (2pt);
+			\draw[color = olive] (axis cs: -1,-1) circle (2pt);
+			\filldraw[color = olive] (axis cs: -1,1) circle (2pt);
+			\filldraw[color = white] (axis cs: 3,5) circle (2pt);
+			\draw[color = olive] (axis cs: 3,5) circle (2pt);
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Graf for funktionen $h$.}
+		\label{fig:injsur}
+	\end{figure}
+	\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Afgør, om $h$ er surjektiv, injektiv eller bijektiv. Begrund dit svar.
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 7}
+	To funktioner $f$ og $g$ er givet ved henholdsvis
+	\begin{align*}
+		f(x) &= 5^{3x-7}, \\
+		g(x) &= \frac{\log_{5}(x) + 7}{3}.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{}{1}
+	Undersøg, om $f$ og $g$ er hinandens inverse funktioner.
 \end{delopgave}	
+\begin{delopgave}{}{2}
+	Bestem den inverse funktion til $f$ givet ved
+	\begin{align*}
+		f(x) = 10x - 6.
+	\end{align*}
+\end{delopgave}
+
 
 \end{document}
 

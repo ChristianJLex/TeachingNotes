@@ -1,0 +1,121 @@
+\begin{center}
+\Huge
+Symmetrisk sandsynlighedsfelt
+\end{center}
+\section*{Symmetrisk sandsynlighedsfelt}
+\stepcounter{section}
+
+Vi lægger ud med at definere begrebet \textit{sandsynlighedsfelt}.
+
+\begin{defn}[Sandsynlighedsfelt]
+	Et sandsynlighedsfelt er et par $(U,P)$ af et udfaldsrum $U$ og en sandsynlighedsfunktion $P$.  
+\end{defn}
+
+Vi definerer nu et \textit{symmetrisk sandsynlighedsfelt}.
+\begin{defn}[Symmetrisk sandsynlighedsfelt]
+	Et sandsynlighedsfelt $(U,P)$ kaldes et symmetrisk sandsynlighedsfelt, hvis der for $U = \{ x_1, x_2,\hdots, x_n\}$ gælder, at 
+	\begin{align*}
+		P(x_1) = P(x_2) =\cdots = P(x_n) = \frac{1}{n}.
+	\end{align*}
+\end{defn}
+Med andre ord er alle udfald i udfaldsrummet lige sandsynlige. 
+
+Vi brugte sidste gang følgende sætning op til flere gange i de tilfælde, hvor vi havde et symmetrisk sandsynlighedsfelt.
+\begin{setn}\label{setn:udfald}
+Hvis vores udfaldsrum er endeligt og har symmetrisk fordeling, så gælder der for en hændelse $A$, at
+\begin{align*}
+P(A) = \frac{\# \textit{gunstige udfald}}{\#  \textit{mulige udfald}}.
+\end{align*}
+\end{setn}
+\begin{exa}
+Vi skal bestemme sandsynligheden for at slå et primtal, hvis vi slår med to terninger.
+Vi bruger Sætning \ref{setn:udfald}, og skal altså afgøre, hvilke udfald, der er gunstige. Det er udfaldene 2, 3, 5, 7 og 11. Der er $6\cdot 6$ mulige udfald for at slå med to terninger. Vi mangler kun kun at bestemme antallet af måder, vi kan slå hvert primtal. 
+\begin{itemize}
+\item Vi kan slå en toer ved at slå (1,1).
+\item Vi kan slå en treer ved at slå (1,2) og (2,1).
+\item Vi kan slå en femmer ved at slå (1,4), (4,1), (2,3) og (3,2).
+\item Vi kan slå en syver ved at slå (1,6), (6,1), (2,5), (5,2), (4,3) og (3,4).
+\item Vi kan slå en ellever ved at slå (6,5) og (5,6).
+\end{itemize}
+Lægger vi alle disse lige sandsynlige udfald sammen, så får vi 15 gunstige udfald. Sandsynligheden for at slå et primtal med to terninger er derfor 
+\begin{align*}
+P(\textit{primtal}) = \frac{15}{36}.
+\end{align*}
+\end{exa}
+\begin{exa}
+
+Vi skal bestemme sandsynligheden for at to personer i klassen deler fødselsdag. I klassen er der 28 elever. Det vil vise sig, at det er lettere at bestemme sandsynligheden for at ingen personer deler fødselsdag. Antal gunstige udfald er derfor givet ved $P(365,28)$.
+\begin{align*}
+P(365,28) = 365\cdot 364\cdot 363 \cdots 338.
+\end{align*}
+Antallet af mulige udfald for fødselsdage er $365^{28}$. Derfor er sandsynligheden for at ingen personer deler fødselsdag givet ved
+\begin{align*}
+P(\textit{ingen deler fødselsdag}) = \frac{365\cdot 364 \cdots 338}{365^{28}} \approx 0.35
+\end{align*}
+Det vil derfor sige, at sandsynligheden for, at mindst to deler fødselsdag er 
+\begin{align*}
+P(\textit{mindst to deler fødselsdag}) \approx 1-0.35 = 0.65.
+\end{align*}
+Altså er der omtrent $65\%$ sandsynlighed for at to i klassen deler fødselsdag. 
+\end{exa}
+
+\section*{Opgave 1}
+Du spiller et spil med en ven. Du slår med en 20-sidet terning. Hvis du slår 16 eller over, så vinder du. Hvis du slår 12 eller under, så vinder din ven. Ellers vinder ingen.
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at du ikke vinder?
+	\item Hvad er sandsynligheden for, at din ven ikke vinder?
+	\item Hvis I spiller tre gange, hvad er så sandsynligheden for, at du taber alle gange? Hvad med sandsynligheden for, at du ikke vinder?
+\end{enumerate}
+
+\section*{Opgave 2}
+Du slår plat og krone tre gange, og noterer dit resultat.
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at du får plat alle tre gange?
+	\item Hvad er sandsynligheden for at få plat mindst én gang?
+	\item Hvad er sandsynligheden for at få krone præcis to gange?
+	\item Hvad er sandsynligheden for slet ikke at få plat?
+\end{enumerate}
+
+\section*{Opgave 3}
+Du slår med en terning to gange og lægger antallet af øjne sammen. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for at slå 2?
+	\item Hvad er sandsynligheden for at slå 7?
+	\item Hvad er sandsynligheden for at slå 6 eller mindre?
+	\item Hvad er sandsynligheden for at slå 10 eller over?
+\end{enumerate}
+
+\section*{Opgave 4}
+Du er med i game-showet \textit{Let's Make a Deal}. I dette gameshow beder showets vært, Monty Hall, dig om at vælge en dør blandt tre døre. Bag to af dørene står en ged, og bag den sidste dør står en ny bil. Lad os for spillets skyld antage, at du godt vil vinde en bil, og ikke en ged. Du vinder den genstand, der står bag din valgte dør. 
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at vinde en bil?
+\end{enumerate}
+Efter, at du har valgt en dør, åbner Monty en dør, hvor der står en ged bag. Du får nu valget mellem at blive på din valgte dør eller skifte mening.
+\begin{enumerate}[label=\roman*)]
+\stepcounter{enumi}
+\item Afgør, om du skal skifte mening eller blive stående for at maksimere sandsynligheden for, at du får en bil.
+\item Hvad er sandsynligheden for at vinde en bil, hvis du skifter dør?
+\item Hvad er sandsynligheden for at vinde en bil, hvis du ikke skifter dør?
+\end{enumerate}
+
+\section*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item En nummerplade består af to bogstaver og 5 tal. Hvor mange forskellige nummerplader findes der? Hvis nummerplader blev uddelt med symmetrisk fordeling, hvad er så sandsynligheden for at få en nummerplade, der har dine initialer?
+\item Hvis tre personer i klassen skal vælges til at gøre rent, hvad er så sandsynligheden for, at det bliver dig og de to, der sidder ved siden af dig?
+\item Hvad er sandsynligheden for, at mindst en i klassen deler din fødselsdato?
+\end{enumerate}
+\section*{Opgave 6}
+I Netflix-serien \textit{Squid Games} første sæson skal 16 deltagere krydse to broer bestående af hver $18$ glaspaneler i det femte spil. De kan springe frem og tilbage mellem de to broer, men hver gang de træder frem til næste glaspanel, vil kun en af de to broers glaspanel kunne bære dem. Når de har passeret de 18 paneler, har de krydset broen og er i sikkerhed.
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at den første person overlever?
+\item Hvor mange personer skal der i gennemsnit bruges for at krydse broerne? 
+\item Hvor mange personer vil der i gennemsnit være tilbage, når de har krydset broerne?
+\end{enumerate}
+
+
+\section*{Opgave 7}
+I poker får hver spiller uddelt en hånd på 5 kort (eller 7 kort). 
+\begin{enumerate}[label=\roman*)]
+\item Hvor mange forskellige hænder er der i poker?
+\item Hvis du har fem kort med samme kulør, så har du en flush. På hvor mange forskellige måder kan du få flush? Hvad er sandsynligheden for flush så?
+\end{enumerate}

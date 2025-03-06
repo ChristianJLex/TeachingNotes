@@ -1,0 +1,147 @@
+\begin{center}
+	\Huge
+	Annuitet
+\end{center}
+
+
+
+
+\section*{Gældsannuitet}
+\stepcounter{section}
+
+I gældsannuitet lånes der et beløb $G$, som vi kalder for \textit{hovedstolen}. På lånet er der en bestemt rente $r$, der tilsvarer vækstraten. Til hver termin indbetaler vi et fast beløb $Y$, vi kalder for ydelsen. Vi vil gerne bestemme, hvor meget der fortsat skyldes efter $n$ terminer. 
+\begin{exa}
+Vi låner $G=100 \TS 000$kr i banken til en årlig rente på $5\%$. Vi betaler en terminsvis ydelse på $Y=10 \TS 000$kr.
+Efter $0$ terminer er restgælden $G=100 \TS 000$kr. Efter $1$ termin er gælden
+\begin{align*}
+G_1 = \underbrace{100 \TS 000}_{=G}\cdot 1.05 - 10 \TS 000 = 95 \TS 000.
+\end{align*}   
+Efter to terminer er gælden 
+\begin{align*}
+G_2 = \underbrace{95 \TS 000}_{=G_1}\cdot 1.05-10 \TS 000 = 89 \TS 750.
+\end{align*}
+Efter tre terminer gælden 
+\begin{align*}
+G_3 = \underbrace{89 \TS 750}_{=G_2} \cdot 1.05 - 10 \TS 000 = 84 \TS 237.5,
+\end{align*}
+og så videre. 
+\end{exa}
+Vi kan bestemme restgælden efter $n+1$ terminer, hvis vi kender restgælden efter $n$ terminer som
+\begin{align*}
+G_{n+1} = G_{n}\cdot (1+r) - Y, 
+\end{align*}
+hvor $(1+r)$ så tilsvarer fremskrivningsfaktoren fra eksponentiel vækst. 
+\begin{setn}
+Låner vi $G$ med en terminsvis rente på $r$ og indbetaler en fast ydelse per termin på $Y$ og skal have afbetalt vores lån på $n$ terminer, har vi følgende sammenhæng mellem vores variable.
+\begin{align*}
+G = Y\cdot \frac{1-(1+r)^{-n}}{r}.
+\end{align*}
+\end{setn}
+\begin{exa}
+Om et forbrugslån gælder følgende betingelser for et lån på $20 \TS 000$kr: Lånet skal betales tilbage efter 5 terminer, og ydelsen skal være på 6000kr. Hvad er renten på lånet? Vi opstiller ligningen
+\begin{align*}
+20000 = 6000\cdot \frac{1-(1+r)^{-5}}{r},
+\end{align*}
+og løser med et CAS-værktøj. Dette giver os $r = 0.152$, altså en procentvis rente på $15.2\%$.
+\end{exa}
+
+\section*{Opsparingsannuitet}
+\stepcounter{section}
+
+Opsparingsannuitet er meget lig gældsannuitet. Vi lægger bare et fast beløb til løbende i stedet for at trække det fra. 
+
+\begin{setn}[Opsparingsannuitet]
+	Lægges der et beløb $b$ ind på en konto løbende med en rente på $r$, så vil der efter $n$ terminer være et 
+	beløb på $A_n$ på kontoen, hvor $A_n$ er givet ved
+	\begin{align*}
+		A_n = b\cdot \frac{(1+r)^n-1}{r}.
+	\end{align*}
+\end{setn}
+
+\begin{exa}
+	Vi indsætter til hver termin $1000$ kr på en opsparingskonto. På kontoen får vi en rente på 5$\%$. Vi skal
+	afgøre, hvor meget der står på kontoen efter 10 terminer. Vi indsætter derfor tallene i annuitetsformlen og får
+	\begin{align*}
+		A_{10} = 1000\cdot \frac{(1+0.05)^10-1}{0.05} = 12577.89kr.	
+	\end{align*}	 
+	Vi har altså tjent næsten 2577 kr på renter på de 10 terminer.  
+\end{exa}
+
+
+\subsection*{Opgave 1}
+Der indsættes 100$\TS$000 på en konto med en årlig rente på $3\%$. 
+\begin{enumerate}[label=\roman*)]
+\item Hvad står der på kontoen efter 5 år?
+\item Hvornår står der 110$\TS$000 på kontoen?
+\item Hvor længe går der, før pengene på kontoen er fordoblet?
+\item Hvad tilsvarer denne rente til i månedlig rente?
+\end{enumerate}
+
+
+\subsection*{Opgave 2}
+På en konto får du $0\%$ i rente på de første 100.000 kr. og en kvartalsvis rente på $-1\%$ i rente på alt derover. Vi indsætter $200 \TS 000$ på kontoen.
+\begin{enumerate}[label=\roman*)]
+\item Hvor meget står der på kontoen efter $10$ år?
+\item Hvornår står der $150 \TS 000$ på kontoen?
+\item Hvad er det mindste beløb, der kan stå på kontoen, hvis vi bare efterlader den?
+\end{enumerate}
+
+
+\subsection*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+\item Vi låner $150 \TS000$ i banken til en rente på $6\%$ og betaler en ydelse på $12 \TS 000$. Hvor meget er restgælden efter 1,2,3,4 og 5 terminer?
+\item Vi låner $50 \TS 000$ til en rente på $10\%$, og betaler en ydelse på $8\TS 000$. Bliv ved med at fremskrive restgælden til lånet er afbetalt. Hvor lang til går der?
+\end{enumerate}
+
+\subsection*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+\item Vi låner $1\TS 000 \TS 000 $kr til en rente på $2\%$, og vi vil gerne betale lånet af på 20 år. Hvor meget skal vi betale i termin?
+\item Vi betaler $200 \TS 000$kr i termin til et lån på $4\TS 000 \TS 000$ til en rente på $3\%$, og vi betaler  Hvornår er vores lån tilbagebetalt?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item På en opsparingskonto indsætter vi $6 \TS 000$ per termin. Kontoen giver os $2\%$ i rente. Hvornår
+	vil der stå $60 \TS 000$ på kontoen?
+	\item Vi vil gerne have $100 \TS 000$ på kontoen efter 20 terminer. Hvad skal vi have i rente?
+	\item Hvad skal vi spare op hver termin, hvis vi skal have $1\TS 000 \TS 000$ på kontoen efter 40 terminer 
+	med en rente på $4\%$. Hvor meget af din samlede opsparing består af renteindtægter.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Du vil gerne have penge til udbetalingen til et hus, når du fylder 40 år. Du begynder derfor at spare sammen, når du fylder 20 og sætter 1500kr ind på en opsparingskonto hver måned. Opsparingskontoen giver dig årligt en rente på $2\%$.
+\begin{enumerate}[label=\roman*)]
+	\item Hvor meget står der på opsparingskontoen, når du fylder 40?
+	\item Hvor meget ville der stå på kontoen, hvis du begyndte at spare op som 18-årig i stedet?
+\end{enumerate}
+I stedet for at sætte pengene på en opsparingskonto, beslutter du dig for at investere dem i aktier. Du finder en indeksfond, der har givet et årligt afkast på $6\%$. 
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{2}
+	\item Hvor mange penge vil du have investeret i aktier som 40-årig, hvis du investerer de 1500kr 
+	i stedet for at sætte dem på opsparingskontoen?
+	\item Et hus i københavnsområdet er dyrt og du beslutter dig for at sætte penge på opsparingskontoen i stedet for i aktier for en sikkerheds skyld. Du skal have $600\TS 000$ til udbetalingen til dit hus. Hvor meget skal du spare op om måneden for at have råd til dette som 40-årig?
+\end{enumerate}
+
+\subsection*{Opgave 7}
+I skal købe hus og det skal være i Brønshøj, Vanløse eller Rødovre. I vil gerne købe det som 35-årige, og I starter med at spare op i dag. Vi antager, at huspriserne stiger med inflationen (altså omkring $2\%$ årligt.)
+\begin{enumerate}[label=\roman*)]
+	\item Find et hus på jeres yndlingsegendomsmæglers hjemmeside og find ud af, hvad det vil koste,
+	 når I er 35 år, hvis prisen følger inflationen. 
+	\item Når man skal købe hus, skal man have $5\%$ af husets pris som udbetaling kontant. Hvor meget skal 
+	I have sparet op, når I skal købe huset?
+	\item Find ud af, hvor meget I kan få i rente på en opsparingskonto.
+	\item Bestem, hvor meget I skal spare op hver måned, hvis I skal have til udbetalingen til jeres hus, når I 
+	er 35, hvis I sætter pengene ind på en opsparingskonto. 
+\end{enumerate}
+Investerer I i aktier, så er det ikke urealistisk med en årlig vækst på $10\%$, men det er forbundet med en hvis usikkerhed. 
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{4}
+	\item Hvor meget skal I opspare hver måned, hvis I får et årligt afkast på $10\%$ på jeres aktier?
+\end{enumerate}
+I er nu 35 og skal købe jeres drømmehus. I skal derfor have et lån, der dækker de resterende $95\%$ af jeres boligkøb
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{5}
+	\item Find ud af, hvor meget I skal betale i rente på et realkreditlån.
+	\item Hvor meget skal I betale i ydelse, hvis I skal betale lånet henover 30 år. 
+	\item Hvis I øger ydelsen med 15$\%$, hvornår har I så betalt lånet af?
+\end{enumerate}

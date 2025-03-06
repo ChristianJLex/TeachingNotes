@@ -1,0 +1,149 @@
+
+\begin{center}
+\Huge
+Den binomialfordelte stokastiske variabel
+\end{center}
+\section*{Den binomialfordelte stokastiske variabel}
+\stepcounter{section}
+
+En \textit{binomialfordelt stokastisk variabel} er en stokastisk variabel, der beskriver sandsynligheden for et bestemt antal succeser i en række Bernoulli-eksperimenter. Dette kunne være sandsynligheden for at få krone to gange i syv forsøg eller at få to sekser i fem kast med en terning. 
+
+Vi definerer den binomialfordelte stokastiske variabel lidt anderledes og motiverer herefter definitionen. Først defineres dog, hvad der menes, når vi siger \textit{sandsynlighedsfunktion} i forbindelse med stokastiske variable. 
+\begin{defn}[Sandsynlighedsfunktion]
+	Lad $X$ være en stokastisk variabel. Sandsynlighedsfunktionen for $X$ defineres da til at være funktion $f$, der opfylder,  at
+	\begin{align*}
+		f(x) = P(X = x).
+	\end{align*}
+\end{defn}
+\begin{defn}[Binomialfordelt stokastisk variabel]
+	\label{def:bin}
+	En stokastisk variabel $X$ siges at være \textit{binomialfordelt} med antalsparameter $n$ og sandsynlighedsparameter $p$ hvis sandsynlighedsfunktionen for $X$ er givet ved
+	\begin{align*}
+		f(r) = P(X = r) = \textnormal{K}(n,r)\cdot p^r\cdot (1-p)^{n-r}.
+	\end{align*}
+	Vi skriver, at $X \sim \textnormal{B}(n,p)$. 
+\end{defn}
+
+Vi vil nu motivere definitionen. Betragt situationen, hvor vi har udført $n$ stokastiske eksperimenter, der hver har sandsynlighed $p$ for succes. Desuden er de første $r$ eksperimenter succeser og resten er fiaskoer. Sandsynligheden for at få $r$ succeser i streg er (da eksperimenterne er uafhængige)
+\begin{align*}
+	\underbrace{p\cdot p\cdots p}_{\textnormal{r gange}} = p^r
+\end{align*}
+Sandsynligheden for at få $n-r$ fiaskoer i streg er
+\begin{align*}
+	\underbrace{(1-p)\cdot (1-p)\cdots (1-p)}_{\textnormal{n-r gange}} = (1-p)^{n-r}.
+\end{align*}
+Skal vi først have succeserne \textit{og} derefter fiaskoerne er sandsynligheden for dette produktet af de to tidligere sandsynligheder.
+\begin{align*}
+	p^r \cdot (1-p)^{n-r}
+\end{align*}
+Vi er næsten i mål. Vi mangler blot følgende betragtning; vi er ligeglade med, hvornår vi får vores succeser. Vi skal derfor bestemme antallet af måder, vi kan placere vores succeser i vores $n$ forsøg. Dette må tilsvare $\textnormal{K}(n,r)$, da vi skal udtrække $r$ pladser til vores succeser blandt de $n$ forsøg. I alt må sandsynligheden for at få vores $r$ succeser derfor være
+\begin{align*}
+	\textnormal{K}(n,r) \cdot p^r \cdot (1-p)^{n-r},
+\end{align*}
+da enhver placering af succeserne må have samme sandsynlighed.
+
+Vi betragter et eksempel på denne argumentation.
+\begin{exa}
+	\label{exa:bin}
+	Vi skal bestemme sandsynligheden for at slå 2 seksere i 5 forsøg. Sandsynligheden for at de to første slag er seksere er 
+	\begin{align*}
+		\frac{1}{6}\cdot \frac{1}{6} = \frac{1}{36}
+	\end{align*}	
+	Sandsynligheden for, at de resterende slag ikke er seksere er
+	\begin{align*}
+		\frac{5}{6}\cdot \frac{5}{6} \cdot \frac{5}{6} \approx 0.58.
+	\end{align*}
+	Sandsynligheden for kombinationen af succeser SSFFF er derfor
+	\begin{align*}
+		\frac{1}{2}\cdot \frac{1}{2}\cdot \frac{5}{6}\cdot \frac{5}{6} \cdot  \frac{5}{6} \approx \frac{1}{36} \cdot 0.58 \approx 0.016.
+	\end{align*}
+	Sandsynligheden for andre kombinationer af succeser (eksempelvis SFSFF) må alle have denne sandsynlighed. Antallet af sådanne kombinationer er
+	\begin{align*}
+		\textnormal{K}(5,2) = \frac{5!}{(5-3)!\cdot 2!} = 10.
+	\end{align*}
+	Sandsynligheden for at få netop 2 seksere i fem forsøg er derfor
+	\begin{align*}
+		P(X = 2) &= K(5,2)\left(\frac{1}{6} \right)^2\left(1 - \frac{1}{6}\right)^3 \\
+				 &= K(5,2)\left(\frac{1}{6} \right)^2 \left(\frac{5}{6}\right)^3 \\
+				 &\approx 10\cdot \frac{1}{36} \cdot 0.58 \\
+				 &\approx 10 \cdot 0.016 \\
+				 &= 0.16, 
+	\end{align*}
+	så sandsynligheden for at få netop 2 seksere i 5 forsøg er altså omtrent 16$\%$.
+\end{exa}
+
+Det vil ofte være besværligt at bruge sandsynlighedsfunktionen for binomialfordelingen i hånden. I Maple hedder sandsynlighedsfunktionen for binomialfordelingen for \texttt{binpdf} (for binomial probability distribution function), og den bruges ved at skrive
+\begin{align*}
+	\texttt{binpdf(n,p,x)},
+\end{align*}
+hvor \texttt{n} er antalsparameteren, \texttt{p} er sandsynlighedsparameteren og \texttt{x} er udfaldet, du ønsker at bestemme sandsynligheden for.
+\begin{exa}
+	Vi ønsker i Maple at bestemme sandsynligheden for at få 2 seksere i 5 forsøg. Vi skriver i Maple
+	\begin{align*}
+		&\texttt{restart}\\
+		&\texttt{with(Gym):}\\
+		&\texttt{binpdf(5,$\frac{\texttt{1}}{\texttt{6}}$,2})
+	\end{align*}
+	og får outputtet 0.16.
+\end{exa}
+
+\subsection*{Fordelingsfunktion}
+
+Vi er ofte interesserede i sandsynligheden for, om vi har fået mindre end et bestemt antal succeser. Derfor introduceres \textit{fordelingsfunktionen}.
+\begin{defn}[Fordelingsfunktion]
+	Fordelingsfunktionen for en stokastisk variabel $X$ er en funktion $F$, der opfylder, at
+	\begin{align*}
+		F(x) = P(X \leq x).
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	Vi skal bestemme sandsynligheden for at slå mindre end eller lig 2 seksere i 5 forsøg med en terning. Vi skal derfor for den binomialfordelte stokastiske variabel $X \sim 		
+	\textnormal{B}\left(5,\frac{1}{6}\right)$ bestemme
+	\begin{align*}
+		P(X \leq 2).
+	\end{align*}
+	Dette gøres ved at bestemme 
+	\begin{align*}
+		P(X = 0) + P(X = 1) + P(X = 2) \approx 0.40 + 0.40 + 0.16 = 0.96,
+	\end{align*}
+	men kan også gøres i Maple ved at bruge funktionen \texttt{bincdf} (for binomial cumulative distribution function).
+	\begin{align*}
+		&\texttt{restart}\\
+		&\texttt{with(Gym):}\\
+		&\texttt{bincdf$\left(\texttt{5,$\frac{\texttt{1}}{\texttt{6}}$,2}\right)$}
+	\end{align*}
+	og vi får outputtet 0.96.
+\end{exa}
+
+
+
+\subsection*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for at slå nøjagtigt fem seksere på seks slag med en terning?
+	\item Hvad er sandsynligheden for at få mindst 3 seksere?
+	\item Hvad er sandsynligheden for at få mindre en 4 nøjagtigt 2 gange?
+\end{enumerate}
+\subsection*{Opgave 2}
+Et lægemiddel bruges til en bestemt behandling, og gives til 10 personer. Sandsynligheden for helbredelse er 20$\%$. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at to personer helbredes?
+	\item Hvad er sandsynligheden for, at alle personer helbredes?
+	\item Hvad er sandsynligheden for, at mindst 4 helbredes? 
+\end{enumerate}
+
+\subsection*{Opgave 3}
+I en by har 15$\%$ stemt på partiet "liste Q". 100 Personer udvælges tilfældigt og spørges "har du stemt liste Q?"
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at netop 15 personer svarer ja?
+	\item Hvad er sandsynligheden for, at ingen svarer ja?
+	\item Bestem sandsynligheden for, at mere end 20 svarer ja. 
+\end{enumerate}
+
+\subsection*{Opgave 4}
+Til kurset "Introduktion til matematisk analyse" på Husum Universitet dumper 50$\%$ af deltagerne. 20 procent af dem, der har dumpet vil lyve, når de bliver spurgt, om de har dumpet kurset. 15 personer udvælges tilfældigt og spørges, om de er dumpet. 
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynligheden for, at 3 personer svarer, at de er dumpet?
+	\item Bestem sandsynligheden for, at mere end 5 personer svarer, at de er dumpet.
+	\item Bestem sandsynligheden for, at mellem 2 og 4 personer svarer, at de er dumpet. 
+\end{enumerate}
