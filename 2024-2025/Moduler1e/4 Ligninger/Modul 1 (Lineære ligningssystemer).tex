@@ -1,0 +1,157 @@
+\begin{center}
+\Huge
+Lineære ligningssystemer
+\end{center}
+
+\section*{To ligninger med to ubekendte}
+\stepcounter{section}
+
+Vi har i grundforløbet arbejdet ganske kort med at løse to ligninger med to ubekendte i særligt 
+lette tilfælde. Dette kunne være to ligninger i stil med
+\begin{align*}
+	y &= 2x+5 \\
+	y &= -3x+15. 
+\end{align*}
+Vi løste disse ligninger ved at sætte dem lig hinanden og løse ligningen for $x$. 
+\begin{align*}
+	2x + 5 = -3x + 15 & \Leftrightarrow 5x = 5,
+\end{align*}
+så løsningen for $x$ er $x = 2$. Vi indsætter nu dette i én af de oprindelige ligninger.
+\begin{align*}
+	y = 2x + 5 \Leftrightarrow y = 2\cdot 2 + 5 = 9,
+\end{align*}
+så løsningen på ligningssystemet er $x = 2, y = 9$, hvilket også tilsvarer de to linjers skæringspunkt. 
+
+Vi skal nu se på, hvordan vi løser to ligninger med to ubekendte, når vi får ligninger, der ikke med det samme kan sættes lig hinanden. 
+
+Lad os se på et par eksempler:
+\begin{exa}[Lige store koefficienters metode]
+	Vi har to ligninger
+	\begin{align}
+		2x+3y &= -4, \nonumber \\
+		4x+8y &= 8.\label{eq:ligning2}
+	\end{align}
+	Der er to umiddelbare fremgangsmetoder, når man har sådan et ligningssystem. Den første
+	vi skal se på er lige store koefficienters metode. Vi ganger \eqref{eq:ligning2} igennem
+	med $2$ og får systemet
+	\begin{align*}
+		4x+6y &= -8,\\
+		4x+8y &= 8.
+	\end{align*}	
+	Vi kan nu trække de to ligninger fra hinanden og få
+	\begin{align*}
+		4x+6y-(4x+8y) = -8-8 \ &\Leftrightarrow\\
+		6y-8y=-16 &\Leftrightarrow\\
+		-2y=-16 &\Leftrightarrow \\
+		y = 8
+	\end{align*}
+	Dette kan vi så stoppe ind i en af de oprindelige ligninger og få 
+	\begin{align*}
+		2x+3\cdot 8 =-4 \ &\Leftrightarrow\\
+		2x + 24 = -4 &\Leftrightarrow\\
+		2x = -28 &\Leftrightarrow\\
+		x = -14,
+	\end{align*}
+	og en løsning på ligningssystemet er derfor $(x,y) = (-14,8)$.
+	\end{exa}
+\begin{exa}[Substitutionsmetoden]
+Vi betragter igen ligningssystemet
+\begin{align}
+2x+3y &= -4\label{eq:ligning1},\\
+4x+8y &= 8\label{eq:ligning22}.
+\end{align}
+I substitutionsmetoden isolerer vi enten $x$ eller $y$ i en af ligningerne. Lad os isolere $x$ i \eqref{eq:ligning22}:
+\begin{align*}
+4x + 8y = 8 \ &\Leftrightarrow\\
+4x = 8-8y &\Leftrightarrow\\
+x = 2 - 2y.
+\end{align*}
+Dette sættes nu ind i \eqref{eq:ligning1}:
+\begin{align*}
+2x + 3y = -4 &\Leftrightarrow\\
+2(2-2y) + 3y = -4 &\Leftrightarrow\\
+4-4y +3y = -4 &\Leftrightarrow\\
+4-y = -4 &\Leftrightarrow\\
+-y = -8 &\Leftrightarrow\\
+y = 8
+\end{align*}
+Vi kan nu stoppe $y=8$ ind i udtrykket $x = 2-2y$ og vi får
+\begin{align*}
+x = 2-2\cdot 8 = 2-16 = -14
+\end{align*}
+Og vi er igen kommet frem til løsningen for ligningssystemet $(x,y) = (-14,8)$.
+\end{exa}
+\begin{exa}
+	Skal vi løse ligningssystemet i Maple skal vi skrive følgende:
+	\begin{align*}
+		&\texttt{with(Gym):}\\
+		&\texttt{solve([2x+3y = -4,4x+8y = 8],[x,y])}
+	\end{align*}
+	Dette giver også løsningen $(x = -14, y = 8)$.
+\end{exa}
+
+\section*{Lineære ligninger}
+\stepcounter{section}
+Mere generelt har vi lineære ligningssystemer. 
+\begin{defn}
+Et lineært ligningssystem er et system af $n\in \mathbb{N}$ lineære ligninger ligninger
+\begin{align*}
+b_1&= a_{1,1}x_1+a_{1,2}x_2+\hdots a_{1,m}x_m, \\
+b_2&= a_{2,1}x_1+a_{2,2}x_2+\hdots a_{2,m}x_m,\\
+&\vdots\\
+b_n&= a_{n,1}x_1+a_{n,2}x_2+\hdots a_{n,m}x_m,
+\end{align*}
+hvor $b_i,a_{i,j}\in \mathbb{R}$ og $x_j$ er $m$ ubekendte, vi ønsker at bestemme. Hvis der findes et $x_j \in \mathbb{R}$, der løser systemet, så kaldes systemet konsistent.
+\end{defn}
+Det er ikke vigtigt at huske den præcise definition af et ligningssystem, og næsten alle de ligningssystemer, vi vil beskæftige os med er konsistente. Vi vil desuden næsten kun se på ligningssystemer af $2$ eller måske $3$ ubekendte. 
+
+\subsection*{Opgave 1}
+Løs følgende ligningssystemer ved brug af både substitution og lige store koefficienters metode:
+\begin{enumerate}[label=\roman*)]
+\item \begin{align*}
+x+y&=0,\\
+-3x+6y&=0.
+\end{align*}
+\item 
+\begin{align*}
+2x-10y&=2,\\
+-x+6y&=3.
+\end{align*}
+\item
+\begin{align*}
+1x-2y&=3,\\
+4x-5y&=6.
+\end{align*}
+\item
+\begin{align*}
+4x-6y&=8,\\
+5x-2y&=10.
+\end{align*}
+\item 
+\begin{align*}
+2x+4y&=8,\\
+3x-9y&=27.
+\end{align*}
+\item 
+\begin{align*}
+	-7x -4y &= 4 \\
+	3x + 6y &= 9
+\end{align*}
+\end{enumerate}
+
+\subsection*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Brug lige store koefficienters metode til at løse ligningssystemet
+	\begin{align*}
+		x+y+z&=0,\\
+		x-y+2z&=0,\\
+		2x-2y+8z&=0.
+	\end{align*}
+	\item Brug lige store koefficienters metode til at løse ligningssystemet
+	\begin{align*}
+		2a + 2b + 3c + 3d &= 1,\\
+		-a - 2*b + 3*c + 9*d &= 1,\\
+		b + 2*d &= 1,\\
+		a + 2*c &= 2.
+	\end{align*}
+\end{enumerate}

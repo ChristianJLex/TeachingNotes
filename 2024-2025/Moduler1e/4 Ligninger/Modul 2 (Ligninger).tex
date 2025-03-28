@@ -1,0 +1,111 @@
+\begin{center}
+\Huge
+	Ligninger	
+\end{center}
+
+\section*{Lineære ligninger}
+\stepcounter{section}
+Vi skal lære, hvordan vi arbejder med ligninger af andre typer end lineære ligninger af én variabel. Sidst så vi på lineære ligningssystemer, der kunne indeholde flere variable. 
+\begin{exa}
+	En lineær ligning af én variabel kunne være en ligning af typen
+	\begin{align*}
+		2(x-4) = 8.
+	\end{align*}
+	Denne løses ved at isolere $x$ som i grundforløbet.
+	\begin{align*}
+		2(x-4) = 8 \ &\Leftrightarrow \ 2x-8 = 8 \\
+		&\Leftrightarrow	 \ 2x = 16 \\
+		&\Leftrightarrow \ x = 8.
+	\end{align*}
+\end{exa}
+
+\section*{Andengradsligninger}
+\stepcounter{section}
+
+En andengradsligning er en ligning, hvor der indgår et led med $x^2$. Disse kan se ud på flere forskellige måder, og vi kan generelt desværre ikke isolere $x$ i disse ligninger med vores sædvanlige værktøjer. Nogle gange kan vi dog gætte løsningen. Disse ligninger har heller ikke altid nogle løsninger.
+
+\begin{exa}
+	En andengradsligning kunne være en ligning på formen
+	\begin{align*}
+		x^2 = 16
+	\end{align*}		
+	Denne ligning kan vi gætte løsningerne på. Løsningerne til denne ligning er $x = 4$ og $x = -4$. 
+	Andengradsligningen
+	\begin{align*}
+		x^2 = -4
+	\end{align*}
+	har derimod ikke nogle løsninger i $\mathbb{R}$.
+	En andengradsligning på formen 
+	\begin{align*}
+		x^2 + 4x + 2 = 0
+	\end{align*}
+	kan vi ikke løse med vores sædvanlige værktøjskasse. Vi skal næste gang se på, hvordan sådan en ligning 
+	løses.
+\end{exa}
+
+Vi kan definere en andengradsligning mere generelt.
+\begin{defn}[Andengradsligning]
+	En andengradsligning er en ligning på formen
+	\begin{align*}
+		ax^2 + bx + c = 0,
+	\end{align*}
+	hvor $a,b,c \in \mathbb{R}, a \neq 0$. 
+\end{defn}
+\begin{exa}
+	Andengradsligningen 
+	\begin{align*}
+		x^2 + 4x + 2 = 0
+	\end{align*}
+	har $a = 1$, $b = 4$ og $c = 2$.
+\end{exa}
+
+
+Hvis der i en ligning ikke optræder noget konstantled $c$, så kan vi bruge \textit{nulreglen} til at bestemme løsningerne til ligningen. 
+\begin{exa}
+	Vi har ligningen 
+	\begin{align*}
+		x^2 + 3x = 0
+	\end{align*}
+	Vi kan sætte $x$ uden for en parentes og få
+	\begin{align*}
+		x(x + 3) = 0.
+	\end{align*}
+	For at dette udtryk skal kunne give 0, så skal enten $x$ være nul eller $x + 3$ være nul. Derfor må 
+	løsningerne være $x = 0$ og $x = -3$.
+\end{exa}
+
+\subsection*{Opgave 1}
+Løs følgende ligninger.
+\begin{align*}
+	&1) \ 2x + 6 = 12 & &2) \ 10x + 5 = -35 \\
+	&3) \ 4(x + 5) = 24 & &4) \ 8x = 2(9+4x)-2x \\
+\end{align*}
+\subsection*{Opgave 2}
+Løs følgende ligninger.
+\begin{align*}
+	&1) \ \frac{4x}{5+x} = 2 & &2) \ \frac{2x + 7}{x} = 3 \\
+	&3) \ \frac{5 + 7x}{3x + 1} = 2 & &4) \ \frac{x+4}{x+6} = \frac{x+2}{x-2}	
+\end{align*}
+\subsection*{Opgave 3}
+Bestem løsningerne til følgende ligninger, hvis de eksisterer. 
+\begin{align*}
+	&1) \ x^2 = 4 & &2) \ x^2-36 = 0\\
+	&3) \ x^2 + 9 = 0  & &4) \ x^2 = 100 \\
+	&5) \ 2x^2 - 50 = 0 & &6) \ 3x^3 - 81 = 0\\
+	&7) \ x^4 = -16 & &8) \ x^5 - 243 = 0\\
+\end{align*}
+\subsection*{Opgave 4}
+Bestem koefficienterne $a$, $b$ og $c$ for følgende andengradsligniger. 
+\begin{align*}
+	&1) \ 2x^2 - 5x + 7 = 0 & &2) \ -6x^2 +7x -1 = 0\\
+	&3) \ -x^2 - 10 + 5x = 0 & &4) \ 5x^2 = -2x + 4\\
+	&5) \ 2 + 7x^2 - 50 = 0 & &6) \ 10 = x^2 + 7x\\
+\end{align*}
+\subsection*{Opgave 5}
+Brug nulreglen til at bestemme løsningerne til følgende ligninger. 
+\begin{align*}
+	&1) \ (x-1)(x+2) = 0 & &2) \ 2x + x^2 = 0\\
+	&3) \ 6x^2 + 12x = 0 & &4) \ x^2 = 14x\\
+	&5) \ 10x + 100x^2 = 0 & & 6) \ (x^2 - 4)(\log_2(x) - 3) = 0\\
+	&7) \ e^{6x^2 + 36x} = 1 & &8) \ \log_2(9x^2 + 81x + 16) = 4\\
+\end{align*}

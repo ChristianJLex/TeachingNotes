@@ -1,0 +1,156 @@
+\begin{center}
+\Huge
+Potenser og rødder
+\end{center}
+
+
+\section*{Potenser/rødder og det udvidede potensbegreb}
+\stepcounter{section}
+
+Når vi opløfter et tal $a$ i et naturligt tal $n$ så tilsvarer det
+\begin{align}\label{eq:powerdef}
+a^n = \underbrace{a\cdot a \cdots a}_{n\textnormal{ gange}},
+\end{align}
+vi multiplicerer altså tallet $a$ $n$ gange med sig selv. Vi vil snart forklare, hvad det betyder at opløfte et tal i både en positiv og negativ brøk. Vi vil først diskutere regnereglerne for potenser. Vi vil udnytte repræsentationen \eqref{eq:powerdef} for at udlede regnereglerne for multiplikation.
+Af repræsentationen \eqref{eq:powerdef} må vi for eksempel have
+\begin{align*}
+a^5a^3 = (a\cdot a\cdot a\cdot a\cdot a)(a\cdot a\cdot a) = a\cdot a\cdot a\cdot a\cdot a\cdot a\cdot a\cdot a = a^8, 
+\end{align*}
+og mere generelt for naturlige tal $m,n$ så har vi
+\begin{align*}
+a^na^m = \underbrace{(a\cdot a\cdots a)}_{n \textnormal{ gange}}\underbrace{(a\cdot a\cdots a)}_{m \textnormal{ gange}} = a^{m+n}
+\end{align*}
+Tilsvarende har vi for eksempel, at 
+\begin{align*}
+\frac{a^5}{a^3} = \frac{a\cdot a\cdot a\cdot a\cdot a}{a\cdot a\cdot a} = a\cdot a =a^2,
+\end{align*}
+og mere generelt for naturlige tal $m,n$, så
+\begin{align*}
+\frac{a^n}{a^m} = \underbrace{(a \cdot a \cdots a)}_{n\textnormal{ gange}}/\underbrace{(a \cdot a \cdots a)}_{m\textnormal{ gange}} = a^{n-m}.
+\end{align*}
+Derfor må vi også kunne udvide vores potensbegreb til negative eksponenter, og $a^{-n}$ må være lig $\frac{1}{a^n}$ af vores argumentation. Det burde også være klart, hvorfor $a^0 =1$ i det 
+\begin{align*}
+1 = \frac{a^{1}}{a^{1}} = a^{1-1} = a^0.
+\end{align*}
+Vi vil nu opskrive vores første potensregneregler:
+\begin{enumerate}[label=\roman*)]
+\item Potens/rod af produkt: $(ab)^n =a^nb^n $ og $\sqrt[n]{ab} = \sqrt[n]{a}\sqrt[n]{b}$.
+\item Multiplikation/division af potenser: $a^na^m = a^{n+m}$ og $\frac{a^n}{a^m} = a^{n-m}$.
+\end{enumerate}
+Med vores nuværende regler, vil vi se, om vi kan udlede flere regler. Vi har eksempelvis
+\begin{align*}
+(a^5)^2 = a^5a^5 \overset{\textnormal{ii)}}{=} a^{10}, 
+\end{align*}
+eller mere generelt for hele tal $m,n$ så
+\begin{align}\label{eq:powerpower}
+(a^m)^n = \underbrace{a^m\cdot a^m\cdots a^m}_{n \textnormal{ gange}} \overset{\textnormal{ii)}}{=}  a^{m+m+\cdots+m} = a^{mn}.
+\end{align}
+På samme tid, så har vi, at 
+\begin{align*}
+\sqrt[n]{a^n} = a. 
+\end{align*}
+Hvis vi sammenligner dette med \eqref{eq:powerpower}, så må vi have
+\begin{align*}
+a = \sqrt[n]{a^n} = (a^n)^{1/n},
+\end{align*}
+altså tilsvarer $n$'teroden at opløfte i $1/n$'te potens. Vi kan nu konstruere potenser med alle brøker $\frac{n}{m}$ som
+\begin{align*}
+a^{n/m} = \sqrt[m]{a^n},
+\end{align*}
+og vi kan derfor også give mening til at opløfte tal i andet end heltal. 
+Vi kan nu opskrive vores resterende potensregneregler:
+\begin{enumerate}[label=\roman*)]
+\item Potenser af potenser: $(a^n)^m = a^{nm}$,\\
+\item Rødder og potenser: $\sqrt[m]{a^n} = a^{\frac{n}{m}}$.
+\end{enumerate}
+
+\subsection*{Opgave 1}
+Vi husker os selv på, at vi noterer eksempelvis $a\cdot a \cdot a$ som $a^3$.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $a\cdot a \cdot a \cdot a \cdot a$.
+	\item Bestem $a \cdot a \cdot a \cdot a \cdot a \cdot a\cdot a \cdot a$.
+\end{enumerate}
+Vi kan selvfølgelig også gå den anden vej og notere $a^4$ som $a\cdot a \cdot a \cdot a$.
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{2}
+	\item Omskriv $a^5$ som $a\cdot a \cdots a$
+	\item Omskriv $a^3\cdot a^4$ til $a\cdot a\cdots a$ og herefter tilbage til $a^n$.
+	\item Omskriv $a^2\cdot a^7$ til $a\cdot a\cdots a$ og herefter tilbage til $a^n$.
+	\item Omskriv $a^5\cdot a^5$ til $a\cdot a\cdots a$ og herefter tilbage til $a^n$.
+	\item Kan I generalisere dette til en regneregel?
+\end{enumerate}
+
+\subsection*{Opgave 2}
+Når vi har ens faktorer i både tæller og nævner i en brøk, så vil de gå ud med hinanden. Har vi eksempelvis
+\begin{align*}
+	\frac{a\cdot a\cdot a\cdot a}{a\cdot a}
+\end{align*}
+så vil faktorerne gå ud og vi vil få
+\begin{align*}
+	\frac{a \cdot a \cdot  \cancel{a} \cdot \cancel{a}}{\cancel{a}\cdot \cancel{a}} = a \cdot a = a^2
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Forkort $\frac{a\cdot a \cdot a \cdot a \cdot a}{a}$
+	\item Forkort $\frac{a \cdot a \cdot a}{a \cdot a \cdot a}$
+	\item Forkort $\frac{a \cdot a \cdot a \cdot a \cdot a \cdot a \cdot a \cdot a}{a \cdot a \cdot a \cdot a}$
+	\item Forkort $\frac{a^6}{a^3}$ ved eventuelt først at omskrive til formen $a\cdot a\cdots a$.
+	\item Forkort $\frac{a^{10}}{a^6}$.
+	\item Forkort $\frac{a^9}{a^3}$.
+	\item Kan I generalisere dette til en regneregel?
+\end{enumerate}
+
+\subsection*{Opgave 3}
+Vi kan også have potenser opløftet i potenser som $(a^3)^4$. Dette udtryk betyder 
+\begin{align*}
+	(a^3)^4 = a^3\cdot a^3 \cdot a^3 \cdot a^3.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Omskriv $(a^2)^2$ til formen $a\cdot a\cdots a$.
+	\item Omskriv $(a^3)^2$ til formen $a\cdot a \cdots a$.
+	\item Hvor mange $a$'er er ganget sammen i $(a^2)^2$ og $(a^3)^2$? Hvad med $(a^3)^4$?
+	\item Kan I generalisere dette til en regneregel?
+\end{enumerate}
+
+\subsection*{Opgave 4}
+Vi kan udnytte, at multiplikation er det, vi kalder for \textit{kommutativ} - det er altså ligegyldigt, hvilken rækkefølge, vi ganger tal sammen i. Derfor kan vi omskrive $(a\cdot b)^2$ som
+\begin{align}\label{eq:kommu}
+	(a\cdot b)^2 = a\cdot b \cdot a \cdot b = a\cdot a\cdot b \cdot b.
+\end{align}
+\begin{enumerate}[label=\roman*)]
+	\item Omskriv $(ab)^3$ som i \eqref{eq:kommu}.
+	\item Omskriv $(ab)^5$ som i \eqref{eq:kommu}.
+	\item Omskriv $(ab)^6$ som i \eqref{eq:kommu}.
+	\item Hvor mange $a$'er og $b$'er er ganget sammen i $(ab)^2$? Hvad med de andre udtryk?
+	\item Kan I generalisere dette til en regneregel?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+Vi vil gerne bevise, at $a^0 = 1$ for ethvert tal $a \neq 0$. 
+\begin{enumerate}[label=\roman*)]
+	\item Bevis, at $a^0 = 1$ ved at bruge dine regneregler. (Vink: omskriv $0$ til 1-1 og brug regnereglen fra
+	Opgave 2 baglæns.)
+\end{enumerate}
+
+
+\section*{Opgave 6}
+Forkort følgende så meget som muligt. 
+\begin{align*}
+&1)\ (xy)^6   &&2)\ (ab^4)^2     \\
+&3)\ (2a)^2   &&4)\  (ab)^2(ab)^3    \\
+&5)\  (4x^3)^4             &&6)\ \frac{(a^2)^4b^3}{ab^2}\\
+ &7)\ (abc)^2      &&8)\ (a^5)^2(a^2)^5\\
+ &9)\ \frac{6^3}{6^2} &&10)\ \frac{2^8\cdot 3^5}{3^4\cdot 4^4}\\
+ &11)\  (x^5)^{1/5}            &&12)\ \sqrt[3]{27}\\
+ &13)\ \sqrt{5}\sqrt{20}      &&14)\ 3\sqrt{4}\sqrt{3}\\
+ &15)\ 3\sqrt{10}\cdot3\sqrt{2} &&16)\ 4\sqrt{3}\cdot2\sqrt{6} \\
+&17)\ \left(\frac{2^\frac{1}{2}}{4^2}\right)^4  &&18) \left(\frac{ab}{b^3}\right)^3
+\end{align*}
+
+\section*{Opgave 7}
+\begin{enumerate}[label=\roman*)]
+	\item Forklar, hvorfor $(-1)^n = 1$, hvis $n$ er lige og  $(-1)^n=-1$, hvis n er ulige. 
+	\item Hvis $n$ er ulige, hvad er så fortegnet på
+	\begin{align*}
+		((-1)(-2)(-3))^n?
+	\end{align*}
+\end{enumerate}

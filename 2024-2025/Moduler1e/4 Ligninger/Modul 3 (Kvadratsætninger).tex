@@ -1,0 +1,103 @@
+
+\begin{center}
+\Huge
+	Kvadratsætninger	
+\end{center}
+
+\section*{Kvadratsætninger}
+\stepcounter{section}
+
+Til at løse andengradsligninger kan det være meningsfuldt at bruge det, vi kalder for \textit{kvadratsætninger}.
+Disse præsenteres i følgende sætning.
+\begin{setn}[Kvadratsætninger]
+	For alle reelle tal $a,b$ gælder der, at 
+	\begin{enumerate}[label=\roman*)]
+		\item $(a + b)^2 = a^2 + b^2 + 2ab$.
+		\item $(a + b)^2 = a^2 + b^2 - 2ab$.
+		\item $(a + b)(a - b) = a^2 - b^2$.
+	\end{enumerate}
+\end{setn}
+\begin{proof}
+	Vi regner blot og får for i), at
+	\begin{align*}
+		(a + b)^2 = (a + b)(a + b) = a^2 + b^2 + ab + ba = a^2 + b^2 + 2ab.
+	\end{align*}
+	For ii) fås, at
+	\begin{align*}
+		(a - b)^2 = (a - b)(a - b) = a^2 + b^2 - ab - ba = a^2 + b^2 - 2ab.
+	\end{align*}
+	For iii) fås tilsvarende, at 
+	\begin{align*}
+		(a + b)(a - b) = a^2 - b^2 - ab + ba = a^2 - b^2.
+	\end{align*}
+\end{proof}
+
+\begin{exa}
+	Vi har af kvadratsætning i), at
+	\begin{align*}
+		(2x + y)^2 = 4x^2 + y^2 + 4xy.
+	\end{align*}
+\end{exa}
+\begin{exa}
+	Vi kan bruge regneregel iii) til at udregne udtrykket $101 \cdot 99$, da
+	\begin{align*}
+		101\cdot 99 = (100 + 1)(100 - 1) = 100^2 - 1^2 = 9999.
+	\end{align*}
+\end{exa}	
+\begin{exa}
+	Vi kan bruge kvadratsætning ii) baglæns på $x^2 + 4y^2 - 4xy$ da
+	\begin{align*}
+		x^2 + 4y^2 - 4xy = x^2 + (2y)^2 + 2(2y)x = (x^2 - y^2).
+	\end{align*}
+\end{exa}
+
+\subsection*{Opgave 1}
+Bevis de tre kvadratsætninger ved at gange de to parenteser sammen. 
+
+\subsection*{Opgave 2}
+Brug kvadratsætninger til at hæve følgende parenteser
+
+\begin{align*}
+	&1) \ (a + 5)^2  &  &2) \  (7 - x)^2 \\
+	&3) \ (2x + 4y)^2  &  &4) \  (5 - 8x)^2 \\
+	&5) \ (x+6)(x-6)  &  &6) \  (\sqrt{2} + 5x)^2 \\
+	&7) \ (\frac{1}{3} - \frac{7}{2}a)^2  &  &8) \  (7 - x)^2
+\end{align*}
+
+\subsection*{Opgave 3}
+Brug kvadratsætning  iii) på følgende udtryk for at udregne dem. Brug en lommeregner eller Maple for at regne efter.
+
+\begin{align*}
+	&1) \ 18\cdot 22 & & 2) 95\cdot 105 \\
+	&3) \ 63\cdot 57 & & 4) 46\cdot 54 \\
+	&5) \ 1007\cdot 993 & & 6) 180\cdot 220 \\
+\end{align*}
+
+\subsection*{Opgave 4}
+Løs følgende ligninger ved at anvende kvadratsætningerne baglæns.
+
+\begin{align*}
+	&1) \ x^2 + 4 + 4x = 0 & &2) x^2 +9 - 6x = 0 \\
+	&3) \ x^2 + 16 + 8x = 0 & &4) 2x^2 + 9 - 12x = 0	\\
+	&5) \ 9x^2 + 36 - 36x = 0 & &6) x^2 - 16 = 0	\\
+	&7) \ x^4 -16 = 0 & &8) 16x^2 + 25 + 40 = 0	
+\end{align*}
+
+\subsection*{Opgave 5}
+Når vi skal løse andengradsligninger, skal vi bruge det, vi kalder for \textit{diskriminanten}. Denne betegnes med et $d$ og udregnes for en andengradsligning
+\begin{align*}
+	ax^2 + bx + c = 0
+\end{align*}
+som
+\begin{align*}
+	d = b^2 - 4ac.
+\end{align*}
+Hvis $d> 0$, så har ligningen to løsninger. Hvis $d = 0$, så har ligningen netop én løsning og hvis $d < 0$, så har ligningen ingen løsninger. 
+
+Bestem diskriminanten $d$ for følgende andengradspolynomier og afgør antallet af løsninger. 
+\begin{align*}
+	&1) \ 2x^2 + 4x - 2 = 0    &   &2) \ -x^2 + 5x + 7 = 0    \\
+	&3) \ x^2 + 4 + 7x = 0    &   &4) \ 5x^2 = -9x + 8    \\
+	&5) \ 6x^2 + \sqrt{2}x - 2 = 0    &   &6) \ 3x^2 - 4x = 1    \\
+	&7) \ \sqrt{3}x^2 -3x + \sqrt{3} = 0    &   &8) \ \frac{2}{5}x^2 - \frac{6}{5}x + \frac{1}{6} = 0    \\
+\end{align*}

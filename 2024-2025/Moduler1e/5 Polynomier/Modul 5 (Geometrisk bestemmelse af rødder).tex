@@ -1,0 +1,96 @@
+\begin{center}
+\Huge
+	Geometrisk løsning af andengradsligninger
+\end{center}
+\section*{Bestem rødder geometrisk}
+\stepcounter{section}
+
+Det viser sig, at det er muligt at bestemme rødder til andengradspolynomier geometriks Dette kan gøres med passer og lineal på følgende vis. Vi betragter et andengradspolynomium $p$ på formen
+\begin{align*}
+	p(x) = x^2 +bx + c.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Indsæt punktet $A(0,1)$ i et koordinatsystem.
+	\item Indsæt punktet $B(-b,c)$ i samme koordinatsystem. 
+	\item Indsæt midtpunktet $M$ mellem $A$ og $B$ på koordinatsystemet. Dette har koordinatsættet
+	\begin{align*}
+		M\left(\frac{-b}{2},\frac{c+1}{2}\right)
+	\end{align*}
+	\item Tegn en cirkel med centrum i $C$ og som skærer punkterne $A$ og $B$. 
+	\item Aflæs cirklens skæringer med $x$-aksen. Disse tilsvarer rødderne for $p$. 
+\end{enumerate}
+
+Denne metode til at finde rødder er illustreret på Figur \ref{fig:algoritme}.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	y = 0.5cm, x = 0.5cm,
+	axis lines = center, 
+	xmin = -4, xmax = 10,
+	ymin = -4, ymax = 10,
+	xlabel = $x$, ylabel = $y$, 
+	ticks = none,
+	]
+		\draw[color = teal, thick] (axis cs: 2.5,2.5) circle (2.91547*0.5cm);
+		\node[color = olive, anchor = east] at (axis cs:0,1) {$A(0,1)$};
+		\node[color = olive, anchor = west] at (axis cs:5,4) {$B(-b,c)$};
+		\node[color = olive, anchor = south] at (axis cs:2.5,2.5) {$M$};			
+		\filldraw[color = olive] (axis cs: 0,1) circle (2pt);
+		\filldraw[color = olive] (axis cs: 5,4) circle (2pt);
+		\filldraw[color = olive] (axis cs: 2.5,2.5) circle (2pt);
+		\node[color = teal, anchor = north] at (axis cs: 1,0) {$x_1$};
+		\node[color = teal, anchor = north] at (axis cs: 4,0) {$x_2$};
+		\draw[color = teal, thick] (axis cs: 1,0.2) -- (axis cs:1,-0.2);
+		\draw[color = teal, thick] (axis cs: 4,0.2) -- (axis cs:4,-0.2);
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Illustration af algoritmen, der bestemmer rødder for andengradspolynomier geometrisk.}
+	\label{fig:algoritme}
+\end{figure}
+
+Vi ser på et eksempel.
+\begin{exa}
+	Vi betragter andengradspolynomiet $p$ givet ved
+	\begin{align*}
+		p(x) = x^2 + 6x + 8.
+	\end{align*}
+	Vi indsætter punkterne $A(0,1)$ og $B(-6,8)$ i koordinatsystemet og indsætter efterfølgende midtpunktet
+	\begin{align*}
+		M\left(\frac{-6}{2},\frac{8+1}{2}\right) = M(-3,4.5).
+	\end{align*}
+	Løsningerne fremgår af Figur \ref{fig:exa} til at være $x = -2$ og $x = -4$.
+	\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	y = 0.5cm, x = 0.5cm,
+	axis lines = center, 
+	xmin = -10, xmax = 6,
+	ymin = -4, ymax = 10,
+	xlabel = $x$, ylabel = $y$, 
+	]
+		\draw[color = teal, thick] (axis cs: -3,4.5) circle (4.60977*0.5cm);
+		\node[color = olive, anchor = west] at (axis cs:0,1) {$A(0,1)$};
+		\node[color = olive, anchor = east] at (axis cs:-6,8) {$B(-6,8)$};
+		\node[color = olive, anchor = south] at (axis cs:-3,4.5) {$M$};			
+		\filldraw[color = olive] (axis cs: 0,1) circle (2pt);
+		\filldraw[color = olive] (axis cs: -6,8) circle (2pt);
+		\filldraw[color = olive] (axis cs: -3,4.5) circle (2pt);
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Eksempel på geometrisk bestemmelse af rødder.}
+	\label{fig:exa}
+\end{figure}
+\end{exa}
+
+\subsection*{Opgave 1}
+
+Bestem rødderne for følgende andengradspolynomier geometrisk. 
+
+\begin{align*}
+	&1) \ p(x) = x^2 - x - 8 & &2) \ p(x) = x^2 +7x + 10  \\
+	&3) \ p(x) = x^2 - 6x + 5  & &4) \ p(x) = x^2 - 3x - 4 \\
+	&5) \ p(x) = x^2 + x - 2 & &6) \ p(x) = x^2 + 4x + 3 \\
+\end{align*}
