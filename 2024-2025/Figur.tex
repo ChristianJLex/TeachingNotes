@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\input{preamble}
+
+\usepackage[margin=0.1cm]{geometry}
+\begin{document}
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1.2, xmax = 1.2, 
+			ymin = -1.2, ymax = 1.2, 
+			x = 9cm, y = 9cm,
+			ticks = none,
+		]
+			\draw[color = teal, thick] (axis cs:0,0) circle (9cm);
+			%Ticks on circle 
+			\pgfplotsinvokeforeach{0,1,...,35}
+			{
+				\draw[thick] (axis cs: {cos(#1*10)},{sin(#1*10)})-- (axis cs: {1.03*cos(#1*10)},{1.03*sin(#1*10)});
+			}
+			\pgfplotsinvokeforeach{10,20,...,350}
+			{
+				\node[color = teal] at (axis cs: {1.10*cos(#1)},{1.10*sin(#1)}) {$#1^\circ$};
+			}
+			\pgfplotsinvokeforeach{1,2,3,...,359}
+			{
+				\draw (axis cs: {cos(#1)},{sin(#1)})-- (axis cs: {1.02*cos(#1)},{1.02*sin(#1)});
+			}
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+
+\end{document}

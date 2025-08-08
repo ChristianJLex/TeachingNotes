@@ -20,6 +20,8 @@
 \usepackage{ulem}
 \usepackage{cancel}
 \usepackage[framemethod=tikz]{mdframed}
+\usepackage{xargs}
+\usepackage{siunitx}              
 
 
 \usepackage{algorithm}
@@ -30,7 +32,7 @@
 \usepackage[dvipsnames,svgnames]{xcolor}
 \usepackage{colortbl}
 \usepackage{eso-pic}
-\usepackage[margin=1.35in]{geometry}
+%\usepackage[margin=1.35in]{geometry}
 \usepackage{float}
 \usepackage[danish]{babel}
 \usepackage{tikz}
@@ -67,30 +69,50 @@
 
 
 
-\newtheorem{setn}{Sætning}[section]
-\newtheorem{prop}[setn]{Proposition}
-\newtheorem{lem}[setn]{Lemma}
-\newtheorem{cor}[setn]{Korollar}
+%\newtheorem{setn}{Sætning}[section]
+%\newtheorem{prop}[defn]{Proposition}
+%\newtheorem{lem}[defn]{Lemma}
+%\newtheorem{cor}[defn]{Korollar}
 
 \newcommand\Tr{\textnormal{Tr}}
 \newcommand\N{\textnormal{N}}
 \newcommand{\suco}[2]{\left.#1\right|_{\mathbb{F}_{#2}}}
 \renewcommand\qedsymbol{$\blacksquare$}
 \theoremstyle{definition}
-\newtheorem{defn}[setn]{Definition}
-\newtheorem{exa}[setn]{Eksempel}
-\newtheorem{regel}[setn]{Regel}
+%\newtheorem{defn}[setn]{Definition}
+
 \newcommand\Ker{\textnormal{Ker}\hspace{0.5mm}}
 \renewcommand\Im{\textnormal{Im}\hspace{0.5mm}}
 \newcommand\TS{\hspace{0.8mm}}
 
-%\newmdtheoremenv[
-%	outerlinewidth = 2,
-%	roundcorner = 5,
-%	backgroundcolor = SeaGreen!40,
-%	linecolor = SeaGreen, 
-%	]
-%	{defn}{ Definition }[section]
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+\newmdtheoremenv[
+	skipabove = 5pt,
+	skipbelow = 5pt,
+	roundcorner = 5,
+	backgroundcolor = SeaGreen!30,
+	linecolor = white, 
+	]
+	{defn}{ Definition }[section]
+
+\newmdtheoremenv[
+	skipabove = 5pt,
+	skipbelow = 5pt,
+	roundcorner = 5,
+	backgroundcolor = RubineRed!20,
+	linecolor = white, 
+	]
+	{setn}[defn]{ Sætning }
+	
+
+\newtheorem{eksempel}[defn]{Eksempel}
+
+\newenvironment{exa}
+	{\begin{eksempel}}
+	{\unskip\hfill $\square$ \end{eksempel}}
+\newtheorem{regel}[defn]{Regel}
 
 
 \usepackage{graphicx}
@@ -159,6 +181,7 @@
 %\rule{0.81\textwidth}{0.3mm}
 %\end{minipage}
 %}
+
 
 
 

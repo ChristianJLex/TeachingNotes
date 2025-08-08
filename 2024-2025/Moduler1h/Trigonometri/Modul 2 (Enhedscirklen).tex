@@ -1,0 +1,255 @@
+\begin{center}
+\Huge
+Enhedscirklen
+\end{center}
+
+\section*{Enhedscirklen}
+\stepcounter{section}
+
+Trigonometri omhandler regning med trekanter. Til at regne på trekanter har vi såkaldte trigonometriske funktioner, der relaterer sidelængder og vinkler i retvinklede trekanter. De mest kendte trigonometriske funktioner er I formentlig bekendte med: $\cos(v)$ og $\sin(v)$. Vi vil bruge enhedscirklen til at definere disse funktioner. Enhedscirklen kan ses på Figur \ref{fig:enhed}
+\begin{figure}[H]
+	\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1.4, xmax = 1.4, 
+			ymin = -1.4, ymax = 1.4, 
+			x = 4cm, y = 4cm,
+			minor xtick = {-1.4,-1.2,...,1.2,1.4},
+			minor ytick = {-1.4,-1.2,...,1.2,1.4},
+			xtick = {-1.6},
+			ytick = {-1.6},
+			xlabel = $x$, ylabel = $y$
+		]
+			%Shifted tick labels since unit circle would otherwise be in the way:
+			\node[xshift = 5pt, yshift = -10pt] at (axis cs:1,0) {1};
+			\node[xshift = -8pt, yshift = 5pt] at (axis cs:0,1) {1};
+			%Circle, lines and angle:
+			\draw[color = teal, thick] (axis cs:0,0) circle (4cm);
+			\draw[thick, color = teal] (axis cs: 0,0) to (axis cs: {cos(45)},{sin(45)});
+			\draw[thick, color = teal] (axis cs: 0.2,0) arc (0:45:0.8cm) node[midway, xshift = 5pt, yshift = 2pt] {$v$};
+			\draw[dashed, thick, color = teal] (axis cs: {cos(45)},{sin(45)}) to (axis cs: {cos(45)},0);
+			\draw[dashed, thick, color = teal] (axis cs: {cos(45)},{sin(45)}) to (axis cs: 0,{sin(45)});
+			%Text:
+			\node[color = teal, anchor = east, xshift = -2pt] at (axis cs: 0,{sin(45)}) {$\sin(v)$};
+			\node[color = teal, anchor = north, yshift = -2pt] at (axis cs: {cos(45)},0 ) {$\cos(v)$};
+			\node[color = teal, anchor = south west] at (axis cs: {cos(45)},{sin(45)}) {$P_v$};
+
+		\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	\caption{Definition af $\cos$ og $\sin$ ud fra enhedscirklen}
+	\label{fig:enhed}
+\end{figure}
+Enhedscirklen er en cirkel med centrum i origo og radius $1$. Vi kan bruge enhedscirklen til at definere $\cos$ og $\sin$.
+\newpage
+\begin{defn}
+Lad $P_v$ være et punkt på enhedscirklen, så vinklen mellem linjen mellem $P_v$ og $x$-aksen er $v$. Så defineres funktionerne $\cos(v)$ og $\sin(v)$ som koordinaterne til $P_v$:
+\begin{align*}
+P_v = (\cos(v),\sin(v)).
+\end{align*}
+\end{defn}
+
+\begin{exa}
+Det gælder, at $\cos(0) = 1$ og $\sin(0)=0$, da koordinatsættet til $P_0$ er 
+\begin{align*}
+P_0 = (1,0) = (\cos(0),\sin(0)).
+\end{align*}
+\end{exa}
+
+Skal vi anvende de trigonometriske funktioner i Maple og vi ønsker at anvende grader, så skal vi skrive
+\begin{align*}
+	&\texttt{with(Gym):} \\
+	&\texttt{Cos(v)} \\	
+	&\texttt{Sin(v)}
+\end{align*}
+
+\begin{setn}[Idiotformlen]
+For enhver vinkel $v$ gælder der, at 
+\begin{align*}
+ \cos(v)^2 + \sin(v)^2 = 1.
+\end{align*}
+\end{setn}
+\begin{proof}
+Opgave
+\end{proof}
+
+Tangens er den sidste trigonometriske funktion, vi skal betragte. Denne er defineret som 
+\begin{align*}
+\tan(v) = \frac{\sin(v)}{\cos(v)}.
+\end{align*}
+
+\newpage
+
+\section*{Retvinklede trekanter}
+\stepcounter{section}
+
+\begin{setn}
+Lad $\triangle ABC$ være en trekant med punkterne $A$,  $B$ og $C$ som hjørner, og lad $\angle C$ være en ret vinkel. Så gælder der for vinklen $v$, der er vinklen i enten hjørnet $A$ eller $B$, at 
+\begin{align*}
+\cos(v) &= \frac{\textnormal{hosliggende katete}}{\textnormal{hypotenuse}}\\
+\sin(v) &= \frac{\textnormal{modstående katete}}{\textnormal{hypotenuse}}\\
+\tan(v) &= \frac{\textnormal{modstående katete}}{\textnormal{hosliggende katete}}
+\end{align*}
+\end{setn}
+
+\newpage 
+\subsection*{Opgave 1}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1.45, xmax = 1.45, 
+			ymin = -1.45, ymax = 1.45, 
+			x = 4cm, y = 4cm,
+			minor xtick = {-1.4,-1.3,...,1.3,1.4},
+			minor ytick = {-1.4,-1.3,...,1.3,1.4},
+			grid = both,
+			xtick = {-1.6},
+			ytick = {-1.6},
+			xlabel = $x$, ylabel = $y$
+		]
+			%Shifted tick labels since unit circle would otherwise be in the way:
+			\node[xshift = 5pt, yshift = -10pt] at (axis cs:1,0) {1};
+			\node[xshift = -8pt, yshift = 5pt] at (axis cs:0,1) {1};
+			\draw[color = teal, thick] (axis cs:0,0) circle (4cm);
+			%Ticks on circle 
+			\pgfplotsinvokeforeach{0,1,...,35}
+			{
+				\draw (axis cs: {cos(#1*10)},{sin(#1*10)})-- (axis cs: {1.02*cos(#1*10)},{1.02*sin(#1*10)});
+			}
+			\pgfplotsinvokeforeach{10,20,...,350}
+			{
+				\node[color = teal] at (axis cs: {1.10*cos(#1)},{1.10*sin(#1)}) {$#1^\circ$};
+			}
+		\end{axis}
+	\end{tikzpicture}
+	\end{center}
+Brug enhedscirklen til at aflæse $\cos(v)$ og $\sin(v)$ for følgende vinkler. (Det behøver ikke være helt præcist.) 
+\begin{center}
+	\begin{tabular}{c|c|c|c|c|c|c}
+		$v$ & 90 & 70 & 120 & 190 & 350 & 45 \\
+		\hline
+		$\cos(v)$ & 0 & & & & & \\
+		\hline
+		$\sin(v)$ & 1 & & & & & 
+	\end{tabular}	
+\end{center}
+
+
+\newpage
+
+
+\subsection*{Opgave 2 (med hjælpemidler)}
+Bestem de ukendte sider og vinkler i følgende trekanter:
+
+\begin{tikzpicture}
+\node at (0,0) (1) {$A$};
+\node at (5,0) (2) {$C$};
+\node at (5,3)(3)	{$B$};
+\node at (1.2,0.3) (4)   {\scriptsize $30^\circ$};
+\node at (2.5,-0.5)  {$5$};
+
+
+\draw (1) -- (2);
+\draw (2) -- (3);
+\draw (3) -- (1);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node at (0,0) (1) {$A$};
+\node at (4,0) (2) {$C$};
+\node at (4,4) (3)	{$B$};
+\node at (1.2,0.3)  {};% {\scriptsize $30^\circ$};
+\node at (2,-0.5)  {$3$};
+\node at (1.8,2.2)   {$4$};
+
+\draw (1) -- (2);
+\draw (2) -- (3);
+\draw (3) -- (1);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+\node at (0,0) (1) {$A$};
+\node at (3,0) (2) {$C$};
+\node at (3,6) (3)	{$B$};
+\node at (1.5,-0.3)  {$3$};
+\node at (3.3,3)  {$6$};
+
+
+\draw (1) -- (2);
+\draw (2) -- (3);
+\draw (3) -- (1);
+\end{tikzpicture}
+
+\subsection*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+	\item Aflæs $\sin(60)$ og $\sin(120)$ på enhedscirklen. 
+	\item Kan du finde andre vinkler $u$ og $v$, hvor 
+	$\sin(u)=\sin(v)?$
+	\item Aflæs $\cos(10)$ og $\cos(-10)$ på enhedscirklen.
+	\item Kan du finde andre vinkler $u$ og $v$, hvor 
+	$\cos(u)=\cos(v)?$
+	\item Aflæs $\cos(45)$ og $\sin(45)$ på enhedscirklen. 
+	\item Kan du finde andre vinkler $v$, så $\cos(v)=\sin(v)$
+\end{enumerate}
+
+\subsection*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Brug enhedscirklen til at løse ligningen $\cos(v) = 0.5$
+	\item Brug enhedscirklen til at løse ligningen $\sin(v) = 0.8$
+	\item Brug enhedscirklen til at løse ligningen $\cos(v) = -0.2$
+\end{enumerate}
+
+\subsection*{Opgave 5}
+Vi skal bevise idiotformlen, der som bekendt lyder
+\begin{align*}
+	\cos(v)^2 + \sin(v)^2 = 1
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Tegn en retvinklet trekant, hvor hypotenusen er linjestykket fra centrum af enhedscirklen til 
+	punktet $P_v$. 
+	\item Hvad er længden af hypotenusen og de to kateter i denne trekant?
+	\item Anvend Pythagoras' sætning på denne trekant.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Brug dit resultat fra Opgave 1 til at bestemme tangens for følgende vinkler
+\begin{align*}
+&1) \ 0  &&2) \ 90   \\
+&3) \ 70   &&4) \ 120  \\
+&5) \ 190 &&6) \ 350   \\
+&7) \ 45     \\
+\end{align*}
+
+
+\subsection*{Opgave 7}
+Brug idiotformlen til at bestemme $\cos(45)$ eksakt.
+
+\subsection*{Opgave 8}
+Vi skal argumentere for, at $\cos(60) = 0.5$. 
+\begin{enumerate}[label=\roman*)]
+	\item Tegn en enhedscirken med en linje ud til randen af cirklen,
+	 der danner en vinkel med $x$-aksen på $60^\circ$.
+	\item Tegn en retvinklet trekant, hvor dette er hypotenusen og
+	 den hosliggende katete har længden $\cos(60)$.
+	\item Hvad er vinklerne i denne trekant?
+	\item Kan du tegne en trekant ved siden af denne trekant, der sammen med denne trekant
+	 viser at $\cos(60) = 0.5$?
+\end{enumerate}
+Vi skal nu vise, at $\sin(60) = \frac{\sqrt{3}}{2}$
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{4}
+\item Indsæt $\cos(60)$ og $\sin(60)$ i idiotformlen og isolér $\sin(60)$. 
+\item Kan du argumentere for, at $\sin(30) = 0.5$ og $\cos(30) = \frac{\sqrt{3}}{2}$?
+\end{enumerate}
+
+
+\subsection*{Opgave 9 (med hjælpemidler)}
+Vi står foran en høj bygning og vil gerne bestemme, hvor høj den er. Vi står 300m fra bygningen og måler, at vinklen mellem jorden og sigtelinjen fra jorden til toppen af bygningen er $25^\circ$.
+\begin{enumerate}[label=\roman*)]
+\item Hvor langt er der i lige linje fra os til toppen af bygningen?
+\item Hvor høj er bygningen?
+\end{enumerate}
