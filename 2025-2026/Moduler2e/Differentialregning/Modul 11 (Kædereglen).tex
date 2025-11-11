@@ -1,0 +1,128 @@
+\begin{center}
+\Huge
+Differentiation af sammensatte funktioner
+\end{center}
+\section*{Kædereglen}
+\stepcounter{section}
+
+Hvis vi skal differentiere sammensatte funktioner, skal vi bruge et værktøj, der kan fortælle os, hvordan vi gør det uden at anvende definitionen af differentialkvotienten direkte hver gang. Til det har vi kædereglen.
+\begin{setn}[Kædereglen]
+Lad $g:A \to B$ og $f:B \to C$ være differentiable på hele deres definitionsmængde, 
+hvor $A,B,C \subseteq \mathbb{R}$. Lad desuden $h: A \to C$ være givet som den sammensatte funktion
+\begin{align*}
+	h(x) = f(g(x)).
+\end{align*}
+Så er differentialkvotienten for $h$ givet ved
+\begin{align*}
+	h'(x) = f'(g(x))\cdot g'(x) 
+\end{align*}
+\end{setn}
+Vi vil ikke give et bevis for denne sætning, da vi mangler værktøjerne til at gennemføre det stringent.
+\begin{exa}
+Vi ønsker at differentiere funktionen $h$ givet ved
+\begin{align*}
+	h(x) = \ln(x^3+2x-1).
+\end{align*}
+Vi skal først bestemme en indre og ydre funktion. Vi lader den indre funktion være 
+\begin{align*}
+	g(x) = x^3+2x-1
+\end{align*}
+og den ydre funktion være 
+\begin{align*}
+	f(x) = \ln(x).
+\end{align*}
+Vi skal i kædereglen bruge både $g'$ og $f'$, så disse bestemmes.
+\begin{align*}
+	g'(x) = 3x^2 + 2
+\end{align*}
+og
+\begin{align*}
+	f'(x) = \frac{1}{x}.
+\end{align*}
+Vi kan nu sætte ind i kædereglen og dermed differentiere $h$.
+\begin{align*}
+	h'(x) &= \frac{1}{x^3 + 2x - 1}\cdot (3x^2 + 2)\\
+	&=\frac{3x^2+2}{x^3 + 2x - 1}
+\end{align*}
+\end{exa}
+
+\section*{Definition af den naturlige eksponentialfunktion}
+\stepcounter{section}
+Vi kan med differentialregning definere den naturlige eksponentialfunktion $e^x$, og med udgangspunkt i definitionen kan vi så vise, at differentialkvotienten for denne eksponentialfunktion giver funktionen selv.
+\begin{defn}[Den naturlige eksponentialfunktion]
+	Den naturlige eksponentialfunktion $f: \mathbb{R} \to \mathbb{R}^+$ givet ved
+	\begin{align*}
+		f(x) = e^x,	
+	\end{align*}	
+	er den eksponentialfunktion, der opfylder, at
+	\begin{align*}
+		f'(0) = 1.
+	\end{align*}
+\end{defn}
+Vi kalder betingelsen $f'(0) = 1$ for en begyndelsesbetingelse. Sådanne betingelser vil vi arbejde meget mere med i 3.g, når vi skal løse differentialligninger, der er ligninger med funktioner som løsninger. 
+
+Det er nu muligt at vise, at den naturlige eksponentialfunktion $e^x$ opfylder at være sin egen afledede funktion.
+
+\begin{setn}
+	For den naturlige eksponentialfunktion
+	\begin{align*}
+		f(x) = e^x
+	\end{align*}
+	er den afledede funktion givet ved
+	\begin{align*}
+		f'(x ) = e^x.
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Vi starter med at opskrive betingelsen $f'(0) = 1$, da denne skal anvendes senere. Vi opskriver altså 
+	differentialkvotienten i dette punkt.
+	\begin{align*}
+		1 = f'(0) &=  \lim_{h \to 0}\frac{f(0+h)-f(0)}{h}\\
+		 &= \lim_{h \to 0}\frac{e^{0+h}-e^0}{h}\\
+		&= \lim_{h\to 0} \frac{e^h-1}{h}
+	\end{align*}
+	Vi skal bruge denne grænseværdi senere, men ser nu på sekanthældningen for $f$ i et vilkårligt punkt $x_0$. 
+	\begin{align*}
+		a_s &= \frac{e^{x_0+h}-e^{x_0}}{h} \\
+		&= \frac{e^{x_0}\left(e^{h}-1\right)}{h}. \\
+	\end{align*}
+	Vi tager nu grænseværdien $h \to 0$ og får
+	\begin{align*}
+		\lim_{h \to 0}a_s &= \lim_{h \to 0}\frac{e^{x_0}\left(e^h-1\right)}{h} \\
+		&= \lim_{h \to 0}e^{x_0}\frac{e^h-1}{h} \\
+		&= e^{x_0}\underbrace{\lim_{h \to 0}\frac{e^h-1}{h}}_{= f'(0)} \\
+		&= e^{x_0}\cdot 1 = e^{x_0}. 
+	\end{align*}
+\end{proof}
+\subsection*{Opgave 1}
+Bestem den afledede af følgende funktioner
+\begin{align*}
+&1) \  \ln(2x^2)   &&2) \  e^{2x+1}   \\
+&3) \  \frac{1}{x^2+2x}  &&4) \  \sqrt{2x+x^2}   \\
+&5) \  \frac{10}{x^3+10x}   &&6) \ 2^{e^x}    \\
+&7) \  x^4+3(3x-1)^3   &&8) \  \frac{1}{\ln(x)}   \\
+&9) \   \sqrt{\ln(x)}  &&10) \ 2(x^2+10)^3   \\
+&11) \   x^4\sqrt{\ln(x^4)}  &&12) \  \ln(\sqrt{2(e^{5x+3})+10})  \\
+\end{align*}
+
+\newpage
+
+\subsection*{Opgave 2}
+Hvis vi skal differentiere brøker af funktioner, kan vi bruge brøkreglen der for differentiable funktioner $f$ og $g$ lyder
+\begin{align*}
+	\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{(g'(x))^2}.
+\end{align*}
+Brug produktreglen og kædereglen til at bevise brøkreglen. (Vink: $\frac{f(x)}{g(x)} = f(x)\frac{1}{g(x)}$)
+
+\subsection*{Opgave 3}
+Vi skal bevise produktreglen, og gør det gennem følgende opgaver.
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv sekanthældningen for $h(x) = f(x)\cdot g(x)$. 
+	\item Læg $f(x_0 + h)g(x_0) - f(x_0 + h)g(x_0)$ til i tælleren. 
+	\item Sæt $f(x_0 + h)$ uden for en parentes.
+	\item Sæt $g(x_0)$ uden for en parentes.
+	\item Del brøken op i to og sæt $f(x_0 + h)$ samt $g(x_0)$ foran brøken.
+	\item Lad nu $h$ gå mod $0$.
+	\item Sæt firkanten.
+\end{enumerate}
+

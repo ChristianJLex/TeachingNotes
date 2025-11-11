@@ -13,7 +13,7 @@
 \lhead{Matematik A\\
 Differentialregning		
 }
-\chead{15. august 2025
+\chead{7. november 2025
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -37,338 +37,124 @@ Differentialregning
 %Aflevering 1
 %\end{center}
 
+
 \begin{center}
-	\Huge
-	Grænseværdier og kontinuitet
+\Huge
+Vækst og væksthastighed
 \end{center}
 
-\section*{Grænseværdier}
+\section*{Relation mellem vækst og differentialregning}
 \stepcounter{section}
 
-Grænseværdibegrebet er et begreb, vi bruger, når vi sådan lidt løst beskrevet gerne vil vide, hvad der sker med  funktionsværdien, når vores $x$-værdier enten bliver meget positive, meget negative eller kommer meget tæt på en anden fastholdt værdi $x_0$. 
-
-Det er væsentligt nemmere at eksemplificere bestemmelsen af grænseværdier end det er at definere dem præcist. Derfor betragter vi indledningsvist en række eksempler.
-
-\begin{exa}
-	Funktionen $f: \mathbb{R}_{>0} \to \mathbb{R}$ givet ved
-	\begin{align*}
-		f(x) = \frac{1}{x}
-	\end{align*}
-	kan ses tegnet på Figur \ref{fig:grænse}.
-	\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-		axis lines = center, 
-		xmin = -0.5, xmax = 5, 
-		ymin = -0.5, ymax = 5,
-		xlabel = $x$, ylabel = $y$,
-	]
-		\addplot[color = teal, thick, domain = 0.1:5, samples = 300] {1/x};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Graf for funktionen $f$.}
-	\label{fig:grænse}
-	\end{figure}
-	Lader vi $x$ vokse, så vil funktionsværdien for $f$ komme tættere og tættere på nul, da afstanden fra 
-	grafen for $f$ og $x$-aksen bliver mindre og mindre. Vi kan også observere dette ved at anvende 
-	funktionsforskriften. Det er klart, at når vi gør $x$ større, så vil 
-	\begin{align*}
-		f(x) = \frac{1}{x}
-	\end{align*}
-	blive mindre og mindre. Vi siger i dette tilfælde, at $f$ går mod $0$ når $x$ går mod $\infty$. Dette kan 
-	skrives på to måder. Enten ved at skrive
-	\begin{align*}
-		f(x) \to 0 \textnormal{ når } x \to \infty 
-	\end{align*}
-	eller mere typisk
-	\begin{align*}
-		\lim_{x \to \infty} f(x) = 0. 
-	\end{align*}
-	Dette læses som \textit{grænseværdien for f når x går mod uendelig er lig 0}.
-	
-	Betragter vi igen grafen på Figur \ref{fig:grænse} kan vi tilsvarende se, at 
-	\begin{align*}
-		\lim_{x \to 0} = \infty
-	\end{align*}
-	under den antagelse, at $f$ kun er defineret for positive $x$. 
-\end{exa}
-\begin{exa}
-	Vi betragter nu samme funktion $g: \mathbb{R} \to \mathbb{R}$ givet ved
-	\begin{align*}
-		g(x) = \frac{1}{x}
-	\end{align*}	 
-	men nu med hele $\mathbb{R}$ som	definitionsområde. Vi kan se grafen for denne på Figur \ref{fig:grænse2}
-	\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-		axis lines = center, 
-		xmin = -5, xmax = 5, 
-		ymin = -5, ymax = 5,
-		xlabel = $x$, ylabel = $y$,
-	]
-		\addplot[color = teal, thick, domain = -5:5, samples = 300] {1/x};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Graf for funktionen $g$.}
-	\label{fig:grænse2}
-	\end{figure}
-	Vi kan tilsvarende her se, at 
-	\begin{align*}
-		\lim_{x \to \infty} g(x) = 0
-	\end{align*}
-	og 
-	\begin{align*}
-		\lim_{x \to -\infty} g(x) = 0.
-	\end{align*}
-	Der opstår dog et problem, når vi prøver at bestemme grænseværdien når $x \to 0$. Lader vi $x$ nærme sig 0
-	fra højre, så får vi grænseværdien $\infty$. 
-	Dette skrives som 
-	\begin{align*}
-		\lim_{x \to 0^+} = \infty 	
-	\end{align*}		
-	 Lader vi derimod $x$ nærme sig 0 fra venstre, så får
-	vi grænseværdien $-\infty$. Dette skrives som
-	\begin{align*}
-		\lim_{x \to 0^{-}} = -\infty.
-	\end{align*}
-	I tilfældet af at grænseværdien ikke er den samme fra venstre og højre, så siges grænseværdien ikke at 
-	eksistere.
-\end{exa}
-Vi giver nu denne lidt upræcise definition af grænseværdien for en funktion.
-\begin{defn}[Grænseværdi]
-	For en funktion $f:\mathbb{R} \to \mathbb{R}$ siges grænseværdien for $f$ i punktet $x_0$ at eksistere, 
-	hvis grænseværdierne fra højre og venstre i punktet er ens, altså at
-	\begin{align*}
-		\lim_{x \to x_0^+}f(x) = \lim_{x \to x_0^-}.
-	\end{align*}
-	Grænseværdien betegnes i dette tilfælde
-	\begin{align*}
-		\lim_{x \to x_0}f(x).
-	\end{align*}
+\begin{defn}
+Har vi en differentiabel funktion $f(t)$, som funktion af tid $t$, så kalder vi $f'(t)$ for væksthastigheden til tidspunktet $t$. 
 \end{defn}
-
-Vi kan også være ude for at skulle bestemme grænseværdier for funktioner, hvor vi ikke kender grafen for funktionen. 
 \begin{exa}
-	For funktion $f$ givet ved
-	\begin{align*}
-		f(x) = \frac{x^2 + x}{x + 1}
-	\end{align*}
-	er det ikke oplagt, hvad grænseværdien
-	\begin{align*}
-		\lim_{x \to -1}f(x)
-	\end{align*}
-	skal give, da vi både i nævner og tæller får $0$, hvis vi blot indsætter tallet. 
-	Dette kaldes for et \textit{0/0-udtryk} eller en \textit{ubestemt form}. Derfor kræver evalueringen
-	af denne grænseværdi lidt omskrivning. Vi kan skrive
-	\begin{align*}
-		f(x) = \frac{x^2 + x}{x + 1} = \frac{x(x+1)}{x+1} = x,
-	\end{align*}
-	og det er nu lettere at evaluere grænseværdien, da vi så får
-	\begin{align*}
-		\lim_{x \to -1}f(x) =\lim_{x \to -1}x = -1
-	\end{align*}
+En accelererende bil kører vinkelret væk fra os, og dens afstand fra os kan beskrives ved funktionen \begin{align*}
+D(t) = 3\cdot t^2 + 5,
+\end{align*}
+hvor $t$ betegner tid i sekunder og $D(t)$ betegner afstanden fra os i $m$ efter $t$ sekunder. Væksthastigheden af bilen til tiden $t$ er 
+\begin{align*}
+D'(t) = 6t.
+\end{align*}
+Efter to sekunder bevæger bilen sig med $D'(2) = 12 m/s.$ Vi kan også bestemme accelerationen af bilen som væksthastigheden af væksthastigheden:
+\begin{align*}
+D''(t) = 6,
+\end{align*}
+altså er accelerationen af bilen $6m/s^2$. Dette betyder, at hastigheden af bilen vokser med $6m/s$ hvert sekund.  
+Hvis vi skal finde ud af, hvor langt bilen er væk efter $4$ sekunder bestemmer vi
+\begin{align*}
+D(4) = 3\cdot 4^2 +5 = 53,
+\end{align*}
+altså er bilen $53 m$ væk. 
+Hvis vi vil bestemme hastigheden efter $4$ sekunder, så får vi 
+\begin{align*}
+D'(4) = 6\cdot 4 = 24, 
+\end{align*}
+altså er hastigheden efter $4$ sekunder givet ved $24 m/s$.
 \end{exa}
 
-\newpage
-\section*{Grænseværdier og kontinuitet}
-\stepcounter{section}
-
-Vi kan bruge grænseværdibegrebet til at definere \textit{kontinuitet}. Kontinuitet for en funktion beskrives oftest løst som at vi kan tegne grafen for funktionen uden at løfte blyanten. Vi vil dog definere det lidt mere præcist ud fra grænseværdibegrebet. Igen tages der udgangspunkt i et eksempel
-
-\begin{exa}
-	Vi kan sagtens have grænseværdier, hvor der ikke indgår uendelighed. Vi betragter nu funktionen 
-	$h:\mathbb{R} \to \mathbb{R}$ givet ved
-	\begin{align*}
-		h(x) = 
-		\begin{cases}
-		-x^2 + 6, \ &\textnormal{hvis } x < 2, \\
-		5, &\textnormal{hvis } x = 2, \\
-		3x - 4, &\textnormal{hvis } x > 2. 
-		\end{cases}
-	\end{align*}
-	Vi kan se grafen for $h$ på Figur \ref{fig:grænse3}.
-	\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-		axis lines = center, 
-		xmin = -3, xmax = 5, 
-		ymin = -3, ymax = 7,
-		ytick = {-3,-2,...,6,7},
-		xlabel = $x$, ylabel = $y$,
-	]
-		\addplot[color = teal, thick, domain = -3:2, samples = 100] {-x^2 + 6};
-		\addplot[color = teal, thick, domain = 2:5, samples = 100] {3*x -4};
-		\filldraw[color = teal] (axis cs: 2,5) circle (2pt);
-		\filldraw[color = white] (axis cs: 2,2) circle (2pt);
-		\draw[color = teal] (axis cs: 2,2) circle (2pt);
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Graf for funktionen $h$.}
-	\label{fig:grænse3}
-	\end{figure}
-	For $h$ har vi grænseværdierne fra højre og venstre givet ved 
-	\begin{align*}
-		\lim_{x \to 2^+} h(x) = 2
-	\end{align*}
-	samt 
-	\begin{align*}
-		\lim_{x \to 2^-}h(x) = 2,
-	\end{align*}
-	så grænseværdien for $h$ for $x \to 2$ eksisterer og er lig $2$. Derimod har vi funktionsværdien 
-	\begin{align*}
-		h(2) = 5, 
-	\end{align*}
-	så funktionsværdien i punktet er derfor ikke lig med grænseværdien. Derfor siges $h$ ikke at være 
-	kontinuert i $2$. 
-\end{exa}
-
-Kontinuitet for en funktion defineres nu som følgende. 
-\begin{defn}[Kontinuitet]
-	En funktion $f$ siges at være \textit{kontinuert i et punkt $x_0$}, hvis grænseværdien for $f$ eksisterer i 
-	punktet $x_0$ og er lig funktionsværdien i punktet, altså at
-	\begin{align*}
-		\lim_{x \to x_0} f(x) = f(x_0).
-	\end{align*}	 
-	Hvis $f$ er kontinuert i ethvert punkt i sin definitionsmængde, så siges $f$ at være \textit{kontinuert}.
-\end{defn}
+Vi skal i dag desuden præsenteres for Leibniz' notation. I stedet for at skrive $f'$ for en differentiabel funktion, så vil man særligt i fysik bruge notationen
+\begin{align*}
+	f'(x) = \frac{df}{dx}
+\end{align*}
+eller
+\begin{align*}
+	\frac{d}{dx}f(x).
+\end{align*}
+Typisk vil man notere $f$ som $f(x) = y$ og så skrive
+\begin{align*}
+	\frac{dy}{dx}.
+\end{align*}
 
 \subsection*{Opgave 1}
-Bestem følgende grænseværdier
-
+Antallet af bakterier i en bakteriekoloni kan bestemmes ved
 \begin{align*}
-	&1) \ \lim_{x \to 3} 2x + 4 &  &2) \ \lim_{x \to 0} 4x^2 -4x + 2 \\
-	&3) \ \lim_{x \to 0} \sin(x) + 2x &  &4) \ \lim_{x \to 6} \sqrt{x - 2} - 5x
+N(t) = 0.7\cdot e^{0.3t},
 \end{align*}
-
-\subsection*{Opgave 2}
-Bestem følgende grænseværdier, der giver 0/0-udtryk. (Vink: Det kan være en fordel at bruge kvadratsætninger til nogle af udtrykkene). Tegn evt. graferne i Maple for at kontrollere, om I har fundet den korrekte grænseværdi.
-
-\begin{align*}
-	&1) \ \lim_{x \to 0} \frac{2x^2+4x}{x} & &2) \ \lim_{x \to 2} \frac{x^2 - 4}{x - 2} \\
-	&3) \ \lim_{x \to -3} \frac{x^2 - 9}{x+3} & &4) \ \lim_{x \to 4} \frac{2x^2 - 32}{x - 4} \\
-	&5) \ \lim_{x \to -1} \frac{x^2 + 2x + 1}{x+1} & &6) \ \lim_{x \to -3} \frac{x^2+x-6}{x+3} \\
-\end{align*}
-
-\subsection*{Opgave 3}
-Har vi et udtryk $\sqrt{x} + a$, så kalder vi udtrykket $\sqrt{x} - a$ for det konjugerede udtryk. Dette kan ofte bruges til at bestemme grænseværdier med 0/0-udtryk. 
+hvor t betegner tid i timer og $N(t)$ er antal bakterier i mio. 
 \begin{enumerate}[label=\roman*)]
-	\item Vi ønsker at bestemme grænseværdien
-	\begin{align*}
-		\lim_{x \to 4} \frac{\sqrt{x}-2}{x-4}.
-	\end{align*}
-	Forlæng først brøken med det konjugerede udtryk $\sqrt{x}+2$. 
-	\item Gang udtrykket i tælleren sammen, men lad parenteserne i nævneren stå.
-	\item Forkort udtrykket og evaluér grænseværdien
+\item Hvor mange bakterier er der efter $7$ timer? Hvad med 14?
+\item Hvad er bakterievæksten efter et døgn? Forklar bakterievæksten med ord.
+\item Bliver antallet af bakterier ved med at stige? Er det realistisk? 
+\item Bliver væksten ved med at stige? Er det realistisk?
 \end{enumerate}
-
-Bestem følgende grænseværdier, der giver 0/0-udtryk ved at forlænge med det konjugerede udtryk. 
-
+\subsection*{Opgave 2}
+Vægten i kg af en radioaktiv isotop efter $t$ timer kan beskrives ved
 \begin{align*}
-	&1) \ \lim_{x \to 9} \frac{\sqrt{x}-3}{x-9}    & &2) \ \lim_{x\to 3}\frac{\sqrt{x+1} - 2}{x-3}  \\
-	&3) \ \lim_{x \to 0} \frac{\sqrt{x + 1} - 1}{x}  & &4) \ \lim_{x \to 4} \frac{\sqrt{x^2 -12}-2}{x-4}  \\
+V(t) =10\cdot e^{-0.16t}.
 \end{align*}
-
-\newpage
+\begin{enumerate}[label=\roman*)]
+\item Hvad er vægten af isotopen efter $0$ timer? Hvad med efter $10$ timer?
+\item Hvad er væksthastigheden for henfaldet af isotopen efter en uge? 
+\end{enumerate}
+\subsection*{Opgave 3}
+Den faldne afstand for et objekt i frit fald kan approksimeres ved funktionen $A$ givet ved
+\begin{align*}
+A(t) = 4.91 \cdot t^2, 
+\end{align*}
+hvor $t$ er tiden i sekunder og $A$ er den faldne længde i $m$.
+\begin{enumerate}[label=\roman*)]
+\item Hvor langt er objektet faldet efter 10 sekunder?
+\item Med hvilken hastighed falder objektet efter 10 sekunder?
+\item Hvad er accelerationen af faldet?
+\end{enumerate}
 
 \subsection*{Opgave 4}
-Grafen for funktionen $f$ kan ses på Figur \ref{fig:kont1}.
+Temperaturen af en kop te kan beskrives ved sammenhængen 
+\begin{align*}
+	f(t) = 23 + \frac{175}{t^{1.5}},\ t\geq 1,
+\end{align*}
+hvor $t$ betegner antallet af forløbne minutter siden teen blev hældt op og $f$ er temperaturen af teen i grader celcius.
 
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-		axis lines = center, 
-		xmin = -7, xmax = 8, 
-		ymin = -3, ymax = 10,
-		xlabel = $x$, ylabel = $y$,
-		minor tick num = 1,
-		grid = both,
-	]
-		\addplot[color = teal, thick, domain = -7:-4] {-3*x - 10};
-		\addplot[color = teal, thick, domain = -4:-1, samples = 100] {-0.89*x^2-4.44*x+0.44};
-		\addplot[color = teal, thick, domain = -1:3, samples = 100] {0.5*x + 4.5};
-		\addplot[color = teal, thick, domain = 3:8, samples = 100] {0.38*x^2-3.5*x + 13.13};
-		%Circle1
-		\filldraw[color = white] (axis cs: -4,2) circle (2pt);
-		\draw[color = teal] (axis cs: -4,2) circle (2pt);
-		%Circle2
-		\filldraw[color = teal] (axis cs: -4,4) circle (2pt);
-		%Circle3
-		\filldraw[color = white] (axis cs: 3,6) circle (2pt);
-		\draw[color = teal] (axis cs: 3,6) circle (2pt);
-		%Circle4
-		\filldraw[color = teal] (axis cs: 3,3) circle (2pt);
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Graf for funktionen $f$.}
-	\label{fig:kont1}
-\end{figure}
 \begin{enumerate}[label=\roman*)]
-	\item Bestem tallene $f(-4)$, $f(-1)$, $f(1)$ og $f(3)$. 
-	\item Bestem følgende grænseværdier
-	\begin{align*}
-		&1) \ \lim_{x \to -4^-}f(x) &   &2) \ \lim_{x \to -4^+}f(x) \\
-		&3) \ \lim_{x \to -1^-}f(x) &   &4) \ \lim_{x \to -1^+}f(x) \\
-		&5) \ \lim_{x \to 3^-}f(x) &   &6) \ \lim_{x \to 3^+}f(x) \\
-	\end{align*}
-	\item I hvilke af punkterne $-4$, $-1$ og $3$ eksisterer grænseværdien?
-	\item I hvilke af punkterne $-4$, $-1$ og $3$ er $f$ kontinuert?
+	\item Afgør, hvor meget temperaturen falder per minut i gennemsnit fra 3. til 6. minut. 
+	\item Bestem, hvor hurtigt temperaturen falder efter 10 minutter. 
 \end{enumerate}
-
-\newpage
 
 \subsection*{Opgave 5}
-Grafen for funktionen $g$ kan ses på Figur \ref{fig:kont2}.
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-		axis lines = center, 
-		xmin = -7, xmax = 8, 
-		ymin = -3, ymax = 10,
-		xlabel = $x$, ylabel = $y$,
-		minor tick num = 1,
-		grid = both,
-	]
-		\addplot[color = teal, thick, domain = -6:-3, samples = 100] {2*x^2+16*x+33};
-		\addplot[color = teal, thick, domain = -3:3, samples = 100] {-0.11*x^2 + 4};
-		\addplot[color = teal, thick, domain = 3:7, samples = 100] {0.5*x-0.5};
-		\filldraw[color = teal] (axis cs: -6,9) circle (2pt);		
-		\filldraw[color = white] (axis cs: -3,3) circle (2pt);
-		\draw[color = teal] (axis cs: -3,3) circle (2pt);
-		\filldraw[color = teal] (axis cs: -3,5) circle (2pt);
-		\filldraw[color = white] (axis cs: 0,4) circle (2pt);
-		\draw[color = teal] (axis cs: 0,4) circle (2pt);		
-		\filldraw[color = teal] (axis cs: 0,2) circle (2pt);
-		\filldraw[color = white] (axis cs: 3,3) circle (2pt);
-		\draw[color = teal] (axis cs: 3,3) circle (2pt);		
-		\filldraw[color = white] (axis cs: 3,1) circle (2pt);
-		\draw[color = teal] (axis cs: 3,1) circle (2pt);
-		\filldraw[color = teal] (axis cs: 3,0) circle (2pt);
-		\filldraw[color = white] (axis cs: 7,3) circle (2pt);
-		\draw[color = teal] (axis cs: 7,3) circle (2pt);
-		\filldraw[color = teal] (axis cs: 7,6) circle (2pt);		
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Graf for funktionen $f$.}
-	\label{fig:kont2}
-\end{figure}
+Du har fundet lykken og er flyttet til Honduras for at producere bananer. Du har indledt et samarbejde med et meget underligt logistikfirma, der helst ikke vil have hverken for lidt eller for meget at lave. Omkostningerne for transporten af bananer er derfor givet ved
+\begin{align*}
+	P(x) = 10.2x + \frac{337.6}{x}, \ x > 0,
+\end{align*}
+hvor $x$ betegner mængden af transporterede bananer, og $P$ er prisen for at få leveret et ton bananer i tusinde kroner. 
 \begin{enumerate}[label=\roman*)]
-	\item Bestem tallene $f(-6)$, $f(-3)$, $f(0)$, $f(3)$ og $f(7)$
-	\item Bestem grænseværdierne i punkterne $-6$, $-3$, $0$, $3$ og $7$, hvis de eksisterer.
-	\item Afgør, om $f$ er kontinuert i disse punkter. 
+	\item Tegn grafen for $P$ så $x \in ]0,20]$.
+	\item Bestem $\frac{dP}{dx}$ for $x = 10$ og giv en fortolkning af dette tal. 
+	\item Bestem det antal bananer der gør, at leveringsprisen per ton er så lav som muligt. 
 \end{enumerate}
+
 \subsection*{Opgave 6}
-En mere stringent definition af grænseværdier lyder som følgende.
-\begin{defn}[Grænseværdi]
-	En funktion $f: \mathbb{R} \to \mathbb{R}$ siges at have grænseværdien $L$ i et punkt
-	$x_0$, hvis der for ethvert tal $\varepsilon > 0$ findes et tal $\delta > 0$ så
-	 hvis det for $x \neq x_0$ så $0 < |x - x_0| < \delta$ medfører, at $0 < |f(x) - L| < \varepsilon$.
-\end{defn}
-Overvej, hvad $\delta$ skal være, hvis $\varepsilon = 1$ i opgaverne fra Opgave 1. 
+I en storby er sammenhængen mellem antallet af beboere i tusinde og det forløbne antal år siden 1940 samlet. Det kan findes i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/befolkningibylogist.xlsx}{\color{blue!60}dette datasæt}.
+
+Det antages, at sammenhængen kan beskrives ved det, vi kalder for en \textit{logistisk funktion}. Denne laves
+i Maple ved kommandoen $\texttt{LogistReg}$.
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en forskrift $f$ for en sammenhæng, der beskriver befolkningen i byen.
+	\item Bestem væksthastigheden i år 1970.
+	\item Bestem det tidspunkt, hvor væksthastigheden er maksimal. 
+\end{enumerate}
 
 
 \end{document}
