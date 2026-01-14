@@ -1,0 +1,157 @@
+\begin{center}
+\Huge
+Induktion
+\end{center}
+
+\section*{Beviser ved induktion}
+\stepcounter{section}
+
+Når vi beviser resultater, der gælder for hvert naturligt tal, vil det typisk være ganske omstændigt at bevise resultatet for hvert af de naturlige tal, da der er uendeligt mange af disse. En strategi for at bevise sådanne resultater er det, vi kalder for \textit{induktionsbeviser.} I disse beviser begynder vi med at vise, at resultatet er sandt for typisk 0 eller 1. Efterfølgende vises så, at hvis resultatet er sandt for ethvert givent tal, så vil det også være sandt for næste tal i rækken. 
+
+Man kan forestille sig, at man står ved foden af en uendeligt lang trappe. Man begynder med at vise, at man kan træde op på første trappetrin på trappen, og bagefter at man altid kan gå op til næste trappetrin. Der vil derfor ikke være noget trappetrin, man ikke kan nå op til (uagtet at man selvfølgelig vil opnå en hvis udmattelse undervejs i den virkelige analogi).
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		%Linjer til 1,2,3		
+		\draw[thick, color = teal] (0,0) -- (0,0.5);
+		\draw[thick, color = teal] (0,0.5) -- (0.5,0.5);
+		\draw[thick, color = teal] (0.5,0.5) -- (0.5,1);
+		\draw[thick, color = teal] (0.5,1) -- (1,1);
+		\draw[thick, color = teal] (1,1) -- (1,1.5);
+		\draw[thick, color = teal] (1,1.5) -- (1.5,1.5);
+		%1,2,3
+		\node[color = teal] at (0.25,0.25) {$1$};
+		\node[color = teal] at (0.75,0.75) {$2$};
+		\node[color = teal] at (01.25,1.25) {$3$};
+		%pile 
+		\draw[color = teal, thick, ->, >=stealth] (0.4,0.15) to[out = 0, in = -90] (0.75,0.5);
+		\draw[color = teal, thick, ->, >=stealth] (0.90,0.65) to[out = 0, in = -90] (1.25,1);
+		\draw[color = teal, thick, ->, >=stealth] (2.4,2.15) to[out = 0, in = -90] (2.75,2.5);
+		%Prikker
+		\node[color = teal, rotate = 45] at (1.75,1.75) {$\cdots$};
+		\node[color = teal, rotate = 45] at (3.25,3.25) {$\cdots$};
+		%Linjer til n, n+1
+		\draw[thick, color = teal] (2,2) -- (2,2.5);
+		\draw[thick, color = teal] (2,2.5) -- (2.5,2.5);
+		\draw[thick, color = teal] (2.5,2.5) -- (2.5,3);
+		\draw[thick, color = teal] (2.5,3) -- (3,3);
+		%n, n+1
+		\node[color = teal] at (2.25,2.25) {$n$};
+		\node[color = teal, anchor = west] at (2.5,2.75) {$n+1$};
+	\end{tikzpicture}
+	\caption{Trappeanalogi for induktionsprincippet}
+	\label{fig:induktionstrappe}
+\end{figure}
+
+Det nok mest anvendte eksempel på et induktionsbevis er beviset for følgende sætning om summen af de første $n$ naturlige tal.
+\begin{setn}[Sum af naturlige tal]
+	Summen af de første $n$ naturlige tal er givet ved 
+	\begin{align*}
+		\sum_{k = 0}^n k &= 0 + 1 + 2 +\cdots + n  \\
+		&= \frac{n(n+1)}{2}. 
+	\end{align*}
+\end{setn}
+\newpage
+\begin{proof}\phantom{h}\\
+	\textbf{Induktionsstart} $(n = 0)$:\\
+	Vores induktionsstart går ud på at vise, at resultatet er sandt for $n = 0$. Vi indsætter derfor blot i formlen og 
+	får
+	\begin{align*}
+		\frac{n(n+1)}{2} = \frac{0(0+1)}{2} = 0,
+	\end{align*}
+	hvilket oplagt er sandt, da summen af de første $0$ tal navnligt er nul. Vi kan altså træde op på det første trin på
+	trappen, og fortsætter derfor til induktionsskridtet. \\
+	\textbf{Induktionsskridt} $(n = k)$:\\
+	Vi antager nu, at formlen er sand for et naturligt tal $k \in \mathbb{N}$ og skal vise, at formlen nødvendigvis også 
+	må være sand for $k + 1$, altså det næste trin på trappen. Vi antager altså, at
+	\begin{align*}
+		0 + 1 + 2 + \cdots + k = \frac{k(k+1)}{2}.
+	\end{align*}
+	Vi lægger nu næste tal til summen, altså $k + 1$ og får
+	\begin{align*}
+		0 + 1 + 2 + \cdots + k + (k + 1) &= \frac{k(k + 1)}{2} + (k + 1)\\
+		&= \frac{k(k+1)}{2} + \frac{2k}{2} + \frac{2}{2}\\
+		&= \frac{k(k+1)+2k + 2}{2}\\
+		&= \frac{(k+2)(k+1)}{2}\\
+		&= \frac{(k+1)((k+1)+1)}{2},
+	\end{align*}
+	hvilket viser, at formlen også er sand for $k + 1$. Dette beviser altså sætning, da vi nu har vist, at vi kan "træde
+	op på næste trin i trappeanalogien".
+\end{proof}
+\subsection*{Opgave 1}
+Hvis summen af de første $n$ naturlige tal er
+\begin{align*}
+	\frac{n(n+1)}{2},
+\end{align*}
+så må summen af de første $n$ lige tal være lig
+\begin{align*}
+	n(n+1).
+\end{align*}
+Mere præcist har vi følgende sætning
+\begin{setn}[Sum af lige tal]
+	Summen af de første $n$ lige naturlige tal er givet ved
+	\begin{align*}
+		2 + 4 + \cdots + 2n = n(n+1).
+	\end{align*}
+\end{setn}
+Dette skal vi bevise ved induktion.
+\begin{enumerate}[label=\roman*)]
+	\item Bevis induktionsstarten. Vis altså, at sætningen er sand for $n = 0$. 
+	\item Gennemfør nu induktionsskridtet. Antag, at sætningen er sand for $n = k$, altså at
+	\begin{align*}
+		2 + 4 + \cdots + 2k = k(k+1)
+	\end{align*}
+	og læg det næste lige tal til på begge sider af lighedstegnet. 
+\end{enumerate}
+\subsection*{Opgave 2}
+Vis følgende sætning ved induktion.
+\begin{setn}[Sum af ulige tal]
+	Summen af de første $n$ ulige naturlige tal er givet ved
+	\begin{align*}
+		1 + 2 + \cdots + 2n - 1 = n^2
+	\end{align*}
+\end{setn}
+\subsection*{Opgave 3}
+Vi har tidligere vist følgende sætning
+\begin{setn}[Potensreglen]
+	Differentialkvotienten for funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^n
+	\end{align*}
+	er givet ved
+	\begin{align*}
+		f'(x) = nx^{n-1}.
+	\end{align*}
+\end{setn}
+Vi ønsker at give et bevis for denne sætning for alle naturlige tal $n$ ved brug af induktion. 
+\begin{enumerate}[label=\roman*)]
+	\item Induktionsstart: Vis, at sætningen er sand for $n = 0$ og $n = 1$. (Dette har I faktisk bevist tidligere. 
+	Overvej, hvorfor).
+	\item Induktionsskridt: Antag, at sætningen er sand for $n = k$ og vis, at den må være sand for $n = k + 1$. 
+	(Vink: Du får brug for produktreglen. )
+\end{enumerate}
+\subsection*{Opgave 4}
+Vi husker på, at vi kan opskrive en mængde $A$ som eksempelvis
+\begin{align*}
+	A = \{1,4,6\},
+\end{align*}
+hvor mængden $A$ altså indeholder elementerne $1$, $4$ og $6$. Husk, at potensmængden $P(A)$ består af
+alle delmængder af $A$. Potensmængden for $A$ vil derfor være
+\begin{align*}
+	\{\emptyset,\{1\},\{4\},\{6\},\{1,4\},\{1,6\},\{4,6\},\{1,4,6\}\}.
+\end{align*}
+Vi kan se, at kardinaliteten (antallet af elementer) i $P(A)$ er 8.
+Der gælder følgende resultat om størrelsen på potensmængder.
+\begin{setn}[Potensmængder]
+	Hvis kardinaliteten af $A$ er $n$, altså $|A| = n$, så er kardinaliteten af $P(A)$ givet ved
+	\begin{align*}
+		|P(A)| = 2^n
+	\end{align*}
+\end{setn}
+\begin{enumerate}[label=\roman*)]
+	\item Induktionsstart: Vis, at dette er sandt for en mængde med ét element, altså $n = 1$. 
+	\item Induktionsskridt: Antag, at dette er sandt for $n = k$ og vis, at det nødvendigvis må være sandt for
+	 $n = k+1$. (Vink: Overvej, hvor mange nye delmængder vi kan lave ud af dem, vi allerede har, hvis vi tilføjer
+	 ét nyt element til mængden $A$.)
+\end{enumerate}

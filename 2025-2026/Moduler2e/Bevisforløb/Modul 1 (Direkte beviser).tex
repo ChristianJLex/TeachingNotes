@@ -1,0 +1,213 @@
+\begin{center}
+\Huge
+Direkte beviser
+\end{center}
+
+\section*{Introduktion}
+\stepcounter{section}
+
+Samtlige af de beviser, vi har gennemført i løbet af gymnasiet er det, der kaldes for \textit{direkte beviser}. I et direkte bevis antager man et udsagn og gennem en række argumenter ender man i udsagnet, man ønsker at bevise. Det er selvfølgelig vigtigt, at de argumenter, man arbejder med er sande, da man ellers kan ende med falske udsagn. Et eksempel kunne være følgende. 
+
+\begin{exa}
+	Vi antager, at $a = b$. Vi får så
+	\begin{align*}
+		a = b \ &\Leftrightarrow 2a = 2b\\
+		&\Leftrightarrow	2a - 2b = 0 \\
+		&\Leftrightarrow 2(a-b) = 0 \\
+		&\Leftrightarrow	 2 = \frac{0}{a-b} \\
+		&\Leftrightarrow 2 = 0,
+	\end{align*}
+	hvilket jo klart er et falsk udsagn. Vi antog, at $a = b$ og kom frem til, at $2 = 0$. Problemet er selvfølgelig
+	her, at vi ikke kan dividere med $a - b$, da dette er 0. 
+\end{exa}
+
+\section*{Implikationspile}
+
+Når vi skriver matematik, så bruger vi ofte implikationspile, der fortæller os om relationen mellem to udsagn. Vi har tre forskellige implikationspile.
+\begin{enumerate}[label=\roman*)]
+	\item $\Rightarrow$ kaldes ofte \textit{medfører} eller \textit{kun hvis}.
+	\item $\Leftarrow$ kaldes ofte \textit{hvis}.
+	\item $\Leftrightarrow$ kaldes ofte \textit{hvis og kun hvis} eller en \textit{biimplikation}.
+\end{enumerate}
+Før vi anvender dem til at beskrive matematik, vil vi bruge dem i en mere hverdagssproglig sammenhæng.
+\begin{exa}
+	Udsagnet "Lise er glad, når hun spiser is" består af to udsagn; "Lise er glad" og "Lise spiser is". Her bruges 
+	implikationspilen $\Leftarrow$ eller "hvis", da vi har
+	\begin{center}
+		"Lise er glad" $\Leftarrow$ "Lise spiser is".
+	\end{center}
+	Vi har derimod ikke, at
+	\begin{center}
+		"Lise er glad" $\Rightarrow$ "Lise spiser is",
+	\end{center}
+	da det forhåbentlig ikke er et krav for Lise at spise is, for at hun kan være glad. 
+	Vi skriver derfor, at 
+	\begin{center}
+		"Lise er glad" $\not\Rightarrow$ "Lise spiser is",
+	\end{center}
+\end{exa}
+\begin{exa}
+	Vi bruger typisk implikationspile, når vi arbejder i matematik. Vi har fx følgende implikation
+	\begin{align*}
+		x = 2 \Rightarrow x^2 = 4,
+	\end{align*}
+	men der gælder ikke, at
+	\begin{align*}
+		x = 2 \Leftarrow x^2 = 4,
+	\end{align*}
+	da $x$ også kunne antage værdien $x = -2$ i dette tilfælde. Vi kan derimod skrive, at
+	\begin{align*}
+		x^2 = 4 \Leftrightarrow x = \pm 2,
+	\end{align*}
+	da udsagnet $x^2 = 4$ er sand nøjagtigt i de tilfælde hvor udsagnet $x = \pm 2$ er sandt. 
+\end{exa}
+
+\newpage
+\section*{Direkte beviser}
+Når man første gang introduceres for bevisteknikker, så bliver man næsten altid sat igang med at bevise resultater for enten lige eller ulige tal. Disse beviser er ganske ligetil og næsten altid samme trick. Navnligt, at ethvert lige tal $a$ kan skrives som $a = 2n$ for et heltal $n$ og at ethvert ulige tal $b$ kan skrives som $b = 2m + 1$ for et heltal $m$. 
+
+Vi ser på vores første af disse beviser.
+\begin{setn}[Sum af ulige tal]
+	Hvis $a$ og $b$ er ulige tal, så er $a + b$ et lige tal. 
+\end{setn}
+\begin{proof}
+	Antag, at $a$ og $b$ er ulige tal. Dette er sandt hvis og kun hvis $a = 2n + 1$ og $b = 2m + 1$ for to tal $n,m
+	\in\mathbb{Z}$. Så fås
+	\begin{align*}
+		a + b &= (2n + 1) + (2m + 1)\\
+		&= 2n + 2m + 2\\ 
+		&= 2(n+m+1).\\
+	\end{align*}
+	Da $n+m+1$ er et heltal, så er $2(n+m+1)$ et lige tal og derfor er $a + b$ et lige tal. 
+\end{proof}
+
+I denne sætning har vi to udsagn $U$ og $V$. 
+
+$U:$ $a$ og $b$ er ulige tal.
+
+$V:$ $a + b$ er et lige tal. 
+
+Vi har så vist, at $U \Rightarrow V$. 
+
+
+\newpage
+\subsection*{Opgave 1}
+
+Sæt implikationspile mellem følgende udsagn.
+
+\begin{enumerate}[label=\roman*)]
+	\item $U:$ Det regner.
+	
+	$V:$ Jeg har en paraply.
+	\item $U:$ 2e har matematik.
+	
+	$V:$ 2e er glade.
+	\item $U:$ Det regner.
+	
+	$V:$ Jeg er våd.
+	\item $U:$ Har været i Husum.
+	
+	$V:$ Har gået på Nørre.
+	\item $U:$ Det er fredag i 4. modul
+	
+	$V:$ Jeg er træt
+	\item $U:$ Mine øjne fungerer.
+	
+	$V:$ Jeg kan se. 
+\end{enumerate}
+
+\newpage
+
+\subsection*{Opgave 2}
+Sæt implikationspile mellem følgende udsagn
+\begin{itemize}
+	\item[$\cdot$] $U_1:$ Jeg kom for sent i skole.
+	\item[$\cdot$] $U_2:$ Jeg kom for sent i seng.
+	\item[$\cdot$] $U_3:$ Jeg sov over mig.
+	\item[$\cdot$] $U_4:$ Min alarm gik ikke.
+	\item[$\cdot$] $U_5:$ Min bus var forsinket.
+	\item[$\cdot$] $U_6:$ Jeg fik fravær.
+	\item[$\cdot$] $U_7:$ Jeg overhørte min alarm.
+	\item[$\cdot$] $U_8:$ Min cykel var punkteret.
+	\item[$\cdot$] $U_9:$ Jeg spiste ikke morgenmad.
+\end{itemize}
+
+\subsection*{Opgave 3}
+Sæt implikationspile mellem følgende udsagn
+\begin{enumerate}[label=\roman*)]
+	\item $U:$ $a$ er lige
+	
+	$V:$ $\frac{a}{2}$ er et heltal
+	\item $U:$ $x^6 = 1$
+	
+	$V:$ $x = 1$
+	\item $U:$ $n$ er lige
+	
+	$V:$ Ligningen $x^n$ har to reelle løsninger. 
+	\item $U:$ $\sqrt{x} = 4$
+	
+	$V:$ $x = 16$
+	\item $U:$ $x$ er positiv.
+	
+	$V:$ $x > -7$.
+	\item $U:$ $2 = 1$
+	
+	$V:$ $-10 > 15$
+	\item $U:$ $c < 10$ 
+	
+	$V:$ $c^2 < 500$
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+Topunktsformlen for lineære funktioner lyder.
+\begin{setn}
+	Hvis $f$ er givet ved
+	\begin{align*}
+		f(x) = ax+b
+	\end{align*}
+	samt hvis grafen for $f$ skærer gennem $(x_1,y_1)$ og $(x_2,y_2)$, så er 
+	\begin{align*}
+		a &= \frac{y_2-y_1}{x_2-x_1} \\
+		b &= y_1-ax_1
+	\end{align*}
+\end{setn}
+\begin{enumerate}[label=\roman*)]
+	\item Hvilke to udsagn $U$ og $V$ optræder i sætningen? 
+	\item Hvordan ser implikationspilene ud?
+\end{enumerate}
+
+\subsection*{Opgave 5}
+Vi har følgende sætning, der fortæller os om afledede funktioner for udvalgte funktioner. 
+
+\begin{setn}
+	Funktionerne $f$, $g$ og $h$ givet ved
+	\begin{align*}
+		f(x) &= x^n, \\
+		g(x) &= \sqrt{x}, \\
+		h(x) &= \ln(x),
+	\end{align*}
+	er alle differentiable og har afledede funktioner
+	\begin{align*}
+		f'(x) &= nx^{n-1},\\
+		g'(x) &= \frac{1}{2\sqrt{x}},\\
+		h'(x) &= \frac{1}{x}.
+	\end{align*}
+\end{setn}
+\begin{enumerate}[label = \roman*)]
+	\item Hvilke udsagn består sætningen af? (Vink: Der er mere end to.)
+	\item Hvordan ser implikationspilene ud mellem udsagnene?
+\end{enumerate}
+
+\newpage
+
+\subsection*{Opgave 6}
+Vi skal give direkte beviser for følgende resultater.
+\begin{enumerate}[label=\roman*)]
+	\item Hvis $a$ er lige og $b$ er ulige, så er $a+b$ ulige.
+	\item Hvis $a$ og $b$ er lige, så er $a + b$ lige.
+	\item Hvis $a$ og $b$ er lige, så er $a\cdot b$ lige.
+	\item Hvis $a$ og $b$ er ulige, så er $a\cdot b$ ulige.
+	\item Hvis $a$ er lige, så er $(-1)^a$ positiv.
+	\item Hvis $a$ er ulige, så er $(-1)^a$ negativ.
+\end{enumerate}

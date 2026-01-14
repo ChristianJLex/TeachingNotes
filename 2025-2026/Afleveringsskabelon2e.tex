@@ -12,9 +12,9 @@
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
 
 %Husk at rette modul og dato!
-\lhead{Aflevering 3\\ Matematik A
+\lhead{Aflevering 5\\ Matematik A%<---------------------NAVN!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%
 }
-\chead{24. oktober 2025
+\chead{19. december 2025%<------------------------------DATO!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%
 }
 
 \begin{document}
@@ -39,7 +39,7 @@
 \phantom{h} \vspace{5cm}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \phantom{h}\\
-{\fontsize{50}{60}\selectfont Aflevering 3}\\
+{\fontsize{50}{60}\selectfont Aflevering 5}\\%<---------------------NAVN!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%
 \phantom{h}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \Large 2025\\
@@ -84,339 +84,299 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 
 \newpage
 
+
 \begin{center}
 	\LARGE
 	Uden hjælpemidler
 \end{center}
+
 \begin{opgavetekst}{Opgave 1}
-	En funktion med forskriften 
+	En funktion $f$ er givet ved
 	\begin{align*}
-		f(x) = b\cdot a^x
+		f(x) = -\frac{1}{2}x^2 + \frac{5}{2}x - 2.
 	\end{align*}
-	går gennem punkterne $(1,2)$ og $(5,32)$.
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Brug en formel til at finde tallene $a$ og $b$.
-\end{delopgave}
-\begin{delopgave}{2}
-	Løs ligningen $f(x) = 8$.
-\end{delopgave}
-%
-%
-%
-%
-%
-%
-\begin{opgavetekst}{Opgave 2}
-	Graferne $A$, $B$, $C$ og $D$ for fire funktioner $f$, $g$, $h$ og $\varphi$ givet ved
-	\begin{align*}
-		g(x) &= f(x + 3)	\\
-		h(x) &= f(x - 3)\\
-		\varphi(x) &= f(x) + 6\\
-	\end{align*}		
-	kan ses på Figur \ref{fig:parallelforskydning}.
-	\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-		axis lines = center, xmin = -8, xmax = 7,
-		ymin = -5, ymax = 35,
-		xlabel = $x$, ylabel = $y$,
-		ticks = none
-		]
-			\addplot[color = teal, thick, samples = 500, domain = -8:7] {x^2 + 2*x - 1};
-			\addplot[color = olive, thick, samples = 500, domain = -8:7] {(x-3)^2 + 2*(x-3) - 1};
-			\addplot[color = Melon, thick, samples = 500, domain = -8:7] {(x+3)^2 + 2*(x+3) - 1};
-			\addplot[color = purple, thick, samples = 500, domain = -8:7] {x^2 + 2*x +19};
-			\node[color = Melon] at (axis cs: -6,5) {$A$};
-			\node[color = Teal] at (axis cs: -3,5) {$B$};
-			\node[color = olive] at (axis cs: 4,5) {$C$};
-			\node[color = purple] at (axis cs: 2,22) {$D$};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Graferne $A$, $B$, $C$ og $D$.}
-	\label{fig:parallelforskydning}
-	\end{figure}
-	\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Afgør, hvilke af graferne $A$, $B$, $C$ og $D$ der tilsvarer funktionerne $f$, $g$, $h$ og $\varphi$. Begrund dit 
-	svar. 
-\end{delopgave}
-%
-%
-%
-%
-%
-\begin{opgavetekst}{Opgave 3}
-	Grafen for en funktion $f$ kan ses på Figur \ref{fig:invers}.
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	axis lines = center, 
-	xmin = -2.5, xmax = 7.5,
-	ymin = -2.5, ymax = 7.5,
-	xlabel = $x$, 
-	ylabel = $y$,
-	xtick = {-4,-2,...,6,8},
-	ytick = {-4,-2,...,6,8},
-	minor tick num = 1,
-	grid = both,
-	]
-		\addplot[color = olive, thick, samples = 500, domain = 0:10] {x^2-2};
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Grafen for $f$.}
-	\label{fig:invers}
-\end{figure}
-\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Bestem $f^{-1}(-2)$
-\end{delopgave}
-\begin{delopgave}{2}
-	Løs ligningen $f(x) = 7$
-\end{delopgave}
-\begin{delopgave}{2}
-	Løs ligningen $f^{-1}(x) = 2$
-\end{delopgave}
-
-%
-%
-%
-%
-%
-\begin{opgavetekst}{Opgave 4}
-En trekant $\triangle ABC$ kan ses på Figur \ref{fig:trekantareal}
-
-\begin{figure}[H]
-	\centering
-	\begin{tikzpicture}
-		\draw[color = olive, thick] (-7,0) -- (0,0) node[midway, anchor = south] {$5$};
-		\draw[color = olive, thick] (-5.2,-3) -- (0,0) node[midway, anchor = north west] {$6$};
-		\draw[color = olive, thick] (-7,0) -- (-5.2,-3) node[midway, anchor = east] {$c$};
-		\draw[color = olive, thick] (-0.7,0) arc (180:210:0.7) node[midway, anchor = east] {$30^{\circ}$};
-		\node[color = olive, anchor = east] at (-7,0) {$A$};
-		\node[color = olive, anchor = west] at (0,0) {$C$};
-		\node[color = olive, anchor = north] at (-5.2,-3) {$B$};
-	\end{tikzpicture}
-	\caption{Trekanten $\triangle ABC$.}
-	\label{fig:trekantareal}
-\end{figure}
-\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Bestem arealet af trekant $\triangle ABC$ ved at bruge Tabel \ref{tab:cossintan} i bilaget.
-\end{delopgave}
-%
-%
-%
-%
-%
-\newpage
-\begin{opgavetekst}{Opgave 5}
-	En funktion $g$ er givet ved
-	\begin{align*}
-		g(x) = x^4-72x^2 + 19
-	\end{align*}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Bestem forskriften for funktionen 
-	\begin{align*}
-		\frac{dg}{dx}.
-	\end{align*}
-\end{delopgave}
-\begin{delopgave}{2}
-	Bestem ekstremumsstederne for $g$. 
-\end{delopgave}
-%
-%
-%
-%
-%
-\begin{opgavetekst}{Opgave 6}
-Trekanten $\triangle ABC$ kan ses på Figur \ref{fig:trekantcos}.
+	Grafen for $f$ samt et markeret område $M$ kan ses på Figur \ref{fig:opg1}
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}
-		%A
-		\pgfmathsetmacro{\ax}{0}
-		\pgfmathsetmacro{\ay}{0}
-		%B
-		\pgfmathsetmacro{\bx}{5}
-		\pgfmathsetmacro{\by}{2}
-		%C
-		\pgfmathsetmacro{\cx}{7}
-		\pgfmathsetmacro{\cy}{0}
-		%arc radius
-		\pgfmathsetmacro{\arclen}{0.7}
-		%c
-		\draw[color = olive, thick] (\ax,\ay) -- (\bx,\by) node[midway, anchor = south east] {$5$};
-		%b
-		\draw[color = olive, thick] (\ax,\ay) -- (\cx,\cy) node[midway, anchor = north] {$6$};
-		%a
-		\draw[color = olive, thick] (\bx,\by) -- (\cx,\cy) node[midway, anchor = south west] {$2$};
-	%	Vinkel A		
-		\draw[color = olive, thick] (\arclen,0) arc (0:21.8:\arclen) 
-		node[midway, anchor = west] {};
-	%	Vinkel B
-		\draw[color = olive, thick] (4.35,1.74) arc (180 + 21.8:180 + 21.8 + 113.2:\arclen)
-		 node[midway, anchor = north east] {};
-	%	Vinkel C
-		\draw[color = olive, thick] (\cx - \arclen,0) arc (180:180 - 45:\arclen)
-		 node[midway, anchor = east] {};
-		 %Nodes
-		 \node[color = olive, anchor = east] at (\ax,\ay) {$A$};
-		 \node[color = olive, anchor = south] at (\bx,\by) {$B$};
-		 \node[color = olive, anchor = west] at (\cx,\cy) {$C$};
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1, xmax = 3,
+			ymin = -4, ymax = 2,
+			xtick = {-3,-2,...,3,4},
+			ytick = {-4,-3,...,3,4},
+			xlabel = $x$, ylabel = $y$,
+		]
+			\addplot[color = teal, domain = -2:4, thick, samples = 500] {-0.5*x^2 + 2.5*x - 2};
+			\fill[color = SeaGreen!70, opacity = 0.4 ]
+			(axis cs: 0,0) -- 
+			plot[domain = 0:2, variable = \x] (axis cs: \x, {-0.5*(\x)^2+2.5*\x - 2}) --
+			(axis cs: 2,0) -- cycle;
+		\end{axis}
 		\end{tikzpicture}
-		\caption{Trekanten $\triangle ABC$.}
-		\label{fig:trekantcos}
 	\end{figure}
 	\phantom{h}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem vinklen $\angle B$. Brug Tabel \ref{tab:cossintan} hvor du afrunder til to decimaler. 
+	Bestem arealet af området $M$.
 \end{delopgave}
-\newpage
-\begin{center}
-	\LARGE
-	Med hjælpemidler
-\end{center}
-\begin{opgavetekst}{Opgave 6}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{Billeder/byvaekst}
-	\end{center}
-	Antallet af beboere i en stor by kan i en årrække beskrives ved funktionen
+
+\begin{opgavetekst}{Opgave 2}
+	En funktion $g$ er givet ved
 	\begin{align*}
-		f(x) = \frac{3991.1}{1+0.41121e^{-0.10561x + 5.28050}},
-	\end{align*}
-	hvor $x$ er antal år efter år 1950 og $f$ er antallet af beboere i tusinde.
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Tegn grafen for $f$ så $x \in [0,80]$.
-\end{delopgave}
-\begin{delopgave}{2}
-	Bestem tallet $f'(30)$ og forklar, hvad dette tal betyder for udviklingen af befolkningen i byen. 
-\end{delopgave}
-\begin{delopgave}{3}
-	Tegn grafen for $f'$ så $x \in [0,80]$ og brug differentialregning til at bestemme det tidspunkt, hvor 
-	befolkningstilvæksten vokser mest. 
-\end{delopgave}
-%
-%
-%
-%
-%
-\begin{opgavetekst}{Opgave 7}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{Billeder/kanon.jpg}
-	\end{center}
-	Under den 2. Slesviske krig skulle de østrigske og preussiske kanoner skyde over Vemmingbund for at ramme de danske skanser ved Dybbøl mølle. Skudafstanden afhænger af affyringsvinklen på kanonen
-	og for at skyde den rigtige afstand er det vigtigt at kende den korrekte affyringsvinkel. Af Tabel  \ref{tab:kanon} kan sammenhængen mellem affyringsvinklen $x$ (i grader) og skudafstanden $D$
-	(i meter) ses.
-	\begin{table}[H]
-		\centering
-		\begin{tabular}{c|c|c|c|c|c|c|c}
-		$x$ &10 & 20 & 30 & 40 & 50 & 60 & 70 \\
-		\hline
-		$D$ & 1197 & 2089 & 2655 & 2968 & 3022 & 2659 & 2082
-		\end{tabular}
-		\caption{Sammenhæng mellem skudafstand (i meter) og affyringsvinkel (i grader)}
-		\label{tab:kanon}
-	\end{table}\phantom{h}
-	En model for affyringsafstanden $D$ som funktion af affyringsvinklen $x$ er givet ved
-	\begin{align*}
-		D(x) = ax^2+bx+c.
+		g(x) = 3x^2 - 4x + c.
 	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Brug tallene fra Tabel \ref{tab:kanon} til at bestemme en forskrift for $D$.
+	Udnyt, at $g(-2) = 10$ for at bestemme tallet $c$.  
 \end{delopgave}
 \begin{delopgave}{2}
-	Hvor langt skyder kanonen, hvis affyringsvinklen er $25^\circ$?
-\end{delopgave}
-\begin{meretekst}
-	Det oplyses, at der er $1.8$km fra de preussisk/østrigske skanser til Skanse 1 ved Vemmingbund. 
-\end{meretekst}
-\begin{delopgave}{3}
-	Hvilken affyringsvinkel skal bruges for at ramme Skanse 1?
-\end{delopgave}
-%
-%
-%%%%%%%%%%%%%%%
-%
-%
-\begin{opgavetekst}{Opgave 8}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{Billeder/traening}
-	\end{center}
-	En træningsgruppe måler løbende deres træningsresultater henover 70 måneder. De måler resultatet på ét bestemt løft, og deres data kan findes 
-	\href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/Traening.xlsx}{\color{blue!60} her.}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Anvend residualanalyse til at bestemme en model, der beskriver datasættet godt. 
-\end{delopgave}
-\begin{delopgave}{2}
-	Brug din valgte model til at afgøre, hvor længe der vil gå, før man kan forvente at løfte 100kg.
-\end{delopgave}
-\begin{delopgave}{3}
-	Bestem differentialkvotienten efter 80 måneder. Hvad fortæller os den om udviklingen af løfteevnen til dette tidspunkt?
+	Bestem den stamfunktion til $g$, der går gennem punktet $(2,1)$.
 \end{delopgave}
 
 \newpage
-\section*{Bilag}
-\begin{table}[H]
+
+\begin{opgavetekst}{Opgave 3}
+	Funktionen $h$ er givet ved
+	\begin{align*}
+		h(t) = \frac{t^3}{\sqrt{t^4+1}}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem $\int h(t) dt$.
+\end{delopgave}
+
+\begin{opgavetekst}{Opgave 4}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem integralet
+	\begin{align*}
+		\int_1^{e^{x^2}} \frac{1}{2x\sqrt{\ln(x)}} dx
+	\end{align*}
+\end{delopgave}
+
+
+\begin{opgavetekst}{Problem 5}	
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Calculate the following
+	\begin{align*}
+		&1) \int_1^3 3x^2+2x-1 dx & &2) \int_{9}^{16} \frac{1}{2\sqrt{x}} dx
+	\end{align*}
+\end{delopgave}
+
+\begin{opgavetekst}{Problem 6}
+	A function $\varphi$ is given by
+	\begin{align*}
+		\varphi(x) = \frac{e^{4\sin(x)}\cos(x)}{2}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine 
+	\begin{align*}
+		\int_0^\pi \varphi(x) dx
+	\end{align*}
+\end{delopgave}
+
+\begin{opgavetekst}{Problem 7}
+	The functions $f$ and $g$ given by 
+	\begin{align*}
+		f(x) = -x^2 + 2x +3
+	\end{align*}
+	and 
+	\begin{align*}
+		g(x) = 3x-9
+	\end{align*}
+	bound a region $M$.
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the intersections between $f$ and $g$
+\end{delopgave}
+\begin{delopgave}{2}
+	Determine the roots of $f$
+\end{delopgave}
+\begin{delopgave}{3}
+	Determine the area of $M$. 
+\end{delopgave}
+
+\begin{opgavetekst}{Problem 8}
+	The evil exercise a) from the book $>:)$. 
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the integral
+		\begin{align*}
+			\int \frac{x^3}{\sqrt{x^2+1}}dx.
+		\end{align*}
+\end{delopgave}
+
+\begin{opgavetekst}{Problem 1}
+	A function $f$ is given by
+	\begin{align*}
+		f(x) = 4x^2 - 7x + 12
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Find the value of $x$ that yields a tangent slope equal to $-10$.
+\end{delopgave}
+
+
+\begin{opgavetekst}{Problem 2}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the value of the limit
+	\begin{align*}
+		\lim_{x \to 4} \frac{x^3-2x^2-8x}{x-4}
+	\end{align*}
+\end{delopgave}
+
+\begin{opgavetekst}{Problem 3}
+	A function $g$ is given by 
+	\begin{align*}
+		g(x) = x^4 - 4x^3 - 11.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine any stationary points for $g$.
+\end{delopgave}
+\begin{delopgave}{2}
+	Determine the type of the stationary points. 
+\end{delopgave}
+
+
+\begin{opgavetekst}{Problem 4}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the derivative of the following functions.
+	\begin{align*}
+		&1) \ f_1(x) = \ln(x^3-2x + \sqrt{2})  &  &2) \ f_2(x) = 5\sin(x)\cdot \sqrt{x}
+	\end{align*}
+\end{delopgave}
+
+
+\begin{opgavetekst}{Problem 5}
+	A marked area between the graphs of the functions $f$, $g$ and $h$ is given on Fig. \ref{fig:prob5}.
+	\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+		\begin{axis}[
+		axis lines = center, xmin = -1, xmax = 9,
+		ymin = -1, ymax = 6,
+		ticks = none, 
+		xlabel = $x$,
+		ylabel = $y$,
+		]
+			
+			\fill[color = SeaGreen!40, variable = \x,opacity = 0.4] 
+			plot[domain = 0.544: 4.689] (axis cs: \x, {0.7*\x + 1}) --
+			plot[domain = 4.689: 7.856] (axis cs: \x, {-0.02*(\x)^(3) + 0.23*(\x)^(2) - 0.73*\x + 4.71}) --
+			plot[domain = 7.856:0.544] (axis cs: \x, {0.09*(\x)^(2) - 0.47*\x + 1.61}) --
+			 cycle;			 
+			 \addplot[color = teal, domain = -1:9, samples = 500, thick] {-0.02*x^(3) + 0.23*x^(2) - 0.73*x + 4.71};
+			 \addplot[color = Melon, domain = -1:9, thick, samples = 500] {0.09*x^(2) - 0.47*x + 1.61};
+			 \addplot[color = olive, domain = -1:9, samples = 500, thick] {0.7*x+1};
+			 \node[color = teal, anchor = south] at (axis cs: 6,4.29) {$f$};
+			 \node[color = Melon, anchor = north] at (axis cs: 2,1.03) {$g$};
+			 \node[color = olive, anchor = south east] at (axis cs: 2,2.4) {$h$};
+			 \node[color = teal, anchor = north] at (axis cs: 0.544,0) {$a$};
+			 \node[color = teal, anchor = north] at (axis cs: 4.689,0) {$b$};
+			  \node[color = teal, anchor = north] at (axis cs: 7.856,0) {$c$};
+			 \draw[color = teal, thick, dashed] (axis cs: 0.544,0) -- (axis cs:0.544, 1.381);
+			 \draw[color = teal, thick, dashed] (axis cs: 4.689,0) -- (axis cs:4.689,4.282);
+			 \draw[color = teal, thick, dashed] (axis cs: 7.856,0) -- (axis cs:7.856,3.473);
+		\end{axis}
+		\end{tikzpicture}
+		\caption{Area bounded by the graphs of $f$, $g$ and $h$. }
+		\label{fig:prob5}
+	\end{figure}
+	\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Write the marked area in terms of integrals. Do not solve the integrals.
+\end{delopgave}
+
+
+\begin{opgavetekst}{Problem 6}
+	A function $h$ is given by
+	\begin{align*}
+		h(x) = \frac{1}{x} - 2x^3 + 5x - \frac{11}{2}, \ x>0.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the antiderivative to $h$ that passes through the point $(1,6)$.
+\end{delopgave}
+
+\begin{opgavetekst}{Problem 7}
+	The graph of the function $f$ given by
+	\begin{align*}
+		f(x) = x^3 - 3x^2 + 4
+	\end{align*}
+	can be seen on Fig. \ref{fig:prob7}.
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-	\node at (0,0) {$v$};
-	\node at (2*0.9,0) {$\cos(v)$};
-	\node at (4*0.9,0) {$\sin(v)$};
-	\node at (6*0.9,0) {$\tan(v)$};
-	\node at (8*0.9,0) {$v$};
-	\node at (10*0.9,0) {$\cos(v)$};
-	\node at (12*0.9,0) {$\sin(v)$};
-	\node at (14*0.9,0) {$\tan(v)$};
-	\scriptsize
-	%Colors
-	\foreach \i in {0,...,22}{
-		\filldraw[color = teal!60, opacity = 0.4] (-0.9,-0.5-0.3+0.15-\i*0.3*2) rectangle
-		 (14*0.9 + 0.9,-0.5-0.3-0.15-\i*0.3*2);
-	}
-	\foreach \i in {0,...,45}{
-		%Macros for evaluating
-		\pgfmathsetmacro{\cval}{cos(\i)}
-		\pgfmathsetmacro{\sval}{sin(\i)}
-		\pgfmathsetmacro{\tval}{tan(\i)}
-		%First columns of values
-		\node at (0,-0.5-\i*0.3) {$\i^{\circ}$};
-		\node at (2*0.9,-0.5-\i*0.3) { \cval };
-		\node at (4*0.9,-0.5-\i*0.3) { \sval };
-		\node at (6*0.9,-0.5-\i*0.3) { \tval };
-	}
-	\foreach \i in {46,...,89}{
-		%Macros
-		\pgfmathsetmacro{\cval}{cos(\i)}
-		\pgfmathsetmacro{\sval}{sin(\i)}
-		\pgfmathsetmacro{\tval}{tan(\i)}
-		%Second column
-		\node at (8*0.9,-0.5-\i*0.3 + 46*0.3) {$\i^{\circ}$};
-		\node at (10*0.9,-0.5-\i*0.3 + 46*0.3) { \cval };
-		\node at (12*0.9,-0.5-\i*0.3 + 46*0.3) { \sval };
-		\node at (14*0.9,-0.5-\i*0.3 + 46*0.3) { \tval };
-	}
-		\pgfmathsetmacro{\cval}{cos(90)}
-		\pgfmathsetmacro{\sval}{sin(90)}
-		\node at (8*0.9,-0.5-90*0.3 + 46*0.3) {$90^{\circ}$};
-		\node at (10*0.9,-0.5-90*0.3 + 46*0.3) { \cval };
-		\node at (12*0.9,-0.5-90*0.3 + 46*0.3) { \sval };
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -2, xmax = 4,
+		ymin = -2, ymax = 7,
+		xtick = {-5,-4,-3,...,3,4,5},
+		xlabel = $x$, 
+		ylabel = $y$, 
+	]
+		\addplot[color = teal, thick, domain = -5:5, samples = 500] {x^3 - 3*x^2 + 4};		
+		\fill
+		[
+			color = SeaGreen!40,
+			opacity = 0.4,
+			variable = \x, 
+		]	
+			plot[domain = -1:1](axis cs: \x, {(\x)^3 - 3*(\x)^2 + 4}) --
+			  (axis cs: 1, 0) -- (axis cs: -1,0) -- cycle;
+		\fill
+		[
+			color = SeaGreen!40,
+			opacity = 0.4,
+			variable = \x, 
+		]	
+			 plot[domain = 2:3](axis cs: \x, {(\x)^3 - 3*(\x)^2 + 4}) --
+			  (axis cs: 3, 0) -- (axis cs: 2,0) -- cycle;
+		\node[color = teal] at (axis cs: 3,6) {$f$};
+		\node[color = Melon] at (axis cs: 3,10) {$g$};
+	\end{axis}
 	\end{tikzpicture}
-	\caption{Tabel over udvalgte værdier for $\cos$, $\sin$ og $\tan$.}
-	\label{tab:cossintan}
-\end{table}
+	\caption{Area bounded by the graph of $f$ and the $x$-axis. }
+	\label{fig:prob7}
+\end{figure}
+\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the marked area on Fig. \ref{fig:prob7}.	
+\end{delopgave}
 
 
+\begin{opgavetekst}{Problem 8}
+	A car is driving with a velocity of $30\frac{m}{s}$. At the time $t = 0$ it hits the brakes and is subject to an 
+	acceleration of $-5\frac{m}{s^2}$. 
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine the velocity of the car after $3$ seconds. 
+\end{delopgave}
+\begin{delopgave}{2}
+	Determine an expression for the displacement function of the car if it has traveled $300m$ at $t = 2$. 
+\end{delopgave}
+\begin{delopgave}{3}
+	Find the distance traveled from $t = 0$ until the car stops.
+\end{delopgave}
+
+\newpage
+\begin{opgavetekst}{Problem 9}
+	A function $\varphi$ is given by
+	\begin{align*}
+		\varphi(t) = \frac{8t^3}{\sqrt{t^4-2}}
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Determine $\int \varphi(t) dt$.
+\end{delopgave}
 \end{document}
 
 

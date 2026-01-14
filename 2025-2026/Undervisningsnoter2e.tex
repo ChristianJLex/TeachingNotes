@@ -11,9 +11,9 @@
 
 %Husk at rette modul og dato!
 \lhead{Matematik A\\
-Differentialregning		
+Integralregning
 }
-\chead{7. november 2025
+\chead{16. januar 2026
 }
 
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
@@ -38,123 +38,180 @@ Differentialregning
 %\end{center}
 
 
-\begin{center}
-\Huge
-Vækst og væksthastighed
-\end{center}
-
-\section*{Relation mellem vækst og differentialregning}
-\stepcounter{section}
-
-\begin{defn}
-Har vi en differentiabel funktion $f(t)$, som funktion af tid $t$, så kalder vi $f'(t)$ for væksthastigheden til tidspunktet $t$. 
-\end{defn}
-\begin{exa}
-En accelererende bil kører vinkelret væk fra os, og dens afstand fra os kan beskrives ved funktionen \begin{align*}
-D(t) = 3\cdot t^2 + 5,
-\end{align*}
-hvor $t$ betegner tid i sekunder og $D(t)$ betegner afstanden fra os i $m$ efter $t$ sekunder. Væksthastigheden af bilen til tiden $t$ er 
-\begin{align*}
-D'(t) = 6t.
-\end{align*}
-Efter to sekunder bevæger bilen sig med $D'(2) = 12 m/s.$ Vi kan også bestemme accelerationen af bilen som væksthastigheden af væksthastigheden:
-\begin{align*}
-D''(t) = 6,
-\end{align*}
-altså er accelerationen af bilen $6m/s^2$. Dette betyder, at hastigheden af bilen vokser med $6m/s$ hvert sekund.  
-Hvis vi skal finde ud af, hvor langt bilen er væk efter $4$ sekunder bestemmer vi
-\begin{align*}
-D(4) = 3\cdot 4^2 +5 = 53,
-\end{align*}
-altså er bilen $53 m$ væk. 
-Hvis vi vil bestemme hastigheden efter $4$ sekunder, så får vi 
-\begin{align*}
-D'(4) = 6\cdot 4 = 24, 
-\end{align*}
-altså er hastigheden efter $4$ sekunder givet ved $24 m/s$.
-\end{exa}
-
-Vi skal i dag desuden præsenteres for Leibniz' notation. I stedet for at skrive $f'$ for en differentiabel funktion, så vil man særligt i fysik bruge notationen
-\begin{align*}
-	f'(x) = \frac{df}{dx}
-\end{align*}
-eller
-\begin{align*}
-	\frac{d}{dx}f(x).
-\end{align*}
-Typisk vil man notere $f$ som $f(x) = y$ og så skrive
-\begin{align*}
-	\frac{dy}{dx}.
-\end{align*}
-
 \subsection*{Opgave 1}
-Antallet af bakterier i en bakteriekoloni kan bestemmes ved
-\begin{align*}
-N(t) = 0.7\cdot e^{0.3t},
-\end{align*}
-hvor t betegner tid i timer og $N(t)$ er antal bakterier i mio. 
+\stepcounter{section}
+Vi skal bevise følgende sætning. 
+\begin{setn}[Volumen af omdrejningslegeme]
+	For en kontinuert funktion $f$ er volumen af omdrejningslegemet på intervallet $[a,b]$ givet ved
+	\begin{align*}
+		\pi \int_a^b(f(x))^2 dx.	
+	\end{align*}	 
+\end{setn}
+	\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	axis lines = center, 
+	xmin = -3, xmax = 5,
+	ymin = -6, ymax = 6,
+	ticks = none,
+	xlabel = $x$, ylabel = $y$
+	]
+		\addplot[color = teal, thick, domain = -2.5:2.7, samples = 500] {0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69};
+		\addplot[color = teal, thick, domain = -2.5:2.7, samples = 500] {-(0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69)};
+		\addplot[color = teal, thick, domain = 2.7:3.7, samples = 200, dashed] {0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69};
+		\addplot[color = teal, thick, domain = 2.7:3.7, samples = 200, dashed] {-(0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69)};
+		\draw[] (axis cs: 3,0) -- (axis cs: 5,0);
+		\node[color = teal] at (axis cs: 1,3) {$f$};
+		%Filling
+		\fill[color = teal!50, opacity = 0.4] 
+		plot[domain = -2:3, variable = \x] (axis cs: \x, {0.1*(\x)^3 + 0.01*(\x)^2 - 0.82*\x + 2.69}) --
+		plot[domain = 90:270, variable = \t] (axis cs: {0.254*cos(\t) + 3} , {151/50 * sin(\t)}) -- 
+		plot[domain = 3:-2, variable = \x] (axis cs: \x, {-(0.1*(\x)^3 + 0.01*(\x)^2 - 0.82*\x + 2.69)}) --
+		plot[domain = 270:90, variable = \t] (axis cs: {0.3*cos(\t) - 2} , {3.57 * sin(\t)})	-- cycle;
+		%Circles
+		%Left circle
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:270, variable = \t] (axis cs: {0.30*cos(\t) - 2} , {3.57 * sin(\t)});
+		\draw[color = SeaGreen, thick, dashed]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.30*cos(\t) - 2} , {3.57 * sin(\t)});
+		%Middle left circle
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:270, variable = \t] (axis cs: {0.153*cos(\t) + 1.62} , {1.813 * sin(\t)});
+		\draw[color = SeaGreen, thick, dashed]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.153*cos(\t) + 1.62} , {1.813 * sin(\t)});
+		%Middle right circle
+		\draw[color = SeaGreen, thick, dashed]
+		plot[domain = 90:270, variable = \t] (axis cs: {0.254*cos(\t) + 3} , {3.02 * sin(\t)});
+		\draw[color = SeaGreen, thick, dashed]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.254*cos(\t) + 3} , {3.02 * sin(\t)});
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:270, variable = \t] (axis cs: {0.355*cos(\t) + 3} , {4.858 * sin(\t)});
+		\draw[color = SeaGreen, thick, dashed]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.355*cos(\t) + 3} , {4.858 * sin(\t)});
+		%Right circles
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:270, variable = \t] (axis cs: {0.355*cos(\t) + 3.7} , {4.858 * sin(\t)});
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.355*cos(\t) + 3.7} , {4.858 * sin(\t)});
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:270, variable = \t] (axis cs: {0.254*cos(\t) + 3.7} , {3.02 * sin(\t)});
+		\draw[color = SeaGreen, thick]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.254*cos(\t) + 3.7} , {3.02 * sin(\t)});
+		%horisontal lines 
+		\draw[color = SeaGreen, thick, dashed] (axis cs: 3,3.02) -- (axis cs: 3.7,3.02);
+		\draw[color = SeaGreen, thick, dashed] (axis cs: 3,-3.02) -- (axis cs: 3.7,-3.02);
+		\draw[color = SeaGreen, thick] (axis cs: 3,4.858) -- (axis cs: 3.7,4.858);
+		\draw[color = SeaGreen, thick] (axis cs: 3,-4.858) -- (axis cs: 3.7,-4.858); 
+		%Cylinder fill
+		\fill[color = SeaGreen!50, opacity = 0.4]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.254 * cos(\t) + 3.7} , {3.02 * sin(\t)}) --
+		plot[domain = 270:90, variable = \t] (axis cs: {0.254 * cos(\t) + 3} , {3.02 * sin(\t)}) -- cycle;
+		\fill[color = SeaGreen!80, opacity = 0.4]
+		plot[domain = 90:-90, variable = \t] (axis cs: {0.355 * cos(\t) + 3.7} , {4.858 * sin(\t)}) --
+		plot[domain = 270:90, variable = \t] (axis cs: {0.355 * cos(\t) + 3} , {4.858 * sin(\t)}) -- cycle;
+		%Ticks and dashes
+		\node[color = Melon, anchor = north] at (axis cs: -2,0) {$a$};
+		\draw[color = Melon, thick, dashed] (axis cs: -2,0) -- (axis cs: -2, 3.57);
+		\node[color = Melon, anchor = north] at (axis cs: 3,0) {$x_0$};
+		\draw[color = Melon, thick, dashed] (axis cs: 3,0) -- (axis cs: 3, 3.02);
+		\node[color = Melon, anchor = west, rotate = -90] at (axis cs: 3.7, 0) {$x_0 + h$};
+		\draw[color = Melon, thick, dashed] (axis cs: 3.7 ,0) -- (axis cs: 3.7, 4.858);
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Approksimation af omdregningslegeme.}
+	\label{fig:bevis}
+	\end{figure}
+	
+Vi kalder rumfangsfunktionen $R_a(x)$. Denne giver rumfanget af omdrejningslegemet fra $a$ til $x$. 
 \begin{enumerate}[label=\roman*)]
-\item Hvor mange bakterier er der efter $7$ timer? Hvad med 14?
-\item Hvad er bakterievæksten efter et døgn? Forklar bakterievæksten med ord.
-\item Bliver antallet af bakterier ved med at stige? Er det realistisk? 
-\item Bliver væksten ved med at stige? Er det realistisk?
+	\item Bestem rumfanget af den store cylinder på Figur \ref{fig:bevis}.
+	\item Bestem rumfanget af den lille cylinder på Figur \ref{fig:bevis}.
+	\item I stil med beviset for arealer under grafer skal vi finde en øvre grænse for rumfanget fra $a$ til $x_0 + h$. 
+	Hvilket rumfang skal vi lægge til $R_a(x_0)$, så vi ved, at rumfanget er større end $R_a(x_0 + h)$? Opskriv 
+	dette som en ulighed.
+	\item Hvilket rumfang skal vi lægge til $R_a(x_0)$, så vi ved, at det fortsat er mindre end $R_a(x_0 + h)$?
+	\item Saml ulighederne. Du skulle gerne have 
+	\begin{align*}
+		R_a(x_0) + \pi h (f(x_0))^2 \leq R_a(x_0 + h) \leq R_a(x_0) + \pi h (f(x_0 + h))^2.	
+	\end{align*}	 
+	\item Træk $R_a(x_0)$ fra gennem hele uligheden.
+	\item Dividér uligheden med $h$. 
+	\item Lad nu $h \to 0$. Argumentér for, at $R_a(x)$ er en stamfunktion til $\pi (f(x))^2$.
+	\item Brug $R_a$ som stamfunktion i 
+	\begin{align*}
+		\int_a^b \pi (f(x))^2 dx 
+	\end{align*}
+	og sæt firkanten.
 \end{enumerate}
+
+\newpage
 \subsection*{Opgave 2}
-Vægten i kg af en radioaktiv isotop efter $t$ timer kan beskrives ved
-\begin{align*}
-V(t) =10\cdot e^{-0.16t}.
-\end{align*}
+Vi skal bevise følgende sætning. 
+\begin{setn}[Kurvelængde]
+	Kurvelængden for en differentiabel funktion $f$ på intervallet $[a,b]$ er givet ved
+	\begin{align*}
+		\int_a^b \sqrt{1 + (f'(x))^2} dx.
+	\end{align*}
+\end{setn}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+	axis lines = center, 
+	xlabel = $x$, ylabel = $y$, 
+	xmin = -3, xmax = 5, 
+	ymin = -1, ymax = 6,
+	ticks = none, 
+	]
+		\addplot[color = teal, thick, domain = -3:-2, samples = 500] {0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69};
+		\addplot[color = teal, thick, domain = 3:5, samples = 500] {0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69};
+		\addplot[color = Melon, thick, domain = -2:3, samples = 500] {0.1*x^(3) + 0.01*x^(2) - 0.82*x + 2.69};
+		\draw[color = Melon, thick] (axis cs: {-0.34 * 0.1 - 2} , 0.1 + 3.57 ) --
+		 (axis cs: {0.34 * 0.1 - 2}, -0.1 + 3.57  );
+		\node[color = teal] at (axis cs: 4,5) {$f$};
+		%Ticks and dashes
+		\node[color = SeaGreen, anchor = north] at (axis cs: -2,0) {$a$};
+		\node[color = SeaGreen, anchor = north] at (axis cs: 1.62,0) {$x_0$};
+		\node[color = SeaGreen, anchor = north] at (axis cs: 3,0) {$x_0 + h$};
+		\node[color = SeaGreen, anchor = east] at (axis cs: 0,1.813) {$f(x_0)$};
+		\node[color = SeaGreen, anchor = south west] at (axis cs: 0,3.02) {$f(x_0 + h)$};
+		\draw[color = SeaGreen, dashed, thick] (axis cs: -2,0) -- (axis cs: -2,3.57);
+		\draw[color = SeaGreen, dashed, thick] (axis cs: 1.62,0) -- (axis cs: 1.62,1.813);
+		\draw[color = SeaGreen, dashed, thick] (axis cs: 3,0) -- (axis cs: 3,3.02);
+		\draw[color = SeaGreen, dashed, thick] (axis cs: 0,1.813) -- (axis cs: 1.62,1.813);
+		\draw[color = SeaGreen, dashed, thick] (axis cs: 0,3.02) -- (axis cs: 3,3.02);
+		%
+		\draw[color = Melon, thick] (axis cs: 1.62 , 1.813 + 0.1) --
+		 (axis cs: 1.62, 1.813 - 0.1);
+		 \draw[color = Melon, thick] (axis cs: {-1.94 * 0.06 + 3} , 0.06 + 3.02 ) --
+		 (axis cs: {1.94 * 0.06 + 3}, -0.06 + 3.02);
+		%Triangle
+		\draw[color = SeaGreen, thick] (axis cs: 1.62,1.813) -- (axis cs: 3,3.02);
+		\draw[color = SeaGreen, thick] (axis cs: 1.62,1.813) -- (axis cs: 3,1.813);
+		\draw[color = SeaGreen, thick] (axis cs: 3,1.813) -- (axis cs: 3,3.02);
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Approksimation af kurvelængde med ret linje.}
+	\label{fig:kurvebevis}
+	\end{figure}
+Vi kalder kurvelængdefunktionen, der giver kurvelængden for $f$ på intervallet $a$ til $x$ for $L_a(x)$. 
 \begin{enumerate}[label=\roman*)]
-\item Hvad er vægten af isotopen efter $0$ timer? Hvad med efter $10$ timer?
-\item Hvad er væksthastigheden for henfaldet af isotopen efter en uge? 
+	\item Brug Pythagoras' sætning til at bestemme længden af hypotenusen for trekanten på Figur \ref{fig:kurvebevis}.
+	\item Argumenter for, at vi kan lave følgende approksimation
+	\begin{align*}
+		L_a(x_0 + h) \approx L_a(x_0) + |\textnormal{hyp}|.
+	\end{align*}
+	\item Træk $L_a(x_0)$ Fra i approksimationen. 
+	\item Divider udtrykket med $h$. 
+	\item Brug potens- og brøkregneregler til at omskrive højresiden til
+	\begin{align*}
+		\sqrt{1 + \left(\frac{f(x_0 + h)-f(x_0)}{h}\right)^2}.
+	\end{align*}
+	\item Lad $h \to 0$. 
+	\item Argumentér for, at $L_a(x)$ er en stamfunktion til $\sqrt{1 + (f'(x))^2}$.
+	\item Brug denne stamfunktion på 
+	$$\int_a^b \sqrt{1 + (f'(x))^2} dx$$
+	 og sæt firkanten. 
 \end{enumerate}
-\subsection*{Opgave 3}
-Den faldne afstand for et objekt i frit fald kan approksimeres ved funktionen $A$ givet ved
-\begin{align*}
-A(t) = 4.91 \cdot t^2, 
-\end{align*}
-hvor $t$ er tiden i sekunder og $A$ er den faldne længde i $m$.
-\begin{enumerate}[label=\roman*)]
-\item Hvor langt er objektet faldet efter 10 sekunder?
-\item Med hvilken hastighed falder objektet efter 10 sekunder?
-\item Hvad er accelerationen af faldet?
-\end{enumerate}
-
-\subsection*{Opgave 4}
-Temperaturen af en kop te kan beskrives ved sammenhængen 
-\begin{align*}
-	f(t) = 23 + \frac{175}{t^{1.5}},\ t\geq 1,
-\end{align*}
-hvor $t$ betegner antallet af forløbne minutter siden teen blev hældt op og $f$ er temperaturen af teen i grader celcius.
-
-\begin{enumerate}[label=\roman*)]
-	\item Afgør, hvor meget temperaturen falder per minut i gennemsnit fra 3. til 6. minut. 
-	\item Bestem, hvor hurtigt temperaturen falder efter 10 minutter. 
-\end{enumerate}
-
-\subsection*{Opgave 5}
-Du har fundet lykken og er flyttet til Honduras for at producere bananer. Du har indledt et samarbejde med et meget underligt logistikfirma, der helst ikke vil have hverken for lidt eller for meget at lave. Omkostningerne for transporten af bananer er derfor givet ved
-\begin{align*}
-	P(x) = 10.2x + \frac{337.6}{x}, \ x > 0,
-\end{align*}
-hvor $x$ betegner mængden af transporterede bananer, og $P$ er prisen for at få leveret et ton bananer i tusinde kroner. 
-\begin{enumerate}[label=\roman*)]
-	\item Tegn grafen for $P$ så $x \in ]0,20]$.
-	\item Bestem $\frac{dP}{dx}$ for $x = 10$ og giv en fortolkning af dette tal. 
-	\item Bestem det antal bananer der gør, at leveringsprisen per ton er så lav som muligt. 
-\end{enumerate}
-
-\subsection*{Opgave 6}
-I en storby er sammenhængen mellem antallet af beboere i tusinde og det forløbne antal år siden 1940 samlet. Det kan findes i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/befolkningibylogist.xlsx}{\color{blue!60}dette datasæt}.
-
-Det antages, at sammenhængen kan beskrives ved det, vi kalder for en \textit{logistisk funktion}. Denne laves
-i Maple ved kommandoen $\texttt{LogistReg}$.
-
-\begin{enumerate}[label=\roman*)]
-	\item Bestem en forskrift $f$ for en sammenhæng, der beskriver befolkningen i byen.
-	\item Bestem væksthastigheden i år 1970.
-	\item Bestem det tidspunkt, hvor væksthastigheden er maksimal. 
-\end{enumerate}
-
-
 \end{document}

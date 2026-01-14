@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  6 NOV 2025 10:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  11 JAN 2026 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -999,6 +999,10 @@ rypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarypatterns.meta.code.tex
+(C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+rypatterns.meta.code.tex))
+(C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryangles.code.tex
 File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -1730,26 +1734,26 @@ Package biblatex Info: Reference segment=0 on input line 21.
 Package hyperref Info: Link coloring OFF on input line 21.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 49.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+(mdframed)              on input line 44.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
 
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 50
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 45
 .
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-50.
+45.
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
@@ -1774,6 +1778,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
 [2]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 151.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1782,7 +1790,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3] 
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[4] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (Undervisningsnoter2e.aux)
  ***********
@@ -1794,29 +1811,25 @@ Package logreq Info: Writing requests to 'Undervisningsnoter2e.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54995 strings out of 474486
- 1263048 string characters out of 5744228
- 2147392 words of memory out of 5000000
- 76438 multiletter control sequences out of 15000+600000
- 566238 words of font info for 71 fonts, out of 8000000 for 9000
+ 55871 strings out of 474486
+ 1285965 string characters out of 5744228
+ 2169021 words of memory out of 5000000
+ 77314 multiletter control sequences out of 15000+600000
+ 564481 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,12n,120p,754b,1719s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,11n,120p,754b,2358s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmmi12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGCJ/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NGCJ/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/NGCJ/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/N
-GCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:
-/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/m
-sam10.pfb>
-Output written on Undervisningsnoter2e.pdf (3 pages, 132387 bytes).
+nts/cm/cmex10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGCJ/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NGCJ/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Undervisningsnoter2e.pdf (4 pages, 131471 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 30 named destinations out of 1000 (max. 500000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

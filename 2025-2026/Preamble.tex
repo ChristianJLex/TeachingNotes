@@ -42,6 +42,7 @@
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{decorations.pathreplacing,calligraphy}
 \usetikzlibrary{patterns}
+\usetikzlibrary{patterns.meta}
 \usetikzlibrary{angles, quotes}
 \usepackage{csquotes}
 \usepackage{pdfpages}
@@ -106,6 +107,14 @@
 	]
 	{setn}[defn]{Sætning}
 	
+\newmdtheoremenv[
+	skipabove = 5pt,
+	skipbelow = 5pt,
+	roundcorner = 5,
+	backgroundcolor = Melon!25,
+	linecolor = white, 
+	]
+	{lem}[defn]{Lemma}
 
 \newtheorem{eksempel}[defn]{Eksempel}
 

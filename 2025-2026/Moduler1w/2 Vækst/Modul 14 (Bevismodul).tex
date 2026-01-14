@@ -1,0 +1,117 @@
+\begin{center}
+\Huge
+	Beviser
+\end{center}
+\stepcounter{section}
+
+\subsection*{Bevis 1}
+\begin{setn}[Topunktsformlen for lineære funktioner]
+	Hvis grafen for funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = ax+b
+	\end{align*}	 
+	går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$, så har vi, at 
+	\begin{align*}
+		a = \frac{y_2-y_1}{x_2-x_1}
+	\end{align*}
+	og
+	\begin{align*}
+		b = y_1 - ax_1
+	\end{align*}
+\end{setn}
+Vi skal bevise denne sætning
+\begin{enumerate}[label=\roman*)]
+	\item Sæt punkterne $(x_1,y_1)$ og $(x_2,y_2)$ ind i udtrykket for $f$. 
+	\item Træk udtrykkene for $y_1$ og $y_2$ fra hinanden så du bestemmer $y_2 - y_1$. Husk parenteserne
+	\item Hæv parenteserne. Er der noget, de går ud?
+	\item Sæt $a$ uden for en parentes.
+	\item Isolér $a$. Vi har nu fundet $a$. 
+	\item Isolér nu $b$ i udtrykket $y_1 = ax_1 + b$ fra tidligere.
+	\item Sæt firkanten.
+\end{enumerate}
+
+\newpage
+
+\subsection*{Bevis 2}
+\begin{setn}[Topunktsformlen for eksponentialfunktioner]
+	Hvis grafen for funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = b\cdot a^x
+	\end{align*}	 
+	går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$, så har vi, at 
+	\begin{align*}
+		a = \sqrt[x_2-x_1]{\frac{y_2}{y_1}}
+	\end{align*}
+	og
+	\begin{align*}
+		b = \frac{y_1}{a^{x_1}}
+	\end{align*}
+\end{setn}
+Vi skal bevise denne sætning
+\begin{enumerate}[label=\roman*)]
+	\item Sæt punkterne $(x_1,y_1)$ og $(x_2,y_2)$ ind i udtrykket for $f$. 
+	\item Divider udtrykkene for $y_1$ og $y_2$ med hinanden så du bestemmer $y_2/y_1$. Er der noget, der går ud?
+	\item Anvend potensregnereglen $\frac{a^n}{a^m} = a^{n-m}$.
+	\item Isolér $a$ ved at tage en rod på begge sider af lighedstegnet. 
+	\item Isolér nu $b$ i udtrykket $y_1 = b\cdot a^{x_1}$ fra tidligere.
+	\item Sæt firkanten.
+\end{enumerate}
+
+\newpage
+
+\subsection*{Bevis 3}
+\begin{setn}[Topunktsformlen for potensfunktioner]
+	Hvis grafen for funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = b\cdot x^a
+	\end{align*}	 
+	går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$, så har vi, at 
+	\begin{align*}
+		a = \frac{\log_{10}(y_2)-\log_{10}(y_1)}{\log_{10}(x_2)-\log_{10}(x_1)}
+	\end{align*}
+	og
+	\begin{align*}
+		b = \frac{y_1}{x_1^{a}}
+	\end{align*}
+\end{setn}
+Vi skal bevise denne sætning
+\begin{enumerate}[label=\roman*)]
+	\item Sæt punkterne $(x_1,y_1)$ og $(x_2,y_2)$ ind i udtrykket for $f$. 
+	\item Divider udtrykkene for $y_1$ og $y_2$ med hinanden så du bestemmer $y_2/y_1$. Er der noget, der går ud?
+	\item Anvend potensregnereglen $\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}$.
+	\item Tag $\log_{10}$ på begge sider af lighedstegnet og anvend en logaritmeregneregel.
+	\item Isoler $a$ i udtrykket.
+	\item Anvend en logaritmeregneregel. Du er nu færdig med $a$.
+	\item Isolér nu $b$ i udtrykket $y_1 = b\cdot x_1^a$ fra tidligere.
+	\item Sæt firkanten.
+\end{enumerate}
+
+\newpage
+
+
+\subsection*{Bevis 4}
+\begin{setn}[Formel for fordoblingskonstanten]
+	For en eksponentialfunktion $f$ givet ved
+	\begin{align*}
+		f(x) = b\cdot a^x
+	\end{align*}
+	er fordoblingskonstanten $T_2$ givet ved
+	\begin{align*}
+		T_2 = \frac{\ln(2)}{\ln(a)}.
+	\end{align*}
+\end{setn}
+Vi skal bevise denne sætning
+\begin{enumerate}[label=\roman*)]
+	\item Udnyt, at $T_2$ opfylder, at 
+	\begin{align*}
+		f(x_0 + T_2) = 2f(x_0)
+	\end{align*}
+	og udskift $f$ med funktionsforskriften i udtrykket.
+	\item Hvad går ud på begge sider af lighedstegnet?
+	\item Anvend regnereglen $a^{n+m} = a^na^m$.
+	\item Hvad kan nu gå ud?
+	\item Tag $\ln(x)$ på begge sider af lighedstegnet.
+	\item Anvend en logaritmeregneregel.
+	\item Isoler nu $T_2$.
+	\item Sæt firkanten.
+\end{enumerate}

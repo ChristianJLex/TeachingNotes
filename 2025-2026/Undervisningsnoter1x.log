@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  7 NOV 2025 18:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  6 JAN 2026 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -999,6 +999,10 @@ rypatterns.code.tex
 File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarypatterns.meta.code.tex
+(C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+rypatterns.meta.code.tex))
+(C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryangles.code.tex
 File: tikzlibraryangles.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -1728,34 +1732,36 @@ No file Undervisningsnoter1x.bbl.
 Package biblatex Info: Reference section=0 on input line 21.
 Package biblatex Info: Reference segment=0 on input line 21.
 Package hyperref Info: Link coloring OFF on input line 21.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
 
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 51
 .
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+esvect on input line 
-47.
+51.
 
 (C:\Users\NGCJ\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
 File: uesvect.fd 
 )
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1767,17 +1773,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 126.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 144.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1787,6 +1782,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
 [2]
+NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1796,6 +1793,64 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
 [3]
+NOTE: coordinate (2Y4.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.8586e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.7172e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.5758e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.4344e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.293e0],3Y0.0e0]) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.1516e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.0102e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.8688e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.7274e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.586e0],3Y0.0e0]) has been dropped because it is unbounded
+ (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.4446e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.3032e0],3Y0.0e0]) has been dropped because it is unbounde
+d (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.1618001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y2.0204001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.8790001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.7376001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.5962001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.4548001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.3134001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.1720001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.0306001e0],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y8.892001e-1],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y7.4780011e-1],3Y0.0e0]) has been dropped because it is unbo
+unded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y6.0640012e-1],3Y0.0e0]) has been dropped because it is unbo
+unded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y4.6500012e-1],3Y0.0e0]) has been dropped because it is unbo
+unded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y3.2360013e-1],3Y0.0e0]) has been dropped because it is unbo
+unded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y1.8220013e-1],3Y0.0e0]) has been dropped because it is unbo
+unded (in y). (see also unbounded coords=jump). 
+NOTE: coordinate (2Y4.080014e-2],3Y0.0e0]) has been dropped because it is unbou
+nded (in y). (see also unbounded coords=jump). 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1805,6 +1860,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
 [4]
+NOTE: coordinate (0Y0.0e0],3Y0.0e0]) has been dropped because it is unbounded (
+in y). (see also unbounded coords=jump). 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -1822,7 +1879,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[6] 
+[6]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[8] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (Undervisningsnoter1x.aux)
  ***********
@@ -1834,32 +1909,31 @@ Package logreq Info: Writing requests to 'Undervisningsnoter1x.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55568 strings out of 474486
- 1278524 string characters out of 5744228
- 2311637 words of memory out of 5000000
- 77011 multiletter control sequences out of 15000+600000
+ 55763 strings out of 474486
+ 1283578 string characters out of 5744228
+ 2173072 words of memory out of 5000000
+ 77184 multiletter control sequences out of 15000+600000
  565733 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,12n,120p,754b,2331s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,14n,120p,754b,2206s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmmi12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NGCJ/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGC
-J/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/U
-sers/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mti12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/symbols/msam10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/symbols/msbm10.pfb>
-Output written on Undervisningsnoter1x.pdf (6 pages, 210275 bytes).
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/NGCJ/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGCJ/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/NG
+CJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
+sers/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.p
+fb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/symbols/msbm10.pfb>
+Output written on Undervisningsnoter1x.pdf (8 pages, 198863 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 32 named destinations out of 1000 (max. 500000)
+ 169 PDF objects out of 1000 (max. 8388607)
+ 48 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

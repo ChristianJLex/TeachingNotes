@@ -1,0 +1,114 @@
+\begin{center}
+\Huge
+Stamfunktioner gennem et punkt
+\end{center}
+
+\section*{Regneregler for stamfunktioner}
+\stepcounter{section}
+
+
+Sidst så vi en tabel med stamfunktion. Vi tilføjer et par ekstra 
+funktioner til tabellen. Denne kan ses på Tabel \ref{tab:stamfunktioner}.
+\begin{table}[H]
+	\centering
+	\rowcolors{1}{Teal!40}{Teal!20}
+	\begin{tabular}{cc}
+		$f(x)$ & $F(x)$ \\
+		$k$    & $kx$ \\
+		$1$    & $x$ \\
+		$x$    & $\frac{1}{2}x^2$ \\
+		$x^a$  & $\frac{1}{a+1}x^{a+1}$ \\
+		$\frac{1}{x}$ & $\ln(|x|)$ \\
+		$\cos(x)$ & $\sin(x)$ \\
+		$\sin(x)$ & $-\cos(x)$ \\
+		$\ln(x)$ & $x\ln(x) - x$ \\
+		$\sqrt{x}$ & $\frac{2}{3}x\sqrt{x}$ \\	
+		$e^x$ & $e^x$ \\
+		$a^x$  &	  $\frac{a^x}{\ln(a)}$
+	\end{tabular}
+	\caption{Stamfunktioner for $f$, hvor konstantleddet er udeladt.}
+	\label{tab:stamfunktioner}
+\end{table}
+
+Vi har tidligere set, at vi kan lade konstanter stå, når de er ganget på funktioner. Tilsvarende har vi set, at vi kan differentiere ledvist, når vi differentierer en sum af funktioner. Disse egenskaber kaldes samlet for linearitet af differentiation og det viser sig ikke overraskende, at integration arver linearitet. Vi kan formalisere dette til følgende sætninger.
+\newpage
+\begin{setn}[Integral af sum]
+	For to kontinuerte funktioner $f$ og $g$ er integralet af deres sum givet ved
+	\begin{align*}
+		\int f(x) + g(x) dx = \int f(x) dx + \int g(x) dx.
+	\end{align*}
+\end{setn}
+\begin{setn}
+	For en kontinuert funktion $f$ samt et tal $c\in \mathbb{R}$, så gælder følgende
+	\begin{align*}
+		\int cf(x) dx = c\int f(x) dx.
+	\end{align*}
+\end{setn}
+
+\section*{Stamfunktioner gennem et punkt}
+Vi kan godt forestille os en situation, hvor vi får en betingelse på stamfunktionen $F$, så vi kan bestemme en bestemt 
+værdi for $k$. Vi betragter følgende eksempel.
+
+\begin{exa}
+	Vi ønsker at bestemme en stamfunktion til funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = \frac{1}{x}, \ x > 0,
+	\end{align*}
+	der går gennem punktet $(1,7)$. Vi bestemmer først det ubestemte integral.
+	\begin{align*}
+		F(x) = \int \frac{1}{x} dx = \ln(x) + k
+	\end{align*}
+	Vi indsætter så punktet i stamfunktionen og får
+	\begin{align*}
+		F(1) = \ln(1) + k = 0 + k.
+	\end{align*}
+	Vi ved, at denne skal være lig $7$ i punktet, så vi må have, at $k = 7$ og stamfunktionen er derfor givet ved
+	\begin{align*}
+		F(x) = \ln(x) + 7.
+	\end{align*}
+\end{exa}
+
+\newpage
+
+\subsection*{Opgave 1}
+Bestem en stamfunktion til følgende funktioner $f$, der går gennem det givne punkt $P$. 
+\begin{enumerate}[label=\roman*)]
+	\item $f(x) = 3x^2$, $P(2,5)$.
+	\item $f(x) = x^2 + 2x - 1$, $P(-1, 10)$.
+	\item $f(x) = \cos(x)$, $P(0,4)$.
+	\item $f(x) = \frac{1}{x}+x^2$, $P(1,3)$.
+	\item $f(x) = \frac{1}{2\sqrt{x}}$, $P(4,-2)$.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+Bevis regnereglerne fra Tabel \ref{tab:stamfunktioner}
+\begin{align*}
+	\int \ln(x) dx = x\ln(x) - x + k
+\end{align*}
+og 
+\begin{align*}
+	\int \sqrt{x} dx = \frac{2}{3}x\sqrt{x} + k 
+\end{align*}
+\subsection*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en stamfunktion til $f_1(x)=x^2$, der går gennem punktet $(2,3)$. 
+	\item Bestem en stamfunktion til $f_2(x) = \frac{10}{x}, \ x>0$, der går gennem punktet $(e^2,30)$.
+	\item Bestem en stamfunktion til $f_3(x) = e^{2x},$ der går gennem punktet $(\frac{1}{2},\frac{1}{2}e+6)$.
+	\item Bestem en stamfunktion til $f_4(x) = x^3 + 3^x$, der går gennem punktet \\ $(2,4+9\ln(3))$.
+\end{enumerate}
+
+\subsection*{Opgave 4}
+Bestem en forskrift for $f$, hvis 
+\begin{enumerate}[label=\roman*)]
+	\item $f''(x) = 12x^2 - 6x$, $f'(1) = 2$, $f(2) = 1$.
+	\item $f''(x) = \cos(x)$, $f'(0) = 5$, $f(0) = 3$.
+	\item $f''(x) = x^{-1}$, $f'(2) = 1$, $f(2) = 2$.
+	\item $f''(x) = 2x^2-x+4$, $f'(4) = 10$, $f(-2) = 1$.
+\end{enumerate}
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+\item Bestem en stamfunktion til $g_1(x) = 10-x$, der har $y=1$ som tangent.
+\item Bestem en stamfunktion til $g_2(x) = x^2+4x+4$, der har  $y=4$ som tangent.
+\item Bestem en stamfunktion til $g_3(x) = -\frac{1}{x^2}$, der har $y = -1x+10$ som tangent.
+\item Bestem DE stamfunktioner til $g_4(x) = x^2-x-2$, der har $x$-aksen som tangent.
+\end{enumerate}
