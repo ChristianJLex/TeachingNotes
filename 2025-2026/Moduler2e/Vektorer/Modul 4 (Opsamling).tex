@@ -1,0 +1,168 @@
+\begin{center}
+	\Huge
+	Opsamling	
+\end{center}
+
+\subsection*{Opgave 1}
+Aflæs koordinaterne for følgende vektorer
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -3, xmax = 7, 
+			ymin = -3, ymax = 7, 
+			x = 1.3cm, y = 1.3cm,
+			grid,
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,-1) -- (axis cs: -1,5);
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 1,1) -- (axis cs: 4,0);
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 6,2) -- (axis cs: 2,7);
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 5,0) -- (axis cs: 2,-3);
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\newpage
+\subsection*{Opgave 2}
+Fire punkter er givet ved $A(4,2)$, $B(2,-1)$, $C(-5,-3)$ og $D(9,7)$.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem koordinaterne til vektorerne $\vv{BA}$, $\vv{CD}$, $\vv{DB}$, $\vv{AC}$ og $\vv{BC}$.
+	\item Udregn $\vv{BA} + \vv{CD}$ og $\vv{AC} - \vv{BC}$.
+	\item Bestem $\vv{DB}\cdot \vv{BA}$.
+	\item Bestem arealet af parallelogrammet udspændt af vektorerne $\vv{CD}$ og $\vv{BC}$.
+\end{enumerate}
+
+\subsection*{Opgave 3}
+
+Vektorerne $\vv{a}$ og $\vv{b}$ givet ved
+\begin{align*}
+	&\vv{a} =	
+	\begin{pmatrix}
+		2 \\ -4
+	\end{pmatrix}
+	&
+	&\textnormal{og}
+	&
+	&\vv{b} =
+	\begin{pmatrix}
+		4 \\ -8
+	\end{pmatrix}
+\end{align*}
+er parallelle, da $2\vv{a} = \vv{b}$.
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $\det(\vv{a},\vv{b})$. Hvorfor giver resultatet god mening? Tænk på den geometriske fortolkning af determinanten
+	\item Hvordan kan vi undersøge, om to vektorer er parallelle?
+\end{enumerate} 
+
+\newpage
+\subsection*{Opgave 4}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -3, xmax = 7, 
+			ymin = -3, ymax = 7, 
+			x = 1.3cm, y = 1.3cm,
+			grid,
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,-2) -- (axis cs: 0,5) node[midway, xshift = -7pt, yshift = 7pt] {$\vv{u}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 0,6) -- (axis cs: 6,4) node[midway, xshift = 7pt, yshift = 7pt] {$\vv{v}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 3,3) -- (axis cs: 1,2) node[midway, xshift = -7pt, yshift = 7pt] {$\vv{a}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 3,3) -- (axis cs: 5,1) node[midway, xshift = 7pt, yshift = 7pt] {$\vv{b}$};
+			\fill[olive,nearly transparent] (axis cs: 3,3) -- (axis cs: 5,1) -- (axis cs:3,0) -- (axis cs: 1,2) -- cycle;
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\begin{enumerate}[label=\roman*)]
+	\item Afgør, om vektorerne $\vv{u}$ og $\vv{v}$ er orthogonale.
+	\item Bestem arealet af det farvede område.
+	\item Vis, at $\vv{v}$ og $\vv{v}$ ikke er parallelle. 
+\end{enumerate}
+\newpage
+
+
+\subsection*{Opgave 5}
+To vektorer $\vv{u}$ og $\vv{v}$ er givet ved
+\begin{align*}
+	&\vv{u} =	
+	\begin{pmatrix}
+		t+1 \\ 2
+	\end{pmatrix}
+	&
+	&\textnormal{og}
+	&
+	&\vv{v} =
+	\begin{pmatrix}
+		t-2 \\ -1
+	\end{pmatrix}
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem arealet af deres udspændende parallellogram, hvis $t = 4$.
+	\item Bestem $t$, så vektorerne er parallelle. 
+\end{enumerate}
+
+\subsection*{Opgave 6}
+To vektorer $\vv{a}$ og $\vv{b}$ er givet ved
+\begin{align*}
+	&\vv{a} =	
+	\begin{pmatrix}
+		x^2 \\ -2
+	\end{pmatrix}
+	&
+	&\textnormal{og}
+	&
+	&\vv{b} =
+	\begin{pmatrix}
+		1 \\ x+4
+	\end{pmatrix}
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem prikproduktet mellem $\vv{a}$ og $\vv{b}$, hvis $x = 6$.
+	\item Bestem de værdier for $x$, der gør $\vv{a}$ og $\vv{b}$ orthogonale. 
+\end{enumerate}
+
+\subsection*{Opgave 7}
+To vektorer $\vv{a}$ og $\vv{b}$ er givet ved
+\begin{align*}
+	&\vv{a} =	
+	\begin{pmatrix}
+		5 \\ 3
+	\end{pmatrix}
+	&
+	&\textnormal{og}
+	&
+	&\vv{b} =
+	\begin{pmatrix}
+		4 \\ -9
+	\end{pmatrix}
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $\hat{\vv{a}}$.
+	\item Bestem $\hat{\vv{a}}\cdot \vv{a}$. Giver svaret god mening?
+	\item Bestem $\det(\vv{a},\vv{b})$.
+	\item Bestem $\hat{\vv{a}}\cdot \vv{b}$.
+\end{enumerate}
+
+\subsection*{Opgave 8}
+Udregn følgende
+\begin{align*}
+	&a) \ 
+	\left|
+	\begin{array}{cc}
+		9 & 1 \\
+		5 & -2
+	\end{array}
+	\right|
+	&
+	&b) \
+	\left|
+	\begin{array}{cc}
+		-4 & 8 \\
+		8 & -16
+	\end{array}
+	\right|
+\end{align*}

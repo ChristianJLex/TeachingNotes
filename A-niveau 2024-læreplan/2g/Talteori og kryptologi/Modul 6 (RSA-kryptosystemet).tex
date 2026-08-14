@@ -1,0 +1,137 @@
+\begin{center}
+	\Huge
+	RSA-kryptosystemet
+\end{center}
+
+
+\section*{Public-key-kryptosystemer}
+\stepcounter{section}
+RSA-kryptosystemet er et såkaldt public-key-kryptosystem (eller asymmetrisk kryptosystem). Dette betyder, at krypteringsnøglen, der skal bruges til at kryptere klarteksten til chifferteksten er offentligt tilgængelig i den forstand at vi ikke gør noget for at skjule den for tredjeparter. Vi vil gennemgå princippet bag public-key-kryptosystemer uden at komme ind på, hvad RSA gør mere specifikt.
+
+Vi betragter en situation, hvor en person Alice ønsker at sende en krypteret besked til en anden person Bob. Et public-key-system består af følgende skridt:
+\begin{enumerate}[label=\roman*)]
+\item Bob bestemmer to nøgler: en offentlig nøgle $k_o$ og en privat nøgle $k_p$. Den offentlige nøgle $k_o$ deler han med Alice.
+\item Alice bruger nøglen $k_o$ til at kryptere klarteksten $m$ med krypteringsfunktionen $e_k.$ Hun bestemmer altså chifferteksten
+\[
+c = e_{k_o}(m),
+\]
+og sender $c$ til Bob. 
+\item Bob bruger sin private nøgle $k_p$ sammen med den offentlige nøgle $k_o$ til at bestemme dekrypteringsnøglen $k$. Han dekrypterer nu chifferteksten $c$:
+\[
+m = d_k(c),
+\]
+og Bob har modtaget Alices besked. 
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+
+{\fontfamily{lmss}\selectfont
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}
+\node at (0,0) {\includegraphics[scale=0.5]{billeder/alice2.png}};
+\node at (5,0) {\includegraphics[scale=0.5]{billeder/bob2.png}};
+\node at (0,1.5) {\large Alice};
+\node at (5,1.5) {\large Bob};
+\node[text width=3cm] at (8,-2.5) {\scriptsize Bob bestemmer  privat nøgle $k_p$ og offentlig nøgle $k_o$ og sender $k_o$ til Alice};
+\filldraw[color=blue!25,thick] (4.5,-2) circle (0.3cm);
+\filldraw[color=blue!25,thick] (5.5,-2) circle (0.3cm);
+\node[color = white, minimum size = 0.3cm] at (4.5,-2) (1) {$k_o$};
+\node[color = white] at (5.5,-2) {$k_p$};
+
+\draw[->] (1) to [out = -90,in = 0] (1,-3.5);
+\node at (-1,-3.5) (2) {$m=$Hej Bob};
+\node at (-1,-5) (3) {$c=\% +0! Ak $};
+\draw[->] (2) to (3);
+\node at (-0,-4.25) {$e_{k_0}(m)$};
+\node[text width = 3cm] at (-4,-4) {\scriptsize Alice bruger den offentlige nøgle $k_o$ til at kryptere klartekst $m$ og sender chiffertekst $c$ til Bob};
+\draw[->] (3) to [out = -90, in = 180] (3.5,-6.5);
+
+\node at (5,-6.5) (4) {$\% +0! Ak =c$}; 
+\node at (5,-8) (5) {Hej Bob$=m$};
+\draw[->] (4) to (5);
+\node at (4,-7.25) {$d_{(k_0,k_p)}(c)$};
+\node[text width = 3cm] at (8,-7) {\scriptsize Bob bruger sin private nøgle $k_p$ samt den offentlige nøgle $k_o$ til at dekryptere chifferteksten $c$ til klarteksten $m$.};
+\end{tikzpicture}
+}
+}
+\caption{Princip i public-key-kryptosystem}
+\label{fig:publickey}
+\end{figure}
+
+Et godt public-key-kryptosystem skal opfylde, at det er let at beregne $c=e_{k_o}(m)$, men meget svært at beregne $m$ hvis man kun kender $c$ og $k_o$. Det skal desuden være let at beregne $d_{k_o,k_p}(c) = m$, når man kender både den private og offentlige nøgle. RSA-kryptosystemet udnytter, at det er let at gange store primtal sammen, men svært at bestemme hvilke primtalsfaktorer store tal har. 
+
+\newpage
+
+\section{RSA-kryptosystemet}
+Vi definerer RSA-algoritmen på følgende vis. 
+\begin{defn}[RSA-algoritmen]
+\phantom{hej}\\
+\begin{enumerate}
+\item Bob gør følgende:
+\begin{enumerate}[label=\roman*)]
+\item Bob bestemmer to store primtal $p,q$ og udregner $N = pq$.
+\item Bob bestemmer en krypteringsnøgle $1\leq e \leq \varphi(N)$, så $\textnormal{gcd}(e,\varphi(N)) = 1$. Krypteringsnøglen $e$ skal altså være indbyrdes primisk med $\varphi(N)$. 
+\item Bob bestemmer den private dekrypteringsnøgle $d$ som den multiplikative inverse til $e$ i $\mathbb{Z}/\varphi(N)\mathbb{Z}$. Altså opfylder $d$ og $e$ at $$1 = de \fmod{\varphi(N)}.$$
+\end{enumerate}
+Han deler den offentlige nøgle $(N,e)$ med Alice og beholder selv den private nøgle $(d,p,q)$. 
+
+\item Alice tager sin klartekst $m$ og bestemmer $c = m^e \fmod{N}$. Alice sender $c$ til Bob.
+\item Bob modtager $c$ og bestemmer $m = c^d \fmod{N}$.  
+\end{enumerate}
+\end{defn}
+Det første spørgsmål vi kan stille os selv er, hvorfor $m = c^d \fmod{N}$, da dette er grundlaget for korrektheden af denne algoritme. Dette betyder, at 
+\begin{align*}
+m = m^{ed} \fmod{N}.
+\end{align*}
+Vi indser først, at 
+\begin{align*}
+\varphi(N) = \varphi(pq) = pq-(p-1) -(q - 1) = (p-1)(q-1).
+\end{align*} 
+Siden det gælder, at $1 = ed  \fmod{\varphi(N)}$, må det gælde, at $1 = ed \fmod{(p-1)(q-1)}$.
+Vi skal afgøre, om $m = m^{ed} \fmod{N}$. Det må være nok at afgøre, om det er sandt at
+\begin{align*}
+	m = m^{ed} \fmod{p}
+\end{align*}
+og 
+\begin{align*}
+	m = m^{ed} \fmod{q}.
+\end{align*}
+Da $ed = 1 + a(p-1)(q-1)$ for et heltal $a$, må det gælde, at
+\begin{align*}
+	ed - 1 = k(p-1)
+\end{align*} 
+for et tal $k$. Vi betragter nu følgende.
+\begin{align*}
+	m^{ed} \fmod{p} &= m^{ed - 1}m \fmod{p}\\
+	&=m^{k(p-1)}m \fmod{p}\\
+	&=m^{(p-1)^k} m\fmod{p}\\
+	&= 1m\fmod{p}\\
+	&=m
+\end{align*}
+Vi anvendte her Fermats lille sætning. Dette kan vi selvfølgelig kun gøre, hvis $p \nmid m$. I tilfælde, at $p \mid m$ fås
+\begin{align*}
+	0 = m \fmod{p},
+\end{align*}
+så det er klart, at 
+\begin{align*}
+	m^{ed} \fmod{p} = 0 = m.
+\end{align*}
+Vi kan overveje, hvorfor algoritmen her er sikker. Hvis en tredjepart kan bestemme $p$ og $q$ ud fra $N$, så kan han bryde systemet. Derfor må vi antage, at dette er svært, og der er endnu ikke nogen, der har fundet en god måde at faktorisere store sammensatte tal til primtalsfaktorer. Tilsvarende kan systemet brydes, hvis vi kan bestemme $\varphi(N)$ ud fra $N$. Derfor må vi også antage, at dette tilmed er svært. 
+
+Det er også vigtigt at bemærke, at hvis $m\geq N$, så vil vi ikke dekryptere den rigtige besked, da den bliver reduceret $\mod{N}$. Dette må selvfølgelig ikke ske. Dette begrænser beskedlængden temmeligt meget. Derfor bruges dette kryptosystem hovedsagligt til at dele nøgler til et symmetrisk kryptosystem som Cæsar-chifferet.
+
+\subsection*{Opgave 1}
+
+Vælg to små primtal og bestem $N$, $\varphi(N)$, $e$ og $d$ samt en besked $m$. 
+
+\subsection*{Opgave 2 (Med hjælpemidler)}
+
+\begin{enumerate}[label=\roman*)]
+	\item Vælg to primtal $p$ og $q$ mellem $100$ og $1000$. 
+	\item Konstruer en offentlig nøgle $N$ og $e$.
+	\item Konstruer en privat nøgle $d$.
+	\item Del den offentlige nøgle $N$ og $e$ med din sidemand, men del ikke $p$ og $q$.
+	\item Din sidemand skal nu kryptere en bested $m$ med den offentlige nøgle og give den til dig. 
+	\item Brug din private nøgle til at dekryptere beskeden. 
+\end{enumerate}

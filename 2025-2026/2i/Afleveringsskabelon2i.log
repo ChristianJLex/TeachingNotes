@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  4 DEC 2025 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.6)  1 APR 2026 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1835,132 +1835,122 @@ Overfull \hbox (32.61107pt too wide) in paragraph at lines 28--50
 
 {C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Billeder/No
 rreg.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--96
+Underfull \hbox (badness 10000) in paragraph at lines 91--97
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--147
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--96
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--96
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 97--106
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 97--106
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--115
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 107--116
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 107--116
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--116
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--126
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 118--127
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 118--127
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--127
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--135
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 128--136
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 128--136
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--136
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 87--153
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--153
 
  []
 
@@ -1977,101 +1967,121 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.137 \begin{opgavetekst}{Problem 6}
-                                     [1
+l.153 \newpage
+               [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--148
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 137--149
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
 [][] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 137--149
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--149
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--163
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--169
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 150--170
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 150--170
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
 [] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 150--170
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
 [] []
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 150--170
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--170
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--179
-
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 171--180
-[][] []
- []
-
-
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 171--180
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
 [] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--180
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
+[] []
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 156--233
+[] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--233
 
  []
 
@@ -2083,7 +2093,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
 
-[2] 
+[2]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.05003pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.05003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.05003pt}.
+
+[3] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (Afleveringsskabelon2i.aux)
  ***********
@@ -2095,25 +2114,27 @@ Package logreq Info: Writing requests to 'Afleveringsskabelon2i.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55198 strings out of 474486
- 1265696 string characters out of 5744228
- 2161427 words of memory out of 5000000
- 76668 multiletter control sequences out of 15000+600000
+ 55232 strings out of 474486
+ 1266367 string characters out of 5744228
+ 2164480 words of memory out of 5000000
+ 76700 multiletter control sequences out of 15000+600000
  564474 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,13n,120p,755b,1719s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,13n,120p,755b,1721s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmex10.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmmi12.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGCJ/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Afleveringsskabelon2i.pdf (3 pages, 180978 bytes).
+pe1/public/amsfonts/cm/cmmi6.pfb><C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/NGCJ/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/NGCJ/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/NGCJ/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/NGCJ/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/N
+GCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Afleveringsskabelon2i.pdf (4 pages, 200371 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
+ 85 PDF objects out of 1000 (max. 8388607)
+ 5 named destinations out of 1000 (max. 500000)
  24 words of extra memory for PDF output out of 10000 (max. 10000000)
 

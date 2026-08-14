@@ -1,0 +1,194 @@
+\begin{center}
+	\Huge
+	Mere om differentialkvotienten
+\end{center}
+
+\section*{Differentialkvotienten for $x^2$}
+\stepcounter{section}
+
+Vi så sidst, hvordan vi kunne lade skæringspunkterne for sekanten gå mod hinanden i et tegneprogram for på denne måde at "gætte" på differentialkvotienten i bestemte punkter. Vi fik i Geogebra følgende bud på differentialkvotienten for $f(x) = x^2$ i en række punkter.
+\begin{center}
+\begin{tabular}{c|p{0.5cm}| >{\centering\arraybackslash} p{0.5cm}|>{\centering\arraybackslash} p{0.5cm}
+	| >{\centering\arraybackslash} p{0.5cm}| >{\centering\arraybackslash} p{0.5cm}
+	| >{\centering\arraybackslash} p{0.5cm}|>{\centering\arraybackslash} p{0.5cm}}
+		$x_0$ & $-3$ & $-2$ & $-1$ & 0 & 1 & 2 & 3 \\
+		\hline
+		$f'(x_0)$ & $-6$ & $-4$ & $-2$ & 0 & 2 & 4 & 6
+	\end{tabular}
+\end{center}
+
+Det kunne tyde på, at den såkaldte \textit{afledede funktion} $f'(x)$ derfor har forskriften 
+\begin{align*}
+	f'(x) = 2x,
+\end{align*}
+og vi vil snart se, at dette rent faktisk er tilfældet. Den afledede funktion er den funktion, der giver tangenthældningen i ethvert punkt $x_0$. Lad os først betragte differentialkvotienten for $f$ i $x_0 = 2$.
+\begin{exa}
+	\label{exa:diffkvo}
+	Vi betragter funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^2
+	\end{align*}
+	og ønsker at bestemme differentialkvotienten i $x_0 = 2$. Vi opskriver først differenskvotienten, som vi
+	husker tilsvarede sekanthældningen for $f$. 
+	\begin{align*}
+		a_s &= \frac{f(x_0 + h)-f(x_0)}{h}\\
+		&= \frac{f(2 + h)-f(2)}{h}\\
+		&= \frac{(2+h)^2 - 2^2}{h}.
+	\end{align*}
+	Vi omskriver på dette udtryk og får så
+	\begin{align*}
+		a_s &= \frac{(2+h)^2 - 2^2}{h} \\
+		&\stackrel{(a)}{=} \frac{2^2 + h^2 + 2\cdot 2\cdot h - 2^2}{h} \\
+		&= \frac{h^2+4h}{h} \\
+		&= \frac{h(h+4)}{h} \\
+		&= h + 4,
+	\end{align*}
+	hvor vi i ligheden $(a)$ har brugt kvadratsætningen 
+	\begin{align*}
+		(a+b)^2 = a^2 + b^2 +2ab.
+	\end{align*}
+	Vi kan nu tage grænseværdien $h \to 0$, da vi ikke længere dividerer med $h$. Vi får da
+	\begin{align*}
+		f'(2) = \lim_{h \to 0}a_s = \lim_{h \to 0} h + 4 = 4,
+	\end{align*}
+	hvilket også passer med vores forventninger fra ekperimentet med Geogebra. 
+\end{exa}
+
+Vi definerer for en god ordens skyld den afledede funktion.
+\begin{defn}[Afledet funktion]
+	Hvis en funktion $f$ er differentiabel i hele sin definitionsmængde, defineres den afledede funktion $f'
+	$ som den funktion, der til ethvert punkt $x_0$ giver differentialkvotienten i dette punkt som $f'(x_0)$.
+\end{defn}
+
+Det kan umiddelbart godt virke som en omstændig proces at finde differentialkvotienter, men vi vil se en række regler, der vil gøre det væsentligt nemmere, så vi ikke får brug for definitionen af differentialkvotienten hver gang, vi skal finde tangenthældningen for en funktion. Vi har altså en række regler, der fortæller os, hvordan vi finder afledede funktioner. 
+\section*{Differentiation af polynomier}
+\stepcounter{section}
+
+Når vi finder afledede funktioner, siger vi, at vi \textit{differentierer} funktioner. Hvis differentialkvotienten for en funktion eksisterer på hele deres definitionsmængde, siges de at være \textit{differentiable}. De mest simple funktioner at differentiere er polynomier. Til at differentiere polynomier får vi brug for tre centrale sætninger om differentiation. 
+
+\begin{setn}[Differentiation af sum]
+	Lad $f$ og $g$ være to differentiable funktioner samt lad $h$ være givet ved deres sum, altså
+	\begin{align*}
+		h(x) = f(x) + g(x).
+	\end{align*}
+	Så gælder der for den afledede funktion af $h$, at 
+	\begin{align*}
+		h'(x) = f'(x) + g'(x).
+	\end{align*}
+\end{setn}
+\begin{setn}[Differentiation af skaleret funktion]
+	Lad $f$ være en differentiabel funktion og $k$ et reelt tal. Så gælder der, at 
+	\begin{align*}
+		(kf(x))' = kf'(x).
+	\end{align*}
+\end{setn}
+\newpage
+Disse sætninger er helt centrale, når vi skal differentiere funktioner generelt. Når vi skal differentiere polynomier specifikt, får vi brug for følgende sætning.
+\begin{setn}\label{setn:potens}
+	For funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^a
+	\end{align*}
+	hvor $a \in \mathbb{R}$ gælder der, at 
+	\begin{align*}
+		f'(x) = ax^{a-1}.
+	\end{align*}
+\end{setn}
+Til slut har vi for konstanter følgende.
+\begin{setn}
+	For konstante funktioner $f(x) = k\in \mathbb{R}$ har vi, at 
+	\begin{align*}
+		f'(x) = 0.
+	\end{align*}
+\end{setn}
+Vi vil senere bevise disse sætninger, men for nu vil vi blot påstå deres sandhed. Vi betragter i stedet et eksempel.
+\begin{exa}
+	Lad $f$ være givet ved
+	\begin{align*}
+		f(x) = 2x^4 -4x^2 + x + 7.
+	\end{align*}
+	Vi har så, at 
+	\begin{align*}
+		f'(x) &= (2x^4-4x^2+x+7)' \\
+		&= (2x^4)' - (4x^2)' + (x)' + (7)' \\
+		&= 2(x^4)' - 4(x^2)' + (x)' + (7)' \\
+		&= 2\cdot 4x^{3} - 4(2x^{1}) + (1x^{0}) + 0 \\
+		&= 8x^3 -8x + 1.
+	\end{align*}
+	Vi kan sådan set også bruge samme sætning til at differentiere funktioner, der ikke er polynomier. For $g$
+	givet ved
+	\begin{align*}
+		g(x) = x^{1.8}
+	\end{align*}
+	har vi 
+	\begin{align*}
+		g'(x) = 1.8x^{0.8}.
+	\end{align*}
+\end{exa}
+Vi kan så småt begynde at lave en tabel over afledede funktioner. Denne kan ses som Tabel \ref{tab:afledt}
+\begin{table}[H]
+	\centering
+	\rowcolors{1}{white}{olive!30}
+	\begin{tabular}{cc}
+		$f(x)$ & $f'(x)$ \\
+		$k$ & $0$ \\
+		$x$ & $1$ \\
+		$ax + b$  & $a$ \\
+		$x^2$ & $2x$ \\
+		$x^a$ & $ax^{a-1} $
+	\end{tabular}
+	\caption{Udvalgte afledede funktioner}
+	\label{tab:afledt}
+\end{table}
+
+\subsection*{Opgave 1}
+I følgende opgave skal du udregne differentialkvotienten for $f(x) = x^2$ for andre $x_0$ end $2$ som vi gjorde i Eksempel \ref{exa:diffkvo}.
+\begin{enumerate}[label=\roman*)]
+	\item Bestem differentialkvotienten for $f(x) = x^2$ i $x_0 = 1$.
+	\item Bestem differentialkvotienten for $f(x) = x^2$ i $x_0 = -2$.
+	\item Bestem differentialkvotienten for $f(x) = x^2$ i $x_0 = 3$.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+Bestem differentialkvotienten for $f(x) = x^2$ i et vilkårligt punkt $x_0$. Gør altså som i Opgave 1, men indsæt $x_0$ i stedet for et valgt tal. Resultatet vil være den afledede funktion $f'(x)$.
+
+\subsection*{Opgave 3}
+Differentiér følgende polynomier
+\begin{align*}
+	&1) \ p(x) = x^5   &&2) \ p(x) = 2x^4-6x^2+10x-11     \\
+	&3) \ p(x) = \frac{1}{10}x^{10}+7x^5-11x^2+20  &&4) \ p(x) = x^4-3x^2+2x+1     \\ 
+	&5) \ p(x) = \frac{1}{4}x^4 + \frac{1}{3}x^3+\frac{1}{2}x^2+x + 1
+	  &&6) \  p(x) = x^{24}-2x^{12}+4x^{6}-8x^{3}+24x   \\ 
+\end{align*}
+
+\subsection*{Opgave 4}
+Differentiér følgende funktioner
+\begin{align*}
+	&1) \ f(x) = 6x^{\frac{-5}{2}}  &&2) \  f(x) = 0.8x^{1.2}  \\
+	&3) \ f(x) = \frac{4}{5}x^{\frac{10}{3}} &&4) \ f(x) =2x^{0.6}-\frac{1}{7}x^{\frac{7}{3}} + x^{\frac{3}{2}} 
+\end{align*} 
+
+\subsection*{Opgave 5}
+Bestem hældningen af tangenten for følgende funktioner i det angivne punkt.
+\begin{align*}
+	&1) \ f(x) = x^2 + 2x -1, \ P(2,f(2)) &&2) \ f(x) = 2x^3-5x^2, \ P(-1,f(-1))\\
+	&3) \ f(x) = x^{5}+2x, \ P(0,f(0)) &&4) \ f(x) =x^10 , \ P(-2,f(-2))\\
+\end{align*}
+
+\subsection*{Opgave 6}
+\begin{enumerate}[label=\roman*)]
+	\item Vis, at $(k)' = 0$ ved at anvende definitionen af differentialkvotienten.
+	\item Vis, at $(x)' = 1$ ved at anvende Sætning \ref{setn:potens}.
+	\item Vis, at $(x)' = 1$ ved at anvende definitionen af differentialkvotienten. 
+\end{enumerate}
+
+\subsection*{Opgave 7}
+Bestem differentialkvotienten for $f(x) = x^3$ i følgende punkter ved at anvende definitionen af differentialkvotienten, altså ved at gøre som i Eksempel \ref{exa:diffkvo}.
+\begin{enumerate}[label=\roman*)]
+	\item $x_0 = 1$
+	\item $x_0 = -2$
+	\item $x_0 = 3$
+\end{enumerate}
+
+\subsection*{Opgave 8}
+Bestem den afledede funktion for $f(x) = x^3$ ved at indsætte et vilkårligt punkt $x_0$ i stedet for et bestemt tal som i Opgave 1.

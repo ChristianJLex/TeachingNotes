@@ -32,7 +32,7 @@
 \usepackage[dvipsnames,svgnames]{xcolor}
 \usepackage{colortbl}
 \usepackage{eso-pic}
-\usepackage[margin=1.35in]{geometry}
+\usepackage[a4paper, margin=24mm]{geometry}
 \usepackage{float}
 \usepackage[danish]{babel}
 \usepackage{tikz}
@@ -128,6 +128,7 @@
 \addbibresource{biblio.bib}
 
 \renewcommand{\mod}[1]{\ (\textnormal{mod }{#1})}
+\newcommand{\fmod}[1]{\ \textbf{mod }{#1}}
 \usepackage{hyperref, bookmark}
 \usepackage{booktabs}
 \usepackage{calc}
@@ -179,7 +180,7 @@
 \end{minipage}
 }
 
-
+\newcommand{\cis}{\textnormal{\hspace{0.5mm}cis}}
 %\newcommand{opgavelinje}[1]{
 %\begin{minipage}[t]{0.15\textwidth}
 %\textbf{#1}

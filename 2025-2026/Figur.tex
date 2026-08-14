@@ -1,0 +1,19 @@
+\documentclass[a4]{article}
+\input{preamble}
+
+\usepackage[margin=0.01cm]{geometry}
+\begin{document}
+
+\begin{center}
+	\begin{tikzpicture}
+		\foreach \x in {0,1,...,150,151}{
+			\draw[color = gray!50] ({0.25* \x },0) -- ({0.25* \x },-40);
+		}
+		\foreach \y in {0,1,...,150,151}{
+			\draw[color = gray!50] (0,{-0.25*\y }) -- (40,{-0.25*\y });
+		}
+	\end{tikzpicture}
+\end{center}
+
+
+\end{document}

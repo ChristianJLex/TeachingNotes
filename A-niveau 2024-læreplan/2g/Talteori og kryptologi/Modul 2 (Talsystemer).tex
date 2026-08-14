@@ -1,0 +1,222 @@
+
+\begin{center}
+	\Huge
+	Talsystemer
+\end{center}
+\stepcounter{section}
+Når vi repræsenterer heltal, så gør vi det med 10 symboler - vi regner i base 10. Dette har historiske grunde og er formentlig fordi vi har 10 fingre, men der er ingen grund til at vi kunne anvende andre talsystemer. Babylonerne regnede i 60-talssystemet, og dette er grunden til, at vi i dag har 60 minutter på en time og 360 grader i en cirkel. Vi skal nu se, hvordan vi kan skifte mellem talsystemer og regne i andre talsystemer. 
+
+\begin{exa}
+	Tallet $n = 274$ anvender symbolerne 2, 7 og 4. Den måde, vi forstår tallet er
+	\begin{align*}
+		n = 2\cdot 10^2 + 7\cdot 10^1 + 4\cdot 10^0.
+	\end{align*}
+	Det er altså tallet 10 her, der afslører, at vi arbejder i base 10. 
+	For at notere, at et tal er i base 10, skrives der når man kan være i tvivl $274_{10}$.
+	Vi kunne tilsvarende have tallet $m = 2432_{5}$. Dette forstås som
+	\begin{align*}
+		m = 2\cdot 5^3 + 4\cdot 5^2 + 3\cdot 5^1 + 2\cdot 5^0
+	\end{align*}
+	i 10-talssystemet. Udregner vi dette i titalssystemet, vil $m = 2432_{5}$ altså tilsvare
+	\begin{align*}
+		m &= 2\cdot 5^3 + 4\cdot 5^2 + 3\cdot 5^1 + 2\cdot 5^0 \\
+		  &= 2\cdot 125 + 4\cdot 25 + 3\cdot 5 + 2\cdot 1 \\ 
+		  &= 250 + 100 + 15 + 2 \\
+		  &= 367_{10}.
+	\end{align*}
+	I femtalssystemet har vi kun symbolerne 0, 1, 2, 3 og 4.
+\end{exa}
+
+Vi kan opsummere dette i følgende sætning.
+\begin{setn}
+	Ethvert positivt heltal $n\in \mathbb{Z}$ kan repræsenteres entydigt i base $b\in \mathbb{Z}_{>1}$ som
+	\begin{align*}
+		n = a_k b^k + a_{k-1}b^{k-1} + \cdots + a_1 b + a_0,
+	\end{align*}
+	hvor $a_1, a_2, \hdots a_k \in \mathbb{Z}/b\mathbb{Z}$ og $a_k \neq 0$. 
+\end{setn}
+
+\begin{exa}
+	De \textit{binære} tal har en særlig rolle i digital kommunikation, da et elektrisk signal (i al praktisk henseende)
+	 kun kan være slukket og tændt. Vi anvender symbolerne 0 og 1 til at beskrive disse situationer henholdsvis. Lad os
+	 betragte tallet $(10001011)_{2}$ i base 10. Vi får
+	 \begin{align*}
+	 	1\cdot 2^7 + 1\cdot 2^3 + 1\cdot 2 + 1 = 128 + 8 + 2 + 1 = 141_{10}
+	 \end{align*}
+\end{exa}
+
+Det er også muligt at finde tal i titalssystemet (Decimaltal) i andre talsystemer. Dette er blot lidt mere besværligt. Vi betragter et eksempel.
+
+\begin{exa}
+	Vi ønsker at skrive 673 i base 6. Vi gør det ved at dividere med rest.
+	\begin{align*}
+		673 = 112 \cdot 6 + 1
+	\end{align*}
+	Vi deler nu kvotienten 112 med 6.
+	\begin{align*}
+		112 = 18\cdot 6 + 4.
+	\end{align*}
+	Dette gøres to gange til
+	\begin{align*}
+		18 &= 3 \cdot 6 + 0\\
+		3 &= 0 \cdot 6 + 3
+	\end{align*}
+	Tallet er nu resterne, så 
+	\begin{align*}
+		673_{10} = 3041_{6}.
+	\end{align*}
+	Lad os tage endnu et eksempel. 
+	Vi skriver 1000 i base 2.
+	\begin{align*}
+		1000 &= 500\cdot 2 + 0\\
+		500 &= 250 \cdot 2 + 0\\
+		250 &= 125 \cdot 2 + 0\\
+		125 &= 62 \cdot 2 + 1\\
+		62 &= 31\cdot 2 + 0\\
+		31 &= 15\cdot 2 + 1\\
+		15 &= 7\cdot 2 + 1\\
+		7 &= 3\cdot 2 + 1\\
+		3 &= 1\cdot 2 + 1\\
+		1 &= 0\cdot 2 + 1
+	\end{align*}
+	Derfor er 
+	\begin{align*}
+		1000_{10} = 1111101000_{2}
+	\end{align*}	
+\end{exa}
+
+For en god ordens skyld kan vi lige prøve at tælle til 10 i base 3. Dette kan ses på Figur \ref{fig:base3}
+\begin{table}[H]
+	\centering
+	\rowcolors{1}{Melon!30}{SeaGreen!30}
+	\begin{tabular}{c|ccccccccccc}
+		Base 10&1&2&3&4&5&6&7&8&9&10 \\
+		Base 3&1&2&10&11&12&20&21&22&100&101
+	\end{tabular}
+	\caption{Tæl til 10 i base 3}
+	\label{fig:base3}
+\end{table}
+
+\section*{Addition og multiplikation}
+\stepcounter{section}
+
+Vi vil også gerne kunne lægge tal sammen og gange dem sammen i andre baser. Som før tager vi udgangspunkt i et eksempel.
+\begin{exa}	
+	Vi ønsker at lægge tallene $432_6$ og $1025_6$ sammen. Dette gøres som vi er vant til. Først lægges 2 og 5 sammen
+	\begin{align*}
+		2 + 5 = 7
+	\end{align*}
+	Dette bestemmes så $\fmod{6}$ og vi tager kvotienten med videre.
+	\begin{align*}
+		7 \fmod{6} = 1
+	\end{align*}
+	og kvotienten er 1, så vi får nu for næste ciffer én i mente
+	\begin{align*}
+		2 + 3 + 1 \fmod{6} = 0,
+	\end{align*}
+	og vi får igen én i mente. For tredje ciffer
+	\begin{align*}
+		4 + 0 + 1 \fmod{6} = 5,
+	\end{align*}
+	og 0 i mente. 
+	Det 4. ciffer
+	\begin{align*}
+		1 + 0  \fmod{6} = 1
+	\end{align*}
+	Derfor er summen 
+	\begin{align*}
+		1501_6
+	\end{align*}
+\end{exa}
+\begin{exa}
+	Vi ønsker nu at gange $442_6$ med $12_6$. Fremgangsmåden er den samme som når vi ganger normalt, men som før
+	 nu$\fmod{6}$ og vi får
+	 \begin{align*}
+	\begin{array}{ccccc}
+		& &	4&4&2\\
+		&\times & & 1&2\\
+		\hline
+		& & & & 4 \\
+		& & 1&2 &0 \\
+		&1 &2 &0 &0 \\
+		& & & 2 & 0 \\
+		& &4 &0 &0 \\ 
+		& 4& 0& 0&0\\
+		\hline
+		1& 0& 1&4 &4
+	\end{array}
+	\end{align*}
+	Der gælder altså derfor, at 
+	\begin{align*}
+		442_6 \cdot 12_6 = 10144_6
+	\end{align*}
+\end{exa}
+
+
+\subsection*{Opgave 1}
+Udfyld Tabel \ref{tab:tælle}.
+\begin{table}[H]
+	\centering
+	\rowcolors{1}{SeaGreen!30}{Melon!30}
+	\begin{tabular}{ccccccccccccccccc}
+		Base 10 & 1 &2 &3&4&5&6&7&8&9&10&11&12 &13 &14 &15 &16 \\
+		Base 4 &&&&&&&&&&&&&&&& \\
+		Base 2 &&&&&&&&&&&&&&&& \\
+		Base 8 &&&&&&&&&&&&&&&&
+	\end{tabular}
+	\caption{Tælle i andre baser}
+	\label{tab:tælle}
+\end{table}
+
+\subsection*{Opgave 2}
+Udregn følgende tal i decimaltal (base 10).
+\begin{align*}
+	&1) \ 55_6  & &2) \ 1011_2   & &3) \ 233_4  \\
+	&4) \ 11_9  & &5) \ 210_3   & &6) \ 11111_2    \\ 
+	&7) \ 241_5  & &8) \ 1111_3   & &9) \ 1010101_2   \\
+\end{align*}
+
+\subsection*{Opgave 3}
+Omregn følgende tal fra base 10 til den angivne basis
+\begin{align*}
+	&1) \ 103 \textnormal{ i base 6}  & &2) \ 200 \textnormal{ i base 2}   & &3) \ 450 \textnormal{ i base 5}  \\
+	&4) \ 256 \textnormal{ i base 2}  & &5) \ 621 \textnormal{ i base 8}   & &6) \ 172 \textnormal{ i base 9}   \\ 
+	&7) \ 411 \textnormal{ i base 3}  & &8) \ 700 \textnormal{ i base 7}   & &9) \ 188 \textnormal{ i base 4}   \\
+\end{align*}
+
+\subsection*{Opgave 4}
+Bestem følgende summer eller produkter
+\begin{align*}
+	&1) \ 112_4 + 211_4   &&2) \ 1011_2+1001_2    &&3) \  410_5\cdot 14_5  \\
+	&4) \ 55_6\cdot 22_6   &&5) \  101_2\cdot 122_2   &&6) \ 77_8+504_8   \\
+\end{align*}
+
+\subsection*{Opgave 5}
+Vi ønsker at bestemme summen $211_3 + 1002_3$.
+\begin{enumerate}[label=\roman*)]
+	\item Udregn summen $211_3 + 1002_3$.
+	\item Omregn $211_3$ og $1002_3$ til titalsssystemet.
+	\item Bestem summen af tallene
+	\item Regn tilbage til base 3 og tjek dit svar.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Der er ingen grund til, at vi ikke kan have flere symboler end 10. I det hexadecimale talsystem har man 16 symboler. Det er de sædvanlige fra titalssystemet tilføjet A, B, C, D, E, og F så $A_{16} = 11_{10}$, $B_{16} = 12_{10}$ osv.
+\begin{enumerate}[label=\roman*)	]
+	\item Opskriv tallene 15, 20, 66 og 102 i 16-talssystemet.
+	\item Bestem summen $B12_{16}+2DE_{16}$. 
+	\item Bestem produktet $34_{16}\cdot  FD_{16}$.
+\end{enumerate}
+
+\subsection*{Opgave 7}
+Når vi i kryptologi skal bestemme koder, så skal vi kunne udregne udtryk som $3^{2114} \fmod{7}$. (I virkeligheden kan potenserne være meget større).
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv en multiplikationstabel for $\mathbb{Z}/7\mathbb{Z}$. 
+	\item Udregn $3^{2114} \fmod{7}$ ved gentagende at kvadrere tallet. 
+\end{enumerate}
+
+\subsection*{Opgave 8}
+Udregn følgende
+\begin{align*}
+	&1) \ F21_{16} + 1011011_{2}   &&2) \ ABBA_{16} +  7712_{8}   &&3) \  1323_4 + 746_8  \\
+\end{align*}

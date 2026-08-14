@@ -12,9 +12,9 @@
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
 
 %Husk at rette modul og dato!
-\lhead{Aflevering 4\\ Matematik A
+\lhead{Aflevering 6\\ Matematik A  %<---------------------------------------RET
 }
-\chead{23. januar 2026
+\chead{13. april 2026 %<----------------------------------------------------RET
 }
 
 \begin{document}
@@ -39,7 +39,7 @@
 \phantom{h} \vspace{5cm}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \phantom{h}\\
-{\fontsize{50}{60}\selectfont Aflevering 4}\\
+{\fontsize{50}{60}\selectfont Aflevering 6}\\%<---------------------------------------RET
 \phantom{h}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \Large 2026\\
@@ -86,192 +86,100 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 
 \begin{center}
 	\LARGE
-	Uden hjælpemidler
+	Med hjælpemidler
 \end{center}
 \begin{opgavetekst}{Opgave 1}
-	To mængder $A$ og $B$ er givet ved
+	To linjer $l$ og $m$ er givet ved henholdsvis
 	\begin{align*}
-		A &= \{1,2,3,4,5\}, \\
-		B &= \{2,4,5,6,a,b\}.
+		l: \ 5x + 19y &= 12, \\
+		m: \ 10x -10y &= 29.
 	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem $A \cup B$, $A \cap B$ og $A \backslash B$. 
+	Orientér dig i Maple-filen \textit{To ligninger med to ubekendte} under forløbet \textit{Ligninger} på Teams og bestem derefter 
+	skæringspunktet mellem $l$ og $m$. 
 \end{delopgave}
 \begin{delopgave}{2}
-	For to vilkårlige mængder $S$ og $T$ tegn da et Venn-diagram, der illustrerer mængden 
+	Bestem løsningen til ligningssystemet
 	\begin{align*}
-		(S\cup T)\backslash (S\cap T)
-	\end{align*}
-\end{delopgave}
-\begin{delopgave}{3}
-	Bestem mængden $C$ givet ved
-	\begin{align*}
-		C = (A\cup B)\backslash (A \cap B).
+		x + 2y + 3z &= 10,\\
+		10x -5y + 3z &= 8, \\
+		-2x + 9y -11z &= -3.
 	\end{align*}
 \end{delopgave}
 \begin{opgavetekst}{Opgave 2}
-	En funktion $f$ er givet ved grafen på Figur \ref{fig:defværd}
-	\begin{figure}[H]	
-	\centering
-	\resizebox{0.45\textwidth}{!}{
-	\begin{tikzpicture}
-		\begin{axis}
-		[axis lines = center, 
-		xmin = -3.5, xmax = 7.5,
-		ymin = -3.5, ymax = 7.5,
-		grid = both,
-		xtick = {-4,-2,...,8,10},
-		ytick = {-4,-2,...,8,10},
-		minor tick num = 1,
-		xlabel = $x$, ylabel = $y$
-		]
-			\addplot[color = olive, thick, domain = -1:4, samples = 200] {1.3797*1.3797^x};	
-			\filldraw[color = white](axis cs: 4,5) circle (2pt);
-			\draw[color = olive](axis cs: 4,5) circle (2pt);
-			\filldraw[color = olive](axis cs: -1,1) circle (2pt);
-			\node[color = olive, anchor = north] at (axis cs: 2.5,3) {$f$};
-		\end{axis}
-	\end{tikzpicture}
-	}
-	\caption{Graf for funktionen $f$.}
-	\label{fig:defværd}
-	\end{figure}
-	\phantom{h}
+	To polynomier $p$ og $q$ er givet ved
+	\begin{align*}
+		p(x) &= -2x^3 + 14x^2 + 8x - 100,\\
+		q(x) &= -5x^3 - 13x^2 -10x + 68. 
+	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem $f(-1)$.
+	Orientér dig i Maple-filen \textit{Graftegning i Maple} under \textit{Vækst} på Teams og tegn graferne for $p$ og $q$ for $x \in [-8,3]$.
 \end{delopgave}
 \begin{delopgave}{2}
-	Bestem definitionsmængden $\textnormal{Dm}(f)$ og værdimængden $\textnormal{Vm}(f)$.
+	Bestem koordinatsættet til skæringspunkterne for graferne til $p$ og $q$, og sammenlign dit resultat med 
+	tegningen af graferne. 
 \end{delopgave}
 
 \newpage
 
 \begin{opgavetekst}{Opgave 3}
-	En funktion $f: \mathbb{R} \to \mathbb{R}$ er givet ved
+	En funktion $f$ er givet ved
 	\begin{align*}
-		f(x) = 4x-5.
-	\end{align*}	 
+		f(x) = b \cdot a^x
+	\end{align*}
+	og opfylder, at $f(2) = 5$ samt $f(4) = 12$
 \end{opgavetekst}
-
 \begin{delopgave}{1}
-	For mængden $A = \{1,3,5\}$ bestem da billedmængden $f(A)$.
+	Bestem tallene $b$ og $a$. 
+\end{delopgave}
+\begin{meretekst}
+	En anden funktion $g$ er givet ved
+	\begin{align*}
+		g(x) = 1.2 \cdot x^d 
+	\end{align*}
+	og opfylder også, at $g(2) = 5$. 
+\end{meretekst}
+\begin{delopgave}{2}
+	Bestem tallet $d$ og tegn grafen for $g$. 
 \end{delopgave}
 \begin{delopgave}{2}
-	Bestem urbilledet af $B = \{-9,20,-5\}$ under $f$.
+	Orientér dig i Maple-filen \textit{Ligningsløsning på interval} under forløbet \textit{Ligninger} og bestem det andet skæringspunkt
+	 mellem $f$ og $g$. 
 \end{delopgave}
 
 \begin{opgavetekst}{Opgave 4}
-	To funktioner $f$ og $g$ er givet ved henholdsvis
+	\begin{center}
+		\includegraphics[width = 0.6\textwidth]{Billeder/oesttimor}
+	\end{center}
+	Bruttonationalproduktet i tidsperioden 1998-2023 for den tidligere portugisiske koloni Østtimor fremgår af \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/BNPoesttimor.xlsx}{\color{blue!60}dette datasæt.}
+	Det formodes, at den forløbne tid efter 1998 $t$ og BNP i Østtimor $f$ (i mia. USD) kan beskrives ved en sammenhæng af
+	typen
 	\begin{align*}
-		f(x) &= \log_{2}(x), \\
-		g(x) &= x^2 - 4x + 4 
-	\end{align*}
+		f(t) = b\cdot a^t
+	\end{align*}	 
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem $f(g(6))$.
+	Orientér dig i filen \textit{Ændring af årstal} under \textit{Vækst} på Teams og bestem tallene $b$ og $a$.
 \end{delopgave}
-
+\begin{delopgave}{2}
+	Giv en fortolkning af tallene $a$ og $b$. 
+\end{delopgave}
+\begin{delopgave}{3}
+	Bestem det årstal, hvor Østtimor vil have et BNP på 40 mia ifølge modellen. 
+\end{delopgave}
 \newpage
 
 \begin{opgavetekst}{Opgave 5}
-	Grafen for en stykvist defineret funktion $g$ kan ses af Figur \ref{fig:stykvis}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-		\begin{axis}
-		[
-		axis lines = middle, 
-		xmin = -5.5, xmax = 8.5,
-		ymin = -5.5, ymax = 8.5,
-		xtick = {-6,-4,...,8,10},
-		ytick = {-6,-4,...,8,10},
-		minor tick num = 1,
-		xlabel = $x$, ylabel = $y$,	
-		grid = both,	
-		]
-			\addplot[color = olive, thick, domain = -4:-1] {x + 6};
-			\addplot[color = olive, thick, domain = -1:3] {-x + 7};
-			\addplot[color = olive, thick, domain = 3:6] {2*x - 4};
-			\filldraw[color = olive] (axis cs: -4,2) circle (2pt);
-			\filldraw[color = white] (axis cs: -1,5) circle (2pt);
-			\draw[color = olive] (axis cs: -1,5) circle (2pt);
-			\filldraw[color = olive] (axis cs: -1,8) circle (2pt);
-			\filldraw[color = white] (axis cs: 3,4) circle (2pt);
-			\draw[color = olive] (axis cs: 3,4) circle (2pt);
-			\filldraw[color = olive] (axis cs: 3,2) circle (2pt);
-			\filldraw[color = white] (axis cs: 6,8) circle (2pt);
-			\draw[color = olive] (axis cs: 6,8) circle (2pt);
-		\end{axis}
-		\end{tikzpicture}
-		\caption{Graf for funktionen $g$.}
-		\label{fig:stykvis}
-	\end{figure}
-	\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Opskriv en forskrift for funktionen $g$.
-\end{delopgave}
-\begin{delopgave}{2}
-	Bestem løsningerne til ligningen $g(x) = 4$.
-\end{delopgave}
-
-\newpage 
-
-\begin{opgavetekst}{Opgave 6}
-	Grafen for en funktion $h:[-4,3[ \to [-4,5]$ er givet på Figur \ref{fig:injsur}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-		\begin{axis}
-		[
-		axis lines = middle, 
-		xmin = -5.5, xmax = 5.5,
-		ymin = -5.5, ymax = 5.5,
-		xtick = {-6,-4,...,8,10},
-		ytick = {-6,-4,...,8,10},
-		minor tick num = 1,
-		xlabel = $x$, ylabel = $y$,	
-		grid = both,	
-		]
-			\addplot[color = olive, thick, domain = -4:-1] {x};
-			\addplot[color = olive, thick, domain = -1:3] {x + 2};
-			\filldraw[color = olive] (axis cs: -4,-4) circle (2pt);
-			\filldraw[color = white] (axis cs: -1,-1) circle (2pt);
-			\draw[color = olive] (axis cs: -1,-1) circle (2pt);
-			\filldraw[color = olive] (axis cs: -1,1) circle (2pt);
-			\filldraw[color = white] (axis cs: 3,5) circle (2pt);
-			\draw[color = olive] (axis cs: 3,5) circle (2pt);
-		\end{axis}
-		\end{tikzpicture}
-		\caption{Graf for funktionen $h$.}
-		\label{fig:injsur}
-	\end{figure}
-	\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Afgør, om $h$ er surjektiv, injektiv eller bijektiv. Begrund dit svar.
-\end{delopgave}
-
-\begin{opgavetekst}{Opgave 7}
-	To funktioner $f$ og $g$ er givet ved henholdsvis
+	Et polynomium $p$ er givet ved
 	\begin{align*}
-		f(x) &= 5^{3x-7}, \\
-		g(x) &= \frac{\log_{5}(x) + 7}{3}.
+		p(x) = 7x^5+2x^3-10x^2+5x+12
 	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Undersøg, om $f$ og $g$ er hinandens inverse funktioner.
-\end{delopgave}	
-\begin{delopgave}{2}
-	Bestem den inverse funktion til $f$ givet ved
-	\begin{align*}
-		f(x) = 10x - 6.
-	\end{align*}
+	Orientér dig i filen \textit{Rødder for polynomier} under \textit{Polynomier} på Teams og bestem rødderne for $p$.
 \end{delopgave}
-
-
 \end{document}
 
 

@@ -1,0 +1,132 @@
+\begin{center}
+\Huge
+Beviser
+\end{center}
+\section*{Sætning 1}
+\stepcounter{section}
+
+Vi skal vise, at der for funktionerne $f$ og $g$ givet ved
+\begin{align*}
+	f(x) = e^{kx}
+\end{align*}
+og 
+\begin{align*}
+	g(x) = a^x
+\end{align*}
+gælder, at $f$ og $g$ er differentiable funktioner, og at deres afledede funktioner er givet ved henholdsvis
+\begin{align*}
+	f'(x) = ke^{kx}
+\end{align*}
+og 
+\begin{align*}
+	g'(x) = \ln(a)a^x.
+\end{align*}
+\subsubsection*{Vejledning til $f'$:}
+\begin{enumerate}[label = \roman*)]
+	\item Afgør, hvad der tilsvarer den ydre og indre funktion for $f$
+	\item Differentiér $f$. 
+	\item Sæt firkanten.
+\end{enumerate}
+
+\subsubsection*{Vejledning til $g'$:}
+\begin{enumerate}[label=\roman*)]
+	\item Overbevis jer selv om, at $a = e^{\ln(a)}$ og indsæt dette på $a$'s plads i forskriften. 
+	\item Anvend en potensregneregel til at omskrive udtrykket.
+	\item Differentiér nu $g$.
+	\item Sæt firkanten.
+\end{enumerate}
+
+\newpage
+\section*{Sætning 2}
+\stepcounter{section}
+
+Vi skal vise, at funktionen $f:\mathbb{R}^+ \to \mathbb{R}$ givet ved
+\begin{align*}
+	f(x) = \ln(x)
+\end{align*}
+er differentiabel og har differentialkvotienten
+\begin{align*}
+	f'(x) = \frac{1}{x}
+\end{align*}
+\subsubsection*{Vejledning:}
+\begin{enumerate}[label=\roman*)]
+	\item Overbevis jer selv om, at 
+	\begin{align}\label{eq:1}
+		x = e^{\ln(x)}.
+	\end{align}
+	\item Differentiér begge sider af lighedstegnet i \eqref{eq:1}. Husk, at du ikke kan differentiere 
+	$\ln(x)$,
+	da vi skal bevise differentialkvotienten for netop denne. 
+	\item Isolér $(\ln(x))'$ i udtrykket. 
+	\item Sæt firkanten. 
+\end{enumerate}
+
+\newpage
+\section*{Sætning 3}
+\stepcounter{section}
+
+Vi skal vise, at funktionen $f$ givet ved
+\begin{align*}
+	f(x) = x^a
+\end{align*}
+er differentiabel og har differentialkvotienten
+\begin{align*}
+	f'(x) = ax^{a-1}.
+\end{align*}
+\subsubsection*{Vejledning:}
+\begin{enumerate}[label=\roman*)]
+	\item Indsæt $x = e^{\ln(x)}$ på $x$'s plads i $f$. 
+	\item Anvend en potensregnereglen på udtrykket for $f$.
+	\item Differentiér udtrykket for $f$. 
+	\item Brug tricket fra i) baglæns.
+	\item Reducer nu på udtrykket.
+	\item Sæt firkanten. 
+\end{enumerate}
+
+\newpage
+\section*{Sætning 4}
+\stepcounter{section}
+
+Vi skal vise, at der for to differentiable funktioner $f$ og $g$, hvor $g(x) \neq 0$ gælder, at 
+\begin{align*}
+	 \left(\frac{f(x)}{g(x)} \right)' = \frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}
+\end{align*}
+\subsubsection*{Vejledning:}
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv
+	\begin{align*}
+		\frac{f(x)}{g(x)} = f(x)\cdot \frac{1}{g(x)}.
+	\end{align*}
+	 \item Brug kædereglen til at bestemme 
+	 \begin{align*}
+	 	\left(\frac{1}{g(x)}\right)'
+	 \end{align*}
+	 \item Brug nu produktreglen til at bestemme 
+	 \begin{align*}
+	 	\left( f(x) \cdot \frac{1}{g(x)}\right)'
+	 \end{align*}
+	 \item Forlæng brøken 
+	 \begin{align*}
+	 	f'(x)\cdot \frac{1}{g(x)}
+	 \end{align*}
+	 med $g(x)$ og sæt de to brøker på fælles brøkstreg.
+	 \item Sæt firkanten. 
+\end{enumerate}
+
+\newpage
+\section*{Sætning 5}
+\stepcounter{section}
+
+Vi skal vise, at vi kan skrive $\ln(a)$ som grænseværdien
+\begin{align*}
+	\ln(a) = \lim_{h \to 0}\frac{a^h-1}{h}.
+\end{align*}
+\subsubsection*{Vejledning:}
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv sekanthældningen for $a^x$. (Brug $x$ i stedet for $x_0$.)
+	\item Anvend en potensregneregel og sæt $a^x$ uden for parentes. 
+	\item Tag grænseværdien $h \to 0$. 
+	\item Sæt $a^x$ uden for grænseværdien. 
+	\item Udnyt, at $(a^x)' = \ln(a)a^x$, som du viste i Sætning 1. 
+	\item Lad $(a^x)'$ gå ud og sæt firkanten. 
+\end{enumerate}

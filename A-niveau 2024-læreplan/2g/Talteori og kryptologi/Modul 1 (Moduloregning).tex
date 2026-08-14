@@ -1,0 +1,257 @@
+
+\begin{center}
+	\Huge
+	Moduloregning
+\end{center}
+
+Vi lægger vores forløb om talteori og kryptologi ud med at arbejde med divisibilitet og moduloregning. Begge disse begreber er helt centrale i arbejdet med talteori, der i sin essens går ud på at beskrive, hvordan særligt heltal og til tider heltalsbrøker interagerer. Enhver bog eller note om kryptologi og talteoris sammenhænge med respekt for sig selv lægger enten ud eller nævner undervejs en ganske berømt (måske primært for matematikere) bog; "A Mathematicians Apology" af G. H. Hardy. Han siger om den rene matematik og særligt talteorien, at 
+\begin{center}
+	\begin{minipage}{0.8\textwidth}
+	\textit{It is sometimes suggested that pure mathematicians glory in the uselessness of their work,
+	and make it a boast that it has no practical applications...}
+	\end{minipage}
+\end{center}
+Han modsvarer denne påstand med følgende alternative fortolkning.
+\begin{center}
+	\begin{minipage}{0.8\textwidth}
+	\textit{...But science works for evil as well as for good (and particularly, of course, in time of war);
+	 and both Gauss and less mathematicians may be justified in rejoicing that there is one science at any rate,
+	 and that their own, whose very remoteness from ordinary human activities should keep it gentle and clean.}
+	\end{minipage}
+\end{center}
+Allerede under 2. verdenskrig skulle talteorien vise sig at have en central rolle i at bryde den tyske Enigma-kode, og særligt efter computerens udbredelse er talteori blevet helt central i det, vi kalder \textit{Public-Key-kryptosystemer}, der er allestedsnærværende i praktisk talt al digital kommunikation; fra Snapchat til bankoverførsler. Talteorien er også vigtig i andre kommunikationshenseender som fx fejlkorrigerende koder, men vi vil kun i dette forløb arbejde med kryptologi.
+
+Det er nok tvivlsomt, at anvendelsesmulighederne af talteori i kryptologi ville have holdt Hardy fra matematikken, men det ville nok alligevel være svært at overbevise Hardy om de anvendelsesorienterede konsekvenser, talteorien har haft.
+ 
+\section*{Divisibilitet og division med rest}
+\stepcounter{section}
+Begrebet \textit{divisibilitet} dækker over, hvorvidt to tal går op i hinanden. Dette er et begrebet, vi kender helt tilbage fra grundskolen, men nu vil præcisere lidt. Vi kan lægge ud med et eksempel.
+\begin{exa}
+	Tallet 7 går op i tallet 21. Dette gør det, da brøken $\frac{21}{7}$ er et heltal. En ækvivalent forklaring får vi 
+	af, at $7 \cdot 3 = 21$, altså at der findes et heltal $q$ (her 3), så $21 = 7\cdot q$. 
+	
+	Vi kan tilsvarende sige, at $8$ går op i $40$, da $8\cdot 5 = 40$. Dette er definitionen, vi vil anvende fremover. 
+\end{exa}
+\begin{defn}[Divisibilitet]
+	For to heltal $a,b \in \mathbb{Z}$, hvor $a\neq 0$, siges $a$ at gå op i $b$,
+	hvis der findes et heltal $q\in \mathbb{Z}$, så
+	\begin{align*}
+		aq = b.
+	\end{align*}
+	Vi skriver i så fald, at $a \mid b$. 
+\end{defn}
+
+Følgende sætning kan virke som oplagt, men beviset er en god øvelse.
+\begin{setn}
+	For $a,b,c\in \mathbb{Z}$, $a\neq 0$ gælder der, at 
+	\begin{enumerate}[label=\roman*)]
+		\item Hvis $a \mid b$ og $b \mid c$, så $a \mid c$.
+		\item Hvis $a \mid b$ og $a \mid c$, så $a \mid (b + c)$.
+	\end{enumerate}
+\end{setn}
+\begin{proof}
+	Opgave.
+\end{proof}
+Ofte vil det vise sige, at to heltal ikke går op i hinanden, når vi dividerer dem. I dette tilfælde får vi en rest, vi repræsenterer på mange forskellige måder. Dette kan være med et decimaltal, blandede tal eller blot en brøk. Mange har også arbejdet med division med rest i grundskolen. Vi tager igen udgangspunkt i et eksempel.
+
+\begin{exa}
+	Vi kan dividerer tallene $88$ og $7$. Tallet $7$ går $12$ gange op i $88$ og så har vi en rest på $4$. Vi kan derfor 
+	skrive
+	\begin{align*}
+		88 = 7\cdot 12 + 4.
+	\end{align*}	
+\end{exa}
+Vi kan formalisere dette som en sætning.
+\begin{setn}[Division med rest]\label{setn:divmedrest}
+	For alle heltal $a, b \in \mathbb{Z}$ findes der entydige heltal $q\in \mathbb{Z}$ og $r \in \mathbb{Z}$,
+	$0 \leq r < b$ så
+	\begin{align*}
+		a = qb + r.
+	\end{align*}	 
+	Tallet $q$ kaldes for \textit{kvotienten} og $r$ kaldes \textit{resten} af $a$ delt med $b$. 
+\end{setn}
+Til tider er vi ikke så interesserede i, hvad kvotienten er, men derimod mere interesserede i resten. Regning med rester efter division er sin helt egne disciplin i matematik, og kaldes for \textit{moduloregning}.
+\section*{Moduloregning}
+Hvis kl. er 9:00 nu, hvad er så klokken om 60 timer? Vi løser dette problem med division med rest. Vi får
+\begin{align*}
+	60 + 9 = 24\cdot 2 + 21,
+\end{align*}
+men vi er sådan set ikke interesseret i tallet 2, da spørgsmålet handlede om tidspunktet og ikke hvor mange døgn, der er gået. Klokken er altså 21:00 60 timer efter kl 9:00. Udregningen af dette kaldes for \textit{moduloregning} og vi vil skrive
+\begin{align*}
+	60 + 9 \fmod{24} = 69 \fmod{24} = 21.
+\end{align*}
+Vi definerer modulobegrebet på følgende vis med udgangspunkt i sætningen om division med rest. 
+\begin{defn}[Modulo]
+	For $a, b\in \mathbb{Z}$ hvor $b>0$ defineres tallet $r = a \fmod{b}$ som det mindste heltal $r>0$, så
+	\begin{align*}
+		a = qb + r.
+	\end{align*}
+\end{defn}
+Bemærk, at dette ikke er den sædvanlige måde at definere modulo-begrebet. Normalt defineres modulo-begrebet som en kongruens, hvor alle tal med den samme rest siges at være kongruente, men vores definition er tilstrækkelig for os.
+\begin{exa}
+	Vi ser på flere eksempler.
+	\begin{align*}
+		&112 \fmod{5} = 2, \\
+		&71 \fmod{7} = 1, \\
+		&10 \fmod{2} = 0.
+	\end{align*}
+	Vi kan også finde rester for negative tal
+	\begin{align*}
+		-21 \fmod{9} = 6, 
+	\end{align*}
+	da 
+	\begin{align*}
+		-21 = -3\cdot 9 + 6.
+	\end{align*}
+	Flere eksempler med negative tal.
+	\begin{align*}
+		&-201 \fmod{20} = 19,\\
+		&-63 \fmod{55} = 47.
+	\end{align*}
+\end{exa}
+Følgende sætning fortæller os, at moduloregning opfører sig pænt nok til, at vi kan regne færdigt, før vi bestemmer resten. 
+\begin{setn}\label{setn:modulus}
+	For heltal $a,b\in \mathbb{Z}$ samt positivt heltal $n\in \mathbb{Z}$ gælder der, at 
+	\begin{enumerate}[label=\roman*)]
+		\item $(a \fmod{n} + b\fmod{n})\fmod{n} = (a+b)\fmod{n}$\\
+		\item $(a\fmod{n})\cdot(b\fmod{n})\fmod{n} = ab \fmod{n}$
+	\end{enumerate}		
+\end{setn}
+\begin{proof}
+	Vi beviser i) og overlader ii) til en opgave. 
+	
+	For $r_1 = a \fmod{n}$ må der gælde, at 
+	\begin{align*}
+		a = q_1n + r_1
+	\end{align*}
+	og derfor, at 
+	\begin{align*}
+		r_1 = a - q_1 n.
+	\end{align*}
+	Tilsvarende for $r_2 = b \fmod{n}$ må vi have, at 
+	\begin{align*}
+		r_2 = b - q_2 n.
+	\end{align*}
+	Der må altså for summen $a \fmod{n} + b \fmod{n}$ gælde, at 
+	\begin{align*}
+		a \fmod{n} + b \fmod{n} &= r_1 + r_2\\
+		&= a - q_1 n + b - q_2 n \\
+		&= a + b - (q_1 + q_2)n.
+	\end{align*}
+	For $(a \fmod{n} + b\fmod{n})\fmod{n}$ får vi da
+	\begin{align*}
+		r = (a \fmod{n} + b\fmod{n})\fmod{n} &= a + b - (q_1 + q_2)n \fmod{n} \\
+		&=(a + b - (q_1 + q_2)n) - q_3n\\
+		&=a + b -\underbrace{(q_1 + q_2 + q_3)}_{=q}n
+	\end{align*}
+	for et entydigt $r$ og $q$ jf. Sætning \ref{setn:divmedrest}. Men der gælder tilsvarende, at 
+	\begin{align*}
+		a + b -\underbrace{(q_1 + q_2 + q_3)}_{=q}n = a + b \fmod{n} = r,
+	\end{align*}
+	da vi i på højresiden igen får 
+	\begin{align*}
+		a + b = qn + r
+	\end{align*}
+	for et entydigt $q$ og $r$, som dermed må være samme rest og kvotient som på venstresiden. 
+\end{proof}
+\begin{defn}[Heltal$\fmod{n}$]
+	Vi definerer mængden 
+	\begin{align*}
+		\mathbb{Z}/n\mathbb{Z} = \{0,1,\hdots,n-1\},
+	\end{align*}
+	og udregninger i denne mængde laves modulo $n$.
+\end{defn}
+\begin{exa}
+I 
+\begin{align*}
+\mathbb{Z}/4\mathbb{Z} = \{0,1,2,3\}
+\end{align*}
+gælder der eksempelvis, at $2\cdot 2 = 0$, da $0 =  4 \fmod{4}$. Alle udregninger kan bestemmes ved såkaldte multiplikations og additionstabeller:
+\begin{center}
+\begin{tabular}{c|cccc}
+$+$ & 0 & 1 & 2 & 3\\
+\hline
+0 & 0 & 1 & 2 & 3\\
+1 & 1 & 2 & 3 & 0\\
+2 & 2 & 3 & 0 & 1\\
+3 & 3 & 0 & 1 & 2\\
+
+\end{tabular}
+\hspace{1cm}
+\begin{tabular}{c|cccc}
+$\cdot $ & 0 & 1 & 2 & 3\\
+\hline
+0 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 2 & 3\\
+2 & 0 & 2 & 0 & 2\\
+3 & 0 & 3 & 2 & 1\\ 
+\end{tabular}
+\end{center}
+\phantom{h}
+\end{exa}
+
+\subsubsection*{Inverse elementer}
+Hvis vi med normal multiplikation ganger $10$ og $\frac{1}{10}$ sammen, så får vi $10\cdot \frac{1}{10} =1$. Vi siger, at den multiplikative inverse til $10$ er $\frac{1}{10}$. Tilsvarende har vi, at $10 + (-10) = 0$, og derfor er $10$ og $-10$ hinandens additive inverse. 
+\begin{defn}
+Et element $a$ er multiplikativ invers til et element $b$, hvis det gælder, at $ab = 1$. I så fald skriver vi, at $b = a^{-1}$. 
+Et element $a$ er additiv invers til et element $b$, hvis det gælder, at $a+b=0$. 
+\end{defn} 
+\begin{exa}
+I $\mathbb{Z}/4\mathbb{Z}$ har vi, at $2$ er additiv invers til $2$, da $2+2 = 0$. Tilsvarende har vi, at $1$ og $3$ er hinandens additive inverse, da $3+1 = 0$. For multiplikative inverse har vi, at $1$ er multiplikativ invers til $1$, da $1\cdot 1 = 1$, og $3$ er multiplikativ invers til $3$, da $3\cdot 3 = 1$. Elementet $2$ har ikke en multiplikativ invers, da $2$ går op i $4$.   
+\end{exa}
+
+\subsection*{Opgave 1}
+Afgør, hvilke af følgende udsagn er sande
+\begin{align*}
+	&1) \ 2\mid 5  & &2) \ 5 \mid 10 \\
+	&3) \ 6 \mid 3  & &4) \ 12 \mid 0 \\
+	&5) \ -10 \mid 100  &  &6) \  7  \mid -84 \\
+\end{align*}
+
+\subsection*{Opgave 2}
+Bestem kvotienten for $a$ delt med $b$ for følgende valg af $a$ og $b$. 
+\begin{enumerate}[label=\roman*)]
+	\item $a = 100$, $b = 8$.
+	\item $a = 23$, $b = -4$.
+	\item $a = 70$, $b = 11$.
+	\item $a = 55$, $b = 5$.
+	\item $a = 22$, $b = 101$.
+\end{enumerate}
+
+\subsection*{Opgave 3}
+Bevis Sætning 1.3. (Vink: Brug definitionen af $a \mid b$.)
+\subsection*{Opgave 4}
+
+Udregn følgende
+\begin{align*}
+	&1) \ 55 \fmod{2} & &2) \ 9 \fmod{10} & &3) \ -16 \fmod{3} \\
+	&4) \ 98 \fmod{7} & &5) \ -27 \fmod{7} & &6) \ 100 \fmod{17} \\
+	&7) \ 277 \fmod{5} & &8) \ 759 \fmod{50} & &9) \  -2\fmod{15} \\
+	&10) \ 30 \fmod{21} & &11) \ -299 \fmod{30} & &12) \ 0 \fmod{9} \\ 
+\end{align*}
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item Find tre tal $a$, der opfylder, at $10 = a \fmod{11}$.
+	\item Find tre negative tal $b$, der opfylder, at $3 = b \fmod{7}$.  
+	\item Find tre tal $n$ så $7 = 150 \fmod{n}$. 
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Opskriv additions- og multiplikationstabeller for $\mathbb{Z}/2\mathbb{Z}$, $\mathbb{Z}/3\mathbb{Z}$,
+$\mathbb{Z}/5\mathbb{Z}$ og $\mathbb{Z}/6\mathbb{Z}$, og bestem hvilke tal, der er indbyrdes multiplikative inverse.
+
+\subsection*{Opgave 7}
+Find de elementer i $\mathbb{Z}/7\mathbb{Z}$ og $\mathbb{Z}/8\mathbb{Z}$, der har multiplikative inverse. 
+
+\subsection*{Opgave 8}
+Udregn følgende værdier. 
+\begin{align*}
+	&1) \ 2^{15} \fmod{3} & &2) \ 5^7 \fmod{10} & &3) \ (-11)^5 \fmod{7} \\
+\end{align*}
+
+\subsection*{Opgave 9}
+Hvad er det sidste ciffer i $3^{11}$. (Vink: Regn i  $\mathbb{Z}/10\mathbb{Z}$)
+
+\subsection*{Opgave 10}
+Bevis ii) i Sætning \ref{setn:modulus}.

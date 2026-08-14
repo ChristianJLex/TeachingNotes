@@ -1,0 +1,153 @@
+\begin{center}
+\Huge
+	Komplekse tal
+\end{center}
+
+\section*{Introduktion}
+\stepcounter{section}
+
+Komplekse tal tager typisk udgangspunkt i andengradspolynomier. Vi har et ønske om, at andengradspolynomier uanset diskriminantens værdi har to rødder (talt med multiplicitet). Dette vil vise sig at generalisere sig til, at et polynomium af grad $n$ altid har $n$ rødder. Vi betragter først andengradspolynomiet $f$ givet ved
+\begin{align*}
+	f(x) = x^2 + 1,
+\end{align*}
+og vi ønsker rødder til dette polynomium. Dette tilsvarer en løsning til ligningen
+\begin{align*}
+	x^2 = -1,
+\end{align*}
+og denne kunne passende kaldes $\sqrt{-1}$. Dette tal er det, vi kalder et $\textit{imaginært tal}$, da det ikke kan findes på en tallinje, altså at $\sqrt{-1}\notin \mathbb{R}$. Derfor giver vi tallet navnet $i$, altså
+\begin{align*}
+	\sqrt{-1} = i.
+\end{align*}
+Vi skal udvide vores talsystem for at inkludere dette tal, og dette giver os følgende definition af de \textit{komplekse tal}.
+\begin{defn}[Komplekse tal]
+	De komplekse tal $\mathbb{C}$ defineres som mængden af tal $z$ på formen
+	\begin{align*}
+		z = a + bi,
+	\end{align*}
+	hvor $a,b\in \mathbb{R}$. Tallet $a$ kaldes for \textit{realdelen} af $z$ og betegnes $\textnormal{Re}(z)$
+	 og tallet $b$ kaldes for \textit{imaginærdelen} af $z$ og betegnes $\textnormal{Im}(z)$.
+\end{defn}
+En mere stringent præsentation af de komplekse tal ville inkludere en udpenslet forklaring af, hvornår to komplekse tal siges at være ens, hvordan de multipliceres, adderes og deles. Vores præsentation vil her være lidt mere \textit{ad hoc}.
+
+Vi lægger komplekse tal sammen og trækker dem fra hinanden ved at lægge/trække deres realdel og imaginærdel sammen/fra hver for sig.
+\begin{exa}
+	Vi betragter de komplekse tal $2 + 5i$ og $11-10i$. Disse lægges sammen og vi får
+	\begin{align*}
+		2 + 5i + 11 - 10i = 2+11 + (11-10)i = 13 + i.
+	\end{align*}
+	Vi kan tilsvarende trække dem fra hinanden
+	\begin{align*}
+		2 + 5i -(11 - 10i) = 2 - 11 + (5-(-10))i = -9 + 15i. 
+	\end{align*}
+\end{exa}
+
+Vi multiplicerer komplekse tal ved at gange dem sammen som vi ville gange andre parenteser sammen. 
+\begin{exa}
+	Vi betragter to komplekse tal $z_1 = 2 + 4i$ og $z_2 = 7 - 2i$. Vi ganger dem sammen på følgende vis.
+	\begin{align*}
+		z_1z_2 &= (2+4i)(7-2i)\\
+		&= 2\cdot 7 + 2\cdot(-2i) + 4i\cdot 7 + 4i\cdot (-2i)\\
+		&= 14 - 4i + 28i -8i^2.
+	\end{align*}
+	Vi minder os selv om, at $i$ er defineret som $i=\sqrt{-1}$, så hvis $i$ skal "opføre sig" som forventet i vores nye 
+	talsystem, så må vi have, at 
+	\begin{align*}
+		i^2 = \sqrt{-1}^2 = -1, 
+	\end{align*}	 
+	så 
+	\begin{align*}
+		z_1z_2 &= 14 - 4i + 28i -8i^2 \\
+		&=14 - 24i -8(-1)\\
+		&=22 - 24i.
+	\end{align*}
+\end{exa}
+Division af komplekse tal er ikke svært, men kræver et trick, da vi ønsker at resultatet af vores division er på formen
+$a + ib$. Derfor defineres \textit{den komplekst konjugerede}.
+\begin{defn}[Den komplekst konjugerede]
+	For et komplekst tal $z = a + bi$ defineres den komplekst konjugerede som
+	\begin{align*}
+		\bar{z} = a - bi.
+	\end{align*}
+\end{defn}
+Vi dividerer komplekse tal ved at forlænge brøken med den komplekst konjugerede af nævneren
+\begin{exa}
+	Vi betragter følgende division
+	\begin{align*}
+		\frac{z_1}{z_2} = \frac{6-i}{4+3i}.
+	\end{align*}
+	Vi forlænger brøken med $\bar{z_2} = 4 - 3i$. 
+	\begin{align*}
+		\frac{6-i}{4+3i} &= \frac{(6-i)(4-3i)}{(4+3i)(4-3i)}\\
+		&= \frac{24 -18i-4i+3i^2}{16+12i-12i-9i^2}\\
+		&=\frac{24-3 -22i}{16+9}\\
+		&=\frac{21-22i}{25}\\
+		&=\frac{21}{25}- \frac{22}{25}i
+	\end{align*}
+\end{exa}
+Pointen er her, at $z\bar{z}$ altid vil være et reelt tal, som vi kan bruge til at dividere realdelen og imaginærdelen i tælleren med. 
+
+\subsection*{Opgave 1}
+Bestem Re$(z)$ og Im$(z)$ for følgende komplekse tal $z$. 
+\begin{align*}
+	&1) \ z = 2 + i   &&2) \ z = 11i   &&3) \ z = 13i - 21   \\
+	&4) \ z = \frac{4+i}{2}   &&5) \ z = i(5+2i)    &&6) \ z = 2(i+5)   \\
+	&7) \ z = \frac{-2}{i}   &&8) \  (-i)^2  &&9) \  (i+1)^2   \\
+\end{align*} 
+
+\subsection*{Opgave 2}
+Bestem følgende summer eller differenser. Du skal altså skrive dem på formen $a + ib$. 
+\begin{align*}
+	&1) \  (-1 + i) + (2i - 4)    &&2) \ -(4+5i)-(6-2i)    \\
+	&3) \  \left(\frac{2}{5} + \frac{1}{5}i\right) + \left(\frac{4}{10} + \frac{7}{10}i\right)    &&4) \  i -(22i + 1)  \\
+	&5) \ \frac{5}{i} + \frac{3i}{10}   & &6) \ i^3(i+1) - i(-5i^2 + 2i)   \\
+\end{align*}
+
+\subsection*{Opgave 3}
+Bestem følgende produkter eller kvotienter. Du skal altså skrive dem på formen $a + ib$. 
+\begin{align*}
+	&1) \   (2+2i)(5+i)   &&2) \ (13i - 10)(1-i)     \\
+	&3) \   \frac{2-i}{2i-4}   &&4) \  \frac{5i + 2}{4 - 6i}    \\
+	&5) \   (3i^2-2i)(7+3i)   &&6) \  \frac{10 - 2i}{10 + 2i}     \\
+\end{align*}
+
+\subsection*{Opgave 4}
+Vis, at $-i$ også er en løsning til $x^2 + 1 = 0$
+
+\subsection*{Opgave 5}
+Lad $z\in \mathbb{C}$. Vis, at $z\bar{z}$ altid giver et reelt tal.
+
+\subsection*{Opgave 6}
+Bestem alle komplekse løsninger til ligningen 
+\begin{align*}
+	z^4 = 16
+\end{align*}
+
+\subsection*{Opgave 6}
+Vis, at produktet af to komplekse tal $z_1 = a + bi$ og $z_2 = c + di$ er givet ved
+\begin{align*}
+	z_1z_2 = (ac - bd) + (ad + bc)i
+\end{align*} 
+
+\subsection*{Opgave 7}
+Vis, at forholdet mellem to komplekse tal $z_1 = a + bi$ og $z_2 = c + di$, hvor $c^2 + d^2 \neq 0$ er givet ved
+\begin{align*}
+	\frac{z_1}{z_2} = \frac{ac + bd}{c^2 + d^2} + \frac{bc - ad}{c^2+ d^2}i
+\end{align*}
+
+\subsection*{Opgave 8}
+Lad $n$ være et heltal
+\begin{enumerate}[label=\roman*)]
+	\item Udregn $i^2$, $i^3$, $i^4$, $i^5$. 
+	\item Udregn $i^{4n}$, $i^{4n + 1}$, $i^{4n + 2}$ og $i^{4n + 3}$ 
+	\item Udregn $i^{80}$, $i^{211}$ og $i^{4414}$ 
+\end{enumerate}
+
+\subsection*{Opgave 9}
+Et andengradspolynomium $p$ er givet ved
+\begin{align*}
+	p(z) = z^2 -2z + 5.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Vis, at $1 + 2i$ og $1 - 2i$ er rødder for $p$.
+	\item Brug diskriminantformlen til at bestemme rødderne for $p$. 
+\end{enumerate}

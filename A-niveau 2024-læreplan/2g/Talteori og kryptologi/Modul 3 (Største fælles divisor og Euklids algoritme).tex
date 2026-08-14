@@ -1,0 +1,177 @@
+\begin{center}
+	\Huge
+	Største fælles divisor og Euklids algoritme
+\end{center}
+
+
+\section*{Største fælles divisor}
+\stepcounter{section}
+
+Når vi skal introducere vores krypteringsalgoritme, får vi brug for to tal, der er \textit{indbyrdes primiske.} Dette defines ud fra begrebet \textit{største fælles divisor}, der blot et det største tal, der går op i begge tal. 
+\begin{defn}[Største fælles divisor]
+	For to heltal $a,b\in \mathbb{Z}$, så defineres det største heltal, der går op i $a$ og $b$ som
+	\begin{align*}
+		\textnormal{gcd}(a,b).
+	\end{align*}
+	I det tilfælde, at $\textnormal{gcd}(a,b)=1$, så siges $a$ og $b$ at være indbyrdes primiske. 
+\end{defn}
+Notationen gcd kommer fra engelsk, hvor det står for \textit{greatest common divisor}. Funktionen skrives da også til tider på dansk sfd, men vi holder os til den sædvanlige notation. 
+
+\begin{exa}
+Hvis vi skal bestemme $\textnormal{gcd}(20,25)$, så skal vi først bestemme de tal, der går op i både $20$ og $25$. Disse tal er $1,$ $2$ og $5$. Det største af disse tal er $5$, så 
+\[
+\textnormal{gcd}(20,25) = 5.
+\]
+Tilsvarende vil der gælde, at $21$ og $8$ ikke har nogle fælles divisorer ud over 1, og derfor er 
+\begin{align*}
+	\textnormal{gcd}(21,8) = 1,
+\end{align*}
+og 21 og 8 er derfor indbyrdes primiske. Vi har desuden, at 
+\[
+\textnormal{gcd}(6,3) = 3,
+\]
+da $3$ går op i $6$. Derfor vil det største tal der går op i begge disse tal klart være $3$. 
+\end{exa}
+Antallet af tal mindre end $n\in \mathbb{Z}$, der er indbyrdes primiske med et tal $n$ viser sig at have en central betydning for strukturen af $\mathbb{Z}/n\mathbb{Z}$. Derfor defineres en funktion, der tæller netop dette.
+\begin{defn}[Eulers $\varphi$-funktion]
+	Vi definerer Eulers $\varphi$-funktion som funktionen $\varphi: \mathbb{Z} \to \mathbb{Z}$, der for $\varphi(n)$ 
+	bestemmer hvor mange tal mindre end $n$, der er indbyrdes primiske med $n$. 
+\end{defn}
+\begin{exa}
+For $9$ gælder der, at 
+\begin{align*}
+&\textnormal{gcd}(1,9) = 1
+&&\textnormal{gcd}(2,9) = 1\\
+&\textnormal{gcd}(3,9) = 3
+&&\textnormal{gcd}(4,9) = 1\\
+&\textnormal{gcd}(5,9) = 1
+&&\textnormal{gcd}(6,9) = 3\\
+&\textnormal{gcd}(7,9) = 1
+&&\textnormal{gcd}(8,9) = 1\\
+&\textnormal{gcd}(9,9) = 9.
+\end{align*}
+Der er altså 6 tal $x$ mindre end $9$, der har $\textnormal{gcd}(x,9)=1$. Derfor gælder der, at 
+\begin{align*}
+\varphi(9) = 6. 
+\end{align*}
+\end{exa}
+\begin{exa}
+Hvis $p$ er et primtal, så er det klart, at $\varphi(p) = p-1$, da alle tal mindre end $p$ er indbyrdes primiske med $p$.
+\end{exa}
+
+\subsection*{Euklids algoritmer}
+I krypteringsalgoritmen skal vi i $\mathbb{Z}/n\mathbb{Z}$ for et invertibelt element $a\in \mathbb{Z}/n\mathbb{Z}$ kunne finde det multiplikative inverse element til $a$, altså $a^{-1}$. Da $\mathbb{Z}/n\mathbb{Z}$ var lille, kunne vi bare lave en gangetabel og så aflæse det inverse element, men hvis $n$ er stor, kan dette tage meget lang tid. Derfor skal vi bruge en algoritme, der kan finde inverse elementer relativt hurtigt. Først skal vi dog bruge en sætning, der fortæller os, hvilke elementer, der er invertible:
+\begin{setn}
+	Et element  $a\in \mathbb{Z}/n\mathbb{Z}$ har en multiplikativ invers $a^{-1}$ hvis og kun hvis 
+	$\textnormal{gcd}(a,b)= 1$. 
+\end{setn}
+Vi vil ikke bevise det, men blot se på nogle eksempler:
+\begin{exa}
+I $\mathbb{Z}/9\mathbb{Z}$ har elementerne 1, 2, 4, 5, 7 og 8 multiplikative inverse, da største fælles divisor mellem disse tal og 9 alle er 1. Derimod har elementerne 0, 3 og 6 ikke multiplikative inverse, da de har største fælles divisor større end 1 med 9.
+\end{exa}
+\begin{exa}
+For $p$ et primtal gælder der,  at alle elementer $a\in \mathbb{Z}/p\mathbb{Z}$, hvor $a\neq 0$ har multiplikative inverse, da ingen tal mindre end $p$ og større end 1 går op i $p$. 
+\end{exa}
+
+Vi vil nu beskrive Euklids algoritme ud fra et eksempel 
+\begin{exa}\label{exa:euklid}
+Vi skal finde største fælles divisor af 90 og 31. Vi anvender Euklids algoritme. Den består af gentagen division med rest
+\begin{align*}
+\underbrace{90}_{y} = 2 \cdot \underbrace{31}_{x} + \underbrace{28}_{r} \\
+\underbrace{31}_{y} = 1 \cdot \underbrace{28}_{x} + \underbrace{3}_{r} \\
+\underbrace{28}_{y} = 9 \cdot \underbrace{3}_{x} + \underbrace{1}_{r} \\
+\underbrace{3}_{y} = 3 \cdot \underbrace{1}_{x} + \underbrace{0}_{r} 
+\end{align*}
+Da $r=0$, stopper algoritmen og returnerer $\textnormal{gcd}(90,31) = x = 1$. Derfor har $90$ og $31$ største fælles divisor $1$. 
+\end{exa}
+Selvom det nu står klarere, hvordan Euklids algoritme virker, så har vi fortsat ikke vist, at dens output er største fælles divisor af $a$ og $b$. Det er dog ikke svært at overbevise sig selv, om at dette er tilfældet. Vi skal blot vise, at 
+\begin{align*}
+\textnormal{gcd}(a,b) = \textnormal{gcd}(b,r)
+\end{align*}
+for $a = qb + r$. Antag derfor, at $d$ er en divisor for $a$ og $b$. Vi har så
+\begin{align*}
+r = a-qb = \tilde{a}d - q\tilde{b}d = d(\tilde{a}-q\tilde{b}),
+\end{align*}
+for en divisor $\tilde{a}$ af $a$ og en divisor $\tilde{b}$ af $b$, så $d$ går op i $r$. Derfor er alle divisorer af $a$ og $b$ også divisorer af $b$ og $r$ og så må det gælde, at $\textnormal{gcd}(a,b)=\textnormal{gcd}(b,r)$.
+
+\subsubsection*{Euklids udvidede algoritme}
+Lad os vende tilbage til problemstillingen at finde et multiplikativt inverst element til $a\in \mathbb{Z}/n\mathbb{Z}$. For at dette var muligt, så skulle der gælde, at $\textnormal{gcd}(a,n)=1$. Vi kan bruge Euklids algoritme til at verificere, at dette er tilfældet, men vi skal bruge Euklids udvidede algoritme til at bestemme det inverse element. Idéen kommer af Bézouts identitet.
+\begin{setn}[Bézouts identitet]
+For positive heltal $a$ og $b$ findes der heltal $s$ og $t$, så
+\begin{align*}
+\textnormal{gcd}(a,b) = sa + tb.
+\end{align*}
+\end{setn}
+Vi vil ikke vise denne sætning, men blot anvende den. For indbyrdes primiske tal $a$ og $b$ lyder Bézouts identitet
+\begin{align*}
+	1 = sa+tb,
+\end{align*}
+og Euklids udvidede algoritme giver os tallene $s$ og $t$. Reducerer vi nu denne identitet$\fmod{b}$, så får vi
+\begin{align*}
+	sa \fmod{b} = 1,
+\end{align*}
+og vi har fundet $a^{-1} = s$. Vi præsenterer igen algoritmen gennem et eksempel.
+\begin{exa}
+Fra Eksempel \ref{exa:euklid} fik vi
+\begin{align}
+\underbrace{90}_{y} = 2 \cdot \underbrace{31}_{x} + \underbrace{28}_{r}\label{eq:1} \\
+\underbrace{31}_{y} = 1 \cdot \underbrace{28}_{x} + \underbrace{3}_{r}\label{eq:2} \\
+\underbrace{28}_{y} = 9 \cdot \underbrace{3}_{x} + \underbrace{1}_{r}\label{eq:3} \\
+\underbrace{3}_{y} = 3 \cdot \underbrace{1}_{x} + \underbrace{0}_{r} 
+\end{align}
+Idéen i algoritmen er som følger: Vi ved at $28 = 9\cdot 3 + 1$ fra \eqref{eq:1}, 
+\begin{align}\label{eq:udtrykfor1}
+1 = 28-9\cdot 3.
+\end{align}
+Fra \eqref{eq:2} ved vi, at $31 = 1\cdot 28+3$, så $3 = 31-28$. Dette udtryk for $3$ indsættes i \eqref{eq:udtrykfor1}, og vi får
+\begin{align}
+1 &= 28-9\cdot 3 \nonumber \\
+&=28 -9(31-28) \nonumber \\
+&= -9\cdot 31 + 10 \cdot 28 \label{eq:udtryk2for1}
+\end{align} 
+Fra \eqref{eq:1} ved vi, at $90 = 2 \cdot 31 + 28$, så $28 = 90-2\cdot 31$. Dette indsættes i \eqref{eq:udtryk2for1}, og vi får
+\begin{align*}
+1 &= -9\cdot 31 + 10 \cdot 28\\
+  &= -9\cdot 31 + 10(90-2\cdot 31)\\
+  &= 10\cdot 90 -29 \cdot 31.
+\end{align*}
+Vi har nu nøjagtigt det udtryk, vi ønskede. Er vi interesserede i at finde den multiplikative inverse for $31$ i $\mathbb{Z}/90\mathbb{Z}$ ved vi nu, at det er $61$, da $61 \equiv -29 \mod{90}$. 
+\end{exa}
+
+\subsection*{Opgave 1}
+Bestem største fælles divisor mellem følgende tal uden at bruge Euklids algoritme, og afgør, om tallene er indbyrdes primiske
+\begin{align*}
+	&1) \ \textnormal{gcd}(10,65)  &&2) \ \textnormal{gcd}(17,18)  &&3) \  \textnormal{gcd}(4,6)  \\
+	&4) \ \textnormal{gcd}(12,36)  &&5) \ \textnormal{gcd}(9,24)  &&6) \ \textnormal{gcd}(30,4)   \\
+	&7) \ \textnormal{gcd}(6,6)  &&8) \ \textnormal{gcd}(31,37)  &&9) \  \textnormal{gcd}(144,24)  \\
+\end{align*}
+
+\subsection*{Opgave 2}
+Bestem følgende værdier for Euler's $\varphi$-funktion.
+\begin{align*}
+	&1) \ \varphi(5) &&2) \   \varphi(6) \\
+	&3) \ \varphi(10)       &&4) \ \varphi(15) \\
+\end{align*}
+
+\subsection*{Opgave 3}
+Bestem største fælles divisor for følgende tal ved at bruge Euklids algoritme.
+\begin{align*}
+	&1) \ \textnormal{gcd}(16,102)  &&2) \ \textnormal{gcd}(54,167)  &&3) \  \textnormal{gcd}(36,90)  \\
+	&4) \ \textnormal{gcd}(102,208)  &&5) \ \textnormal{gcd}(77,133)  &&6) \ \textnormal{gcd}(47,901)   \\
+\end{align*}
+
+\subsection*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem den inverse til 51 i $\mathbb{Z}/71\mathbb{Z}$. 
+	\item Bestem den inverse til $7$ i $\mathbb{Z}/101\mathbb{Z}$.
+	\item Bestem den inverse til 26 i $\mathbb{Z}/77\mathbb{Z}$.
+	\item Bestem den inverse til 132 i $\mathbb{Z}/217\mathbb{Z}$.
+	\item Bestem den inverse til 514 i $\mathbb{Z}/1001\mathbb{Z}$.
+\end{enumerate}
+
+\subsection*{Opgave 5}
+Når vi i kryptologi skal bestemme koder, så skal vi kunne udregne udtryk som $3^{2114} \fmod{7}$. (I virkeligheden kan potenserne være meget større).
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv en multiplikationstabel for $\mathbb{Z}/7\mathbb{Z}$. 
+	\item Udregn $3^{2114} \fmod{7}$ ved gentagende at kvadrere tallet. 
+\end{enumerate}

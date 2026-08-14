@@ -1,0 +1,103 @@
+\begin{center}
+\Huge
+Differentiation af produkt af funktioner
+\end{center}
+
+
+\section*{Produktreglen}
+\stepcounter{section}
+
+Det er endnu ikke klart, hvordan vi skal differentiere produktet af to funktioner. Vi har tidligere set, at den afledede af summen af to funktioner blot er summen af de afledede, men det forholder sig desværre ikke tilsvarende for produkter af funktioner. Vi skal derimod anvende produktreglen.
+\begin{setn}[Produktreglen]
+Lad $f$ og $g$ være to funktioner differentiable på hele deres definitionsmængde. Så er funktionen
+\begin{align*}
+	h(x) = f(x)\cdot g(x)
+\end{align*}
+differentiabel på hele sin definitionsmængde og 
+\begin{align}\label{eq:produktregel}
+	h'(x) = f'(x)\cdot g(x) + f(x)\cdot g'(x).
+\end{align}
+\end{setn}
+\begin{proof}
+Vi starter med at opskrive sekanthældningen $a_s$ i $x_0$ og får
+\begin{align*}
+	a_s = \frac{f(x_0 + h)g(x_0+h)-f(x_0)g(x_0)}{h}.
+\end{align*}
+Vi lægger nu nul til i tælleren på en smart måde, som
+\begin{align*}
+	0 = f(x_0 + h)g(x_0)-f(x_0+h)g(x_0).
+\end{align*}
+Dette giver os
+\begin{align*}
+	a_s &= \frac{f(x_0 + h)g(x_0+h)-f(x_0)g(x_0) + f(x_0 + h)g(x_0)-f(x_0 + h)g(x_0)}{h} \\
+	&=\frac{f(x_0 + h)\big(g(x_0+h) - g(x_0)\big) + g(x_0)\big(f(x_0+h)-f(x_0) \big)}{h}.
+\end{align*}
+Nu sættes $f(x_0 +h)$ og $g(x_0)$ ud foran brøken
+\begin{align*}
+	a_s = f(x_0 + h)\frac{g(x_0 + h) - g(x_0)}{h} + g(x_0)\frac{f(x_0 + h)-f(x_0)}{h}.
+\end{align*}
+Vi lader nu $h \to 0$.
+\begin{align*}
+	\lim_{h \to 0} a_s = \lim_{h \to 0} f(x_0 + h)\frac{g(x_0 + h) - g(x_0)}{h} + \lim_{h \to 0} g(x_0)\frac{f(x_0 + h)-f(x_0)}{h}
+\end{align*}
+
+\begin{align*}
+	\lim_{h \to 0} a_s &= f(x_0)\underbrace{\lim_{h \to 0}\frac{g(x_0 + h) - g(x_0)}{h}}_{g'(x_0)} + g(x_0)
+	\underbrace{\lim_{h \to 0}\frac{f(x_0 + h)-f(x_0)}{h}}_{f'(x_0)}\\
+	&=f(x_0)g'(x_0) + g(x_0)f'(x_0).
+\end{align*}
+
+Vi har i beviset udnyttet, at grænseværdioperatoren er lineær. 
+\end{proof}
+
+\begin{exa}
+Vi skal differentiere funktionen $h(x) = x^2\cdot 2\sqrt{x}$. Dette er et produkt af to funktioner
+$f(x) = x^2$ og $g(x)= 2\sqrt{x}$. Vi skal derfor anvende produktreglen til at udregne $h'(x)$. I produktreglen skal vi bruge $f'(x)$ og $g'(x)$, så dem bestemmer vi:
+\begin{align*}
+f'(x) &= (x^2)' = 2x\\
+g'(x) &= (2\sqrt{x})' = \frac{2}{2\sqrt{x}} = \frac{1}{\sqrt{x}}.
+\end{align*} 
+Vi kan nu bestemme $h'(x) = (f(x)\cdot g(x))'$ ved brug af produktreglen:
+\begin{align*}
+h'(x) &= (f(x)g(x))' \\
+&= f'(x)g(x)+g'(x)f(x) \\
+&= 2x\cdot 2\sqrt{x} + \frac{1}{\sqrt{x}}\cdot x^2\\
+&= 4x\sqrt{x} + \frac{x^2}{\sqrt{x}}.
+\end{align*}
+\end{exa}
+
+\subsection*{Opgave 1}
+Differentiér følgende funktioner ved brug af produktreglen:
+\begin{align*}
+&1) \   x^2\sqrt{x}   &&2) \  e^x\frac{1}{x}     \\
+&3) \  x\cdot \ln(x)  &&4) \  x^4\cdot e^x	\\
+&5) \   (2x+3)e^x  &&6) \   2x^{3.5}\sqrt{x}    \\
+&7) \  3x + \ln(x)x^2    &&8) \ x^3(x^2+2\ln(x))      \\
+&9) \  10^xx^{10}    &&10) \  \frac{x^4}{x^3}     \\
+&11) \   7x^{\frac{3}{2}}\sqrt{x}   &&12) \     \frac{\ln(x)}{x}   \\
+&13) \ \cos(x)\ \ln(x) &&14) \ \sin(x)\cos(x)  \\
+&15) \ \ln(x)x - x  &&16) \ e^x\cos(x) \sin(x)  \\
+\end{align*}
+
+\subsection*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+\item Bestem ligningen for tangenten til funktionen $f(x)=2x^2e^x$ i punktet $(0,f(0))$.
+\item Bestem ligningen for tangenten til funktionen $f(x) = 10\sqrt{x}\ln(x)$ i punktet $(1,f(1))$.
+\end{enumerate}
+
+\subsection*{Opgave 3}
+Brug produktreglen til at vise, at $(k\cdot f(x))' = k\cdot f'(x)$ for konstante funktioner $k$ og differentiable funktioner $f$. 
+
+\subsection*{Opgave 4}
+
+Vi skal bevise produktreglen, og gør det gennem følgende opgaver.
+\begin{enumerate}[label=\roman*)]
+	\item Opskriv sekanthældningen for $h(x) = f(x)\cdot g(x)$. 
+	\item Læg $f(x_0 + h)g(x_0) - f(x_0 + h)g(x_0)$ til i tælleren. 
+	\item Sæt $f(x_0 + h)$ uden for en parentes.
+	\item Sæt $g(x_0)$ uden for en parentes.
+	\item Del brøken op i to og sæt $f(x_0 + h)$ samt $g(x_0)$ foran brøken.
+	\item Lad nu $h$ gå mod $0$.
+	\item Sæt firkanten.
+\end{enumerate}
+ 
