@@ -1,19 +1,19 @@
 # Fdb version 4
-["biber Afleveringsskabelon3e"] 0 "Afleveringsskabelon3e.bcf" "Afleveringsskabelon3e.bbl" "Afleveringsskabelon3e" 1786702864.28624 0
+["biber Afleveringsskabelon3e"] 0 "Afleveringsskabelon3e.bcf" "Afleveringsskabelon3e.bbl" "Afleveringsskabelon3e" 0 0
   "Afleveringsskabelon3e.bcf" 0 -1 0 "pdflatex"
   "biblio.bib" 0 -1 0 ""
   (generated)
   "Afleveringsskabelon3e.bbl"
   "Afleveringsskabelon3e.blg"
   (rewritten before read)
-["pdflatex"] 1786702860.75528 "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" "Afleveringsskabelon3e.pdf" "Afleveringsskabelon3e" 1786702864.28702 0
-  "Afleveringsskabelon3e.aux" 1786702863 1690 2b5c87b124389aabdae30856e7aa693c "pdflatex"
+["pdflatex"] 1786705108.38873 "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" "Afleveringsskabelon3e.pdf" "Afleveringsskabelon3e" 1786705112.13576 0
+  "Afleveringsskabelon3e.aux" 1786705111 1690 4f684e686695f0e82db0d8b7c39e5df9 "pdflatex"
   "Afleveringsskabelon3e.bbl" 0 -1 0 "biber Afleveringsskabelon3e"
-  "Afleveringsskabelon3e.run.xml" 1786702863 2419 38d0a06c36860b3b472df49cbcf8b9df "pdflatex"
-  "Afleveringsskabelon3e.tex" 1786702860 11454 66f9f624e18309da56218ac8fea38d53 ""
+  "Afleveringsskabelon3e.run.xml" 1786705111 2419 38d0a06c36860b3b472df49cbcf8b9df "pdflatex"
+  "Afleveringsskabelon3e.tex" 1786705100 11008 bcc873c71344612af753b79b93905ed6 ""
   "Billeder/Fjordenhus.jpg" 1716204496 413188 da7b70661761f3f8c7f975a74d0ae82a ""
   "Billeder/Norreg.png" 1714977721 98726 a7a531f913a479cc9f650c035d1aa97e ""
-  "Billeder/is.jpg" 1754663229 1408574 afd15a07cec04ba787c52a8e79b98e0b ""
+  "Billeder/beaver.jpg" 1714977839 14852145 21569c7c4f849bef916912e5ea55751e ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781085383 81074 e9df683c7a67b773afe1722d345afa16 ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect10.tfm" 1781085388 372 07da2e555f4c8dac959d0bb59cacb4dc ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect5.tfm" 1786608675 372 28e18d88a38be26cb20dc1302f0fdc04 ""
@@ -319,7 +319,7 @@
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1773584792 2269 91cd03da61ab1da00145ba8a81560051 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1773584792 20785 8db5f0a2b2ce96dda9fac87ccab29449 ""
   "Preamble.tex" 1786521729 4074 c004d329cf0e94018712d58578612fce ""
-  "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" 1786702860 11454 66f9f624e18309da56218ac8fea38d53 ""
+  "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" 1786705100 11008 bcc873c71344612af753b79b93905ed6 ""
   (generated)
   "Afleveringsskabelon3e.aux"
   "Afleveringsskabelon3e.bcf"
