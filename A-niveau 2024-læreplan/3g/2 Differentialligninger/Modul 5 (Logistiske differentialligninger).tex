@@ -1,0 +1,307 @@
+\begin{center}
+\Huge
+Logistisk vækst
+\end{center}
+
+
+\section*{Logistisk vækst}
+\stepcounter{section}
+
+\textit{Logistisk vækst} er en væksttype, der meget ofte optræder i forbindelse med voksende eksponentiel vækst, hvor der er et naturligt loft for væksten. Dette kan være vækst af bakterier, hvor plads, næring og giftstoffer sætter en øvre grænse for antallet af bakterier. Det kan også være befolkningstilvækst i et land, hvor parametre som velstand, plads og lignende sætter et loft for befolkningen i et land eller en by. 
+
+Det var også den væksttype, vi beskrev i det introducerende eksempel i vores første modul om differentialligninger. 
+
+\begin{defn}[Logistisk differentialligning]
+	En differentialligning på formen 
+	\begin{align*}
+		y' = ay(M-y)
+	\end{align*}
+	kaldes for en \textit{logistisk differentialligning}. En løsning $y$ til differentialligningen siges at have logistisk vækst. 
+\end{defn}
+Betragtes den \textit{relative væksthastighed} $y'/y$ for denne differentialligning, så vil den aftage lineært som funktion af $y$, da
+\begin{align*}
+	\frac{y'}{y} = aM - ay.
+\end{align*}
+Bemærk desuden, at differentialligningen
+\begin{align*}
+	y' = ay(M-y)
+\end{align*}
+har den trivielle løsning $y(x) = 0$. Denne løsning vil vi se bort fra. Før vi opskriver løsningen, vil vi tegne et hældningsfelt for en logistisk differentialligning. Dette kan ses på Figur \ref{fig:loghæld}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -0.5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+		ticks = none,
+	]
+		
+		\foreach \xVal in {-5,-4.5,...,5}{
+			\foreach \yVal in {0,0.25,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{ 0.3*\yVal*(5 - \yVal)};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{0.5*\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Hældningsfelt for differentialligningen $y' = ay(M - y)$.}
+	\label{fig:loghæld}
+\end{figure}
+Betragter vi hældningsfeltet, kan vi ane, at vi har en eksponentiel fase i begyndelsen af løsningskurven. Når løsningskurven bevæger sig tættere på \textit{bæreevnen} $M$, så flader kurven ud. Bæreevnen $M$ er det tal, løsningskurverne asymptotisk bevæger sig mod, når $x \to \infty$. 
+\begin{setn}[Logistisk differentialligning]
+	Den logistiske differentialligning
+	\begin{align*}
+		y' = ay(M-y)
+	\end{align*}
+	har den ikke-trivielle fuldstændige løsning
+	\begin{align*}
+		y(x) = \frac{M}{1+ce^{-aMx}},
+	\end{align*}
+	for $c\in \mathbb{R}$. 
+\end{setn}
+\begin{proof}
+	Igen deles beviset i to dele: Vis, at $y$ givet ved
+	\begin{align*}
+		y(x) = \frac{M}{1+ce^{-aMx}}
+	\end{align*}
+	er en løsning. Dette viser vi først. Vi ser først på venstresiden i differentialligning, hvor vi indsætter vores løsning.
+	\begin{align*}
+		y'(x) &= \left( \frac{M}{1+ce^{-aMx}}\right)'\\
+		&= -\frac{M}{(1+ce^{-aMx})^2}ce^{-aMx}(-aM)\\
+		&= \frac{M^2a}{(1+ce^{-aMx})^2}ce^{-aMx}.
+	\end{align*}
+	Vi betragter nu højresiden i differentialligningen.
+	\begin{align*}
+		ay(M-y) &= aMy - ay^2 \\
+		&= aM\frac{M}{(1+ce^{-aMx})} - a\frac{M^2}{(1+ce^{-aMx})^2}\\
+		&= \frac{aM^2}{(1+ce^{-aMx})^2}(1+ce^{-aMx}) - \frac{aM^2}{(1+ce^{-aMx})^2} \\
+		&= \frac{aM^2}{(1+ce^{-aMx})^2} + \frac{aM^2}{(1+ce^{-aMx})^2}ce^{-aMx} - \frac{aM^2}{(1+ce^{-aMx})^2} \\
+		&= \frac{aM^2}{(1+ce^{-aMx})^2}ce^{-aMx},
+	\end{align*}
+	og da dette er lig venstresiden har vi vist, at $y(x)$ er en løsning til den logistiske differentialligning.
+	Vi skal nu vise, at enhver løsning er på denne form. 	Antag derfor, at $y:\mathbb{R} \to \mathbb{R}$ er en løsning til differentialligningen
+	\begin{align*}
+		y' = ay(M-y).
+	\end{align*}
+	Antag desuden, at $y(x)\neq 0$ (vi ser bort fra den trivielle løsning). Vi definerer så hjælpefunktionen $z:\mathbb{R} \to \mathbb{R}$ givet ved
+	\begin{align*}
+		z(x) = \frac{1}{y(x)},
+	\end{align*}
+	som vi differentierer.
+	\begin{align*}
+		z'(x) &= -\frac{1}{y(x)^2}y'(x)\\
+		&= -\frac{1}{y(x)^2}(ay(x)(M-y(x)))\\
+		&= -\frac{1}{y(x)}(a(M-y(x)))\\
+		&= -aM \frac{1}{y(x)} + a\\
+		&= a-aMz(x).
+	\end{align*}
+	Dermed har vi, at 
+	\begin{align*}
+		z(x) = \frac{a}{aM} + \tilde{c}e^{-aMx},
+	\end{align*}
+	for $\tilde{c} \in \mathbb{R}$. Da vi definerede, at 
+	\begin{align*}
+		z(x) = \frac{1}{y(x)}, 
+	\end{align*}
+	så har vi da, at
+	\begin{align*}
+		y(x) &= \frac{1}{z(x)}\\
+		&= \frac{1}{\frac{1}{M}+\tilde{c}e^{-aMx}}\\
+		&= \frac{M}{1+ce^{-aMx}},
+	\end{align*}
+	hvor $c = \tilde{c}/M$.
+\end{proof}
+Vi kan indtegne en løsningskurve i vores hældningsfelt for at se, hvordan en sådan kurve forløber. Dette kan ses på Figur \ref{fig:logkurve}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -0.5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+		ticks = none,
+	]
+		\addplot[color = Melon, thick, domain = -5:5, samples = 400] {10/(2 + 3*exp(-5/5*x))};
+		\foreach \xVal in {-5,-4.5,...,5}{
+			\foreach \yVal in {0,0.25,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{ 0.5*\yVal*(5 - \yVal)};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{0.5*\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Hældningsfelt samt integralkurve for differentialligningen $y' = ay(M - y)$.}
+	\label{fig:logkurve}
+\end{figure}
+\begin{exa}
+	En differentialligning er givet ved
+	\begin{align*}
+		y' = 0.03y(14-y).
+	\end{align*}
+	Den generelle løsning til differentialligningen er derfor givet ved
+	\begin{align*}
+		y(x) = \frac{14}{1+ce^{-0.03\cdot 14 x}}.
+	\end{align*}
+\end{exa}
+\begin{exa}
+	Vi får givet en differentialligning
+	\begin{align*}
+		\frac{dy}{dt} = \frac{1}{2}y(6-y) 
+	\end{align*}
+	og skal bestemme en partikulær løsning $f$, der går gennem punktet $(0,1)$.
+	Vi finder den fuldstændige løsning
+	\begin{align*}
+		f(t) = \frac{6}{1+ce^{-\frac{1}{2}\cdot 6t}} 
+		= \frac{6}{1 + ce^{-3t}}.
+	\end{align*}
+	Vi indsætter nu vores begyndelsesbetingelse $f(0) = 1$ og får
+	\begin{align*}
+		f(0) = \frac{6}{1 + ce^{-3\cdot 0}} = 1 &\Leftrightarrow \ \frac{6}{1 + c} = 1 \\
+		&\Leftrightarrow \ c = 5.
+	\end{align*}
+	Den partikulære løsning findes altså til at have $c = 5$ og dermed at have forskriften
+	\begin{align*}
+		f(t) = \frac{6}{1 + 5e^{-3t}}.
+	\end{align*}
+\end{exa}
+
+
+Det ser på Figur \ref{fig:logkurve} ud som om, at hældningen for den logistiske løsningskurve er højest når vi er halvvejs til bæreevnen $M$, eller mere præcist, at $y(x) = \frac{M}{2}$. Dette viser sig at være tilfældet, og vi formulerer det i følgende sætning. 
+\begin{setn}\label{setn:maksvaekst}
+	For en logistisk funktion $y$ givet ved
+	\begin{align*}
+		y(x) = \frac{M}{1+ce^{-aMx}}
+	\end{align*}
+	er væksthastigheden $y'$ maksimal, når 
+	\begin{align*}
+		y(x) = \frac{M}{2}
+	\end{align*}
+	Denne værdi antages, når 
+	\begin{align*}
+		x = \frac{\ln(c)}{aM}.
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Opgave.
+\end{proof}
+
+\newpage
+\subsection*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item En differentialligning er givet ved
+	\begin{align*}
+		y' = 2y(10-y).
+	\end{align*}
+	Bestem en generel løsning til differentialligningen. 
+	\item En differentialligning er givet ved
+	\begin{align*}
+		\frac{dy}{dt} = \frac{1}{5}y(125-y).
+	\end{align*}
+	Bestem en generel løsning til differentialligningen. 
+	\item En differentialligning er givet ved
+	\begin{align*}
+		\frac{dy}{dx} = 2y(999-y).
+	\end{align*}
+	Bestem en generel løsning til differentialligningen. 
+	\item En differentialligning er givet ved
+	\begin{align*}
+		y' = 0.02y(1000-y).
+	\end{align*}
+	Bestem en generel løsning til differentialligningen. 
+\end{enumerate}
+
+\subsection*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item En differentialligning er givet ved
+	\begin{align*}
+		y' = y(2-y).
+	\end{align*}
+	Bestem en partikulær løsning $y(x)$, der går gennem punktet $(0,2)$. 
+	\item En differentialligning er givet ved
+	\begin{align*}
+		y' = 0.1y(100-y).
+	\end{align*}
+	Bestem en partikulær løsning $y(x)$, der går gennem punktet $(0,50)$. 
+	\item En differentialligning er givet ved
+	\begin{align*}
+		\frac{dy}{dt} = 0.5y(120-y).
+	\end{align*}
+	Bestem en partikulær løsning $y(t)$, der går gennem punktet $(0,1)$. 
+	\item En differentialligning er givet ved
+	\begin{align*}
+		\frac{dy}{dt} = 0.05y(20-y).
+	\end{align*}
+	Bestem en partikulær løsning $y(t)$, der går gennem punktet $(-\ln(2),8)$. 
+\end{enumerate}
+\subsection*{Opgave 3}
+Vi skal vise, at Sætning \ref{setn:maksvaekst} er sand. 
+\begin{enumerate}[label = \roman*)]
+	\item Introducér en hjælpefunktion $h$, der giver hældningen af $y$ som funktion af $y$ ved
+	\begin{align*}
+		h(y) = ay(M-y)
+	\end{align*}
+	og differentiér denne funktion. 
+	\item Find maksimum for $h$ ved at løse ligningen
+	 $h'(y)=0$.
+\end{enumerate}
+Vi skal nu vise anden del af sætningen
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{2}
+	\item Løs ligningen 
+	\begin{align*}
+		y(x) = \frac{M}{2}
+	\end{align*}
+	for den logistiske funktion
+	\begin{align*}
+		y(x) = \frac{M}{1 + ce^{-aMx}}.
+	\end{align*}
+\end{enumerate}
+
+\subsection*{Opgave 4 (Med Maple)}
+En differentialligning er givet ved
+\begin{align*}
+	y' = 0.23y(521.2 - y).
+\end{align*}
+\begin{enumerate}[label = \roman*)]
+	\item Bestem en fuldstændig løsning til differentialligningen.
+	\item Udnyt, at $y(4) = 200$ til at bestemme en partikulær løsning til differentialligningen.
+	\item Bestem tallet $y(13)$. 
+	\item Bestem det tidspunkt, hvor væksthastigheden er højest
+\end{enumerate}
+
+\subsection*{Opgave 5 (Med Maple)}
+En logistisk differentialligning er givet ved
+\begin{align*}
+	\frac{dy}{dt} = 0.11\left(1 - \frac{y}{71.3}\right)
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en partikulær løsning $f$ til differentialligningen, der går gennem $(-2,33)$.
+	\item Løs ligningen $f(t) = 60$.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Vis, at 
+\begin{align*}
+	y(x) = \frac{10}{1+13e^{-x}}
+\end{align*}
+er en partikulær løsning til differentialligningen
+\begin{align*}
+	y' = 0.1y(10-y).
+\end{align*}

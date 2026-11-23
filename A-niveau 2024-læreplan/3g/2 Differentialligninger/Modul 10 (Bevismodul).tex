@@ -1,0 +1,141 @@
+
+\begin{center}
+	\Huge
+	Bevismodul
+\end{center}
+
+\stepcounter{section}
+
+\begin{setn}\label{setn:2}
+	Differentialligningen 
+	\begin{align*}
+		y' = ky
+	\end{align*}
+	har den fuldstændige løsning
+	\begin{align*}
+		y(x) = ce^{kx},
+	\end{align*}
+	hvor $c \in \mathbb{R}$. 
+\end{setn}
+\begin{proof}
+	Beviset består af to dele - Vi skal vise, at $y(x) = ce^{kx}$ er en løsning, og så skal vi vise, at alle løsninger er på formen $y(x) = ce^{kx}$. Første del er en opgave,
+	og anden del klarer vi her. 
+	Antag derfor, at $y(x)$ er en løsning til $y' = ky$. Vi definerer så en hjælpefunktion
+	\begin{align*}
+		z(x) = y(x)e^{-kx},
+	\end{align*}
+	som vi differentierer.
+	\begin{align*}
+		z'(x) = y'(x)e^{-kx}+y(x)(-k)e^{-kx} = ky(x)e^{-kx}-ky(x)e^{-kx}=0.
+	\end{align*}
+	Da $z'(x)=0$, så betyder det, at $z(x) = c$. Derfor ved vi, at
+	\begin{align*}
+		z(x) = y(x)e^{-kx} = c
+	\end{align*}
+	eller 
+	\begin{align*}
+		y(x) = ce^{kx},
+	\end{align*}
+	hvilket var hvad, vi skulle vise. 		 
+\end{proof}
+
+
+\begin{setn}\label{setn:3}
+	Differentialligningen
+	\begin{align}\label{eq:diff3}
+		y' = b - ay
+	\end{align}
+	har den fuldstændige løsning
+	\begin{align*}
+		y(x) = \frac{b}{a} + ce^{-ax},
+	\end{align*}
+	hvor $c \in \mathbb{R}$.
+\end{setn}
+\begin{proof}
+	Beviset består som før af to dele - Vi skal vise, at $y(x) = \frac{b}{a} +ce^{-ax}$ er en løsning samt at enhver løsning vil være på denne form. Igen skal I selv stå for
+	første del af beviset - Vi beviser her anden del.
+	
+	Antag derfor, at $y(x)$ er en løsning til \eqref{eq:diff3}. Vi introducerer så en hjælpefunktion
+	\begin{align*}
+		z(x) = b-ay(x). 
+	\end{align*}
+	Igen differentierer vi hjælpefunktionen. 
+	\begin{align*}
+		z'(x) = -ay'(x) = -a(b-ay(x)) =-az(x). 
+	\end{align*}
+	Da $z' = -az$, så har $z$ ifølge Sætning \ref{setn:2} løsningen
+	\begin{align*}
+		z(x) = \tilde{c}e^{-ax}. 
+	\end{align*}
+	Derfor fås nu
+	\begin{align*}
+		b-ay(x) = \tilde{c}e^{-ax} \ &\Leftrightarrow \ -ay(x) = -b+\tilde{c}e^{-ax}\\
+		&\Leftrightarrow	\ y(x) = \frac{-b}{-a} + \frac{\tilde{c}}{-a}e^{-ax}\\
+		&\Leftrightarrow \ y(x) = \frac{b}{a} + ce^{-ax},
+	\end{align*}
+	hvor $-\tilde{c}/a = c$. 
+\end{proof}
+
+\begin{setn}[Logistisk differentialligning]
+	Den logistiske differentialligning
+	\begin{align*}
+		y' = ay(M-y)
+	\end{align*}
+	har den ikke-trivielle fuldstændige løsning
+	\begin{align*}
+		y(x) = \frac{M}{1+ce^{-aMx}},
+	\end{align*}
+	for $c\in \mathbb{R}$. 
+\end{setn}
+\begin{proof}
+	Igen deles beviset i to dele: Vis, at $y$ givet ved
+	\begin{align*}
+		y(x) = \frac{M}{1+ce^{-aMx}}
+	\end{align*}
+	er en løsning. Dette viser vi først. Vi ser først på venstresiden i differentialligning, hvor vi indsætter vores løsning.
+	\begin{align*}
+		y'(x) &= \left( \frac{M}{1+ce^{-aMx}}\right)'\\
+		&= -\frac{M}{(1+ce^{-aMx})^2}ce^{-aMx}(-aM)\\
+		&= \frac{M^2a}{(1+ce^{-aMx})^2}ce^{-aMx}.
+	\end{align*}
+	Vi betragter nu højresiden i differentialligningen.
+	\begin{align*}
+		ay(M-y) &= aMy - ay^2 \\
+		&= aM\frac{M}{(1+ce^{-aMx})} - a\frac{M^2}{(1+ce^{-aMx})^2}\\
+		&= \frac{aM^2}{(1+ce^{-aMx})^2}(1+ce^{-aMx}) - \frac{aM^2}{(1+ce^{-aMx})^2} \\
+		&= \frac{aM^2}{(1+ce^{-aMx})^2} + \frac{aM^2}{(1+ce^{-aMx})^2}ce^{-aMx} - \frac{aM^2}{(1+ce^{-aMx})^2} \\
+		&= \frac{aM^2}{(1+ce^{-aMx})^2}ce^{-aMx},
+	\end{align*}
+	og da dette er lig venstresiden har vi vist, at $y(x)$ er en løsning til den logistiske differentialligning.
+	Vi skal nu vise, at enhver løsning er på denne form. 	Antag derfor, at $y:\mathbb{R} \to \mathbb{R}$ er en løsning til differentialligningen
+	\begin{align*}
+		y' = ay(M-y).
+	\end{align*}
+	Antag desuden, at $y(x)\neq 0$ (vi ser bort fra den trivielle løsning). Vi definerer så hjælpefunktionen $z:\mathbb{R} \to \mathbb{R}$ givet ved
+	\begin{align*}
+		z(x) = \frac{1}{y(x)},
+	\end{align*}
+	som vi differentierer.
+	\begin{align*}
+		z'(x) &= -\frac{1}{y(x)^2}y'(x)\\
+		&= -\frac{1}{y(x)^2}(ay(x)(M-y(x)))\\
+		&= -\frac{1}{y(x)}(a(M-y(x)))\\
+		&= -aM \frac{1}{y(x)} + a\\
+		&= a-aMz(x).
+	\end{align*}
+	Dermed har vi, at 
+	\begin{align*}
+		z(x) = \frac{a}{aM} + \tilde{c}e^{-aMx},
+	\end{align*}
+	for $\tilde{c} \in \mathbb{R}$. Da vi definerede, at 
+	\begin{align*}
+		z(x) = \frac{1}{y(x)}, 
+	\end{align*}
+	så har vi da, at
+	\begin{align*}
+		y(x) &= \frac{1}{z(x)}\\
+		&= \frac{1}{\frac{1}{M}+\tilde{c}e^{-aMx}}\\
+		&= \frac{M}{1+ce^{-aMx}},
+	\end{align*}
+	hvor $c = \tilde{c}/M$.
+\end{proof}

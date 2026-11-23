@@ -1,0 +1,377 @@
+\begin{center}
+\Huge
+Tangentligninger og hældningsfelter
+\end{center}
+
+
+\section*{Tangentlinjer}
+\stepcounter{section}
+
+Hvis vi har en differentialligning, så ved vi, at den både har en generel løsning, der består af dens uendeligt mange partikulære løsninger. Til hvert punkt er det oftest let at finde hældningen af tangenten til den partikulære løsning, der går gennem netop dette punkt. Den differentierede optræder jo ofte eksplicit i differentialligningen. 
+
+Vi vil gennem eksempler se, hvordan vi bestemmer tangentligninger til integralkurver. 
+
+\begin{exa}
+	Vi betragter differentialligningen 
+	\begin{align*}
+		y' = xy. 
+	\end{align*}
+	Vi ved, at der findes en løsning gennem punktet $(3,2)$, og vi vil gerne bestemme ligningen for tangenten til løsningskurven gennem dette punkt. Vi udnytter, at
+	en ret linje kan skrives som 
+	\begin{align*}
+		y = ax+b,
+	\end{align*}
+	og vi ved, at hældningen er givet ved $y' = xy$ i punktet $(3,2)$. Hældningen er derfor
+	\begin{align*}
+		a = y' = 3\cdot 2 = 6.
+	\end{align*}
+	Vi ved også, at linjen går gennem $(3,2)$. Derfor må der gælde, at 
+	\begin{align*}
+		2 = 6\cdot 3 + b \ \Leftrightarrow \  b =-16. 
+	\end{align*}
+	Ligningen for tangenten til løsningskurven gennem $(3,2)$ er derfor
+	\begin{align*}
+		y = 6x-16.
+	\end{align*}
+	Bemærk, at det ikke er nødvendigt at bestemme den partikulære løsning gennem punktet $(3,2)$ for at bestemme tangentligningen.
+\end{exa}
+
+
+\section*{Hældningsfelter}
+\stepcounter{section}
+Et hældningsfelt er en måde at visualisere løsningskurverne til en differentialligning. Hældningsfelterne består af små stykker af tangentlinjer indtegnet i et koordinatsystem. Disse små stykker af tangentlinger kaldes for \textit{linjeelementer}.
+\begin{exa}
+	Vi betragter differentialligningen
+	\begin{align*}
+		y' = xy.
+	\end{align*}
+	Et hældningsfelt for denne differentialligning kan ses på Figur \ref{fig:hel1}.
+	\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-5,-4.5,...,5}{
+			\foreach \yVal in {-5,-4.5,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{\xVal*\yVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Hældningsfelt for $y' = xy$.}
+	\label{fig:hel1}
+	\end{figure}
+	Vi kan på figuren se, hvordan tangenterne til løsningskurverne ser ud, og vi kan på denne måde få en fornemmelse af, hvordan de partikulære løsninger ændrer sig med forskellige begyndelsesværdier. 
+\end{exa}
+
+\begin{exa}
+	Vi kan også tegne en partikulær løsning ind i vores hældningsfelt. 
+	Vi betragter der differentialligningen 
+	\begin{align*}
+		y' = y + x.
+	\end{align*}
+	Vi tegner en partikulær løsning ind i hældningsfeltet, som kan ses på Figur \ref{fig:hel2}. Vi vælger den partikulære løsning, hvis integralkurve går gennem punktet $(1,1)$.
+	\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\addplot[color = Melon, thick, domain = -5:5, samples = 200]  {3*exp(x - 1) - x - 1};
+		\foreach \xVal in {-5,-4.5,...,5}{
+			\foreach \yVal in {-5,-4.5,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{\xVal + \yVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Hældningsfelt for $y' = y + x$ samt løsningskurve gennem punktet $(1,1)$.}
+	\label{fig:hel2}
+	\end{figure}
+	Vi kan desuden bestemme linjeelementet i punktet $(2,1)$, som er givet ved
+	\begin{align*}	
+		(x,y,y') = (2,1,3).
+	\end{align*}
+\end{exa}
+
+\subsection*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem tangenthældningen for løsningskurven til differentialligningen
+	\begin{align*}
+		y' = 2x - 10y
+	\end{align*}
+	i punktet $(3,-5)$. Bestem desuden linjeelementet i punktet.
+	\item Bestem tangenthældningen for løsningskurven til differentialligningen
+	\begin{align*}
+		\frac{d y}{d x} = \frac{y}{x}
+	\end{align*}
+	i punktet $(3,-9)$. Bestem desuden linjeelementet i punktet.
+	\item Bestem tangenthældningen for løsningskurven til differentialligningen 
+	\begin{align*}
+		y' = \sqrt{x^2 + y^2} 
+	\end{align*}
+	i punktet $(-8,6)$. Bestem desuden linjeelementet i punktet.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem tangentligningen for integralkurven til differentialligningen
+	\begin{align*}
+		y' = x + y
+	\end{align*}
+	gennem punktet $(5,-6)$.
+	\item Bestem tangentligningen for integralkurven til differentialligningen
+	\begin{align*}
+		\frac{d y}{d x} = \frac{y}{x}
+	\end{align*}
+	gennem punktet $(-2,3)$.
+	\item Bestem tangentligningen for integralkurven til differentialligningen 
+	\begin{align*}
+		f'(x) = \frac{x}{y} 
+	\end{align*}
+	gennem punktet $(18,6)$.
+\end{enumerate}
+\newpage
+\subsection*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Et hældningsfelt for differentialligningen
+	\begin{align*}
+		y' = \frac{y}{x}
+	\end{align*}
+	er givet ved
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-5,-4.6,...,5}{
+			\foreach \yVal in {-5,-4.6,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{\yVal / \xVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	Tegn partikulære løsning gennem punkterne $(0,0)$ og $(1,2)$.
+	\item Et hældningsfelt for differentialligningen
+	\begin{align*}
+		y' = x + y
+	\end{align*}
+	er givet ved
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-5,-4.6,...,5}{
+			\foreach \yVal in {-5,-4.6,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{\xVal + \yVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	Tegn partikulære løsninger gennem punkterne $(0,2)$, $(-2,0)$ og $(-2,4)$.
+	\newpage
+	\item Et hældningsfelt for differentialligningen
+	\begin{align*}
+		y' = x^2 + y^2
+	\end{align*}
+	er givet ved
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -2, xmax = 2,
+		ymin = -2, ymax = 2,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-2,-1.8,...,2}{
+			\foreach \yVal in {-2,-1.8,...,2}{
+				\pgfmathsetmacro{\sizescale}{0.08};
+				\pgfmathsetmacro{\slope}{\xVal * \xVal + \yVal * \yVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	Tegn partikulære løsninger gennem punkterne $(-1,-1)$, $(1,-1)$ og $(1,0)$.
+	\item Et hældningsfelt for differentialligningen
+	\begin{align*}
+		y' = \frac{x}{y}
+	\end{align*}
+	er givet ved
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = 0, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-5,-4.6,...,5}{
+			\foreach \yVal in {0.2,0.4,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{\xVal / \yVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{0.5*\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	Tegn partikulære løsninger gennem punkterne $(2,1)$, $(2,2)$ og $(2,3)$.
+	\newpage
+	\item Et hældningsfelt for differentialligningen
+	\begin{align*}
+		y' = y^2
+	\end{align*}
+	\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-5,-4.6,...,5}{
+			\foreach \yVal in {-5,-4.6,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{\yVal * \yVal};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	Tegn partikulære løsninger gennem punkterne $(4,2)$ og $(0,-2)$
+	\item Et hældningsfelt for differentialligningen
+	\begin{align*}
+		\frac{d y}{d x} = \sin(y)
+	\end{align*}
+	 er givet ved
+	 \begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+		xmin = -5, xmax = 5,
+		ymin = -5, ymax = 5,
+		axis lines = center,
+		xlabel = $x$,
+		ylabel = $y$,
+	]
+		\foreach \xVal in {-5,-4.6,...,5}{
+			\foreach \yVal in {-5,-4.6,...,5}{
+				\pgfmathsetmacro{\sizescale}{0.15};
+				\pgfmathsetmacro{\slope}{sin(deg(\yVal))};
+				\pgfmathsetmacro{\angle}{atan(\slope)};
+				\pgfmathsetmacro{\xlen}{\sizescale*cos(\angle)};
+				\pgfmathsetmacro{\ylen}{\sizescale*sin(\angle)};
+				\edef\temp{\noexpand\draw [color = SeaGreen] 
+				(axis cs: \xVal-\xlen, \yVal-\ylen) -- (axis cs: \xVal + \xlen, \yVal + \ylen);}
+				\temp
+			}
+		}
+	\end{axis}
+	\end{tikzpicture}
+	\end{center}
+	Tegn partikulære løsninger gennem punkterne $(0,2)$, $(-2,2)$ og $(2,4)$.
+\end{enumerate}
+\newpage
+\subsection*{Opgave 4}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem tangentligningen for løsningskurven til differentialligningen
+	\begin{align*}
+		y' = 5y
+	\end{align*}
+	i punktet (2,4).
+	\item Det oplyses, at den generelle løsning til differentialligningen er givet ved
+	\begin{align*}
+		y(x) = ce^{5x}.
+	\end{align*}
+	Vis, at dette er en løsning.
+	\item Bestem den partikulære løsning, der går gennem punktet (2,4).
+	\item Bestem nu tangentligningen for denne funktion i punktet (2,4), og sammenlign dit 
+	resultat med i).
+\end{enumerate}
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem tangentligningen for løsningskurven til differentialligningen
+	\begin{align*}
+		\frac{d y}{d x} = \frac{x}{y}
+	\end{align*}
+	i punktet (6,3).
+	\item Det oplyses, at den generelle løsning til differentialligningen er givet ved
+	\begin{align*}
+		y(x) = \sqrt{x^2 + k}.
+	\end{align*}
+	Vis, at dette er en løsning.
+	\item Bestem den partikulære løsning, der går gennem punktet $\left(3, 5 \right)$.
+	\item Bestem nu tangentligningen for denne funktion i punktet $\left(3, 5 \right)$
+	, og sammenlign dit 
+	resultat med i).
+\end{enumerate}

@@ -1,0 +1,145 @@
+
+
+\begin{center}
+\Huge
+Beviser
+\end{center}
+\stepcounter{section}
+\begin{setn}[Projektionssætningen]
+For to vektorer $\vv{a}$ og $\vv{b}$ er projektionen af $\vv{a}$ på $\vv{b}$, som vi betegner
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \vv{a}_{\vv{b}}, 
+\end{align*}
+givet ved
+\begin{align*}
+\textnormal{proj}_{\vv{b}}(\vv{a}) = \frac{\vv{a}\cdot \vv{b}}{|\vv{b}|^2} \vv{b}.
+\end{align*}
+Længden af  $\vv{a}_{\vv{b}}$ er givet ved
+\begin{align*}
+\left|\vv{a}_{\vv{b}}\right| = \frac{|\vv{a}\cdot \vv{b}|}{|\vv{b}|}
+\end{align*}
+\end{setn}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle,
+		xlabel = $x$,
+		ylabel = $y$,
+		ticks = none, 
+		xmin = -1, xmax = 6,
+		ymin = -1, ymax = 6,
+		]
+			\draw[-{Stealth[scale = 1.3]}, color = blue!40, thick] (axis cs: 0,0) -- (axis cs: 5,1);
+			\draw[-{Stealth[scale = 1.3]}, color = red!40, thick] (axis cs: 0,0) -- (axis cs: 3,3);
+			\draw[dashed, thick, color = red!40] (axis cs:  45/13, 9/13) -- (axis cs: 3,3);
+			\draw[dashed, red!40, thick] (axis cs: 45/13-0.4-0.4*0.2, 9/13-0.4*0.2+0.4) -- (axis cs: 45/13-0.4, 9/13-0.4*0.2);
+			\draw[dashed, red!40, thick] (axis cs: 45/13-0.4-0.4*0.2, 9/13-0.4*0.2+0.4) -- (axis cs: 45/13-0.4*0.2, 9/13+0.4);
+			\node[color = blue!40] at (axis cs: 5,1-0.5) {$\vv{b}$};
+			\node[color = red!40] at (axis cs: 3,3+0.5) {$\vv{a}$};
+			\node[color = purple] at (axis cs:  45/13, 9/13-0.4) {$\vv{a_{\vv{b}}}$};
+			\draw[-{Stealth[scale = 1.3]}, color = purple, thick] (axis cs: 0,0) -- (axis cs:  45/13, 9/13);
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Projektion af vektor på vektor.}
+	\label{fig:projektion}
+\end{figure}
+\subsection*{Bevis for projektionssætningen}
+Vi skal gennem en række små opgaver bevise projektionssætningen. 
+\begin{enumerate}[label=\roman*)]
+	\item Tegn en skitse af Figur \ref{fig:projektion}.
+	\item Tegn en normalvektor $\vv{n}$ til $\vv{b}$, der går langs den stiplede linje på Figur \ref{fig:projektion} op til $\vv{a}$.
+\end{enumerate}
+Vi skal bruge tre kendsgerninger, som I skal overbevise jer selv om sandheden af.
+\begin{enumerate}[label=\roman*)]
+	\setcounter{enumi}{2}
+	\item Overbevis jer selv om, at 
+	\begin{align}\label{eq:1}
+		\vv{a_{\vv{b}}} + \vv{n} = \vv{a}.
+	\end{align}	 
+	\item Overbevis jer selv om, at
+	\begin{align}\label{eq:2}
+		\vv{a_{\vv{b}}} = k \vv{b}
+	\end{align}	  
+	for et tal $k$. 
+	\item Overbevis jer selv om, at
+	\begin{align}\label{eq:3}
+		\vv{n} \cdot \vv{b} = 0.
+	\end{align}	
+	\item Isolér $\vv{n}$ i \eqref{eq:1}.
+	\item Indsæt dette udtryk for $\vv{n}$ i \eqref{eq:3} (vink: husk parentes).
+	\item Prik $\vv{b}$ ind i parentesen (Hæv parentesen). 
+	\item Indsæt udtrykket for $\vv{a_{\vv{b}}}$ fra \eqref{eq:2} i udtrykket.
+	\item Isolér $k$ i udtrykket. 
+	\item Udnyt, at $\vv{b}\cdot\vv{b} = \big|\vv{b}\big|^2$ til at omskrive udtrykket.
+	\item Indsæt dette udtryk for $k$ i \eqref{eq:2}.
+	\item Sammenlign med projektionssætningen.
+\end{enumerate}
+
+Ekstraudfordring: Bestem længden af projektionsvektoren og bevis anden del af projektionssætningen.
+
+\newpage
+
+\begin{setn}[Afstand mellem punkt og linje]
+Har vi et punkt $Q(x_1,y_1)$ og en linje $l$ givet ved ligningen
+\begin{align*}
+ax+by+c = 0, 
+\end{align*}
+så kan vi bestemme afstanden mellem $l$ og $Q$ ved
+\begin{align*}
+\textnormal{dist}(Q,l) = \frac{|ax_1+by_1+c|}{\sqrt{a^2+b^2}}
+\end{align*}
+\end{setn}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[axis lines = middle, xmin = -1, ymin = -1, xmax = 4, ymax = 4, ticks = none]
+			\addplot[color = teal, thick] {0.5*x+0.5 };
+			\draw[-{Stealth[scale = 1.4]}, thick, teal]
+			 (axis cs: 2,1.5) -- (axis cs:1,3.5);
+			 \node at (axis cs: 1+0.4,3.5) {$\vv{n}$};
+			
+			\node at (axis cs:0.5,0.75-0.3) {$P$};
+			\node at (axis cs: 1.25-0.4,3) {$Q$};
+			\draw[-{Stealth[scale = 1.4]}, thick, teal]
+			(axis cs: 2,1.5) -- (axis cs: 1.25,3);
+			
+			\draw[-{Stealth[scale= 1.4]}, thick, color = olive]
+			(axis cs: 0.5,0.75) -- (axis cs: 1.25,3); 
+			\draw[-{Stealth[scale= 1.4]}, thick, color = olive]
+			(axis cs: 0.5+1.5,0.75+0.75) -- (axis cs: 1.25+1.5,3+0.75); 
+			\draw[thick, dashed, color = teal]
+			 (axis cs: 1.25+1.5,3+0.75) -- (axis cs: 1.25,3);
+			\node at (axis cs: 1.85,2.5) {$\vv{PQ}_{\vv{n}}$};
+			\filldraw[purple] (axis cs:0.5,0.75) circle (2pt);
+			\filldraw[purple] (axis cs: 1.25,3) circle (2pt);
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Afstand fra punkt til linje}
+	\label{fig:afstand}
+\end{figure}
+\subsection*{Bevis}
+Vi skal bevise afstandsformlen. Vi bruger Figur \ref{fig:afstand} som skabelon
+\begin{enumerate}[label=\roman*)]
+	\item Tegn en linje $l$ i et koordinatsystem som på Figur \ref{fig:afstand}.
+	\item Tegn et punkt $Q(x_1,y_1)$ i koordinatsystemet. Det må ikke ligge på $l$.
+	\item Tegn et punkt $P(x_0,y_0)$ på $l$. Du bestemmer selv hvor. 
+	\item Tegn en vektor $\vv{PQ}$ fra $P$ til $Q$. 
+	\item Tegn en normalvektor $\vv{n}$ til $l$, der går gennem $Q$
+	\item Tegn en repræsentant for den samme vektor som $\vv{PQ}$. Denne skal starte samme sted som $\vv{n}$. 
+	\item Tegn projektionen $\vv{PQ_{\vv{n}}}$.
+	\item Overbevis dig selv om, at afstanden mellem $l$ og $Q$ må være lig længden af $\vv{PQ_{\vv{n}}}$.
+	\item Overbevis dig selv om, at $\vv{n}$ har koordinaterne $\vv{n}=\begin{pmatrix}
+	a \\ b
+	\end{pmatrix}$.
+	\item Opskriv koordinaterne til $\vv{PQ}$
+	\item Udnyt, at længden af en projektion $\vv{a_{\vv{b}}}$ er givet ved
+	\begin{align*}
+		|\vv{a_{\vv{b}}}| = \frac{|\vv{a}\cdot \vv{b}|}{|\vv{b}|}
+	\end{align*}
+	til at opskrive længden af $\vv{a_{\vv{b}}}$.
+	\item Hæv parentesen i tælleren af din brøk.
+	\item Vi er nu næsten færdige. Isolér $c$ i linjens ligning $ax+by+c=0$. 
+	\item Indsæt punktet $P(x_0,y_0)$ i ligningen. 
+	\item Sammenlign udtrykket for $c$ med tælleren i din brøk og lav en substitution. 
+	\item Sammenlign dit resultat med sætningen. 
+\end{enumerate}

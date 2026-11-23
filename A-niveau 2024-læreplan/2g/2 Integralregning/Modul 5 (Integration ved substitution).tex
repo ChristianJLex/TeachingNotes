@@ -1,0 +1,92 @@
+
+\begin{center}
+\Huge
+Integration ved substitution
+\end{center}
+
+\section*{Integration ved substitution}
+\stepcounter{section}
+
+Når vi differentierer sammensatte funktioner, så har vi set, at vi ikke blot kan differentiere den ydre og indre funktion for sig. Vi skal derimod anvende produktreglen. Dette giver os et tilsvarende problem, når vi integrerer: Hvordan finder vi den sammensatte funktion, der giver dette udtryk, når vi differentierer det. Til dette kan vi anvende \textit{integration ved substitution}, der blot er en stilladsering, der hjælper os til at anvende kædereglen baglæns. 
+Vi starter med at tage udgangspunkt i et eksempel.
+\begin{exa}
+	Vi ønsker at bestemme integralet
+	\begin{align*}
+		\int 10\sin(x^2-3)x dx.
+	\end{align*}
+	Vi ved fra kædereglen, at den indre funktion optræder både differentieret og som den oprindelige funktion, så vi 
+	finder den indre funktion og kalder den $u$; i dette tilfælde
+	\begin{align*}
+		u = x^2 - 3.
+	\end{align*}
+	Vi skal i kædereglen også bruge den afledede af den indre funktion, så vi differentierer $u$ som
+	\begin{align*}
+		\frac{du}{dx} = 2x,
+	\end{align*}
+	og vi betragter her $\frac{du}{dx}$ som en brøk (det er det ikke!), da vi gerne vil isolere $dx$. Vi får så
+	\begin{align*}
+		\frac{du}{dx} = 2x &\ \Leftrightarrow \ du = 2xdx\\
+		&\ \Leftrightarrow \frac{du}{2x} = dx.
+	\end{align*}
+	Vi laver nu substitutionen:
+	\begin{align*}
+		\int 10\sin(x^2-3)x dx &= \int 10 \sin(u) x \frac{du}{2x} \\
+		&= \int 5\sin(u) du\\
+		&= -5\cos(u) + k
+	\end{align*}
+	Vi kan nu substituere tilbage
+	\begin{align*}
+		-5\cos(u) + k = -5\cos(x^2 - 3) + k,
+	\end{align*}
+	hvilket er vores stamfunktion. Vi kan let tjekke efter, om den er korrekt.
+	\begin{align*}
+		\left(-5\cos(x^2-3) + k \right)' &= -5(-\sin(x^2-3))\cdot(2x - 0) + 0\\
+		&= 10\sin(x^2-3)x,
+	\end{align*}
+	og vores funktion er derfor en stamfunktion. 
+\end{exa}
+Vi kan opskrive integration ved substitution ved følgende ikke specielt beskrivende sætning.
+\begin{setn}[Integration ved substitution]
+	For en kontinuert funktion $f$ og en differentiabel funktion $g$ gælder der, at
+	\begin{align*}
+		\int f(g(x))\cdot g'(x) dx = F(g(x)) + k,
+	\end{align*}
+	hvor $F$ er en stamfunktion til $f$. 
+\end{setn}
+\begin{proof}
+	Det er blot at differentiere begge sider af lighedstegnet.
+	\begin{align*}
+		\left(\int f(g(x))\cdot g'(x) dx\right)' = (F(g(x)) + k)' 
+		&\ \Leftrightarrow \ f(g(x))\cdot g'(x) = F'(g(x))\cdot g'(x)	 \\
+		&\ \Leftrightarrow \ f(g(x))\cdot g'(x) = f(g(x))\cdot g'(x)	 
+	\end{align*}
+\end{proof}
+Vi skal her tænke $g(x)$ som $u$ og $\frac{du}{dx}$ som $g'(x)$, men det kan stadig være svært at se, hvordan algoritmen vi anvendte i eksemplet er repræsenteret i sætningen. 
+
+\subsection*{Opgave 1}
+Bestem følgende integraler
+\begin{align*}
+	&i) \ \int \frac{2x}{x^2+2x} dx  & &ii) \ \int (6x+6)e^{3x^2+6x} dx \\
+	&iii) \ \int \frac{5}{x(\ln(x))^2} dx & &iv) \ \int \frac{\cos(\frac{1}{t}-2)}{2t^2} dt \\
+	&v) \ \int \frac{2x\cos(x^2)+5}{\sin(x^2)+5x} dx 
+\end{align*}
+\subsection*{Opgave 2}
+\begin{enumerate}[label = \roman*)]
+	\item Bestem en stamfunktion til $f(x) = 4x\sqrt{x^2-2}$, der går igennem $(\sqrt{6},2)$.
+	\item Bestem en stamfunktion til $g(x) = \frac{-\sin(\ln(x)+3)}{x}$, der går gennem $(e^{-3},e^3+5)$.
+	\item Bestem en stamfunktion til $h(x) = \frac{1}{3}t^2(2-t^3)^6$, der går gennem $(2,1)$.
+\end{enumerate}
+
+\subsection*{Udfordring 3}
+\begin{enumerate}[label=\roman*)]
+	\item Løs integralet
+	\begin{align*}
+		\int \frac{x^3}{\sqrt{x^2 + 1}} dx
+	\end{align*}
+	(Vink: Vælg $u = \sqrt{x^2 + 1})$
+	\item Løs integralet
+	\begin{align*}
+		\int \frac{1}{(3t + 1)\sqrt{6t + 2}}dt		
+	\end{align*}
+	(Vink: Vælg $u = \sqrt{6t+2}$)
+\end{enumerate}

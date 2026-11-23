@@ -12,8 +12,8 @@
 \cfoot{Side \thepage \hspace{1pt} af \pageref{LastPage}}
 
 %Husk at rette modul og dato!
-\lhead{Aflevering 1\\ Matematik A }%<---------------------------------------RET
-\chead{28. august 2026}%<----------------------------------------------------RET
+\lhead{Aflevering 4\\ Matematik A }%<---------------------------------------RET
+\chead{4. december 2026}%<----------------------------------------------------RET
 
 
 \begin{document}
@@ -38,7 +38,7 @@
 \phantom{h} \vspace{5cm}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \phantom{h}\\
-{\fontsize{50}{60}\selectfont Aflevering 1}\\%<---------------------------------------RET
+{\fontsize{50}{60}\selectfont Aflevering 4}\\%<---------------------------------------RET
 \phantom{h}\\
 \rule{0.7\textwidth}{0.3mm}\\
 \Large 2026\\
@@ -87,9 +87,26 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 	Uden hjælpemidler
 \end{center}
 \begin{opgavetekst}{Opgave 1}
+	Fordelingen af en stokastisk variabel $X$ kan ses på Tabel 
+	\ref{tab:fordeling}.
+	\begin{table}[H]
+		\rowcolors{1}{SeaGreen!60}{SeaGreen!30}
+		\centering
+		\begin{tabular}{cccccc}
+		$x$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+		$P(X = x)$ &  $0.15$ & $0.25$ & $P(X = 3)$ & $0.10$ & $0.30$
+		\end{tabular}
+	\end{table}
+	\phantom{h}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Reducer udtrykket $(a + b)(a - b) + b^2 - 2a^2$.
+	Bestem sandsynligheden $P(X = 3)$. 
+\end{delopgave}
+\begin{delopgave}{2}
+	Bestem sandsynligheden $P(X > 2)$.
+\end{delopgave}
+\begin{delopgave}{3}
+	Bestem sandsynligheden $P(X \in \{1, 4 \})$. 
 \end{delopgave}
 %
 %
@@ -98,12 +115,16 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %
 %
 \begin{opgavetekst}{Opgave 2}
+	En cirkel er givet ved ligningen
+	\begin{align*}
+		x^2 + 6x + y^2 - 2y + 1 = 0
+	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem grænseværdien for følgende $0/0$-udtryk:
-	\begin{align*}
-		\lim_{x \to 4} \frac{x^2 - 16}{x - 4}.
-	\end{align*}
+	Undersøg, om punktet $P(-3,4)$ ligger på cirklen.
+\end{delopgave}
+\begin{delopgave}{2}
+	Bestem centrum og radius for cirklen. 
 \end{delopgave}
 %
 %
@@ -111,52 +132,29 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %
 %
 \begin{opgavetekst}{Opgave 3}
-	En funktion $f$ er givet ved 
-	\begin{align*}
-		f(x) = \ln(x^2).
-	\end{align*}
+	Vi slår med en sekssidet terning to gange.
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem $f'(x)$.
+	Bestem sandsynligheden for hændelsen: Slå to seksere eller slå ingen seksere.
+\end{delopgave}
+%
+%
+%
+%
+%
+\newpage
+\begin{opgavetekst}{Opgave 4}
+	En differentialligning er givet ved
+	\begin{align*}
+		y' = 6 + 3y,
+	\end{align*}
+	og har en løsning $f$ gennem punktet $(0,7)$.
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem ligningen for tangenten for $f$ i punktet $(0,7)$.
 \end{delopgave}
 \begin{delopgave}{2}
-	Bestem ligningen for tangenten til $f$ i punktet $P(1,f(1))$.
-\end{delopgave}
-%
-%
-%
-%
-%
-\begin{opgavetekst}{Opgave 4}
-	På Figur \ref{fig:arealer} kan vi se grafen for en funktion $f$ samt arealet $A$, der afgrænses af grafen for $f$ og $x$-aksen. Funktionen $f$ har forskriften
-	\begin{align*}
-		f(x) = x^3 - x^2 - 2x.
-	\end{align*}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-		\begin{axis}[
-		axis lines = middle,
-		xmin = -2, xmax = 3,
-		ymin = -5, ymax = 5,
-		xlabel = {$x$}, ylabel = {$y$},
-		xtick = {-2,-1,0,...,3},
-		ytick = {-5,-4,...,5},
-		grid = both
-		]
-			\addplot[color = SeaGreen, thick, domain = -2:3, samples = 200] {x^3 - x^2 - 2*x};
-			\filldraw[domain = -1:2, color = SeaGreen!40, opacity = 0.4, samples = 200] (axis cs: -1,0) -- plot (axis cs: \x, \x*\x*\x - \x*\x - 2*\x) -- (axis cs: 2,0) -- cycle;
-			\node[color = SeaGreen] at (axis cs: 2.5,2.5) {$f$};
-			\node[color = SeaGreen] at (axis cs: 2.5,2.5) {$f$};
-		\end{axis}
-		\end{tikzpicture}
-		\caption{Graf for funktionen $f$ med arealet $A$ markeret.}
-		\label{fig:arealer}
-	\end{figure}
-	\phantom{h}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Vis, at arealet $A = \frac{37}{12}$.
+	Bestem en forskrift for løsningen $f$. 
 \end{delopgave}
 %
 %
@@ -164,117 +162,146 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %
 %
 \begin{opgavetekst}{Opgave 5}
-	En trekant $\triangle ABC$ er givet på Figur \ref{fig:trekant}.
+	En funktion $f$ er givet ved
+	\begin{align*}
+		f(x) = -3x^2 + 4x + 4
+	\end{align*}
+	afgrænser sammen med koordinatakserne en punktmængde $M$. Denne punktmængde kan ses på Figur \ref{fig:areal}
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}
-			\draw[color = SeaGreen, thick] (0,0) -- (10*0.6,0) node[midway, anchor = north] {$10$} 
-			node[pos = 0, anchor = north east] {$A$} node[pos = 1, anchor = north west] {$C$};
-			\draw[color = SeaGreen, thick] (0,0) -- (5*0.6,6.25*0.6) node[midway, anchor = south east] {$8$}
-			node[pos = 1, anchor = south] {$B$};
-			\draw[color = SeaGreen, thick] (5*0.6,6.25*0.6) -- (10*0.6,0) node[midway, anchor = south west] {$8$};
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -0.5, ymin = -1,
+			xmax = 3, ymax = 6,
+			xlabel = $x$, ylabel = $y$,
+			ticks = none,
+		]
+			\fill[olive!20] (axis cs: 0,0) --
+			plot[domain = 0:2, samples = 300] 
+			(axis cs: \x, -3*\x^2 + 4*\x + 4) -- (axis cs: 0,0) -- cycle;
+			\addplot[color = SeaGreen, thick, domain = 0:2, samples = 300] {-3*x^2 + 4*x + 4};
+			\node[color = SeaGreen] at( axis cs: 0.7,2.5) {$M$};
+			\node[color = SeaGreen, anchor = north] at (axis cs: 2,0) {$x_0$};
+		\end{axis}
 		\end{tikzpicture}
-		\caption{Trekanten $\triangle ABC$.}
-		\label{fig:trekant}
+		\caption{Grafen for $f$ samt illustration af punktmængden $M$.}
+		\label{fig:areal}
 	\end{figure}
 	\phantom{h}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Vis, at $\cos(\angle A) = \frac{5}{8}$.
+	Bestem skæringspunktet med $x$-aksen $x_0$. 
+\end{delopgave}
+\begin{delopgave}{2}
+	Bestem arealet af punktmængden $M$.
 \end{delopgave}
 %
 %
 %
-%
-%
-\newpage
-\begin{opgavetekst}{Opgave 6}
-	To vektorer $\vv{a}$ og $\vv{b}$ er givet ved
-	\begin{align*}
-		\vv{a} = \begin{pmatrix}
-			t \\ -1
-		\end{pmatrix}
-	\quad \textnormal{og} \quad
-		\vv{b} = \begin{pmatrix}
-			t-1 \\ 6
-		\end{pmatrix}.
-	\end{align*}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Bestem de værdier for $t$, så $\vv{a}$ og $\vv{b}$ er ortogonale.
-\end{delopgave}
-%
-%
-%
-%%
-%
-\begin{opgavetekst}{Opgave 7}
-	En cirkel $c$ er givet ved ligningen
-	\begin{align*}
-		c:\  x^2 + y^2 - 4x - 6y + 9 = 0.
-	\end{align*}
-\end{opgavetekst}
-\begin{delopgave}{1}
-	Bestem centrum og radius for cirklen $c$.
-\end{delopgave}	
-%
-%
-%%%%%%%%%%%%%%%
 %
 %
 \newpage
 \begin{center}
 	\LARGE
-	Med hjælpemidler
+	Uden hjælpemidler
 \end{center}
+\begin{opgavetekst}{Opgave 6}
+	\begin{center}
+	\includegraphics[width=0.6\textwidth]{Billeder/badminton.png}
+	\end{center}
+	En gymnasieklasse skal spille badminton i deres idrætsundervisning. 
+	De spiller i 6 moduler i streg, og noterer til hvert modul sandsynligheden 
+	for at lave en korrekt serv. Resultatet kan ses af Tabel \ref{tab:badminton}.
+	\begin{table}[H]
+		\centering
+		\rowcolors{1}{SeaGreen!60}{SeaGreen!30}
+		\begin{tabular}{ccccccc}
+			Modulnr. & 1 & 2 & 3 & 4 & 5 & 6\\
+			Sandsynlighed for korrekt serv  & $0.29$ & $0.45$ & $0.59$ &
+			 $0.71$ & $0.78$ & $0.82$
+		\end{tabular}
+		\caption{Sandsynlighed for korrekt serv i gymnasieklassen.}
+		\label{tab:badminton}
+	\end{table}
+	Det antages, at sammenhængen mellem antallet af forløbne moduler $x$ og sandsynligheden for korrekt serv $P$ er givet ved
+	\begin{align*}
+		P(x) = \frac{M}{1 + ce^{-ax}}.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Anvend logistisk regression på tallene fra Tabel \ref{tab:badminton} for at finde en forskrift for $P$. 
+\end{delopgave}
+\begin{delopgave}{2}
+	Bestem antallet af moduler, det vil kræve for eleverne at få en serv-sandsynlighed på $0.85$. 
+\end{delopgave}
+\begin{delopgave}{3}
+	Bestem det tidspunkt, hvor sandsynligheden for en korrekt serv vokser hurtigst. 
+\end{delopgave}
+%
+%
+%
+%
+%
+\begin{opgavetekst}{Opgave 7}
+	En funktion $f$ er givet ved
+	\begin{align*}
+		f(x) = x^3 - 5x^2 + 2x + 10.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem monotoniforholdene for $f$ ved at bruge differentialregning. 
+\end{delopgave}
+\newpage
+%
+%
 %
 %
 %
 \begin{opgavetekst}{Opgave 8}
-	To linjer $l$ og $m$ er givet ved henholdsvis
+	Om en harmonisk svingning $f$ givet ved
 	\begin{align*}
-		&l: \ 5x + 19y = 12, \\
-		&m: \ 10x -10y = 29.
+		f(x) = A\sin(\omega x) + B
 	\end{align*}
+	oplyses det, at 
+	\begin{itemize}
+		\item[$\cdot$] Maksimum for $f$ er 11.6.
+		\item[$\cdot$] Perioden for $f$ er $4\pi$. 
+		\item[$\cdot$] $f(0) = -1.2$. 
+	\end{itemize}
+	\phantom{h}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem skæringspunktet mellem $l$ og $m$.
-\end{delopgave}
-\begin{delopgave}{2}
-	Brug en formel til at bestemme den spidse vinkel mellem $l$ og $m$.
-\end{delopgave}
+	Bestem tallene $A$, $\omega$ og $B$. 
+\end{delopgave}	
 %
 %
 %
 %
 %
 \begin{opgavetekst}{Opgave 9}
-	\begin{center}
-		\includegraphics[width=0.6\textwidth]{Billeder/beaver.jpg}
-	\end{center}
-	I 
+	
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Anvend regression for at bestemme tallene $a$ og $b$
+	Bestem skæringspunkterne mellem $c$ og $l$.
 \end{delopgave}
-\begin{delopgave}{2}
-	Forklar, hvad tallene $a$ og $b$ betyder for omsætningen på is. 
-\end{delopgave}
+%
 %
 %
 %
 %
 %
 \begin{opgavetekst}{Opgave 10}
-	Tre ligninger er givet ved
+	En funktion $g$ er givet ved
 	\begin{align*}
-		&2x + 5y + 3z = 1,\\
-		&4x + 10y - 4z = 3,\\
-		&6x - y + 15z = -4.
+		g(x) = b\cdot x^a
 	\end{align*}
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem løsningen til ligningssystemet. 
+	Bestem tallene $a$ og $b$ så $g$ opfylder, at $g(2) = 6$ og $g(5) = 15$.
+\end{delopgave}
+\begin{delopgave}{2}
+	Løs ligningen $g(x) = 20$.
 \end{delopgave}
 %
 %
@@ -283,110 +310,42 @@ Besvarelsen af opgaver, der omhandler matematiske modeller, skal indeholde en ko
 %
 \newpage
 \begin{opgavetekst}{Opgave 11}
-	\begin{center}
-		\includegraphics[width = 0.6\textwidth]{Billeder/Fjordenhus}
-	\end{center}
-	I Vejle ligger Fjordenhus, der som en del af facaden har parabellignende buer. Én af buerne kan ses indlejret i et koordinatsystem på Figur \ref{fig:fjordenhus}.
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}
-			\begin{axis}[
-				axis lines = middle, 
-				xmin = -2.5, 
-				xmax = 20.5,
-				ymin = -1.5,
-				ymax = 22.5,
-				xlabel = {$x$ (meter)},
-				ylabel = {$y$ (meter)},
-				xtick = {1.47,4,6.53},
-				ytick = {12,20}
-			]
-				\addplot[color = teal, thick, samples = 150, domain = 0:8] {-1.25*x^2+10*x};
-				\draw[color = teal, thick] (axis cs: 1.47,12) -- (axis cs: 6.53,12);
-				\draw[color = teal, thick] (axis cs: 2.41,16.84) -- (axis cs: 5.59,16.84);
-				\draw[color = teal, thick] (axis cs: 3.6,19.8) -- (axis cs: 3.6,16.84);
-				\draw[color = teal, thick] (axis cs: 4.4,16.84) -- (axis cs: 4.4,12);
-				\filldraw[color = olive] (axis cs: 1.47,12) circle (2pt);
-				\filldraw[color = olive] (axis cs: 6.53,12) circle (2pt);
-				\filldraw[color = olive] (axis cs: 4,20) circle (2pt);
-				\draw[color = olive, dashed] (axis cs: 1.47,0) -- (axis cs: 1.47,12);
-				\draw[color = olive, dashed] (axis cs: 1.47,12) -- (axis cs: 0,12);
-				\draw[color = olive, dashed] (axis cs: 6.53,12) -- (axis cs: 0,12);
-				\draw[color = olive, dashed] (axis cs: 6.53,12) -- (axis cs: 6.53,0);
-				\draw[color = olive, dashed] (axis cs: 4,0) -- (axis cs: 4,20);
-				\draw[color = olive, dashed] (axis cs: 4,20) -- (axis cs: 0,20);
-			\end{axis}
-		\end{tikzpicture}
-		\caption{Skitse af facadeparabel på Fjordenhus.}
-		\label{fig:fjordenhus}
-	\end{figure}
-	\phantom{h}
+	Antallet af bakterier $B$ i en bakteriekoloni kan beskrives ved differentialligningen
+	\begin{align*}
+		\frac{dB}{dt} = 0.016\cdot B\cdot (155 - B),
+	\end{align*}
+	hvor $B$ betegner antallet af bakterier i mia. og $t$ betegner tiden i antal døgn efter begyndelsen af målingen.
 \end{opgavetekst}
 \begin{delopgave}{1}
-	Bestem en forskrift for den parabel, der fremgår af Figur \ref{fig:fjordenhus}.
+	Bestem en forskrift for $B$, hvis det oplyses, at der efter $0$ døgn er 15 mia. bakterier. 
 \end{delopgave}
 \begin{delopgave}{2}
-	Afgør, hvor bred facadebuen på Fjordenhus er i vandoverfladen. 
+	Bestem væksthastigheden af bakterierne efter $2$ døgn. 
+\end{delopgave}
+\begin{delopgave}{3}
+	Bestem det totale antal bakterier, der har været i kolonien i løbet af de første 5 døgn, hvis det oplyses, at bakterierne har en levetid på 1 døgn.
 \end{delopgave}
 %
 %
 %
 %
 %
-
-\phantom{h}
-\newpage
-\begin{center}
-	\LARGE Bilag:
-\end{center}
-\begin{table}[H]
-	\centering
-	\begin{tikzpicture}
-	\node at (0,0) {$v$};
-	\node at (2*0.9,0) {$\cos(v)$};
-	\node at (4*0.9,0) {$\sin(v)$};
-	\node at (6*0.9,0) {$\tan(v)$};
-	\node at (8*0.9,0) {$v$};
-	\node at (10*0.9,0) {$\cos(v)$};
-	\node at (12*0.9,0) {$\sin(v)$};
-	\node at (14*0.9,0) {$\tan(v)$};
-	\scriptsize
-	%Colors
-	\foreach \i in {0,...,22}{
-		\filldraw[color = teal!60, opacity = 0.4] (-0.9,-0.5-0.3+0.15-\i*0.3*2) rectangle
-		 (14*0.9 + 0.9,-0.5-0.3-0.15-\i*0.3*2);
-	}
-	\foreach \i in {0,...,45}{
-		%Macros for evaluating
-		\pgfmathsetmacro{\cval}{cos(\i)}
-		\pgfmathsetmacro{\sval}{sin(\i)}
-		\pgfmathsetmacro{\tval}{tan(\i)}
-		%First columns of values
-		\node at (0,-0.5-\i*0.3) {$\i^{\circ}$};
-		\node at (2*0.9,-0.5-\i*0.3) { \cval };
-		\node at (4*0.9,-0.5-\i*0.3) { \sval };
-		\node at (6*0.9,-0.5-\i*0.3) { \tval };
-	}
-	\foreach \i in {46,...,89}{
-		%Macros
-		\pgfmathsetmacro{\cval}{cos(\i)}
-		\pgfmathsetmacro{\sval}{sin(\i)}
-		\pgfmathsetmacro{\tval}{tan(\i)}
-		%Second column
-		\node at (8*0.9,-0.5-\i*0.3 + 46*0.3) {$\i^{\circ}$};
-		\node at (10*0.9,-0.5-\i*0.3 + 46*0.3) { \cval };
-		\node at (12*0.9,-0.5-\i*0.3 + 46*0.3) { \sval };
-		\node at (14*0.9,-0.5-\i*0.3 + 46*0.3) { \tval };
-	}
-		\pgfmathsetmacro{\cval}{cos(90)}
-		\pgfmathsetmacro{\sval}{sin(90)}
-		\node at (8*0.9,-0.5-90*0.3 + 46*0.3) {$90^{\circ}$};
-		\node at (10*0.9,-0.5-90*0.3 + 46*0.3) { \cval };
-		\node at (12*0.9,-0.5-90*0.3 + 46*0.3) { \sval };
-	\end{tikzpicture}
-	\caption{Tabel over udvalgte værdier for $\cos$, $\sin$ og $\tan$.}
-	\label{tab:cossintan}
-\end{table}
+\begin{opgavetekst}{Opgave 12}
+	En funktion $h$ er givet ved 
+	\begin{align*}
+		h(x) = \sin(x)x^2 - 0.2x^3 + 2
+	\end{align*}
+	afgrænser sammen med koordinatakserne et område $M$.
+\end{opgavetekst}	
+\begin{delopgave}{1}
+	Bestem arealet af $M$. 
+\end{delopgave}
+\begin{meretekst}
+	Når $M$ roteres om $x$-aksen, danner det et omdrejningslegeme $O$.
+\end{meretekst}
+\begin{delopgave}{2}
+	Bestem rumfanget af $O$. 
+\end{delopgave}
 \end{document}
 
 

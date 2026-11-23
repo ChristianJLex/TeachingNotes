@@ -1,0 +1,101 @@
+
+\begin{center}
+\Huge
+Binomialtest
+\end{center}
+
+Vi arbejdede sidste gang med konfidensintervaller, og vi skal i dag arbejde med noget, der minder om. Dette er \textit{binomialtest}, der bruges til at afgøre, om vi tror på, at en given hypotese omhandlende binomialfordelingen er sand. Det kunne være effektiviteten af et lægemiddel eller antal fejl på et bestemt produkt. Vores hypotese kaldes for \textit{Nulhypotesen} eller $H_0$, og den vil typisk være, at vi ikke forventer at se en ændring, der er det antal fejl, producenten lover eller lignende.
+
+\section*{Hypotesetest}
+\stepcounter{section}
+
+En grossist af frugt og grønt lover, at kun 6 procent af hans avocadoer er stødte, når de når frem til forhandleren. En forhandler modtager 617 avocadoer, og 50 af disse er stødte. Han vil gerne afgøre, om dette er for mange. Han opstiller derfor nulhypotesen:
+\begin{align*}
+	H_0: \textnormal{5 procent af avocadoerne er stødte},
+\end{align*}
+og han ønsker at anvende en binomialtest for at afgøre dette. Han vælger et signifikansniveau på 5$\%$ (dette signifikansniveau vælges næsten altid), og vi skal så bestemme sandsynligheden for at få et resultat der er 50 eller mere ekstremt. Dette gøres ved at skrive
+\begin{align*}
+	\texttt{bincdf(617,0.06,50,617)},
+\end{align*}
+og vi får resultatet
+\begin{align*}
+	p = 0.0206,
+\end{align*}
+som er det, vi kalder for $p$-værdien. Dette tal er sandsynligheden for at få et resultat, der er lig eller mere ekstremt end udfaldet 50 givet, at nulhypotesen er sand. Hvis dette tal er lavere end signifikansniveauet, så forkaster vi vores nulhypotese.
+
+Vi laver en højresidet test, da vi kun er interesseret i tilfældet med for mange stødte avocadoer - vi er ligeglade med, hvis vi får for få. 
+
+Vi kan også bestemme det, der hedder \textit{den kritiske mængde} for forsøget. Dette er alle de udfald, der vil få os til at forkaste vores nulhypotese. Dette gøres i Maple ved at skrive
+\begin{align*}
+	\texttt{binomialTest(617,0.06,0.05,højre)}.
+\end{align*}
+Skal vi lave tosidet test, vil vi skrive tosidet i stedet for højre, og ventre i stedet for højre, hvis testen skal være venstresidet. 
+Vi får så resultatet, der kan ses af Figur \ref{fig:højretest}.
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{Billeder/højrebin.png}
+\caption{Højresidet test på antal stødte avocadoer}
+\label{fig:højretest}
+\end{figure}
+
+Vi kan derfor se, at alle udfald $X\leq 47$ vil gøre, at vi tror på nulhypotesen. Tilsvarende vil alle udfald $X\geq 48$ vil gøre, at vi forkaster nulhypotesen. Mængden $\{48,\hdots,617\}$ kaldes for den kritiske mængde.
+
+\section*{Opgave 1}
+En sjusket producent af chokoladejulekalendre sælger en julekalender med lys chokolade og en julekalender med mørk chokolade. Han holder ikke styr på hvor meget han sælger af hver, og han ved derfor
+ikke, hvor meget han skal købe af forskellige ingredienser. Sidste år var andelen af solgte chokoladekalendre med lys chokolade 71.2$\%$. 
+
+Han laver en stikprøve af solgte chokoladekalendre og opdager, at 351 ud af 522 chokoladekalendre er med lys chokolade.
+\begin{enumerate}[label=\roman*)]
+	\item Opstil en nulhypotese, der kan bruges til at afgøre, om andelen af chokoladekalende med lys chokolade har ændret sig
+	\item Opstil en binomialmodel, der beskriver andelet af kalendre med lys chokolade givet at nulhypotesen er sand og brug denne model til at bestemme $p$-værdien for andelen af chokoladekalendre med lys chokolade. Skal vi forkaste nulhypotesen med et signifikansniveau på 5$\%$?
+	\item Bestem den kritiske mængde for eksperimentet.
+\end{enumerate} 
+
+\section*{Opgave 2}
+En butik har et klientel, der består af $30\%$ mænd. 
+\begin{enumerate}[label=\roman*)]
+\item Opstil en binomialmodel, der beskriver antallet af mænd i en stikprøve på $50$ personer.
+\item Hvad er sandsynligheden for, at 12 af personerne i stikprøven er mænd?
+\item En dag havde butikken $220$ kunder. 79 af disse var mænd. Opstil en nulhypotese, der beskriver undersøgelsen, og brug en binomialtest med et signifikansniveau på $5\%$ til at undersøge nulhypotesen. 
+\end{enumerate}
+
+
+\section*{Opgave 3}
+Laver vi krydsninger med en bestemt type hvide og violette blomster siger Mendels love, at $25\%$ af blomsterne vil være hvide og $75\%$ af blomsterne vil være violette. I et krydsningsforsøg har vi 705 violette blomster og 224 hvide blomster. 
+\begin{enumerate}[label=\roman*)]
+\item Opstil en nulhypotese, der kan benyttes til at afgøre, om blomsternes farve følger Mendels love
+\item Bestem de forventede antal violette og hvide blomster, hvis nulhypotesen er sand
+\item Benyt binomialtest for at afgøre, om vi skal forkaste nulhypotesen. Signifikansniveauet er som altid $5\%$.
+\item Hvad er den kritiske mængde for dette eksperiment?
+\end{enumerate}
+
+\section*{Opgave 4}
+I en skov er fordelingen af løvtræer og nåletræer fordelt omtrent ligeligt. En gruppe biologistuderende antager, at spættearten \textit{den store flagspætte} er ligeglad med, om den laver bo i et udgået løvtræ eller et udgået nåletræ. I skoven finder de 201 spætteboer i nåletræer og 167 i løvtræer. 
+\begin{enumerate}[label=\roman*)]
+\item Bestem en nulhypotese og opstil en binomialmodel, som beskriver antallet af flagspætter, der har bo i et løvtræ.
+\item Lav binomialtest og bestem den kritiske mængde for antallet af bo i løvtræer.
+\item Brug binomialtesten til at afgøre, om vi accepterer eller forkaster nulhypotesen med et signifikansniveau på $5\%$.
+
+\end{enumerate}
+
+\section*{Opgave 5}
+Meyer er et terningespil, hvor hver spiller skiftes til at slå med to terninger. Det bedste slag er Meyer, der er en toer og en etter. Du spiller Meyer med en gruppe af dine venner, og du synes, at en af dem får Meyer lidt for ofte. Du tæller, at han ud af 93 slag har fået Meyer 11 gange.
+\begin{enumerate}[label=\roman*)]
+\item Hvad er sandsynligheden for at slå Meyer med to terninger?
+\item Hvilken fordeling vil du forvente, at antallet af Meyere i 93 slag vil følge? Hvad er parametrene for fordelingen?
+\item Opstil en nulhypotese, der undersøger din formodning.
+\item Undersøg din nulhypotese med en passende test. 
+\item Du spiller med 10 venner. Kan du med et signifikansniveau på $5\%$ sige, at ingen af disse bør få 11 eller flere gange Meyer?
+\end{enumerate}
+
+\section*{Opgave 6}
+En medicinalvirksomhed med dårlig moral tester et nyt præparat op mod placebo. De giver $500$ personer placebo, og det viser sig, at $15\%$ af disse personer opnår fremgang i henseende A. De tester nu deres nye præparat på en tilsvarende gruppe af $500$ personer, og oplever, at $90$ personer opnår fremgang i henseende $A$. 
+\begin{enumerate}[label=\roman*)]
+\item Hvis præparatet hverken er bedre eller værre end placebo, hvor mange forventer vi så at helbrede?
+\item Under nulhypotesen, at præparatet ikke er bedre end placebo, test så med binomialtest om denne nulhypotese kan forkastes med et signifikansniveau på $5\%$.
+\end{enumerate}
+I virksomheden har de glemt at slette deres indbyrdes sms'er, og det kommer frem, at virksomheden udover at teste for henseende A også har testet for forbedring inden for 26 andre henseender uden at kunne se en effekt. Det kaldes en type I fejl at forkaste en sand nulhypotese, og med et signifikansniveau på $5\%$ er sandsynligheden for at lave en type I fejl generelt mindre end $5\%$. 
+\begin{enumerate}[label=\roman*)]
+\setcounter{enumi}{2}
+\item Hvad er sandsynligheden for at lave en type I fejl, hvis man tester for forbedring i 27 forskellige henseender op mod placebo hver med et signifikansniveau på $5\%$?
+\end{enumerate}

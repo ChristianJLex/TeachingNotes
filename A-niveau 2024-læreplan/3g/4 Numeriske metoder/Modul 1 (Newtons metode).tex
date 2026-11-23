@@ -1,0 +1,243 @@
+\begin{center}
+	\Huge
+	Newtons metode
+\end{center}
+
+\section*{Newtons metode}
+\stepcounter{section}
+
+Der findes mange funktioner, der ikke har hverken brøker eller heltal som nulpunkter. Dette kunne eksempelvis være funktionen $f$ givet ved
+\begin{align*}
+	f(x) = x^2 - 2,
+\end{align*}
+der har nulpunkter i $\pm \sqrt{2}$, som vi tidligere har set ikke er et rationalt tal. Vi kunne godt tænke os en \textit{numerisk approksimation} til $\sqrt{2}$, vi kan repræsentere på en computer. Til dette vil vi bruge \textit{Newton-Raphsons metode}. Først vil vi forsøge at udlede metoden.
+
+Vi betragter derfor parablen for $f$, som kan ses på Figur \ref{fig:parabel}.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -2, xmax = 2,
+		ymin = -3, ymax = 3,
+		xtick = {-3,-2,...,2,3},
+		xlabel = $x$, ylabel = $y$, 
+	]
+		\addplot[color = SeaGreen, thick, domain = -2:2, samples = 200] {x^2 - 2};
+	\end{axis}
+	\end{tikzpicture}	
+	\caption{Grafen for $f$.}
+	\label{fig:parabel}
+\end{figure}
+
+Vi vælger et begyndelsespunkt $x_0$ og tegner en tangent i punktet $(x_0,f(x_0))$. Vi vælger $x_0 = 1$. 
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -2, xmax = 2,
+		ymin = -3, ymax = 3,
+		xtick = {-3,-2,...,2,3},
+		xlabel = $x$, ylabel = $y$, 
+	]
+		\addplot[color = SeaGreen, thick, domain = -2:2, samples = 200] {x^2 - 2};
+		\addplot[color = olive, thick, domain = -2:2] 
+		{2*x - 3};
+	\end{axis}
+	\end{tikzpicture}	
+	\caption{Grafen for $f$ samt tangent i $x_0=1$}
+	\label{fig:parabelmedtangent1}
+\end{figure}
+Skæringen mellem tangenten og $x$-aksen ser ud til at være tæt på nulpunktet for $f$. Dette skæringspunkt har værdien 
+\begin{align*}
+	x_0 = 1.5,
+\end{align*}
+og vi tegner en ny tangent i dette punkt.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -2, xmax = 2,
+		ymin = -3, ymax = 3,
+		xtick = {-3,-2,...,2,3},
+	]
+		\addplot[color = SeaGreen, thick, domain = -2:2, samples = 200] {x^2 - 2};
+		\addplot[color = olive, thick, domain = -2:2] 
+		{3*x - 4.25};
+	\end{axis}
+	\end{tikzpicture}	
+	\caption{Grafen for $f$ samt tangent i $x_1 = 1.5$}
+	\label{fig:parabelmedtangent2}
+\end{figure}
+Denne tangent skærer $x$-aksen meget tæt på nulpunktet for $f$, og bliver vi ved, vil vi forvente at komme tættere og tættere på. Vores bud på nulpunktet er nu $x = 1.4667$, som er ganske tæt på $\sqrt{2}$. Vi kan generalisere dette.
+
+Vi vælger et begyndelsespunkt $x_0$ og tegner en tangent i dette punkt. Denne har ligningen 
+\begin{align*}
+	y = f'(x_0)(x - x_0) + f(x_0),
+\end{align*}
+og vi ønsker at finde $x$, så $y = 0$, da vi ønsker tangentens skæring med $x$-aksen som på Figur \ref{fig:parabelmedtangent1} og Figur \ref{fig:parabelmedtangent2}.
+\begin{align*}
+	y = f'(x_0)(x-x_0) + f(x_0) = 0 \ &\Leftrightarrow \ 
+	f'(x_0)x - f'(x_0)x_0 + f(x_0) = 0 \\
+	&\Leftrightarrow \ f'(x_0)x = f'(x_0)x_0 - f(x_0)\\
+	&\Leftrightarrow \ x = \frac{f'(x_0)x_0-f(x_0)}{f'(x_0)}\\
+	&\Leftrightarrow \ x = x_0 - \frac{f(x_0)}{f'(x_0)}
+\end{align*}
+Dette kalder vi for vores $x_1$, så
+\begin{align*}
+	x_1 = x_0 -\frac{f(x_0)}{f'(x_0)}
+\end{align*}
+Vi kan i princippet blive ved med at anvende samme fremgangsmåde på vores nye $x$-værdi, og det giver os den iterative Newton-Raphsons metode.
+\begin{defn}[Newtons metode]
+	For en differentiabel funktion $f$ er Newtons metode rekursionsligningen 
+	\begin{align*}
+		x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.
+	\end{align*}
+\end{defn}
+Vi overvejer ikke her, om vi rent faktisk kan sikre os, at Newtons metode konvergerer og bekræftende fald hvor hurtigt, metoden konvergerer. 
+
+Vi kan på Figur \ref{fig:newton} se princippet bag Newtons metode.
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -1, xmax = 5,
+		ymin = -1.5, ymax = 20,
+		xlabel = $x$, ylabel = $y$,
+		ticks = none,
+	]
+		%Tangentlinjer
+		\addplot[color = olive, domain = 2.768:4] {15.16*x-41.96};
+		\addplot[color = olive, domain = 1.915:2.768] {6.625*x - 12.685};
+		\addplot[color = olive, domain = 1.341:1.915] {2.957*x - 3.965};
+		\addplot[color = olive, domain = 1.044:1.341] {1.520*x - 1.587};
+		%Dashes og x-ticks
+		\draw[color = olive, dashed] (axis cs: 4,0) -- (axis cs: 4,18.68) node[pos = 0, anchor = north] {$x_0$};
+		\draw[color = olive, dashed] (axis cs: 2.768,0) -- (axis cs: 2.768,5.653) node[pos = 0, anchor = north] {$x_1$};	
+		\draw[color = olive, dashed] (axis cs: 1.915,0) -- (axis cs: 1.915,1.697) node[pos = 0, anchor = north] {$x_2$};
+		\draw[color = olive, dashed] (axis cs: 1.341,0) -- (axis cs: 1.341,0.451) node[pos = 0, anchor = north] {$x_3$};
+		\draw[color = olive, dashed] (axis cs: 1.044,0) -- (axis cs: 1.044,0.067) node[pos = 0, anchor = north] {$x_4$};	
+		%plot
+		\addplot[color = SeaGreen, thick, samples = 300,
+		domain = -1:5] {0.42*x^3-0.8*x^2+1.4*x - 1};
+	\end{axis}
+	\end{tikzpicture}
+	\caption{4 Iterationer for Newtons metode illustreret med tangenter. }
+	\label{fig:newton}
+\end{figure}
+\newpage
+\begin{exa}
+	Vi ønsker at bestemme $x_1$, $x_2$, og $x_3$ for funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^2 - 2x - 4.
+	\end{align*}
+	og begyndelsespunktet $x_0 = 2$. 
+	Vi udregner først $f'$ og får
+	\begin{align*}
+		f'(x) = 2x - 2.
+	\end{align*}
+	Vi indsætter i rekursionsligningen og får
+	\begin{align*}
+		x_1 &= x_0 - \frac{f(x_0)}{f'(x_0)}\\
+		&= 2 - \frac{2^2-2\cdot 2 - 4}{2\cdot 2 - 2}\\
+		&= 2 - \frac{-4}{2} = 4
+	\end{align*}
+	Vi finder nu $x_2$:
+	\begin{align*}
+		x_2 &= x_1 -\frac{f(x_1)}{f'(x_1)}\\
+		&= 4 - \frac{4^2 - 4\cdot 2 - 4}{2\cdot 4 - 2}\\
+		&= 4 - \frac{4}{6} = \frac{10}{3}. 
+	\end{align*}
+	Og afslutningsvist $x_3$:
+	\begin{align*}
+		x_3 &= x_2 - \frac{f(x_2)}{f'(x_2)}\\
+		 &= \frac{10}{3} - \frac{\left(\frac{10}{3}\right)^2-2\cdot \frac{10}{3} - 4}{2\cdot \frac{10}{3} - 2}\\
+		 &= \frac{10}{3} - \frac{2}{21} = \frac{68}{21}.
+	\end{align*}
+	Da Newtons metode primært bliver brugt til at løse ligninger på en computer, lader vi Excel lave resten af arbejdet, og vi får følgende iterationsværdier
+	\begin{table}[H]
+		\centering
+		\rowcolors{1}{SeaGreen!60}{SeaGreen!30}
+		\begin{tabular}{cc}
+			$x_0$ &2\\
+			$x_1$ & 4\\
+			$x_2$ & $10/3 \approx 3,\!333$\\
+			$x_3$ & $68/21 \approx 3,\!238$\\
+			$x_4$ &  $3,\!236$\\
+			$x_5$ & $3,\!236$
+		\end{tabular}
+		\caption{Iterationer for Newtons metode med begyndelsesværdi $2$ på funktionen $f$.}
+	\end{table}
+	Vi kan se, at metoden efter 5 iterationer er konvergeret mod en løsning op til 3. decimal. Da $f$ er et andengradspolynomium, ved vi, at det kan have op til to løsninger. Vi tegner derfor grafen for $f$.
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -2, xmax = 5,
+			ymin = -6, ymax = 8,
+			xlabel = $x$, ylabel = $y$, 
+		]
+			\addplot[thick, color = SeaGreen, domain = -2:5, samples = 300] {x^2-2*x-4};
+		\end{axis}	
+		\end{tikzpicture}
+		\caption{Graf for andengradspolynomiet $f$.}
+	\end{figure}
+	Vi kan se, at $f$ har en rod omkring -1. Vi vælger derfor nu $-4$ som vores begyndelsesværdi til Newtons metode og får følgende resultater
+	\begin{table}[H]
+		\centering
+		\rowcolors{1}{SeaGreen!60}{SeaGreen!30}
+		\begin{tabular}{cc}
+		$x_0$ & $-4$ \\
+		$x_1$ & $-2$ \\
+		$x_2$ & $-1,\!333$ \\
+		$x_3$ & $-1,\!238$ \\
+		$x_4$ & $-1,\!236$ \\
+		$x_5$ & $-1,\!236$ \\
+		\end{tabular}
+		\caption{Iterationer for Newtons metode med begyndelsesværdi $-4$ på funktionen $f$.}
+	\end{table}
+	Vi kan her se, at Newtons metode efter 5 iterationer er konvergeret mod nulpunktet $-1,\!236$ op til 3. decimal.
+\end{exa}
+\newpage
+\subsection*{Opgave 1}
+
+\begin{enumerate}[label = \roman*)]
+	\item Lav de tre første iterationer i Newtons metode på funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^2 - 15x + 45
+	\end{align*}
+	med begyndelsespunkt $x_0 = 0$. 
+	\item Lav de tre første iterationer i Newtons metode på funktionen $f$ givet ved
+	\begin{align*}
+		f(x) = x^2 - 12x + 36
+	\end{align*}
+	med begyndelsespunkt $x_0 = 2$. 
+	\item Lav de tre første iterationer i Newtons metode på funktionen $f$ givet ved
+	\begin{align*}
+		f(x) =	x^2 - 10x + 25
+	\end{align*}
+	med begyndelsespunkt $x_0 = 1$. 
+\end{enumerate}
+
+\subsection*{Opgave 2 (Excel)}
+Løs følgende ligninger med Newtons metode i Excel op til 5. decimal. Sørg for at finde alle løsningerne til ligningerne, og tjek din løsning i Maple.
+\begin{align*}
+	&1) \ x^2 - 2x + 3 = 0 & &2) \ 2x - 10 = 0  &
+	 &3) \ x^3 + 10x - 10 = 0  \\
+	&4) \ e^x = 50x^3  & &5) \ x^2 = 10x  & &6) \ 
+	x^5 - 6 x^4 - 27x^3 + 139 x^2 + 196 x - 3 = 0  \\
+\end{align*}
+
+\subsection*{Opgave 3 (Excel)}
+Vi ønsker at approksimere følgende irrationelle tal ved at bruge Newtons metode. Opstil en ligning hvor tallene er løsning, og brug Newtons metode til at løse ligningen med 7 decimalers nøjagtighed. 
+\begin{align*}
+	&1) \ \sqrt{2} & &2) \ \sqrt[3]{4}  &
+	 &3) \ \sqrt{5} \\
+	&4) \ \sqrt[7]{6}  &  &5) \ \pi  & &6)  \ e
+	  \\
+\end{align*}

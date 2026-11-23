@@ -1,0 +1,253 @@
+\begin{center}
+	\LARGE
+	Uden hjælpemidler
+\end{center}
+\begin{opgavetekst}{Opgave 1}
+	Fire punkter $(0,1)$, $(1,-5)$, $(2,-1)$ og $(3,-3)$ samt en model $f$ givet ved
+	\begin{align*}
+		f(x) = x^2 - 4x
+	\end{align*}
+	er givet. Det antages, at modellen beskriver punkterne tilnærmelsesvist. 
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem residualerne $r_1$, $r_2$, $r_3$ og $r_4$.
+\end{delopgave}
+%
+%
+%
+%
+%
+%
+\begin{opgavetekst}{Opgave 2}
+	En trekant $\triangle ABC$ er givet ved følgende. 
+	\begin{center}
+		\begin{tikzpicture}
+		%A
+		\pgfmathsetmacro{\ax}{0}
+		\pgfmathsetmacro{\ay}{0}
+		%B
+		\pgfmathsetmacro{\bx}{2}
+		\pgfmathsetmacro{\by}{4}
+		%C
+		\pgfmathsetmacro{\cx}{7}
+		\pgfmathsetmacro{\cy}{0}
+		%arc radius
+		\pgfmathsetmacro{\arclen}{0.7}
+		%c
+		\draw[color = olive, thick] (\ax,\ay) -- (\bx,\by) node[midway, anchor = south east] {$12$};
+		%b
+		\draw[color = olive, thick] (\ax,\ay) -- (\cx,\cy) node[midway, anchor = north] {$b$};
+		%a
+		\draw[color = olive, thick] (\bx,\by) -- (\cx,\cy) node[midway, anchor = south west] {$a$};
+	%	Vinkel A		
+		\draw[color = olive, thick] (\arclen,0) arc (0:63.43:\arclen) 
+		node[midway, anchor = west] {$54^\circ$};
+	%	Vinkel B
+		\draw[color = olive, thick] (1.69,3.37) arc (180 + 63.53:180 + 63.43 + 77.91:\arclen)
+		 node[midway, anchor = south] {};
+	%	Vinkel C
+		\draw[color = olive, thick] (\cx - \arclen,0) arc (180:180 - 38.66:\arclen)
+		 node[midway, anchor = east] {$33^\circ$};
+		 %Nodes
+		 \node[color = olive, anchor = east] at (\ax,\ay) {$A$};
+		 \node[color = olive, anchor = south] at (\bx,\by) {$B$};
+		 \node[color = olive, anchor = west] at (\cx,\cy) {$C$};
+		\end{tikzpicture}
+	\end{center}
+	\phantom{h}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem sidelængden $a$ i $\triangle ABC$. Brug Tabel \ref{tab:cossintan} i bilaget, hvor du afrunder til 
+	to decimaler. 
+\end{delopgave}
+%
+%
+%
+%
+%
+\begin{opgavetekst}{Opgave 3}
+	To ligninger er givet ved
+	\begin{align*}
+		&l_1:\ 5x-11y = -7, \\
+		&l_2:\ 15x-16y = 13.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem en løsning $(x,y)$ til ligningssystemet. 
+\end{delopgave}
+
+
+%
+%
+%
+%
+%
+\begin{opgavetekst}{Opgave 4}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Bestem følgende mængder.
+	\begin{align*}
+		&a) \  \{1,2,3,4\} \cup \{2,4,6,9\}     &&b)  \  \{99,100\} \backslash \{97,98,99,100,101\}   \\
+		&c) \ \{2,5,9,a,b\} \cup \{9,b,3,5\}    
+		&&d) \  (\{\textnormal{banan},\textnormal{pære}\} \cup \{6,10\}) \cap (\{6\} \cup \{\textnormal{citron},11\})\\
+	\end{align*}	
+\end{delopgave}
+%
+%
+%
+%
+%
+\begin{opgavetekst}{Opgave 5}
+	Afgør, om følgende par af bijektive funktioner er indbyrdes inverse.  	
+\end{opgavetekst}
+\begin{delopgave}{1}
+	$f(x) = 2x-4$ og $g(x) = \frac{x-4}{2}$.
+\end{delopgave}
+\begin{delopgave}{2}
+	$f(x) = e^{(\ln(x))^2}$ og $g(x) = e^{\sqrt{\ln(x)}}$
+\end{delopgave}
+\begin{delopgave}{3}
+	$f(x) = x^{7} + 10$ og $g(x) = (x - 10)^\frac{1}{7}$.
+\end{delopgave}
+%
+%
+%
+%
+%
+\newpage
+\begin{center}
+	\LARGE
+	Med hjælpemidler
+\end{center}
+\begin{opgavetekst}{Opgave 6}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/byvaekst}
+	\end{center}
+	Antallet af beboere i en stor by kan i en årrække beskrives ved funktionen
+	\begin{align*}
+		f(x) = \frac{3991.1}{1+0.41121e^{-0.10561x + 5.28050}},
+	\end{align*}
+	hvor $x$ er antal år efter år 1950 og $f$ er antallet af beboere i tusinde.
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Tegn grafen for $f$ så $x \in [0,80]$.
+\end{delopgave}
+\begin{delopgave}{2}
+	Bestem tallet $f'(30)$ og forklar, hvad dette tal betyder for udviklingen af befolkningen i byen. 
+\end{delopgave}
+\begin{delopgave}{3}
+	Tegn grafen for $f'$ så $x \in [0,80]$ og brug differentialregning til at bestemme det tidspunkt, hvor 
+	befolkningstilvæksten vokser mest. 
+\end{delopgave}
+%
+%
+%
+%
+%
+\begin{opgavetekst}{Opgave 7}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/kanon.jpg}
+	\end{center}
+	Under den 2. Slesviske krig skulle de østrigske og preussiske kanoner skyde over Vemmingbund for at ramme de danske skanser ved Dybbøl mølle. Skudafstanden afhænger af affyringsvinklen på kanonen
+	og for at skyde den rigtige afstand er det vigtigt at kende den korrekte affyringsvinkel. Af Tabel  \ref{tab:kanon} kan sammenhængen mellem affyringsvinklen $x$ (i grader) og skudafstanden $D$
+	(i meter) ses.
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{c|c|c|c|c|c|c|c}
+		$x$ &10 & 20 & 30 & 40 & 50 & 60 & 70 \\
+		\hline
+		$D$ & 1197 & 2089 & 2655 & 2968 & 3022 & 2659 & 2082
+		\end{tabular}
+		\caption{Sammenhæng mellem skudafstand (i meter) og affyringsvinkel (i grader)}
+		\label{tab:kanon}
+	\end{table}\phantom{h}
+	En model for affyringsafstanden $D$ som funktion af affyringsvinklen $x$ er givet ved
+	\begin{align*}
+		D(x) = ax^2+bx+c.
+	\end{align*}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Brug tallene fra Tabel \ref{tab:kanon} til at bestemme en forskrift for $D$.
+\end{delopgave}
+\begin{delopgave}{2}
+	Hvor langt skyder kanonen, hvis affyringsvinklen er $25^\circ$?
+\end{delopgave}
+\begin{meretekst}
+	Det oplyses, at der er $1.8$km fra de preussisk/østrigske skanser til Skanse 1 ved Vemmingbund. 
+\end{meretekst}
+\begin{delopgave}{3}
+	Hvilken affyringsvinkel skal bruges for at ramme Skanse 1?
+\end{delopgave}
+%
+%
+%%%%%%%%%%%%%%%
+%
+%
+\begin{opgavetekst}{Opgave 8}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{Billeder/traening}
+	\end{center}
+	En træningsgruppe måler løbende deres træningsresultater henover 70 måneder. De måler resultatet på ét bestemt løft, og deres data kan findes 
+	\href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/Traening.xlsx}{\color{blue!60} her.}
+\end{opgavetekst}
+\begin{delopgave}{1}
+	Anvend residualanalyse til at bestemme en model, der beskriver datasættet godt. 
+\end{delopgave}
+\begin{delopgave}{2}
+	Brug din valgte model til at afgøre, hvor længe der vil gå, før man kan forvente at løfte 100kg.
+\end{delopgave}
+\begin{delopgave}{3}
+	Bestem differentialkvotienten efter 80 måneder. Hvad fortæller os den om udviklingen af løfteevnen til dette tidspunkt?
+\end{delopgave}
+
+\newpage
+\section*{Bilag}
+\begin{table}[H]
+	\centering
+	\begin{tikzpicture}
+	\node at (0,0) {$v$};
+	\node at (2*0.9,0) {$\cos(v)$};
+	\node at (4*0.9,0) {$\sin(v)$};
+	\node at (6*0.9,0) {$\tan(v)$};
+	\node at (8*0.9,0) {$v$};
+	\node at (10*0.9,0) {$\cos(v)$};
+	\node at (12*0.9,0) {$\sin(v)$};
+	\node at (14*0.9,0) {$\tan(v)$};
+	\scriptsize
+	%Colors
+	\foreach \i in {0,...,22}{
+		\filldraw[color = teal!60, opacity = 0.4] (-0.9,-0.5-0.3+0.15-\i*0.3*2) rectangle
+		 (14*0.9 + 0.9,-0.5-0.3-0.15-\i*0.3*2);
+	}
+	\foreach \i in {0,...,45}{
+		%Macros for evaluating
+		\pgfmathsetmacro{\cval}{cos(\i)}
+		\pgfmathsetmacro{\sval}{sin(\i)}
+		\pgfmathsetmacro{\tval}{tan(\i)}
+		%First columns of values
+		\node at (0,-0.5-\i*0.3) {$\i^{\circ}$};
+		\node at (2*0.9,-0.5-\i*0.3) { \cval };
+		\node at (4*0.9,-0.5-\i*0.3) { \sval };
+		\node at (6*0.9,-0.5-\i*0.3) { \tval };
+	}
+	\foreach \i in {46,...,89}{
+		%Macros
+		\pgfmathsetmacro{\cval}{cos(\i)}
+		\pgfmathsetmacro{\sval}{sin(\i)}
+		\pgfmathsetmacro{\tval}{tan(\i)}
+		%Second column
+		\node at (8*0.9,-0.5-\i*0.3 + 46*0.3) {$\i^{\circ}$};
+		\node at (10*0.9,-0.5-\i*0.3 + 46*0.3) { \cval };
+		\node at (12*0.9,-0.5-\i*0.3 + 46*0.3) { \sval };
+		\node at (14*0.9,-0.5-\i*0.3 + 46*0.3) { \tval };
+	}
+		\pgfmathsetmacro{\cval}{cos(90)}
+		\pgfmathsetmacro{\sval}{sin(90)}
+		\node at (8*0.9,-0.5-90*0.3 + 46*0.3) {$90^{\circ}$};
+		\node at (10*0.9,-0.5-90*0.3 + 46*0.3) { \cval };
+		\node at (12*0.9,-0.5-90*0.3 + 46*0.3) { \sval };
+	\end{tikzpicture}
+	\caption{Tabel over udvalgte værdier for $\cos$, $\sin$ og $\tan$.}
+	\label{tab:cossintan}
+\end{table}
+

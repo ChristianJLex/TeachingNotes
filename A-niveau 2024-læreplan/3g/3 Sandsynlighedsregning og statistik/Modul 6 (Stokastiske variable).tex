@@ -1,0 +1,106 @@
+\begin{center}
+\Huge
+Stokastiske variable
+\end{center}
+\section*{Stokastiske variable}
+\stepcounter{section}
+
+Vi har tidligere set på sandsynligheder i stil med 
+\begin{align*}
+P(\{\textit{En mønt lander på krone}\}),
+\end{align*}
+men det ville være smart, hvis vi i udgangspunktet havde kvantificeret alle udfaldene, så vi i stedet for at opskrive hændelser, så blot kunne opskrive et tal. Til dette vil vi definere begrebet stokastisk variabel.
+\begin{defn}
+	En stokastisk variabel er en funktion $X$, der til hvert element $u$ i et udfaldsrum $U$ afbilder $u$ over i et tal.  
+\end{defn}
+En stokastisk variabel vil typisk betegnes med $X$.
+\begin{exa}
+Vi kaster en mønt to gange og lader $X$ betegne antallet af gange, vi slår plat. Værdimængden (de værdier $X$ kan antage) er $\{0,1,2\}$ og vi har følgende sandsynligheder for udfaldene af $X$:
+\begin{align*}
+P(X=0) = \frac{1}{4}, \ P(X=1) = \frac{1}{4}, \ P(X=2) = \frac{1}{2}. 
+\end{align*}
+Som vi tidligere har nævnt, så kaldes disse sandsynligheder for \textit{fordelingen} af $X$.
+\end{exa}
+\begin{exa}
+Vi lader $X_m$ være den totale levetid for en amerikansk mand og $X_k$ er levetiden for en amerikansk kvinde. Så gælder der, at værdimængderne for de to variable er $]0,\infty[$ og
+\begin{align*}
+P(X_m\leq 30) \approx 0.16
+\end{align*} 
+samt
+\begin{align*}
+P(X_k\leq 30) \approx 0.11.
+\end{align*}
+\end{exa}
+\begin{exa}
+Vi slår med en terning og lader $X$ være antallet af øjne på terningen. Fordelingen af $X$ vil så være givet ved
+\[P(X=1) = P(X=2) = \cdots = P(X=6) = \frac{1}{6}.\]
+\end{exa}
+
+En stokastisk variabel vi allerede har stiftet bekendtskab med kaldes for \textit{den Bernoullifordelte stokastiske variabel}.
+\begin{defn}[Bernoullifordelt stokastisk variabel]
+En stokastisk variabel $X$ kaldes en Bernoullifordelt stokastisk variabel, hvis den har to udfald (ofte betegnet $0$ og 1). Vi betegner $X=1$ som "succes" og $X=0$ som "fiasko". Sandsynligheden $p= P(X=1)$ kaldes for sandsynlighedsparametren og vi skriver, at $X \sim \textnormal{Ber}(p)$. 
+\end{defn}
+
+\begin{exa}
+	Vi kaster en mønt og observerer resultatet. Den stokastiske variabel
+	\begin{align*}
+		X = \begin{cases}
+			1 \ &\textnormal{ hvis resultatet er krone}, \\
+			0 \ &\textnormal{ ellers.}
+		\end{cases}
+	\end{align*}
+	er en Bernoullifordelt stokastisk variabel med sandsynlighedsparameter $p = 0.5$.
+\end{exa}
+
+\subsection*{Opgave 1}
+For følgende stokastiske variable bestem da deres værdimængder.
+\begin{enumerate}[label=\roman*)]
+	\item $X$ er antallet af seksere i 4 slag med en terning.
+	\item $X$ er regnvejrsdage i 2024.
+	\item $X$ er øjensummen ved 2 slag med en 20-sidet terning.
+	\item $X$ er antal lottovindere i 2.x ved næste trækning.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+\begin{enumerate}[label=\roman*)]
+	\item Hvad er sandsynlighedsparameteren for den Bernoullifordelte stokastiske variabel, der beskriver et slag på mere end 2 med en terning.
+	\item Hvad er sandsynlighedsparameteren for den Bernoullifordelte stokastiske variabel, der beskriver om du vinder på grøn i roulette?
+\end{enumerate}
+
+\subsection*{Opgave 3}
+
+Fordelingen for en stokastisk variabel $X$ er beskrevet ved tabellen
+\begin{center}
+	\begin{tabular}{c|c|c|c|c|c}
+		$x$ & 1 & 2 & 3 & 4 & 5 \\
+		\hline
+		$P(X = x)$ & 0.1 & $P(X = 2)$ & 0.25 & 0.25 & 0.05 
+	\end{tabular}
+\end{center}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $P(X = 2)$.
+	\item Bestem $P(X \leq 3)$.
+	\item Bestem $P(X \in \{1,5\})$.
+\end{enumerate}
+
+\subsection*{Opgave 4}
+I denne opgave skal du selv finde på en stokastisk variabel, der beskriver det stokastiske eksperiment. Du skal altså selv finde på, hvad den stokastiske variabel skal måle. \\
+
+1) Du kaster med en terning, og udfaldsrummet er $U = \{1,2,3,4,5,6\}$. 
+
+\begin{enumerate}[label=\roman*)]
+	\item Find selv på en stokastisk variabel, der tildeler et tal til hvert element i $U$.
+	\item Bestem værdimængden af din stokastiske variabel.
+	\item Bestem fordelingen af din stokastiske variabel. 
+\end{enumerate}
+
+2) Du kaster med en mønt tre gange og udfaldsrummet er
+\begin{align*}
+	U = \{(p,p,p),(p,p,k),(p,k,p),(p,k,k),(k,p,p),(k,p,k),(k,k,p),(k,k,k)\}.
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Find selv på en stokastisk variabel, der tildeler et tal til hvert element i $U$.
+	\item Bestem værdimængden af din stokastiske variabel.
+	\item Bestem fordelingen af din stokastiske variabel. 
+\end{enumerate}

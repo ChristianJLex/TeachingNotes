@@ -1,0 +1,200 @@
+\begin{center}
+\Huge
+	Differentialligninger
+\end{center}
+\section*{Simple differentialligninger}
+\stepcounter{section}
+\stepcounter{section}
+
+Differentialligninger er en betegnelse for alle typer ligninger, hvori der indegår en differentieret funktion. Når vi skal løse differentialligninger er stragetien generelt at gætte en løsning, og derefter gøre prøve for at undersøge, om en løsning rent faktisk er en løsning.
+Differentialligninger beskriver mange virkelige fænomener, da det ofte er meningsfuldt at beskrive fænomener ud fra ændringer i et system. Lad os betragte et eksempel.
+\begin{exa}
+	Vi ønsker at beskrive befolkningstilvæksten i et land. Vi har en forventning om, at antallet af mennesker i landet $P$ ændrer sig hurtigere og hurtigere i takt med at der kommer flere mennesker i landet. Vi antager, at denne ændring er proportional med antallet af mennesker. Dette kan vi beskrive ved følgende forhold.
+	\begin{align*}
+		\frac{dP}{dt} = kP,
+	\end{align*}
+	hvor $k$ er en proportionalitetskonstant, der siger noget om, hvor hurtigt befolkningen vokser. Dette er det, vi vil kalde for en differentialligning, da der indgår en afledt i ligningen. Vi har endnu ikke nogen god måde at finde en løsning til denne differentialligning.
+
+	Vi kan også overveje, om denne differentialligningsmodel rent faktisk er meningsfuld. Vi vil forvente, at der er en slags øvre grænse for, hvor stor befolkningen kan blive. Lad os kalde den $M$. Vi ønsker, at væksten bliver begrænset af $M$. Vi kunne derfor gange højresiden af vores differentialligning med $(M-P)$. Når $P$ er tæt på $M$, vil vi dermed gange med et mindre og mindre tal, hvilket begrænser væksten. Så kommer differentialligningen til at se ud på følgende vis.
+	\begin{align*}
+		\frac{dP}{dt} = kP(M-P),
+	\end{align*}
+	og denne væksttype er det, vi kalder for logistisk vækst, hvilket kan beskrive mange virkelige fænomener, der er eksponentielle op til et vist punkt så at sige. 
+\end{exa}
+Lad os vende tilbage til at forsøge at løse differentialligninger.
+\begin{exa}
+Ligningen
+\begin{align*}
+	\frac{d y}{d x} = yx
+\end{align*}
+er en også differentialligning, da der indgår en afledt i ligningen. Første indskydelse er at integrere begge sider, men så fås
+\begin{align*}
+	\int y' d x =\int yx d x = y,
+\end{align*}
+men dette hjælper os ikke tættere på en løsning, da vi ikke ved, hvordan vi skal løse ligningen
+\begin{align*}
+	\int y x d x = y.
+\end{align*}
+Vi gætter derfor på en løsning $y = e^{\frac{1}{2}x^2}$, og vi gør prøve: Dette betyder, at vi indsætter vores gæt i ligningen på højre og venstre side af lighedstegnet.
+Venstresiden giver
+\begin{align*}
+	y' = \left(e^{\frac{1}{2}x^2}\right)' = xe^{\frac{1}{2}x^2}.
+\end{align*}
+Højresiden giver
+\begin{align*}
+	xy = xe^{\frac{1}{2}x^2}.
+\end{align*}
+Da venstresiden og højresiden er ens, så vil $y=e^{\frac{1}{2}x^2}$ være en løsning til differentialligningen. 
+
+Det er også værd at gøre opmærksom på, at $y=e^{\frac{1}{2}x^2}$ ikke er den eneste løsning til ligningen. Vælger vi løsningen $y=5e^{\frac{1}{2}x^2}$, så vil dette også være en løsning. Ja, gør vi prøve, fås på venstresiden
+\begin{align*}
+	y' = \left(5e^{\frac{1}{2}x^2}\right) = 5xe^{\frac{1}{2}x^2}.
+\end{align*}
+Tilsvarende fås på højresiden
+\begin{align*}
+	xy = x5e^{\frac{1}{2}x^2},
+\end{align*}
+og siden højre og venstresiden er ens, er dette også en løsning. Disse kaldes for \textit{partikulære løsninger for differentialligningen}. Tilsvarende kaldes mængden af alle løsninger til en differentialligning for \textit{den fuldstændige løsning til en differentialligning}.
+\end{exa}
+
+\begin{exa}
+Vi betragter følgende simple differentialligning
+\begin{align*}
+f'(x) = 7.
+\end{align*}
+Denne differentialligning kan løses ved at integrere, fordi $f(x)$ ikke indgår på højresiden. Vi integrerer derfor:
+\begin{align*}
+	\int f'(x)d x = f(x) = 7x + k.
+\end{align*}
+Dette er den fuldstændige løsning til differentialligningen $f'(x) = 7.$ Det skal dog bemærkes at LANGT de fleste differentialligninger ikke kan løses ved at integrere. 
+\end{exa}
+
+\subsection*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en partikulær løsning til differentialligningen 
+	\begin{align*}
+		y' = 2x
+	\end{align*}
+	\item Bestem en fuldstændig løsning til differentialligningen
+	\begin{align*}
+		y' = \frac{1}{x} + x
+	\end{align*}
+	\item Argumenter for, at alle partikulære løsninger til differentialligningen
+	\begin{align*}
+		\frac{d^2y}{dx^2} = x
+	\end{align*}
+	er tredjegradspolynomier. 
+\end{enumerate}
+
+\subsection*{Opgave 2}
+
+\begin{enumerate}[label=\roman*)]
+	\item Vis ved at gøre prøve, at $f(x) = x^3 + 10$ er en løsning til differentialligningen
+	\begin{align*}
+		\frac{dy}{dx} = 3x^2.
+	\end{align*}
+	\item Vis ved at gøre prøve, at $y(x) = ce^{\frac{1}{2}x^2}$ er en løsning til differentialligningen
+	\begin{align*}
+		y' = xy.
+	\end{align*}
+	\item Vis ved at gøre prøve, at $g(x) = 3e^{-2x} + 1$ er en partikulær løsning til differentialligningen
+	\begin{align*}
+		y' = -2y+2.
+	\end{align*}
+	\item Vis ved at gøre prøve, at $f(x) = 10x$ er en løsning til differentialligningen
+	\begin{align*}
+		y' = \frac{y}{x}.
+	\end{align*}
+	\item Vis ved at gøre prøve, at $f(x) = \ln(x)x + 2x$ er en løsning til differentialligningen
+	\begin{align*}
+		\frac{dy}{dx} = \frac{y + x}{x}.
+	\end{align*}
+	\item Vis, at både $f(x) = \cos(x)$, $g(x) = \sin(x)$ og $h(x) = e^{-x}$ er løsninger til differentialligningen
+	\begin{align*}
+		f^{(4)}(x) = f(x).
+	\end{align*}
+	($f^{(4)}$ er den 4-gange differentierede).
+	\item Find tallet $k$, så differentialligningen
+	\begin{align*}
+		y' = \frac{2y}{x}
+	\end{align*}
+	har løsningen $f(x) = 7x^k$.
+\end{enumerate}
+
+
+\subsection*{Opgave 3}
+\begin{enumerate}[label=\roman*)]
+	\item Forsøg at gætte en partikulær løsning til differentialligningen 
+	\begin{align*}
+		f'(x) = f(x)
+	\end{align*}
+	\item Forsøg at gætte en partikulær løsning til differentialligningen
+	\begin{align*}
+		f(x) - f'(x) = 10x-10
+	\end{align*}
+	\item Forsøg at gætte en løsning til differentialligningen 
+	\begin{align*}
+		f''(x) = -f(x)
+	\end{align*}
+\end{enumerate}
+
+\subsection*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Find tallet $c$, så løsningen til 
+	\begin{align*}
+		y' = 3y
+	\end{align*}
+	givet ved
+	\begin{align*}
+		f(x) = ce^{-3x}
+	\end{align*}
+	går gennem punktet $P(0,6)$
+	\item Find tallet $k$, så løsningen til ligningen 
+	\begin{align*}
+		y' = 8 - 4y
+	\end{align*}
+	givet ved
+	\begin{align*}
+		g(t) = 2 + ke^{4t}
+	\end{align*}
+	går gennem punktet $(0,-13)$
+\end{enumerate}
+
+\subsection*{Opgave 5}
+\begin{enumerate}[label=\roman*)]
+	\item Find ligningen for tangenten til funktionen $f$, der løser differentialligningen 
+	\begin{align*}
+		y' = x + y^2
+	\end{align*}
+	i punktet $(3,7)$.
+	\item Find ligningen for tangenten til funktionen $g$, der løser differentialligningen
+	\begin{align*}
+		y' + y = 2x - 10
+	\end{align*}
+	i punktet $(-4,5)$
+	\item Find ligningen for tangenten til funktionen $h$, der løser differentialligningen
+	\begin{align*}
+		y' = 2y^3 - 3x^2
+	\end{align*}
+	i punktet $(-2,1)$.
+\end{enumerate}
+
+\subsection*{Opgave 6}
+Vis, at funktionen $g$ givet ved
+\begin{align*}
+	g(x) = \ln(e^{x} + k)
+\end{align*}
+er løsningen til differentialligningen
+\begin{align*}
+	\frac{d y}{d x} = e^{x-y}.
+\end{align*}
+
+\subsection*{Opgave 7}
+Vis, at funktionen $f$ givet ved 
+\begin{align*}
+	f(t) = \frac{75}{1 - e^{-300t}}
+\end{align*}
+er en løsning til differentialligningen 
+\begin{align*}
+		\frac{dy}{dt} = 4y(75 - y).
+\end{align*}

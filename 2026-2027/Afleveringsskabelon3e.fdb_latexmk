@@ -1,22 +1,20 @@
 # Fdb version 4
-["biber Afleveringsskabelon3e"] 0 "Afleveringsskabelon3e.bcf" "Afleveringsskabelon3e.bbl" "Afleveringsskabelon3e" 0 0
+["biber Afleveringsskabelon3e"] 0 "Afleveringsskabelon3e.bcf" "Afleveringsskabelon3e.bbl" "Afleveringsskabelon3e" 1795422038.63907 0
   "Afleveringsskabelon3e.bcf" 0 -1 0 "pdflatex"
   "biblio.bib" 0 -1 0 ""
   (generated)
   "Afleveringsskabelon3e.bbl"
   "Afleveringsskabelon3e.blg"
   (rewritten before read)
-["pdflatex"] 1786705108.38873 "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" "Afleveringsskabelon3e.pdf" "Afleveringsskabelon3e" 1786705112.13576 0
-  "Afleveringsskabelon3e.aux" 1786705111 1690 4f684e686695f0e82db0d8b7c39e5df9 "pdflatex"
+["pdflatex"] 1795422034.13597 "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" "Afleveringsskabelon3e.pdf" "Afleveringsskabelon3e" 1795422038.64001 0
+  "Afleveringsskabelon3e.aux" 1795422038 1199 8cb1135a2f9bb067e7b7e8cf3f4a8396 "pdflatex"
   "Afleveringsskabelon3e.bbl" 0 -1 0 "biber Afleveringsskabelon3e"
-  "Afleveringsskabelon3e.run.xml" 1786705111 2419 38d0a06c36860b3b472df49cbcf8b9df "pdflatex"
-  "Afleveringsskabelon3e.tex" 1786705100 11008 bcc873c71344612af753b79b93905ed6 ""
-  "Billeder/Fjordenhus.jpg" 1716204496 413188 da7b70661761f3f8c7f975a74d0ae82a ""
+  "Afleveringsskabelon3e.run.xml" 1795422038 2419 38d0a06c36860b3b472df49cbcf8b9df "pdflatex"
+  "Afleveringsskabelon3e.tex" 1795422028 9861 8b39954f8f55086f67cc0516824a90f2 ""
   "Billeder/Norreg.png" 1714977721 98726 a7a531f913a479cc9f650c035d1aa97e ""
-  "Billeder/beaver.jpg" 1714977839 14852145 21569c7c4f849bef916912e5ea55751e ""
-  "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781085383 81074 e9df683c7a67b773afe1722d345afa16 ""
+  "Billeder/badminton.png" 1795082885 19401705 33ff211681921a170a403159d0204ede ""
+  "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1794568540 81102 d36f6fea6ec30bbb461ac59af6664313 ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect10.tfm" 1781085388 372 07da2e555f4c8dac959d0bb59cacb4dc ""
-  "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect5.tfm" 1786608675 372 28e18d88a38be26cb20dc1302f0fdc04 ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect6.tfm" 1781085389 372 e6493454680b692175addf943602cee1 ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect8.tfm" 1781085389 372 4f0047d7e99a201724968cf4743804cf ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1781085386 688 37338d6ab346c2f1466b29e195316aa4 ""
@@ -25,10 +23,8 @@
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1233951854 916 f87d7c45f9c908e672703b83b72241a3 ""
-  "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1233951854 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1233951854 928 2dc8d444221b7a635bb58038579b861a ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1233951854 908 2921f8a10601f252058503cc6570e581 ""
-  "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -52,11 +48,8 @@
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1247596667 36118 fad905eba93cff5bce1e185fe980a177 ""
-  "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1247596673 31764 459c573c03a4949a528c2cc7f557e217 ""
-  "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/fonts/type1/public/esvect/vect10.pfb" 1383899350 18279 772052a8794705f886186d0ebf2af187 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/generic/alphalph/alphalph.sty" 1575926356 11516 2c693377218e7ce5418526bc70496cc1 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty" 1779374883 147843 cb36a076061ba7db73c92bcbd7575334 ""
@@ -319,7 +312,7 @@
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1773584792 2269 91cd03da61ab1da00145ba8a81560051 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1773584792 20785 8db5f0a2b2ce96dda9fac87ccab29449 ""
   "Preamble.tex" 1786521729 4074 c004d329cf0e94018712d58578612fce ""
-  "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" 1786705100 11008 bcc873c71344612af753b79b93905ed6 ""
+  "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/2026-2027/Afleveringsskabelon3e.tex" 1795422028 9861 8b39954f8f55086f67cc0516824a90f2 ""
   (generated)
   "Afleveringsskabelon3e.aux"
   "Afleveringsskabelon3e.bcf"

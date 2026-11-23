@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber Modulskabelon1g"] 0 "Modulskabelon1g.bcf" "Modulskabelon1g.bbl" "Modulskabelon1g" 1781085595.77173 0
+["biber Modulskabelon1g"] 0 "Modulskabelon1g.bcf" "Modulskabelon1g.bbl" "Modulskabelon1g" 1789651905.00918 0
   "Modulskabelon1g.bcf" 0 -1 0 "pdflatex"
   "biblio.bib" 0 -1 0 ""
   (generated)
   "Modulskabelon1g.bbl"
   "Modulskabelon1g.blg"
   (rewritten before read)
-["pdflatex"] 1781085593.447 "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/A-niveau 2024-læreplan/Modulskabelon1g.tex" "Modulskabelon1g.pdf" "Modulskabelon1g" 1781085595.77245 0
+["pdflatex"] 1789651898.88212 "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/A-niveau 2024-læreplan/Modulskabelon1g.tex" "Modulskabelon1g.pdf" "Modulskabelon1g" 1789651905.01204 0
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1781085383 81074 e9df683c7a67b773afe1722d345afa16 ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect10.tfm" 1781085388 372 07da2e555f4c8dac959d0bb59cacb4dc ""
   "C:/Users/NGCJ/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect6.tfm" 1781085389 372 e6493454680b692175addf943602cee1 ""
@@ -308,12 +308,12 @@
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1773584792 2269 91cd03da61ab1da00145ba8a81560051 ""
   "C:/Users/NGCJ/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1773584792 20785 8db5f0a2b2ce96dda9fac87ccab29449 ""
-  "Modulskabelon1g.aux" 1781085595 1203 9556c6d2842f823ffd9266b21e1d27a0 "pdflatex"
+  "Modulskabelon1g.aux" 1789651903 1180 319b2b4029bb5767bc3a5347ceae8bbc "pdflatex"
   "Modulskabelon1g.bbl" 0 -1 0 "biber Modulskabelon1g"
-  "Modulskabelon1g.run.xml" 1781085595 2377 f830e009acd3606e275270ffd711b541 "pdflatex"
-  "Modulskabelon1g.tex" 1778137482 8983 ca738fa4602f26d0285f0ce3cacb08f6 ""
-  "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/A-niveau 2024-læreplan/Modulskabelon1g.tex" 1778137482 8983 ca738fa4602f26d0285f0ce3cacb08f6 ""
-  "preamble.tex" 1781085576 4066 0cfb2afec7ddbbc5d6de8dd8b491f4da ""
+  "Modulskabelon1g.run.xml" 1789651903 2377 946170e29e05b8a20c14fea96cf9d1ab "pdflatex"
+  "Modulskabelon1g.tex" 1789651897 9860 74e12f175b686f3976b805ee4beb24a5 ""
+  "c:/Users/NGCJ/OneDrive - Nørre Gymnasium/Skrivebord/Undervisning/Undervisningsnoter/A-niveau 2024-læreplan/Modulskabelon1g.tex" 1789651897 9860 74e12f175b686f3976b805ee4beb24a5 ""
+  "preamble.tex" 1786521729 4074 c004d329cf0e94018712d58578612fce ""
   (generated)
   "Modulskabelon1g.aux"
   "Modulskabelon1g.bcf"

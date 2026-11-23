@@ -1,0 +1,211 @@
+\begin{center}
+\Huge
+Betinget sandsynlighed og uafhængighed
+\end{center}
+\section*{Betinget sandsynlighed}
+\stepcounter{section}
+
+Det er særligt når man begynder at introducere betingelser i sandsynligheder der, hvor man hurtigt kommer til at drage forkerte konklusioner. Fra Georg Mohr 2022 lød en opgave, at 150 1.g-ere havde tilkendegivet at 80$\%$ af dem var tilfredse med maden i kantinen, hvorimod 100 2.g-elever havde tilkendegivet, at 40$\%$ var tilfredse med maden. Vi skal bestemme sandsynligheden for, at en stemmeseddel med svaret "ja" er afleveret af en 1.g'er.
+Vi bestemmer først de absolutte tal for ja og nej; $150\cdot 0.8 = 120$ 1.g-elever har svaret ja og $100\cdot 0.4 = 40$ 2.g-elever har svaret ja. Resultaterne kan ses af Tabel \ref{tab:resultater}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cccc}
+	 & Tilfreds & Utilfreds &\\
+	 \toprule
+	 1.g & 120 & 30 & 150 \\
+	 2.g & 40 & 60 & 100 \\
+	 \midrule
+	 & 160 & 90 &
+	\end{tabular}
+	\caption{Resultater af spørgeskema}
+	\label{tab:resultater}
+\end{table}
+
+Vi skal bestemme sandsynligheden
+\begin{align*}
+	P(\{ \textnormal{Svar er fra 1.g'er givet at der står ja på sedlen} \}).
+\end{align*}
+I sandsynlighedsregning skriver vi typisk denne slags sandsynligheder på følgende vis. Lad $A$ og $B$ betegne følgende hændelser:
+\begin{align*}
+	B &= \{ \textnormal{Der står ja på sedlen}\}, \\
+	A &= \{ \textnormal{Sedlen er fra en 1.g'er} \}.
+\end{align*}
+Vi ønsker så at bestemme sandsynligheden for udfaldet 
+\begin{align*}
+	P(A \mid B),
+\end{align*}
+hvor den lodrette streg læses som "hvor" eller "betinget af".
+Hvis sedlen er valgt tilfældigt kan vi nu udregne sandsynligheden. Vi har 160 forskellige sedler med "ja" og af disse er 120 afleveret af en 1.g'er. Derfor er sandsynligheden
+\begin{align*}
+	P(A \mid B) = \frac{120}{160} = \frac{3}{4}.
+\end{align*}
+
+Vi vil nu definere \textit{betinget sandsynlighed}.
+\begin{defn}[Betinget sandsynlighed]
+	For to hændelser $A$ og $B$, hvor $P(B)> 0$ defineres betingede sandsynlighed for $A$ forudsat $B$ som
+	\begin{align*}
+		P(A \mid B) = \frac{P(A \cap B)}{P(B)}.
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	Bruger vi definitionen til at udregne sandsynligheden fra spørgeskemaet om tilfredshed fås
+	\begin{align*}
+		P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{120}{250}}{\frac{160}{250}} = \frac{3}{4}.
+	\end{align*}
+\end{exa}
+
+Med begrebet om betinget sandsynlighed kan vi også tale om uafhængighed af to hændelser. Vi vil sige, at to hændelser er uafhængige, hvis den ene hændelse ikke påvirker udfaldet af den anden. 
+
+\begin{exa}
+	Lad os betragte de to hændelser
+		\begin{align*}
+			A &= \{\textnormal{Du slår krone med en mønt}\}, \\
+			B &= \{\textnormal{Det er regnvejr}\}.
+		\end{align*}
+	På en tilfældig dag er sandsynligheden for, at det regner ca. 50$\%$. 
+	Sandsynligheden for at du slår krone er
+	\begin{align*}
+		P(A) = 1/2.
+	\end{align*}
+	Sandsynligheden for at du slår krone givet at det regner er
+	\begin{align*}
+		P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{\frac{1}{4}}{\frac{1}{2}} = \frac{1}{2},
+	\end{align*}
+	så sandsynligheden for, at du slår krone har altså ikke ændret sig af, at det regner. 
+\end{exa}
+
+I eksemplet udnyttede vi, at $P(A \cap B) = P(A)\cdot P(B)$. Dette er faktisk vores definition på, at to hændelser er uafhængige.
+\begin{defn}[Uafhængighed]
+	To hændelser $A$ og $B$ siges at være uafhængige, hvis 
+	\begin{align*}
+		P(A \cap B) = P(A)\cdot P(B).
+	\end{align*}
+\end{defn}
+
+Vi har følgende sætning, der fortæller os, at denne definition er ækvivalent med vores intuitive forståelse af uafhængighed.
+\begin{setn}
+	\label{setn:uaf}
+	To hændelser $A$ og $B$ er uafhængige hvis og kun hvis
+	\begin{align*}
+		P(A \mid B) = P(A)
+	\end{align*}
+	eller tilsvarende
+	\begin{align*}
+		P(B \mid A) = P(B).
+	\end{align*}
+\end{setn}
+\begin{proof}
+	Opgave.
+\end{proof}
+
+\section*{Bayes formel}
+
+En tilfældig udvalgt 50-årig kvinde screenes for brystkræft. Hun tester positiv og vil nu gerne vide, hvad sandsynligheden for, at hun rent faktisk er syg er. Vi får yderligere følgende information.
+\begin{align*}
+	&\textnormal{Prævalens: }\\
+	&\textnormal{Sandsynligheden for at en tilfældig valgt 50-årig kvinde har brystkræft er 1} \%,\\
+	&\textnormal{Sensitititet:}\\
+	&\textnormal{Sandsynligheden for at teste positiv givet kræft er 90\%}\\
+	&\textnormal{Specificitet:} \\
+	&\textnormal{Sandsynligheden for at teste negativ givet ingen kræft er 91\%}
+\end{align*}
+En række praktiserende læger blev stillet dette spørgsmål og skulle svare på, hvad de troede sandsynligheden for, at hun rent faktisk er syg er. De havde valgmulighederne
+\begin{align*}
+	&a) \ \frac{9}{10} & &b) \ \frac{8}{10} \\
+	&c) \ \frac{1}{10} & &d) \ \frac{1}{100}
+\end{align*}
+og over halvdelen svarede $\frac{9}{10}$. Vi vil bruge \textit{Bayes formel} til at bestemme svaret.
+
+\begin{setn}[Bayes formel]
+	For to hændelser $A$ og $B$ gælder der, at 
+	\begin{align*}
+		P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}.
+	\end{align*}
+\end{setn} 
+\begin{proof}
+	Opgave.
+\end{proof}
+
+Vi har altså hændelserne 
+\begin{align*}
+	A &= \{\textnormal{Kvinden har kræft}\}, \\
+	B &= \{\textnormal{Testen er positiv}\},
+\end{align*}
+og vi ønsker at bestemme
+\begin{align*}
+	P(A \mid B).
+\end{align*}
+Vi indsætter dette i Bayes formel og får
+\begin{align*}
+	P(A \mid B) &= \frac{P(B \mid A)P(A)}{P(B)} \\
+	&= \frac{P(\{\textnormal{Positiv} \} \mid \{\textnormal{Syg}\})P(\{\textnormal{Syg}\})}{P(\{\textnormal{Positiv}\})} \\
+	&= \frac{P(\{\textnormal{Positiv} \} \mid \{\textnormal{Syg}\})P(\{\textnormal{Syg}\})}{P(\{\textnormal{Positiv} \} \mid \{\textnormal{Rask}\})P(\{\textnormal{Rask}\}) + P(\{\textnormal{Positiv} \} \mid \{\textnormal{Syg}\})P(\{\textnormal{Syg}\})} \\
+	&= \frac{0.9 \cdot 0.01}{0.09\cdot 0.99 + 0.9\cdot 0.01} \\
+	&\approx 0.09
+\end{align*}
+Sandsynligheden for, at hun rent faktisk er syg er derfor under 10 procent!
+
+
+
+\subsection*{Opgave 1}
+\begin{enumerate}[label=\roman*)]
+	\item For to hændelser $A$ og $B$ med $P(A) = 0.5$, $P(B) = 0.4$ og $P(A \cap B) = 0.2$ bestem da $P(A \mid B)$ og $P(B \mid A)$.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+Vi betragter følgende hændelser fra eksemplet med spørgeskemaet. 
+\begin{align*}
+	A &= \{\textnormal{Der står ja på sedlen}\}, \\
+	B &= \{\textnormal{Der står nej på sedlen}\}, \\
+	C &= \{\textnormal{En 1.g'er har svaret på sedlen}\}, \\
+	D &= \{\textnormal{ En 2.g'er har svaret på sedlen}\}. 
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $P(A \mid C)$.
+	\item Bestem $P(C \mid A)$.
+	\item Bestem $P(D)$.
+	\item Bestem $P(A \mid D)$.
+	\item Bestem $P(D \mid A)$.
+\end{enumerate}
+
+\subsection*{Opgave 3}
+
+Vi trækker et kort fra et kortspil uden jokere og betragter hændelserne
+\begin{align*}
+	A &= \{\textnormal{Kortet er et hjerte}\}, \\
+	B &= \{\textnormal{Kortet er et billedkort} \}.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem sandsynlighederne $P(A)$ og $P(B)$.
+	\item Bestem sandsynligheden $P(A \cap B)$. 
+	\item Bestem sandsynligheden for $P(A \mid B)$ og $P(B \mid A)$ og argumentér for, at $A$ og $B$ er uafhængige hændelser
+\end{enumerate}
+
+\subsection*{Opgave 4}
+\begin{enumerate}[label=\roman*)]
+	\item Hvis du ved, at et par med to børn har mindst én datter, hvad er så sandsynligheden for, at de har to døtre?
+	\item Du trækker et kort fra et kortspil hvor spar 5 mangler. Betragt hændelserne
+	\begin{align*}
+		A &= \{\textnormal{Dit kort er et es}\},\\
+		B &= \{\textnormal{Dit kort er et klør}\}.
+	\end{align*}
+	Bestem sandsynlighederne $P(A)$ og $P(B)$ og $P(A \cap B)$. Er de to hændelser uafhængige?
+\end{enumerate}
+
+
+
+\subsection*{Opgave 5}
+Bevis Sætning \ref{setn:uaf}.
+
+
+\subsection*{Opgave 6}
+
+En Covid-antigentest har en sensitivitet på 65.3$\%$ og en specificitet på $99.5\%$. Lad os sige, at $0.2\%$ af Danmarks befolkning har Covid lige nu. Hvad er så sandsynligheden for, at en tilfældig person, der tester positiv med en antigen-test rent faktisk er syg?
+
+\subsection*{Opgave 7}
+
+En test for cannabis har en sensitivitet på $90\%$ og en specificitet på $80\%$. Lad os sige, at $5\%$ af befolkningen ryger cannabis jævnligt. Hvad er sandsynligheden for, at en person, der tester positiv rent faktisk ryger cannabis?
+
+\subsection*{Opgave 8}
+Bevis Bayes formel.

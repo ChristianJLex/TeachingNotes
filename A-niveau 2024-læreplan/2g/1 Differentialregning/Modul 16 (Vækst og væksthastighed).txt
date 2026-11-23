@@ -1,0 +1,119 @@
+
+\begin{center}
+\Huge
+Vækst og væksthastighed
+\end{center}
+
+\section*{Relation mellem vækst og differentialregning}
+\stepcounter{section}
+
+\begin{defn}
+Har vi en differentiabel funktion $f(t)$, som funktion af tid $t$, så kalder vi $f'(t)$ for væksthastigheden til tidspunktet $t$. 
+\end{defn}
+\begin{exa}
+En accelererende bil kører vinkelret væk fra os, og dens afstand fra os kan beskrives ved funktionen \begin{align*}
+D(t) = 3\cdot t^2 + 5,
+\end{align*}
+hvor $t$ betegner tid i sekunder og $D(t)$ betegner afstanden fra os i $m$ efter $t$ sekunder. Væksthastigheden af bilen til tiden $t$ er 
+\begin{align*}
+D'(t) = 6t.
+\end{align*}
+Efter to sekunder bevæger bilen sig med $D'(2) = 12 m/s.$ Vi kan også bestemme accelerationen af bilen som væksthastigheden af væksthastigheden:
+\begin{align*}
+D''(t) = 6,
+\end{align*}
+altså er accelerationen af bilen $6m/s^2$. Dette betyder, at hastigheden af bilen vokser med $6m/s$ hvert sekund.  
+Hvis vi skal finde ud af, hvor langt bilen er væk efter $4$ sekunder bestemmer vi
+\begin{align*}
+D(4) = 3\cdot 4^2 +5 = 53,
+\end{align*}
+altså er bilen $53 m$ væk. 
+Hvis vi vil bestemme hastigheden efter $4$ sekunder, så får vi 
+\begin{align*}
+D'(4) = 6\cdot 4 = 24, 
+\end{align*}
+altså er hastigheden efter $4$ sekunder givet ved $24 m/s$.
+\end{exa}
+
+Vi skal i dag desuden præsenteres for Leibniz' notation. I stedet for at skrive $f'$ for en differentiabel funktion, så vil man særligt i fysik bruge notationen
+\begin{align*}
+	f'(x) = \frac{df}{dx}
+\end{align*}
+eller
+\begin{align*}
+	\frac{d}{dx}f(x).
+\end{align*}
+Typisk vil man notere $f$ som $f(x) = y$ og så skrive
+\begin{align*}
+	\frac{dy}{dx}.
+\end{align*}
+
+\subsection*{Opgave 1}
+Antallet af bakterier i en bakteriekoloni kan bestemmes ved
+\begin{align*}
+N(t) = 0.7\cdot e^{0.3t},
+\end{align*}
+hvor t betegner tid i timer og $N(t)$ er antal bakterier i mio. 
+\begin{enumerate}[label=\roman*)]
+\item Hvor mange bakterier er der efter $7$ timer? Hvad med 14?
+\item Hvad er bakterievæksten efter et døgn? Forklar bakterievæksten med ord.
+\item Bliver antallet af bakterier ved med at stige? Er det realistisk? 
+\item Bliver væksten ved med at stige? Er det realistisk?
+\end{enumerate}
+\subsection*{Opgave 2}
+Vægten i kg af en radioaktiv isotop efter $t$ timer kan beskrives ved
+\begin{align*}
+V(t) =10\cdot e^{-0.16t}.
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+\item Hvad er vægten af isotopen efter $0$ timer? Hvad med efter $10$ timer?
+\item Hvad er væksthastigheden for henfaldet af isotopen efter en uge? 
+\end{enumerate}
+\subsection*{Opgave 3}
+Den faldne afstand for et objekt i frit fald kan approksimeres ved funktionen $A$ givet ved
+\begin{align*}
+A(t) = 4.91 \cdot t^2, 
+\end{align*}
+hvor $t$ er tiden i sekunder og $A$ er den faldne længde i $m$.
+\begin{enumerate}[label=\roman*)]
+\item Hvor langt er objektet faldet efter 10 sekunder?
+\item Med hvilken hastighed falder objektet efter 10 sekunder?
+\item Hvad er accelerationen af faldet?
+\end{enumerate}
+
+\subsection*{Opgave 4}
+Temperaturen af en kop te kan beskrives ved sammenhængen 
+\begin{align*}
+	f(t) = 23 + \frac{175}{t^{1.5}},\ t\geq 1,
+\end{align*}
+hvor $t$ betegner antallet af forløbne minutter siden teen blev hældt op og $f$ er temperaturen af teen i grader celcius.
+
+\begin{enumerate}[label=\roman*)]
+	\item Afgør, hvor meget temperaturen falder per minut i gennemsnit fra 3. til 6. minut. 
+	\item Bestem, hvor hurtigt temperaturen falder efter 10 minutter. 
+\end{enumerate}
+
+\subsection*{Opgave 5}
+Du har fundet lykken og er flyttet til Honduras for at producere bananer. Du har indledt et samarbejde med et meget underligt logistikfirma, der helst ikke vil have hverken for lidt eller for meget at lave. Omkostningerne for transporten af bananer er derfor givet ved
+\begin{align*}
+	P(x) = 10.2x + \frac{337.6}{x}, \ x > 0,
+\end{align*}
+hvor $x$ betegner mængden af transporterede bananer, og $P$ er prisen for at få leveret et ton bananer i tusinde kroner. 
+\begin{enumerate}[label=\roman*)]
+	\item Tegn grafen for $P$ så $x \in ]0,20]$.
+	\item Bestem $\frac{dP}{dx}$ for $x = 10$ og giv en fortolkning af dette tal. 
+	\item Bestem det antal bananer der gør, at leveringsprisen per ton er så lav som muligt. 
+\end{enumerate}
+
+\subsection*{Opgave 6}
+I en storby er sammenhængen mellem antallet af beboere i tusinde og det forløbne antal år siden 1940 samlet. Det kan findes i \href{https://github.com/ChristianJLex/TeachingNotes/raw/master/2024-2025/Data%20og%20lign/befolkningibylogist.xlsx}{\color{blue!60}dette datasæt}.
+
+Det antages, at sammenhængen kan beskrives ved det, vi kalder for en \textit{logistisk funktion}. Denne laves
+i Maple ved kommandoen $\texttt{LogistReg}$.
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem en forskrift $f$ for en sammenhæng, der beskriver befolkningen i byen.
+	\item Bestem væksthastigheden i år 1970.
+	\item Bestem det tidspunkt, hvor væksthastigheden er maksimal. 
+\end{enumerate}
+

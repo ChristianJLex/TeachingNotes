@@ -1,0 +1,505 @@
+\begin{center}
+	\Huge
+	Determinanter og vektorer i Maple
+\end{center}
+
+
+\section*{Tværvektor}
+\stepcounter{section}
+
+Ønsker vi at bestemme en vektor, der står vinkelret på en vektor, kan vi konstruere den vektor, vi kalder for tværvektoren.
+
+\begin{defn}[Tværvektor]
+	For en vektor $\vv{v}$ med koordinaterne
+	\begin{align*}
+		\vv{v} = 
+		\begin{pmatrix}
+			v_1 \\ v_2
+		\end{pmatrix}
+	\end{align*}
+	defineret \textit{tværvektoren} til $\vv{v}$ som
+	\begin{align*}
+		\hat{\vv{v}} = 
+		\begin{pmatrix}
+			-v_2 \\ v_1
+		\end{pmatrix}.
+	\end{align*}
+\end{defn}	
+
+På Figur \ref{fig:tværvektor} kan vi se, tværvektoren for en vektor.
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1, xmax = 6.5, 
+			ymin = -1, ymax = 6.5, 
+			x = 1.5cm, y = 1.5cm,
+			ticks = none, 
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 4,1) -- (axis cs: 6,4) node[midway, xshift = 7pt, yshift = -7pt] {$\vv{v}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 4,1) -- (axis cs: 1,3) node[midway,xshift = 7pt, yshift = 7pt] {$\hat{\vv{v}}$};
+
+		\end{axis}
+	\end{tikzpicture}
+	\caption{En vektor og dens tværvektor}
+	\label{fig:tværvektor}
+\end{figure}
+
+\begin{exa}
+	Vektoren
+	\begin{align*}
+		\begin{pmatrix}
+			4 \\ 2
+		\end{pmatrix}
+	\end{align*}
+	har vektoren 
+	\begin{align*}
+		\begin{pmatrix}
+			-2 \\ 4
+		\end{pmatrix}
+	\end{align*}
+	som tværvektor. 
+\end{exa}
+
+\section*{Determinanter}
+\stepcounter{section}
+
+\begin{defn}[Determinanter]
+	For to vektorer $\vv{u}$ og $\vv{v}$ givet ved
+	\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			u_1 \\ u_2
+		\end{pmatrix}& &\textnormal{og} &
+		&\vv{v} = 
+		\begin{pmatrix}
+			v_1 \\ v_2
+		\end{pmatrix}
+	\end{align*}
+	 defineres \textit{determinanten} mellem $\vv{u}$ og $\vv{v}$ som
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = u_1v_2 - u_2v_1.
+	\end{align*}
+	Dette skrives også til tider
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = 
+		\left|
+		\begin{array}{cc}
+			u_1 & v_1 \\
+			u_2 & v_2
+		\end{array}
+		\right|
+	\end{align*}
+\end{defn}
+
+\begin{exa}
+	For vektorerne
+	\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			2 \\ 1
+		\end{pmatrix}& &\textnormal{og} &
+		&\vv{v} = 
+		\begin{pmatrix}
+			-3 \\ 5
+		\end{pmatrix}
+	\end{align*}	 
+	er determinanten givet ved
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = 2\cdot 5 - 1\cdot(-3) = 10+3 = 13
+	\end{align*}
+\end{exa}
+
+\begin{setn}[Areal og determinant]
+	For to vektorer $\vv{u}$ og $\vv{v}$ gælder der, at arealet af deres 
+	udspændende parallelogram er lig $|\det(\vv{u},\vv{v})|$.
+\end{setn}
+
+På Figur \ref{fig:determinant} kan vi se arealet, som determinanten tilsvarer
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -1, xmax = 5, 
+			ymin = -1, ymax = 5, 
+			x = 1.5cm, y = 1.5cm,
+			ticks = none, 
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 0,0) -- (axis cs: 2,1) node[midway, xshift = 7pt, yshift = -7pt] {$\vv{u}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 0,0) -- (axis cs: 1,3) node[midway,xshift = 7pt, yshift = -7pt] {$\vv{v}$};
+			\fill[olive,nearly transparent] (axis cs: 0,0) -- (axis cs: 2,1) -- (axis cs:3,4) -- (axis cs: 1,3) -- cycle;
+			\node[color = teal] at (axis cs:1.5,2) {$|\det(\vv{u},\vv{v})|$};
+
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Determinant som areal}
+	\label{fig:determinant}
+\end{figure}
+
+Skal vi bestemme determinanten i Maple, så skal vi skrive
+\begin{align*}
+	&\texttt{with(Gym):}\\
+	&\texttt{$\vv{\texttt{u}}$ := <u$_{1}$,u$_{2}$>}\\
+	&\texttt{$\vv{\texttt{v}}$ := <v$_{1}$,v$_{2}$>}\\
+	&\texttt{det($\vv{\texttt{u}}$,$\vv{\texttt{v}}$)}
+\end{align*}
+
+
+\section*{Vinkel og prikprodukt i Maple}
+\stepcounter{section}
+
+Vi lægger ud med et eksempel, der viser hvordan vi definerer en vektor i Maple samt hvordan vi laver prikprodukt og bestemmer vinkler mellem vektorer.
+
+\begin{exa}
+	Vi får givet vektorerne $\vv{u}$ og $\vv{v}$ givet ved
+	\begin{align*}
+		&\vv{u} = 
+		\begin{pmatrix} 
+			2 \\ 5
+		\end{pmatrix} & &\textnormal{og} & & 
+		\vv{v} = 
+		\begin{pmatrix}
+			-4 \\ 3
+		\end{pmatrix}. 
+	\end{align*}
+	Skal vi definere vektorerne i Maple, så skal vi skrive
+	\begin{align*}
+		&\texttt{with(Gym):} \\
+		&\texttt{$\vv{\texttt{u}}$ := <2 , 5>} \\
+		&\texttt{$\vv{\texttt{v}}$ := <-4 , 3>}
+	\end{align*}
+	Ønsker vi at lægge to vektorer sammen, skriver vi
+	\begin{align*}
+		\vv{\texttt{u}} + \vv{\texttt{v}}
+	\end{align*}
+	Ønsker vi at trække dem fra hinanden, skriver vi
+	\begin{align*}
+		\vv{\texttt{u}} - \vv{\texttt{v}}
+	\end{align*}
+	Og ønsker vi at skalere dem med et tal $k$, skriver vi
+	\begin{align*}
+		\texttt{k$\vv{\texttt{u}}$}
+	\end{align*}
+	Skal vi bestemme prikproduktet mellem de to vektorer, så skal vi skrive
+	\begin{align*}
+		\texttt{dotP($\vv{\texttt{u}},\vv{\texttt{v}}$)} 
+	\end{align*}
+	Ønsker vi at bestemme vinklen mellem vektorerne, så skal vi skrive
+	\begin{align*}
+		\texttt{vinkel($\vv{\texttt{u}},\vv{\texttt{v}}$)}
+	\end{align*}
+	Ønsker vi til slut at bestemme længden af en vektor, skal vi skrive
+	\begin{align*}
+		\texttt{len($\vv{\texttt{u}}$)}
+	\end{align*}
+\end{exa}
+
+Når Maple bestemmer vinklen mellem to vektorer, så bruger den følgende resultat.
+\newpage
+\begin{setn}[Vinkel mellem vektorer]
+	For to vektorer $\vv{u}$ og $\vv{v}$ gælder der, at 
+	\begin{align*}
+		\frac{\vv{u}\cdot \vv{v}}{|\vv{u}||\vv{v}|} = \cos(\theta),
+	\end{align*}
+	hvor $\theta$ er vinklen mellem vektorerne $\vv{u}$ og $\vv{v}$.
+\end{setn}
+Vi behøver dog ikke bruge denne sætning, da vi blot kan bruge \texttt{vinkel}-kommandoen i Maple.
+
+
+
+\subsection*{Opgave 1}
+Fire vektorer er givet ved
+\begin{align*}
+	&\vv{a} = 
+	\begin{pmatrix}
+		4 \\ -3
+	\end{pmatrix} 
+	&
+	&\vv{b} = 
+	\begin{pmatrix}
+		-2 \\ 5
+	\end{pmatrix}
+	\\
+	&\vv{c} = 
+	\begin{pmatrix}
+		6 \\ 10
+	\end{pmatrix}
+	&
+	&\vv{d} = 
+	\begin{pmatrix}
+		-11 \\ -7
+	\end{pmatrix}
+\end{align*}
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $4\vv{a}$.
+	\item Bestem $\vv{a} + \vv{b}$.
+	\item Bestem $2\vv{b} - \vv{c}$.
+	\item Bestem $\vv{a}+\vv{b}+\vv{c}+\vv{d}$.
+	\item Bestem $-2\vv{d} - \vv{a}$.
+	\item Bestem $\vv{a}-\vv{b}+\vv{c}-3\vv{d}$.
+\end{enumerate}
+
+\subsection*{Opgave 2}
+
+Fire punkter er givet ved $A(1,3)$, $B(-5,6)$, $C(-4,1)$ og $D(12,-7)$.
+\begin{enumerate}[label = \roman*)]
+	\item Bestem koordinaterne til vektorerne $\vv{AB}$, $\vv{BC}$ og $\vv{DA}$.
+	\item Bestem længden af vektorerne $\vv{AB}$, $\vv{BC}$ og $\vv{DA}$
+	\item Bestem $\vv{BA} + \vv{CD}$.
+	\item Bestem $|2\vv{CA} - 3\vv{BC} + \vv{DB}|$.
+\end{enumerate}
+
+\subsection*{Opgave 3}
+
+\begin{enumerate}[label=\roman*)]
+\item Bestem prikproduktet og vinklen mellem følgende vektorer
+\begin{align*}
+&1) \ \begin{pmatrix}1 \\ 0\end{pmatrix} \textnormal{ og } \begin{pmatrix}0 \\ 1\end{pmatrix}    &&2) \  \begin{pmatrix} 4 \\  5\end{pmatrix} \textnormal{ og } \begin{pmatrix} -2  \\ 6\end{pmatrix}    \\
+&3) \ \begin{pmatrix}12 \\ 15\end{pmatrix} \textnormal{ og } \begin{pmatrix}-3 \\ 14 \end{pmatrix}   &&4) \ \begin{pmatrix} -2 \\ -5\end{pmatrix} \textnormal{ og } \begin{pmatrix} 0.5 \\ -12 \end{pmatrix}     \\
+\end{align*}
+\end{enumerate}
+
+\subsection*{Opgave 4}
+
+Afgør hvilke af følgende par af vektorer, der er orthogonale
+
+\begin{center}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -4.5, xmax = 2.5, 
+		ymin = -4.5, ymax = 2.5,
+		grid,
+		x = 1cm, y = 1cm,
+		xtick = {-4,-3,...,2,3}, ytick = {-4,-3,...,2,3},
+		xlabel = $x$, ylabel = $y$	
+	]
+		\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -3,-2) -- (axis cs: 2,-4);
+		\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,2) -- (axis cs: -4,-4);
+	\end{axis}
+\end{tikzpicture}
+}
+\resizebox{0.45\textwidth}{!}{
+\begin{tikzpicture}
+	\begin{axis}[
+		axis lines = center, 
+		xmin = -1.5, xmax = 6.5, 
+		ymin = -1.5, ymax = 6.5,
+		grid,
+		x = 1cm, y = 1cm,
+		xtick = {-1,0,...,5,6}, ytick = {-1,0,...,5,6},
+		xlabel = $x$, ylabel = $y$	
+	]
+		\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 4,4) -- (axis cs: 6,6);
+		\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: 5,0) -- (axis cs: 0,5);
+	\end{axis}
+\end{tikzpicture}
+}
+
+\end{center}
+
+\subsection*{Opgave 5}
+
+Vi får givet følgende to vektorer
+\begin{align*}
+	&\vv{u} =
+	\begin{pmatrix}
+		t-1 \\ 2
+	\end{pmatrix} & &\textnormal{og} &
+	&\vv{v} = 
+	\begin{pmatrix}
+		3 \\ -t + 3
+	\end{pmatrix}
+\end{align*}
+\begin{enumerate}[label=\roman*)]
+	\item Bestem prikproduktet mellem $\vv{u}$ og $\vv{v}$, hvis $t = 4$.
+	\item Bestem $t$ så $\vv{u}$ og $\vv{v}$ er orthogonale. 
+\end{enumerate}
+
+\subsection*{Opgave 6}
+
+
+To vektorer er givet ved
+\begin{align*}
+	&\vv{a} = 
+	\begin{pmatrix}
+		x^2 - 2 \\
+		1	
+	\end{pmatrix}& 
+	&\textnormal{ og } &
+	&\vv{b} = 
+	\begin{pmatrix}
+		1 \\
+		x
+	\end{pmatrix}
+\end{align*}
+\begin{enumerate}[label = \roman*)]
+	\item Bestem $x$, så $\vv{a}$ og $\vv{b}$ er orthogonale.
+\end{enumerate}
+
+\newpage
+\subsection*{Opgave 7}
+
+Bestem tværvektoren for følgende vektorer 
+\begin{align*}
+	&a) \ 
+	\begin{pmatrix}
+		2 \\ 5
+	\end{pmatrix}		
+	&
+    &b) \ 
+    \begin{pmatrix}
+    		-7 \\ 11
+    \end{pmatrix}   \\
+    &c) \
+    \begin{pmatrix}
+    		3 \\ -0.5
+    \end{pmatrix}
+    &
+    &d) \
+    \begin{pmatrix}
+    		-\sqrt{3} \\ -27
+    \end{pmatrix}
+\end{align*}
+
+\subsection*{Opgave 8}
+
+Bestem determinanten for følgende par af vektorer
+
+\begin{align*}
+	&a) \	
+	\begin{pmatrix}
+		3 \\ -2
+	\end{pmatrix}
+	\textnormal{ og }
+	\begin{pmatrix}
+		5 \\ 1
+	\end{pmatrix}
+	&
+	&b) \ 
+	\begin{pmatrix}
+		6 \\ 10
+	\end{pmatrix}
+	\textnormal{ og }
+	\begin{pmatrix}
+		4 \\ -7
+	\end{pmatrix}
+\end{align*}
+
+\subsection*{Opgave 9}
+Udregn følgende
+\begin{align*}
+	&a) \ 
+	\left|
+	\begin{array}{cc}
+		5 & 7 \\
+		-2 & -5
+	\end{array}
+	\right|
+	&
+	&b) \
+	\left|
+	\begin{array}{cc}
+		-9 & 4 \\
+		4 & -6
+	\end{array}
+	\right|
+\end{align*}
+
+\newpage
+\subsection*{Opgave 10}
+
+Beregn arealet af det skraverede område på følgende figur.
+
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis lines = center, 
+			xmin = -3, xmax = 7, 
+			ymin = -3, ymax = 7, 
+			x = 1.5cm, y = 1.5cm,
+			grid,
+			xlabel = $x$, ylabel = $y$
+		]
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,-1) -- (axis cs: 2,-2) node[midway, xshift = -7pt, yshift = -7pt] {$\vv{u}$};
+			\draw[-{Stealth[scale=1.5]}, thick, color = teal] (axis cs: -2,-1) -- (axis cs: -1,6) node[midway,xshift = -7pt, yshift = 7pt] {$\vv{v}$};
+			\fill[olive,nearly transparent] (axis cs: -2,-1) -- (axis cs: 2,-2) -- (axis cs:3,5) -- (axis cs: -1,6) -- cycle;
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\subsection*{Opgave 11}
+Vektorerne $\vv{a}$ og $\vv{b}$ givet ved
+\begin{align*}
+	&\vv{a} =	
+	\begin{pmatrix}
+		2 \\ -4
+	\end{pmatrix}
+	&
+	&\textnormal{og}
+	&
+	&\vv{b} =
+	\begin{pmatrix}
+		4 \\ -8
+	\end{pmatrix}
+\end{align*}
+er parallelle, da $2\vv{a} = \vv{b}$.
+
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $\det(\vv{a},\vv{b})$. Hvorfor giver resultatet god mening? Tænk på den geometriske fortolkning af determinanten
+	\item Hvordan kan vi undersøge, om to vektorer er parallelle?
+\end{enumerate} 
+
+
+\subsection*{Opgave 12}
+
+To vektorer $\vv{u}$ og $\vv{v}$ er givet ved
+\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			t+2 \\ 5
+		\end{pmatrix}
+		& 
+		&\textnormal{og} 
+		&
+		&\vv{v} =
+		\begin{pmatrix}
+			-t+3 \\ 4
+		\end{pmatrix}
+\end{align*}	
+\begin{enumerate}[label=\roman*)]
+	\item Bestem $\det(\vv{u},\vv{v})$, hvis $t = 6$
+	\item Bestem $t$, så arealet af vektorernes udspændende parallelogram er 20.
+\end{enumerate}
+
+\subsection*{Opgave 13}
+\begin{enumerate}[label=\roman*)]
+	\item Bevis, at en vektor $\vv{v}$ og dens tværvektor $\hat{\vv{v}}$ er orthogonale
+	\item Bevis, at der for to vektorer $\vv{u}$ og $\vv{v}$ givet ved
+	\begin{align*}
+		&\vv{u} =
+		\begin{pmatrix}
+			u_1 \\ u_2
+		\end{pmatrix}
+		& 
+		&\textnormal{og} 
+		&
+		&\vv{v} =
+		\begin{pmatrix}
+			v_1 \\ v_2
+		\end{pmatrix}
+	\end{align*}
+	gælder, at
+	\begin{align*}
+		\det(\vv{u},\vv{v}) = \hat{\vv{u}}\cdot \vv{v}.
+	\end{align*}
+\end{enumerate}
+
